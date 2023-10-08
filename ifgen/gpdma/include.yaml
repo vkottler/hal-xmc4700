@@ -1,0 +1,4304 @@
+---
+structs:
+  gpdma:
+    description: General Purpose DMA Unit 0
+    instances:
+      - name: GPDMA0
+        address: '0x500142C0'
+    fields:
+      - name: RAWTFR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        description: (read-write) Raw IntTfr Status
+        fields:
+          - name: CH7
+            description: Raw Interrupt Status for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: CH6
+            description: Raw Interrupt Status for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: true
+          - name: CH5
+            description: Raw Interrupt Status for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: CH4
+            description: Raw Interrupt Status for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: CH3
+            description: Raw Interrupt Status for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: CH2
+            description: Raw Interrupt Status for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: CH1
+            description: Raw Interrupt Status for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: CH0
+            description: Raw Interrupt Status for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: RAWBLOCK
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 8
+        description: (read-write) Raw IntBlock Status
+        fields:
+          - name: CH7
+            description: Raw Interrupt Status for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: CH6
+            description: Raw Interrupt Status for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: true
+          - name: CH5
+            description: Raw Interrupt Status for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: CH4
+            description: Raw Interrupt Status for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: CH3
+            description: Raw Interrupt Status for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: CH2
+            description: Raw Interrupt Status for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: CH1
+            description: Raw Interrupt Status for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: CH0
+            description: Raw Interrupt Status for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: RAWSRCTRAN
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 16
+        description: (read-write) Raw IntSrcTran Status
+        fields:
+          - name: CH7
+            description: Raw Interrupt Status for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: CH6
+            description: Raw Interrupt Status for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: true
+          - name: CH5
+            description: Raw Interrupt Status for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: CH4
+            description: Raw Interrupt Status for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: CH3
+            description: Raw Interrupt Status for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: CH2
+            description: Raw Interrupt Status for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: CH1
+            description: Raw Interrupt Status for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: CH0
+            description: Raw Interrupt Status for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: RAWDSTTRAN
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 24
+        description: (read-write) Raw IntBlock Status
+        fields:
+          - name: CH7
+            description: Raw Interrupt Status for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: CH6
+            description: Raw Interrupt Status for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: true
+          - name: CH5
+            description: Raw Interrupt Status for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: CH4
+            description: Raw Interrupt Status for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: CH3
+            description: Raw Interrupt Status for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: CH2
+            description: Raw Interrupt Status for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: CH1
+            description: Raw Interrupt Status for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: CH0
+            description: Raw Interrupt Status for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: RAWERR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 32
+        description: (read-write) Raw IntErr Status
+        fields:
+          - name: CH7
+            description: Raw Interrupt Status for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: CH6
+            description: Raw Interrupt Status for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: true
+          - name: CH5
+            description: Raw Interrupt Status for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: CH4
+            description: Raw Interrupt Status for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: CH3
+            description: Raw Interrupt Status for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: CH2
+            description: Raw Interrupt Status for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: CH1
+            description: Raw Interrupt Status for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: CH0
+            description: Raw Interrupt Status for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: STATUSTFR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 40
+        const: true
+        description: (read-only) IntTfr Status
+        fields:
+          - name: CH7
+            description: Interrupt Status for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: false
+          - name: CH6
+            description: Interrupt Status for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: false
+          - name: CH5
+            description: Interrupt Status for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: false
+          - name: CH4
+            description: Interrupt Status for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: false
+          - name: CH3
+            description: Interrupt Status for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: false
+          - name: CH2
+            description: Interrupt Status for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: false
+          - name: CH1
+            description: Interrupt Status for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: false
+          - name: CH0
+            description: Interrupt Status for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: false
+      - name: STATUSBLOCK
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 48
+        const: true
+        description: (read-only) IntBlock Status
+        fields:
+          - name: CH7
+            description: Interrupt Status for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: false
+          - name: CH6
+            description: Interrupt Status for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: false
+          - name: CH5
+            description: Interrupt Status for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: false
+          - name: CH4
+            description: Interrupt Status for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: false
+          - name: CH3
+            description: Interrupt Status for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: false
+          - name: CH2
+            description: Interrupt Status for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: false
+          - name: CH1
+            description: Interrupt Status for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: false
+          - name: CH0
+            description: Interrupt Status for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: false
+      - name: STATUSSRCTRAN
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 56
+        const: true
+        description: (read-only) IntSrcTran Status
+        fields:
+          - name: CH7
+            description: Interrupt Status for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: false
+          - name: CH6
+            description: Interrupt Status for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: false
+          - name: CH5
+            description: Interrupt Status for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: false
+          - name: CH4
+            description: Interrupt Status for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: false
+          - name: CH3
+            description: Interrupt Status for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: false
+          - name: CH2
+            description: Interrupt Status for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: false
+          - name: CH1
+            description: Interrupt Status for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: false
+          - name: CH0
+            description: Interrupt Status for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: false
+      - name: STATUSDSTTRAN
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 64
+        const: true
+        description: (read-only) IntBlock Status
+        fields:
+          - name: CH7
+            description: Interrupt Status for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: false
+          - name: CH6
+            description: Interrupt Status for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: false
+          - name: CH5
+            description: Interrupt Status for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: false
+          - name: CH4
+            description: Interrupt Status for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: false
+          - name: CH3
+            description: Interrupt Status for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: false
+          - name: CH2
+            description: Interrupt Status for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: false
+          - name: CH1
+            description: Interrupt Status for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: false
+          - name: CH0
+            description: Interrupt Status for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: false
+      - name: STATUSERR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 72
+        const: true
+        description: (read-only) IntErr Status
+        fields:
+          - name: CH7
+            description: Interrupt Status for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: false
+          - name: CH6
+            description: Interrupt Status for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: false
+          - name: CH5
+            description: Interrupt Status for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: false
+          - name: CH4
+            description: Interrupt Status for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: false
+          - name: CH3
+            description: Interrupt Status for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: false
+          - name: CH2
+            description: Interrupt Status for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: false
+          - name: CH1
+            description: Interrupt Status for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: false
+          - name: CH0
+            description: Interrupt Status for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: false
+      - name: MASKTFR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 80
+        description: (read-write) Mask for Raw IntTfr Status
+        fields:
+          - name: CH7
+            description: Mask bit for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKTFR_CH7
+          - name: CH6
+            description: Mask bit for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKTFR_CH6
+          - name: CH5
+            description: Mask bit for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKTFR_CH5
+          - name: CH4
+            description: Mask bit for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKTFR_CH4
+          - name: CH3
+            description: Mask bit for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKTFR_CH3
+          - name: CH2
+            description: Mask bit for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKTFR_CH2
+          - name: CH1
+            description: Mask bit for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKTFR_CH1
+          - name: CH0
+            description: Mask bit for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKTFR_CH0
+          - name: WE_CH7
+            description: Write enable for mask bit of channel 7
+            index: 15
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKTFR_WE_CH7
+          - name: WE_CH6
+            description: Write enable for mask bit of channel 6
+            index: 14
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKTFR_WE_CH6
+          - name: WE_CH5
+            description: Write enable for mask bit of channel 5
+            index: 13
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKTFR_WE_CH5
+          - name: WE_CH4
+            description: Write enable for mask bit of channel 4
+            index: 12
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKTFR_WE_CH4
+          - name: WE_CH3
+            description: Write enable for mask bit of channel 3
+            index: 11
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKTFR_WE_CH3
+          - name: WE_CH2
+            description: Write enable for mask bit of channel 2
+            index: 10
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKTFR_WE_CH2
+          - name: WE_CH1
+            description: Write enable for mask bit of channel 1
+            index: 9
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKTFR_WE_CH1
+          - name: WE_CH0
+            description: Write enable for mask bit of channel 0
+            index: 8
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKTFR_WE_CH0
+      - name: MASKBLOCK
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 88
+        description: (read-write) Mask for Raw IntBlock Status
+        fields:
+          - name: CH7
+            description: Mask bit for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKBLOCK_CH7
+          - name: CH6
+            description: Mask bit for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKBLOCK_CH6
+          - name: CH5
+            description: Mask bit for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKBLOCK_CH5
+          - name: CH4
+            description: Mask bit for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKBLOCK_CH4
+          - name: CH3
+            description: Mask bit for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKBLOCK_CH3
+          - name: CH2
+            description: Mask bit for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKBLOCK_CH2
+          - name: CH1
+            description: Mask bit for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKBLOCK_CH1
+          - name: CH0
+            description: Mask bit for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKBLOCK_CH0
+          - name: WE_CH7
+            description: Write enable for mask bit of channel 7
+            index: 15
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKBLOCK_WE_CH7
+          - name: WE_CH6
+            description: Write enable for mask bit of channel 6
+            index: 14
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKBLOCK_WE_CH6
+          - name: WE_CH5
+            description: Write enable for mask bit of channel 5
+            index: 13
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKBLOCK_WE_CH5
+          - name: WE_CH4
+            description: Write enable for mask bit of channel 4
+            index: 12
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKBLOCK_WE_CH4
+          - name: WE_CH3
+            description: Write enable for mask bit of channel 3
+            index: 11
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKBLOCK_WE_CH3
+          - name: WE_CH2
+            description: Write enable for mask bit of channel 2
+            index: 10
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKBLOCK_WE_CH2
+          - name: WE_CH1
+            description: Write enable for mask bit of channel 1
+            index: 9
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKBLOCK_WE_CH1
+          - name: WE_CH0
+            description: Write enable for mask bit of channel 0
+            index: 8
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKBLOCK_WE_CH0
+      - name: MASKSRCTRAN
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 96
+        description: (read-write) Mask for Raw IntSrcTran Status
+        fields:
+          - name: CH7
+            description: Mask bit for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKSRCTRAN_CH7
+          - name: CH6
+            description: Mask bit for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKSRCTRAN_CH6
+          - name: CH5
+            description: Mask bit for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKSRCTRAN_CH5
+          - name: CH4
+            description: Mask bit for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKSRCTRAN_CH4
+          - name: CH3
+            description: Mask bit for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKSRCTRAN_CH3
+          - name: CH2
+            description: Mask bit for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKSRCTRAN_CH2
+          - name: CH1
+            description: Mask bit for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKSRCTRAN_CH1
+          - name: CH0
+            description: Mask bit for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKSRCTRAN_CH0
+          - name: WE_CH7
+            description: Write enable for mask bit of channel 7
+            index: 15
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKSRCTRAN_WE_CH7
+          - name: WE_CH6
+            description: Write enable for mask bit of channel 6
+            index: 14
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKSRCTRAN_WE_CH6
+          - name: WE_CH5
+            description: Write enable for mask bit of channel 5
+            index: 13
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKSRCTRAN_WE_CH5
+          - name: WE_CH4
+            description: Write enable for mask bit of channel 4
+            index: 12
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKSRCTRAN_WE_CH4
+          - name: WE_CH3
+            description: Write enable for mask bit of channel 3
+            index: 11
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKSRCTRAN_WE_CH3
+          - name: WE_CH2
+            description: Write enable for mask bit of channel 2
+            index: 10
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKSRCTRAN_WE_CH2
+          - name: WE_CH1
+            description: Write enable for mask bit of channel 1
+            index: 9
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKSRCTRAN_WE_CH1
+          - name: WE_CH0
+            description: Write enable for mask bit of channel 0
+            index: 8
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKSRCTRAN_WE_CH0
+      - name: MASKDSTTRAN
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 104
+        description: (read-write) Mask for Raw IntBlock Status
+        fields:
+          - name: CH7
+            description: Mask bit for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKDSTTRAN_CH7
+          - name: CH6
+            description: Mask bit for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKDSTTRAN_CH6
+          - name: CH5
+            description: Mask bit for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKDSTTRAN_CH5
+          - name: CH4
+            description: Mask bit for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKDSTTRAN_CH4
+          - name: CH3
+            description: Mask bit for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKDSTTRAN_CH3
+          - name: CH2
+            description: Mask bit for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKDSTTRAN_CH2
+          - name: CH1
+            description: Mask bit for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKDSTTRAN_CH1
+          - name: CH0
+            description: Mask bit for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKDSTTRAN_CH0
+          - name: WE_CH7
+            description: Write enable for mask bit of channel 7
+            index: 15
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKDSTTRAN_WE_CH7
+          - name: WE_CH6
+            description: Write enable for mask bit of channel 6
+            index: 14
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKDSTTRAN_WE_CH6
+          - name: WE_CH5
+            description: Write enable for mask bit of channel 5
+            index: 13
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKDSTTRAN_WE_CH5
+          - name: WE_CH4
+            description: Write enable for mask bit of channel 4
+            index: 12
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKDSTTRAN_WE_CH4
+          - name: WE_CH3
+            description: Write enable for mask bit of channel 3
+            index: 11
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKDSTTRAN_WE_CH3
+          - name: WE_CH2
+            description: Write enable for mask bit of channel 2
+            index: 10
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKDSTTRAN_WE_CH2
+          - name: WE_CH1
+            description: Write enable for mask bit of channel 1
+            index: 9
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKDSTTRAN_WE_CH1
+          - name: WE_CH0
+            description: Write enable for mask bit of channel 0
+            index: 8
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKDSTTRAN_WE_CH0
+      - name: MASKERR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 112
+        description: (read-write) Mask for Raw IntErr Status
+        fields:
+          - name: CH7
+            description: Mask bit for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKERR_CH7
+          - name: CH6
+            description: Mask bit for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKERR_CH6
+          - name: CH5
+            description: Mask bit for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKERR_CH5
+          - name: CH4
+            description: Mask bit for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKERR_CH4
+          - name: CH3
+            description: Mask bit for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKERR_CH3
+          - name: CH2
+            description: Mask bit for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKERR_CH2
+          - name: CH1
+            description: Mask bit for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKERR_CH1
+          - name: CH0
+            description: Mask bit for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_MASKERR_CH0
+          - name: WE_CH7
+            description: Write enable for mask bit of channel 7
+            index: 15
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKERR_WE_CH7
+          - name: WE_CH6
+            description: Write enable for mask bit of channel 6
+            index: 14
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKERR_WE_CH6
+          - name: WE_CH5
+            description: Write enable for mask bit of channel 5
+            index: 13
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKERR_WE_CH5
+          - name: WE_CH4
+            description: Write enable for mask bit of channel 4
+            index: 12
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKERR_WE_CH4
+          - name: WE_CH3
+            description: Write enable for mask bit of channel 3
+            index: 11
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKERR_WE_CH3
+          - name: WE_CH2
+            description: Write enable for mask bit of channel 2
+            index: 10
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKERR_WE_CH2
+          - name: WE_CH1
+            description: Write enable for mask bit of channel 1
+            index: 9
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKERR_WE_CH1
+          - name: WE_CH0
+            description: Write enable for mask bit of channel 0
+            index: 8
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_MASKERR_WE_CH0
+      - name: CLEARTFR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 120
+        description: (write-only) IntTfr Status
+        fields:
+          - name: CH7
+            description: Clear Interrupt Status and Raw Status for channel 7
+            index: 7
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARTFR_CH7
+          - name: CH6
+            description: Clear Interrupt Status and Raw Status for channel 6
+            index: 6
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARTFR_CH6
+          - name: CH5
+            description: Clear Interrupt Status and Raw Status for channel 5
+            index: 5
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARTFR_CH5
+          - name: CH4
+            description: Clear Interrupt Status and Raw Status for channel 4
+            index: 4
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARTFR_CH4
+          - name: CH3
+            description: Clear Interrupt Status and Raw Status for channel 3
+            index: 3
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARTFR_CH3
+          - name: CH2
+            description: Clear Interrupt Status and Raw Status for channel 2
+            index: 2
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARTFR_CH2
+          - name: CH1
+            description: Clear Interrupt Status and Raw Status for channel 1
+            index: 1
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARTFR_CH1
+          - name: CH0
+            description: Clear Interrupt Status and Raw Status for channel 0
+            index: 0
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARTFR_CH0
+      - name: CLEARBLOCK
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 128
+        description: (write-only) IntBlock Status
+        fields:
+          - name: CH7
+            description: Clear Interrupt Status and Raw Status for channel 7
+            index: 7
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARBLOCK_CH7
+          - name: CH6
+            description: Clear Interrupt Status and Raw Status for channel 6
+            index: 6
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARBLOCK_CH6
+          - name: CH5
+            description: Clear Interrupt Status and Raw Status for channel 5
+            index: 5
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARBLOCK_CH5
+          - name: CH4
+            description: Clear Interrupt Status and Raw Status for channel 4
+            index: 4
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARBLOCK_CH4
+          - name: CH3
+            description: Clear Interrupt Status and Raw Status for channel 3
+            index: 3
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARBLOCK_CH3
+          - name: CH2
+            description: Clear Interrupt Status and Raw Status for channel 2
+            index: 2
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARBLOCK_CH2
+          - name: CH1
+            description: Clear Interrupt Status and Raw Status for channel 1
+            index: 1
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARBLOCK_CH1
+          - name: CH0
+            description: Clear Interrupt Status and Raw Status for channel 0
+            index: 0
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARBLOCK_CH0
+      - name: CLEARSRCTRAN
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 136
+        description: (write-only) IntSrcTran Status
+        fields:
+          - name: CH7
+            description: Clear Interrupt Status and Raw Status for channel 7
+            index: 7
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARSRCTRAN_CH7
+          - name: CH6
+            description: Clear Interrupt Status and Raw Status for channel 6
+            index: 6
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARSRCTRAN_CH6
+          - name: CH5
+            description: Clear Interrupt Status and Raw Status for channel 5
+            index: 5
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARSRCTRAN_CH5
+          - name: CH4
+            description: Clear Interrupt Status and Raw Status for channel 4
+            index: 4
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARSRCTRAN_CH4
+          - name: CH3
+            description: Clear Interrupt Status and Raw Status for channel 3
+            index: 3
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARSRCTRAN_CH3
+          - name: CH2
+            description: Clear Interrupt Status and Raw Status for channel 2
+            index: 2
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARSRCTRAN_CH2
+          - name: CH1
+            description: Clear Interrupt Status and Raw Status for channel 1
+            index: 1
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARSRCTRAN_CH1
+          - name: CH0
+            description: Clear Interrupt Status and Raw Status for channel 0
+            index: 0
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARSRCTRAN_CH0
+      - name: CLEARDSTTRAN
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 144
+        description: (write-only) IntBlock Status
+        fields:
+          - name: CH7
+            description: Clear Interrupt Status and Raw Status for channel 7
+            index: 7
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARDSTTRAN_CH7
+          - name: CH6
+            description: Clear Interrupt Status and Raw Status for channel 6
+            index: 6
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARDSTTRAN_CH6
+          - name: CH5
+            description: Clear Interrupt Status and Raw Status for channel 5
+            index: 5
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARDSTTRAN_CH5
+          - name: CH4
+            description: Clear Interrupt Status and Raw Status for channel 4
+            index: 4
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARDSTTRAN_CH4
+          - name: CH3
+            description: Clear Interrupt Status and Raw Status for channel 3
+            index: 3
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARDSTTRAN_CH3
+          - name: CH2
+            description: Clear Interrupt Status and Raw Status for channel 2
+            index: 2
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARDSTTRAN_CH2
+          - name: CH1
+            description: Clear Interrupt Status and Raw Status for channel 1
+            index: 1
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARDSTTRAN_CH1
+          - name: CH0
+            description: Clear Interrupt Status and Raw Status for channel 0
+            index: 0
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARDSTTRAN_CH0
+      - name: CLEARERR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 152
+        description: (write-only) IntErr Status
+        fields:
+          - name: CH7
+            description: Clear Interrupt Status and Raw Status for channel 7
+            index: 7
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARERR_CH7
+          - name: CH6
+            description: Clear Interrupt Status and Raw Status for channel 6
+            index: 6
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARERR_CH6
+          - name: CH5
+            description: Clear Interrupt Status and Raw Status for channel 5
+            index: 5
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARERR_CH5
+          - name: CH4
+            description: Clear Interrupt Status and Raw Status for channel 4
+            index: 4
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARERR_CH4
+          - name: CH3
+            description: Clear Interrupt Status and Raw Status for channel 3
+            index: 3
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARERR_CH3
+          - name: CH2
+            description: Clear Interrupt Status and Raw Status for channel 2
+            index: 2
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARERR_CH2
+          - name: CH1
+            description: Clear Interrupt Status and Raw Status for channel 1
+            index: 1
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARERR_CH1
+          - name: CH0
+            description: Clear Interrupt Status and Raw Status for channel 0
+            index: 0
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_CLEARERR_CH0
+      - name: STATUSINT
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 160
+        const: true
+        description: (read-only) Combined Interrupt Status Register
+        fields:
+          - name: TFR
+            description: OR of the contents of STATUSTFR register
+            index: 0
+            width: 1
+            read: true
+            write: false
+          - name: BLOCK
+            description: OR of the contents of STATUSBLOCK register
+            index: 1
+            width: 1
+            read: true
+            write: false
+          - name: SRCT
+            description: OR of the contents of STATUSSRCTRAN register
+            index: 2
+            width: 1
+            read: true
+            write: false
+          - name: DSTT
+            description: OR of the contents of STATUSDSTTRAN register
+            index: 3
+            width: 1
+            read: true
+            write: false
+          - name: ERR
+            description: OR of the contents of STATUSERR register
+            index: 4
+            width: 1
+            read: true
+            write: false
+      - name: REQSRCREG
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 168
+        description: (read-write) Source Software Transaction Request Register
+        fields:
+          - name: CH7
+            description: Source request for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: CH6
+            description: Source request for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: true
+          - name: CH5
+            description: Source request for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: CH4
+            description: Source request for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: CH3
+            description: Source request for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: CH2
+            description: Source request for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: CH1
+            description: Source request for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: CH0
+            description: Source request for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: true
+          - name: WE_CH7
+            description: Source request write enable for channel 7
+            index: 15
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_REQSRCREG_WE_CH7
+          - name: WE_CH6
+            description: Source request write enable for channel 6
+            index: 14
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_REQSRCREG_WE_CH6
+          - name: WE_CH5
+            description: Source request write enable for channel 5
+            index: 13
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_REQSRCREG_WE_CH5
+          - name: WE_CH4
+            description: Source request write enable for channel 4
+            index: 12
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_REQSRCREG_WE_CH4
+          - name: WE_CH3
+            description: Source request write enable for channel 3
+            index: 11
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_REQSRCREG_WE_CH3
+          - name: WE_CH2
+            description: Source request write enable for channel 2
+            index: 10
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_REQSRCREG_WE_CH2
+          - name: WE_CH1
+            description: Source request write enable for channel 1
+            index: 9
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_REQSRCREG_WE_CH1
+          - name: WE_CH0
+            description: Source request write enable for channel 0
+            index: 8
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_REQSRCREG_WE_CH0
+      - name: REQDSTREG
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 176
+        description: (read-write) Destination Software Transaction Request Register
+        fields:
+          - name: CH7
+            description: Source request for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: CH6
+            description: Source request for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: true
+          - name: CH5
+            description: Source request for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: CH4
+            description: Source request for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: CH3
+            description: Source request for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: CH2
+            description: Source request for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: CH1
+            description: Source request for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: CH0
+            description: Source request for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: true
+          - name: WE_CH7
+            description: Source request write enable for channel 7
+            index: 15
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_REQDSTREG_WE_CH7
+          - name: WE_CH6
+            description: Source request write enable for channel 6
+            index: 14
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_REQDSTREG_WE_CH6
+          - name: WE_CH5
+            description: Source request write enable for channel 5
+            index: 13
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_REQDSTREG_WE_CH5
+          - name: WE_CH4
+            description: Source request write enable for channel 4
+            index: 12
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_REQDSTREG_WE_CH4
+          - name: WE_CH3
+            description: Source request write enable for channel 3
+            index: 11
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_REQDSTREG_WE_CH3
+          - name: WE_CH2
+            description: Source request write enable for channel 2
+            index: 10
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_REQDSTREG_WE_CH2
+          - name: WE_CH1
+            description: Source request write enable for channel 1
+            index: 9
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_REQDSTREG_WE_CH1
+          - name: WE_CH0
+            description: Source request write enable for channel 0
+            index: 8
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_REQDSTREG_WE_CH0
+      - name: SGLREQSRCREG
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 184
+        description: (read-write) Single Source Transaction Request Register
+        fields:
+          - name: CH7
+            description: Source request for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: CH6
+            description: Source request for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: true
+          - name: CH5
+            description: Source request for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: CH4
+            description: Source request for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: CH3
+            description: Source request for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: CH2
+            description: Source request for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: CH1
+            description: Source request for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: CH0
+            description: Source request for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: true
+          - name: WE_CH7
+            description: Source request write enable for channel 7
+            index: 15
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_SGLREQSRCREG_WE_CH7
+          - name: WE_CH6
+            description: Source request write enable for channel 6
+            index: 14
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_SGLREQSRCREG_WE_CH6
+          - name: WE_CH5
+            description: Source request write enable for channel 5
+            index: 13
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_SGLREQSRCREG_WE_CH5
+          - name: WE_CH4
+            description: Source request write enable for channel 4
+            index: 12
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_SGLREQSRCREG_WE_CH4
+          - name: WE_CH3
+            description: Source request write enable for channel 3
+            index: 11
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_SGLREQSRCREG_WE_CH3
+          - name: WE_CH2
+            description: Source request write enable for channel 2
+            index: 10
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_SGLREQSRCREG_WE_CH2
+          - name: WE_CH1
+            description: Source request write enable for channel 1
+            index: 9
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_SGLREQSRCREG_WE_CH1
+          - name: WE_CH0
+            description: Source request write enable for channel 0
+            index: 8
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_SGLREQSRCREG_WE_CH0
+      - name: SGLREQDSTREG
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 192
+        description: (read-write) Single Destination Transaction Request Register
+        fields:
+          - name: CH7
+            description: Source request for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: CH6
+            description: Source request for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: true
+          - name: CH5
+            description: Source request for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: CH4
+            description: Source request for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: CH3
+            description: Source request for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: CH2
+            description: Source request for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: CH1
+            description: Source request for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: CH0
+            description: Source request for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: true
+          - name: WE_CH7
+            description: Source request write enable for channel 7
+            index: 15
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_SGLREQDSTREG_WE_CH7
+          - name: WE_CH6
+            description: Source request write enable for channel 6
+            index: 14
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_SGLREQDSTREG_WE_CH6
+          - name: WE_CH5
+            description: Source request write enable for channel 5
+            index: 13
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_SGLREQDSTREG_WE_CH5
+          - name: WE_CH4
+            description: Source request write enable for channel 4
+            index: 12
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_SGLREQDSTREG_WE_CH4
+          - name: WE_CH3
+            description: Source request write enable for channel 3
+            index: 11
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_SGLREQDSTREG_WE_CH3
+          - name: WE_CH2
+            description: Source request write enable for channel 2
+            index: 10
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_SGLREQDSTREG_WE_CH2
+          - name: WE_CH1
+            description: Source request write enable for channel 1
+            index: 9
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_SGLREQDSTREG_WE_CH1
+          - name: WE_CH0
+            description: Source request write enable for channel 0
+            index: 8
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_SGLREQDSTREG_WE_CH0
+      - name: LSTSRCREG
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 200
+        description: (read-write) Last Source Transaction Request Register
+        fields:
+          - name: CH7
+            description: Source last request for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_LSTSRCREG_CH7
+          - name: CH6
+            description: Source last request for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_LSTSRCREG_CH6
+          - name: CH5
+            description: Source last request for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_LSTSRCREG_CH5
+          - name: CH4
+            description: Source last request for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_LSTSRCREG_CH4
+          - name: CH3
+            description: Source last request for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_LSTSRCREG_CH3
+          - name: CH2
+            description: Source last request for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_LSTSRCREG_CH2
+          - name: CH1
+            description: Source last request for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_LSTSRCREG_CH1
+          - name: CH0
+            description: Source last request for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_LSTSRCREG_CH0
+          - name: WE_CH7
+            description: Source last transaction request write enable for channel
+              7
+            index: 15
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_LSTSRCREG_WE_CH7
+          - name: WE_CH6
+            description: Source last transaction request write enable for channel
+              6
+            index: 14
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_LSTSRCREG_WE_CH6
+          - name: WE_CH5
+            description: Source last transaction request write enable for channel
+              5
+            index: 13
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_LSTSRCREG_WE_CH5
+          - name: WE_CH4
+            description: Source last transaction request write enable for channel
+              4
+            index: 12
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_LSTSRCREG_WE_CH4
+          - name: WE_CH3
+            description: Source last transaction request write enable for channel
+              3
+            index: 11
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_LSTSRCREG_WE_CH3
+          - name: WE_CH2
+            description: Source last transaction request write enable for channel
+              2
+            index: 10
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_LSTSRCREG_WE_CH2
+          - name: WE_CH1
+            description: Source last transaction request write enable for channel
+              1
+            index: 9
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_LSTSRCREG_WE_CH1
+          - name: WE_CH0
+            description: Source last transaction request write enable for channel
+              0
+            index: 8
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_LSTSRCREG_WE_CH0
+      - name: LSTDSTREG
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 208
+        description: (read-write) Last Destination Transaction Request Register
+        fields:
+          - name: CH7
+            description: Destination last request for channel 7
+            index: 7
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_LSTDSTREG_CH7
+          - name: CH6
+            description: Destination last request for channel 6
+            index: 6
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_LSTDSTREG_CH6
+          - name: CH5
+            description: Destination last request for channel 5
+            index: 5
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_LSTDSTREG_CH5
+          - name: CH4
+            description: Destination last request for channel 4
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_LSTDSTREG_CH4
+          - name: CH3
+            description: Destination last request for channel 3
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_LSTDSTREG_CH3
+          - name: CH2
+            description: Destination last request for channel 2
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_LSTDSTREG_CH2
+          - name: CH1
+            description: Destination last request for channel 1
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_LSTDSTREG_CH1
+          - name: CH0
+            description: Destination last request for channel 0
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_LSTDSTREG_CH0
+          - name: WE_CH7
+            description: Destination last transaction request write enable for channel
+              7
+            index: 15
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_LSTDSTREG_WE_CH7
+          - name: WE_CH6
+            description: Destination last transaction request write enable for channel
+              6
+            index: 14
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_LSTDSTREG_WE_CH6
+          - name: WE_CH5
+            description: Destination last transaction request write enable for channel
+              5
+            index: 13
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_LSTDSTREG_WE_CH5
+          - name: WE_CH4
+            description: Destination last transaction request write enable for channel
+              4
+            index: 12
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_LSTDSTREG_WE_CH4
+          - name: WE_CH3
+            description: Destination last transaction request write enable for channel
+              3
+            index: 11
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_LSTDSTREG_WE_CH3
+          - name: WE_CH2
+            description: Destination last transaction request write enable for channel
+              2
+            index: 10
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_LSTDSTREG_WE_CH2
+          - name: WE_CH1
+            description: Destination last transaction request write enable for channel
+              1
+            index: 9
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_LSTDSTREG_WE_CH1
+          - name: WE_CH0
+            description: Destination last transaction request write enable for channel
+              0
+            index: 8
+            width: 1
+            read: false
+            write: true
+            type: GPDMA0_LSTDSTREG_WE_CH0
+      - name: DMACFGREG
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 216
+        description: (read-write) GPDMA Configuration Register
+        fields:
+          - name: DMA_EN
+            description: GPDMA Enable bit.
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: GPDMA0_DMACFGREG_DMA_EN
+      - name: CHENREG
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 224
+        description: (read-write) GPDMA Channel Enable Register
+        fields:
+          - name: CH
+            description: Enables/Disables the channel
+            index: 0
+            width: 8
+            read: true
+            write: true
+            type: GPDMA0_CHENREG_CH
+          - name: WE_CH
+            description: Channel enable write enable
+            index: 8
+            width: 8
+            read: false
+            write: true
+      - name: ID
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 232
+        const: true
+        description: (read-only) GPDMA0 ID Register
+        fields:
+          - name: VALUE
+            description: Hardcoded GPDMA Peripheral ID
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TYPE
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 312
+        const: true
+        description: (read-only) GPDMA Component Type
+        fields:
+          - name: VALUE
+            description: Component Type
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: VERSION
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 316
+        const: true
+        description: (read-only) DMA Component Version
+        fields:
+          - name: VALUE
+            description: Version number of the component
+            index: 0
+            width: 32
+            read: true
+            write: false
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums:
+  GPDMA0_MASKTFR_CH7:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKTFR_CH6:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKTFR_CH5:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKTFR_CH4:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKTFR_CH3:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKTFR_CH2:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKTFR_CH1:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKTFR_CH0:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKTFR_WE_CH7:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKTFR_WE_CH6:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKTFR_WE_CH5:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKTFR_WE_CH4:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKTFR_WE_CH3:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKTFR_WE_CH2:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKTFR_WE_CH1:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKTFR_WE_CH0:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKBLOCK_CH7:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKBLOCK_CH6:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKBLOCK_CH5:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKBLOCK_CH4:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKBLOCK_CH3:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKBLOCK_CH2:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKBLOCK_CH1:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKBLOCK_CH0:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKBLOCK_WE_CH7:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKBLOCK_WE_CH6:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKBLOCK_WE_CH5:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKBLOCK_WE_CH4:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKBLOCK_WE_CH3:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKBLOCK_WE_CH2:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKBLOCK_WE_CH1:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKBLOCK_WE_CH0:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKSRCTRAN_CH7:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKSRCTRAN_CH6:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKSRCTRAN_CH5:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKSRCTRAN_CH4:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKSRCTRAN_CH3:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKSRCTRAN_CH2:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKSRCTRAN_CH1:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKSRCTRAN_CH0:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKSRCTRAN_WE_CH7:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKSRCTRAN_WE_CH6:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKSRCTRAN_WE_CH5:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKSRCTRAN_WE_CH4:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKSRCTRAN_WE_CH3:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKSRCTRAN_WE_CH2:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKSRCTRAN_WE_CH1:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKSRCTRAN_WE_CH0:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKDSTTRAN_CH7:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKDSTTRAN_CH6:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKDSTTRAN_CH5:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKDSTTRAN_CH4:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKDSTTRAN_CH3:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKDSTTRAN_CH2:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKDSTTRAN_CH1:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKDSTTRAN_CH0:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKDSTTRAN_WE_CH7:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKDSTTRAN_WE_CH6:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKDSTTRAN_WE_CH5:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKDSTTRAN_WE_CH4:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKDSTTRAN_WE_CH3:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKDSTTRAN_WE_CH2:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKDSTTRAN_WE_CH1:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKDSTTRAN_WE_CH0:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKERR_CH7:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKERR_CH6:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKERR_CH5:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKERR_CH4:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKERR_CH3:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKERR_CH2:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKERR_CH1:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKERR_CH0:
+    enum:
+      value1:
+        description: masked
+        value: 0
+      value2:
+        description: unmasked
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKERR_WE_CH7:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKERR_WE_CH6:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKERR_WE_CH5:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKERR_WE_CH4:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKERR_WE_CH3:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKERR_WE_CH2:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKERR_WE_CH1:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_MASKERR_WE_CH0:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARTFR_CH7:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARTFR_CH6:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARTFR_CH5:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARTFR_CH4:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARTFR_CH3:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARTFR_CH2:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARTFR_CH1:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARTFR_CH0:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARBLOCK_CH7:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARBLOCK_CH6:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARBLOCK_CH5:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARBLOCK_CH4:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARBLOCK_CH3:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARBLOCK_CH2:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARBLOCK_CH1:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARBLOCK_CH0:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARSRCTRAN_CH7:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARSRCTRAN_CH6:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARSRCTRAN_CH5:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARSRCTRAN_CH4:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARSRCTRAN_CH3:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARSRCTRAN_CH2:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARSRCTRAN_CH1:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARSRCTRAN_CH0:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARDSTTRAN_CH7:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARDSTTRAN_CH6:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARDSTTRAN_CH5:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARDSTTRAN_CH4:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARDSTTRAN_CH3:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARDSTTRAN_CH2:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARDSTTRAN_CH1:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARDSTTRAN_CH0:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARERR_CH7:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARERR_CH6:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARERR_CH5:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARERR_CH4:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARERR_CH3:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARERR_CH2:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARERR_CH1:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CLEARERR_CH0:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: clear status
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_REQSRCREG_WE_CH7:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_REQSRCREG_WE_CH6:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_REQSRCREG_WE_CH5:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_REQSRCREG_WE_CH4:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_REQSRCREG_WE_CH3:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_REQSRCREG_WE_CH2:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_REQSRCREG_WE_CH1:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_REQSRCREG_WE_CH0:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_REQDSTREG_WE_CH7:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_REQDSTREG_WE_CH6:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_REQDSTREG_WE_CH5:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_REQDSTREG_WE_CH4:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_REQDSTREG_WE_CH3:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_REQDSTREG_WE_CH2:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_REQDSTREG_WE_CH1:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_REQDSTREG_WE_CH0:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_SGLREQSRCREG_WE_CH7:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_SGLREQSRCREG_WE_CH6:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_SGLREQSRCREG_WE_CH5:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_SGLREQSRCREG_WE_CH4:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_SGLREQSRCREG_WE_CH3:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_SGLREQSRCREG_WE_CH2:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_SGLREQSRCREG_WE_CH1:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_SGLREQSRCREG_WE_CH0:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_SGLREQDSTREG_WE_CH7:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_SGLREQDSTREG_WE_CH6:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_SGLREQDSTREG_WE_CH5:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_SGLREQDSTREG_WE_CH4:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_SGLREQDSTREG_WE_CH3:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_SGLREQDSTREG_WE_CH2:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_SGLREQDSTREG_WE_CH1:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_SGLREQDSTREG_WE_CH0:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTSRCREG_CH7:
+    enum:
+      value1:
+        description: Not last transaction in current block
+        value: 0
+      value2:
+        description: Last transaction in current block
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTSRCREG_CH6:
+    enum:
+      value1:
+        description: Not last transaction in current block
+        value: 0
+      value2:
+        description: Last transaction in current block
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTSRCREG_CH5:
+    enum:
+      value1:
+        description: Not last transaction in current block
+        value: 0
+      value2:
+        description: Last transaction in current block
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTSRCREG_CH4:
+    enum:
+      value1:
+        description: Not last transaction in current block
+        value: 0
+      value2:
+        description: Last transaction in current block
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTSRCREG_CH3:
+    enum:
+      value1:
+        description: Not last transaction in current block
+        value: 0
+      value2:
+        description: Last transaction in current block
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTSRCREG_CH2:
+    enum:
+      value1:
+        description: Not last transaction in current block
+        value: 0
+      value2:
+        description: Last transaction in current block
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTSRCREG_CH1:
+    enum:
+      value1:
+        description: Not last transaction in current block
+        value: 0
+      value2:
+        description: Last transaction in current block
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTSRCREG_CH0:
+    enum:
+      value1:
+        description: Not last transaction in current block
+        value: 0
+      value2:
+        description: Last transaction in current block
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTSRCREG_WE_CH7:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTSRCREG_WE_CH6:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTSRCREG_WE_CH5:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTSRCREG_WE_CH4:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTSRCREG_WE_CH3:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTSRCREG_WE_CH2:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTSRCREG_WE_CH1:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTSRCREG_WE_CH0:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTDSTREG_CH7:
+    enum:
+      value1:
+        description: Not last transaction in current block
+        value: 0
+      value2:
+        description: Last transaction in current block
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTDSTREG_CH6:
+    enum:
+      value1:
+        description: Not last transaction in current block
+        value: 0
+      value2:
+        description: Last transaction in current block
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTDSTREG_CH5:
+    enum:
+      value1:
+        description: Not last transaction in current block
+        value: 0
+      value2:
+        description: Last transaction in current block
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTDSTREG_CH4:
+    enum:
+      value1:
+        description: Not last transaction in current block
+        value: 0
+      value2:
+        description: Last transaction in current block
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTDSTREG_CH3:
+    enum:
+      value1:
+        description: Not last transaction in current block
+        value: 0
+      value2:
+        description: Last transaction in current block
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTDSTREG_CH2:
+    enum:
+      value1:
+        description: Not last transaction in current block
+        value: 0
+      value2:
+        description: Last transaction in current block
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTDSTREG_CH1:
+    enum:
+      value1:
+        description: Not last transaction in current block
+        value: 0
+      value2:
+        description: Last transaction in current block
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTDSTREG_CH0:
+    enum:
+      value1:
+        description: Not last transaction in current block
+        value: 0
+      value2:
+        description: Last transaction in current block
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTDSTREG_WE_CH7:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTDSTREG_WE_CH6:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTDSTREG_WE_CH5:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTDSTREG_WE_CH4:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTDSTREG_WE_CH3:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTDSTREG_WE_CH2:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTDSTREG_WE_CH1:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_LSTDSTREG_WE_CH0:
+    enum:
+      value1:
+        description: write disabled
+        value: 0
+      value2:
+        description: write enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_DMACFGREG_DMA_EN:
+    enum:
+      value1:
+        description: GPDMA Disabled
+        value: 0
+      value2:
+        description: GPDMA Enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA0_CHENREG_CH:
+    enum:
+      value1:
+        description: Disable the Channel
+        value: 0
+      value2:
+        description: Enable the Channel
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false

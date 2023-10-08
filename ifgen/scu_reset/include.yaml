@@ -1,0 +1,1725 @@
+---
+structs:
+  scu_reset:
+    description: System Control Unit
+    instances:
+      - name: SCU_RESET
+        address: '0x50004400'
+    fields:
+      - name: RSTSTAT
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        const: true
+        description: (read-only) RCU Reset Status
+        fields:
+          - name: LCKEN
+            description: Enable Lockup Status
+            index: 10
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_RSTSTAT_LCKEN
+          - name: HIBRS
+            description: Hibernate Reset Status
+            index: 9
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_RSTSTAT_HIBRS
+          - name: HIBWK
+            description: Hibernate Wake-up Status
+            index: 8
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_RSTSTAT_HIBWK
+          - name: RSTSTAT
+            description: Reset Status Information
+            index: 0
+            width: 8
+            read: true
+            write: false
+            type: SCU_RESET_RSTSTAT_RSTSTAT
+      - name: RSTSET
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4
+        description: (write-only) RCU Reset Set Register
+        fields:
+          - name: LCKEN
+            description: Enable Lockup Reset
+            index: 10
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_RSTSET_LCKEN
+          - name: HIBRS
+            description: Set Hibernate Reset
+            index: 9
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_RSTSET_HIBRS
+          - name: HIBWK
+            description: Set Hibernate Wake-up Reset Status
+            index: 8
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_RSTSET_HIBWK
+      - name: RSTCLR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 8
+        description: (write-only) RCU Reset Clear Register
+        fields:
+          - name: LCKEN
+            description: Enable Lockup Reset
+            index: 10
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_RSTCLR_LCKEN
+          - name: HIBRS
+            description: Clear Hibernate Reset
+            index: 9
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_RSTCLR_HIBRS
+          - name: HIBWK
+            description: Clear Hibernate Wake-up Reset Status
+            index: 8
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_RSTCLR_HIBWK
+          - name: RSCLR
+            description: Clear Reset Status
+            index: 0
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_RSTCLR_RSCLR
+      - name: PRSTAT0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 12
+        const: true
+        description: (read-only) RCU Peripheral 0 Reset Status
+        fields:
+          - name: ERU1RS
+            description: ERU1 Reset Status
+            index: 16
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT0_ERU1RS
+          - name: USIC0RS
+            description: USIC0 Reset Status
+            index: 11
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT0_USIC0RS
+          - name: POSIF1RS
+            description: POSIF1 Reset Status
+            index: 10
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT0_POSIF1RS
+          - name: POSIF0RS
+            description: POSIF0 Reset Status
+            index: 9
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT0_POSIF0RS
+          - name: CCU81RS
+            description: CCU81 Reset Status
+            index: 8
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT0_CCU81RS
+          - name: CCU80RS
+            description: CCU80 Reset Status
+            index: 7
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT0_CCU80RS
+          - name: CCU42RS
+            description: CCU42 Reset Status
+            index: 4
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT0_CCU42RS
+          - name: CCU41RS
+            description: CCU41 Reset Status
+            index: 3
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT0_CCU41RS
+          - name: CCU40RS
+            description: CCU40 Reset Status
+            index: 2
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT0_CCU40RS
+          - name: DSDRS
+            description: DSD Reset Status
+            index: 1
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT0_DSDRS
+          - name: VADCRS
+            description: VADC Reset Status
+            index: 0
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT0_VADCRS
+      - name: PRSET0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 16
+        description: (write-only) RCU Peripheral 0 Reset Set
+        fields:
+          - name: ERU1RS
+            description: ERU1 Reset Assert
+            index: 16
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET0_ERU1RS
+          - name: USIC0RS
+            description: USIC0 Reset Assert
+            index: 11
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET0_USIC0RS
+          - name: POSIF1RS
+            description: POSIF1 Reset Assert
+            index: 10
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET0_POSIF1RS
+          - name: POSIF0RS
+            description: POSIF0 Reset Assert
+            index: 9
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET0_POSIF0RS
+          - name: CCU81RS
+            description: CCU81 Reset Assert
+            index: 8
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET0_CCU81RS
+          - name: CCU80RS
+            description: CCU80 Reset Assert
+            index: 7
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET0_CCU80RS
+          - name: CCU42RS
+            description: CCU42 Reset Assert
+            index: 4
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET0_CCU42RS
+          - name: CCU41RS
+            description: CCU41 Reset Assert
+            index: 3
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET0_CCU41RS
+          - name: CCU40RS
+            description: CCU40 Reset Assert
+            index: 2
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET0_CCU40RS
+          - name: DSDRS
+            description: DSD Reset Assert
+            index: 1
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET0_DSDRS
+          - name: VADCRS
+            description: VADC Reset Assert
+            index: 0
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET0_VADCRS
+      - name: PRCLR0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 20
+        description: (write-only) RCU Peripheral 0 Reset Clear
+        fields:
+          - name: ERU1RS
+            description: ERU1 Reset Clear
+            index: 16
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR0_ERU1RS
+          - name: USIC0RS
+            description: USIC0 Reset Clear
+            index: 11
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR0_USIC0RS
+          - name: POSIF1RS
+            description: POSIF1 Reset Clear
+            index: 10
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR0_POSIF1RS
+          - name: POSIF0RS
+            description: POSIF0 Reset Clear
+            index: 9
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR0_POSIF0RS
+          - name: CCU81RS
+            description: CCU81 Reset Clear
+            index: 8
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR0_CCU81RS
+          - name: CCU80RS
+            description: CCU80 Reset Clear
+            index: 7
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR0_CCU80RS
+          - name: CCU42RS
+            description: CCU42 Reset Clear
+            index: 4
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR0_CCU42RS
+          - name: CCU41RS
+            description: CCU41 Reset Clear
+            index: 3
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR0_CCU41RS
+          - name: CCU40RS
+            description: CCU40 Reset Clear
+            index: 2
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR0_CCU40RS
+          - name: DSDRS
+            description: DSD Reset Clear
+            index: 1
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR0_DSDRS
+          - name: VADCRS
+            description: VADC Reset Clear
+            index: 0
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR0_VADCRS
+      - name: PRSTAT1
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 24
+        const: true
+        description: (read-only) RCU Peripheral 1 Reset Status
+        fields:
+          - name: PPORTSRS
+            description: PORTS Reset Status
+            index: 9
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT1_PPORTSRS
+          - name: USIC2RS
+            description: USIC2 Reset Status
+            index: 8
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT1_USIC2RS
+          - name: USIC1RS
+            description: USIC1 Reset Status
+            index: 7
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT1_USIC1RS
+          - name: MMCIRS
+            description: MMC Interface Reset Status
+            index: 6
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT1_MMCIRS
+          - name: DACRS
+            description: DAC Reset Status
+            index: 5
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT1_DACRS
+          - name: MCAN0RS
+            description: MultiCAN Reset Status
+            index: 4
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT1_MCAN0RS
+          - name: LEDTSCU0RS
+            description: LEDTS Reset Status
+            index: 3
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT1_LEDTSCU0RS
+          - name: CCU43RS
+            description: CCU43 Reset Status
+            index: 0
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT1_CCU43RS
+      - name: PRSET1
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 28
+        description: (write-only) RCU Peripheral 1 Reset Set
+        fields:
+          - name: PPORTSRS
+            description: PORTS Reset Assert
+            index: 9
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET1_PPORTSRS
+          - name: USIC2RS
+            description: USIC2 Reset Assert
+            index: 8
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET1_USIC2RS
+          - name: USIC1RS
+            description: USIC1 Reset Assert
+            index: 7
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET1_USIC1RS
+          - name: MMCIRS
+            description: MMC Interface Reset Assert
+            index: 6
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET1_MMCIRS
+          - name: DACRS
+            description: DAC Reset Assert
+            index: 5
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET1_DACRS
+          - name: MCAN0RS
+            description: MultiCAN Reset Assert
+            index: 4
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET1_MCAN0RS
+          - name: LEDTSCU0RS
+            description: LEDTS Reset Assert
+            index: 3
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET1_LEDTSCU0RS
+          - name: CCU43RS
+            description: CCU43 Reset Assert
+            index: 0
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET1_CCU43RS
+      - name: PRCLR1
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 32
+        description: (write-only) RCU Peripheral 1 Reset Clear
+        fields:
+          - name: PPORTSRS
+            description: PORTS Reset Clear
+            index: 9
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR1_PPORTSRS
+          - name: USIC2RS
+            description: USIC2 Reset Clear
+            index: 8
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR1_USIC2RS
+          - name: USIC1RS
+            description: USIC1 Reset Clear
+            index: 7
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR1_USIC1RS
+          - name: MMCIRS
+            description: MMC Interface Reset Clear
+            index: 6
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR1_MMCIRS
+          - name: DACRS
+            description: DAC Reset Clear
+            index: 5
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR1_DACRS
+          - name: MCAN0RS
+            description: MultiCAN Reset Clear
+            index: 4
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR1_MCAN0RS
+          - name: LEDTSCU0RS
+            description: LEDTS Reset Clear
+            index: 3
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR1_LEDTSCU0RS
+          - name: CCU43RS
+            description: CCU43 Reset Clear
+            index: 0
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR1_CCU43RS
+      - name: PRSTAT2
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 36
+        const: true
+        description: (read-only) RCU Peripheral 2 Reset Status
+        fields:
+          - name: USBRS
+            description: USB Reset Status
+            index: 7
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT2_USBRS
+          - name: FCERS
+            description: FCE Reset Status
+            index: 6
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT2_FCERS
+          - name: DMA1RS
+            description: DMA1 Reset Status
+            index: 5
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT2_DMA1RS
+          - name: DMA0RS
+            description: DMA0 Reset Status
+            index: 4
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT2_DMA0RS
+          - name: ETH0RS
+            description: ETH0 Reset Status
+            index: 2
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT2_ETH0RS
+          - name: WDTRS
+            description: WDT Reset Status
+            index: 1
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT2_WDTRS
+      - name: PRSET2
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 40
+        description: (write-only) RCU Peripheral 2 Reset Set
+        fields:
+          - name: USBRS
+            description: USB Reset Assert
+            index: 7
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET2_USBRS
+          - name: FCERS
+            description: FCE Reset Assert
+            index: 6
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET2_FCERS
+          - name: DMA1RS
+            description: DMA1 Reset Assert
+            index: 5
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET2_DMA1RS
+          - name: DMA0RS
+            description: DMA0 Reset Assert
+            index: 4
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET2_DMA0RS
+          - name: ETH0RS
+            description: ETH0 Reset Assert
+            index: 2
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET2_ETH0RS
+          - name: WDTRS
+            description: WDT Reset Assert
+            index: 1
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET2_WDTRS
+      - name: PRCLR2
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 44
+        description: (write-only) RCU Peripheral 2 Reset Clear
+        fields:
+          - name: USBRS
+            description: USB Reset Clear
+            index: 7
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR2_USBRS
+          - name: FCERS
+            description: FCE Reset Clear
+            index: 6
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR2_FCERS
+          - name: DMA1RS
+            description: DMA1 Reset Clear
+            index: 5
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR2_DMA1RS
+          - name: DMA0RS
+            description: DMA0 Reset Clear
+            index: 4
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR2_DMA0RS
+          - name: ETH0RS
+            description: ETH0 Reset Clear
+            index: 2
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR2_ETH0RS
+          - name: WDTRS
+            description: WDT Reset Clear
+            index: 1
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR2_WDTRS
+      - name: PRSTAT3
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 48
+        const: true
+        description: (read-only) RCU Peripheral 3 Reset Status
+        fields:
+          - name: EBURS
+            description: EBU Reset Status
+            index: 2
+            width: 1
+            read: true
+            write: false
+            type: SCU_RESET_PRSTAT3_EBURS
+      - name: PRSET3
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 52
+        description: (write-only) RCU Peripheral 3 Reset Set
+        fields:
+          - name: EBURS
+            description: EBU Reset Assert
+            index: 2
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRSET3_EBURS
+      - name: PRCLR3
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 56
+        description: (write-only) RCU Peripheral 3 Reset Clear
+        fields:
+          - name: EBURS
+            description: EBU Reset Assert
+            index: 2
+            width: 1
+            read: false
+            write: true
+            type: SCU_RESET_PRCLR3_EBURS
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums:
+  SCU_RESET_RSTSTAT_LCKEN:
+    enum:
+      value1:
+        description: Reset by Lockup disabled
+        value: 0
+      value2:
+        description: Reset by Lockup enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_RSTSTAT_HIBRS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_RSTSTAT_HIBWK:
+    enum:
+      value1:
+        description: No Wake-up
+        value: 0
+      value2:
+        description: Wake-up event
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_RSTSTAT_RSTSTAT:
+    enum:
+      value1:
+        description: PORST reset
+        value: 1
+      value2:
+        description: SWD reset
+        value: 2
+      value3:
+        description: PV reset
+        value: 4
+      value4:
+        description: CPU system reset
+        value: 8
+      value5:
+        description: CPU lockup reset
+        value: 16
+      value6:
+        description: WDT reset
+        value: 32
+      value8:
+        description: Parity Error reset
+        value: 128
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_RSTSET_LCKEN:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Enable reset when Lockup gets asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_RSTSET_HIBRS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_RSTSET_HIBWK:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_RSTCLR_LCKEN:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Disable reset when Lockup gets asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_RSTCLR_HIBRS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_RSTCLR_HIBWK:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_RSTCLR_RSCLR:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Clears field RSTSTAT.RSTSTAT
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT0_ERU1RS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT0_USIC0RS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT0_POSIF1RS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT0_POSIF0RS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT0_CCU81RS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT0_CCU80RS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT0_CCU42RS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT0_CCU41RS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT0_CCU40RS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT0_DSDRS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT0_VADCRS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET0_ERU1RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET0_USIC0RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET0_POSIF1RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET0_POSIF0RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET0_CCU81RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET0_CCU80RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET0_CCU42RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET0_CCU41RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET0_CCU40RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET0_DSDRS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET0_VADCRS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR0_ERU1RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR0_USIC0RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR0_POSIF1RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR0_POSIF0RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR0_CCU81RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR0_CCU80RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR0_CCU42RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR0_CCU41RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR0_CCU40RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR0_DSDRS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR0_VADCRS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT1_PPORTSRS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT1_USIC2RS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT1_USIC1RS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT1_MMCIRS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT1_DACRS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT1_MCAN0RS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT1_LEDTSCU0RS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT1_CCU43RS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET1_PPORTSRS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET1_USIC2RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET1_USIC1RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET1_MMCIRS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET1_DACRS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET1_MCAN0RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET1_LEDTSCU0RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET1_CCU43RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR1_PPORTSRS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR1_USIC2RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR1_USIC1RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR1_MMCIRS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR1_DACRS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR1_MCAN0RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR1_LEDTSCU0RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR1_CCU43RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT2_USBRS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT2_FCERS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT2_DMA1RS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT2_DMA0RS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT2_ETH0RS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT2_WDTRS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET2_USBRS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET2_FCERS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET2_DMA1RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET2_DMA0RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET2_ETH0RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET2_WDTRS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR2_USBRS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR2_FCERS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR2_DMA1RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR2_DMA0RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR2_ETH0RS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR2_WDTRS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSTAT3_EBURS:
+    enum:
+      value1:
+        description: Reset de-asserted
+        value: 0
+      value2:
+        description: Reset asserted
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRSET3_EBURS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_RESET_PRCLR3_EBURS:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: De-assert reset
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false

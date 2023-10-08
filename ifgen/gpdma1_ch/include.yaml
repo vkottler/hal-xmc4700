@@ -1,0 +1,398 @@
+---
+structs:
+  gpdma1_ch:
+    description: General Purpose DMA Unit 1
+    instances:
+      - name: GPDMA1_CH0
+        address: '0x50018000'
+      - name: GPDMA1_CH1
+        address: '0x50018058'
+      - name: GPDMA1_CH2
+        address: '0x500180B0'
+      - name: GPDMA1_CH3
+        address: '0x50018108'
+    fields:
+      - name: SAR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        description: (read-write) Source Address Register
+        fields:
+          - name: SAR
+            description: Current Source Address of DMA transfer
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: DAR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 8
+        description: (read-write) Destination Address Register
+        fields:
+          - name: DAR
+            description: Current Destination address of DMA transfer
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: CTLL
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 24
+        description: (read-write) Control Register Low
+        fields:
+          - name: INT_EN
+            description: Interrupt Enable Bit
+            index: 0
+            width: 1
+            read: true
+            write: true
+          - name: DST_TR_WIDTH
+            description: Destination Transfer Width
+            index: 1
+            width: 3
+            read: true
+            write: true
+          - name: SRC_TR_WIDTH
+            description: Source Transfer Width
+            index: 4
+            width: 3
+            read: true
+            write: true
+          - name: DINC
+            description: Destination Address Increment
+            index: 7
+            width: 2
+            read: true
+            write: true
+            type: GPDMA1_CH0_CTLL_DINC
+          - name: SINC
+            description: Source Address Increment
+            index: 9
+            width: 2
+            read: true
+            write: true
+            type: GPDMA1_CH0_CTLL_SINC
+          - name: DEST_MSIZE
+            description: Destination Burst Transaction Length
+            index: 11
+            width: 3
+            read: true
+            write: true
+          - name: SRC_MSIZE
+            description: Source Burst Transaction Length
+            index: 14
+            width: 3
+            read: true
+            write: true
+          - name: TT_FC
+            description: Transfer Type and Flow Control
+            index: 20
+            width: 3
+            read: true
+            write: true
+      - name: CTLH
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 28
+        description: (read-write) Control Register High
+        fields:
+          - name: BLOCK_TS
+            description: Block Transfer Size
+            index: 0
+            width: 12
+            read: true
+            write: true
+          - name: DONE
+            description: Done bit
+            index: 12
+            width: 1
+            read: true
+            write: true
+      - name: CFGL
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 64
+        description: (read-write) Configuration Register Low
+        fields:
+          - name: CH_PRIOR
+            description: Channel priority
+            index: 5
+            width: 3
+            read: true
+            write: true
+          - name: CH_SUSP
+            description: Channel Suspend
+            index: 8
+            width: 1
+            read: true
+            write: true
+            type: GPDMA1_CH0_CFGL_CH_SUSP
+          - name: FIFO_EMPTY
+            description: Indicates if there is data left in the channel FIFO
+            index: 9
+            width: 1
+            read: true
+            write: false
+            type: GPDMA1_CH0_CFGL_FIFO_EMPTY
+          - name: HS_SEL_DST
+            description: Destination Software or Hardware Handshaking Select
+            index: 10
+            width: 1
+            read: true
+            write: true
+            type: GPDMA1_CH0_CFGL_HS_SEL_DST
+          - name: HS_SEL_SRC
+            description: Source Software or Hardware Handshaking Select
+            index: 11
+            width: 1
+            read: true
+            write: true
+            type: GPDMA1_CH0_CFGL_HS_SEL_SRC
+          - name: LOCK_CH_L
+            description: Channel Lock Level
+            index: 12
+            width: 2
+            read: true
+            write: true
+            type: GPDMA1_CH0_CFGL_LOCK_CH_L
+          - name: LOCK_B_L
+            description: Bus Lock Level
+            index: 14
+            width: 2
+            read: true
+            write: true
+            type: GPDMA1_CH0_CFGL_LOCK_B_L
+          - name: LOCK_CH
+            description: Channel Lock Bit
+            index: 16
+            width: 1
+            read: true
+            write: true
+          - name: LOCK_B
+            description: Bus Lock Bit
+            index: 17
+            width: 1
+            read: true
+            write: true
+          - name: DST_HS_POL
+            description: Destination Handshaking Interface Polarity
+            index: 18
+            width: 1
+            read: true
+            write: true
+            type: GPDMA1_CH0_CFGL_DST_HS_POL
+          - name: SRC_HS_POL
+            description: Source Handshaking Interface Polarity
+            index: 19
+            width: 1
+            read: true
+            write: true
+            type: GPDMA1_CH0_CFGL_SRC_HS_POL
+          - name: MAX_ABRST
+            description: Maximum AMBA Burst Length
+            index: 20
+            width: 10
+            read: true
+            write: true
+      - name: CFGH
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 68
+        description: (read-write) Configuration Register High
+        fields:
+          - name: FCMODE
+            description: Flow Control Mode
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: GPDMA1_CH0_CFGH_FCMODE
+          - name: FIFO_MODE
+            description: FIFO Mode Select
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: GPDMA1_CH0_CFGH_FIFO_MODE
+          - name: PROTCTL
+            description: Protection Control
+            index: 2
+            width: 3
+            read: true
+            write: true
+          - name: SRC_PER
+            description: Source Peripheral
+            index: 7
+            width: 4
+            read: true
+            write: true
+          - name: DEST_PER
+            description: Destination Peripheral
+            index: 11
+            width: 4
+            read: true
+            write: true
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums:
+  GPDMA1_CH0_CTLL_DINC:
+    enum:
+      value1:
+        description: Increment
+        value: 0
+      value2:
+        description: Decrement
+        value: 1
+      value3:
+        description: No change
+        value: 2
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA1_CH0_CTLL_SINC:
+    enum:
+      value1:
+        description: Increment
+        value: 0
+      value2:
+        description: Decrement
+        value: 1
+      value3:
+        description: No change
+        value: 2
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA1_CH0_CFGL_CH_SUSP:
+    enum:
+      value1:
+        description: Not suspended.
+        value: 0
+      value2:
+        description: Suspend DMA transfer from the source.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA1_CH0_CFGL_FIFO_EMPTY:
+    enum:
+      value1:
+        description: Channel FIFO empty
+        value: 1
+      value2:
+        description: Channel FIFO not empty
+        value: 0
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA1_CH0_CFGL_HS_SEL_DST:
+    enum:
+      value1:
+        description: Hardware handshaking interface. Software-initiated transaction
+          requests are ignored.
+        value: 0
+      value2:
+        description: Software handshaking interface. Hardware- initiated transaction
+          requests are ignored.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA1_CH0_CFGL_HS_SEL_SRC:
+    enum:
+      value1:
+        description: Hardware handshaking interface. Software-initiated transaction
+          requests are ignored.
+        value: 0
+      value2:
+        description: Software handshaking interface. Hardware-initiated transaction
+          requests are ignored.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA1_CH0_CFGL_LOCK_CH_L:
+    enum:
+      value1:
+        description: Over complete DMA transfer
+        value: 0
+      value2:
+        description: Over complete DMA block transfer
+        value: 1
+      value3:
+        description: Over complete DMA transaction
+        value: 2
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA1_CH0_CFGL_LOCK_B_L:
+    enum:
+      value1:
+        description: Over complete DMA transfer
+        value: 0
+      value2:
+        description: Over complete DMA block transfer
+        value: 1
+      value3:
+        description: Over complete DMA transaction
+        value: 2
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA1_CH0_CFGL_DST_HS_POL:
+    enum:
+      value1:
+        description: Active high
+        value: 0
+      value2:
+        description: Active low
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA1_CH0_CFGL_SRC_HS_POL:
+    enum:
+      value1:
+        description: Active high
+        value: 0
+      value2:
+        description: Active low
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA1_CH0_CFGH_FCMODE:
+    enum:
+      value1:
+        description: Source transaction requests are serviced when they occur. Data
+          pre-fetching is enabled.
+        value: 0
+      value2:
+        description: Source transaction requests are not serviced until a destination
+          transaction request occurs. In this mode, the amount of data transferred
+          from the source is limited so that it is guaranteed to be transferred to
+          the destination prior to block termination by the destination. Data pre-fetching
+          is disabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  GPDMA1_CH0_CFGH_FIFO_MODE:
+    enum:
+      value1:
+        description: Space/data available for single AHB transfer of the specified
+          transfer width.
+        value: 0
+      value2:
+        description: Data available is greater than or equal to half the FIFO depth
+          for destination transfers and space available is greater than half the fifo
+          depth for source transfers. The exceptions are at the end of a burst transaction
+          request or at the end of a block transfer.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false

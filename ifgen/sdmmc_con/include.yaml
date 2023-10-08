@@ -1,0 +1,91 @@
+---
+structs:
+  sdmmc_con:
+    description: SD and Multimediacard Control Register
+    instances:
+      - name: SDMMC_CON
+        address: '0x500040B4'
+    fields:
+      - name: SDMMC_CON
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        description: (read-write) SDMMC Configuration
+        fields:
+          - name: CDSVAL
+            description: SDMMC Write Protect Software Control
+            index: 20
+            width: 1
+            read: true
+            write: true
+            type: SDMMC_CON_SDMMC_CON_CDSVAL
+          - name: CDSEL
+            description: SDMMC Card Detection Control
+            index: 16
+            width: 1
+            read: true
+            write: true
+            type: SDMMC_CON_SDMMC_CON_CDSEL
+          - name: WPSVAL
+            description: SDMMC Write Protect Software Control
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: SDMMC_CON_SDMMC_CON_WPSVAL
+          - name: WPSEL
+            description: SDMMC Write Protection Input Multiplexer Control
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: SDMMC_CON_SDMMC_CON_WPSEL
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums:
+  SDMMC_CON_SDMMC_CON_CDSVAL:
+    enum:
+      value1:
+        description: No card detected
+        value: 0
+      value2:
+        description: Card detected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SDMMC_CON_SDMMC_CON_CDSEL:
+    enum:
+      value1:
+        description: P1.10 input pin selected
+        value: 0
+      value2:
+        description: Software bit CDSVAL is selected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SDMMC_CON_SDMMC_CON_WPSVAL:
+    enum:
+      value1:
+        description: No write protection
+        value: 0
+      value2:
+        description: Write protection active
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SDMMC_CON_SDMMC_CON_WPSEL:
+    enum:
+      value1:
+        description: P1.1 input pin selected
+        value: 0
+      value2:
+        description: Software bit WPVAL is selected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false

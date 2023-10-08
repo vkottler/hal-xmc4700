@@ -1,0 +1,4571 @@
+---
+structs:
+  ebu:
+    description: External Bus Unit
+    instances:
+      - name: EBU
+        address: '0x58008000'
+    fields:
+      - name: CLC
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        description: (read-write) EBU Clock Control Register
+        fields:
+          - name: EBUDIVACK
+            description: EBU Clock Divide Ratio Status
+            index: 22
+            width: 2
+            read: true
+            write: false
+            type: EBU_CLC_EBUDIVACK
+          - name: DIV2ACK
+            description: DIV2 Clocking Mode Status
+            index: 21
+            width: 1
+            read: true
+            write: false
+            type: EBU_CLC_DIV2ACK
+          - name: SYNCACK
+            description: EBU Clocking Mode Status
+            index: 20
+            width: 1
+            read: true
+            write: false
+            type: EBU_CLC_SYNCACK
+          - name: EBUDIV
+            description: EBU Clock Divide Ratio
+            index: 18
+            width: 2
+            read: true
+            write: true
+            type: EBU_CLC_EBUDIV
+          - name: DIV2
+            description: DIV2 Clocking Mode
+            index: 17
+            width: 1
+            read: true
+            write: true
+            type: EBU_CLC_DIV2
+          - name: SYNC
+            description: EBU Clocking Mode
+            index: 16
+            width: 1
+            read: true
+            write: true
+            type: EBU_CLC_SYNC
+          - name: DISS
+            description: EBU Disable Status Bit
+            index: 1
+            width: 1
+            read: true
+            write: false
+            type: EBU_CLC_DISS
+          - name: DISR
+            description: EBU Disable Request Bit
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: EBU_CLC_DISR
+      - name: MODCON
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4
+        description: (read-write) EBU Configuration Register
+        fields:
+          - name: ALE
+            description: ALE Mode
+            index: 31
+            width: 1
+            read: true
+            write: true
+            type: EBU_MODCON_ALE
+          - name: ACCSINHACK
+            description: Access inhibit acknowledge
+            index: 29
+            width: 1
+            read: true
+            write: false
+          - name: ACCSINH
+            description: Access Inhibit request
+            index: 28
+            width: 1
+            read: true
+            write: true
+          - name: GLOBALCS
+            description: Global Chip Select Enable
+            index: 24
+            width: 4
+            read: true
+            write: true
+          - name: LOCKTIMEOUT
+            description: Lock Timeout Counter Preload
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: TIMEOUTC
+            description: Bus Time-out Control
+            index: 8
+            width: 8
+            read: true
+            write: true
+            type: EBU_MODCON_TIMEOUTC
+          - name: ARBMODE
+            description: Arbitration Mode Selection
+            index: 6
+            width: 2
+            read: true
+            write: true
+            type: EBU_MODCON_ARBMODE
+          - name: ARBSYNC
+            description: Arbitration Signal Synchronization Control
+            index: 5
+            width: 1
+            read: true
+            write: true
+            type: EBU_MODCON_ARBSYNC
+          - name: EXTLOCK
+            description: External Bus Lock Control
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: EBU_MODCON_EXTLOCK
+          - name: SDTRI
+            description: SDRAM Tristate
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: EBU_MODCON_SDTRI
+          - name: LCKABRT
+            description: Lock Abort
+            index: 1
+            width: 1
+            read: true
+            write: false
+          - name: STS
+            description: Memory Status Bit
+            index: 0
+            width: 1
+            read: true
+            write: false
+      - name: ID
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 8
+        const: true
+        description: (read-only) EBU Module Identification Register
+        fields:
+          - name: MOD_NUMBER
+            description: Module Number
+            index: 16
+            width: 16
+            read: true
+            write: false
+          - name: MOD_TYPE
+            description: Module Type
+            index: 8
+            width: 8
+            read: true
+            write: false
+          - name: MOD_REV
+            description: Module Revision
+            index: 0
+            width: 8
+            read: true
+            write: false
+      - name: USERCON
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 12
+        description: (read-write) EBU Test/Control Configuration Register
+        fields:
+          - name: ADVIO
+            description: ADV Pin to GPIO Mode
+            index: 25
+            width: 1
+            read: true
+            write: true
+            type: EBU_USERCON_ADVIO
+          - name: ADDIO
+            description: Address Pins to GPIO Mode
+            index: 16
+            width: 9
+            read: true
+            write: true
+            type: EBU_USERCON_ADDIO
+          - name: DIP
+            description: Disable Internal Pipelining
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: ADDRSEL0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 24
+        description: (read-write) EBU Address Select Register 0
+        fields:
+          - name: WPROT
+            description: Memory Region Write Protect
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: EBU_ADDRSEL0_WPROT
+          - name: ALTENAB
+            description: Alternate Region Enable
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: EBU_ADDRSEL0_ALTENAB
+          - name: REGENAB
+            description: Memory Region Enable
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: EBU_ADDRSEL0_REGENAB
+      - name: ADDRSEL1
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 28
+        description: (read-write) EBU Address Select Register 1
+        fields:
+          - name: WPROT
+            description: Memory Region Write Protect
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: EBU_ADDRSEL1_WPROT
+          - name: ALTENAB
+            description: Alternate Region Enable
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: EBU_ADDRSEL1_ALTENAB
+          - name: REGENAB
+            description: Memory Region Enable
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: EBU_ADDRSEL1_REGENAB
+      - name: ADDRSEL2
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 32
+        description: (read-write) EBU Address Select Register 2
+        fields:
+          - name: WPROT
+            description: Memory Region Write Protect
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: EBU_ADDRSEL2_WPROT
+          - name: ALTENAB
+            description: Alternate Region Enable
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: EBU_ADDRSEL2_ALTENAB
+          - name: REGENAB
+            description: Memory Region Enable
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: EBU_ADDRSEL2_REGENAB
+      - name: ADDRSEL3
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 36
+        description: (read-write) EBU Address Select Register 3
+        fields:
+          - name: WPROT
+            description: Memory Region Write Protect
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: EBU_ADDRSEL3_WPROT
+          - name: ALTENAB
+            description: Alternate Region Enable
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: EBU_ADDRSEL3_ALTENAB
+          - name: REGENAB
+            description: Memory Region Enable
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: EBU_ADDRSEL3_REGENAB
+      - name: BUSRCON0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 40
+        description: (read-write) EBU Bus Configuration Register
+        fields:
+          - name: AGEN
+            description: Device Type for Region
+            index: 28
+            width: 4
+            read: true
+            write: true
+          - name: AAP
+            description: 'Asynchronous Address phase:'
+            index: 26
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON0_AAP
+          - name: WAIT
+            description: 'External Wait Control: 0=OFF (default after reset)., 1=Asynchronous
+              input at WAIT., 2=Synchronous input at WAIT., 3=reserved., 0=OFF (default
+              after reset)., 1=Wait for page load (Early WAIT)., 2=Wait for page load
+              (WAIT with data)., 3=Abort and retry access., '
+            index: 24
+            width: 2
+            read: true
+            write: true
+          - name: PORTW
+            description: Device Addressing Mode
+            index: 22
+            width: 2
+            read: true
+            write: true
+          - name: BCGEN
+            description: Byte Control Signal Control
+            index: 20
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSRCON0_BCGEN
+          - name: WAITINV
+            description: Reversed polarity at WAIT
+            index: 19
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON0_WAITINV
+          - name: DBA
+            description: Disable Burst Address Wrapping
+            index: 18
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON0_DBA
+          - name: EBSE
+            description: Early Burst Signal Enable for Synchronous Burst
+            index: 17
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON0_EBSE
+          - name: ECSE
+            description: Early Chip Select for Synchronous Burst
+            index: 16
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON0_ECSE
+          - name: NAA
+            description: Enable flash non-array access workaround
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: BFCMSEL
+            description: Burst Flash Clock Mode Select
+            index: 6
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON0_BFCMSEL
+          - name: FDBKEN
+            description: Burst FLASH Clock Feedback Enable
+            index: 5
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON0_FDBKEN
+          - name: BFSSS
+            description: 'Read Single Stage Synchronization:'
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON0_BFSSS
+          - name: FBBMSEL
+            description: Synchronous burst buffer mode select
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON0_FBBMSEL
+          - name: FETBLEN
+            description: Burst Length for Synchronous Burst
+            index: 0
+            width: 3
+            read: true
+            write: true
+            type: EBU_BUSRCON0_FETBLEN
+      - name: BUSRAP0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 44
+        description: (read-write) EBU Bus Read Access Parameter Register
+        fields:
+          - name: ADDRC
+            description: Address Cycles
+            index: 28
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSRAP0_ADDRC
+          - name: AHOLDC
+            description: Address Hold Cycles
+            index: 24
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSRAP0_AHOLDC
+          - name: CMDDELAY
+            description: Command Delay Cycles
+            index: 20
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSRAP0_CMDDELAY
+          - name: EXTDATA
+            description: Extended data
+            index: 18
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSRAP0_EXTDATA
+          - name: EXTCLOCK
+            description: Frequency of external clock at pin BFCLKO
+            index: 16
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSRAP0_EXTCLOCK
+          - name: DATAC
+            description: Data Hold Cycles for Read Accesses
+            index: 12
+            width: 4
+            read: true
+            write: true
+          - name: WAITRDC
+            description: Programmed Wait States for read accesses
+            index: 7
+            width: 5
+            read: true
+            write: true
+            type: EBU_BUSRAP0_WAITRDC
+          - name: RDRECOVC
+            description: Recovery Cycles after Read Accesses
+            index: 4
+            width: 3
+            read: true
+            write: true
+            type: EBU_BUSRAP0_RDRECOVC
+          - name: RDDTACS
+            description: Recovery Cycles between Different Regions
+            index: 0
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSRAP0_RDDTACS
+      - name: BUSWCON0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 48
+        description: (read-write) EBU Bus Write Configuration Register
+        fields:
+          - name: AGEN
+            description: Device Type for Region
+            index: 28
+            width: 4
+            read: true
+            write: true
+          - name: LOCKCS
+            description: Lock Chip Select
+            index: 27
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON0_LOCKCS
+          - name: AAP
+            description: 'Asynchronous Address phase:'
+            index: 26
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON0_AAP
+          - name: WAIT
+            description: 'External Wait Control: 0=OFF (default after reset)., 1=Asynchronous
+              input at WAIT., 2=Synchronous input at WAIT., 3=reserved., 0=OFF (default
+              after reset)., 1=Wait for page load (Early WAIT)., 2=Wait for page load
+              (WAIT with data)., 3=Abort and retry access., '
+            index: 24
+            width: 2
+            read: true
+            write: true
+          - name: PORTW
+            description: Device Addressing Mode
+            index: 22
+            width: 2
+            read: true
+            write: false
+          - name: BCGEN
+            description: Byte Control Signal Control
+            index: 20
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSWCON0_BCGEN
+          - name: WAITINV
+            description: Reversed polarity at WAIT
+            index: 19
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON0_WAITINV
+          - name: EBSE
+            description: Early Burst Signal Enable for Synchronous Burst
+            index: 17
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON0_EBSE
+          - name: ECSE
+            description: Early Chip Select for Synchronous Burst
+            index: 16
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON0_ECSE
+          - name: NAA
+            description: Enable flash non-array access workaround
+            index: 7
+            width: 1
+            read: true
+            write: false
+          - name: FBBMSEL
+            description: Synchronous burst buffer mode select
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON0_FBBMSEL
+          - name: FETBLEN
+            description: Burst Length for Synchronous Burst
+            index: 0
+            width: 3
+            read: true
+            write: true
+            type: EBU_BUSWCON0_FETBLEN
+      - name: BUSWAP0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 52
+        description: (read-write) EBU Bus Write Access Parameter Register
+        fields:
+          - name: ADDRC
+            description: Address Cycles
+            index: 28
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSWAP0_ADDRC
+          - name: AHOLDC
+            description: Address Hold Cycles
+            index: 24
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSWAP0_AHOLDC
+          - name: CMDDELAY
+            description: Command Delay Cycles
+            index: 20
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSWAP0_CMDDELAY
+          - name: EXTDATA
+            description: Extended data
+            index: 18
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSWAP0_EXTDATA
+          - name: EXTCLOCK
+            description: Frequency of external clock at pin BFCLKO
+            index: 16
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSWAP0_EXTCLOCK
+          - name: DATAC
+            description: Data Hold Cycles for Write Accesses
+            index: 12
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSWAP0_DATAC
+          - name: WAITWRC
+            description: Programmed Wait States for write accesses
+            index: 7
+            width: 5
+            read: true
+            write: true
+            type: EBU_BUSWAP0_WAITWRC
+          - name: WRRECOVC
+            description: Recovery Cycles after Write Accesses
+            index: 4
+            width: 3
+            read: true
+            write: true
+            type: EBU_BUSWAP0_WRRECOVC
+          - name: WRDTACS
+            description: Recovery Cycles between Different Regions
+            index: 0
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSWAP0_WRDTACS
+      - name: BUSRCON1
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 56
+        description: (read-write) EBU Bus Configuration Register
+        fields:
+          - name: AGEN
+            description: Device Type for Region
+            index: 28
+            width: 4
+            read: true
+            write: true
+          - name: AAP
+            description: 'Asynchronous Address phase:'
+            index: 26
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON1_AAP
+          - name: WAIT
+            description: 'External Wait Control: 0=OFF (default after reset)., 1=Asynchronous
+              input at WAIT., 2=Synchronous input at WAIT., 3=reserved., 0=OFF (default
+              after reset)., 1=Wait for page load (Early WAIT)., 2=Wait for page load
+              (WAIT with data)., 3=Abort and retry access., '
+            index: 24
+            width: 2
+            read: true
+            write: true
+          - name: PORTW
+            description: Device Addressing Mode
+            index: 22
+            width: 2
+            read: true
+            write: true
+          - name: BCGEN
+            description: Byte Control Signal Control
+            index: 20
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSRCON1_BCGEN
+          - name: WAITINV
+            description: Reversed polarity at WAIT
+            index: 19
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON1_WAITINV
+          - name: DBA
+            description: Disable Burst Address Wrapping
+            index: 18
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON1_DBA
+          - name: EBSE
+            description: Early Burst Signal Enable for Synchronous Burst
+            index: 17
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON1_EBSE
+          - name: ECSE
+            description: Early Chip Select for Synchronous Burst
+            index: 16
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON1_ECSE
+          - name: NAA
+            description: Enable flash non-array access workaround
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: BFCMSEL
+            description: Burst Flash Clock Mode Select
+            index: 6
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON1_BFCMSEL
+          - name: FDBKEN
+            description: Burst FLASH Clock Feedback Enable
+            index: 5
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON1_FDBKEN
+          - name: BFSSS
+            description: 'Read Single Stage Synchronization:'
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON1_BFSSS
+          - name: FBBMSEL
+            description: Synchronous burst buffer mode select
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON1_FBBMSEL
+          - name: FETBLEN
+            description: Burst Length for Synchronous Burst
+            index: 0
+            width: 3
+            read: true
+            write: true
+            type: EBU_BUSRCON1_FETBLEN
+      - name: BUSRAP1
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 60
+        description: (read-write) EBU Bus Read Access Parameter Register
+        fields:
+          - name: ADDRC
+            description: Address Cycles
+            index: 28
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSRAP1_ADDRC
+          - name: AHOLDC
+            description: Address Hold Cycles
+            index: 24
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSRAP1_AHOLDC
+          - name: CMDDELAY
+            description: Command Delay Cycles
+            index: 20
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSRAP1_CMDDELAY
+          - name: EXTDATA
+            description: Extended data
+            index: 18
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSRAP1_EXTDATA
+          - name: EXTCLOCK
+            description: Frequency of external clock at pin BFCLKO
+            index: 16
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSRAP1_EXTCLOCK
+          - name: DATAC
+            description: Data Hold Cycles for Read Accesses
+            index: 12
+            width: 4
+            read: true
+            write: true
+          - name: WAITRDC
+            description: Programmed Wait States for read accesses
+            index: 7
+            width: 5
+            read: true
+            write: true
+            type: EBU_BUSRAP1_WAITRDC
+          - name: RDRECOVC
+            description: Recovery Cycles after Read Accesses
+            index: 4
+            width: 3
+            read: true
+            write: true
+            type: EBU_BUSRAP1_RDRECOVC
+          - name: RDDTACS
+            description: Recovery Cycles between Different Regions
+            index: 0
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSRAP1_RDDTACS
+      - name: BUSWCON1
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 64
+        description: (read-write) EBU Bus Write Configuration Register
+        fields:
+          - name: AGEN
+            description: Device Type for Region
+            index: 28
+            width: 4
+            read: true
+            write: true
+          - name: LOCKCS
+            description: Lock Chip Select
+            index: 27
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON1_LOCKCS
+          - name: AAP
+            description: 'Asynchronous Address phase:'
+            index: 26
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON1_AAP
+          - name: WAIT
+            description: 'External Wait Control: 0=OFF (default after reset)., 1=Asynchronous
+              input at WAIT., 2=Synchronous input at WAIT., 3=reserved., 0=OFF (default
+              after reset)., 1=Wait for page load (Early WAIT)., 2=Wait for page load
+              (WAIT with data)., 3=Abort and retry access., '
+            index: 24
+            width: 2
+            read: true
+            write: true
+          - name: PORTW
+            description: Device Addressing Mode
+            index: 22
+            width: 2
+            read: true
+            write: false
+          - name: BCGEN
+            description: Byte Control Signal Control
+            index: 20
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSWCON1_BCGEN
+          - name: WAITINV
+            description: Reversed polarity at WAIT
+            index: 19
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON1_WAITINV
+          - name: EBSE
+            description: Early Burst Signal Enable for Synchronous Burst
+            index: 17
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON1_EBSE
+          - name: ECSE
+            description: Early Chip Select for Synchronous Burst
+            index: 16
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON1_ECSE
+          - name: NAA
+            description: Enable flash non-array access workaround
+            index: 7
+            width: 1
+            read: true
+            write: false
+          - name: FBBMSEL
+            description: Synchronous burst buffer mode select
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON1_FBBMSEL
+          - name: FETBLEN
+            description: Burst Length for Synchronous Burst
+            index: 0
+            width: 3
+            read: true
+            write: true
+            type: EBU_BUSWCON1_FETBLEN
+      - name: BUSWAP1
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 68
+        description: (read-write) EBU Bus Write Access Parameter Register
+        fields:
+          - name: ADDRC
+            description: Address Cycles
+            index: 28
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSWAP1_ADDRC
+          - name: AHOLDC
+            description: Address Hold Cycles
+            index: 24
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSWAP1_AHOLDC
+          - name: CMDDELAY
+            description: Command Delay Cycles
+            index: 20
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSWAP1_CMDDELAY
+          - name: EXTDATA
+            description: Extended data
+            index: 18
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSWAP1_EXTDATA
+          - name: EXTCLOCK
+            description: Frequency of external clock at pin BFCLKO
+            index: 16
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSWAP1_EXTCLOCK
+          - name: DATAC
+            description: Data Hold Cycles for Write Accesses
+            index: 12
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSWAP1_DATAC
+          - name: WAITWRC
+            description: Programmed Wait States for write accesses
+            index: 7
+            width: 5
+            read: true
+            write: true
+            type: EBU_BUSWAP1_WAITWRC
+          - name: WRRECOVC
+            description: Recovery Cycles after Write Accesses
+            index: 4
+            width: 3
+            read: true
+            write: true
+            type: EBU_BUSWAP1_WRRECOVC
+          - name: WRDTACS
+            description: Recovery Cycles between Different Regions
+            index: 0
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSWAP1_WRDTACS
+      - name: BUSRCON2
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 72
+        description: (read-write) EBU Bus Configuration Register
+        fields:
+          - name: AGEN
+            description: Device Type for Region
+            index: 28
+            width: 4
+            read: true
+            write: true
+          - name: AAP
+            description: 'Asynchronous Address phase:'
+            index: 26
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON2_AAP
+          - name: WAIT
+            description: 'External Wait Control: 0=OFF (default after reset)., 1=Asynchronous
+              input at WAIT., 2=Synchronous input at WAIT., 3=reserved., 0=OFF (default
+              after reset)., 1=Wait for page load (Early WAIT)., 2=Wait for page load
+              (WAIT with data)., 3=Abort and retry access., '
+            index: 24
+            width: 2
+            read: true
+            write: true
+          - name: PORTW
+            description: Device Addressing Mode
+            index: 22
+            width: 2
+            read: true
+            write: true
+          - name: BCGEN
+            description: Byte Control Signal Control
+            index: 20
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSRCON2_BCGEN
+          - name: WAITINV
+            description: Reversed polarity at WAIT
+            index: 19
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON2_WAITINV
+          - name: DBA
+            description: Disable Burst Address Wrapping
+            index: 18
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON2_DBA
+          - name: EBSE
+            description: Early Burst Signal Enable for Synchronous Burst
+            index: 17
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON2_EBSE
+          - name: ECSE
+            description: Early Chip Select for Synchronous Burst
+            index: 16
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON2_ECSE
+          - name: NAA
+            description: Enable flash non-array access workaround
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: BFCMSEL
+            description: Burst Flash Clock Mode Select
+            index: 6
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON2_BFCMSEL
+          - name: FDBKEN
+            description: Burst FLASH Clock Feedback Enable
+            index: 5
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON2_FDBKEN
+          - name: BFSSS
+            description: 'Read Single Stage Synchronization:'
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON2_BFSSS
+          - name: FBBMSEL
+            description: Synchronous burst buffer mode select
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON2_FBBMSEL
+          - name: FETBLEN
+            description: Burst Length for Synchronous Burst
+            index: 0
+            width: 3
+            read: true
+            write: true
+            type: EBU_BUSRCON2_FETBLEN
+      - name: BUSRAP2
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 76
+        description: (read-write) EBU Bus Read Access Parameter Register
+        fields:
+          - name: ADDRC
+            description: Address Cycles
+            index: 28
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSRAP2_ADDRC
+          - name: AHOLDC
+            description: Address Hold Cycles
+            index: 24
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSRAP2_AHOLDC
+          - name: CMDDELAY
+            description: Command Delay Cycles
+            index: 20
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSRAP2_CMDDELAY
+          - name: EXTDATA
+            description: Extended data
+            index: 18
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSRAP2_EXTDATA
+          - name: EXTCLOCK
+            description: Frequency of external clock at pin BFCLKO
+            index: 16
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSRAP2_EXTCLOCK
+          - name: DATAC
+            description: Data Hold Cycles for Read Accesses
+            index: 12
+            width: 4
+            read: true
+            write: true
+          - name: WAITRDC
+            description: Programmed Wait States for read accesses
+            index: 7
+            width: 5
+            read: true
+            write: true
+            type: EBU_BUSRAP2_WAITRDC
+          - name: RDRECOVC
+            description: Recovery Cycles after Read Accesses
+            index: 4
+            width: 3
+            read: true
+            write: true
+            type: EBU_BUSRAP2_RDRECOVC
+          - name: RDDTACS
+            description: Recovery Cycles between Different Regions
+            index: 0
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSRAP2_RDDTACS
+      - name: BUSWCON2
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 80
+        description: (read-write) EBU Bus Write Configuration Register
+        fields:
+          - name: AGEN
+            description: Device Type for Region
+            index: 28
+            width: 4
+            read: true
+            write: true
+          - name: LOCKCS
+            description: Lock Chip Select
+            index: 27
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON2_LOCKCS
+          - name: AAP
+            description: 'Asynchronous Address phase:'
+            index: 26
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON2_AAP
+          - name: WAIT
+            description: 'External Wait Control: 0=OFF (default after reset)., 1=Asynchronous
+              input at WAIT., 2=Synchronous input at WAIT., 3=reserved., 0=OFF (default
+              after reset)., 1=Wait for page load (Early WAIT)., 2=Wait for page load
+              (WAIT with data)., 3=Abort and retry access., '
+            index: 24
+            width: 2
+            read: true
+            write: true
+          - name: PORTW
+            description: Device Addressing Mode
+            index: 22
+            width: 2
+            read: true
+            write: false
+          - name: BCGEN
+            description: Byte Control Signal Control
+            index: 20
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSWCON2_BCGEN
+          - name: WAITINV
+            description: Reversed polarity at WAIT
+            index: 19
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON2_WAITINV
+          - name: EBSE
+            description: Early Burst Signal Enable for Synchronous Burst
+            index: 17
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON2_EBSE
+          - name: ECSE
+            description: Early Chip Select for Synchronous Burst
+            index: 16
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON2_ECSE
+          - name: NAA
+            description: Enable flash non-array access workaround
+            index: 7
+            width: 1
+            read: true
+            write: false
+          - name: FBBMSEL
+            description: Synchronous burst buffer mode select
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON2_FBBMSEL
+          - name: FETBLEN
+            description: Burst Length for Synchronous Burst
+            index: 0
+            width: 3
+            read: true
+            write: true
+            type: EBU_BUSWCON2_FETBLEN
+      - name: BUSWAP2
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 84
+        description: (read-write) EBU Bus Write Access Parameter Register
+        fields:
+          - name: ADDRC
+            description: Address Cycles
+            index: 28
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSWAP2_ADDRC
+          - name: AHOLDC
+            description: Address Hold Cycles
+            index: 24
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSWAP2_AHOLDC
+          - name: CMDDELAY
+            description: Command Delay Cycles
+            index: 20
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSWAP2_CMDDELAY
+          - name: EXTDATA
+            description: Extended data
+            index: 18
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSWAP2_EXTDATA
+          - name: EXTCLOCK
+            description: Frequency of external clock at pin BFCLKO
+            index: 16
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSWAP2_EXTCLOCK
+          - name: DATAC
+            description: Data Hold Cycles for Write Accesses
+            index: 12
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSWAP2_DATAC
+          - name: WAITWRC
+            description: Programmed Wait States for write accesses
+            index: 7
+            width: 5
+            read: true
+            write: true
+            type: EBU_BUSWAP2_WAITWRC
+          - name: WRRECOVC
+            description: Recovery Cycles after Write Accesses
+            index: 4
+            width: 3
+            read: true
+            write: true
+            type: EBU_BUSWAP2_WRRECOVC
+          - name: WRDTACS
+            description: Recovery Cycles between Different Regions
+            index: 0
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSWAP2_WRDTACS
+      - name: BUSRCON3
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 88
+        description: (read-write) EBU Bus Configuration Register
+        fields:
+          - name: AGEN
+            description: Device Type for Region
+            index: 28
+            width: 4
+            read: true
+            write: true
+          - name: AAP
+            description: 'Asynchronous Address phase:'
+            index: 26
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON3_AAP
+          - name: WAIT
+            description: 'External Wait Control: 0=OFF (default after reset)., 1=Asynchronous
+              input at WAIT., 2=Synchronous input at WAIT., 3=reserved., 0=OFF (default
+              after reset)., 1=Wait for page load (Early WAIT)., 2=Wait for page load
+              (WAIT with data)., 3=Abort and retry access., '
+            index: 24
+            width: 2
+            read: true
+            write: true
+          - name: PORTW
+            description: Device Addressing Mode
+            index: 22
+            width: 2
+            read: true
+            write: true
+          - name: BCGEN
+            description: Byte Control Signal Control
+            index: 20
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSRCON3_BCGEN
+          - name: WAITINV
+            description: Reversed polarity at WAIT
+            index: 19
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON3_WAITINV
+          - name: DBA
+            description: Disable Burst Address Wrapping
+            index: 18
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON3_DBA
+          - name: EBSE
+            description: Early Burst Signal Enable for Synchronous Burst
+            index: 17
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON3_EBSE
+          - name: ECSE
+            description: Early Chip Select for Synchronous Burst
+            index: 16
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON3_ECSE
+          - name: NAA
+            description: Enable flash non-array access workaround
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: BFCMSEL
+            description: Burst Flash Clock Mode Select
+            index: 6
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON3_BFCMSEL
+          - name: FDBKEN
+            description: Burst FLASH Clock Feedback Enable
+            index: 5
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON3_FDBKEN
+          - name: BFSSS
+            description: 'Read Single Stage Synchronization:'
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON3_BFSSS
+          - name: FBBMSEL
+            description: Synchronous burst buffer mode select
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSRCON3_FBBMSEL
+          - name: FETBLEN
+            description: Burst Length for Synchronous Burst
+            index: 0
+            width: 3
+            read: true
+            write: true
+            type: EBU_BUSRCON3_FETBLEN
+      - name: BUSRAP3
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 92
+        description: (read-write) EBU Bus Read Access Parameter Register
+        fields:
+          - name: ADDRC
+            description: Address Cycles
+            index: 28
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSRAP3_ADDRC
+          - name: AHOLDC
+            description: Address Hold Cycles
+            index: 24
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSRAP3_AHOLDC
+          - name: CMDDELAY
+            description: Command Delay Cycles
+            index: 20
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSRAP3_CMDDELAY
+          - name: EXTDATA
+            description: Extended data
+            index: 18
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSRAP3_EXTDATA
+          - name: EXTCLOCK
+            description: Frequency of external clock at pin BFCLKO
+            index: 16
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSRAP3_EXTCLOCK
+          - name: DATAC
+            description: Data Hold Cycles for Read Accesses
+            index: 12
+            width: 4
+            read: true
+            write: true
+          - name: WAITRDC
+            description: Programmed Wait States for read accesses
+            index: 7
+            width: 5
+            read: true
+            write: true
+            type: EBU_BUSRAP3_WAITRDC
+          - name: RDRECOVC
+            description: Recovery Cycles after Read Accesses
+            index: 4
+            width: 3
+            read: true
+            write: true
+            type: EBU_BUSRAP3_RDRECOVC
+          - name: RDDTACS
+            description: Recovery Cycles between Different Regions
+            index: 0
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSRAP3_RDDTACS
+      - name: BUSWCON3
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 96
+        description: (read-write) EBU Bus Write Configuration Register
+        fields:
+          - name: AGEN
+            description: Device Type for Region
+            index: 28
+            width: 4
+            read: true
+            write: true
+          - name: LOCKCS
+            description: Lock Chip Select
+            index: 27
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON3_LOCKCS
+          - name: AAP
+            description: 'Asynchronous Address phase:'
+            index: 26
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON3_AAP
+          - name: WAIT
+            description: 'External Wait Control: 0=OFF (default after reset)., 1=Asynchronous
+              input at WAIT., 2=Synchronous input at WAIT., 3=reserved., 0=OFF (default
+              after reset)., 1=Wait for page load (Early WAIT)., 2=Wait for page load
+              (WAIT with data)., 3=Abort and retry access., '
+            index: 24
+            width: 2
+            read: true
+            write: true
+          - name: PORTW
+            description: Device Addressing Mode
+            index: 22
+            width: 2
+            read: true
+            write: false
+          - name: BCGEN
+            description: Byte Control Signal Control
+            index: 20
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSWCON3_BCGEN
+          - name: WAITINV
+            description: Reversed polarity at WAIT
+            index: 19
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON3_WAITINV
+          - name: EBSE
+            description: Early Burst Signal Enable for Synchronous Burst
+            index: 17
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON3_EBSE
+          - name: ECSE
+            description: Early Chip Select for Synchronous Burst
+            index: 16
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON3_ECSE
+          - name: NAA
+            description: Enable flash non-array access workaround
+            index: 7
+            width: 1
+            read: true
+            write: false
+          - name: FBBMSEL
+            description: Synchronous burst buffer mode select
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: EBU_BUSWCON3_FBBMSEL
+          - name: FETBLEN
+            description: Burst Length for Synchronous Burst
+            index: 0
+            width: 3
+            read: true
+            write: true
+            type: EBU_BUSWCON3_FETBLEN
+      - name: BUSWAP3
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 100
+        description: (read-write) EBU Bus Write Access Parameter Register
+        fields:
+          - name: ADDRC
+            description: Address Cycles
+            index: 28
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSWAP3_ADDRC
+          - name: AHOLDC
+            description: Address Hold Cycles
+            index: 24
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSWAP3_AHOLDC
+          - name: CMDDELAY
+            description: Command Delay Cycles
+            index: 20
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSWAP3_CMDDELAY
+          - name: EXTDATA
+            description: Extended data
+            index: 18
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSWAP3_EXTDATA
+          - name: EXTCLOCK
+            description: Frequency of external clock at pin BFCLKO
+            index: 16
+            width: 2
+            read: true
+            write: true
+            type: EBU_BUSWAP3_EXTCLOCK
+          - name: DATAC
+            description: Data Hold Cycles for Write Accesses
+            index: 12
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSWAP3_DATAC
+          - name: WAITWRC
+            description: Programmed Wait States for write accesses
+            index: 7
+            width: 5
+            read: true
+            write: true
+            type: EBU_BUSWAP3_WAITWRC
+          - name: WRRECOVC
+            description: Recovery Cycles after Write Accesses
+            index: 4
+            width: 3
+            read: true
+            write: true
+            type: EBU_BUSWAP3_WRRECOVC
+          - name: WRDTACS
+            description: Recovery Cycles between Different Regions
+            index: 0
+            width: 4
+            read: true
+            write: true
+            type: EBU_BUSWAP3_WRDTACS
+      - name: SDRMCON
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 104
+        description: (read-write) EBU SDRAM Control Register
+        fields:
+          - name: CRAS
+            description: Row to precharge delay counter
+            index: 0
+            width: 4
+            read: true
+            write: true
+          - name: CRFSH
+            description: Initialization refresh commands counter
+            index: 4
+            width: 4
+            read: true
+            write: true
+          - name: CRSC
+            description: Mode register set-up time
+            index: 8
+            width: 2
+            read: true
+            write: true
+          - name: CRP
+            description: Row precharge time counter
+            index: 10
+            width: 2
+            read: true
+            write: true
+          - name: AWIDTH
+            description: Width of column address
+            index: 12
+            width: 2
+            read: true
+            write: true
+            type: EBU_SDRMCON_AWIDTH
+          - name: CRCD
+            description: Row to column delay counter
+            index: 14
+            width: 2
+            read: true
+            write: true
+          - name: CRC
+            description: Row cycle time counter
+            index: 16
+            width: 3
+            read: true
+            write: true
+          - name: ROWM
+            description: Mask for row tag
+            index: 19
+            width: 3
+            read: true
+            write: true
+            type: EBU_SDRMCON_ROWM
+          - name: BANKM
+            description: Mask for bank tag
+            index: 22
+            width: 3
+            read: true
+            write: true
+            type: EBU_SDRMCON_BANKM
+          - name: CRCE
+            description: Row cycle time counter extension
+            index: 25
+            width: 3
+            read: true
+            write: true
+          - name: CLKDIS
+            description: Disable SDRAM clock output
+            index: 28
+            width: 1
+            read: true
+            write: true
+            type: EBU_SDRMCON_CLKDIS
+          - name: PWR_MODE
+            description: Power Save Mode used for gated clock mode
+            index: 29
+            width: 2
+            read: true
+            write: true
+            type: EBU_SDRMCON_PWR_MODE
+          - name: SDCMSEL
+            description: SDRAM clock mode select
+            index: 31
+            width: 1
+            read: true
+            write: true
+            type: EBU_SDRMCON_SDCMSEL
+      - name: SDRMOD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 108
+        description: (read-write) EBU SDRAM Mode Register
+        fields:
+          - name: BURSTL
+            description: Burst length
+            index: 0
+            width: 3
+            read: true
+            write: true
+            type: EBU_SDRMOD_BURSTL
+          - name: BTYP
+            description: Burst type
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: EBU_SDRMOD_BTYP
+          - name: CASLAT
+            description: CAS latency
+            index: 4
+            width: 3
+            read: true
+            write: true
+            type: EBU_SDRMOD_CASLAT
+          - name: OPMODE
+            description: Operation Mode
+            index: 7
+            width: 7
+            read: true
+            write: true
+            type: EBU_SDRMOD_OPMODE
+          - name: COLDSTART
+            description: SDRAM coldstart
+            index: 15
+            width: 1
+            read: false
+            write: true
+          - name: XOPM
+            description: Extended Operation Mode
+            index: 16
+            width: 12
+            read: true
+            write: true
+          - name: XBA
+            description: Extended Operation Bank Select
+            index: 28
+            width: 4
+            read: true
+            write: true
+      - name: SDRMREF
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 112
+        description: (read-write) EBU SDRAM Refresh Control Register
+        fields:
+          - name: REFRESHC
+            description: Refresh counter period
+            index: 0
+            width: 6
+            read: true
+            write: true
+          - name: REFRESHR
+            description: Number of refresh commands
+            index: 6
+            width: 3
+            read: true
+            write: true
+          - name: SELFREXST
+            description: Self Refresh Exit Status.
+            index: 9
+            width: 1
+            read: true
+            write: false
+          - name: SELFREX
+            description: Self Refresh Exit (Power Up).
+            index: 10
+            width: 1
+            read: true
+            write: true
+          - name: SELFRENST
+            description: Self Refresh Entry Status.
+            index: 11
+            width: 1
+            read: true
+            write: false
+          - name: SELFREN
+            description: Self Refresh Entry
+            index: 12
+            width: 1
+            read: true
+            write: true
+          - name: AUTOSELFR
+            description: Automatic Self Refresh
+            index: 13
+            width: 1
+            read: true
+            write: true
+          - name: ERFSHC
+            description: Extended Refresh Counter Period
+            index: 14
+            width: 2
+            read: true
+            write: true
+          - name: SELFREX_DLY
+            description: Self Refresh Exit Delay
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: ARFSH
+            description: Auto Refresh on Self refresh Exit
+            index: 24
+            width: 1
+            read: true
+            write: true
+          - name: RES_DLY
+            description: Delay on Power Down Exit
+            index: 25
+            width: 3
+            read: true
+            write: true
+      - name: SDRSTAT
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 116
+        const: true
+        description: (read-only) EBU SDRAM Status Register
+        fields:
+          - name: REFERR
+            description: SDRAM Refresh Error
+            index: 0
+            width: 1
+            read: true
+            write: false
+            type: EBU_SDRSTAT_REFERR
+          - name: SDRMBUSY
+            description: SDRAM Busy
+            index: 1
+            width: 1
+            read: true
+            write: false
+            type: EBU_SDRSTAT_SDRMBUSY
+          - name: SDERR
+            description: SDRAM read error
+            index: 2
+            width: 1
+            read: true
+            write: false
+            type: EBU_SDRSTAT_SDERR
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums:
+  EBU_CLC_EBUDIVACK:
+    enum:
+      value1:
+        description: EBU is running off input clock (default after reset)
+        value: 0
+      value2:
+        description: EBU is running off input clock divided by 2
+        value: 1
+      value3:
+        description: EBU is running off input clock divided by 3
+        value: 2
+      value4:
+        description: EBU is running off input clock divided by 4
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_CLC_DIV2ACK:
+    enum:
+      value1:
+        description: EBU is using standard clocking mode. clock input selected by
+          SYNC bitfield (default after reset).
+        value: 0
+      value2:
+        description: EBU is running off AHB bus clock divided by 2.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_CLC_SYNCACK:
+    enum:
+      value1:
+        description: the EBU is asynchronous to the AHB bus clock and is using a separate
+          clock source
+        value: 0
+      value2:
+        description: EBU is synchronous to the AHB bus clock (default after reset)
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_CLC_EBUDIV:
+    enum:
+      value1:
+        description: request EBU to run off input clock (default after reset)
+        value: 0
+      value2:
+        description: request EBU to run off input clock divided by 2
+        value: 1
+      value3:
+        description: request EBU to run off input clock divided by 3
+        value: 2
+      value4:
+        description: request EBU to run off input clock divided by 4
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_CLC_DIV2:
+    enum:
+      value1:
+        description: standard clocking mode. clock input selected by SYNC bitfield
+          (default after reset).
+        value: 0
+      value2:
+        description: request EBU to run off AHB bus clock divided by 2.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_CLC_SYNC:
+    enum:
+      value1:
+        description: request EBU to run asynchronously to AHB bus clock and use separate
+          clock source
+        value: 0
+      value2:
+        description: request EBU to run synchronously to ARM processor (default after
+          reset)
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_CLC_DISS:
+    enum:
+      value1:
+        description: EBU is enabled (default after reset)
+        value: 0
+      value2:
+        description: EBU is disabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_CLC_DISR:
+    enum:
+      value1:
+        description: EBU disable is not requested
+        value: 0
+      value2:
+        description: EBU disable is requested
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_MODCON_ALE:
+    enum:
+      value1:
+        description: Output is ADV
+        value: 0
+      value2:
+        description: Output is ALE
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_MODCON_TIMEOUTC:
+    enum:
+      value1:
+        description: Time-out is disabled.
+        value: 0
+      value2:
+        description: Time-out is generated after 1 8 clock cycles.
+        value: 1
+      value3:
+        description: Time-out is generated after 255 8 clock cycles.
+        value: 255
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_MODCON_ARBMODE:
+    enum:
+      value1:
+        description: No Bus arbitration mode selected
+        value: 0
+      value2:
+        description: Arbiter Mode arbitration mode selected
+        value: 1
+      value3:
+        description: Participant arbitration mode selected
+        value: 2
+      value4:
+        description: Sole Master arbitration mode selected
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_MODCON_ARBSYNC:
+    enum:
+      value1:
+        description: Arbitration inputs are synchronous
+        value: 0
+      value2:
+        description: Arbitration inputs are asynchronous
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_MODCON_EXTLOCK:
+    enum:
+      value1:
+        description: External bus is not locked after the EBU gains ownership
+        value: 0
+      value2:
+        description: External bus is locked after the EBU gains ownership
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_MODCON_SDTRI:
+    enum:
+      value1:
+        description: SDRAM control signals are driven by the EBU when the EBU does
+          not own the external bus. SDRAM cannot be shared.
+        value: 0
+      value2:
+        description: SDRAM control signals are tri-stated by the EBU when the EBU
+          does not own the external bus. The SDRAM can be shared.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_USERCON_ADVIO:
+    enum:
+      value1:
+        description: ADV pin is required for controlling memory
+        value: 0
+      value2:
+        description: ADV pin is available for GPIO function
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_USERCON_ADDIO:
+    enum:
+      value1:
+        description: Address Bit is required for addressing memory
+        value: 0
+      value2:
+        description: Address Bit is available for GPIO function
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  EBU_ADDRSEL0_WPROT:
+    enum:
+      value1:
+        description: Region is enabled for write accesses
+        value: 0
+      value2:
+        description: Region is write protected.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_ADDRSEL0_ALTENAB:
+    enum:
+      value1:
+        description: Memory region is disabled (default after reset).
+        value: 0
+      value2:
+        description: Memory region is enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_ADDRSEL0_REGENAB:
+    enum:
+      value1:
+        description: Memory region is disabled (default after reset).
+        value: 0
+      value2:
+        description: Memory region is enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_ADDRSEL1_WPROT:
+    enum:
+      value1:
+        description: Region is enabled for write accesses
+        value: 0
+      value2:
+        description: Region is write protected.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_ADDRSEL1_ALTENAB:
+    enum:
+      value1:
+        description: Memory region is disabled (default after reset).
+        value: 0
+      value2:
+        description: Memory region is enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_ADDRSEL1_REGENAB:
+    enum:
+      value1:
+        description: Memory region is disabled (default after reset).
+        value: 0
+      value2:
+        description: Memory region is enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_ADDRSEL2_WPROT:
+    enum:
+      value1:
+        description: Region is enabled for write accesses
+        value: 0
+      value2:
+        description: Region is write protected.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_ADDRSEL2_ALTENAB:
+    enum:
+      value1:
+        description: Memory region is disabled (default after reset).
+        value: 0
+      value2:
+        description: Memory region is enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_ADDRSEL2_REGENAB:
+    enum:
+      value1:
+        description: Memory region is disabled (default after reset).
+        value: 0
+      value2:
+        description: Memory region is enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_ADDRSEL3_WPROT:
+    enum:
+      value1:
+        description: Region is enabled for write accesses
+        value: 0
+      value2:
+        description: Region is write protected.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_ADDRSEL3_ALTENAB:
+    enum:
+      value1:
+        description: Memory region is disabled (default after reset).
+        value: 0
+      value2:
+        description: Memory region is enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_ADDRSEL3_REGENAB:
+    enum:
+      value1:
+        description: Memory region is disabled (default after reset).
+        value: 0
+      value2:
+        description: Memory region is enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON0_AAP:
+    enum:
+      value1:
+        description: Clock is enabled at beginning of access.
+        value: 0
+      value2:
+        description: Clock is enabled at after address phase.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON0_BCGEN:
+    enum:
+      value1:
+        description: Byte control signals follow chip select timing.
+        value: 0
+      value2:
+        description: Byte control signals follow control signal timing (RD, RD/WR)
+          (default after reset).
+        value: 1
+      value3:
+        description: Byte control signals follow write enable signal timing (RD/WR
+          only).
+        value: 2
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON0_WAITINV:
+    enum:
+      value1:
+        description: input at WAIT pin is active low (default after reset).
+        value: 0
+      value2:
+        description: input at WAIT pin is active high.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON0_DBA:
+    enum:
+      value1:
+        description: Memory Controller automatically re-aligns any non-aligned synchronous
+          burst access so that data can be fetched from the device in a single burst
+          transaction.
+        value: 0
+      value2:
+        description: Memory Controller always starts any burst access to a synchronous
+          burst device at the address specified by the AHB request. Any required address
+          wrapping must be automatically provided by the Burst FLASH device.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON0_EBSE:
+    enum:
+      value1:
+        description: ADV is delayed.
+        value: 0
+      value2:
+        description: ADV is not delayed.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON0_ECSE:
+    enum:
+      value1:
+        description: CS is delayed.
+        value: 0
+      value2:
+        description: CS is not delayed.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON0_BFCMSEL:
+    enum:
+      value1:
+        description: Burst Flash Clock runs continuously with values selected by this
+          register
+        value: 0
+      value2:
+        description: Burst Flash Clock is disabled between accesses
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON0_FDBKEN:
+    enum:
+      value1:
+        description: BFCLK feedback not used.
+        value: 0
+      value2:
+        description: Incoming data and control signals (from the Burst FLASH device)
+          are re-synchronized to the BFCLKI input.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON0_BFSSS:
+    enum:
+      value1:
+        description: Two stages of synchronization used. (maximum margin)
+        value: 0
+      value2:
+        description: One stage of synchronization used. (minimum latency)
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON0_FBBMSEL:
+    enum:
+      value1:
+        description: Burst buffer length defined by value in FETBLEN (default after
+          reset).
+        value: 0
+      value2:
+        description: Continuous mode. All data required for transaction is transferred
+          in a single burst.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON0_FETBLEN:
+    enum:
+      value1:
+        description: 1 data access (default after reset).
+        value: 0
+      value2:
+        description: 2 data accesses.
+        value: 1
+      value3:
+        description: 4 data accesses.
+        value: 2
+      value4:
+        description: 8 data accesses.
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP0_ADDRC:
+    enum:
+      value1:
+        description: 1 clock cycle selected
+        value: 0
+      value2:
+        description: 1 clock cycle selected
+        value: 1
+      value3:
+        description: 14 clock cycles selected
+        value: 14
+      value4:
+        description: 15 clock cycles selected
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP0_AHOLDC:
+    enum:
+      value1:
+        description: 0 clock cycle selected
+        value: 0
+      value2:
+        description: 1 clock cycle selected
+        value: 1
+      value3:
+        description: 14 clock cycles selected
+        value: 14
+      value4:
+        description: 15 clock cycles selected
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP0_CMDDELAY:
+    enum:
+      value1:
+        description: 0 clock cycle selected.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 14 clock cycles selected.
+        value: 14
+      value4:
+        description: 15 clock cycles selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP0_EXTDATA:
+    enum:
+      value1:
+        description: external memory outputs data every BFCLK cycle
+        value: 0
+      value2:
+        description: external memory outputs data every two BFCLK cycles
+        value: 1
+      value3:
+        description: external memory outputs data every four BFCLK cycles
+        value: 2
+      value4:
+        description: external memory outputs data every eight BFCLK cycles
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP0_EXTCLOCK:
+    enum:
+      value1:
+        description: Equal to INT_CLK frequency.
+        value: 0
+      value2:
+        description: 1/2 of INT_CLK frequency.
+        value: 1
+      value3:
+        description: 1/3 of INT_CLK frequency.
+        value: 2
+      value4:
+        description: 1/4 of INT_CLK frequency (default after reset).
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP0_WAITRDC:
+    enum:
+      value1:
+        description: 1 wait state.
+        value: 0
+      value2:
+        description: 1 wait states.
+        value: 1
+      value3:
+        description: 2 wait state.
+        value: 2
+      value4:
+        description: 30 wait states.
+        value: 30
+      value5:
+        description: 31 wait states.
+        value: 31
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP0_RDRECOVC:
+    enum:
+      value1:
+        description: No Recovery Phase clock cycles available.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 6 clock cycles selected.
+        value: 6
+      value4:
+        description: 7 clock cycles selected.
+        value: 7
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP0_RDDTACS:
+    enum:
+      value1:
+        description: No Recovery Phase clock cycles available.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 14 clock cycles selected.
+        value: 14
+      value4:
+        description: 15 clock cycles selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON0_LOCKCS:
+    enum:
+      value1:
+        description: Chip Select cannot be locked (default after reset).
+        value: 0
+      value2:
+        description: Chip Select will be automatically locked when written to from
+          the processor data port.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON0_AAP:
+    enum:
+      value1:
+        description: Clock is enabled at beginning of access.
+        value: 0
+      value2:
+        description: Clock is enabled at after address phase.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON0_BCGEN:
+    enum:
+      value1:
+        description: Byte control signals follow chip select timing.
+        value: 0
+      value2:
+        description: Byte control signals follow control signal timing (RD, RD/WR)
+          (default after reset).
+        value: 1
+      value3:
+        description: Byte control signals follow write enable signal timing (RD/WR
+          only).
+        value: 2
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON0_WAITINV:
+    enum:
+      value1:
+        description: input at WAIT pin is active low (default after reset).
+        value: 0
+      value2:
+        description: input at WAIT pin is active high.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON0_EBSE:
+    enum:
+      value1:
+        description: ADV is delayed.
+        value: 0
+      value2:
+        description: ADV is not delayed.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON0_ECSE:
+    enum:
+      value1:
+        description: CS is delayed.
+        value: 0
+      value2:
+        description: CS is not delayed.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON0_FBBMSEL:
+    enum:
+      value1:
+        description: Burst buffer length defined by value in FETBLEN (default after
+          reset).
+        value: 0
+      value2:
+        description: Continuous mode. All data required for transaction transferred
+          in single burst
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON0_FETBLEN:
+    enum:
+      value1:
+        description: 1 data access (default after reset).
+        value: 0
+      value2:
+        description: 2 data accesses.
+        value: 1
+      value3:
+        description: 4 data accesses.
+        value: 2
+      value4:
+        description: 8 data accesses.
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP0_ADDRC:
+    enum:
+      value1:
+        description: 1 clock cycle selected
+        value: 0
+      value2:
+        description: 1 clock cycle selected
+        value: 1
+      value3:
+        description: 14 clock cycles selected
+        value: 14
+      value4:
+        description: 15 clock cycles selected
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP0_AHOLDC:
+    enum:
+      value1:
+        description: 0 clock cycle selected
+        value: 0
+      value2:
+        description: 1 clock cycle selected
+        value: 1
+      value3:
+        description: 14 clock cycles selected
+        value: 14
+      value4:
+        description: 15 clock cycles selected
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP0_CMDDELAY:
+    enum:
+      value1:
+        description: 0 clock cycle selected.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 14 clock cycles selected.
+        value: 14
+      value4:
+        description: 15 clock cycles selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP0_EXTDATA:
+    enum:
+      value1:
+        description: external memory outputs data every BFCLK cycle
+        value: 0
+      value2:
+        description: external memory outputs data every two BFCLK cycles
+        value: 1
+      value3:
+        description: external memory outputs data every four BFCLK cycles
+        value: 2
+      value4:
+        description: external memory outputs data every eight BFCLK cycles
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP0_EXTCLOCK:
+    enum:
+      value1:
+        description: Equal to INT_CLK frequency.
+        value: 0
+      value2:
+        description: 1/2 of INT_CLK frequency.
+        value: 1
+      value3:
+        description: 1/3 of INT_CLK frequency.
+        value: 2
+      value4:
+        description: 1/4 of INT_CLK frequency (default after reset).
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP0_DATAC:
+    enum:
+      value1:
+        description: No Recovery Phase clock cycles available.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 14 clock cycles selected.
+        value: 14
+      value4:
+        description: 15 clock cycles selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP0_WAITWRC:
+    enum:
+      value1:
+        description: 1 wait state.
+        value: 0
+      value2:
+        description: 1 wait states.
+        value: 1
+      value3:
+        description: 2 wait state.
+        value: 2
+      value4:
+        description: 30 wait states.
+        value: 30
+      value5:
+        description: 31 wait states.
+        value: 31
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP0_WRRECOVC:
+    enum:
+      value1:
+        description: No Recovery Phase clock cycles available.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 6 clock cycles selected.
+        value: 6
+      value4:
+        description: 7 clock cycles selected.
+        value: 7
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP0_WRDTACS:
+    enum:
+      value1:
+        description: No Recovery Phase clock cycles available.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 14 clock cycles selected.
+        value: 14
+      value4:
+        description: 15 clock cycles selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON1_AAP:
+    enum:
+      value1:
+        description: Clock is enabled at beginning of access.
+        value: 0
+      value2:
+        description: Clock is enabled at after address phase.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON1_BCGEN:
+    enum:
+      value1:
+        description: Byte control signals follow chip select timing.
+        value: 0
+      value2:
+        description: Byte control signals follow control signal timing (RD, RD/WR)
+          (default after reset).
+        value: 1
+      value3:
+        description: Byte control signals follow write enable signal timing (RD/WR
+          only).
+        value: 2
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON1_WAITINV:
+    enum:
+      value1:
+        description: input at WAIT pin is active low (default after reset).
+        value: 0
+      value2:
+        description: input at WAIT pin is active high.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON1_DBA:
+    enum:
+      value1:
+        description: Memory Controller automatically re-aligns any non-aligned synchronous
+          burst access so that data can be fetched from the device in a single burst
+          transaction.
+        value: 0
+      value2:
+        description: Memory Controller always starts any burst access to a synchronous
+          burst device at the address specified by the AHB request. Any required address
+          wrapping must be automatically provided by the Burst FLASH device.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON1_EBSE:
+    enum:
+      value1:
+        description: ADV is delayed.
+        value: 0
+      value2:
+        description: ADV is not delayed.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON1_ECSE:
+    enum:
+      value1:
+        description: CS is delayed.
+        value: 0
+      value2:
+        description: CS is not delayed.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON1_BFCMSEL:
+    enum:
+      value1:
+        description: Burst Flash Clock runs continuously with values selected by this
+          register
+        value: 0
+      value2:
+        description: Burst Flash Clock is disabled between accesses
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON1_FDBKEN:
+    enum:
+      value1:
+        description: BFCLK feedback not used.
+        value: 0
+      value2:
+        description: Incoming data and control signals (from the Burst FLASH device)
+          are re-synchronized to the BFCLKI input.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON1_BFSSS:
+    enum:
+      value1:
+        description: Two stages of synchronization used. (maximum margin)
+        value: 0
+      value2:
+        description: One stage of synchronization used. (minimum latency)
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON1_FBBMSEL:
+    enum:
+      value1:
+        description: Burst buffer length defined by value in FETBLEN (default after
+          reset).
+        value: 0
+      value2:
+        description: Continuous mode. All data required for transaction is transferred
+          in a single burst.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON1_FETBLEN:
+    enum:
+      value1:
+        description: 1 data access (default after reset).
+        value: 0
+      value2:
+        description: 2 data accesses.
+        value: 1
+      value3:
+        description: 4 data accesses.
+        value: 2
+      value4:
+        description: 8 data accesses.
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP1_ADDRC:
+    enum:
+      value1:
+        description: 1 clock cycle selected
+        value: 0
+      value2:
+        description: 1 clock cycle selected
+        value: 1
+      value3:
+        description: 14 clock cycles selected
+        value: 14
+      value4:
+        description: 15 clock cycles selected
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP1_AHOLDC:
+    enum:
+      value1:
+        description: 0 clock cycle selected
+        value: 0
+      value2:
+        description: 1 clock cycle selected
+        value: 1
+      value3:
+        description: 14 clock cycles selected
+        value: 14
+      value4:
+        description: 15 clock cycles selected
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP1_CMDDELAY:
+    enum:
+      value1:
+        description: 0 clock cycle selected.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 14 clock cycles selected.
+        value: 14
+      value4:
+        description: 15 clock cycles selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP1_EXTDATA:
+    enum:
+      value1:
+        description: external memory outputs data every BFCLK cycle
+        value: 0
+      value2:
+        description: external memory outputs data every two BFCLK cycles
+        value: 1
+      value3:
+        description: external memory outputs data every four BFCLK cycles
+        value: 2
+      value4:
+        description: external memory outputs data every eight BFCLK cycles
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP1_EXTCLOCK:
+    enum:
+      value1:
+        description: Equal to INT_CLK frequency.
+        value: 0
+      value2:
+        description: 1/2 of INT_CLK frequency.
+        value: 1
+      value3:
+        description: 1/3 of INT_CLK frequency.
+        value: 2
+      value4:
+        description: 1/4 of INT_CLK frequency (default after reset).
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP1_WAITRDC:
+    enum:
+      value1:
+        description: 1 wait state.
+        value: 0
+      value2:
+        description: 1 wait states.
+        value: 1
+      value3:
+        description: 2 wait state.
+        value: 2
+      value4:
+        description: 30 wait states.
+        value: 30
+      value5:
+        description: 31 wait states.
+        value: 31
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP1_RDRECOVC:
+    enum:
+      value1:
+        description: No Recovery Phase clock cycles available.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 6 clock cycles selected.
+        value: 6
+      value4:
+        description: 7 clock cycles selected.
+        value: 7
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP1_RDDTACS:
+    enum:
+      value1:
+        description: No Recovery Phase clock cycles available.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 14 clock cycles selected.
+        value: 14
+      value4:
+        description: 15 clock cycles selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON1_LOCKCS:
+    enum:
+      value1:
+        description: Chip Select cannot be locked (default after reset).
+        value: 0
+      value2:
+        description: Chip Select will be automatically locked when written to from
+          the processor data port.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON1_AAP:
+    enum:
+      value1:
+        description: Clock is enabled at beginning of access.
+        value: 0
+      value2:
+        description: Clock is enabled at after address phase.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON1_BCGEN:
+    enum:
+      value1:
+        description: Byte control signals follow chip select timing.
+        value: 0
+      value2:
+        description: Byte control signals follow control signal timing (RD, RD/WR)
+          (default after reset).
+        value: 1
+      value3:
+        description: Byte control signals follow write enable signal timing (RD/WR
+          only).
+        value: 2
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON1_WAITINV:
+    enum:
+      value1:
+        description: input at WAIT pin is active low (default after reset).
+        value: 0
+      value2:
+        description: input at WAIT pin is active high.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON1_EBSE:
+    enum:
+      value1:
+        description: ADV is delayed.
+        value: 0
+      value2:
+        description: ADV is not delayed.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON1_ECSE:
+    enum:
+      value1:
+        description: CS is delayed.
+        value: 0
+      value2:
+        description: CS is not delayed.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON1_FBBMSEL:
+    enum:
+      value1:
+        description: Burst buffer length defined by value in FETBLEN (default after
+          reset).
+        value: 0
+      value2:
+        description: Continuous mode. All data required for transaction transferred
+          in single burst
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON1_FETBLEN:
+    enum:
+      value1:
+        description: 1 data access (default after reset).
+        value: 0
+      value2:
+        description: 2 data accesses.
+        value: 1
+      value3:
+        description: 4 data accesses.
+        value: 2
+      value4:
+        description: 8 data accesses.
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP1_ADDRC:
+    enum:
+      value1:
+        description: 1 clock cycle selected
+        value: 0
+      value2:
+        description: 1 clock cycle selected
+        value: 1
+      value3:
+        description: 14 clock cycles selected
+        value: 14
+      value4:
+        description: 15 clock cycles selected
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP1_AHOLDC:
+    enum:
+      value1:
+        description: 0 clock cycle selected
+        value: 0
+      value2:
+        description: 1 clock cycle selected
+        value: 1
+      value3:
+        description: 14 clock cycles selected
+        value: 14
+      value4:
+        description: 15 clock cycles selected
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP1_CMDDELAY:
+    enum:
+      value1:
+        description: 0 clock cycle selected.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 14 clock cycles selected.
+        value: 14
+      value4:
+        description: 15 clock cycles selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP1_EXTDATA:
+    enum:
+      value1:
+        description: external memory outputs data every BFCLK cycle
+        value: 0
+      value2:
+        description: external memory outputs data every two BFCLK cycles
+        value: 1
+      value3:
+        description: external memory outputs data every four BFCLK cycles
+        value: 2
+      value4:
+        description: external memory outputs data every eight BFCLK cycles
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP1_EXTCLOCK:
+    enum:
+      value1:
+        description: Equal to INT_CLK frequency.
+        value: 0
+      value2:
+        description: 1/2 of INT_CLK frequency.
+        value: 1
+      value3:
+        description: 1/3 of INT_CLK frequency.
+        value: 2
+      value4:
+        description: 1/4 of INT_CLK frequency (default after reset).
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP1_DATAC:
+    enum:
+      value1:
+        description: No Recovery Phase clock cycles available.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 14 clock cycles selected.
+        value: 14
+      value4:
+        description: 15 clock cycles selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP1_WAITWRC:
+    enum:
+      value1:
+        description: 1 wait state.
+        value: 0
+      value2:
+        description: 1 wait states.
+        value: 1
+      value3:
+        description: 2 wait state.
+        value: 2
+      value4:
+        description: 30 wait states.
+        value: 30
+      value5:
+        description: 31 wait states.
+        value: 31
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP1_WRRECOVC:
+    enum:
+      value1:
+        description: No Recovery Phase clock cycles available.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 6 clock cycles selected.
+        value: 6
+      value4:
+        description: 7 clock cycles selected.
+        value: 7
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP1_WRDTACS:
+    enum:
+      value1:
+        description: No Recovery Phase clock cycles available.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 14 clock cycles selected.
+        value: 14
+      value4:
+        description: 15 clock cycles selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON2_AAP:
+    enum:
+      value1:
+        description: Clock is enabled at beginning of access.
+        value: 0
+      value2:
+        description: Clock is enabled at after address phase.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON2_BCGEN:
+    enum:
+      value1:
+        description: Byte control signals follow chip select timing.
+        value: 0
+      value2:
+        description: Byte control signals follow control signal timing (RD, RD/WR)
+          (default after reset).
+        value: 1
+      value3:
+        description: Byte control signals follow write enable signal timing (RD/WR
+          only).
+        value: 2
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON2_WAITINV:
+    enum:
+      value1:
+        description: input at WAIT pin is active low (default after reset).
+        value: 0
+      value2:
+        description: input at WAIT pin is active high.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON2_DBA:
+    enum:
+      value1:
+        description: Memory Controller automatically re-aligns any non-aligned synchronous
+          burst access so that data can be fetched from the device in a single burst
+          transaction.
+        value: 0
+      value2:
+        description: Memory Controller always starts any burst access to a synchronous
+          burst device at the address specified by the AHB request. Any required address
+          wrapping must be automatically provided by the Burst FLASH device.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON2_EBSE:
+    enum:
+      value1:
+        description: ADV is delayed.
+        value: 0
+      value2:
+        description: ADV is not delayed.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON2_ECSE:
+    enum:
+      value1:
+        description: CS is delayed.
+        value: 0
+      value2:
+        description: CS is not delayed.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON2_BFCMSEL:
+    enum:
+      value1:
+        description: Burst Flash Clock runs continuously with values selected by this
+          register
+        value: 0
+      value2:
+        description: Burst Flash Clock is disabled between accesses
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON2_FDBKEN:
+    enum:
+      value1:
+        description: BFCLK feedback not used.
+        value: 0
+      value2:
+        description: Incoming data and control signals (from the Burst FLASH device)
+          are re-synchronized to the BFCLKI input.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON2_BFSSS:
+    enum:
+      value1:
+        description: Two stages of synchronization used. (maximum margin)
+        value: 0
+      value2:
+        description: One stage of synchronization used. (minimum latency)
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON2_FBBMSEL:
+    enum:
+      value1:
+        description: Burst buffer length defined by value in FETBLEN (default after
+          reset).
+        value: 0
+      value2:
+        description: Continuous mode. All data required for transaction is transferred
+          in a single burst.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON2_FETBLEN:
+    enum:
+      value1:
+        description: 1 data access (default after reset).
+        value: 0
+      value2:
+        description: 2 data accesses.
+        value: 1
+      value3:
+        description: 4 data accesses.
+        value: 2
+      value4:
+        description: 8 data accesses.
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP2_ADDRC:
+    enum:
+      value1:
+        description: 1 clock cycle selected
+        value: 0
+      value2:
+        description: 1 clock cycle selected
+        value: 1
+      value3:
+        description: 14 clock cycles selected
+        value: 14
+      value4:
+        description: 15 clock cycles selected
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP2_AHOLDC:
+    enum:
+      value1:
+        description: 0 clock cycle selected
+        value: 0
+      value2:
+        description: 1 clock cycle selected
+        value: 1
+      value3:
+        description: 14 clock cycles selected
+        value: 14
+      value4:
+        description: 15 clock cycles selected
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP2_CMDDELAY:
+    enum:
+      value1:
+        description: 0 clock cycle selected.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 14 clock cycles selected.
+        value: 14
+      value4:
+        description: 15 clock cycles selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP2_EXTDATA:
+    enum:
+      value1:
+        description: external memory outputs data every BFCLK cycle
+        value: 0
+      value2:
+        description: external memory outputs data every two BFCLK cycles
+        value: 1
+      value3:
+        description: external memory outputs data every four BFCLK cycles
+        value: 2
+      value4:
+        description: external memory outputs data every eight BFCLK cycles
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP2_EXTCLOCK:
+    enum:
+      value1:
+        description: Equal to INT_CLK frequency.
+        value: 0
+      value2:
+        description: 1/2 of INT_CLK frequency.
+        value: 1
+      value3:
+        description: 1/3 of INT_CLK frequency.
+        value: 2
+      value4:
+        description: 1/4 of INT_CLK frequency (default after reset).
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP2_WAITRDC:
+    enum:
+      value1:
+        description: 1 wait state.
+        value: 0
+      value2:
+        description: 1 wait states.
+        value: 1
+      value3:
+        description: 2 wait state.
+        value: 2
+      value4:
+        description: 30 wait states.
+        value: 30
+      value5:
+        description: 31 wait states.
+        value: 31
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP2_RDRECOVC:
+    enum:
+      value1:
+        description: No Recovery Phase clock cycles available.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 6 clock cycles selected.
+        value: 6
+      value4:
+        description: 7 clock cycles selected.
+        value: 7
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP2_RDDTACS:
+    enum:
+      value1:
+        description: No Recovery Phase clock cycles available.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 14 clock cycles selected.
+        value: 14
+      value4:
+        description: 15 clock cycles selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON2_LOCKCS:
+    enum:
+      value1:
+        description: Chip Select cannot be locked (default after reset).
+        value: 0
+      value2:
+        description: Chip Select will be automatically locked when written to from
+          the processor data port.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON2_AAP:
+    enum:
+      value1:
+        description: Clock is enabled at beginning of access.
+        value: 0
+      value2:
+        description: Clock is enabled at after address phase.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON2_BCGEN:
+    enum:
+      value1:
+        description: Byte control signals follow chip select timing.
+        value: 0
+      value2:
+        description: Byte control signals follow control signal timing (RD, RD/WR)
+          (default after reset).
+        value: 1
+      value3:
+        description: Byte control signals follow write enable signal timing (RD/WR
+          only).
+        value: 2
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON2_WAITINV:
+    enum:
+      value1:
+        description: input at WAIT pin is active low (default after reset).
+        value: 0
+      value2:
+        description: input at WAIT pin is active high.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON2_EBSE:
+    enum:
+      value1:
+        description: ADV is delayed.
+        value: 0
+      value2:
+        description: ADV is not delayed.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON2_ECSE:
+    enum:
+      value1:
+        description: CS is delayed.
+        value: 0
+      value2:
+        description: CS is not delayed.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON2_FBBMSEL:
+    enum:
+      value1:
+        description: Burst buffer length defined by value in FETBLEN (default after
+          reset).
+        value: 0
+      value2:
+        description: Continuous mode. All data required for transaction transferred
+          in single burst
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON2_FETBLEN:
+    enum:
+      value1:
+        description: 1 data access (default after reset).
+        value: 0
+      value2:
+        description: 2 data accesses.
+        value: 1
+      value3:
+        description: 4 data accesses.
+        value: 2
+      value4:
+        description: 8 data accesses.
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP2_ADDRC:
+    enum:
+      value1:
+        description: 1 clock cycle selected
+        value: 0
+      value2:
+        description: 1 clock cycle selected
+        value: 1
+      value3:
+        description: 14 clock cycles selected
+        value: 14
+      value4:
+        description: 15 clock cycles selected
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP2_AHOLDC:
+    enum:
+      value1:
+        description: 0 clock cycle selected
+        value: 0
+      value2:
+        description: 1 clock cycle selected
+        value: 1
+      value3:
+        description: 14 clock cycles selected
+        value: 14
+      value4:
+        description: 15 clock cycles selected
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP2_CMDDELAY:
+    enum:
+      value1:
+        description: 0 clock cycle selected.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 14 clock cycles selected.
+        value: 14
+      value4:
+        description: 15 clock cycles selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP2_EXTDATA:
+    enum:
+      value1:
+        description: external memory outputs data every BFCLK cycle
+        value: 0
+      value2:
+        description: external memory outputs data every two BFCLK cycles
+        value: 1
+      value3:
+        description: external memory outputs data every four BFCLK cycles
+        value: 2
+      value4:
+        description: external memory outputs data every eight BFCLK cycles
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP2_EXTCLOCK:
+    enum:
+      value1:
+        description: Equal to INT_CLK frequency.
+        value: 0
+      value2:
+        description: 1/2 of INT_CLK frequency.
+        value: 1
+      value3:
+        description: 1/3 of INT_CLK frequency.
+        value: 2
+      value4:
+        description: 1/4 of INT_CLK frequency (default after reset).
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP2_DATAC:
+    enum:
+      value1:
+        description: No Recovery Phase clock cycles available.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 14 clock cycles selected.
+        value: 14
+      value4:
+        description: 15 clock cycles selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP2_WAITWRC:
+    enum:
+      value1:
+        description: 1 wait state.
+        value: 0
+      value2:
+        description: 1 wait states.
+        value: 1
+      value3:
+        description: 2 wait state.
+        value: 2
+      value4:
+        description: 30 wait states.
+        value: 30
+      value5:
+        description: 31 wait states.
+        value: 31
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP2_WRRECOVC:
+    enum:
+      value1:
+        description: No Recovery Phase clock cycles available.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 6 clock cycles selected.
+        value: 6
+      value4:
+        description: 7 clock cycles selected.
+        value: 7
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP2_WRDTACS:
+    enum:
+      value1:
+        description: No Recovery Phase clock cycles available.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 14 clock cycles selected.
+        value: 14
+      value4:
+        description: 15 clock cycles selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON3_AAP:
+    enum:
+      value1:
+        description: Clock is enabled at beginning of access.
+        value: 0
+      value2:
+        description: Clock is enabled at after address phase.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON3_BCGEN:
+    enum:
+      value1:
+        description: Byte control signals follow chip select timing.
+        value: 0
+      value2:
+        description: Byte control signals follow control signal timing (RD, RD/WR)
+          (default after reset).
+        value: 1
+      value3:
+        description: Byte control signals follow write enable signal timing (RD/WR
+          only).
+        value: 2
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON3_WAITINV:
+    enum:
+      value1:
+        description: input at WAIT pin is active low (default after reset).
+        value: 0
+      value2:
+        description: input at WAIT pin is active high.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON3_DBA:
+    enum:
+      value1:
+        description: Memory Controller automatically re-aligns any non-aligned synchronous
+          burst access so that data can be fetched from the device in a single burst
+          transaction.
+        value: 0
+      value2:
+        description: Memory Controller always starts any burst access to a synchronous
+          burst device at the address specified by the AHB request. Any required address
+          wrapping must be automatically provided by the Burst FLASH device.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON3_EBSE:
+    enum:
+      value1:
+        description: ADV is delayed.
+        value: 0
+      value2:
+        description: ADV is not delayed.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON3_ECSE:
+    enum:
+      value1:
+        description: CS is delayed.
+        value: 0
+      value2:
+        description: CS is not delayed.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON3_BFCMSEL:
+    enum:
+      value1:
+        description: Burst Flash Clock runs continuously with values selected by this
+          register
+        value: 0
+      value2:
+        description: Burst Flash Clock is disabled between accesses
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON3_FDBKEN:
+    enum:
+      value1:
+        description: BFCLK feedback not used.
+        value: 0
+      value2:
+        description: Incoming data and control signals (from the Burst FLASH device)
+          are re-synchronized to the BFCLKI input.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON3_BFSSS:
+    enum:
+      value1:
+        description: Two stages of synchronization used. (maximum margin)
+        value: 0
+      value2:
+        description: One stage of synchronization used. (minimum latency)
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON3_FBBMSEL:
+    enum:
+      value1:
+        description: Burst buffer length defined by value in FETBLEN (default after
+          reset).
+        value: 0
+      value2:
+        description: Continuous mode. All data required for transaction is transferred
+          in a single burst.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRCON3_FETBLEN:
+    enum:
+      value1:
+        description: 1 data access (default after reset).
+        value: 0
+      value2:
+        description: 2 data accesses.
+        value: 1
+      value3:
+        description: 4 data accesses.
+        value: 2
+      value4:
+        description: 8 data accesses.
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP3_ADDRC:
+    enum:
+      value1:
+        description: 1 clock cycle selected
+        value: 0
+      value2:
+        description: 1 clock cycle selected
+        value: 1
+      value3:
+        description: 14 clock cycles selected
+        value: 14
+      value4:
+        description: 15 clock cycles selected
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP3_AHOLDC:
+    enum:
+      value1:
+        description: 0 clock cycle selected
+        value: 0
+      value2:
+        description: 1 clock cycle selected
+        value: 1
+      value3:
+        description: 14 clock cycles selected
+        value: 14
+      value4:
+        description: 15 clock cycles selected
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP3_CMDDELAY:
+    enum:
+      value1:
+        description: 0 clock cycle selected.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 14 clock cycles selected.
+        value: 14
+      value4:
+        description: 15 clock cycles selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP3_EXTDATA:
+    enum:
+      value1:
+        description: external memory outputs data every BFCLK cycle
+        value: 0
+      value2:
+        description: external memory outputs data every two BFCLK cycles
+        value: 1
+      value3:
+        description: external memory outputs data every four BFCLK cycles
+        value: 2
+      value4:
+        description: external memory outputs data every eight BFCLK cycles
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP3_EXTCLOCK:
+    enum:
+      value1:
+        description: Equal to INT_CLK frequency.
+        value: 0
+      value2:
+        description: 1/2 of INT_CLK frequency.
+        value: 1
+      value3:
+        description: 1/3 of INT_CLK frequency.
+        value: 2
+      value4:
+        description: 1/4 of INT_CLK frequency (default after reset).
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP3_WAITRDC:
+    enum:
+      value1:
+        description: 1 wait state.
+        value: 0
+      value2:
+        description: 1 wait states.
+        value: 1
+      value3:
+        description: 2 wait state.
+        value: 2
+      value4:
+        description: 30 wait states.
+        value: 30
+      value5:
+        description: 31 wait states.
+        value: 31
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP3_RDRECOVC:
+    enum:
+      value1:
+        description: No Recovery Phase clock cycles available.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 6 clock cycles selected.
+        value: 6
+      value4:
+        description: 7 clock cycles selected.
+        value: 7
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSRAP3_RDDTACS:
+    enum:
+      value1:
+        description: No Recovery Phase clock cycles available.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 14 clock cycles selected.
+        value: 14
+      value4:
+        description: 15 clock cycles selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON3_LOCKCS:
+    enum:
+      value1:
+        description: Chip Select cannot be locked (default after reset).
+        value: 0
+      value2:
+        description: Chip Select will be automatically locked when written to from
+          the processor data port.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON3_AAP:
+    enum:
+      value1:
+        description: Clock is enabled at beginning of access.
+        value: 0
+      value2:
+        description: Clock is enabled at after address phase.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON3_BCGEN:
+    enum:
+      value1:
+        description: Byte control signals follow chip select timing.
+        value: 0
+      value2:
+        description: Byte control signals follow control signal timing (RD, RD/WR)
+          (default after reset).
+        value: 1
+      value3:
+        description: Byte control signals follow write enable signal timing (RD/WR
+          only).
+        value: 2
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON3_WAITINV:
+    enum:
+      value1:
+        description: input at WAIT pin is active low (default after reset).
+        value: 0
+      value2:
+        description: input at WAIT pin is active high.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON3_EBSE:
+    enum:
+      value1:
+        description: ADV is delayed.
+        value: 0
+      value2:
+        description: ADV is not delayed.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON3_ECSE:
+    enum:
+      value1:
+        description: CS is delayed.
+        value: 0
+      value2:
+        description: CS is not delayed.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON3_FBBMSEL:
+    enum:
+      value1:
+        description: Burst buffer length defined by value in FETBLEN (default after
+          reset).
+        value: 0
+      value2:
+        description: Continuous mode. All data required for transaction transferred
+          in single burst
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWCON3_FETBLEN:
+    enum:
+      value1:
+        description: 1 data access (default after reset).
+        value: 0
+      value2:
+        description: 2 data accesses.
+        value: 1
+      value3:
+        description: 4 data accesses.
+        value: 2
+      value4:
+        description: 8 data accesses.
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP3_ADDRC:
+    enum:
+      value1:
+        description: 1 clock cycle selected
+        value: 0
+      value2:
+        description: 1 clock cycle selected
+        value: 1
+      value3:
+        description: 14 clock cycles selected
+        value: 14
+      value4:
+        description: 15 clock cycles selected
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP3_AHOLDC:
+    enum:
+      value1:
+        description: 0 clock cycle selected
+        value: 0
+      value2:
+        description: 1 clock cycle selected
+        value: 1
+      value3:
+        description: 14 clock cycles selected
+        value: 14
+      value4:
+        description: 15 clock cycles selected
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP3_CMDDELAY:
+    enum:
+      value1:
+        description: 0 clock cycle selected.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 14 clock cycles selected.
+        value: 14
+      value4:
+        description: 15 clock cycles selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP3_EXTDATA:
+    enum:
+      value1:
+        description: external memory outputs data every BFCLK cycle
+        value: 0
+      value2:
+        description: external memory outputs data every two BFCLK cycles
+        value: 1
+      value3:
+        description: external memory outputs data every four BFCLK cycles
+        value: 2
+      value4:
+        description: external memory outputs data every eight BFCLK cycles
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP3_EXTCLOCK:
+    enum:
+      value1:
+        description: Equal to INT_CLK frequency.
+        value: 0
+      value2:
+        description: 1/2 of INT_CLK frequency.
+        value: 1
+      value3:
+        description: 1/3 of INT_CLK frequency.
+        value: 2
+      value4:
+        description: 1/4 of INT_CLK frequency (default after reset).
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP3_DATAC:
+    enum:
+      value1:
+        description: No Recovery Phase clock cycles available.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 14 clock cycles selected.
+        value: 14
+      value4:
+        description: 15 clock cycles selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP3_WAITWRC:
+    enum:
+      value1:
+        description: 1 wait state.
+        value: 0
+      value2:
+        description: 1 wait states.
+        value: 1
+      value3:
+        description: 2 wait state.
+        value: 2
+      value4:
+        description: 30 wait states.
+        value: 30
+      value5:
+        description: 31 wait states.
+        value: 31
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP3_WRRECOVC:
+    enum:
+      value1:
+        description: No Recovery Phase clock cycles available.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 6 clock cycles selected.
+        value: 6
+      value4:
+        description: 7 clock cycles selected.
+        value: 7
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_BUSWAP3_WRDTACS:
+    enum:
+      value1:
+        description: No Recovery Phase clock cycles available.
+        value: 0
+      value2:
+        description: 1 clock cycle selected.
+        value: 1
+      value3:
+        description: 14 clock cycles selected.
+        value: 14
+      value4:
+        description: 15 clock cycles selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_SDRMCON_AWIDTH:
+    enum:
+      value1:
+        description: do not use
+        value: 0
+      value2:
+        description: Address(8:0)
+        value: 1
+      value3:
+        description: Address(9:0)
+        value: 2
+      value4:
+        description: Address(10:0)
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_SDRMCON_ROWM:
+    enum:
+      value2:
+        description: Address bit 26 to 9
+        value: 1
+      value3:
+        description: Address bit 26 to 10
+        value: 2
+      value4:
+        description: Address bit 26 to 11
+        value: 3
+      value5:
+        description: Address bit 26 to 12
+        value: 4
+      value6:
+        description: Address bit 26 to 13
+        value: 5
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_SDRMCON_BANKM:
+    enum:
+      value2:
+        description: Address bit 21 to 20
+        value: 1
+      value3:
+        description: Address bit 22 to 21
+        value: 2
+      value4:
+        description: Address bit 23 to 22
+        value: 3
+      value5:
+        description: Address bit 24 to 23
+        value: 4
+      value6:
+        description: Address bit 25 to 24
+        value: 5
+      value7:
+        description: Address bit 26 to 25
+        value: 6
+      value8:
+        description: Address bit 26
+        value: 7
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_SDRMCON_CLKDIS:
+    enum:
+      value1:
+        description: clock enabled
+        value: 0
+      value2:
+        description: clock disabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_SDRMCON_PWR_MODE:
+    enum:
+      value1:
+        description: precharge before clock stop (default after reset)
+        value: 0
+      value2:
+        description: auto-precharge before clock stop
+        value: 1
+      value3:
+        description: active power down (stop clock without precharge)
+        value: 2
+      value4:
+        description: clock stop power down
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_SDRMCON_SDCMSEL:
+    enum:
+      value1:
+        description: clock disabled between accesses
+        value: 1
+      value2:
+        description: clock continuously runs
+        value: 0
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_SDRMOD_BURSTL:
+    enum:
+      value1:
+        description: 1 (default after reset)
+        value: 0
+      value2:
+        description: '2'
+        value: 1
+      value3:
+        description: '4'
+        value: 2
+      value4:
+        description: '8'
+        value: 3
+      value5:
+        description: '16'
+        value: 4
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_SDRMOD_BTYP:
+    enum:
+      value1:
+        description: Only this value should be written (default after reset)
+        value: 0
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_SDRMOD_CASLAT:
+    enum:
+      value1:
+        description: Two clocks (default after reset)
+        value: 2
+      value2:
+        description: Three clocks
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_SDRMOD_OPMODE:
+    enum:
+      value1:
+        description: Only this value must be written (default after reset)
+        value: 0
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_SDRSTAT_REFERR:
+    enum:
+      value1:
+        description: No refresh error.
+        value: 0
+      value2:
+        description: Refresh error occurred.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_SDRSTAT_SDRMBUSY:
+    enum:
+      value1:
+        description: Power-up initialization sequence is not running
+        value: 0
+      value2:
+        description: Power-up initialization sequence is running
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  EBU_SDRSTAT_SDERR:
+    enum:
+      value1:
+        description: Reads running successfully
+        value: 0
+      value2:
+        description: Read error condition has been detected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false

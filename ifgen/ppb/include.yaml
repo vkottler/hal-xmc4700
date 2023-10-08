@@ -1,0 +1,3497 @@
+---
+structs:
+  ppb:
+    description: Cortex-M4 Private Peripheral Block
+    instances:
+      - name: PPB
+        address: '0xE000E000'
+    fields:
+      - name: ACTLR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 8
+        description: (read-write) Auxiliary Control Register
+        fields:
+          - name: DISOOFP
+            description: Disable out of order FP execution
+            index: 9
+            width: 1
+            read: true
+            write: true
+          - name: DISFPCA
+            description: Disable FPCA update
+            index: 8
+            width: 1
+            read: true
+            write: true
+          - name: DISFOLD
+            description: Disable IT folding
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: DISDEFWBUF
+            description: Disable write buffer
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: DISMCYCINT
+            description: Disable load/store multiple
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: SYST_CSR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 16
+        description: (read-write) SysTick Control and Status Register
+        fields:
+          - name: COUNTFLAG
+            description: Counter Flag
+            index: 16
+            width: 1
+            read: true
+            write: true
+          - name: CLKSOURCE
+            description: 'Indicates the clock source:'
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: PPB_SYST_CSR_CLKSOURCE
+          - name: TICKINT
+            description: Tick Interrupt Enable
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: PPB_SYST_CSR_TICKINT
+          - name: ENABLE
+            description: Enable
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: PPB_SYST_CSR_ENABLE
+      - name: SYST_RVR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 20
+        description: (read-write) SysTick Reload Value Register
+        fields:
+          - name: RELOAD
+            description: Reload Value
+            index: 0
+            width: 24
+            read: true
+            write: true
+      - name: SYST_CVR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 24
+        description: (read-write) SysTick Current Value Register
+        fields:
+          - name: CURRENT
+            description: Current Value
+            index: 0
+            width: 24
+            read: true
+            write: true
+      - name: SYST_CALIB
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 28
+        description: (read-write) SysTick Calibration Value Register r
+        fields:
+          - name: NOREF
+            description: No Reference Clock
+            index: 31
+            width: 1
+            read: true
+            write: true
+            type: PPB_SYST_CALIB_NOREF
+          - name: SKEW
+            description: Ten Milliseconds Skewed
+            index: 30
+            width: 1
+            read: true
+            write: true
+            type: PPB_SYST_CALIB_SKEW
+          - name: TENMS
+            description: Ten Milliseconds Reload Value
+            index: 0
+            width: 24
+            read: true
+            write: true
+      - name: NVIC_ISER0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 256
+        description: (read-write) Interrupt Set-enable Register 0
+        fields:
+          - name: SETENA
+            description: Interrupt set-enable bits
+            index: 0
+            width: 32
+            read: true
+            write: true
+            type: PPB_NVIC_ISER0_SETENA
+      - name: NVIC_ISER1
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 260
+        description: (read-write) Interrupt Set-enable Register 1
+        fields:
+          - name: SETENA
+            description: Interrupt set-enable bits
+            index: 0
+            width: 32
+            read: true
+            write: true
+            type: PPB_NVIC_ISER1_SETENA
+      - name: NVIC_ISER2
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 264
+        description: (read-write) Interrupt Set-enable Register 2
+        fields:
+          - name: SETENA
+            description: Interrupt set-enable bits
+            index: 0
+            width: 32
+            read: true
+            write: true
+            type: PPB_NVIC_ISER2_SETENA
+      - name: NVIC_ISER3
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 268
+        description: (read-write) Interrupt Set-enable Register 3
+        fields:
+          - name: SETENA
+            description: Interrupt set-enable bits
+            index: 0
+            width: 32
+            read: true
+            write: true
+            type: PPB_NVIC_ISER3_SETENA
+      - name: NVIC_ICER0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 384
+        description: (read-write) Interrupt Clear-enable Register 0
+        fields:
+          - name: CLRENA
+            description: Interrupt clear-enable bits.
+            index: 0
+            width: 32
+            read: true
+            write: true
+            type: PPB_NVIC_ICER0_CLRENA
+      - name: NVIC_ICER1
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 388
+        description: (read-write) Interrupt Clear-enable Register 1
+        fields:
+          - name: CLRENA
+            description: Interrupt clear-enable bits.
+            index: 0
+            width: 32
+            read: true
+            write: true
+            type: PPB_NVIC_ICER1_CLRENA
+      - name: NVIC_ICER2
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 392
+        description: (read-write) Interrupt Clear-enable Register 2
+        fields:
+          - name: CLRENA
+            description: Interrupt clear-enable bits.
+            index: 0
+            width: 32
+            read: true
+            write: true
+            type: PPB_NVIC_ICER2_CLRENA
+      - name: NVIC_ICER3
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 396
+        description: (read-write) Interrupt Clear-enable Register 3
+        fields:
+          - name: CLRENA
+            description: Interrupt clear-enable bits.
+            index: 0
+            width: 32
+            read: true
+            write: true
+            type: PPB_NVIC_ICER3_CLRENA
+      - name: NVIC_ISPR0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 512
+        description: (read-write) Interrupt Set-pending Register 0
+        fields:
+          - name: SETPEND
+            description: Interrupt set-pending bits.
+            index: 0
+            width: 32
+            read: true
+            write: true
+            type: PPB_NVIC_ISPR0_SETPEND
+      - name: NVIC_ISPR1
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 516
+        description: (read-write) Interrupt Set-pending Register 1
+        fields:
+          - name: SETPEND
+            description: Interrupt set-pending bits.
+            index: 0
+            width: 32
+            read: true
+            write: true
+            type: PPB_NVIC_ISPR1_SETPEND
+      - name: NVIC_ISPR2
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 520
+        description: (read-write) Interrupt Set-pending Register 2
+        fields:
+          - name: SETPEND
+            description: Interrupt set-pending bits.
+            index: 0
+            width: 32
+            read: true
+            write: true
+            type: PPB_NVIC_ISPR2_SETPEND
+      - name: NVIC_ISPR3
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 524
+        description: (read-write) Interrupt Set-pending Register 3
+        fields:
+          - name: SETPEND
+            description: Interrupt set-pending bits.
+            index: 0
+            width: 32
+            read: true
+            write: true
+            type: PPB_NVIC_ISPR3_SETPEND
+      - name: NVIC_ICPR0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 640
+        description: (read-write) Interrupt Clear-pending Register 0
+        fields:
+          - name: CLRPEND
+            description: Interrupt set-pending bits.
+            index: 0
+            width: 32
+            read: true
+            write: true
+            type: PPB_NVIC_ICPR0_CLRPEND
+      - name: NVIC_ICPR1
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 644
+        description: (read-write) Interrupt Clear-pending Register 1
+        fields:
+          - name: CLRPEND
+            description: Interrupt set-pending bits.
+            index: 0
+            width: 32
+            read: true
+            write: true
+            type: PPB_NVIC_ICPR1_CLRPEND
+      - name: NVIC_ICPR2
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 648
+        description: (read-write) Interrupt Clear-pending Register 2
+        fields:
+          - name: CLRPEND
+            description: Interrupt set-pending bits.
+            index: 0
+            width: 32
+            read: true
+            write: true
+            type: PPB_NVIC_ICPR2_CLRPEND
+      - name: NVIC_ICPR3
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 652
+        description: (read-write) Interrupt Clear-pending Register 3
+        fields:
+          - name: CLRPEND
+            description: Interrupt set-pending bits.
+            index: 0
+            width: 32
+            read: true
+            write: true
+            type: PPB_NVIC_ICPR3_CLRPEND
+      - name: NVIC_IABR0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 768
+        description: (read-write) Interrupt Active Bit Register 0
+        fields:
+          - name: ACTIVE
+            description: 'Interrupt active flags:'
+            index: 0
+            width: 32
+            read: true
+            write: true
+            type: PPB_NVIC_IABR0_ACTIVE
+      - name: NVIC_IABR1
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 772
+        description: (read-write) Interrupt Active Bit Register 1
+        fields:
+          - name: ACTIVE
+            description: 'Interrupt active flags:'
+            index: 0
+            width: 32
+            read: true
+            write: true
+            type: PPB_NVIC_IABR1_ACTIVE
+      - name: NVIC_IABR2
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 776
+        description: (read-write) Interrupt Active Bit Register 2
+        fields:
+          - name: ACTIVE
+            description: 'Interrupt active flags:'
+            index: 0
+            width: 32
+            read: true
+            write: true
+            type: PPB_NVIC_IABR2_ACTIVE
+      - name: NVIC_IABR3
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 780
+        description: (read-write) Interrupt Active Bit Register 3
+        fields:
+          - name: ACTIVE
+            description: 'Interrupt active flags:'
+            index: 0
+            width: 32
+            read: true
+            write: true
+            type: PPB_NVIC_IABR3_ACTIVE
+      - name: NVIC_IPR0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1024
+        description: (read-write) Interrupt Priority Register 0
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR1
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1028
+        description: (read-write) Interrupt Priority Register 1
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR2
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1032
+        description: (read-write) Interrupt Priority Register 2
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR3
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1036
+        description: (read-write) Interrupt Priority Register 3
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR4
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1040
+        description: (read-write) Interrupt Priority Register 4
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR5
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1044
+        description: (read-write) Interrupt Priority Register 5
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR6
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1048
+        description: (read-write) Interrupt Priority Register 6
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR7
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1052
+        description: (read-write) Interrupt Priority Register 7
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR8
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1056
+        description: (read-write) Interrupt Priority Register 8
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR9
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1060
+        description: (read-write) Interrupt Priority Register 9
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR10
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1064
+        description: (read-write) Interrupt Priority Register 10
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR11
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1068
+        description: (read-write) Interrupt Priority Register 11
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR12
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1072
+        description: (read-write) Interrupt Priority Register 12
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR13
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1076
+        description: (read-write) Interrupt Priority Register 13
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR14
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1080
+        description: (read-write) Interrupt Priority Register 14
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR15
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1084
+        description: (read-write) Interrupt Priority Register 15
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR16
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1088
+        description: (read-write) Interrupt Priority Register 16
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR17
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1092
+        description: (read-write) Interrupt Priority Register 17
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR18
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1096
+        description: (read-write) Interrupt Priority Register 18
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR19
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1100
+        description: (read-write) Interrupt Priority Register 19
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR20
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1104
+        description: (read-write) Interrupt Priority Register 20
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR21
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1108
+        description: (read-write) Interrupt Priority Register 21
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR22
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1112
+        description: (read-write) Interrupt Priority Register 22
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR23
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1116
+        description: (read-write) Interrupt Priority Register 23
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR24
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1120
+        description: (read-write) Interrupt Priority Register 24
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR25
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1124
+        description: (read-write) Interrupt Priority Register 25
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR26
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1128
+        description: (read-write) Interrupt Priority Register 26
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NVIC_IPR27
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1132
+        description: (read-write) Interrupt Priority Register 27
+        fields:
+          - name: PRI_3
+            description: Priority value 3
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_2
+            description: Priority value 2
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_1
+            description: Priority value 1
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_0
+            description: Priority value 0
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: CPUID
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3328
+        const: true
+        description: (read-only) CPUID Base Register
+        fields:
+          - name: Implementer
+            description: Implementer code
+            index: 24
+            width: 8
+            read: true
+            write: false
+            type: PPB_CPUID_Implementer
+          - name: Variant
+            description: Variant number
+            index: 20
+            width: 4
+            read: true
+            write: false
+            type: PPB_CPUID_Variant
+          - name: Constant
+            description: Reads as 0xF
+            index: 16
+            width: 4
+            read: true
+            write: false
+          - name: PartNo
+            description: Part number of the processor
+            index: 4
+            width: 12
+            read: true
+            write: false
+            type: PPB_CPUID_PartNo
+          - name: Revision
+            description: Revision number
+            index: 0
+            width: 4
+            read: true
+            write: false
+            type: PPB_CPUID_Revision
+      - name: ICSR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3332
+        description: (read-write) Interrupt Control and State Register
+        fields:
+          - name: NMIPENDSET
+            description: 'NMI set-pending bit: 0b0=no effect, 0b1=changes NMI exception
+              state to pending., 0b0=NMI exception is not pending, 0b1=NMI exception
+              is pending., '
+            index: 31
+            width: 1
+            read: true
+            write: true
+          - name: PENDSVSET
+            description: 'PendSV set-pending bit: 0b0=no effect, 0b1=changes PendSV
+              exception state to pending., 0b0=PendSV exception is not pending, 0b1=PendSV
+              exception is pending., '
+            index: 28
+            width: 1
+            read: true
+            write: true
+          - name: PENDSVCLR
+            description: PendSV clear-pending bit
+            index: 27
+            width: 1
+            read: false
+            write: true
+            type: PPB_ICSR_PENDSVCLR
+          - name: PENDSTSET
+            description: SysTick exception set-pending bit
+            index: 26
+            width: 1
+            read: true
+            write: true
+            type: PPB_ICSR_PENDSTSET
+          - name: PENDSTCLR
+            description: SysTick exception clear-pending bit
+            index: 25
+            width: 1
+            read: false
+            write: true
+            type: PPB_ICSR_PENDSTCLR
+          - name: ISRPENDING
+            description: Interrupt pending flag
+            index: 22
+            width: 1
+            read: true
+            write: false
+            type: PPB_ICSR_ISRPENDING
+          - name: VECTPENDING
+            description: Vector Pending
+            index: 12
+            width: 6
+            read: true
+            write: false
+            type: PPB_ICSR_VECTPENDING
+          - name: RETTOBASE
+            description: Return to Base
+            index: 11
+            width: 1
+            read: true
+            write: false
+            type: PPB_ICSR_RETTOBASE
+          - name: VECTACTIVE
+            description: Active exception number
+            index: 0
+            width: 9
+            read: true
+            write: false
+            type: PPB_ICSR_VECTACTIVE
+      - name: VTOR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3336
+        description: (read-write) Vector Table Offset Register
+        fields:
+          - name: TBLOFF
+            description: Vector table base offset field
+            index: 10
+            width: 22
+            read: true
+            write: true
+      - name: AIRCR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3340
+        description: (read-write) Application Interrupt and Reset Control Register
+        fields:
+          - name: VECTKEY
+            description: Register key
+            index: 16
+            width: 16
+            read: true
+            write: true
+          - name: ENDIANNESS
+            description: Data endianness bit
+            index: 15
+            width: 1
+            read: true
+            write: false
+            type: PPB_AIRCR_ENDIANNESS
+          - name: PRIGROUP
+            description: Interrupt priority grouping field
+            index: 8
+            width: 3
+            read: true
+            write: true
+          - name: SYSRESETREQ
+            description: System reset request
+            index: 2
+            width: 1
+            read: false
+            write: true
+            type: PPB_AIRCR_SYSRESETREQ
+          - name: VECTCLRACTIVE
+            description: Reserved for Debug use.
+            index: 1
+            width: 1
+            read: false
+            write: true
+          - name: VECTRESET
+            description: Reserved for Debug use.
+            index: 0
+            width: 1
+            read: false
+            write: true
+      - name: SCR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3344
+        description: (read-write) System Control Register
+        fields:
+          - name: SEVONPEND
+            description: 'Send Event on Pending bit:'
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: PPB_SCR_SEVONPEND
+          - name: SLEEPDEEP
+            description: Sleep or Deep Sleep
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: PPB_SCR_SLEEPDEEP
+          - name: SLEEPONEXIT
+            description: Sleep on Exit
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: PPB_SCR_SLEEPONEXIT
+      - name: CCR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3348
+        description: (read-write) Configuration and Control Register
+        fields:
+          - name: STKALIGN
+            description: Stack Alignment
+            index: 9
+            width: 1
+            read: true
+            write: true
+            type: PPB_CCR_STKALIGN
+          - name: BFHFNMIGN
+            description: Bus Fault Hard Fault and NMI Ignore
+            index: 8
+            width: 1
+            read: true
+            write: true
+            type: PPB_CCR_BFHFNMIGN
+          - name: DIV_0_TRP
+            description: Divide by Zero Trap Enable
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: PPB_CCR_DIV_0_TRP
+          - name: UNALIGN_TRP
+            description: Unaligned Access Trap Enable
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: PPB_CCR_UNALIGN_TRP
+          - name: USERSETMPEND
+            description: User Set Pending Enable
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: PPB_CCR_USERSETMPEND
+          - name: NONBASETHRDENA
+            description: Non Base Thread Mode Enable
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: PPB_CCR_NONBASETHRDENA
+      - name: SHPR1
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3352
+        description: (read-write) System Handler Priority Register 1
+        fields:
+          - name: PRI_6
+            description: Priority of system handler 6, UsageFault
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: PRI_5
+            description: Priority of system handler 5, BusFault
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: PRI_4
+            description: Priority of system handler 4, MemManage
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: SHPR2
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3356
+        description: (read-write) System Handler Priority Register 2
+        fields:
+          - name: PRI_11
+            description: Priority of system handler 11, SVCall
+            index: 24
+            width: 8
+            read: true
+            write: true
+      - name: SHPR3
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3360
+        description: (read-write) System Handler Priority Register 3
+        fields:
+          - name: PRI_15
+            description: Priority of system handler 15
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PRI_14
+            description: Priority of system handler 14
+            index: 16
+            width: 8
+            read: true
+            write: true
+      - name: SHCSR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3364
+        description: (read-write) System Handler Control and State Register
+        fields:
+          - name: USGFAULTENA
+            description: UsageFault enable bit
+            index: 18
+            width: 1
+            read: true
+            write: true
+          - name: BUSFAULTENA
+            description: BusFault enable bit
+            index: 17
+            width: 1
+            read: true
+            write: true
+          - name: MEMFAULTENA
+            description: MemManage enable bit
+            index: 16
+            width: 1
+            read: true
+            write: true
+          - name: SVCALLPENDED
+            description: SVCall pending bit
+            index: 15
+            width: 1
+            read: true
+            write: true
+          - name: BUSFAULTPENDED
+            description: BusFault exception pending bit
+            index: 14
+            width: 1
+            read: true
+            write: true
+          - name: MEMFAULTPENDED
+            description: MemManage exception pending bit
+            index: 13
+            width: 1
+            read: true
+            write: true
+          - name: USGFAULTPENDED
+            description: UsageFault exception pending bit
+            index: 12
+            width: 1
+            read: true
+            write: true
+          - name: SYSTICKACT
+            description: SysTick exception active bit
+            index: 11
+            width: 1
+            read: true
+            write: true
+          - name: PENDSVACT
+            description: PendSV exception active bit
+            index: 10
+            width: 1
+            read: true
+            write: true
+          - name: MONITORACT
+            description: Debug monitor active bit
+            index: 8
+            width: 1
+            read: true
+            write: true
+          - name: SVCALLACT
+            description: SVCall active bit
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: USGFAULTACT
+            description: UsageFault exception active bit
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: BUSFAULTACT
+            description: BusFault exception active bit
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: MEMFAULTACT
+            description: MemManage exception active bit
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: CFSR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3368
+        description: (read-write) Configurable Fault Status Register
+        fields:
+          - name: DIVBYZERO
+            description: Divide by zero UsageFault
+            index: 25
+            width: 1
+            read: true
+            write: true
+            type: PPB_CFSR_DIVBYZERO
+          - name: UNALIGNED
+            description: Unaligned access UsageFault
+            index: 24
+            width: 1
+            read: true
+            write: true
+            type: PPB_CFSR_UNALIGNED
+          - name: NOCP
+            description: No coprocessor UsageFault
+            index: 19
+            width: 1
+            read: true
+            write: true
+            type: PPB_CFSR_NOCP
+          - name: INVPC
+            description: Invalid PC load UsageFault
+            index: 18
+            width: 1
+            read: true
+            write: true
+            type: PPB_CFSR_INVPC
+          - name: INVSTATE
+            description: Invalid state UsageFault
+            index: 17
+            width: 1
+            read: true
+            write: true
+            type: PPB_CFSR_INVSTATE
+          - name: UNDEFINSTR
+            description: Undefined instruction UsageFault
+            index: 16
+            width: 1
+            read: true
+            write: true
+            type: PPB_CFSR_UNDEFINSTR
+          - name: BFARVALID
+            description: BusFault Address Register (BFAR) valid flag
+            index: 15
+            width: 1
+            read: true
+            write: true
+            type: PPB_CFSR_BFARVALID
+          - name: LSPERR
+            description: BusFault during floating point lazy state preservation
+            index: 13
+            width: 1
+            read: true
+            write: true
+            type: PPB_CFSR_LSPERR
+          - name: STKERR
+            description: BusFault on stacking for exception entry
+            index: 12
+            width: 1
+            read: true
+            write: true
+            type: PPB_CFSR_STKERR
+          - name: UNSTKERR
+            description: BusFault on unstacking for a return from exception
+            index: 11
+            width: 1
+            read: true
+            write: true
+            type: PPB_CFSR_UNSTKERR
+          - name: IMPRECISERR
+            description: Imprecise data bus error
+            index: 10
+            width: 1
+            read: true
+            write: true
+            type: PPB_CFSR_IMPRECISERR
+          - name: PRECISERR
+            description: Precise data bus error
+            index: 9
+            width: 1
+            read: true
+            write: true
+            type: PPB_CFSR_PRECISERR
+          - name: IBUSERR
+            description: Instruction bus error
+            index: 8
+            width: 1
+            read: true
+            write: true
+            type: PPB_CFSR_IBUSERR
+          - name: MMARVALID
+            description: MemManage Fault Address Register (MMFAR) valid flag
+            index: 7
+            width: 1
+            read: true
+            write: true
+            type: PPB_CFSR_MMARVALID
+          - name: MLSPERR
+            description: MemManage fault during floating point lazy state preservation
+            index: 5
+            width: 1
+            read: true
+            write: true
+            type: PPB_CFSR_MLSPERR
+          - name: MSTKERR
+            description: MemManage fault on stacking for exception entry
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: PPB_CFSR_MSTKERR
+          - name: MUNSTKERR
+            description: MemManage fault on unstacking for a return from exception
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: PPB_CFSR_MUNSTKERR
+          - name: DACCVIOL
+            description: Data access violation flag
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: PPB_CFSR_DACCVIOL
+          - name: IACCVIOL
+            description: Instruction access violation flag
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: PPB_CFSR_IACCVIOL
+      - name: HFSR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3372
+        description: (read-write) HardFault Status Register
+        fields:
+          - name: DEBUGEVT
+            description: Reserved for Debug use
+            index: 31
+            width: 1
+            read: true
+            write: true
+          - name: FORCED
+            description: Forced HardFault
+            index: 30
+            width: 1
+            read: true
+            write: true
+            type: PPB_HFSR_FORCED
+          - name: VECTTBL
+            description: BusFault on vector table read
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: PPB_HFSR_VECTTBL
+      - name: MMFAR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3380
+        description: (read-write) MemManage Fault Address Register
+        fields:
+          - name: ADDRESS
+            description: Address causing the fault
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: BFAR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3384
+        description: (read-write) BusFault Address Register
+        fields:
+          - name: ADDRESS
+            description: Address causing the fault
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: AFSR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3388
+        description: (read-write) Auxiliary Fault Status Register
+        fields:
+          - name: VALUE
+            description: Reserved
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: CPACR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3464
+        description: (read-write) Coprocessor Access Control Register
+        fields:
+          - name: CP11
+            description: Access privileges for coprocessor 11
+            index: 22
+            width: 2
+            read: true
+            write: true
+            type: PPB_CPACR_CP11
+          - name: CP10
+            description: Access privileges for coprocessor 10
+            index: 20
+            width: 2
+            read: true
+            write: true
+            type: PPB_CPACR_CP10
+      - name: MPU_TYPE
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3472
+        const: true
+        description: (read-only) MPU Type Register
+        fields:
+          - name: IREGION
+            description: Number of supported MPU instruction regions
+            index: 16
+            width: 8
+            read: true
+            write: false
+          - name: DREGION
+            description: Number of supported MPU data regions
+            index: 8
+            width: 8
+            read: true
+            write: false
+          - name: SEPARATE
+            description: Support for unified or separate instruction and date memory
+              maps
+            index: 0
+            width: 1
+            read: true
+            write: false
+      - name: MPU_CTRL
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3476
+        description: (read-write) MPU Control Register
+        fields:
+          - name: PRIVDEFENA
+            description: Enables privileged software access to the default memory
+              map
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: PPB_MPU_CTRL_PRIVDEFENA
+          - name: HFNMIENA
+            description: Enable the operation of MPU during hard fault, NMI, and FAULTMASK
+              handlers
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: PPB_MPU_CTRL_HFNMIENA
+          - name: ENABLE
+            description: Enable MPU
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: PPB_MPU_CTRL_ENABLE
+      - name: MPU_RNR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3480
+        description: (read-write) MPU Region Number Register
+        fields:
+          - name: REGION
+            description: Region
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: MPU_RBAR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3484
+        description: (read-write) MPU Region Base Address Register
+        fields:
+          - name: ADDR
+            description: Region base address field
+            index: 9
+            width: 23
+            read: true
+            write: true
+          - name: VALID
+            description: MPU Region Number valid bit
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: PPB_MPU_RBAR_VALID
+          - name: REGION
+            description: MPU region field
+            index: 0
+            width: 4
+            read: true
+            write: true
+      - name: MPU_RASR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3488
+        description: (read-write) MPU Region Attribute and Size Register
+        fields:
+          - name: XN
+            description: Instruction access disable bit
+            index: 28
+            width: 1
+            read: true
+            write: true
+            type: PPB_MPU_RASR_XN
+          - name: AP
+            description: Access permission field
+            index: 24
+            width: 3
+            read: true
+            write: true
+          - name: TEX
+            description: Memory access attribute
+            index: 19
+            width: 3
+            read: true
+            write: true
+          - name: S
+            description: Shareable bit
+            index: 18
+            width: 1
+            read: true
+            write: true
+          - name: C
+            description: Memory access attribute
+            index: 17
+            width: 1
+            read: true
+            write: true
+          - name: B
+            description: Memory access attribute
+            index: 16
+            width: 1
+            read: true
+            write: true
+          - name: SRD
+            description: Subregion disable bits
+            index: 8
+            width: 8
+            read: true
+            write: true
+            type: PPB_MPU_RASR_SRD
+          - name: SIZE
+            description: MPU protection region size
+            index: 1
+            width: 5
+            read: true
+            write: true
+          - name: ENABLE
+            description: Region enable bit.
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: MPU_RBAR_A1
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3492
+        description: (read-write) MPU Region Base Address Register A1
+        fields:
+          - name: ADDR
+            description: Region base address field
+            index: 9
+            width: 23
+            read: true
+            write: true
+          - name: VALID
+            description: MPU Region Number valid bit
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: PPB_MPU_RBAR_A1_VALID
+          - name: REGION
+            description: MPU region field
+            index: 0
+            width: 4
+            read: true
+            write: true
+      - name: MPU_RASR_A1
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3496
+        description: (read-write) MPU Region Attribute and Size Register A1
+        fields:
+          - name: XN
+            description: Instruction access disable bit
+            index: 28
+            width: 1
+            read: true
+            write: true
+            type: PPB_MPU_RASR_A1_XN
+          - name: AP
+            description: Access permission field
+            index: 24
+            width: 3
+            read: true
+            write: true
+          - name: TEX
+            description: Memory access attribute
+            index: 19
+            width: 3
+            read: true
+            write: true
+          - name: S
+            description: Shareable bit
+            index: 18
+            width: 1
+            read: true
+            write: true
+          - name: C
+            description: Memory access attribute
+            index: 17
+            width: 1
+            read: true
+            write: true
+          - name: B
+            description: Memory access attribute
+            index: 16
+            width: 1
+            read: true
+            write: true
+          - name: SRD
+            description: Subregion disable bits
+            index: 8
+            width: 8
+            read: true
+            write: true
+            type: PPB_MPU_RASR_A1_SRD
+          - name: SIZE
+            description: MPU protection region size
+            index: 1
+            width: 5
+            read: true
+            write: true
+          - name: ENABLE
+            description: Region enable bit.
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: MPU_RBAR_A2
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3500
+        description: (read-write) MPU Region Base Address Register A2
+        fields:
+          - name: ADDR
+            description: Region base address field
+            index: 9
+            width: 23
+            read: true
+            write: true
+          - name: VALID
+            description: MPU Region Number valid bit
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: PPB_MPU_RBAR_A2_VALID
+          - name: REGION
+            description: MPU region field
+            index: 0
+            width: 4
+            read: true
+            write: true
+      - name: MPU_RASR_A2
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3504
+        description: (read-write) MPU Region Attribute and Size Register A2
+        fields:
+          - name: XN
+            description: Instruction access disable bit
+            index: 28
+            width: 1
+            read: true
+            write: true
+            type: PPB_MPU_RASR_A2_XN
+          - name: AP
+            description: Access permission field
+            index: 24
+            width: 3
+            read: true
+            write: true
+          - name: TEX
+            description: Memory access attribute
+            index: 19
+            width: 3
+            read: true
+            write: true
+          - name: S
+            description: Shareable bit
+            index: 18
+            width: 1
+            read: true
+            write: true
+          - name: C
+            description: Memory access attribute
+            index: 17
+            width: 1
+            read: true
+            write: true
+          - name: B
+            description: Memory access attribute
+            index: 16
+            width: 1
+            read: true
+            write: true
+          - name: SRD
+            description: Subregion disable bits
+            index: 8
+            width: 8
+            read: true
+            write: true
+            type: PPB_MPU_RASR_A2_SRD
+          - name: SIZE
+            description: MPU protection region size
+            index: 1
+            width: 5
+            read: true
+            write: true
+          - name: ENABLE
+            description: Region enable bit.
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: MPU_RBAR_A3
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3508
+        description: (read-write) MPU Region Base Address Register A3
+        fields:
+          - name: ADDR
+            description: Region base address field
+            index: 9
+            width: 23
+            read: true
+            write: true
+          - name: VALID
+            description: MPU Region Number valid bit
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: PPB_MPU_RBAR_A3_VALID
+          - name: REGION
+            description: MPU region field
+            index: 0
+            width: 4
+            read: true
+            write: true
+      - name: MPU_RASR_A3
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3512
+        description: (read-write) MPU Region Attribute and Size Register A3
+        fields:
+          - name: XN
+            description: Instruction access disable bit
+            index: 28
+            width: 1
+            read: true
+            write: true
+            type: PPB_MPU_RASR_A3_XN
+          - name: AP
+            description: Access permission field
+            index: 24
+            width: 3
+            read: true
+            write: true
+          - name: TEX
+            description: Memory access attribute
+            index: 19
+            width: 3
+            read: true
+            write: true
+          - name: S
+            description: Shareable bit
+            index: 18
+            width: 1
+            read: true
+            write: true
+          - name: C
+            description: Memory access attribute
+            index: 17
+            width: 1
+            read: true
+            write: true
+          - name: B
+            description: Memory access attribute
+            index: 16
+            width: 1
+            read: true
+            write: true
+          - name: SRD
+            description: Subregion disable bits
+            index: 8
+            width: 8
+            read: true
+            write: true
+            type: PPB_MPU_RASR_A3_SRD
+          - name: SIZE
+            description: MPU protection region size
+            index: 1
+            width: 5
+            read: true
+            write: true
+          - name: ENABLE
+            description: Region enable bit.
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: STIR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3840
+        description: (write-only) Software Trigger Interrupt Register
+        fields:
+          - name: INTID
+            description: Interrupt ID of the interrupt to trigger
+            index: 0
+            width: 9
+            read: false
+            write: true
+      - name: FPCCR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3892
+        description: (read-write) Floating-point Context Control Register
+        fields:
+          - name: ASPEN
+            description: Automatic State Preservation
+            index: 31
+            width: 1
+            read: true
+            write: true
+            type: PPB_FPCCR_ASPEN
+          - name: LSPEN
+            description: Lazy State Preservation Enabled
+            index: 30
+            width: 1
+            read: true
+            write: true
+            type: PPB_FPCCR_LSPEN
+          - name: MONRDY
+            description: Monitor Ready
+            index: 8
+            width: 1
+            read: true
+            write: true
+            type: PPB_FPCCR_MONRDY
+          - name: BFRDY
+            description: BusFault Ready
+            index: 6
+            width: 1
+            read: true
+            write: true
+            type: PPB_FPCCR_BFRDY
+          - name: MMRDY
+            description: MemManage Ready
+            index: 5
+            width: 1
+            read: true
+            write: true
+            type: PPB_FPCCR_MMRDY
+          - name: HFRDY
+            description: HardFault Ready
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: PPB_FPCCR_HFRDY
+          - name: THREAD
+            description: Thread Mode allocated Stack Frame
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: PPB_FPCCR_THREAD
+          - name: USER
+            description: User allocated Stack Frame
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: PPB_FPCCR_USER
+          - name: LSPACT
+            description: Lazy State Preservation Active
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: PPB_FPCCR_LSPACT
+      - name: FPCAR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3896
+        description: (read-write) Floating-point Context Address Register
+        fields:
+          - name: ADDRESS
+            description: Address
+            index: 3
+            width: 29
+            read: true
+            write: true
+      - name: FPDSCR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 3900
+        description: (read-write) Floating-point Default Status Control Register
+        fields:
+          - name: AHP
+            description: Default value for FPSCR.AHP
+            index: 26
+            width: 1
+            read: true
+            write: true
+          - name: DN
+            description: Default value for FPSCR.DN
+            index: 25
+            width: 1
+            read: true
+            write: true
+          - name: FZ
+            description: Default value for FPSCR.FZ
+            index: 24
+            width: 1
+            read: true
+            write: true
+          - name: RMode
+            description: Default value for FPSCR.RMode
+            index: 22
+            width: 2
+            read: true
+            write: true
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums:
+  PPB_SYST_CSR_CLKSOURCE:
+    enum:
+      value1:
+        description: external clock
+        value: 0
+      value2:
+        description: processor clock.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_SYST_CSR_TICKINT:
+    enum:
+      value1:
+        description: counting down to zero does not assert the SysTick exception request
+        value: 0
+      value2:
+        description: counting down to zero to asserts the SysTick exception request.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_SYST_CSR_ENABLE:
+    enum:
+      value1:
+        description: counter disabled
+        value: 0
+      value2:
+        description: counter enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_SYST_CALIB_NOREF:
+    enum:
+      value1:
+        description: reference clock provided
+        value: 0
+      value2:
+        description: no reference clock provided.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_SYST_CALIB_SKEW:
+    enum:
+      value1:
+        description: TENMS value is exact
+        value: 0
+      value2:
+        description: TENMS value is inexact, or not given.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_NVIC_ISER0_SETENA:
+    enum:
+      value3:
+        description: interrupt disabled
+        value: 0
+      value4:
+        description: interrupt enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_NVIC_ISER1_SETENA:
+    enum:
+      value3:
+        description: interrupt disabled
+        value: 0
+      value4:
+        description: interrupt enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_NVIC_ISER2_SETENA:
+    enum:
+      value3:
+        description: interrupt disabled
+        value: 0
+      value4:
+        description: interrupt enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_NVIC_ISER3_SETENA:
+    enum:
+      value3:
+        description: interrupt disabled
+        value: 0
+      value4:
+        description: interrupt enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_NVIC_ICER0_CLRENA:
+    enum:
+      value3:
+        description: interrupt disabled
+        value: 0
+      value4:
+        description: interrupt enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_NVIC_ICER1_CLRENA:
+    enum:
+      value3:
+        description: interrupt disabled
+        value: 0
+      value4:
+        description: interrupt enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_NVIC_ICER2_CLRENA:
+    enum:
+      value3:
+        description: interrupt disabled
+        value: 0
+      value4:
+        description: interrupt enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_NVIC_ICER3_CLRENA:
+    enum:
+      value3:
+        description: interrupt disabled
+        value: 0
+      value4:
+        description: interrupt enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_NVIC_ISPR0_SETPEND:
+    enum:
+      value3:
+        description: interrupt is not pending
+        value: 0
+      value4:
+        description: interrupt is pending.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_NVIC_ISPR1_SETPEND:
+    enum:
+      value3:
+        description: interrupt is not pending
+        value: 0
+      value4:
+        description: interrupt is pending.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_NVIC_ISPR2_SETPEND:
+    enum:
+      value3:
+        description: interrupt is not pending
+        value: 0
+      value4:
+        description: interrupt is pending.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_NVIC_ISPR3_SETPEND:
+    enum:
+      value3:
+        description: interrupt is not pending
+        value: 0
+      value4:
+        description: interrupt is pending.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_NVIC_ICPR0_CLRPEND:
+    enum:
+      value3:
+        description: interrupt is not pending
+        value: 0
+      value4:
+        description: interrupt is pending.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_NVIC_ICPR1_CLRPEND:
+    enum:
+      value3:
+        description: interrupt is not pending
+        value: 0
+      value4:
+        description: interrupt is pending.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_NVIC_ICPR2_CLRPEND:
+    enum:
+      value3:
+        description: interrupt is not pending
+        value: 0
+      value4:
+        description: interrupt is pending.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_NVIC_ICPR3_CLRPEND:
+    enum:
+      value3:
+        description: interrupt is not pending
+        value: 0
+      value4:
+        description: interrupt is pending.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_NVIC_IABR0_ACTIVE:
+    enum:
+      value1:
+        description: interrupt not active
+        value: 0
+      value2:
+        description: interrupt active
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_NVIC_IABR1_ACTIVE:
+    enum:
+      value1:
+        description: interrupt not active
+        value: 0
+      value2:
+        description: interrupt active
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_NVIC_IABR2_ACTIVE:
+    enum:
+      value1:
+        description: interrupt not active
+        value: 0
+      value2:
+        description: interrupt active
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_NVIC_IABR3_ACTIVE:
+    enum:
+      value1:
+        description: interrupt not active
+        value: 0
+      value2:
+        description: interrupt active
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_CPUID_Implementer:
+    enum:
+      value1:
+        description: ARM
+        value: 65
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CPUID_Variant:
+    enum:
+      value1:
+        description: Revision 0
+        value: 0
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CPUID_PartNo:
+    enum:
+      value1:
+        description: Cortex-M4
+        value: 3108
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_CPUID_Revision:
+    enum:
+      value1:
+        description: Patch 1
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_ICSR_PENDSVCLR:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: removes the pending state from the PendSV exception.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_ICSR_PENDSTSET:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: changes SysTick exception state to pending.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_ICSR_PENDSTCLR:
+    enum:
+      value1:
+        description: no effect
+        value: 0
+      value2:
+        description: removes the pending state from the SysTick exception.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_ICSR_ISRPENDING:
+    enum:
+      value1:
+        description: interrupt not pending
+        value: 0
+      value2:
+        description: interrupt pending.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_ICSR_VECTPENDING:
+    enum:
+      value1:
+        description: no pending exceptions
+        value: 0
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_ICSR_RETTOBASE:
+    enum:
+      value1:
+        description: there are preempted active exceptions to execute
+        value: 0
+      value2:
+        description: there are no active exceptions, or the currently-executing exception
+          is the only active exception.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_ICSR_VECTACTIVE:
+    enum:
+      value1:
+        description: Thread mode
+        value: 0
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  PPB_AIRCR_ENDIANNESS:
+    enum:
+      value1:
+        description: Little-endian
+        value: 0
+      value2:
+        description: Big-endian.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_AIRCR_SYSRESETREQ:
+    enum:
+      value1:
+        description: no system reset request
+        value: 0
+      value2:
+        description: asserts a signal to the outer system that requests a reset.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_SCR_SEVONPEND:
+    enum:
+      value1:
+        description: only enabled interrupts or events can wakeup the processor, disabled
+          interrupts are excluded
+        value: 0
+      value2:
+        description: enabled events and all interrupts, including disabled interrupts,
+          can wakeup the processor.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_SCR_SLEEPDEEP:
+    enum:
+      value1:
+        description: sleep
+        value: 0
+      value2:
+        description: deep sleep
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_SCR_SLEEPONEXIT:
+    enum:
+      value1:
+        description: do not sleep when returning to Thread mode.
+        value: 0
+      value2:
+        description: enter sleep, or deep sleep, on return from an ISR.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CCR_STKALIGN:
+    enum:
+      value1:
+        description: 4-byte aligned
+        value: 0
+      value2:
+        description: 8-byte aligned.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CCR_BFHFNMIGN:
+    enum:
+      value1:
+        description: data bus faults caused by load and store instructions cause a
+          lock-up
+        value: 0
+      value2:
+        description: handlers running at priority -1 and -2 ignore data bus faults
+          caused by load and store instructions.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CCR_DIV_0_TRP:
+    enum:
+      value1:
+        description: do not trap divide by 0
+        value: 0
+      value2:
+        description: trap divide by 0.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CCR_UNALIGN_TRP:
+    enum:
+      value1:
+        description: do not trap unaligned halfword and word accesses
+        value: 0
+      value2:
+        description: trap unaligned halfword and word accesses.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CCR_USERSETMPEND:
+    enum:
+      value1:
+        description: disable
+        value: 0
+      value2:
+        description: enable
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CCR_NONBASETHRDENA:
+    enum:
+      value1:
+        description: processor can enter Thread mode only when no exception is active.
+        value: 0
+      value2:
+        description: processor can enter Thread mode from any level under the control
+          of an EXC_RETURN value, see Exception returnException return occurs when
+          the processor is in Handler mode and executes one of the following instructions
+          to load the EXC_RETURN value into the PC:an LDM or POP instruction that
+          loads the PCan LDR instruction with PC as the destinationa BX instruction
+          using any register.EXC_RETURN is the value loaded into the LR on exception
+          entry. The exception mechanism relies on this value to detect when the processor
+          has completed an exception handler. The lowest five bits of this value provide
+          information on the return stack and processor mode. shows the EXC_RETURN
+          values with a description of the exception return behavior. All EXC_RETURN
+          values have bits[31:5] set to one. When this value is loaded into the PC
+          it indicates to the processor that the exception is complete, and the processor
+          initiates the appropriate exception return sequence.Exception return behaviorEXC_RETURN[31:0]Description
+          0xFFFFFFF1 Return to Handler mode, exception return uses non-floating-point
+          state from the MSP and execution uses MSP after return. 0xFFFFFFF9 Return
+          to Thread mode, exception return uses non-floating-point state from MSP
+          and execution uses MSP after return. 0xFFFFFFFD Return to Thread mode, exception
+          return uses non-floating-point state from the PSP and execution uses PSP
+          after return. 0xFFFFFFE1 Return to Handler mode, exception return uses floating-point-state
+          from MSP and execution uses MSP after return. 0xFFFFFFE9 Return to Thread
+          mode, exception return uses floating-point state from MSP and execution
+          uses MSP after return. 0xFFFFFFED Return to Thread mode, exception return
+          uses floating-point state from PSP and execution uses PSP after return.
+          .
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CFSR_DIVBYZERO:
+    enum:
+      value1:
+        description: no divide by zero fault, or divide by zero trapping not enabled
+        value: 0
+      value2:
+        description: the processor has executed an SDIV or UDIV instruction with a
+          divisor of 0
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CFSR_UNALIGNED:
+    enum:
+      value1:
+        description: no unaligned access fault, or unaligned access trapping not enabled
+        value: 0
+      value2:
+        description: the processor has made an unaligned memory access.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CFSR_NOCP:
+    enum:
+      value1:
+        description: no UsageFault caused by attempting to access a coprocessor
+        value: 0
+      value2:
+        description: the processor has attempted to access a coprocessor.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CFSR_INVPC:
+    enum:
+      value1:
+        description: no invalid PC load UsageFault
+        value: 0
+      value2:
+        description: the processor has attempted an illegal load of EXC_RETURN to
+          the PC, as a result of an invalid context, or an invalid EXC_RETURN value.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CFSR_INVSTATE:
+    enum:
+      value1:
+        description: no invalid state UsageFault
+        value: 0
+      value2:
+        description: the processor has attempted to execute an instruction that makes
+          illegal use of the EPSR.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CFSR_UNDEFINSTR:
+    enum:
+      value1:
+        description: no undefined instruction UsageFault
+        value: 0
+      value2:
+        description: the processor has attempted to execute an undefined instruction.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CFSR_BFARVALID:
+    enum:
+      value1:
+        description: value in BFAR is not a valid fault address
+        value: 0
+      value2:
+        description: BFAR holds a valid fault address.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CFSR_LSPERR:
+    enum:
+      value1:
+        description: No bus fault occurred during floating-point lazy state preservation.
+        value: 0
+      value2:
+        description: A bus fault occurred during floating-point lazy state preservation
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CFSR_STKERR:
+    enum:
+      value1:
+        description: no stacking fault
+        value: 0
+      value2:
+        description: stacking for an exception entry has caused one or more BusFaults.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CFSR_UNSTKERR:
+    enum:
+      value1:
+        description: no unstacking fault
+        value: 0
+      value2:
+        description: stacking for an exception entry has caused one or more BusFaults.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CFSR_IMPRECISERR:
+    enum:
+      value1:
+        description: no imprecise data bus error
+        value: 0
+      value2:
+        description: a data bus error has occurred, but the return address in the
+          stack frame is not related to the instruction that caused the error.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CFSR_PRECISERR:
+    enum:
+      value1:
+        description: no precise data bus error
+        value: 0
+      value2:
+        description: a data bus error has occurred, and the PC value stacked for the
+          exception return points to the instruction that caused the fault.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CFSR_IBUSERR:
+    enum:
+      value1:
+        description: no instruction bus error
+        value: 0
+      value2:
+        description: instruction bus error.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CFSR_MMARVALID:
+    enum:
+      value1:
+        description: value in MMAR is not a valid fault address
+        value: 0
+      value2:
+        description: MMAR holds a valid fault address.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CFSR_MLSPERR:
+    enum:
+      value1:
+        description: No MemManage fault occurred during floating-point lazy state
+          preservation
+        value: 0
+      value2:
+        description: A MemManage fault occurred during floating-point lazy state preservation
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CFSR_MSTKERR:
+    enum:
+      value1:
+        description: no stacking fault
+        value: 0
+      value2:
+        description: stacking for an exception entry has caused one or more access
+          violations.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CFSR_MUNSTKERR:
+    enum:
+      value1:
+        description: no unstacking fault
+        value: 0
+      value2:
+        description: unstack for an exception return has caused one or more access
+          violations.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CFSR_DACCVIOL:
+    enum:
+      value1:
+        description: no data access violation fault
+        value: 0
+      value2:
+        description: the processor attempted a load or store at a location that does
+          not permit the operation.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CFSR_IACCVIOL:
+    enum:
+      value1:
+        description: no instruction access violation fault
+        value: 0
+      value2:
+        description: the processor attempted an instruction fetch from a location
+          that does not permit execution.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_HFSR_FORCED:
+    enum:
+      value1:
+        description: no forced HardFault
+        value: 0
+      value2:
+        description: forced HardFault.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_HFSR_VECTTBL:
+    enum:
+      value1:
+        description: no BusFault on vector table read
+        value: 0
+      value2:
+        description: BusFault on vector table read
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CPACR_CP11:
+    enum:
+      value1:
+        description: Access denied. Any attempted access generates a NOCP UsageFault.
+        value: 0
+      value2:
+        description: Privileged access only. An unprivileged access generates a NOCP
+          fault.
+        value: 1
+      value4:
+        description: Full access.
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_CPACR_CP10:
+    enum:
+      value1:
+        description: Access denied. Any attempted access generates a NOCP UsageFault.
+        value: 0
+      value2:
+        description: Privileged access only. An unprivileged access generates a NOCP
+          fault.
+        value: 1
+      value4:
+        description: Full access.
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_MPU_CTRL_PRIVDEFENA:
+    enum:
+      value1:
+        description: If the MPU is enabled, disables use of the default memory map.
+          Any memory access to a location not covered by any enabled region causes
+          a fault.
+        value: 0
+      value2:
+        description: If the MPU is enabled, enables use of the default memory map
+          as a background region for privileged software accesses.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_MPU_CTRL_HFNMIENA:
+    enum:
+      value1:
+        description: MPU is disabled during hard fault, NMI, and FAULTMASK handlers,
+          regardless of the value of the ENABLE bit
+        value: 0
+      value2:
+        description: the MPU is enabled during hard fault, NMI, and FAULTMASK handlers.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_MPU_CTRL_ENABLE:
+    enum:
+      value1:
+        description: MPU disabled
+        value: 0
+      value2:
+        description: MPU enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_MPU_RBAR_VALID:
+    enum:
+      value1:
+        description: 'MPU_RNR not changed, and the processor: - updates the base address
+          for the region specified in the MPU_RNR - ignores the value of the REGION
+          field'
+        value: 0
+      value2:
+        description: 'the processor: - updates the value of the MPU_RNR to the value
+          of the REGION field - updates the base address for the region specified
+          in the REGION field.'
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_MPU_RASR_XN:
+    enum:
+      value1:
+        description: instruction fetches enabled
+        value: 0
+      value2:
+        description: instruction fetches disabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_MPU_RASR_SRD:
+    enum:
+      value1:
+        description: corresponding sub-region is enabled
+        value: 0
+      value2:
+        description: corresponding sub-region is disabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_MPU_RBAR_A1_VALID:
+    enum:
+      value1:
+        description: 'MPU_RNR not changed, and the processor: - updates the base address
+          for the region specified in the MPU_RNR - ignores the value of the REGION
+          field'
+        value: 0
+      value2:
+        description: 'the processor: - updates the value of the MPU_RNR to the value
+          of the REGION field - updates the base address for the region specified
+          in the REGION field.'
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_MPU_RASR_A1_XN:
+    enum:
+      value1:
+        description: instruction fetches enabled
+        value: 0
+      value2:
+        description: instruction fetches disabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_MPU_RASR_A1_SRD:
+    enum:
+      value1:
+        description: corresponding sub-region is enabled
+        value: 0
+      value2:
+        description: corresponding sub-region is disabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_MPU_RBAR_A2_VALID:
+    enum:
+      value1:
+        description: 'MPU_RNR not changed, and the processor: - updates the base address
+          for the region specified in the MPU_RNR - ignores the value of the REGION
+          field'
+        value: 0
+      value2:
+        description: 'the processor: - updates the value of the MPU_RNR to the value
+          of the REGION field - updates the base address for the region specified
+          in the REGION field.'
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_MPU_RASR_A2_XN:
+    enum:
+      value1:
+        description: instruction fetches enabled
+        value: 0
+      value2:
+        description: instruction fetches disabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_MPU_RASR_A2_SRD:
+    enum:
+      value1:
+        description: corresponding sub-region is enabled
+        value: 0
+      value2:
+        description: corresponding sub-region is disabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_MPU_RBAR_A3_VALID:
+    enum:
+      value1:
+        description: 'MPU_RNR not changed, and the processor: - updates the base address
+          for the region specified in the MPU_RNR - ignores the value of the REGION
+          field'
+        value: 0
+      value2:
+        description: 'the processor: - updates the value of the MPU_RNR to the value
+          of the REGION field - updates the base address for the region specified
+          in the REGION field.'
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_MPU_RASR_A3_XN:
+    enum:
+      value1:
+        description: instruction fetches enabled
+        value: 0
+      value2:
+        description: instruction fetches disabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_MPU_RASR_A3_SRD:
+    enum:
+      value1:
+        description: corresponding sub-region is enabled
+        value: 0
+      value2:
+        description: corresponding sub-region is disabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_FPCCR_ASPEN:
+    enum:
+      value1:
+        description: Disable CONTROL setting on execution of a floating-point instruction.
+        value: 0
+      value2:
+        description: Enable CONTROL setting on execution of a floating-point instruction.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_FPCCR_LSPEN:
+    enum:
+      value1:
+        description: Disable automatic lazy state preservation for floating-point
+          context.
+        value: 0
+      value2:
+        description: Enable automatic lazy state preservation for floating-point context.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_FPCCR_MONRDY:
+    enum:
+      value1:
+        description: Debug Monitor is disabled or priority did not permit setting
+          MON_PEND when the floating-point stack frame was allocated.
+        value: 0
+      value2:
+        description: Debug Monitor is enabled and priority permits setting MON_PEND
+          when the floating-point stack frame was allocated.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_FPCCR_BFRDY:
+    enum:
+      value1:
+        description: BusFault is disabled or priority did not permit setting the BusFault
+          handler to the pending state when the floating-point stack frame was allocated.
+        value: 0
+      value2:
+        description: BusFault is enabled and priority permitted setting the BusFault
+          handler to the pending state when the floating-point stack frame was allocated.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_FPCCR_MMRDY:
+    enum:
+      value1:
+        description: MemManage is disabled or priority did not permit setting the
+          MemManage handler to the pending state when the floating-point stack frame
+          was allocated.
+        value: 0
+      value2:
+        description: MemManage is enabled and priority permitted setting the MemManage
+          handler to the pending state when the floating-point stack frame was allocated.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_FPCCR_HFRDY:
+    enum:
+      value1:
+        description: Priority did not permit setting the HardFault handler to the
+          pending state when the floating-point stack frame was allocated.
+        value: 0
+      value2:
+        description: Priority permitted setting the HardFault handler to the pending
+          state when the floating-point stack frame was allocated.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_FPCCR_THREAD:
+    enum:
+      value1:
+        description: Mode was not Thread Mode when the floating-point stack frame
+          was allocated.
+        value: 0
+      value2:
+        description: Mode was Thread Mode when the floating-point stack frame was
+          allocated.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_FPCCR_USER:
+    enum:
+      value1:
+        description: Privilege level was not user when the floating-point stack frame
+          was allocated.
+        value: 0
+      value2:
+        description: Privilege level was user when the floating-point stack frame
+          was allocated.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PPB_FPCCR_LSPACT:
+    enum:
+      value1:
+        description: Lazy state preservation is not active.
+        value: 0
+      value2:
+        description: Lazy state preservation is active. floating-point stack frame
+          has been allocated but saving state to it has been deferred.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false

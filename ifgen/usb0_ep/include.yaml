@@ -1,0 +1,475 @@
+---
+structs:
+  usb0_ep:
+    description: Universal Serial Bus
+    instances:
+      - name: USB0_EP0
+        address: '0x50040900'
+    fields:
+      - name: DIEPCTL0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        description: (read-write) Device Control IN Endpoint Control Register
+        fields:
+          - name: EPEna
+            description: Endpoint Enable
+            index: 31
+            width: 1
+            read: true
+            write: true
+          - name: EPDis
+            description: Endpoint Disable
+            index: 30
+            width: 1
+            read: true
+            write: true
+          - name: SNAK
+            description: Set NAK
+            index: 27
+            width: 1
+            read: false
+            write: true
+          - name: CNAK
+            description: Clear NAK
+            index: 26
+            width: 1
+            read: false
+            write: true
+          - name: TxFNum
+            description: TxFIFO Number
+            index: 22
+            width: 4
+            read: true
+            write: true
+          - name: Stall
+            description: STALL Handshake
+            index: 21
+            width: 1
+            read: true
+            write: true
+          - name: EPType
+            description: Endpoint Type
+            index: 18
+            width: 2
+            read: true
+            write: false
+          - name: NAKSts
+            description: NAK Status
+            index: 17
+            width: 1
+            read: true
+            write: false
+            type: USB0_EP0_DIEPCTL0_NAKSts
+          - name: USBActEP
+            description: USB Active Endpoint
+            index: 15
+            width: 1
+            read: true
+            write: false
+          - name: MPS
+            description: Maximum Packet Size
+            index: 0
+            width: 2
+            read: true
+            write: true
+            type: USB0_EP0_DIEPCTL0_MPS
+      - name: DIEPINT0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 8
+        description: (read-write) Device Endpoint Interrupt Register
+        fields:
+          - name: BNAIntr
+            description: BNA (Buffer Not Available) Interrupt
+            index: 9
+            width: 1
+            read: true
+            write: true
+          - name: TxFEmp
+            description: Transmit FIFO Empty
+            index: 7
+            width: 1
+            read: true
+            write: false
+          - name: INEPNakEff
+            description: IN Endpoint NAK Effective
+            index: 6
+            width: 1
+            read: true
+            write: true
+          - name: INTknTXFEmp
+            description: IN Token Received When TxFIFO is Empty
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: TimeOUT
+            description: Timeout Condition
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: AHBErr
+            description: AHB Error
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: EPDisbld
+            description: Endpoint Disabled Interrupt
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: XferCompl
+            description: Transfer Completed Interrupt
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: DIEPTSIZ0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 16
+        description: (read-write) Device IN Endpoint Transfer Size Register
+        fields:
+          - name: PktCnt
+            description: Packet Count
+            index: 19
+            width: 2
+            read: true
+            write: true
+          - name: XferSize
+            description: Transfer Size
+            index: 0
+            width: 7
+            read: true
+            write: true
+      - name: DIEPDMA0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 20
+        description: (read-write) Device Endpoint DMA Address Register
+        fields:
+          - name: DMAAddr
+            description: DMA Address
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: DTXFSTS0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 24
+        const: true
+        description: (read-only) Device IN Endpoint Transmit FIFO Status Register
+        fields:
+          - name: INEPTxFSpcAvail
+            description: IN Endpoint TxFIFO Space Avail
+            index: 0
+            width: 16
+            read: true
+            write: false
+            type: USB0_EP0_DTXFSTS0_INEPTxFSpcAvail
+      - name: DIEPDMAB0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 28
+        const: true
+        description: (read-only) Device Endpoint DMA Buffer Address Register
+        fields:
+          - name: DMABufferAddr
+            description: DMA Buffer Address
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: DOEPCTL0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 512
+        description: (read-write) Device Control OUT Endpoint Control Register
+        fields:
+          - name: EPEna
+            description: Endpoint Enable
+            index: 31
+            width: 1
+            read: true
+            write: true
+          - name: EPDis
+            description: Endpoint Disable
+            index: 30
+            width: 1
+            read: true
+            write: false
+          - name: SNAK
+            description: Set NAK
+            index: 27
+            width: 1
+            read: false
+            write: true
+          - name: CNAK
+            description: Clear NAK
+            index: 26
+            width: 1
+            read: false
+            write: true
+          - name: Stall
+            description: STALL Handshake
+            index: 21
+            width: 1
+            read: true
+            write: true
+          - name: Snp
+            description: Snoop Mode
+            index: 20
+            width: 1
+            read: true
+            write: true
+          - name: EPType
+            description: Endpoint Type
+            index: 18
+            width: 2
+            read: true
+            write: false
+          - name: NAKSts
+            description: NAK Status
+            index: 17
+            width: 1
+            read: true
+            write: false
+            type: USB0_EP0_DOEPCTL0_NAKSts
+          - name: USBActEP
+            description: USB Active Endpoint
+            index: 15
+            width: 1
+            read: true
+            write: false
+          - name: MPS
+            description: Maximum Packet Size
+            index: 0
+            width: 2
+            read: true
+            write: false
+            type: USB0_EP0_DOEPCTL0_MPS
+      - name: DOEPINT0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 520
+        description: (read-write) Device Endpoint Interrupt Register
+        fields:
+          - name: NYETIntrpt
+            description: NYET interrupt
+            index: 14
+            width: 1
+            read: true
+            write: true
+          - name: NAKIntrpt
+            description: NAK interrupt
+            index: 13
+            width: 1
+            read: true
+            write: true
+          - name: BbleErrIntrpt
+            description: BbleErr (Babble Error) interrupt
+            index: 12
+            width: 1
+            read: true
+            write: true
+          - name: PktDrpSts
+            description: Packet Dropped Status
+            index: 11
+            width: 1
+            read: true
+            write: true
+          - name: BNAIntr
+            description: BNA (Buffer Not Available) Interrupt
+            index: 9
+            width: 1
+            read: true
+            write: true
+          - name: Back2BackSETup
+            description: Back-to-Back SETUP Packets Received
+            index: 6
+            width: 1
+            read: true
+            write: true
+          - name: StsPhseRcvd
+            description: Status Phase Received For Control Write
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: OUTTknEPdis
+            description: OUT Token Received When Endpoint Disabled
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: SetUp
+            description: SETUP Phase Done
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: AHBErr
+            description: AHB Error
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: EPDisbld
+            description: Endpoint Disabled Interrupt
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: XferCompl
+            description: Transfer Completed Interrupt
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: DOEPTSIZ0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 528
+        description: (read-write) Device OUT Endpoint Transfer Size Register
+        fields:
+          - name: SUPCnt
+            description: SETUP Packet Count
+            index: 29
+            width: 2
+            read: true
+            write: true
+            type: USB0_EP0_DOEPTSIZ0_SUPCnt
+          - name: PktCnt
+            description: Packet Count
+            index: 19
+            width: 2
+            read: true
+            write: true
+          - name: XferSize
+            description: Transfer Size
+            index: 0
+            width: 7
+            read: true
+            write: true
+      - name: DOEPDMA0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 532
+        description: (read-write) Device Endpoint DMA Address Register
+        fields:
+          - name: DMAAddr
+            description: DMA Address
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: DOEPDMAB0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 540
+        const: true
+        description: (read-only) Device Endpoint DMA Buffer Address Register
+        fields:
+          - name: DMABufferAddr
+            description: DMA Buffer Address
+            index: 0
+            width: 32
+            read: true
+            write: false
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums:
+  USB0_EP0_DIEPCTL0_NAKSts:
+    enum:
+      value1:
+        description: The core is transmitting non-NAK handshakes based on the FIFO
+          status
+        value: 0
+      value2:
+        description: The core is transmitting NAK handshakes on this endpoint.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  USB0_EP0_DIEPCTL0_MPS:
+    enum:
+      value1:
+        description: 64 bytes
+        value: 0
+      value2:
+        description: 32 bytes
+        value: 1
+      value3:
+        description: 16 bytes
+        value: 2
+      value4:
+        description: 8 bytes
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  USB0_EP0_DTXFSTS0_INEPTxFSpcAvail:
+    enum:
+      value1:
+        description: Endpoint TxFIFO is full
+        value: 0
+      value2:
+        description: 1 word available
+        value: 1
+      value3:
+        description: 2 words available
+        value: 2
+    unit_test: false
+    json: false
+    use_map: false
+    underlying: uint16_t
+  USB0_EP0_DOEPCTL0_NAKSts:
+    enum:
+      value1:
+        description: The core is transmitting non-NAK handshakes based on the FIFO
+          status.
+        value: 0
+      value2:
+        description: The core is transmitting NAK handshakes on this endpoint.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  USB0_EP0_DOEPCTL0_MPS:
+    enum:
+      value1:
+        description: 64 bytes
+        value: 0
+      value2:
+        description: 32 bytes
+        value: 1
+      value3:
+        description: 16 bytes
+        value: 2
+      value4:
+        description: 8 bytes
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  USB0_EP0_DOEPTSIZ0_SUPCnt:
+    enum:
+      value1:
+        description: 1 packet
+        value: 1
+      value2:
+        description: 2 packets
+        value: 2
+      value3:
+        description: 3 packets
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false

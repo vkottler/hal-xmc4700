@@ -1,0 +1,476 @@
+---
+structs:
+  dlr:
+    description: DMA Line Router
+    instances:
+      - name: DLR
+        address: '0x50004900'
+    fields:
+      - name: OVRSTAT
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        const: true
+        description: (read-only) Overrun Status
+        fields:
+          - name: LN11
+            description: Line 11 Overrun Status
+            index: 11
+            width: 1
+            read: true
+            write: false
+          - name: LN10
+            description: Line 10 Overrun Status
+            index: 10
+            width: 1
+            read: true
+            write: false
+          - name: LN9
+            description: Line 9 Overrun Status
+            index: 9
+            width: 1
+            read: true
+            write: false
+          - name: LN8
+            description: Line 8 Overrun Status
+            index: 8
+            width: 1
+            read: true
+            write: false
+          - name: LN7
+            description: Line 7 Overrun Status
+            index: 7
+            width: 1
+            read: true
+            write: false
+          - name: LN6
+            description: Line 6 Overrun Status
+            index: 6
+            width: 1
+            read: true
+            write: false
+          - name: LN5
+            description: Line 5 Overrun Status
+            index: 5
+            width: 1
+            read: true
+            write: false
+          - name: LN4
+            description: Line 4 Overrun Status
+            index: 4
+            width: 1
+            read: true
+            write: false
+          - name: LN3
+            description: Line 3 Overrun Status
+            index: 3
+            width: 1
+            read: true
+            write: false
+          - name: LN2
+            description: Line 2 Overrun Status
+            index: 2
+            width: 1
+            read: true
+            write: false
+          - name: LN1
+            description: Line 1 Overrun Status
+            index: 1
+            width: 1
+            read: true
+            write: false
+          - name: LN0
+            description: Line 0 Overrun Status
+            index: 0
+            width: 1
+            read: true
+            write: false
+      - name: OVRCLR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4
+        description: (write-only) Overrun Clear
+        fields:
+          - name: LN11
+            description: Line 11 Overrun Status Clear
+            index: 11
+            width: 1
+            read: false
+            write: true
+          - name: LN10
+            description: Line 10 Overrun Status Clear
+            index: 10
+            width: 1
+            read: false
+            write: true
+          - name: LN9
+            description: Line 9 Overrun Status Clear
+            index: 9
+            width: 1
+            read: false
+            write: true
+          - name: LN8
+            description: Line 8 Overrun Status Clear
+            index: 8
+            width: 1
+            read: false
+            write: true
+          - name: LN7
+            description: Line 7 Overrun Status Clear
+            index: 7
+            width: 1
+            read: false
+            write: true
+          - name: LN6
+            description: Line 6 Overrun Status Clear
+            index: 6
+            width: 1
+            read: false
+            write: true
+          - name: LN5
+            description: Line 5 Overrun Status Clear
+            index: 5
+            width: 1
+            read: false
+            write: true
+          - name: LN4
+            description: Line 4 Overrun Status Clear
+            index: 4
+            width: 1
+            read: false
+            write: true
+          - name: LN3
+            description: Line 3 Overrun Status Clear
+            index: 3
+            width: 1
+            read: false
+            write: true
+          - name: LN2
+            description: Line 2 Overrun Status Clear
+            index: 2
+            width: 1
+            read: false
+            write: true
+          - name: LN1
+            description: Line 1 Overrun Status Clear
+            index: 1
+            width: 1
+            read: false
+            write: true
+          - name: LN0
+            description: Line 0 Overrun Status Clear
+            index: 0
+            width: 1
+            read: false
+            write: true
+      - name: SRSEL0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 8
+        description: (read-write) Service Request Selection 0
+        fields:
+          - name: RS7
+            description: Request Source for Line 7
+            index: 28
+            width: 4
+            read: true
+            write: true
+          - name: RS6
+            description: Request Source for Line 6
+            index: 24
+            width: 4
+            read: true
+            write: true
+          - name: RS5
+            description: Request Source for Line 5
+            index: 20
+            width: 4
+            read: true
+            write: true
+          - name: RS4
+            description: Request Source for Line 4
+            index: 16
+            width: 4
+            read: true
+            write: true
+          - name: RS3
+            description: Request Source for Line 3
+            index: 12
+            width: 4
+            read: true
+            write: true
+          - name: RS2
+            description: Request Source for Line 2
+            index: 8
+            width: 4
+            read: true
+            write: true
+          - name: RS1
+            description: Request Source for Line 1
+            index: 4
+            width: 4
+            read: true
+            write: true
+          - name: RS0
+            description: Request Source for Line 0
+            index: 0
+            width: 4
+            read: true
+            write: true
+      - name: SRSEL1
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 12
+        description: (read-write) Service Request Selection 1
+        fields:
+          - name: RS11
+            description: Request Source for Line 11
+            index: 12
+            width: 4
+            read: true
+            write: true
+          - name: RS10
+            description: Request Source for Line 10
+            index: 8
+            width: 4
+            read: true
+            write: true
+          - name: RS9
+            description: Request Source for Line 9
+            index: 4
+            width: 4
+            read: true
+            write: true
+          - name: RS8
+            description: Request Source for Line 8
+            index: 0
+            width: 4
+            read: true
+            write: true
+      - name: LNEN
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 16
+        description: (read-write) Line Enable
+        fields:
+          - name: LN11
+            description: Line 11 Enable
+            index: 11
+            width: 1
+            read: true
+            write: true
+            type: DLR_LNEN_LN11
+          - name: LN10
+            description: Line 10 Enable
+            index: 10
+            width: 1
+            read: true
+            write: true
+            type: DLR_LNEN_LN10
+          - name: LN9
+            description: Line 9 Enable
+            index: 9
+            width: 1
+            read: true
+            write: true
+            type: DLR_LNEN_LN9
+          - name: LN8
+            description: Line 8 Enable
+            index: 8
+            width: 1
+            read: true
+            write: true
+            type: DLR_LNEN_LN8
+          - name: LN7
+            description: Line 7 Enable
+            index: 7
+            width: 1
+            read: true
+            write: true
+            type: DLR_LNEN_LN7
+          - name: LN6
+            description: Line 6 Enable
+            index: 6
+            width: 1
+            read: true
+            write: true
+            type: DLR_LNEN_LN6
+          - name: LN5
+            description: Line 5 Enable
+            index: 5
+            width: 1
+            read: true
+            write: true
+            type: DLR_LNEN_LN5
+          - name: LN4
+            description: Line 4 Enable
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: DLR_LNEN_LN4
+          - name: LN3
+            description: Line 3 Enable
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: DLR_LNEN_LN3
+          - name: LN2
+            description: Line 2 Enable
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: DLR_LNEN_LN2
+          - name: LN1
+            description: Line 1 Enable
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: DLR_LNEN_LN1
+          - name: LN0
+            description: Line 0 Enable
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: DLR_LNEN_LN0
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums:
+  DLR_LNEN_LN11:
+    enum:
+      value1:
+        description: Disables the line
+        value: 0
+      value2:
+        description: Enables the line and resets a pending request
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DLR_LNEN_LN10:
+    enum:
+      value1:
+        description: Disables the line
+        value: 0
+      value2:
+        description: Enables the line and resets a pending request
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DLR_LNEN_LN9:
+    enum:
+      value1:
+        description: Disables the line
+        value: 0
+      value2:
+        description: Enables the line and resets a pending request
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DLR_LNEN_LN8:
+    enum:
+      value1:
+        description: Disables the line
+        value: 0
+      value2:
+        description: Enables the line and resets a pending request
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DLR_LNEN_LN7:
+    enum:
+      value1:
+        description: Disables the line
+        value: 0
+      value2:
+        description: Enables the line and resets a pending request
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DLR_LNEN_LN6:
+    enum:
+      value1:
+        description: Disables the line
+        value: 0
+      value2:
+        description: Enables the line and resets a pending request
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DLR_LNEN_LN5:
+    enum:
+      value1:
+        description: Disables the line
+        value: 0
+      value2:
+        description: Enables the line and resets a pending request
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DLR_LNEN_LN4:
+    enum:
+      value1:
+        description: Disables the line
+        value: 0
+      value2:
+        description: Enables the line and resets a pending request
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DLR_LNEN_LN3:
+    enum:
+      value1:
+        description: Disables the line
+        value: 0
+      value2:
+        description: Enables the line and resets a pending request
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DLR_LNEN_LN2:
+    enum:
+      value1:
+        description: Disables the line
+        value: 0
+      value2:
+        description: Enables the line and resets a pending request
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DLR_LNEN_LN1:
+    enum:
+      value1:
+        description: Disables the line
+        value: 0
+      value2:
+        description: Enables the line and resets a pending request
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DLR_LNEN_LN0:
+    enum:
+      value1:
+        description: Disables the line
+        value: 0
+      value2:
+        description: Enables the line and resets a pending request
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false

@@ -1,0 +1,316 @@
+---
+structs:
+  scu_power:
+    description: System Control Unit
+    instances:
+      - name: SCU_POWER
+        address: '0x50004200'
+    fields:
+      - name: PWRSTAT
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        const: true
+        description: (read-only) PCU Status Register
+        fields:
+          - name: USBPUWQ
+            description: USB Weak Pull-Up at PADN State
+            index: 18
+            width: 1
+            read: true
+            write: false
+            type: SCU_POWER_PWRSTAT_USBPUWQ
+          - name: USBOTGEN
+            description: USB On-The-Go Comparators State
+            index: 17
+            width: 1
+            read: true
+            write: false
+            type: SCU_POWER_PWRSTAT_USBOTGEN
+          - name: USBPHYPDQ
+            description: USB PHY Transceiver State
+            index: 16
+            width: 1
+            read: true
+            write: false
+            type: SCU_POWER_PWRSTAT_USBPHYPDQ
+          - name: HIBEN
+            description: Hibernate Domain Enable Status
+            index: 0
+            width: 1
+            read: true
+            write: false
+            type: SCU_POWER_PWRSTAT_HIBEN
+      - name: PWRSET
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4
+        description: (write-only) PCU Set Control Register
+        fields:
+          - name: USBPUWQ
+            description: Set USB Weak Pull-Up at PADN Enable
+            index: 18
+            width: 1
+            read: false
+            write: true
+            type: SCU_POWER_PWRSET_USBPUWQ
+          - name: USBOTGEN
+            description: Set USB On-The-Go Comparators Enable
+            index: 17
+            width: 1
+            read: false
+            write: true
+            type: SCU_POWER_PWRSET_USBOTGEN
+          - name: USBPHYPDQ
+            description: Set USB PHY Transceiver Disable
+            index: 16
+            width: 1
+            read: false
+            write: true
+            type: SCU_POWER_PWRSET_USBPHYPDQ
+          - name: HIB
+            description: Set Hibernate Domain Enable
+            index: 0
+            width: 1
+            read: false
+            write: true
+            type: SCU_POWER_PWRSET_HIB
+      - name: PWRCLR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 8
+        description: (write-only) PCU Clear Control Register
+        fields:
+          - name: USBPUWQ
+            description: Clear USB Weak Pull-Up at PADN Enable
+            index: 18
+            width: 1
+            read: false
+            write: true
+            type: SCU_POWER_PWRCLR_USBPUWQ
+          - name: USBOTGEN
+            description: Clear USB On-The-Go Comparators Enable
+            index: 17
+            width: 1
+            read: false
+            write: true
+            type: SCU_POWER_PWRCLR_USBOTGEN
+          - name: USBPHYPDQ
+            description: Clear USB PHY Transceiver Disable
+            index: 16
+            width: 1
+            read: false
+            write: true
+            type: SCU_POWER_PWRCLR_USBPHYPDQ
+          - name: HIB
+            description: Clear Disable Hibernate Domain
+            index: 0
+            width: 1
+            read: false
+            write: true
+            type: SCU_POWER_PWRCLR_HIB
+      - name: EVRSTAT
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 16
+        const: true
+        description: (read-only) EVR Status Register
+        fields:
+          - name: OV13
+            description: Regulator Overvoltage for 1.3 V
+            index: 1
+            width: 1
+            read: true
+            write: false
+            type: SCU_POWER_EVRSTAT_OV13
+      - name: EVRVADCSTAT
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 20
+        const: true
+        description: (read-only) EVR VADC Status Register
+        fields:
+          - name: VADC33V
+            description: VADC 3.3 V Conversion Result
+            index: 8
+            width: 8
+            read: true
+            write: false
+          - name: VADC13V
+            description: VADC 1.3 V Conversion Result
+            index: 0
+            width: 8
+            read: true
+            write: false
+      - name: PWRMON
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 44
+        description: (read-write) Power Monitor Control
+        fields:
+          - name: ENB
+            description: Enable
+            index: 16
+            width: 1
+            read: true
+            write: true
+          - name: INTV
+            description: Interval
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: THRS
+            description: Threshold
+            index: 0
+            width: 8
+            read: true
+            write: true
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums:
+  SCU_POWER_PWRSTAT_USBPUWQ:
+    enum:
+      value1:
+        description: Pull-up active
+        value: 0
+      value2:
+        description: Pull-up not active
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_POWER_PWRSTAT_USBOTGEN:
+    enum:
+      value1:
+        description: Power-down
+        value: 0
+      value2:
+        description: Active
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_POWER_PWRSTAT_USBPHYPDQ:
+    enum:
+      value1:
+        description: Power-down
+        value: 0
+      value2:
+        description: Active
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_POWER_PWRSTAT_HIBEN:
+    enum:
+      value1:
+        description: Inactive
+        value: 0
+      value2:
+        description: Active
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_POWER_PWRSET_USBPUWQ:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Pull-up not active
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_POWER_PWRSET_USBOTGEN:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Active
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_POWER_PWRSET_USBPHYPDQ:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Active
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_POWER_PWRSET_HIB:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Enable Hibernate domain
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_POWER_PWRCLR_USBPUWQ:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Pull-up active
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_POWER_PWRCLR_USBOTGEN:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Power-down
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_POWER_PWRCLR_USBPHYPDQ:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Power-down
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_POWER_PWRCLR_HIB:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Disable Hibernate domain
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_POWER_EVRSTAT_OV13:
+    enum:
+      value1:
+        description: No overvoltage condition
+        value: 0
+      value2:
+        description: Regulator is in overvoltage
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false

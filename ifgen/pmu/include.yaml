@@ -1,0 +1,38 @@
+---
+structs:
+  pmu:
+    description: Program Management Unit
+    instances:
+      - name: PMU0
+        address: '0x58000508'
+    fields:
+      - name: ID
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        const: true
+        description: (read-only) PMU0 Identification Register
+        fields:
+          - name: MOD_NUMBER
+            description: Module Number Value
+            index: 16
+            width: 16
+            read: true
+            write: false
+          - name: MOD_TYPE
+            description: Module Type
+            index: 8
+            width: 8
+            read: true
+            write: false
+          - name: MOD_REV
+            description: Module Revision Number
+            index: 0
+            width: 8
+            read: true
+            write: false
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums: {}

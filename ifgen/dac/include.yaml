@@ -1,0 +1,853 @@
+---
+structs:
+  dac:
+    description: Digital to Analog Converter
+    instances:
+      - name: DAC
+        address: '0x48018000'
+    fields:
+      - name: ID
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        const: true
+        description: (read-only) Module Identification Register
+        fields:
+          - name: MODN
+            description: Module Number
+            index: 16
+            width: 16
+            read: true
+            write: false
+          - name: MODT
+            description: Module Type
+            index: 8
+            width: 8
+            read: true
+            write: false
+          - name: MODR
+            description: Module Revision
+            index: 0
+            width: 8
+            read: true
+            write: false
+      - name: DAC0CFG0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4
+        description: (read-write) DAC0 Configuration Register 0
+        fields:
+          - name: RUN
+            description: RUN indicates the current DAC0 operation status
+            index: 31
+            width: 1
+            read: true
+            write: false
+            type: DAC_DAC0CFG0_RUN
+          - name: SREN
+            description: Enable DAC0 service request interrupt generation
+            index: 30
+            width: 1
+            read: true
+            write: true
+            type: DAC_DAC0CFG0_SREN
+          - name: SIGNEN
+            description: Enable Sign Output of DAC0 Pattern Generator
+            index: 29
+            width: 1
+            read: true
+            write: true
+            type: DAC_DAC0CFG0_SIGNEN
+          - name: NEGATE
+            description: Negates the DAC0 output
+            index: 28
+            width: 1
+            read: true
+            write: true
+            type: DAC_DAC0CFG0_NEGATE
+          - name: FIFOFUL
+            description: Indicate if the FIFO is full
+            index: 27
+            width: 1
+            read: true
+            write: false
+            type: DAC_DAC0CFG0_FIFOFUL
+          - name: FIFOEMP
+            description: Indicate if the FIFO is empty
+            index: 26
+            width: 1
+            read: true
+            write: false
+            type: DAC_DAC0CFG0_FIFOEMP
+          - name: FIFOIND
+            description: Current write position inside the data FIFO
+            index: 24
+            width: 2
+            read: true
+            write: false
+          - name: SIGN
+            description: Selects Between Signed and Unsigned DAC0 Mode
+            index: 23
+            width: 1
+            read: true
+            write: true
+            type: DAC_DAC0CFG0_SIGN
+          - name: MODE
+            description: Enables and Sets the Mode for DAC0
+            index: 20
+            width: 3
+            read: true
+            write: true
+            type: DAC_DAC0CFG0_MODE
+          - name: FREQ
+            description: Integer Frequency Divider Value
+            index: 0
+            width: 20
+            read: true
+            write: true
+      - name: DAC0CFG1
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 8
+        description: (read-write) DAC0 Configuration Register 1
+        fields:
+          - name: REFCFGL
+            description: Lower 4 band-gap configuration/calibration parameters
+            index: 28
+            width: 4
+            read: true
+            write: true
+          - name: ANAEN
+            description: Enable analog DAC for channel 0
+            index: 24
+            width: 1
+            read: true
+            write: true
+            type: DAC_DAC0CFG1_ANAEN
+          - name: ANACFG
+            description: DAC0 analog configuration/calibration parameters
+            index: 19
+            width: 5
+            read: true
+            write: true
+          - name: TRIGMOD
+            description: Select the trigger source for channel 0
+            index: 17
+            width: 2
+            read: true
+            write: true
+            type: DAC_DAC0CFG1_TRIGMOD
+          - name: SWTRIG
+            description: Software Trigger
+            index: 16
+            width: 1
+            read: true
+            write: true
+          - name: DATMOD
+            description: Switch between independent or simultaneous DAC mode and select
+              the input data register for DAC0 and DAC1
+            index: 15
+            width: 1
+            read: true
+            write: true
+            type: DAC_DAC0CFG1_DATMOD
+          - name: TRIGSEL
+            description: Selects one of the eight external trigger sources for DAC0
+            index: 12
+            width: 3
+            read: true
+            write: true
+          - name: OFFS
+            description: 8-bit offset value addition
+            index: 4
+            width: 8
+            read: true
+            write: true
+          - name: MULDIV
+            description: Switch between up- and downscale of the DAC0 input data values
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: DAC_DAC0CFG1_MULDIV
+          - name: SCALE
+            description: Scale value for up- or downscale of the DAC0 input data in
+              steps by the power of 2 (=shift operation)
+            index: 0
+            width: 3
+            read: true
+            write: true
+            type: DAC_DAC0CFG1_SCALE
+      - name: DAC1CFG0
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 12
+        description: (read-write) DAC1 Configuration Register 0
+        fields:
+          - name: RUN
+            description: RUN indicates the current DAC1 operation status
+            index: 31
+            width: 1
+            read: true
+            write: false
+            type: DAC_DAC1CFG0_RUN
+          - name: SREN
+            description: Enable DAC1 service request interrupt generation
+            index: 30
+            width: 1
+            read: true
+            write: true
+            type: DAC_DAC1CFG0_SREN
+          - name: SIGNEN
+            description: Enable sign output of DAC1 pattern generator
+            index: 29
+            width: 1
+            read: true
+            write: true
+            type: DAC_DAC1CFG0_SIGNEN
+          - name: NEGATE
+            description: Negates the DAC1 output
+            index: 28
+            width: 1
+            read: true
+            write: true
+            type: DAC_DAC1CFG0_NEGATE
+          - name: FIFOFUL
+            description: Indicate if the FIFO is full
+            index: 27
+            width: 1
+            read: true
+            write: false
+            type: DAC_DAC1CFG0_FIFOFUL
+          - name: FIFOEMP
+            description: Indicate if the FIFO is empty
+            index: 26
+            width: 1
+            read: true
+            write: false
+            type: DAC_DAC1CFG0_FIFOEMP
+          - name: FIFOIND
+            description: Current write position inside the data FIFO
+            index: 24
+            width: 2
+            read: true
+            write: false
+          - name: SIGN
+            description: Selects between signed and unsigned DAC1 mode
+            index: 23
+            width: 1
+            read: true
+            write: true
+            type: DAC_DAC1CFG0_SIGN
+          - name: MODE
+            description: Enables and sets the Mode for DAC1
+            index: 20
+            width: 3
+            read: true
+            write: true
+            type: DAC_DAC1CFG0_MODE
+          - name: FREQ
+            description: Integer Frequency Divider Value
+            index: 0
+            width: 20
+            read: true
+            write: true
+      - name: DAC1CFG1
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 16
+        description: (read-write) DAC1 Configuration Register 1
+        fields:
+          - name: REFCFGH
+            description: Higher 4 band-gap configuration/calibration parameters
+            index: 28
+            width: 4
+            read: true
+            write: true
+          - name: ANAEN
+            description: Enable analog DAC for channel 1
+            index: 24
+            width: 1
+            read: true
+            write: true
+            type: DAC_DAC1CFG1_ANAEN
+          - name: ANACFG
+            description: DAC1 analog configuration/calibration parameters
+            index: 19
+            width: 5
+            read: true
+            write: true
+          - name: TRIGMOD
+            description: Select the trigger source for channel 1
+            index: 17
+            width: 2
+            read: true
+            write: true
+            type: DAC_DAC1CFG1_TRIGMOD
+          - name: SWTRIG
+            description: Software Trigger
+            index: 16
+            width: 1
+            read: true
+            write: true
+          - name: TRIGSEL
+            description: Selects one of the eight external trigger sources for DAC1
+            index: 12
+            width: 3
+            read: true
+            write: true
+          - name: OFFS
+            description: 8-bit offset value addition
+            index: 4
+            width: 8
+            read: true
+            write: true
+          - name: MULDIV
+            description: Switch between up- and downscale of the DAC1 input data values
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: DAC_DAC1CFG1_MULDIV
+          - name: SCALE
+            description: Scale value for up- or downscale of the DAC1 input data in
+              steps by the power of 2 (=shift operation)
+            index: 0
+            width: 3
+            read: true
+            write: true
+            type: DAC_DAC1CFG1_SCALE
+      - name: DAC0DATA
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 20
+        description: (read-write) DAC0 Data Register
+        fields:
+          - name: DATA0
+            description: DAC0 Data Bits
+            index: 0
+            width: 12
+            read: true
+            write: true
+      - name: DAC1DATA
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 24
+        description: (read-write) DAC1 Data Register
+        fields:
+          - name: DATA1
+            description: DAC1 Data Bits
+            index: 0
+            width: 12
+            read: true
+            write: true
+      - name: DAC01DATA
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 28
+        description: (read-write) DAC01 Data Register
+        fields:
+          - name: DATA1
+            description: DAC1 Data Bits
+            index: 16
+            width: 12
+            read: true
+            write: true
+          - name: DATA0
+            description: DAC0 Data Bits
+            index: 0
+            width: 12
+            read: true
+            write: true
+      - name: DAC0PATL
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 32
+        description: (read-write) DAC0 Lower Pattern Register
+        fields:
+          - name: PAT5
+            description: Pattern Number 5 for PATGEN of DAC0
+            index: 25
+            width: 5
+            read: true
+            write: true
+          - name: PAT4
+            description: Pattern Number 4 for PATGEN of DAC0
+            index: 20
+            width: 5
+            read: true
+            write: true
+          - name: PAT3
+            description: Pattern Number 3 for PATGEN of DAC0
+            index: 15
+            width: 5
+            read: true
+            write: true
+          - name: PAT2
+            description: Pattern Number 2 for PATGEN of DAC0
+            index: 10
+            width: 5
+            read: true
+            write: true
+          - name: PAT1
+            description: Pattern Number 1 for PATGEN of DAC0
+            index: 5
+            width: 5
+            read: true
+            write: true
+          - name: PAT0
+            description: Pattern Number 0 for PATGEN of DAC0
+            index: 0
+            width: 5
+            read: true
+            write: true
+      - name: DAC0PATH
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 36
+        description: (read-write) DAC0 Higher Pattern Register
+        fields:
+          - name: PAT8
+            description: Pattern Number 8 for PATGEN of DAC0
+            index: 10
+            width: 5
+            read: true
+            write: true
+          - name: PAT7
+            description: Pattern Number 7 for PATGEN of DAC0
+            index: 5
+            width: 5
+            read: true
+            write: true
+          - name: PAT6
+            description: Pattern Number 6 for PATGEN of DAC0
+            index: 0
+            width: 5
+            read: true
+            write: true
+      - name: DAC1PATL
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 40
+        description: (read-write) DAC1 Lower Pattern Register
+        fields:
+          - name: PAT5
+            description: Pattern Number 5 for PATGEN of DAC1
+            index: 25
+            width: 5
+            read: true
+            write: true
+          - name: PAT4
+            description: Pattern Number 4 for PATGEN of DAC1
+            index: 20
+            width: 5
+            read: true
+            write: true
+          - name: PAT3
+            description: Pattern Number 3 for PATGEN of DAC1
+            index: 15
+            width: 5
+            read: true
+            write: true
+          - name: PAT2
+            description: Pattern Number 2 for PATGEN of DAC1
+            index: 10
+            width: 5
+            read: true
+            write: true
+          - name: PAT1
+            description: Pattern Number 1 for PATGEN of DAC1
+            index: 5
+            width: 5
+            read: true
+            write: true
+          - name: PAT0
+            description: Pattern Number 0 for PATGEN of DAC1
+            index: 0
+            width: 5
+            read: true
+            write: true
+      - name: DAC1PATH
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 44
+        description: (read-write) DAC1 Higher Pattern Register
+        fields:
+          - name: PAT8
+            description: Pattern Number 8 for PATGEN of DAC1
+            index: 10
+            width: 5
+            read: true
+            write: true
+          - name: PAT7
+            description: Pattern Number 7 for PATGEN of DAC1
+            index: 5
+            width: 5
+            read: true
+            write: true
+          - name: PAT6
+            description: Pattern Number 6 for PATGEN of DAC1
+            index: 0
+            width: 5
+            read: true
+            write: true
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums:
+  DAC_DAC0CFG0_RUN:
+    enum:
+      value1:
+        description: DAC0 channel disabled
+        value: 0
+      value2:
+        description: DAC0 channel in operation
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC0CFG0_SREN:
+    enum:
+      value1:
+        description: disable
+        value: 0
+      value2:
+        description: enable
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC0CFG0_SIGNEN:
+    enum:
+      value1:
+        description: Disable
+        value: 0
+      value2:
+        description: Enable
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC0CFG0_NEGATE:
+    enum:
+      value1:
+        description: DAC output not negated
+        value: 0
+      value2:
+        description: DAC output negated
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC0CFG0_FIFOFUL:
+    enum:
+      value1:
+        description: FIFO not full
+        value: 0
+      value2:
+        description: FIFO full
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC0CFG0_FIFOEMP:
+    enum:
+      value1:
+        description: FIFO not empty
+        value: 0
+      value2:
+        description: FIFO empty
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC0CFG0_SIGN:
+    enum:
+      value1:
+        description: DAC expects unsigned input data
+        value: 0
+      value2:
+        description: DAC expects signed input data
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC0CFG0_MODE:
+    enum:
+      value1:
+        description: disable/switch-off DAC
+        value: 0
+      value2:
+        description: Single Value Mode
+        value: 1
+      value3:
+        description: Data Mode
+        value: 2
+      value4:
+        description: Patgen Mode
+        value: 3
+      value5:
+        description: Noise Mode
+        value: 4
+      value6:
+        description: Ramp Mode
+        value: 5
+      value7:
+        description: na
+        value: 6
+      value8:
+        description: na
+        value: 7
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC0CFG1_ANAEN:
+    enum:
+      value1:
+        description: DAC0 is set to standby (analog output only)
+        value: 0
+      value2:
+        description: enable DAC0 (analog output only)
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC0CFG1_TRIGMOD:
+    enum:
+      value1:
+        description: internal Trigger (integer divided clock - see FREQ parameter)
+        value: 0
+      value2:
+        description: external Trigger (preselected trigger by TRIGSEL parameter)
+        value: 1
+      value3:
+        description: software Trigger (see SWTRIG parameter)
+        value: 2
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC0CFG1_DATMOD:
+    enum:
+      value1:
+        description: independent data handling - process data from DATA0 register
+          (bits 11:0) to DAC0 and data from DATA1 register (bits 11:0) to DAC1
+        value: 0
+      value2:
+        description: simultaneous data handling - process data from DAC01 register
+          to both DACs (bits 11:0 to DAC0 and bits 23:12 to DAC1).
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC0CFG1_MULDIV:
+    enum:
+      value1:
+        description: downscale = division (shift SCALE positions to the right)
+        value: 0
+      value2:
+        description: upscale = multiplication (shift SCALE positions to the left)
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC0CFG1_SCALE:
+    enum:
+      value1:
+        description: no shift = multiplication/division by 1
+        value: 0
+      value2:
+        description: shift by 1 = multiplication/division by 2
+        value: 1
+      value3:
+        description: shift by 2 = multiplication/division by 4
+        value: 2
+      value4:
+        description: shift left by 3 = multiplication/division by 8
+        value: 3
+      value5:
+        description: shift left by 4 = multiplication/division by 16
+        value: 4
+      value6:
+        description: shift left by 5 = multiplication/division by 32
+        value: 5
+      value7:
+        description: shift left by 6 = multiplication/division by 64
+        value: 6
+      value8:
+        description: shift left by 7 = multiplication/division by 128
+        value: 7
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC1CFG0_RUN:
+    enum:
+      value1:
+        description: DAC1 channel disabled
+        value: 0
+      value2:
+        description: DAC1 channel in operation
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC1CFG0_SREN:
+    enum:
+      value1:
+        description: disable
+        value: 0
+      value2:
+        description: enable
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC1CFG0_SIGNEN:
+    enum:
+      value1:
+        description: disable
+        value: 0
+      value2:
+        description: enable
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC1CFG0_NEGATE:
+    enum:
+      value1:
+        description: DAC output not negated
+        value: 0
+      value2:
+        description: DAC output negated
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC1CFG0_FIFOFUL:
+    enum:
+      value1:
+        description: FIFO not full
+        value: 0
+      value2:
+        description: FIFO full
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC1CFG0_FIFOEMP:
+    enum:
+      value1:
+        description: FIFO not empty
+        value: 0
+      value2:
+        description: FIFO empty
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC1CFG0_SIGN:
+    enum:
+      value1:
+        description: DAC expects unsigned input data
+        value: 0
+      value2:
+        description: DAC expects signed input data
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC1CFG0_MODE:
+    enum:
+      value1:
+        description: disable/switch-off DAC
+        value: 0
+      value2:
+        description: Single Value Mode
+        value: 1
+      value3:
+        description: Data Mode
+        value: 2
+      value4:
+        description: Patgen Mode
+        value: 3
+      value5:
+        description: Noise Mode
+        value: 4
+      value6:
+        description: Ramp Mode
+        value: 5
+      value7:
+        description: na
+        value: 6
+      value8:
+        description: na
+        value: 7
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC1CFG1_ANAEN:
+    enum:
+      value1:
+        description: DAC1 is set to standby (analog output only)
+        value: 0
+      value2:
+        description: enable DAC1 (analog output only)
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC1CFG1_TRIGMOD:
+    enum:
+      value1:
+        description: internal Trigger (integer divided clock - see FREQ parameter)
+        value: 0
+      value2:
+        description: external Trigger (preselected trigger by TRIGSEL parameter)
+        value: 1
+      value3:
+        description: software Trigger (see SWTRIG parameter)
+        value: 2
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC1CFG1_MULDIV:
+    enum:
+      value1:
+        description: downscale = division (shift SCALE positions to the right)
+        value: 0
+      value2:
+        description: upscale = multiplication (shift SCALE positions to the left)
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DAC_DAC1CFG1_SCALE:
+    enum:
+      value1:
+        description: no shift = multiplication/division by 1
+        value: 0
+      value2:
+        description: shift by 1 = multiplication/division by 2
+        value: 1
+      value3:
+        description: shift by 2 = multiplication/division by 4
+        value: 2
+      value4:
+        description: shift left by 3 = multiplication/division by 8
+        value: 3
+      value5:
+        description: shift left by 4 = multiplication/division by 16
+        value: 4
+      value6:
+        description: shift left by 5 = multiplication/division by 32
+        value: 5
+      value7:
+        description: shift left by 6 = multiplication/division by 64
+        value: 6
+      value8:
+        description: shift left by 7 = multiplication/division by 128
+        value: 7
+    unit_test: false
+    json: false
+    use_map: false

@@ -1,0 +1,73 @@
+---
+structs:
+  pref:
+    description: Prefetch Unit
+    instances:
+      - name: PREF
+        address: '0x58004000'
+    fields:
+      - name: PCON
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        description: (read-write) Prefetch Configuration Register
+        fields:
+          - name: DBYP
+            description: Data Buffer Bypass
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: PREF_PCON_DBYP
+          - name: IINV
+            description: Instruction Prefetch Buffer Invalidate
+            index: 1
+            width: 1
+            read: false
+            write: true
+            type: PREF_PCON_IINV
+          - name: IBYP
+            description: Instruction Prefetch Buffer Bypass
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: PREF_PCON_IBYP
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums:
+  PREF_PCON_DBYP:
+    enum:
+      value1:
+        description: Prefetch Data buffer not bypassed.
+        value: 0
+      value2:
+        description: Prefetch Data buffer bypassed.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PREF_PCON_IINV:
+    enum:
+      value1:
+        description: No effect.
+        value: 0
+      value2:
+        description: Initiate invalidation of entire instruction cache.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  PREF_PCON_IBYP:
+    enum:
+      value1:
+        description: Instruction prefetch buffer not bypassed.
+        value: 0
+      value2:
+        description: Instruction prefetch buffer bypassed.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false

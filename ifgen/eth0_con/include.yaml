@@ -1,0 +1,301 @@
+---
+structs:
+  eth0_con:
+    description: Ethernet Control Register
+    instances:
+      - name: ETH0_CON
+        address: '0x50004040'
+    fields:
+      - name: ETH0_CON
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        description: (read-write) Ethernet 0 Port Control Register
+        fields:
+          - name: INFSEL
+            description: Ethernet MAC Interface Selection
+            index: 26
+            width: 1
+            read: true
+            write: true
+            type: ETH0_CON_ETH0_CON_INFSEL
+          - name: MDIO
+            description: MDIO Input Select
+            index: 22
+            width: 2
+            read: true
+            write: true
+            type: ETH0_CON_ETH0_CON_MDIO
+          - name: CLK_TX
+            description: CLK_TX input
+            index: 18
+            width: 2
+            read: true
+            write: true
+            type: ETH0_CON_ETH0_CON_CLK_TX
+          - name: COL
+            description: COL input
+            index: 16
+            width: 2
+            read: true
+            write: true
+            type: ETH0_CON_ETH0_CON_COL
+          - name: RXER
+            description: RXER Input
+            index: 14
+            width: 2
+            read: true
+            write: true
+            type: ETH0_CON_ETH0_CON_RXER
+          - name: CRS
+            description: CRS input
+            index: 12
+            width: 2
+            read: true
+            write: true
+            type: ETH0_CON_ETH0_CON_CRS
+          - name: CRS_DV
+            description: CRS_DV input
+            index: 10
+            width: 2
+            read: true
+            write: true
+            type: ETH0_CON_ETH0_CON_CRS_DV
+          - name: CLK_RMII
+            description: RMII clock input
+            index: 8
+            width: 2
+            read: true
+            write: true
+            type: ETH0_CON_ETH0_CON_CLK_RMII
+          - name: RXD3
+            description: MAC Receive Input 3
+            index: 6
+            width: 2
+            read: true
+            write: true
+            type: ETH0_CON_ETH0_CON_RXD3
+          - name: RXD2
+            description: MAC Receive Input 2
+            index: 4
+            width: 2
+            read: true
+            write: true
+            type: ETH0_CON_ETH0_CON_RXD2
+          - name: RXD1
+            description: MAC Receive Input 1
+            index: 2
+            width: 2
+            read: true
+            write: true
+            type: ETH0_CON_ETH0_CON_RXD1
+          - name: RXD0
+            description: MAC Receive Input 0
+            index: 0
+            width: 2
+            read: true
+            write: true
+            type: ETH0_CON_ETH0_CON_RXD0
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums:
+  ETH0_CON_ETH0_CON_INFSEL:
+    enum:
+      value1:
+        description: MII
+        value: 0
+      value2:
+        description: RMII
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  ETH0_CON_ETH0_CON_MDIO:
+    enum:
+      value1:
+        description: Data input MDIA is selected
+        value: 0
+      value2:
+        description: Data input MDIB is selected
+        value: 1
+      value3:
+        description: Data input MDIC is selected
+        value: 2
+      value4:
+        description: Data input MDID is selected
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  ETH0_CON_ETH0_CON_CLK_TX:
+    enum:
+      value1:
+        description: Data input CLK_TXA is selected
+        value: 0
+      value2:
+        description: Data input CLK_TXB is selected
+        value: 1
+      value3:
+        description: Data input CLK_TXC is selected
+        value: 2
+      value4:
+        description: Data input CLK_TXD is selected
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  ETH0_CON_ETH0_CON_COL:
+    enum:
+      value1:
+        description: Data input COLA is selected
+        value: 0
+      value2:
+        description: Data input COLB is selected
+        value: 1
+      value3:
+        description: Data input COLC is selected
+        value: 2
+      value4:
+        description: Data input COLD is selected
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  ETH0_CON_ETH0_CON_RXER:
+    enum:
+      value1:
+        description: Data input RXERA is selected
+        value: 0
+      value2:
+        description: Data input RXERB is selected
+        value: 1
+      value3:
+        description: Data input RXERC is selected
+        value: 2
+      value4:
+        description: Data input RXERD is selected
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  ETH0_CON_ETH0_CON_CRS:
+    enum:
+      value1:
+        description: Data input CRSA
+        value: 0
+      value2:
+        description: Data input CRSB
+        value: 1
+      value3:
+        description: Data input CRSC
+        value: 2
+      value4:
+        description: Data input CRSD
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  ETH0_CON_ETH0_CON_CRS_DV:
+    enum:
+      value1:
+        description: Data input CRS_DVA is selected
+        value: 0
+      value2:
+        description: Data input CRS_DVB is selected
+        value: 1
+      value3:
+        description: Data input CRS_DVC is selected
+        value: 2
+      value4:
+        description: Data input CRS_DVD is selected
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  ETH0_CON_ETH0_CON_CLK_RMII:
+    enum:
+      value1:
+        description: Data input RMIIA is selected
+        value: 0
+      value2:
+        description: Data input RMIIB is selected
+        value: 1
+      value3:
+        description: Data input RMIIC is selected
+        value: 2
+      value4:
+        description: Data input RMIID is selected
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  ETH0_CON_ETH0_CON_RXD3:
+    enum:
+      value1:
+        description: Data input RXD3A is selected
+        value: 0
+      value2:
+        description: Data input RXD3B is selected
+        value: 1
+      value3:
+        description: Data input RXD3C is selected
+        value: 2
+      value4:
+        description: Data input RXD3D is selected
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  ETH0_CON_ETH0_CON_RXD2:
+    enum:
+      value1:
+        description: Data input RXD2A is selected
+        value: 0
+      value2:
+        description: Data input RXD2B is selected
+        value: 1
+      value3:
+        description: Data input RXD2C is selected
+        value: 2
+      value4:
+        description: Data input RXD2D is selected
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  ETH0_CON_ETH0_CON_RXD1:
+    enum:
+      value1:
+        description: Data input RXD1A is selected
+        value: 0
+      value2:
+        description: Data input RXD1B is selected
+        value: 1
+      value3:
+        description: Data input RXD1C is selected
+        value: 2
+      value4:
+        description: Data input RXD1D is selected
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  ETH0_CON_ETH0_CON_RXD0:
+    enum:
+      value1:
+        description: Data input RXD0A is selected
+        value: 0
+      value2:
+        description: Data input RXD0B is selected
+        value: 1
+      value3:
+        description: Data input RXD0C is selected
+        value: 2
+      value4:
+        description: Data input RXD0D is selected
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false

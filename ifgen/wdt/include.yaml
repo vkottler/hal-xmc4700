@@ -1,0 +1,142 @@
+---
+structs:
+  wdt:
+    description: Watch Dog Timer
+    instances:
+      - name: WDT
+        address: '0x50008000'
+    fields:
+      - name: ID
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        const: true
+        description: (read-only) WDT ID Register
+        fields:
+          - name: MOD_NUMBER
+            description: Module Number
+            index: 16
+            width: 16
+            read: true
+            write: false
+          - name: MOD_TYPE
+            description: Module Type
+            index: 8
+            width: 8
+            read: true
+            write: false
+          - name: MOD_REV
+            description: Module Revision
+            index: 0
+            width: 8
+            read: true
+            write: false
+      - name: CTR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4
+        description: (read-write) WDT Control Register
+        fields:
+          - name: SPW
+            description: Service Indication Pulse Width
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: DSP
+            description: Debug Suspend
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: PRE
+            description: Pre-warning
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: ENB
+            description: Enable
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: SRV
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 8
+        description: (write-only) WDT Service Register
+        fields:
+          - name: SRV
+            description: Service
+            index: 0
+            width: 32
+            read: false
+            write: true
+      - name: TIM
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 12
+        const: true
+        description: (read-only) WDT Timer Register
+        fields:
+          - name: TIM
+            description: Timer Value
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: WLB
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 16
+        description: (read-write) WDT Window Lower Bound Register
+        fields:
+          - name: WLB
+            description: Window Lower Bound
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: WUB
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 20
+        description: (read-write) WDT Window Upper Bound Register
+        fields:
+          - name: WUB
+            description: Window Upper Bound
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: WDTSTS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 24
+        const: true
+        description: (read-only) WDT Status Register
+        fields:
+          - name: ALMS
+            description: Pre-warning Alarm
+            index: 0
+            width: 1
+            read: true
+            write: false
+      - name: WDTCLR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 28
+        description: (write-only) WDT Clear Register
+        fields:
+          - name: ALMC
+            description: Pre-warning Alarm
+            index: 0
+            width: 1
+            read: false
+            write: true
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums: {}

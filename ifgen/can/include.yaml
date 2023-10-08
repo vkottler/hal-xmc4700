@@ -1,0 +1,284 @@
+---
+structs:
+  can:
+    description: Controller Area Networks
+    instances:
+      - name: CAN
+        address: '0x48014000'
+    fields:
+      - name: CLC
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        description: (read-write) CAN Clock Control Register
+        fields:
+          - name: EDIS
+            description: Sleep Mode Enable Control
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: DISS
+            description: Module Disable Status Bit
+            index: 1
+            width: 1
+            read: true
+            write: false
+          - name: DISR
+            description: Module Disable Request Bit
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: ID
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 8
+        const: true
+        description: (read-only) Module Identification Register
+        fields:
+          - name: MOD_NUMBER
+            description: Module Number Value
+            index: 16
+            width: 16
+            read: true
+            write: false
+          - name: MOD_TYPE
+            description: Module Type
+            index: 8
+            width: 8
+            read: true
+            write: false
+            type: CAN_ID_MOD_TYPE
+          - name: MOD_REV
+            description: Module Revision Number
+            index: 0
+            width: 8
+            read: true
+            write: false
+      - name: FDR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 12
+        description: (read-write) CAN Fractional Divider Register
+        fields:
+          - name: DM
+            description: Divider Mode
+            index: 14
+            width: 2
+            read: true
+            write: true
+          - name: STEP
+            description: Step Value
+            index: 0
+            width: 10
+            read: true
+            write: true
+      - name: LIST
+        type: uint32_t
+        expected_size: 64
+        expected_offset: 256
+        array_length: 16
+        const: true
+        description: (read-only) List Register
+        fields:
+          - name: EMPTY
+            description: List Empty Indication
+            index: 24
+            width: 1
+            read: true
+            write: false
+            type: CAN_LIST_EMPTY
+          - name: SIZE
+            description: List Size
+            index: 16
+            width: 8
+            read: true
+            write: false
+          - name: END
+            description: List End
+            index: 8
+            width: 8
+            read: true
+            write: false
+          - name: BEGIN
+            description: List Begin
+            index: 0
+            width: 8
+            read: true
+            write: false
+      - name: MSPND
+        type: uint32_t
+        expected_size: 32
+        expected_offset: 320
+        array_length: 8
+        description: (read-write) Message Pending Register
+        fields:
+          - name: PND
+            description: Message Pending
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: MSID
+        type: uint32_t
+        expected_size: 32
+        expected_offset: 384
+        array_length: 8
+        const: true
+        description: (read-only) Message Index Register
+        fields:
+          - name: INDEX
+            description: Message Pending Index
+            index: 0
+            width: 6
+            read: true
+            write: false
+      - name: MSIMASK
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 448
+        description: (read-write) Message Index Mask Register
+        fields:
+          - name: IM
+            description: Message Index Mask
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: PANCTR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 452
+        description: (read-write) Panel Control Register
+        fields:
+          - name: PANAR2
+            description: Panel Argument 2
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: PANAR1
+            description: Panel Argument 1
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: RBUSY
+            description: Result Busy Flag
+            index: 9
+            width: 1
+            read: true
+            write: false
+            type: CAN_PANCTR_RBUSY
+          - name: BUSY
+            description: Panel Busy Flag
+            index: 8
+            width: 1
+            read: true
+            write: false
+            type: CAN_PANCTR_BUSY
+          - name: PANCMD
+            description: Panel Command
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: MCR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 456
+        description: (read-write) Module Control Register
+        fields:
+          - name: MPSEL
+            description: Message Pending Selector
+            index: 12
+            width: 4
+            read: true
+            write: true
+          - name: CLKSEL
+            description: Baud Rate Logic Clock Select
+            index: 0
+            width: 4
+            read: true
+            write: true
+            type: CAN_MCR_CLKSEL
+      - name: MITR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 460
+        description: (write-only) Module Interrupt Trigger Register
+        fields:
+          - name: IT
+            description: Interrupt Trigger
+            index: 0
+            width: 8
+            read: false
+            write: true
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums:
+  CAN_ID_MOD_TYPE:
+    enum:
+      value1:
+        description: Define the module as a 32-bit module.
+        value: 192
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_LIST_EMPTY:
+    enum:
+      value1:
+        description: At least one message object is allocated to list i.
+        value: 0
+      value2:
+        description: No message object is allocated to the list i. List i is empty.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_PANCTR_RBUSY:
+    enum:
+      value1:
+        description: No update of PANAR1 and PANAR2 is scheduled by the list controller.
+        value: 0
+      value2:
+        description: A list command is running (BUSY = 1) that will write results
+          to PANAR1 and PANAR2, but the results are not yet available.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_PANCTR_BUSY:
+    enum:
+      value1:
+        description: Panel has finished command and is ready to accept a new command.
+        value: 0
+      value2:
+        description: Panel operation is in progress.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MCR_CLKSEL:
+    enum:
+      value1:
+        description: No clock supplied
+        value: 0
+      value2:
+        description: fPERIPH
+        value: 1
+      value3:
+        description: fOHP
+        value: 2
+      value4:
+        description: hard wired to 0
+        value: 4
+      value5:
+        description: hard wired to 0
+        value: 8
+    unit_test: false
+    json: false
+    use_map: false
