@@ -1,14 +1,14 @@
 # =====================================
 # generator=datazen
 # version=3.1.4
-# hash=fedbc438ac3d48cc720ce0d14825cd4c
+# hash=ad36bfde723b4093d7fbfccde0167aab
 # =====================================
 ---
 project:
   name: hal-xmc4700
 
   github: {owner: &self vkottler}
-  version: {major: 0, minor: 1, patch: 0}
+  version: {major: 0, minor: 1, patch: 1}
 variants:
   clang:
     suffix: &clang_version "-15"
@@ -20,3 +20,6 @@ variants:
 
   clang-opt:
     suffix: *clang_version
+
+includes:
+  - local/yambs.yaml

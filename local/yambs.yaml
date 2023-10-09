@@ -1,3 +1,10 @@
 ---
 includes:
   - ../config/python/yambs/cflag_groups.yaml
+
+variants:
+  debug: &targets
+    targets: [apps]
+  clang: *targets
+  opt: *targets
+  clang-opt: *targets
