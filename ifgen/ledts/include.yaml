@@ -49,56 +49,56 @@ structs:
             width: 1
             read: true
             write: true
-            type: LEDTS0_GLOBCTL_ITP_EN
+            type: LEDTS_GLOBCTL_ITP_EN
           - name: ITF_EN
             description: Enable (Extended) Time Frame Interrupt
             index: 14
             width: 1
             read: true
             write: true
-            type: LEDTS0_GLOBCTL_ITF_EN
+            type: LEDTS_GLOBCTL_ITF_EN
           - name: ITS_EN
             description: Enable Time Slice Interrupt
             index: 13
             width: 1
             read: true
             write: true
-            type: LEDTS0_GLOBCTL_ITS_EN
+            type: LEDTS_GLOBCTL_ITS_EN
           - name: FENVAL
             description: Enable (Extended) Time Frame Validation
             index: 12
             width: 1
             read: true
             write: true
-            type: LEDTS0_GLOBCTL_FENVAL
+            type: LEDTS_GLOBCTL_FENVAL
           - name: MASKVAL
             description: Mask Number of LSB Bits for Event Validation
             index: 9
             width: 3
             read: true
             write: true
-            type: LEDTS0_GLOBCTL_MASKVAL
+            type: LEDTS_GLOBCTL_MASKVAL
           - name: SUSCFG
             description: Suspend Request Configuration
             index: 8
             width: 1
             read: true
             write: true
-            type: LEDTS0_GLOBCTL_SUSCFG
+            type: LEDTS_GLOBCTL_SUSCFG
           - name: ENSYNC
             description: Enable Autoscan Time Period Synchronization
             index: 3
             width: 1
             read: true
             write: true
-            type: LEDTS0_GLOBCTL_ENSYNC
+            type: LEDTS_GLOBCTL_ENSYNC
           - name: CMTR
             description: Clock Master Disable
             index: 2
             width: 1
             read: true
             write: true
-            type: LEDTS0_GLOBCTL_CMTR
+            type: LEDTS_GLOBCTL_CMTR
           - name: LD_EN
             description: LED Function Enable
             index: 1
@@ -123,56 +123,56 @@ structs:
             width: 3
             read: true
             write: true
-            type: LEDTS0_FNCTL_NR_LEDCOL
+            type: LEDTS_FNCTL_NR_LEDCOL
           - name: COLLEV
             description: Active Level of LED Column
             index: 28
             width: 1
             read: true
             write: true
-            type: LEDTS0_FNCTL_COLLEV
+            type: LEDTS_FNCTL_COLLEV
           - name: NR_TSIN
             description: Number of Touch-Sense Input
             index: 25
             width: 3
             read: true
             write: true
-            type: LEDTS0_FNCTL_NR_TSIN
+            type: LEDTS_FNCTL_NR_TSIN
           - name: TSCTRSAT
             description: Saturation of TS-Counter
             index: 24
             width: 1
             read: true
             write: true
-            type: LEDTS0_FNCTL_TSCTRSAT
+            type: LEDTS_FNCTL_TSCTRSAT
           - name: TSCTRR
             description: TS-Counter Auto Reset
             index: 23
             width: 1
             read: true
             write: true
-            type: LEDTS0_FNCTL_TSCTRR
+            type: LEDTS_FNCTL_TSCTRR
           - name: TSOEXT
             description: Extension for Touch-Sense Output for Pin-Low-Level
             index: 21
             width: 2
             read: true
             write: true
-            type: LEDTS0_FNCTL_TSOEXT
+            type: LEDTS_FNCTL_TSOEXT
           - name: TSCCMP
             description: Common Compare Enable for Touch-Sense
             index: 20
             width: 1
             read: true
             write: true
-            type: LEDTS0_FNCTL_TSCCMP
+            type: LEDTS_FNCTL_TSCCMP
           - name: ACCCNT
             description: Accumulate Count on Touch-Sense Input
             index: 16
             width: 4
             read: true
             write: true
-            type: LEDTS0_FNCTL_ACCCNT
+            type: LEDTS_FNCTL_ACCCNT
           - name: FNCOL
             description: Previous Active Function/LED Column Status
             index: 5
@@ -185,21 +185,21 @@ structs:
             width: 1
             read: true
             write: true
-            type: LEDTS0_FNCTL_EPULL
+            type: LEDTS_FNCTL_EPULL
           - name: PADTSW
             description: Software Control for Touch-Sense Pad Turn
             index: 3
             width: 1
             read: true
             write: true
-            type: LEDTS0_FNCTL_PADTSW
+            type: LEDTS_FNCTL_PADTSW
           - name: PADT
             description: Touch-Sense TSIN Pad Turn
             index: 0
             width: 3
             read: true
             write: true
-            type: LEDTS0_FNCTL_PADT
+            type: LEDTS_FNCTL_PADT
       - name: EVFR
         type: uint32_t
         expected_size: 4
@@ -212,28 +212,28 @@ structs:
             width: 1
             read: false
             write: true
-            type: LEDTS0_EVFR_CTPF
+            type: LEDTS_EVFR_CTPF
           - name: CTFF
             description: Clear (Extended) Time Frame Interrupt Flag
             index: 17
             width: 1
             read: false
             write: true
-            type: LEDTS0_EVFR_CTFF
+            type: LEDTS_EVFR_CTFF
           - name: CTSF
             description: Clear Time Slice Interrupt Flag
             index: 16
             width: 1
             read: false
             write: true
-            type: LEDTS0_EVFR_CTSF
+            type: LEDTS_EVFR_CTSF
           - name: TSCTROVF
             description: TS-Counter Overflow Indication
             index: 3
             width: 1
             read: true
             write: false
-            type: LEDTS0_EVFR_TSCTROVF
+            type: LEDTS_EVFR_TSCTROVF
           - name: TPF
             description: Autoscan Time Period Interrupt Flag
             index: 2
@@ -456,7 +456,7 @@ structs:
     methods: false
     unit_test: false
 enums:
-  LEDTS0_GLOBCTL_ITP_EN:
+  LEDTS_GLOBCTL_ITP_EN:
     enum:
       value1:
         description: Disable
@@ -467,7 +467,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_GLOBCTL_ITF_EN:
+  LEDTS_GLOBCTL_ITF_EN:
     enum:
       value1:
         description: Disable
@@ -478,7 +478,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_GLOBCTL_ITS_EN:
+  LEDTS_GLOBCTL_ITS_EN:
     enum:
       value1:
         description: Disable
@@ -489,7 +489,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_GLOBCTL_FENVAL:
+  LEDTS_GLOBCTL_FENVAL:
     enum:
       value1:
         description: Disable
@@ -500,7 +500,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_GLOBCTL_MASKVAL:
+  LEDTS_GLOBCTL_MASKVAL:
     enum:
       value1:
         description: Mask LSB bit
@@ -514,7 +514,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_GLOBCTL_SUSCFG:
+  LEDTS_GLOBCTL_SUSCFG:
     enum:
       value1:
         description: Ignore suspend request
@@ -525,7 +525,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_GLOBCTL_ENSYNC:
+  LEDTS_GLOBCTL_ENSYNC:
     enum:
       value1:
         description: No synchronization
@@ -536,7 +536,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_GLOBCTL_CMTR:
+  LEDTS_GLOBCTL_CMTR:
     enum:
       value1:
         description: Kernel generates its own clock for LEDTS-counter based on SFR
@@ -548,7 +548,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_FNCTL_NR_LEDCOL:
+  LEDTS_FNCTL_NR_LEDCOL:
     enum:
       value1:
         description: 1 LED column
@@ -577,7 +577,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_FNCTL_COLLEV:
+  LEDTS_FNCTL_COLLEV:
     enum:
       value1:
         description: Active low
@@ -588,7 +588,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_FNCTL_NR_TSIN:
+  LEDTS_FNCTL_NR_TSIN:
     enum:
       value1:
         description: '1'
@@ -599,7 +599,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_FNCTL_TSCTRSAT:
+  LEDTS_FNCTL_TSCTRSAT:
     enum:
       value1:
         description: Disable
@@ -612,7 +612,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_FNCTL_TSCTRR:
+  LEDTS_FNCTL_TSCTRR:
     enum:
       value1:
         description: Disable TS-counter automatic reset
@@ -624,7 +624,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_FNCTL_TSOEXT:
+  LEDTS_FNCTL_TSOEXT:
     enum:
       value1:
         description: Extend by 1 ledts_clk
@@ -641,7 +641,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_FNCTL_TSCCMP:
+  LEDTS_FNCTL_TSCCMP:
     enum:
       value1:
         description: Disable common compare for touch-sense
@@ -652,7 +652,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_FNCTL_ACCCNT:
+  LEDTS_FNCTL_ACCCNT:
     enum:
       value1:
         description: 1 time
@@ -666,7 +666,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_FNCTL_EPULL:
+  LEDTS_FNCTL_EPULL:
     enum:
       value1:
         description: HW over-rule to enable internal pull-up is active on TSIN[x]
@@ -680,7 +680,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_FNCTL_PADTSW:
+  LEDTS_FNCTL_PADTSW:
     enum:
       value1:
         description: The hardware automatically enables the touch-sense inputs in
@@ -693,7 +693,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_FNCTL_PADT:
+  LEDTS_FNCTL_PADT:
     enum:
       value1:
         description: TSIN0
@@ -704,7 +704,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_EVFR_CTPF:
+  LEDTS_EVFR_CTPF:
     enum:
       value1:
         description: No action.
@@ -715,7 +715,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_EVFR_CTFF:
+  LEDTS_EVFR_CTFF:
     enum:
       value1:
         description: No action.
@@ -726,7 +726,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_EVFR_CTSF:
+  LEDTS_EVFR_CTSF:
     enum:
       value1:
         description: No action.
@@ -737,7 +737,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  LEDTS0_EVFR_TSCTROVF:
+  LEDTS_EVFR_TSCTROVF:
     enum:
       value1:
         description: No overflow has occurred.

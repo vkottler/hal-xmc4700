@@ -1,284 +1,926 @@
 ---
 structs:
-  can:
-    description: Controller Area Networks
-    instances:
-      - name: CAN
-        address: '0x48014000'
+  CAN_MO:
+    description: Message Object Registers
     fields:
-      - name: CLC
+      - name: MOFCR
         type: uint32_t
         expected_size: 4
         expected_offset: 0
-        description: (read-write) CAN Clock Control Register
+        description: (read-write) Message Object Function Control Register
         fields:
-          - name: EDIS
-            description: Sleep Mode Enable Control
-            index: 3
-            width: 1
-            read: true
-            write: true
-          - name: DISS
-            description: Module Disable Status Bit
-            index: 1
-            width: 1
-            read: true
-            write: false
-          - name: DISR
-            description: Module Disable Request Bit
-            index: 0
-            width: 1
-            read: true
-            write: true
-      - name: ID
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 8
-        const: true
-        description: (read-only) Module Identification Register
-        fields:
-          - name: MOD_NUMBER
-            description: Module Number Value
-            index: 16
-            width: 16
-            read: true
-            write: false
-          - name: MOD_TYPE
-            description: Module Type
-            index: 8
-            width: 8
-            read: true
-            write: false
-            type: CAN_ID_MOD_TYPE
-          - name: MOD_REV
-            description: Module Revision Number
-            index: 0
-            width: 8
-            read: true
-            write: false
-      - name: FDR
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 12
-        description: (read-write) CAN Fractional Divider Register
-        fields:
-          - name: DM
-            description: Divider Mode
-            index: 14
-            width: 2
-            read: true
-            write: true
-          - name: STEP
-            description: Step Value
-            index: 0
-            width: 10
-            read: true
-            write: true
-      - name: LIST
-        type: uint32_t
-        expected_size: 64
-        expected_offset: 256
-        array_length: 16
-        const: true
-        description: (read-only) List Register
-        fields:
-          - name: EMPTY
-            description: List Empty Indication
+          - name: DLC
+            description: Data Length Code
             index: 24
+            width: 4
+            read: true
+            write: true
+          - name: STT
+            description: Single Transmit Trial
+            index: 23
             width: 1
             read: true
-            write: false
-            type: CAN_LIST_EMPTY
-          - name: SIZE
-            description: List Size
+            write: true
+          - name: SDT
+            description: Single Data Transfer
+            index: 22
+            width: 1
+            read: true
+            write: true
+          - name: RMM
+            description: Transmit Object Remote Monitoring
+            index: 21
+            width: 1
+            read: true
+            write: true
+            type: CAN_MOFCR_RMM
+          - name: FRREN
+            description: Foreign Remote Request Enable
+            index: 20
+            width: 1
+            read: true
+            write: true
+            type: CAN_MOFCR_FRREN
+          - name: OVIE
+            description: Overflow Interrupt Enable
+            index: 18
+            width: 1
+            read: true
+            write: true
+            type: CAN_MOFCR_OVIE
+          - name: TXIE
+            description: Transmit Interrupt Enable
+            index: 17
+            width: 1
+            read: true
+            write: true
+            type: CAN_MOFCR_TXIE
+          - name: RXIE
+            description: Receive Interrupt Enable
             index: 16
-            width: 8
-            read: true
-            write: false
-          - name: END
-            description: List End
-            index: 8
-            width: 8
-            read: true
-            write: false
-          - name: BEGIN
-            description: List Begin
-            index: 0
-            width: 8
-            read: true
-            write: false
-      - name: MSPND
-        type: uint32_t
-        expected_size: 32
-        expected_offset: 320
-        array_length: 8
-        description: (read-write) Message Pending Register
-        fields:
-          - name: PND
-            description: Message Pending
-            index: 0
-            width: 32
+            width: 1
             read: true
             write: true
-      - name: MSID
-        type: uint32_t
-        expected_size: 32
-        expected_offset: 384
-        array_length: 8
-        const: true
-        description: (read-only) Message Index Register
-        fields:
-          - name: INDEX
-            description: Message Pending Index
-            index: 0
-            width: 6
-            read: true
-            write: false
-      - name: MSIMASK
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 448
-        description: (read-write) Message Index Mask Register
-        fields:
-          - name: IM
-            description: Message Index Mask
-            index: 0
-            width: 32
+            type: CAN_MOFCR_RXIE
+          - name: DATC
+            description: Data Copy
+            index: 11
+            width: 1
             read: true
             write: true
-      - name: PANCTR
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 452
-        description: (read-write) Panel Control Register
-        fields:
-          - name: PANAR2
-            description: Panel Argument 2
-            index: 24
-            width: 8
+            type: CAN_MOFCR_DATC
+          - name: DLCC
+            description: Data Length Code Copy
+            index: 10
+            width: 1
             read: true
             write: true
-          - name: PANAR1
-            description: Panel Argument 1
-            index: 16
-            width: 8
-            read: true
-            write: true
-          - name: RBUSY
-            description: Result Busy Flag
+            type: CAN_MOFCR_DLCC
+          - name: IDC
+            description: Identifier Copy
             index: 9
             width: 1
             read: true
-            write: false
-            type: CAN_PANCTR_RBUSY
-          - name: BUSY
-            description: Panel Busy Flag
+            write: true
+            type: CAN_MOFCR_IDC
+          - name: GDFS
+            description: Gateway Data Frame Send
             index: 8
             width: 1
             read: true
-            write: false
-            type: CAN_PANCTR_BUSY
-          - name: PANCMD
-            description: Panel Command
-            index: 0
-            width: 8
+            write: true
+            type: CAN_MOFCR_GDFS
+          - name: RXTOE
+            description: Receive Time-Out Enable
+            index: 4
+            width: 1
             read: true
             write: true
-      - name: MCR
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 456
-        description: (read-write) Module Control Register
-        fields:
-          - name: MPSEL
-            description: Message Pending Selector
-            index: 12
-            width: 4
-            read: true
-            write: true
-          - name: CLKSEL
-            description: Baud Rate Logic Clock Select
+            type: CAN_MOFCR_RXTOE
+          - name: MMC
+            description: Message Mode Control
             index: 0
             width: 4
             read: true
             write: true
-            type: CAN_MCR_CLKSEL
-      - name: MITR
+            type: CAN_MOFCR_MMC
+      - name: MOFGPR
         type: uint32_t
         expected_size: 4
-        expected_offset: 460
-        description: (write-only) Module Interrupt Trigger Register
+        expected_offset: 4
+        description: (read-write) Message Object FIFO/Gateway Pointer Register
         fields:
-          - name: IT
-            description: Interrupt Trigger
+          - name: SEL
+            description: Object Select Pointer
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: CUR
+            description: Current Object Pointer
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: TOP
+            description: Top Pointer
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: BOT
+            description: Bottom Pointer
             index: 0
             width: 8
+            read: true
+            write: true
+      - name: MOIPR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 8
+        description: (read-write) Message Object Interrupt Pointer Register
+        fields:
+          - name: CFCVAL
+            description: CAN Frame Counter Value
+            index: 16
+            width: 16
+            read: true
+            write: true
+          - name: MPN
+            description: Message Pending Number
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: TXINP
+            description: Transmit Interrupt Node Pointer
+            index: 4
+            width: 4
+            read: true
+            write: true
+            type: CAN_MOIPR_TXINP
+          - name: RXINP
+            description: Receive Interrupt Node Pointer
+            index: 0
+            width: 4
+            read: true
+            write: true
+            type: CAN_MOIPR_RXINP
+      - name: MOAMR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 12
+        description: (read-write) Message Object Acceptance Mask Register
+        fields:
+          - name: MIDE
+            description: Acceptance Mask Bit for Message IDE Bit
+            index: 29
+            width: 1
+            read: true
+            write: true
+            type: CAN_MOAMR_MIDE
+          - name: AM
+            description: Acceptance Mask for Message Identifier
+            index: 0
+            width: 29
+            read: true
+            write: true
+      - name: MODATAL
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 16
+        description: (read-write) Message Object Data Register Low
+        fields:
+          - name: DB3
+            description: Data Byte 3 of Message Object n
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: DB2
+            description: Data Byte 2 of Message Object n
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: DB1
+            description: Data Byte 1 of Message Object n
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: DB0
+            description: Data Byte 0 of Message Object n
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: MODATAH
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 20
+        description: (read-write) Message Object Data Register High
+        fields:
+          - name: DB7
+            description: Data Byte 7 of Message Object n
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: DB6
+            description: Data Byte 6 of Message Object n
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: DB5
+            description: Data Byte 5 of Message Object n
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: DB4
+            description: Data Byte 4 of Message Object n
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: MOAR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 24
+        description: (read-write) Message Object Arbitration Register
+        fields:
+          - name: PRI
+            description: Priority Class
+            index: 30
+            width: 2
+            read: true
+            write: true
+            type: CAN_MOAR_PRI
+          - name: IDE
+            description: Identifier Extension Bit of Message Object n
+            index: 29
+            width: 1
+            read: true
+            write: true
+            type: CAN_MOAR_IDE
+          - name: ID
+            description: CAN Identifier of Message Object n
+            index: 0
+            width: 29
+            read: true
+            write: true
+      - name: MOCTR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 28
+        description: (write-only) Message Object Control Register
+        fields:
+          - name: SETDIR
+            description: Reset/Set Message Direction
+            index: 27
+            width: 1
             read: false
             write: true
+          - name: RESDIR
+            description: Reset/Set Message Direction
+            index: 11
+            width: 1
+            read: false
+            write: true
+          - name: SETTXEN1
+            description: Reset/Set Transmit Enable 1
+            index: 26
+            width: 1
+            read: false
+            write: true
+          - name: RESTXEN1
+            description: Reset/Set Transmit Enable 1
+            index: 10
+            width: 1
+            read: false
+            write: true
+          - name: SETTXEN0
+            description: Reset/Set Transmit Enable 0
+            index: 25
+            width: 1
+            read: false
+            write: true
+          - name: RESTXEN0
+            description: Reset/Set Transmit Enable 0
+            index: 9
+            width: 1
+            read: false
+            write: true
+          - name: SETTXRQ
+            description: Reset/Set Transmit Request
+            index: 24
+            width: 1
+            read: false
+            write: true
+          - name: RESTXRQ
+            description: Reset/Set Transmit Request
+            index: 8
+            width: 1
+            read: false
+            write: true
+          - name: SETRXEN
+            description: Reset/Set Receive Enable
+            index: 23
+            width: 1
+            read: false
+            write: true
+          - name: RESRXEN
+            description: Reset/Set Receive Enable
+            index: 7
+            width: 1
+            read: false
+            write: true
+          - name: SETRTSEL
+            description: Reset/Set Receive/Transmit Selected
+            index: 22
+            width: 1
+            read: false
+            write: true
+          - name: RESRTSEL
+            description: Reset/Set Receive/Transmit Selected
+            index: 6
+            width: 1
+            read: false
+            write: true
+          - name: SETMSGVAL
+            description: Reset/Set Message Valid
+            index: 21
+            width: 1
+            read: false
+            write: true
+          - name: RESMSGVAL
+            description: Reset/Set Message Valid
+            index: 5
+            width: 1
+            read: false
+            write: true
+          - name: SETMSGLST
+            description: Reset/Set Message Lost
+            index: 20
+            width: 1
+            read: false
+            write: true
+          - name: RESMSGLST
+            description: Reset/Set Message Lost
+            index: 4
+            width: 1
+            read: false
+            write: true
+          - name: SETNEWDAT
+            description: Reset/Set New Data
+            index: 19
+            width: 1
+            read: false
+            write: true
+          - name: RESNEWDAT
+            description: Reset/Set New Data
+            index: 3
+            width: 1
+            read: false
+            write: true
+          - name: SETRXUPD
+            description: Reset/Set Receive Updating
+            index: 18
+            width: 1
+            read: false
+            write: true
+          - name: RESRXUPD
+            description: Reset/Set Receive Updating
+            index: 2
+            width: 1
+            read: false
+            write: true
+          - name: SETTXPND
+            description: Reset/Set Transmit Pending
+            index: 17
+            width: 1
+            read: false
+            write: true
+          - name: RESTXPND
+            description: Reset/Set Transmit Pending
+            index: 1
+            width: 1
+            read: false
+            write: true
+          - name: SETRXPND
+            description: Reset/Set Receive Pending
+            index: 16
+            width: 1
+            read: false
+            write: true
+          - name: RESRXPND
+            description: Reset/Set Receive Pending
+            index: 0
+            width: 1
+            read: false
+            write: true
+        alternates:
+          - name: MOSTAT
+            const: true
+            description: (read-only) Message Object Status Register
+            fields:
+              - name: PNEXT
+                description: Pointer to Next Message Object
+                index: 24
+                width: 8
+                read: true
+                write: false
+              - name: PPREV
+                description: Pointer to Previous Message Object
+                index: 16
+                width: 8
+                read: true
+                write: false
+              - name: LIST
+                description: List Allocation
+                index: 12
+                width: 4
+                read: true
+                write: false
+              - name: DIR
+                description: Message Direction
+                index: 11
+                width: 1
+                read: true
+                write: false
+                type: CAN_MOSTAT_DIR
+              - name: TXEN1
+                description: Transmit Enable 1
+                index: 10
+                width: 1
+                read: true
+                write: false
+                type: CAN_MOSTAT_TXEN1
+              - name: TXEN0
+                description: Transmit Enable 0
+                index: 9
+                width: 1
+                read: true
+                write: false
+                type: CAN_MOSTAT_TXEN0
+              - name: TXRQ
+                description: Transmit Request
+                index: 8
+                width: 1
+                read: true
+                write: false
+                type: CAN_MOSTAT_TXRQ
+              - name: RXEN
+                description: Receive Enable
+                index: 7
+                width: 1
+                read: true
+                write: false
+                type: CAN_MOSTAT_RXEN
+              - name: RTSEL
+                description: Receive/Transmit Selected
+                index: 6
+                width: 1
+                read: true
+                write: false
+                type: CAN_MOSTAT_RTSEL
+              - name: MSGVAL
+                description: Message Valid
+                index: 5
+                width: 1
+                read: true
+                write: false
+                type: CAN_MOSTAT_MSGVAL
+              - name: MSGLST
+                description: Message Lost
+                index: 4
+                width: 1
+                read: true
+                write: false
+                type: CAN_MOSTAT_MSGLST
+              - name: NEWDAT
+                description: New Data
+                index: 3
+                width: 1
+                read: true
+                write: false
+                type: CAN_MOSTAT_NEWDAT
+              - name: RXUPD
+                description: Receive Updating
+                index: 2
+                width: 1
+                read: true
+                write: false
+                type: CAN_MOSTAT_RXUPD
+              - name: TXPND
+                description: Transmit Pending
+                index: 1
+                width: 1
+                read: true
+                write: false
+                type: CAN_MOSTAT_TXPND
+              - name: RXPND
+                description: Receive Pending
+                index: 0
+                width: 1
+                read: true
+                write: false
+                type: CAN_MOSTAT_RXPND
+    expected_size: 32
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+  can:
+    description: Controller Area Networks
+    instances:
+      - name: CAN_MO
+        address: '0x48015000'
+      - name: CAN_NODE0
+        address: '0x48014200'
+      - name: CAN
+        address: '0x48014000'
+      - name: CAN_NODE1
+        address: '0x48014300'
+      - name: CAN_NODE2
+        address: '0x48014400'
+      - name: CAN_NODE3
+        address: '0x48014500'
+      - name: CAN_NODE4
+        address: '0x48014600'
+      - name: CAN_NODE5
+        address: '0x48014700'
+    fields:
+      - name: MO
+        type: CAN_MO
+        expected_size: 8192
+        expected_offset: 0
+        array_length: 256
+        description: Message Object Registers
     stream: false
     codec: false
     methods: false
     unit_test: false
 enums:
-  CAN_ID_MOD_TYPE:
+  CAN_MOFCR_RMM:
     enum:
       value1:
-        description: Define the module as a 32-bit module.
-        value: 192
-    unit_test: false
-    json: false
-    use_map: false
-  CAN_LIST_EMPTY:
-    enum:
-      value1:
-        description: At least one message object is allocated to list i.
+        description: 'Remote monitoring is disabled: Identifier, IDE bit, and DLC
+          of message object n remain unchanged upon the reception of a matching Remote
+          Frame.'
         value: 0
       value2:
-        description: No message object is allocated to the list i. List i is empty.
+        description: 'Remote monitoring is enabled: Identifier, IDE bit, and DLC of
+          a matching Remote Frame are copied to transmit object n in order to monitor
+          incoming Remote Frames.'
         value: 1
     unit_test: false
     json: false
     use_map: false
-  CAN_PANCTR_RBUSY:
+  CAN_MOFCR_FRREN:
     enum:
       value1:
-        description: No update of PANAR1 and PANAR2 is scheduled by the list controller.
+        description: TXRQ of message object n is set on reception of a matching Remote
+          Frame.
         value: 0
       value2:
-        description: A list command is running (BUSY = 1) that will write results
-          to PANAR1 and PANAR2, but the results are not yet available.
+        description: TXRQ of the message object referenced by the pointer CUR is set
+          on reception of a matching Remote Frame.
         value: 1
     unit_test: false
     json: false
     use_map: false
-  CAN_PANCTR_BUSY:
+  CAN_MOFCR_OVIE:
     enum:
       value1:
-        description: Panel has finished command and is ready to accept a new command.
+        description: FIFO full interrupt is disabled.
         value: 0
       value2:
-        description: Panel operation is in progress.
+        description: FIFO full interrupt is enabled.
         value: 1
     unit_test: false
     json: false
     use_map: false
-  CAN_MCR_CLKSEL:
+  CAN_MOFCR_TXIE:
     enum:
       value1:
-        description: No clock supplied
+        description: Message transmit interrupt is disabled.
         value: 0
       value2:
-        description: fPERIPH
+        description: Message transmit interrupt is enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOFCR_RXIE:
+    enum:
+      value1:
+        description: Message receive interrupt is disabled.
+        value: 0
+      value2:
+        description: Message receive interrupt is enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOFCR_DATC:
+    enum:
+      value1:
+        description: Data fields are not copied.
+        value: 0
+      value2:
+        description: Data fields in registers MODATALn and MODATAHn of the gateway
+          source object (after storing the received frame in the source) are copied
+          to the gateway destination.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOFCR_DLCC:
+    enum:
+      value1:
+        description: Data length code is not copied.
+        value: 0
+      value2:
+        description: Data length code of the gateway source object (after storing
+          the received frame in the source) is copied to the gateway destination object.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOFCR_IDC:
+    enum:
+      value1:
+        description: The identifier of the gateway source object is not copied.
+        value: 0
+      value2:
+        description: The identifier of the gateway source object (after storing the
+          received frame in the source) is copied to the gateway destination object.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOFCR_GDFS:
+    enum:
+      value1:
+        description: TXRQ is unchanged in the destination object.
+        value: 0
+      value2:
+        description: TXRQ is set in the gateway destination object after the internal
+          transfer from the gateway source to the gateway destination object.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOFCR_RXTOE:
+    enum:
+      value1:
+        description: Message does not take part in receive time-out check
+        value: 0
+      value2:
+        description: Message takes part in receive time-out check
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOFCR_MMC:
+    enum:
+      value1:
+        description: Standard Message Object
+        value: 0
+      value2:
+        description: Receive FIFO Base Object
         value: 1
       value3:
-        description: fOHP
+        description: Transmit FIFO Base Object
         value: 2
       value4:
-        description: hard wired to 0
-        value: 4
+        description: Transmit FIFO Slave Object
+        value: 3
       value5:
-        description: hard wired to 0
-        value: 8
+        description: Gateway Source Object
+        value: 4
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOIPR_TXINP:
+    enum:
+      value1:
+        description: Interrupt output line INT_O0 is selected.
+        value: 0
+      value2:
+        description: Interrupt output line INT_O1 is selected.
+        value: 1
+      value3:
+        description: Interrupt output line INT_O14 is selected.
+        value: 14
+      value4:
+        description: Interrupt output line INT_O15 is selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOIPR_RXINP:
+    enum:
+      value1:
+        description: Interrupt output line INT_O0 is selected.
+        value: 0
+      value2:
+        description: Interrupt output line INT_O1 is selected.
+        value: 1
+      value3:
+        description: Interrupt output line INT_O14 is selected.
+        value: 14
+      value4:
+        description: Interrupt output line INT_O15 is selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOAMR_MIDE:
+    enum:
+      value1:
+        description: Message object n accepts the reception of both, standard and
+          extended frames.
+        value: 0
+      value2:
+        description: Message object n receives frames only with matching IDE bit.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOAR_PRI:
+    enum:
+      value2:
+        description: Transmit acceptance filtering is based on the list order. This
+          means that message object n is considered for transmission only if there
+          is no other message object with valid transmit request (MSGVAL & TXEN0 &
+          TXEN1 = 1) somewhere before this object in the list.
+        value: 1
+      value3:
+        description: Transmit acceptance filtering is based on the CAN identifier.
+          This means, message object n is considered for transmission only if there
+          is no other message object with higher priority identifier + IDE + DIR (with
+          respect to CAN arbitration rules) somewhere in the list (see ).
+        value: 2
+      value4:
+        description: Transmit acceptance filtering is based on the list order (as
+          PRI = 01B).
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOAR_IDE:
+    enum:
+      value1:
+        description: Message object n handles standard frames with 11-bit identifier.
+        value: 0
+      value2:
+        description: Message object n handles extended frames with 29-bit identifier.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOSTAT_DIR:
+    enum:
+      value1:
+        description: 'Receive Object selected: With TXRQ = 1, a Remote Frame with
+          the identifier of message object n is scheduled for transmission. On reception
+          of a Data Frame with matching identifier, the message is stored in message
+          object n.'
+        value: 0
+      value2:
+        description: 'Transmit Object selected: If TXRQ = 1, message object n is scheduled
+          for transmission of a Data Frame. On reception of a Remote Frame with matching
+          identifier, bit TXRQ is set.'
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOSTAT_TXEN1:
+    enum:
+      value1:
+        description: Message object n is not enabled for frame transmission.
+        value: 0
+      value2:
+        description: Message object n is enabled for frame transmission.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOSTAT_TXEN0:
+    enum:
+      value1:
+        description: Message object n is not enabled for frame transmission.
+        value: 0
+      value2:
+        description: Message object n is enabled for frame transmission.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOSTAT_TXRQ:
+    enum:
+      value1:
+        description: No transmission of message object n is requested.
+        value: 0
+      value2:
+        description: Transmission of message object n on the CAN bus is requested.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOSTAT_RXEN:
+    enum:
+      value1:
+        description: Message object n is not enabled for frame reception.
+        value: 0
+      value2:
+        description: Message object n is enabled for frame reception.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOSTAT_RTSEL:
+    enum:
+      value1:
+        description: Message object n is not selected for receive or transmit operation.
+        value: 0
+      value2:
+        description: Message object n is selected for receive or transmit operation.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOSTAT_MSGVAL:
+    enum:
+      value1:
+        description: Message object n is not valid.
+        value: 0
+      value2:
+        description: Message object n is valid.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOSTAT_MSGLST:
+    enum:
+      value1:
+        description: No CAN message is lost.
+        value: 0
+      value2:
+        description: A CAN message is lost because NEWDAT has become set again when
+          it has already been set.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOSTAT_NEWDAT:
+    enum:
+      value1:
+        description: No update of the message object n since last flag reset.
+        value: 0
+      value2:
+        description: Message object n has been updated.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOSTAT_RXUPD:
+    enum:
+      value1:
+        description: No receive update ongoing.
+        value: 0
+      value2:
+        description: Message identifier, DLC, and data of the message object are currently
+          updated.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOSTAT_TXPND:
+    enum:
+      value1:
+        description: No CAN message has been transmitted.
+        value: 0
+      value2:
+        description: A CAN message from message object n has been transmitted successfully
+          over the CAN bus.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_MOSTAT_RXPND:
+    enum:
+      value1:
+        description: No CAN message has been received.
+        value: 0
+      value2:
+        description: A CAN message has been received by the message object n, either
+          directly or via gateway copy action.
+        value: 1
     unit_test: false
     json: false
     use_map: false

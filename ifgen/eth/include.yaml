@@ -5,6 +5,8 @@ structs:
     instances:
       - name: ETH0
         address: '0x5000C000'
+      - name: ETH0_CON
+        address: '0x50004040'
     fields:
       - name: MAC_CONFIGURATION
         type: uint32_t

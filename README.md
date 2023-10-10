@@ -2,16 +2,25 @@
     =====================================
     generator=datazen
     version=3.1.4
-    hash=720941044adf3a982ba465c20ef1acd2
+    hash=a00b9a811adb89af699775cb7275dcf9
     =====================================
 -->
 
-# hal-xmc4700 ([0.1.1](https://github.com/vkottler/hal-xmc4700/releases/tag/0.1.1))
+# hal-xmc4700 ([0.2.0](https://github.com/vkottler/hal-xmc4700/releases/tag/0.2.0))
 
 [![codecov](https://codecov.io/gh/vkottler/hal-xmc4700/branch/master/graph/badge.svg)](https://codecov.io/gh/vkottler/hal-xmc4700)
 ![Build Status](https://github.com/vkottler/hal-xmc4700/actions/workflows/yambs-project.yml/badge.svg)
 
 *A hardware abstraction layer generated from the XMC4700's SVD.*
+
+## Documentation
+
+### Generated
+
+* By [sphinx+breathe+exhale](https://vkottler.github.io/cpp/sphinx/hal-xmc4700/)
+(What's [sphinx](https://www.sphinx-doc.org/en/master/) /
+[breathe](https://breathe.readthedocs.io/en/latest/) /
+[exhale](https://exhale.readthedocs.io/en/latest/)?)
 
 ## Workflow
 

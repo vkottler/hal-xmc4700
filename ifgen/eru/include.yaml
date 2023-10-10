@@ -20,56 +20,56 @@ structs:
             width: 2
             read: true
             write: true
-            type: ERU0_EXISEL_EXS3B
+            type: ERU_EXISEL_EXS3B
           - name: EXS3A
             description: Event Source Select for A3 (ERS3)
             index: 12
             width: 2
             read: true
             write: true
-            type: ERU0_EXISEL_EXS3A
+            type: ERU_EXISEL_EXS3A
           - name: EXS2B
             description: Event Source Select for B2 (ERS2)
             index: 10
             width: 2
             read: true
             write: true
-            type: ERU0_EXISEL_EXS2B
+            type: ERU_EXISEL_EXS2B
           - name: EXS2A
             description: Event Source Select for A2 (ERS2)
             index: 8
             width: 2
             read: true
             write: true
-            type: ERU0_EXISEL_EXS2A
+            type: ERU_EXISEL_EXS2A
           - name: EXS1B
             description: Event Source Select for B1 (ERS1)
             index: 6
             width: 2
             read: true
             write: true
-            type: ERU0_EXISEL_EXS1B
+            type: ERU_EXISEL_EXS1B
           - name: EXS1A
             description: Event Source Select for A1 (ERS1)
             index: 4
             width: 2
             read: true
             write: true
-            type: ERU0_EXISEL_EXS1A
+            type: ERU_EXISEL_EXS1A
           - name: EXS0B
             description: Event Source Select for B0 (ERS0)
             index: 2
             width: 2
             read: true
             write: true
-            type: ERU0_EXISEL_EXS0B
+            type: ERU_EXISEL_EXS0B
           - name: EXS0A
             description: Event Source Select for A0 (ERS0)
             index: 0
             width: 2
             read: true
             write: true
-            type: ERU0_EXISEL_EXS0A
+            type: ERU_EXISEL_EXS0A
       - name: EXICON
         type: uint32_t
         expected_size: 16
@@ -83,63 +83,63 @@ structs:
             width: 1
             read: true
             write: true
-            type: ERU0_EXICON_NB
+            type: ERU_EXICON_NB
           - name: NA
             description: Input A Negation Select for ERSx
             index: 10
             width: 1
             read: true
             write: true
-            type: ERU0_EXICON_NA
+            type: ERU_EXICON_NA
           - name: SS
             description: Input Source Select for ERSx
             index: 8
             width: 2
             read: true
             write: true
-            type: ERU0_EXICON_SS
+            type: ERU_EXICON_SS
           - name: FL
             description: Status Flag for ETLx
             index: 7
             width: 1
             read: true
             write: true
-            type: ERU0_EXICON_FL
+            type: ERU_EXICON_FL
           - name: OCS
             description: Output Channel Select for ETLx Output Trigger Pulse
             index: 4
             width: 3
             read: true
             write: true
-            type: ERU0_EXICON_OCS
+            type: ERU_EXICON_OCS
           - name: FE
             description: Falling Edge Detection Enable ETLx
             index: 3
             width: 1
             read: true
             write: true
-            type: ERU0_EXICON_FE
+            type: ERU_EXICON_FE
           - name: RE
             description: Rising Edge Detection Enable ETLx
             index: 2
             width: 1
             read: true
             write: true
-            type: ERU0_EXICON_RE
+            type: ERU_EXICON_RE
           - name: LD
             description: Rebuild Level Detection for Status Flag for ETLx
             index: 1
             width: 1
             read: true
             write: true
-            type: ERU0_EXICON_LD
+            type: ERU_EXICON_LD
           - name: PE
             description: Output Trigger Pulse Enable for ETLx
             index: 0
             width: 1
             read: true
             write: true
-            type: ERU0_EXICON_PE
+            type: ERU_EXICON_PE
       - name: EXOCON
         type: uint32_t
         expected_size: 16
@@ -153,62 +153,62 @@ structs:
             width: 1
             read: true
             write: true
-            type: ERU0_EXOCON_IPEN3
+            type: ERU_EXOCON_IPEN3
           - name: IPEN2
             description: Pattern Detection Enable for ETL2
             index: 14
             width: 1
             read: true
             write: true
-            type: ERU0_EXOCON_IPEN2
+            type: ERU_EXOCON_IPEN2
           - name: IPEN1
             description: Pattern Detection Enable for ETL1
             index: 13
             width: 1
             read: true
             write: true
-            type: ERU0_EXOCON_IPEN1
+            type: ERU_EXOCON_IPEN1
           - name: IPEN0
             description: Pattern Detection Enable for ETL0
             index: 12
             width: 1
             read: true
             write: true
-            type: ERU0_EXOCON_IPEN0
+            type: ERU_EXOCON_IPEN0
           - name: GP
             description: Gating Selection for Pattern Detection Result
             index: 4
             width: 2
             read: true
             write: true
-            type: ERU0_EXOCON_GP
+            type: ERU_EXOCON_GP
           - name: PDR
             description: Pattern Detection Result Flag
             index: 3
             width: 1
             read: true
             write: false
-            type: ERU0_EXOCON_PDR
+            type: ERU_EXOCON_PDR
           - name: GEEN
             description: Gating Event Enable
             index: 2
             width: 1
             read: true
             write: true
-            type: ERU0_EXOCON_GEEN
+            type: ERU_EXOCON_GEEN
           - name: ISS
             description: Internal Trigger Source Selection
             index: 0
             width: 2
             read: true
             write: true
-            type: ERU0_EXOCON_ISS
+            type: ERU_EXOCON_ISS
     stream: false
     codec: false
     methods: false
     unit_test: false
 enums:
-  ERU0_EXISEL_EXS3B:
+  ERU_EXISEL_EXS3B:
     enum:
       value1:
         description: Input ERU_3B0 is selected
@@ -225,7 +225,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXISEL_EXS3A:
+  ERU_EXISEL_EXS3A:
     enum:
       value1:
         description: Input ERU_3A0 is selected
@@ -242,7 +242,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXISEL_EXS2B:
+  ERU_EXISEL_EXS2B:
     enum:
       value1:
         description: Input ERU_2B0 is selected
@@ -259,7 +259,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXISEL_EXS2A:
+  ERU_EXISEL_EXS2A:
     enum:
       value1:
         description: Input ERU_2A0 is selected
@@ -276,7 +276,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXISEL_EXS1B:
+  ERU_EXISEL_EXS1B:
     enum:
       value1:
         description: Input ERU_1B0 is selected
@@ -293,7 +293,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXISEL_EXS1A:
+  ERU_EXISEL_EXS1A:
     enum:
       value1:
         description: Input ERU_1A0 is selected
@@ -310,7 +310,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXISEL_EXS0B:
+  ERU_EXISEL_EXS0B:
     enum:
       value1:
         description: Input ERU_0B0 is selected
@@ -327,7 +327,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXISEL_EXS0A:
+  ERU_EXISEL_EXS0A:
     enum:
       value1:
         description: Input ERU_0A0 is selected
@@ -344,7 +344,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXICON_NB:
+  ERU_EXICON_NB:
     enum:
       value1:
         description: Input B is used directly
@@ -355,7 +355,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXICON_NA:
+  ERU_EXICON_NA:
     enum:
       value1:
         description: Input A is used directly
@@ -366,7 +366,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXICON_SS:
+  ERU_EXICON_SS:
     enum:
       value1:
         description: Input A without additional combination
@@ -383,7 +383,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXICON_FL:
+  ERU_EXICON_FL:
     enum:
       value1:
         description: The enabled edge event has not been detected
@@ -394,7 +394,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXICON_OCS:
+  ERU_EXICON_OCS:
     enum:
       value1:
         description: Trigger pulses are sent to OGU0
@@ -411,7 +411,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXICON_FE:
+  ERU_EXICON_FE:
     enum:
       value1:
         description: A falling edge is not considered as edge event
@@ -422,7 +422,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXICON_RE:
+  ERU_EXICON_RE:
     enum:
       value1:
         description: A rising edge is not considered as edge event
@@ -433,7 +433,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXICON_LD:
+  ERU_EXICON_LD:
     enum:
       value1:
         description: The status flag FL is not cleared by hardware and is used as
@@ -449,7 +449,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXICON_PE:
+  ERU_EXICON_PE:
     enum:
       value1:
         description: The trigger pulse generation is disabled
@@ -460,7 +460,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXOCON_IPEN3:
+  ERU_EXOCON_IPEN3:
     enum:
       value1:
         description: Flag EXICONx.FL is excluded from the pattern detection
@@ -471,7 +471,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXOCON_IPEN2:
+  ERU_EXOCON_IPEN2:
     enum:
       value1:
         description: Flag EXICONx.FL is excluded from the pattern detection
@@ -482,7 +482,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXOCON_IPEN1:
+  ERU_EXOCON_IPEN1:
     enum:
       value1:
         description: Flag EXICONx.FL is excluded from the pattern detection
@@ -493,7 +493,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXOCON_IPEN0:
+  ERU_EXOCON_IPEN0:
     enum:
       value1:
         description: Flag EXICONx.FL is excluded from the pattern detection
@@ -504,7 +504,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXOCON_GP:
+  ERU_EXOCON_GP:
     enum:
       value1:
         description: ERU_GOUTy is always disabled and ERU_IOUTy can not be activated
@@ -526,7 +526,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXOCON_PDR:
+  ERU_EXOCON_PDR:
     enum:
       value1:
         description: A pattern miss is detected
@@ -537,7 +537,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXOCON_GEEN:
+  ERU_EXOCON_GEEN:
     enum:
       value1:
         description: The event detection is disabled
@@ -548,7 +548,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
-  ERU0_EXOCON_ISS:
+  ERU_EXOCON_ISS:
     enum:
       value1:
         description: The peripheral trigger function is disabled

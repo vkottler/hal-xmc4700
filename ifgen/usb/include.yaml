@@ -3,1566 +3,268 @@ structs:
   usb:
     description: Universal Serial Bus
     instances:
+      - name: USB0_CH0
+        address: '0x50040500'
+      - name: USB0_EP1
+        address: '0x50040920'
+      - name: USB0_EP0
+        address: '0x50040900'
       - name: USB0
         address: '0x50040000'
+      - name: USB0_EP2
+        address: '0x50040940'
+      - name: USB0_EP3
+        address: '0x50040960'
+      - name: USB0_EP4
+        address: '0x50040980'
+      - name: USB0_EP5
+        address: '0x500409A0'
+      - name: USB0_EP6
+        address: '0x500409C0'
+      - name: USB0_CH1
+        address: '0x50040520'
+      - name: USB0_CH2
+        address: '0x50040540'
+      - name: USB0_CH3
+        address: '0x50040560'
+      - name: USB0_CH4
+        address: '0x50040580'
+      - name: USB0_CH5
+        address: '0x500405A0'
+      - name: USB0_CH6
+        address: '0x500405C0'
+      - name: USB0_CH7
+        address: '0x500405E0'
+      - name: USB0_CH8
+        address: '0x50040600'
+      - name: USB0_CH9
+        address: '0x50040620'
+      - name: USB0_CH10
+        address: '0x50040640'
+      - name: USB0_CH11
+        address: '0x50040660'
+      - name: USB0_CH12
+        address: '0x50040680'
+      - name: USB0_CH13
+        address: '0x500406A0'
     fields:
-      - name: GOTGCTL
+      - name: HCCHAR
         type: uint32_t
         expected_size: 4
         expected_offset: 0
-        description: (read-write) Control and Status Register
+        description: (read-write) Host Channel Characteristics Register
         fields:
-          - name: OTGVer
-            description: OTG Version
+          - name: ChEna
+            description: Channel Enable
+            index: 31
+            width: 1
+            read: true
+            write: true
+            type: USB_HCCHAR_ChEna
+          - name: ChDis
+            description: Channel Disable
+            index: 30
+            width: 1
+            read: true
+            write: true
+          - name: OddFrm
+            description: Odd Frame
+            index: 29
+            width: 1
+            read: true
+            write: true
+            type: USB_HCCHAR_OddFrm
+          - name: DevAddr
+            description: Device Address
+            index: 22
+            width: 7
+            read: true
+            write: true
+          - name: MC_EC
+            description: Multi Count / Error Count
             index: 20
+            width: 2
+            read: true
+            write: true
+            type: USB_HCCHAR_MC_EC
+          - name: EPType
+            description: Endpoint Type
+            index: 18
+            width: 2
+            read: true
+            write: true
+            type: USB_HCCHAR_EPType
+          - name: EPDir
+            description: Endpoint Direction
+            index: 15
             width: 1
             read: true
             write: true
-            type: USB0_GOTGCTL_OTGVer
-          - name: BSesVld
-            description: B-Session Valid
-            index: 19
-            width: 1
-            read: true
-            write: false
-            type: USB0_GOTGCTL_BSesVld
-          - name: ASesVId
-            description: A-Session Valid
-            index: 18
-            width: 1
-            read: true
-            write: false
-            type: USB0_GOTGCTL_ASesVId
-          - name: DbncTime
-            description: Long/Short Debounce Time
-            index: 17
-            width: 1
-            read: true
-            write: false
-            type: USB0_GOTGCTL_DbncTime
-          - name: ConlDSts
-            description: Connector ID Status
-            index: 16
-            width: 1
-            read: true
-            write: false
-            type: USB0_GOTGCTL_ConlDSts
-          - name: DevHNPEn
-            description: Device HNP Enabled
+            type: USB_HCCHAR_EPDir
+          - name: EPNum
+            description: Endpoint Number
             index: 11
-            width: 1
+            width: 4
             read: true
             write: true
-            type: USB0_GOTGCTL_DevHNPEn
-          - name: HstSetHNPEn
-            description: Host Set HNP Enable
-            index: 10
-            width: 1
-            read: true
-            write: true
-            type: USB0_GOTGCTL_HstSetHNPEn
-          - name: HNPReq
-            description: HNP Request
-            index: 9
-            width: 1
-            read: true
-            write: true
-            type: USB0_GOTGCTL_HNPReq
-          - name: HstNegScs
-            description: Host Negotiation Success
-            index: 8
-            width: 1
-            read: true
-            write: false
-            type: USB0_GOTGCTL_HstNegScs
-          - name: BvalidOvVal
-            description: B-Peripheral Session Valid Override Value
-            index: 7
-            width: 1
-            read: true
-            write: true
-            type: USB0_GOTGCTL_BvalidOvVal
-          - name: BvalidOvEn
-            description: B-Peripheral Session Valid Override Enable
-            index: 6
-            width: 1
-            read: true
-            write: true
-            type: USB0_GOTGCTL_BvalidOvEn
-          - name: AvalidOvVal
-            description: A-Peripheral Session Valid Override Value
-            index: 5
-            width: 1
-            read: true
-            write: true
-            type: USB0_GOTGCTL_AvalidOvVal
-          - name: AvalidOvEn
-            description: A-Peripheral Session Valid Override Enable
-            index: 4
-            width: 1
-            read: true
-            write: true
-            type: USB0_GOTGCTL_AvalidOvEn
-          - name: VbvalidOvVal
-            description: VBUS Valid Override Value
-            index: 3
-            width: 1
-            read: true
-            write: true
-            type: USB0_GOTGCTL_VbvalidOvVal
-          - name: VbvalidOvEn
-            description: VBUS Valid Override Enable
-            index: 2
-            width: 1
-            read: true
-            write: true
-            type: USB0_GOTGCTL_VbvalidOvEn
-          - name: SesReq
-            description: Session Request
-            index: 1
-            width: 1
-            read: true
-            write: true
-            type: USB0_GOTGCTL_SesReq
-          - name: SesReqScs
-            description: Session Request Success
+          - name: MPS
+            description: Maximum Packet Size
             index: 0
-            width: 1
-            read: true
-            write: false
-            type: USB0_GOTGCTL_SesReqScs
-      - name: GOTGINT
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 4
-        description: (read-write) OTG Interrupt Register
-        fields:
-          - name: DbnceDone
-            description: Debounce Done
-            index: 19
-            width: 1
+            width: 11
             read: true
             write: true
-          - name: ADevTOUTChg
-            description: A-Device Timeout Change
-            index: 18
-            width: 1
-            read: true
-            write: true
-          - name: HstNegDet
-            description: Host Negotiation Detected
-            index: 17
-            width: 1
-            read: true
-            write: true
-          - name: HstNegSucStsChng
-            description: Host Negotiation Success Status Change
-            index: 9
-            width: 1
-            read: true
-            write: true
-          - name: SesReqSucStsChng
-            description: Session Request Success Status Change
-            index: 8
-            width: 1
-            read: true
-            write: true
-          - name: SesEndDet
-            description: Session End Detected
-            index: 2
-            width: 1
-            read: true
-            write: true
-      - name: GAHBCFG
+      - name: HCINT
         type: uint32_t
         expected_size: 4
         expected_offset: 8
-        description: (read-write) AHB Configuration Register
+        description: (read-write) Host Channel Interrupt Register
         fields:
-          - name: AHBSingle
-            description: AHB Single Support
-            index: 23
+          - name: DESC_LST_ROLLIntr
+            description: Descriptor rollover interrupt
+            index: 13
             width: 1
             read: true
             write: true
-            type: USB0_GAHBCFG_AHBSingle
-          - name: PTxFEmpLvl
-            description: Periodic TxFIFO Empty Level
-            index: 8
-            width: 1
-            read: true
-            write: true
-            type: USB0_GAHBCFG_PTxFEmpLvl
-          - name: NPTxFEmpLvl
-            description: Non-Periodic TxFIFO Empty Level
-            index: 7
-            width: 1
-            read: true
-            write: true
-            type: USB0_GAHBCFG_NPTxFEmpLvl
-          - name: DMAEn
-            description: DMA Enable
-            index: 5
-            width: 1
-            read: true
-            write: true
-            type: USB0_GAHBCFG_DMAEn
-          - name: HBstLen
-            description: Burst Length/Type
-            index: 1
-            width: 4
-            read: true
-            write: true
-            type: USB0_GAHBCFG_HBstLen
-          - name: GlblIntrMsk
-            description: Global Interrupt Mask
-            index: 0
-            width: 1
-            read: true
-            write: true
-            type: USB0_GAHBCFG_GlblIntrMsk
-      - name: GUSBCFG
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 12
-        description: (read-write) USB Configuration Register
-        fields:
-          - name: CTP
-            description: Corrupt Tx packet
-            index: 31
-            width: 1
-            read: true
-            write: true
-          - name: ForceDevMode
-            description: Force Device Mode
-            index: 30
-            width: 1
-            read: true
-            write: true
-            type: USB0_GUSBCFG_ForceDevMode
-          - name: ForceHstMode
-            description: Force Host Mode
-            index: 29
-            width: 1
-            read: true
-            write: true
-            type: USB0_GUSBCFG_ForceHstMode
-          - name: TxEndDelay
-            description: Tx End Delay
-            index: 28
-            width: 1
-            read: true
-            write: true
-            type: USB0_GUSBCFG_TxEndDelay
-          - name: OtgI2CSel
-            description: UTMIFS Interface Select
-            index: 16
-            width: 1
-            read: true
-            write: true
-            type: USB0_GUSBCFG_OtgI2CSel
-          - name: USBTrdTim
-            description: USB Turnaround Time
-            index: 10
-            width: 4
-            read: true
-            write: true
-          - name: HNPCap
-            description: HNP-Capable
-            index: 9
-            width: 1
-            read: true
-            write: true
-            type: USB0_GUSBCFG_HNPCap
-          - name: SRPCap
-            description: SRP-Capable
-            index: 8
-            width: 1
-            read: true
-            write: true
-            type: USB0_GUSBCFG_SRPCap
-          - name: PHYSel
-            description: USB 1.1 Full-Speed Serial Transceiver Select
-            index: 6
-            width: 1
-            read: true
-            write: false
-            type: USB0_GUSBCFG_PHYSel
-          - name: TOutCal
-            description: FS Timeout Calibration
-            index: 0
-            width: 3
-            read: true
-            write: true
-      - name: GRSTCTL
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 16
-        description: (read-write) Reset Register
-        fields:
-          - name: AHBIdle
-            description: AHB Master Idle
-            index: 31
-            width: 1
-            read: true
-            write: false
-          - name: DMAReq
-            description: DMA Request Signal
-            index: 30
-            width: 1
-            read: true
-            write: false
-          - name: TxFNum
-            description: TxFIFO Number
-            index: 6
-            width: 5
-            read: true
-            write: true
-            type: USB0_GRSTCTL_TxFNum
-          - name: TxFFlsh
-            description: TxFIFO Flush
-            index: 5
-            width: 1
-            read: true
-            write: true
-          - name: RxFFlsh
-            description: RxFIFO Flush
-            index: 4
-            width: 1
-            read: true
-            write: true
-          - name: FrmCntrRst
-            description: Host Frame Counter Reset
-            index: 2
-            width: 1
-            read: true
-            write: true
-          - name: CSftRst
-            description: Core Soft Reset
-            index: 0
-            width: 1
-            read: true
-            write: true
-      - name: GINTSTS_HOSTMODE
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 20
-        description: (read-write) Interrupt Register [HOSTMODE]
-        fields:
-          - name: WkUpInt
-            description: Resume/Remote Wakeup Detected Interrupt
-            index: 31
-            width: 1
-            read: true
-            write: true
-          - name: SessReqInt
-            description: Session Request/New Session Detected Interrupt
-            index: 30
-            width: 1
-            read: true
-            write: true
-          - name: DisconnInt
-            description: Disconnect Detected Interrupt
-            index: 29
-            width: 1
-            read: true
-            write: true
-          - name: ConIDStsChng
-            description: Connector ID Status Change
-            index: 28
-            width: 1
-            read: true
-            write: true
-          - name: PTxFEmp
-            description: Periodic TxFIFO Empty
-            index: 26
-            width: 1
-            read: true
-            write: false
-          - name: HChInt
-            description: Host Channels Interrupt
-            index: 25
-            width: 1
-            read: true
-            write: false
-          - name: PrtInt
-            description: Host Port Interrupt
-            index: 24
-            width: 1
-            read: true
-            write: false
-          - name: incomplP
-            description: Incomplete Periodic Transfer
-            index: 21
-            width: 1
-            read: true
-            write: true
-          - name: RxFLvl
-            description: RxFIFO Non-Empty
-            index: 4
-            width: 1
-            read: true
-            write: false
-          - name: Sof
-            description: Start of Frame
-            index: 3
-            width: 1
-            read: true
-            write: true
-          - name: OTGInt
-            description: OTG Interrupt
-            index: 2
-            width: 1
-            read: true
-            write: false
-          - name: ModeMis
-            description: Mode Mismatch Interrupt
-            index: 1
-            width: 1
-            read: true
-            write: true
-          - name: CurMod
-            description: Current Mode of Operation
-            index: 0
-            width: 1
-            read: true
-            write: false
-            type: USB0_GINTSTS_HOSTMODE_CurMod
-        alternates:
-          - name: GINTSTS_DEVICEMODE
-            description: (read-write) Interrupt Register [DEVICEMODE]
-            fields:
-              - name: WkUpInt
-                description: Resume/Remote Wakeup Detected Interrupt
-                index: 31
-                width: 1
-                read: true
-                write: true
-              - name: SessReqInt
-                description: Session Request/New Session Detected Interrupt
-                index: 30
-                width: 1
-                read: true
-                write: true
-              - name: ConIDStsChng
-                description: Connector ID Status Change
-                index: 28
-                width: 1
-                read: true
-                write: true
-              - name: incomplSOOUT
-                description: Incomplete Isochronous OUT Transfer
-                index: 21
-                width: 1
-                read: true
-                write: true
-              - name: incompISOIN
-                description: Incomplete Isochronous IN Transfer
-                index: 20
-                width: 1
-                read: true
-                write: true
-              - name: OEPInt
-                description: OUT Endpoints Interrupt
-                index: 19
-                width: 1
-                read: true
-                write: false
-              - name: IEPInt
-                description: IN Endpoints Interrupt
-                index: 18
-                width: 1
-                read: true
-                write: false
-              - name: EOPF
-                description: End of Periodic Frame Interrupt
-                index: 15
-                width: 1
-                read: true
-                write: true
-              - name: ISOOutDrop
-                description: Isochronous OUT Packet Dropped Interrupt
-                index: 14
-                width: 1
-                read: true
-                write: true
-              - name: EnumDone
-                description: Enumeration Done
-                index: 13
-                width: 1
-                read: true
-                write: true
-              - name: USBRst
-                description: USB Reset
-                index: 12
-                width: 1
-                read: true
-                write: true
-              - name: USBSusp
-                description: USB Suspend
-                index: 11
-                width: 1
-                read: true
-                write: true
-              - name: ErlySusp
-                description: Early Suspend
-                index: 10
-                width: 1
-                read: true
-                write: true
-              - name: GOUTNakEff
-                description: Global OUT NAK Effective
-                index: 7
-                width: 1
-                read: true
-                write: false
-              - name: GINNakEff
-                description: Global IN Non-Periodic NAK Effective
-                index: 6
-                width: 1
-                read: true
-                write: false
-              - name: RxFLvl
-                description: RxFIFO Non-Empty
-                index: 4
-                width: 1
-                read: true
-                write: false
-              - name: Sof
-                description: Start of Frame
-                index: 3
-                width: 1
-                read: true
-                write: true
-              - name: OTGInt
-                description: OTG Interrupt
-                index: 2
-                width: 1
-                read: true
-                write: false
-              - name: ModeMis
-                description: Mode Mismatch Interrupt
-                index: 1
-                width: 1
-                read: true
-                write: true
-              - name: CurMod
-                description: Current Mode of Operation
-                index: 0
-                width: 1
-                read: true
-                write: false
-                type: USB0_GINTSTS_DEVICEMODE_CurMod
-      - name: GINTMSK_HOSTMODE
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 24
-        description: (read-write) Interrupt Mask Register [HOSTMODE]
-        fields:
-          - name: WkUpIntMsk
-            description: Resume/Remote Wakeup Detected Interrupt Mask
-            index: 31
-            width: 1
-            read: true
-            write: true
-          - name: SessReqIntMsk
-            description: Session Request/New Session Detected Interrupt Mask
-            index: 30
-            width: 1
-            read: true
-            write: true
-          - name: DisconnIntMsk
-            description: Disconnect Detected Interrupt Mask
-            index: 29
-            width: 1
-            read: true
-            write: true
-          - name: ConIDStsChngMsk
-            description: Connector ID Status Change Mask
-            index: 28
-            width: 1
-            read: true
-            write: true
-          - name: PTxFEmpMsk
-            description: Periodic TxFIFO Empty Mask
-            index: 26
-            width: 1
-            read: true
-            write: true
-          - name: HChIntMsk
-            description: Host Channels Interrupt Mask
-            index: 25
-            width: 1
-            read: true
-            write: true
-          - name: PrtIntMsk
-            description: Host Port Interrupt Mask
-            index: 24
-            width: 1
-            read: true
-            write: true
-          - name: incomplPMsk
-            description: Incomplete Periodic Transfer Mask
-            index: 21
-            width: 1
-            read: true
-            write: true
-          - name: RxFLvlMsk
-            description: Receive FIFO Non-Empty Mask
-            index: 4
-            width: 1
-            read: true
-            write: true
-          - name: SofMsk
-            description: Start of Frame Mask
-            index: 3
-            width: 1
-            read: true
-            write: true
-          - name: OTGIntMsk
-            description: OTG Interrupt Mask
-            index: 2
-            width: 1
-            read: true
-            write: true
-          - name: ModeMisMsk
-            description: Mode Mismatch Interrupt Mask
-            index: 1
-            width: 1
-            read: true
-            write: true
-        alternates:
-          - name: GINTMSK_DEVICEMODE
-            description: (read-write) Interrupt Mask Register [DEVICEMODE]
-            fields:
-              - name: WkUpIntMsk
-                description: Resume/Remote Wakeup Detected Interrupt Mask
-                index: 31
-                width: 1
-                read: true
-                write: true
-              - name: SessReqIntMsk
-                description: Session Request/New Session Detected Interrupt Mask
-                index: 30
-                width: 1
-                read: true
-                write: true
-              - name: DisconnIntMsk
-                description: Disconnect Detected Interrupt Mask
-                index: 29
-                width: 1
-                read: true
-                write: true
-              - name: ConIDStsChngMsk
-                description: Connector ID Status Change Mask
-                index: 28
-                width: 1
-                read: true
-                write: true
-              - name: incomplSOOUTMsk
-                description: Incomplete Isochronous OUT Transfer Mask
-                index: 21
-                width: 1
-                read: true
-                write: true
-              - name: incompISOINMsk
-                description: Incomplete Isochronous IN Transfer Mask
-                index: 20
-                width: 1
-                read: true
-                write: true
-              - name: OEPIntMsk
-                description: OUT Endpoints Interrupt Mask
-                index: 19
-                width: 1
-                read: true
-                write: true
-              - name: IEPIntMsk
-                description: IN Endpoints Interrupt Mask
-                index: 18
-                width: 1
-                read: true
-                write: true
-              - name: EOPFMsk
-                description: End of Periodic Frame Interrupt Mask
-                index: 15
-                width: 1
-                read: true
-                write: true
-              - name: ISOOutDropMsk
-                description: Isochronous OUT Packet Dropped Interrupt Mask
-                index: 14
-                width: 1
-                read: true
-                write: true
-              - name: EnumDoneMsk
-                description: Enumeration Done Mask
-                index: 13
-                width: 1
-                read: true
-                write: true
-              - name: USBRstMsk
-                description: USB Reset Mask
-                index: 12
-                width: 1
-                read: true
-                write: true
-              - name: USBSuspMsk
-                description: USB Suspend Mask
-                index: 11
-                width: 1
-                read: true
-                write: true
-              - name: ErlySuspMsk
-                description: Early Suspend Mask
-                index: 10
-                width: 1
-                read: true
-                write: true
-              - name: GOUTNakEffMsk
-                description: Global OUT NAK Effective Mask
-                index: 7
-                width: 1
-                read: true
-                write: true
-              - name: GINNakEffMsk
-                description: Global Non-periodic IN NAK Effective Mask
-                index: 6
-                width: 1
-                read: true
-                write: true
-              - name: RxFLvlMsk
-                description: Receive FIFO Non-Empty Mask
-                index: 4
-                width: 1
-                read: true
-                write: true
-              - name: SofMsk
-                description: Start of Frame Mask
-                index: 3
-                width: 1
-                read: true
-                write: true
-              - name: OTGIntMsk
-                description: OTG Interrupt Mask
-                index: 2
-                width: 1
-                read: true
-                write: true
-              - name: ModeMisMsk
-                description: Mode Mismatch Interrupt Mask
-                index: 1
-                width: 1
-                read: true
-                write: true
-      - name: GRXSTSR_HOSTMODE
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 28
-        const: true
-        description: (read-only) Receive Status Debug Read Register [HOSTMODE]
-        fields:
-          - name: PktSts
-            description: Packet Status
-            index: 17
-            width: 4
-            read: true
-            write: false
-            type: USB0_GRXSTSR_HOSTMODE_PktSts
-          - name: DPID
-            description: Data PID
-            index: 15
-            width: 2
-            read: true
-            write: false
-            type: USB0_GRXSTSR_HOSTMODE_DPID
-          - name: BCnt
-            description: Byte Count
-            index: 4
-            width: 11
-            read: true
-            write: false
-          - name: ChNum
-            description: Channel Number
-            index: 0
-            width: 4
-            read: true
-            write: false
-        alternates:
-          - name: GRXSTSR_DEVICEMODE
-            const: true
-            description: (read-only) Receive Status Debug Read Register [DEVICEMODE]
-            fields:
-              - name: FN
-                description: Frame Number
-                index: 21
-                width: 4
-                read: true
-                write: false
-              - name: PktSts
-                description: Packet Status
-                index: 17
-                width: 4
-                read: true
-                write: false
-                type: USB0_GRXSTSR_DEVICEMODE_PktSts
-              - name: DPID
-                description: Data PID
-                index: 15
-                width: 2
-                read: true
-                write: false
-                type: USB0_GRXSTSR_DEVICEMODE_DPID
-              - name: BCnt
-                description: Byte Count
-                index: 4
-                width: 11
-                read: true
-                write: false
-              - name: EPNum
-                description: Endpoint Number
-                index: 0
-                width: 4
-                read: true
-                write: false
-      - name: GRXSTSP_DEVICEMODE
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 32
-        const: true
-        description: (read-only) Receive Status Read and Pop Register [DEVICEMODE]
-        fields:
-          - name: FN
-            description: Frame Number
-            index: 21
-            width: 4
-            read: true
-            write: false
-          - name: PktSts
-            description: Packet Status
-            index: 17
-            width: 4
-            read: true
-            write: false
-            type: USB0_GRXSTSP_DEVICEMODE_PktSts
-          - name: DPID
-            description: Data PID
-            index: 15
-            width: 2
-            read: true
-            write: false
-            type: USB0_GRXSTSP_DEVICEMODE_DPID
-          - name: BCnt
-            description: Byte Count
-            index: 4
-            width: 11
-            read: true
-            write: false
-          - name: EPNum
-            description: Endpoint Number
-            index: 0
-            width: 4
-            read: true
-            write: false
-        alternates:
-          - name: GRXSTSP_HOSTMODE
-            const: true
-            description: (read-only) Receive Status Read and Pop Register [HOSTMODE]
-            fields:
-              - name: PktSts
-                description: Packet Status
-                index: 17
-                width: 4
-                read: true
-                write: false
-                type: USB0_GRXSTSP_HOSTMODE_PktSts
-              - name: DPID
-                description: Data PID
-                index: 15
-                width: 2
-                read: true
-                write: false
-                type: USB0_GRXSTSP_HOSTMODE_DPID
-              - name: BCnt
-                description: Byte Count
-                index: 4
-                width: 11
-                read: true
-                write: false
-              - name: ChNum
-                description: Channel Number
-                index: 0
-                width: 4
-                read: true
-                write: false
-      - name: GRXFSIZ
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 36
-        description: (read-write) Receive FIFO Size Register
-        fields:
-          - name: RxFDep
-            description: RxFIFO Depth
-            index: 0
-            width: 16
-            read: true
-            write: true
-      - name: GNPTXFSIZ_HOSTMODE
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 40
-        description: (read-write) Non-Periodic Transmit FIFO Size Register [HOSTMODE]
-        fields:
-          - name: NPTxFDep
-            description: Non-periodic TxFIFO Depth
-            index: 16
-            width: 16
-            read: true
-            write: true
-          - name: NPTxFStAddr
-            description: Non-periodic Transmit RAM Start Address
-            index: 0
-            width: 16
-            read: true
-            write: true
-        alternates:
-          - name: GNPTXFSIZ_DEVICEMODE
-            description: (read-write) Non-Periodic Transmit FIFO Size Register [DEVICEMODE]
-            fields:
-              - name: INEPTxF0Dep
-                description: IN Endpoint TxFIFO 0 Depth
-                index: 16
-                width: 16
-                read: true
-                write: true
-              - name: INEPTxF0StAddr
-                description: IN Endpoint FIFO0 Transmit RAM Start Address
-                index: 0
-                width: 16
-                read: true
-                write: true
-      - name: GNPTXSTS
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 44
-        const: true
-        description: (read-only) Non-Periodic Transmit FIFO/Queue Status Register
-        fields:
-          - name: NPTxQTop
-            description: Top of the Non-periodic Transmit Request Queue
-            index: 24
-            width: 7
-            read: true
-            write: false
-            type: USB0_GNPTXSTS_NPTxQTop
-          - name: NPTxQSpcAvail
-            description: Non-periodic Transmit Request Queue Space Available
-            index: 16
-            width: 8
-            read: true
-            write: false
-            type: USB0_GNPTXSTS_NPTxQSpcAvail
-          - name: NPTxFSpcAvail
-            description: Non-periodic TxFIFO Space Avail
-            index: 0
-            width: 16
-            read: true
-            write: false
-            type: USB0_GNPTXSTS_NPTxFSpcAvail
-      - name: GUID
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 60
-        description: (read-write) USB Module Identification Register
-        fields:
-          - name: MOD_NUMBER
-            description: Module Number
-            index: 16
-            width: 16
-            read: true
-            write: true
-          - name: MOD_TYPE
-            description: Module Type
-            index: 8
-            width: 8
-            read: true
-            write: true
-          - name: MOD_REV
-            description: Module Revision
-            index: 0
-            width: 8
-            read: true
-            write: true
-      - name: GDFIFOCFG
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 92
-        description: (read-write) Global DFIFO Software Config Register
-        fields:
-          - name: EPInfoBaseAddr
-            description: EPInfoBaseAddr
-            index: 16
-            width: 16
-            read: true
-            write: true
-          - name: GDFIFOCfg
-            description: GDFIFOCfg
-            index: 0
-            width: 16
-            read: true
-            write: true
-      - name: HPTXFSIZ
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 256
-        description: (read-write) Host Periodic Transmit FIFO Size Register
-        fields:
-          - name: PTxFSize
-            description: Host Periodic TxFIFO Depth
-            index: 16
-            width: 16
-            read: true
-            write: true
-          - name: PTxFStAddr
-            description: Host Periodic TxFIFO Start Address
-            index: 0
-            width: 16
-            read: true
-            write: true
-      - name: DIEPTXF1
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 260
-        description: (read-write) Device IN Endpoint Transmit FIFO Size Register
-        fields:
-          - name: INEPnTxFDep
-            description: IN Endpoint TxFIFO Depth
-            index: 16
-            width: 16
-            read: true
-            write: true
-          - name: INEPnTxFStAddr
-            description: IN Endpoint FIFOn Transmit RAM Start Address
-            index: 0
-            width: 16
-            read: true
-            write: true
-      - name: DIEPTXF2
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 264
-        description: (read-write) Device IN Endpoint Transmit FIFO Size Register
-        fields:
-          - name: INEPnTxFDep
-            description: IN Endpoint TxFIFO Depth
-            index: 16
-            width: 16
-            read: true
-            write: true
-          - name: INEPnTxFStAddr
-            description: IN Endpoint FIFOn Transmit RAM Start Address
-            index: 0
-            width: 16
-            read: true
-            write: true
-      - name: DIEPTXF3
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 268
-        description: (read-write) Device IN Endpoint Transmit FIFO Size Register
-        fields:
-          - name: INEPnTxFDep
-            description: IN Endpoint TxFIFO Depth
-            index: 16
-            width: 16
-            read: true
-            write: true
-          - name: INEPnTxFStAddr
-            description: IN Endpoint FIFOn Transmit RAM Start Address
-            index: 0
-            width: 16
-            read: true
-            write: true
-      - name: DIEPTXF4
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 272
-        description: (read-write) Device IN Endpoint Transmit FIFO Size Register
-        fields:
-          - name: INEPnTxFDep
-            description: IN Endpoint TxFIFO Depth
-            index: 16
-            width: 16
-            read: true
-            write: true
-          - name: INEPnTxFStAddr
-            description: IN Endpoint FIFOn Transmit RAM Start Address
-            index: 0
-            width: 16
-            read: true
-            write: true
-      - name: DIEPTXF5
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 276
-        description: (read-write) Device IN Endpoint Transmit FIFO Size Register
-        fields:
-          - name: INEPnTxFDep
-            description: IN Endpoint TxFIFO Depth
-            index: 16
-            width: 16
-            read: true
-            write: true
-          - name: INEPnTxFStAddr
-            description: IN Endpoint FIFOn Transmit RAM Start Address
-            index: 0
-            width: 16
-            read: true
-            write: true
-      - name: DIEPTXF6
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 280
-        description: (read-write) Device IN Endpoint Transmit FIFO Size Register
-        fields:
-          - name: INEPnTxFDep
-            description: IN Endpoint TxFIFO Depth
-            index: 16
-            width: 16
-            read: true
-            write: true
-          - name: INEPnTxFStAddr
-            description: IN Endpoint FIFOn Transmit RAM Start Address
-            index: 0
-            width: 16
-            read: true
-            write: true
-      - name: HCFG
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 1024
-        description: (read-write) Host Configuration Register
-        fields:
-          - name: PerSchedEna
-            description: Enable Periodic Scheduling
-            index: 26
-            width: 1
-            read: true
-            write: true
-          - name: FrListEn
-            description: Frame List Entries
-            index: 24
-            width: 2
-            read: true
-            write: true
-            type: USB0_HCFG_FrListEn
-          - name: DescDMA
-            description: Enable Scatter/gather DMA in Host mode
-            index: 23
-            width: 1
-            read: true
-            write: true
-          - name: FSLSSupp
-            description: FS-Only Support
-            index: 2
-            width: 1
-            read: true
-            write: true
-            type: USB0_HCFG_FSLSSupp
-          - name: FSLSPclkSel
-            description: FS PHY Clock Select
-            index: 0
-            width: 2
-            read: true
-            write: true
-            type: USB0_HCFG_FSLSPclkSel
-      - name: HFIR
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 1028
-        description: (read-write) Host Frame Interval Register
-        fields:
-          - name: HFIRRldCtrl
-            description: Reload Control
-            index: 16
-            width: 1
-            read: true
-            write: true
-            type: USB0_HFIR_HFIRRldCtrl
-          - name: FrInt
-            description: Frame Interval
-            index: 0
-            width: 16
-            read: true
-            write: true
-      - name: HFNUM
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 1032
-        description: (read-write) Host Frame Number/Frame Time Remaining Register
-        fields:
-          - name: FrRem
-            description: Frame Time Remaining
-            index: 16
-            width: 16
-            read: true
-            write: false
-          - name: FrNum
-            description: Frame Number
-            index: 0
-            width: 16
-            read: true
-            write: true
-      - name: HPTXSTS
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 1040
-        description: (read-write) Host Periodic Transmit FIFO/ Queue Status Register
-        fields:
-          - name: PTxQTop
-            description: Top of the Periodic Transmit Request Queue
-            index: 24
-            width: 8
-            read: true
-            write: false
-          - name: PTxQSpcAvail
-            description: Periodic Transmit Request Queue Space Available
-            index: 16
-            width: 8
-            read: true
-            write: false
-            type: USB0_HPTXSTS_PTxQSpcAvail
-          - name: PTxFSpcAvail
-            description: Periodic Transmit Data FIFO Space Available
-            index: 0
-            width: 16
-            read: true
-            write: true
-            type: USB0_HPTXSTS_PTxFSpcAvail
-      - name: HAINT
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 1044
-        const: true
-        description: (read-only) Host All Channels Interrupt Register
-        fields:
-          - name: HAINT
-            description: Channel Interrupts
-            index: 0
-            width: 14
-            read: true
-            write: false
-      - name: HAINTMSK
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 1048
-        description: (read-write) Host All Channels Interrupt Mask Register
-        fields:
-          - name: HAINTMsk
-            description: Channel Interrupt Mask
-            index: 0
-            width: 14
-            read: true
-            write: true
-      - name: HFLBADDR
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 1052
-        description: (read-write) Host Frame List Base Address Register
-        fields:
-          - name: Starting_Address
-            description: Starting Address
-            index: 0
-            width: 32
-            read: true
-            write: true
-      - name: HPRT
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 1088
-        description: (read-write) Host Port Control and Status Register
-        fields:
-          - name: PrtSpd
-            description: Port Speed
-            index: 17
-            width: 2
-            read: true
-            write: false
-            type: USB0_HPRT_PrtSpd
-          - name: PrtPwr
-            description: Port Power
+          - name: XCS_XACT_ERR
+            description: Excessive Transaction Error
             index: 12
             width: 1
             read: true
             write: true
-            type: USB0_HPRT_PrtPwr
-          - name: PrtLnSts
-            description: Port Line Status
-            index: 10
-            width: 2
+          - name: BNAIntr
+            description: BNA (Buffer Not Available) Interrupt
+            index: 11
+            width: 1
             read: true
-            write: false
-          - name: PrtRst
-            description: Port Reset
+            write: true
+          - name: DataTglErr
+            description: Data Toggle Error
+            index: 10
+            width: 1
+            read: true
+            write: true
+          - name: FrmOvrun
+            description: Frame Overrun
+            index: 9
+            width: 1
+            read: true
+            write: true
+          - name: BblErr
+            description: Babble Error
             index: 8
             width: 1
             read: true
             write: true
-            type: USB0_HPRT_PrtRst
-          - name: PrtSusp
-            description: Port Suspend
+          - name: XactErr
+            description: Transaction Error
             index: 7
             width: 1
             read: true
             write: true
-            type: USB0_HPRT_PrtSusp
-          - name: PrtRes
-            description: Port Resume
+          - name: NYET
+            description: NYET Response Received Interrupt
             index: 6
             width: 1
             read: true
             write: true
-            type: USB0_HPRT_PrtRes
-          - name: PrtOvrCurrChng
-            description: Port Overcurrent Change
+          - name: ACK
+            description: ACK Response Received/Transmitted Interrupt
             index: 5
             width: 1
             read: true
             write: true
-          - name: PrtOvrCurrAct
-            description: Port Overcurrent Active
+          - name: NAK
+            description: NAK Response Received Interrupt
             index: 4
             width: 1
             read: true
-            write: false
-            type: USB0_HPRT_PrtOvrCurrAct
-          - name: PrtEnChng
-            description: Port Enable/Disable Change
+            write: true
+          - name: STALL
+            description: STALL Response Received Interrupt
             index: 3
             width: 1
             read: true
             write: true
-          - name: PrtEna
-            description: Port Enable
+          - name: AHBErr
+            description: AHB Error
             index: 2
             width: 1
             read: true
             write: true
-            type: USB0_HPRT_PrtEna
-          - name: PrtConnDet
-            description: Port Connect Detected
+          - name: ChHltd
+            description: Channel Halted
             index: 1
             width: 1
             read: true
             write: true
-          - name: PrtConnSts
-            description: Port Connect Status
+          - name: XferCompl
+            description: Transfer Completed
             index: 0
             width: 1
             read: true
-            write: false
-            type: USB0_HPRT_PrtConnSts
-      - name: DCFG
+            write: true
+      - name: HCINTMSK
         type: uint32_t
         expected_size: 4
-        expected_offset: 2048
-        description: (read-write) Device Configuration Register
+        expected_offset: 12
+        description: (read-write) Host Channel Interrupt Mask Register
         fields:
-          - name: PerSchIntvl
-            description: Periodic Scheduling Interval
-            index: 24
-            width: 2
-            read: true
-            write: true
-            type: USB0_DCFG_PerSchIntvl
-          - name: DescDMA
-            description: Enable Scatter/Gather DMA in Device mode.
-            index: 23
-            width: 1
-            read: true
-            write: true
-          - name: PerFrInt
-            description: Periodic Frame Interval
-            index: 11
-            width: 2
-            read: true
-            write: true
-            type: USB0_DCFG_PerFrInt
-          - name: DevAddr
-            description: Device Address
-            index: 4
-            width: 7
-            read: true
-            write: true
-          - name: NZStsOUTHShk
-            description: Non-Zero-Length Status OUT Handshake
-            index: 2
-            width: 1
-            read: true
-            write: true
-            type: USB0_DCFG_NZStsOUTHShk
-          - name: DevSpd
-            description: Device Speed
-            index: 0
-            width: 2
-            read: true
-            write: true
-            type: USB0_DCFG_DevSpd
-      - name: DCTL
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 2052
-        description: (read-write) Device Control Register
-        fields:
-          - name: EnContOnBNA
-            description: Enable continue on BNA
-            index: 17
-            width: 1
-            read: true
-            write: true
-            type: USB0_DCTL_EnContOnBNA
-          - name: NakOnBble
-            description: Set NAK automatically on babble
-            index: 16
-            width: 1
-            read: true
-            write: true
-          - name: IgnrFrmNum
-            description: Ignore frame number for isochronous endpoints in case of
-              Scatter/Gather DMA
-            index: 15
-            width: 1
-            read: true
-            write: true
-            type: USB0_DCTL_IgnrFrmNum
-          - name: GMC
-            description: Global Multi Count
+          - name: DESC_LST_ROLLIntrMsk
+            description: Descriptor rollover interrupt Mask register
             index: 13
-            width: 2
+            width: 1
             read: true
             write: true
-            type: USB0_DCTL_GMC
-          - name: CGOUTNak
-            description: Clear Global OUT NAK
+          - name: BNAIntrMsk
+            description: BNA (Buffer Not Available) Interrupt mask register
+            index: 11
+            width: 1
+            read: true
+            write: true
+          - name: DataTglErrMsk
+            description: Data Toggle Error Mask
             index: 10
             width: 1
-            read: false
+            read: true
             write: true
-          - name: SGOUTNak
-            description: Set Global OUT NAK
+          - name: FrmOvrunMsk
+            description: Frame Overrun Mask
             index: 9
             width: 1
-            read: false
+            read: true
             write: true
-          - name: CGNPInNak
-            description: Clear Global Non-periodic IN NAK
+          - name: BblErrMsk
+            description: Babble Error Mask
             index: 8
             width: 1
-            read: false
+            read: true
             write: true
-          - name: SGNPInNak
-            description: Set Global Non-periodic IN NAK
+          - name: XactErrMsk
+            description: Transaction Error Mask
             index: 7
             width: 1
-            read: false
-            write: true
-          - name: GOUTNakSts
-            description: Global OUT NAK Status
-            index: 3
-            width: 1
-            read: true
-            write: false
-            type: USB0_DCTL_GOUTNakSts
-          - name: GNPINNakSts
-            description: Global Non-periodic IN NAK Status
-            index: 2
-            width: 1
-            read: true
-            write: false
-            type: USB0_DCTL_GNPINNakSts
-          - name: SftDiscon
-            description: Soft Disconnect
-            index: 1
-            width: 1
             read: true
             write: true
-            type: USB0_DCTL_SftDiscon
-          - name: RmtWkUpSig
-            description: Remote Wakeup Signaling
-            index: 0
-            width: 1
-            read: true
-            write: true
-      - name: DSTS
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 2056
-        const: true
-        description: (read-only) Device Status Register
-        fields:
-          - name: SOFFN
-            description: Frame Number of the Received SOF
-            index: 8
-            width: 14
-            read: true
-            write: false
-          - name: ErrticErr
-            description: Erratic Error
-            index: 3
-            width: 1
-            read: true
-            write: false
-          - name: EnumSpd
-            description: Enumerated Speed
-            index: 1
-            width: 2
-            read: true
-            write: false
-            type: USB0_DSTS_EnumSpd
-          - name: SuspSts
-            description: Suspend Status
-            index: 0
-            width: 1
-            read: true
-            write: false
-      - name: DIEPMSK
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 2064
-        description: (read-write) Device IN Endpoint Common Interrupt Mask Register
-        fields:
-          - name: NAKMsk
-            description: NAK interrupt Mask
-            index: 13
-            width: 1
-            read: true
-            write: true
-          - name: BNAInIntrMsk
-            description: BNA Interrupt Mask
-            index: 9
-            width: 1
-            read: true
-            write: true
-          - name: TxfifoUndrnMsk
-            description: Fifo Underrun Mask
-            index: 8
-            width: 1
-            read: true
-            write: true
-          - name: INEPNakEffMsk
-            description: IN Endpoint NAK Effective Mask
+          - name: NyetMsk
+            description: NYET Response Received Interrupt Mask
             index: 6
             width: 1
             read: true
             write: true
-          - name: INTknTXFEmpMsk
-            description: IN Token Received When TxFIFO Empty Mask
+          - name: AckMsk
+            description: ACK Response Received/Transmitted Interrupt Mask
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: NakMsk
+            description: NAK Response Received Interrupt Mask
             index: 4
             width: 1
             read: true
             write: true
-          - name: TimeOUTMsk
-            description: Timeout Condition Mask
+          - name: StallMsk
+            description: STALL Response Received Interrupt Mask
             index: 3
             width: 1
             read: true
@@ -1573,1068 +275,224 @@ structs:
             width: 1
             read: true
             write: true
-          - name: EPDisbldMsk
-            description: Endpoint Disabled Interrupt Mask
+          - name: ChHltdMsk
+            description: Channel Halted Mask
             index: 1
             width: 1
             read: true
             write: true
           - name: XferComplMsk
-            description: Transfer Completed Interrupt Mask
+            description: Transfer Completed Mask
             index: 0
             width: 1
             read: true
             write: true
-      - name: DOEPMSK
+      - name: HCTSIZ_BUFFERMODE
         type: uint32_t
         expected_size: 4
-        expected_offset: 2068
-        description: (read-write) Device OUT Endpoint Common Interrupt Mask Register
+        expected_offset: 16
+        description: (read-write) Host Channel Transfer Size Register [BUFFERMODE]
         fields:
-          - name: NYETMsk
-            description: NYET Interrupt Mask
-            index: 14
-            width: 1
+          - name: Pid
+            description: PID
+            index: 29
+            width: 2
             read: true
             write: true
-          - name: NAKMsk
-            description: NAK Interrupt Mask
-            index: 13
-            width: 1
+            type: USB_HCTSIZ_BUFFERMODE_Pid
+          - name: PktCnt
+            description: Packet Count
+            index: 19
+            width: 10
             read: true
             write: true
-          - name: BbleErrMsk
-            description: Babble Interrupt Mask
-            index: 12
-            width: 1
-            read: true
-            write: true
-          - name: BnaOutIntrMsk
-            description: BNA interrupt Mask
-            index: 9
-            width: 1
-            read: true
-            write: true
-          - name: OutPktErrMsk
-            description: OUT Packet Error Mask
-            index: 8
-            width: 1
-            read: true
-            write: true
-          - name: Back2BackSETup
-            description: Back-to-Back SETUP Packets Received Mask
-            index: 6
-            width: 1
-            read: true
-            write: true
-          - name: OUTTknEPdisMsk
-            description: OUT Token Received when Endpoint Disabled Mask
-            index: 4
-            width: 1
-            read: true
-            write: true
-          - name: SetUPMsk
-            description: SETUP Phase Done Mask
-            index: 3
-            width: 1
-            read: true
-            write: true
-          - name: AHBErrMsk
-            description: AHB Error
-            index: 2
-            width: 1
-            read: true
-            write: true
-          - name: EPDisbldMsk
-            description: Endpoint Disabled Interrupt Mask
-            index: 1
-            width: 1
-            read: true
-            write: true
-          - name: XferComplMsk
-            description: Transfer Completed Interrupt Mask
+          - name: XferSize
+            description: Transfer Size
             index: 0
-            width: 1
+            width: 19
             read: true
             write: true
-      - name: DAINT
+        alternates:
+          - name: HCTSIZ_SCATGATHER
+            description: (read-write) Host Channel Transfer Size Register [SCATGATHER]
+            fields:
+              - name: Pid
+                description: PID
+                index: 29
+                width: 2
+                read: true
+                write: true
+                type: USB_HCTSIZ_SCATGATHER_Pid
+              - name: NTD
+                description: 'Number of Transfer Descriptors: 0=1 descriptor, 63=64
+                  descriptors, 1=2 descriptors, 3=4 descriptors, 7=8 descriptors,
+                  15=16 descriptors, 31=32 descriptors, 63=64 descriptors, '
+                index: 8
+                width: 8
+                read: true
+                write: true
+              - name: SCHED_INFO
+                description: Schedule information
+                index: 0
+                width: 8
+                read: true
+                write: true
+      - name: HCDMA_BUFFERMODE
         type: uint32_t
         expected_size: 4
-        expected_offset: 2072
+        expected_offset: 20
+        description: (read-write) Host Channel DMA Address Register [BUFFERMODE]
+        fields:
+          - name: DMAAddr
+            description: DMA Address
+            index: 0
+            width: 32
+            read: true
+            write: true
+        alternates:
+          - name: HCDMA_SCATGATHER
+            description: (read-write) Host Channel DMA Address Register [SCATGATHER]
+            fields:
+              - name: DMAAddr
+                description: DMA Address
+                index: 9
+                width: 23
+                read: true
+                write: true
+              - name: CTD
+                description: 'Current Transfer Desc:'
+                index: 3
+                width: 6
+                read: true
+                write: true
+                type: USB_HCDMA_SCATGATHER_CTD
+      - name: HCDMAB
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 28
         const: true
-        description: (read-only) Device All Endpoints Interrupt Register
+        description: (read-only) Host Channel DMA Buffer Address Register
         fields:
-          - name: OutEPInt
-            description: OUT Endpoint Interrupt Bits
-            index: 16
-            width: 16
+          - name: Buffer_Address
+            description: Buffer Address
+            index: 0
+            width: 32
             read: true
             write: false
-          - name: InEpInt
-            description: IN Endpoint Interrupt Bits
-            index: 0
-            width: 16
-            read: true
-            write: false
-      - name: DAINTMSK
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 2076
-        description: (read-write) Device All Endpoints Interrupt Mask Register
-        fields:
-          - name: OutEpMsk
-            description: OUT EP Interrupt Mask Bits
-            index: 16
-            width: 16
-            read: true
-            write: true
-          - name: InEpMsk
-            description: IN EP Interrupt Mask Bits
-            index: 0
-            width: 16
-            read: true
-            write: true
-      - name: DVBUSDIS
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 2088
-        description: (read-write) Device VBUS Discharge Time Register
-        fields:
-          - name: DVBUSDis
-            description: Device Vbus Discharge Time
-            index: 0
-            width: 16
-            read: true
-            write: true
-      - name: DVBUSPULSE
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 2092
-        description: (read-write) Device VBUS Pulsing Time Register
-        fields:
-          - name: DVBUSPulse
-            description: Device Vbus Pulsing Time
-            index: 0
-            width: 12
-            read: true
-            write: true
-      - name: DIEPEMPMSK
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 2100
-        description: (read-write) Device IN Endpoint FIFO Empty Interrupt Mask Register
-        fields:
-          - name: InEpTxfEmpMsk
-            description: IN EP Tx FIFO Empty Interrupt Mask Bits
-            index: 0
-            width: 16
-            read: true
-            write: true
-      - name: PCGCCTL
-        type: uint32_t
-        expected_size: 4
-        expected_offset: 3584
-        description: (read-write) Power and Clock Gating Control Register
-        fields:
-          - name: GateHclk
-            description: Gate Hclk
-            index: 1
-            width: 1
-            read: true
-            write: true
-          - name: StopPclk
-            description: Stop Pclk
-            index: 0
-            width: 1
-            read: true
-            write: true
     stream: false
     codec: false
     methods: false
     unit_test: false
 enums:
-  USB0_GOTGCTL_OTGVer:
+  USB_HCCHAR_ChEna:
     enum:
       value1:
-        description: OTG Version 1.3. In this version the core supports Data line
-          pulsing and VBus pulsing for SRP.
+        description: 'Scatter/Gather mode enabled: Indicates that the descriptor structure
+          is not yet ready. Scatter/Gather mode disabled: Channel disabled'
         value: 0
       value2:
-        description: OTG Version 2.0. In this version the core supports only Data
-          line pulsing for SRP.
+        description: 'Scatter/Gather mode enabled: Indicates that the descriptor structure
+          and data buffer with data is setup and this channel can access the descriptor.
+          Scatter/Gather mode disabled: Channel enabled'
         value: 1
     unit_test: false
     json: false
     use_map: false
-  USB0_GOTGCTL_BSesVld:
+  USB_HCCHAR_OddFrm:
     enum:
       value1:
-        description: B-session is not valid.
+        description: Even frame
         value: 0
       value2:
-        description: B-session is valid.
+        description: Odd frame
         value: 1
     unit_test: false
     json: false
     use_map: false
-  USB0_GOTGCTL_ASesVId:
+  USB_HCCHAR_MC_EC:
     enum:
-      value1:
-        description: A-session is not valid
-        value: 0
       value2:
-        description: A-session is valid
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GOTGCTL_DbncTime:
-    enum:
-      value1:
-        description: Long debounce time, used for physical connections (100 ms + 2.5
-          us)
-        value: 0
-      value2:
-        description: Short debounce time, used for soft connections (2.5 us)
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GOTGCTL_ConlDSts:
-    enum:
-      value1:
-        description: The USB core is in A-Device mode
-        value: 0
-      value2:
-        description: The USB core is in B-Device mode
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GOTGCTL_DevHNPEn:
-    enum:
-      value1:
-        description: HNP is not enabled in the application
-        value: 0
-      value2:
-        description: HNP is enabled in the application
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GOTGCTL_HstSetHNPEn:
-    enum:
-      value1:
-        description: Host Set HNP is not enabled
-        value: 0
-      value2:
-        description: Host Set HNP is enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GOTGCTL_HNPReq:
-    enum:
-      value1:
-        description: No HNP request
-        value: 0
-      value2:
-        description: HNP request
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GOTGCTL_HstNegScs:
-    enum:
-      value1:
-        description: Host negotiation failure
-        value: 0
-      value2:
-        description: Host negotiation success
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GOTGCTL_BvalidOvVal:
-    enum:
-      value1:
-        description: Bvalid value is 0# when GOTGCTL.BvalidOvEn = 1
-        value: 0
-      value2:
-        description: Bvalid value is 1# when GOTGCTL.BvalidOvEn = 1
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GOTGCTL_BvalidOvEn:
-    enum:
-      value1:
-        description: Override is disabled and Bvalid signal from the PHY is used internally
-          by the core.
-        value: 0
-      value2:
-        description: Internally Bvalid received from the PHY is overridden with GOTGCTL.BvalidOvVal.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GOTGCTL_AvalidOvVal:
-    enum:
-      value1:
-        description: Avalid value is 0# when GOTGCTL.AvalidOvEn = 1
-        value: 0
-      value2:
-        description: Avalid value is 1# when GOTGCTL.AvalidOvEn = 1
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GOTGCTL_AvalidOvEn:
-    enum:
-      value1:
-        description: Override is disabled and Avalid signal from the PHY is used internally
-          by the core.
-        value: 0
-      value2:
-        description: Internally Avalid received from the PHY is overridden with GOTGCTL.AvalidOvVal.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GOTGCTL_VbvalidOvVal:
-    enum:
-      value1:
-        description: vbusvalid value is 0# when GOTGCTL.VbvalidOvEn = 1
-        value: 0
-      value2:
-        description: vbusvalid value is 1# when GOTGCTL.VbvalidOvEn = 1
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GOTGCTL_VbvalidOvEn:
-    enum:
-      value1:
-        description: Override is disabled and vbus valid signal from the PHY is used
-          internally by the core.
-        value: 0
-      value2:
-        description: Internally vbus valid received from the PHY is overridden with
-          GOTGCTL.VbvalidOvVal.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GOTGCTL_SesReq:
-    enum:
-      value1:
-        description: No session request
-        value: 0
-      value2:
-        description: Session request
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GOTGCTL_SesReqScs:
-    enum:
-      value1:
-        description: Session request failure
-        value: 0
-      value2:
-        description: Session request success
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GAHBCFG_AHBSingle:
-    enum:
-      value1:
-        description: The remaining data in a transfer is sent using INCR burst size.
-          This is the default mode.
-        value: 0
-      value2:
-        description: The remaining data in a transfer is sent using single burst size.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GAHBCFG_PTxFEmpLvl:
-    enum:
-      value1:
-        description: GINTSTS.PTxFEmp interrupt indicates that the Periodic TxFIFO
-          is half empty
-        value: 0
-      value2:
-        description: GINTSTS.PTxFEmp interrupt indicates that the Periodic TxFIFO
-          is completely empty
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GAHBCFG_NPTxFEmpLvl:
-    enum:
-      value1:
-        description: DIEPINTx.TxFEmp interrupt indicates that the IN Endpoint TxFIFO
-          is half empty
-        value: 0
-      value2:
-        description: DIEPINTx.TxFEmp interrupt indicates that the IN Endpoint TxFIFO
-          is completely empty
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GAHBCFG_DMAEn:
-    enum:
-      value1:
-        description: Core operates in Slave mode
-        value: 0
-      value2:
-        description: Core operates in a DMA mode
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GAHBCFG_HBstLen:
-    enum:
-      value1:
-        description: Single
-        value: 0
-      value2:
-        description: INCR
+        description: 1 transaction
         value: 1
       value3:
-        description: INCR4
-        value: 3
-      value4:
-        description: INCR8
-        value: 5
-      value5:
-        description: INCR16
-        value: 7
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GAHBCFG_GlblIntrMsk:
-    enum:
-      value1:
-        description: Mask the interrupt assertion to the application.
-        value: 0
-      value2:
-        description: Unmask the interrupt assertion to the application.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GUSBCFG_ForceDevMode:
-    enum:
-      value1:
-        description: Normal Mode
-        value: 0
-      value2:
-        description: Force Device Mode
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GUSBCFG_ForceHstMode:
-    enum:
-      value1:
-        description: Normal Mode
-        value: 0
-      value2:
-        description: Force Host Mode
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GUSBCFG_TxEndDelay:
-    enum:
-      value1:
-        description: Normal mode
-        value: 0
-      value2:
-        description: Introduce Tx end delay timers
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GUSBCFG_OtgI2CSel:
-    enum:
-      value1:
-        description: UTMI USB 1.1 Full-Speed interface for OTG signals
-        value: 0
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GUSBCFG_HNPCap:
-    enum:
-      value1:
-        description: HNP capability is not enabled.
-        value: 0
-      value2:
-        description: HNP capability is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GUSBCFG_SRPCap:
-    enum:
-      value1:
-        description: SRP capability is not enabled.
-        value: 0
-      value2:
-        description: SRP capability is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GUSBCFG_PHYSel:
-    enum:
-      value2:
-        description: USB 1.1 full-speed serial transceiver
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GRSTCTL_TxFNum:
-    enum:
-      value1:
-        description: Non-periodic TxFIFO flush in Host mode or Tx FIFO 0 flush in
-          device mode
-        value: 0
-      value2:
-        description: Periodic TxFIFO flush in Host mode or Tx FIFO 1 flush in device
-          mode
-        value: 1
-      value3:
-        description: Tx FIFO 2 flush in device mode
+        description: 2 transactions to be issued for this endpoint per frame
         value: 2
       value4:
-        description: Tx FIFO 15 flush in device mode
-        value: 15
-      value5:
-        description: Flush all the transmit FIFOs in device or host mode.
-        value: 16
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GINTSTS_HOSTMODE_CurMod:
-    enum:
-      value1:
-        description: Device mode
-        value: 0
-      value2:
-        description: Host mode
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GINTSTS_DEVICEMODE_CurMod:
-    enum:
-      value1:
-        description: Device mode
-        value: 0
-      value2:
-        description: Host mode
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GRXSTSR_HOSTMODE_PktSts:
-    enum:
-      value1:
-        description: IN data packet received
-        value: 2
-      value2:
-        description: IN transfer completed (triggers an interrupt)
+        description: 3 transactions to be issued for this endpoint per frame
         value: 3
-      value3:
-        description: Data toggle error (triggers an interrupt)
-        value: 5
-      value4:
-        description: Channel halted (triggers an interrupt)
-        value: 7
     unit_test: false
     json: false
     use_map: false
-  USB0_GRXSTSR_HOSTMODE_DPID:
+  USB_HCCHAR_EPType:
+    enum:
+      value1:
+        description: Control
+        value: 0
+      value2:
+        description: Isochronous
+        value: 1
+      value3:
+        description: Bulk
+        value: 2
+      value4:
+        description: Interrupt
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  USB_HCCHAR_EPDir:
+    enum:
+      value1:
+        description: OUT
+        value: 0
+      value2:
+        description: IN
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  USB_HCTSIZ_BUFFERMODE_Pid:
     enum:
       value1:
         description: DATA0
         value: 0
       value2:
-        description: DATA1
-        value: 2
-      value3:
         description: DATA2
         value: 1
-      value4:
-        description: MDATA
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GRXSTSR_DEVICEMODE_PktSts:
-    enum:
-      value1:
-        description: Global OUT NAK (triggers an interrupt)
-        value: 1
-      value2:
-        description: OUT data packet received
-        value: 2
       value3:
-        description: OUT transfer completed (triggers an interrupt)
-        value: 3
+        description: DATA1
+        value: 2
       value4:
-        description: SETUP transaction completed (triggers an interrupt)
-        value: 4
-      value5:
-        description: SETUP data packet received
-        value: 6
+        description: MDATA (non-control)/SETUP (control)
+        value: 3
     unit_test: false
     json: false
     use_map: false
-  USB0_GRXSTSR_DEVICEMODE_DPID:
+  USB_HCTSIZ_SCATGATHER_Pid:
     enum:
       value1:
         description: DATA0
         value: 0
       value2:
-        description: DATA1
-        value: 2
-      value3:
         description: DATA2
         value: 1
-      value4:
-        description: MDATA
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GRXSTSP_DEVICEMODE_PktSts:
-    enum:
-      value1:
-        description: Global OUT NAK (triggers an interrupt)
-        value: 1
-      value2:
-        description: OUT data packet received
-        value: 2
       value3:
-        description: OUT transfer completed (triggers an interrupt)
-        value: 3
-      value4:
-        description: SETUP transaction completed (triggers an interrupt)
-        value: 4
-      value5:
-        description: SETUP data packet received
-        value: 6
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GRXSTSP_DEVICEMODE_DPID:
-    enum:
-      value1:
-        description: DATA0
-        value: 0
-      value2:
         description: DATA1
         value: 2
-      value3:
-        description: DATA2
-        value: 1
       value4:
-        description: MDATA
+        description: MDATA (non-control)
         value: 3
     unit_test: false
     json: false
     use_map: false
-  USB0_GRXSTSP_HOSTMODE_PktSts:
+  USB_HCDMA_SCATGATHER_CTD:
     enum:
       value1:
-        description: IN data packet received
-        value: 2
-      value2:
-        description: IN transfer completed (triggers an interrupt)
-        value: 3
-      value3:
-        description: Data toggle error (triggers an interrupt)
-        value: 5
-      value4:
-        description: Channel halted (triggers an interrupt)
-        value: 7
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GRXSTSP_HOSTMODE_DPID:
-    enum:
-      value1:
-        description: DATA0
+        description: 1 descriptor
         value: 0
       value2:
-        description: DATA1
-        value: 2
-      value3:
-        description: DATA2
-        value: 1
-      value4:
-        description: MDATA
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GNPTXSTS_NPTxQTop:
-    enum:
-      value1:
-        description: IN/OUT token
-        value: 0
-      value2:
-        description: Zero-length transmit packet (device IN/host OUT)
-        value: 1
-      value4:
-        description: Channel halt command
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GNPTXSTS_NPTxQSpcAvail:
-    enum:
-      value1:
-        description: Non-periodic Transmit Request Queue is full
-        value: 0
-      value2:
-        description: 1 location available
-        value: 1
-      value3:
-        description: 2 locations available
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_GNPTXSTS_NPTxFSpcAvail:
-    enum:
-      value1:
-        description: Non-periodic TxFIFO is full
-        value: 0
-      value2:
-        description: 1 word available
-        value: 1
-      value3:
-        description: 2 words available
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    underlying: uint16_t
-  USB0_HCFG_FrListEn:
-    enum:
-      value1:
-        description: 8 Entries
-        value: 0
-      value2:
-        description: 16 Entries
-        value: 1
-      value3:
-        description: 32 Entries
-        value: 2
-      value4:
-        description: 64 Entries
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_HCFG_FSLSSupp:
-    enum:
-      value1:
-        description: FS-only, connected device can supports also only FS.
-        value: 0
-      value2:
-        description: FS-only, even if the connected device can support HS
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_HCFG_FSLSPclkSel:
-    enum:
-      value1:
-        description: PHY clock is running at 48 MHz
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_HFIR_HFIRRldCtrl:
-    enum:
-      value1:
-        description: HFIR cannot be reloaded dynamically
-        value: 0
-      value2:
-        description: HFIR can be dynamically reloaded during runtime
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_HPTXSTS_PTxQSpcAvail:
-    enum:
-      value1:
-        description: Periodic Transmit Request Queue is full
-        value: 0
-      value2:
-        description: 1 location available
-        value: 1
-      value3:
-        description: 2 locations available
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_HPTXSTS_PTxFSpcAvail:
-    enum:
-      value1:
-        description: Periodic TxFIFO is full
-        value: 0
-      value2:
-        description: 1 word available
-        value: 1
-      value3:
-        description: 2 words available
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    underlying: uint16_t
-  USB0_HPRT_PrtSpd:
-    enum:
-      value1:
-        description: Full speed
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_HPRT_PrtPwr:
-    enum:
-      value1:
-        description: Power off
-        value: 0
-      value2:
-        description: Power on
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_HPRT_PrtRst:
-    enum:
-      value1:
-        description: Port not in reset
-        value: 0
-      value2:
-        description: Port in reset
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_HPRT_PrtSusp:
-    enum:
-      value1:
-        description: Port not in Suspend mode
-        value: 0
-      value2:
-        description: Port in Suspend mode
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_HPRT_PrtRes:
-    enum:
-      value1:
-        description: No resume driven
-        value: 0
-      value2:
-        description: Resume driven
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_HPRT_PrtOvrCurrAct:
-    enum:
-      value1:
-        description: No overcurrent condition
-        value: 0
-      value2:
-        description: Overcurrent condition
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_HPRT_PrtEna:
-    enum:
-      value1:
-        description: Port disabled
-        value: 0
-      value2:
-        description: Port enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_HPRT_PrtConnSts:
-    enum:
-      value1:
-        description: No device is attached to the port.
-        value: 0
-      value2:
-        description: A device is attached to the port.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_DCFG_PerSchIntvl:
-    enum:
-      value1:
-        description: 25% of frame.
-        value: 0
-      value2:
-        description: 50% of frame.
-        value: 1
-      value3:
-        description: 75% of frame.
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_DCFG_PerFrInt:
-    enum:
-      value1:
-        description: 80% of the frame interval
-        value: 0
-      value2:
-        description: 85%
-        value: 1
-      value3:
-        description: 90%
-        value: 2
-      value4:
-        description: 95%
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_DCFG_NZStsOUTHShk:
-    enum:
-      value1:
-        description: Send a STALL handshake on a nonzero-length status OUT transaction
-          and do not send the received OUT packet to the application.
-        value: 1
-      value2:
-        description: Send the received OUT packet to the application (zero-length
-          or nonzero-length) and send a handshake based on the NAK and STALL bits
-          for the endpoint in the Device Endpoint Control register.
-        value: 0
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_DCFG_DevSpd:
-    enum:
-      value4:
-        description: Full speed (USB 1.1 transceiver clock is 48 MHz)
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_DCTL_EnContOnBNA:
-    enum:
-      value1:
-        description: After receiving BNA interrupt, the core disables the endpoint.
-          When the endpoint is re-enabled by the application, the core starts processing
-          from the DOEPDMA descriptor.
-        value: 0
-      value2:
-        description: After receiving BNA interrupt, the core disables the endpoint.
-          When the endpoint is re-enabled by the application, the core starts processing
-          from the descriptor that received the BNA interrupt.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_DCTL_IgnrFrmNum:
-    enum:
-      value1:
-        description: 'Scatter/Gather enabled: The core transmits the packets only
-          in the frame number in which they are intended to be transmitted. Scatter/Gather
-          disabled: Periodic transfer interrupt feature is disabled; the application
-          must program transfers for periodic endpoints every frame'
-        value: 0
-      value2:
-        description: 'Scatter/Gather enabled: The core ignores the frame number, sending
-          packets immediately as the packets are ready. Scatter/Gather disabled: Periodic
-          transfer interrupt feature is enabled; the application can program transfers
-          for multiple frames for periodic endpoints.'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_DCTL_GMC:
-    enum:
-      value1:
-        description: Invalid.
-        value: 0
-      value2:
-        description: 1 packet.
-        value: 1
-      value3:
-        description: 2 packets.
-        value: 2
-      value4:
-        description: 3 packets.
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_DCTL_GOUTNakSts:
-    enum:
-      value1:
-        description: A handshake is sent based on the FIFO Status and the NAK and
-          STALL bit settings.
-        value: 0
-      value2:
-        description: No data is written to the RxFIFO, irrespective of space availability.
-          Sends a NAK handshake on all packets, except on SETUP transactions. All
-          isochronous OUT packets are dropped.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_DCTL_GNPINNakSts:
-    enum:
-      value1:
-        description: A handshake is sent out based on the data availability in the
-          transmit FIFO.
-        value: 0
-      value2:
-        description: A NAK handshake is sent out on all non-periodic IN endpoints,
-          irrespective of the data availability in the transmit FIFO.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_DCTL_SftDiscon:
-    enum:
-      value1:
-        description: Normal operation. When this bit is cleared after a soft disconnect,
-          the core drives a device connect event to the USB host. When the device
-          is reconnected, the USB host restarts device enumeration.
-        value: 0
-      value2:
-        description: The core drives a device disconnect event to the USB host.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-  USB0_DSTS_EnumSpd:
-    enum:
-      value4:
-        description: Full speed (PHY clock is running at 48 MHz)
-        value: 3
+        description: 64 descriptors
+        value: 63
     unit_test: false
     json: false
     use_map: false

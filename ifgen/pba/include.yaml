@@ -20,7 +20,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: PBA0_STS_WERR
+            type: PBA_STS_WERR
       - name: WADDR
         type: uint32_t
         expected_size: 4
@@ -39,7 +39,7 @@ structs:
     methods: false
     unit_test: false
 enums:
-  PBA0_STS_WERR:
+  PBA_STS_WERR:
     enum:
       value1:
         description: no write error occurred.
