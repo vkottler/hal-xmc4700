@@ -1,31 +1,67 @@
 ---
 includes:
   - can/include.yaml
-  - ccu4/include.yaml
-  - ccu8/include.yaml
+  - can_mo/include.yaml
+  - can_node0/include.yaml
+  - ccu40/include.yaml
+  - ccu40_cc40/include.yaml
+  - ccu80/include.yaml
+  - ccu80_cc80/include.yaml
   - dac/include.yaml
   - dlr/include.yaml
   - dsd/include.yaml
+  - dsd_ch0/include.yaml
   - ebu/include.yaml
-  - eru/include.yaml
-  - eth/include.yaml
+  - eru0/include.yaml
+  - eth0/include.yaml
+  - eth0_con/include.yaml
   - fce/include.yaml
-  - flash/include.yaml
-  - gpdma/include.yaml
-  - ledts/include.yaml
-  - pba/include.yaml
-  - pmu/include.yaml
-  - ports/include.yaml
-  - posif/include.yaml
+  - fce_ke0/include.yaml
+  - flash0/include.yaml
+  - gpdma0/include.yaml
+  - gpdma0_ch0/include.yaml
+  - gpdma0_ch2/include.yaml
+  - gpdma1/include.yaml
+  - gpdma1_ch0/include.yaml
+  - ledts0/include.yaml
+  - pba0/include.yaml
+  - pmu0/include.yaml
+  - port0/include.yaml
+  - port1/include.yaml
+  - port14/include.yaml
+  - port15/include.yaml
+  - port2/include.yaml
+  - port3/include.yaml
+  - port4/include.yaml
+  - port5/include.yaml
+  - port6/include.yaml
+  - port7/include.yaml
+  - port8/include.yaml
+  - port9/include.yaml
+  - posif0/include.yaml
   - ppb/include.yaml
   - pref/include.yaml
   - rtc/include.yaml
-  - scu/include.yaml
+  - scu_clk/include.yaml
+  - scu_general/include.yaml
+  - scu_hibernate/include.yaml
+  - scu_interrupt/include.yaml
+  - scu_osc/include.yaml
+  - scu_parity/include.yaml
+  - scu_pll/include.yaml
+  - scu_power/include.yaml
+  - scu_reset/include.yaml
+  - scu_trap/include.yaml
   - sdmmc/include.yaml
   - sdmmc_con/include.yaml
-  - usb/include.yaml
-  - usic/include.yaml
+  - usb0/include.yaml
+  - usb0_ch0/include.yaml
+  - usb0_ep0/include.yaml
+  - usb0_ep1/include.yaml
+  - usic0/include.yaml
+  - usic0_ch0/include.yaml
   - vadc/include.yaml
+  - vadc_g0/include.yaml
   - wdt/include.yaml
 namespace:
   - XMC4700

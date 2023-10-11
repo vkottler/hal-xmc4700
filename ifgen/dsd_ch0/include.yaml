@@ -1,0 +1,753 @@
+---
+structs:
+  dsd_ch0:
+    description: Delta Sigma Demodulator
+    instances:
+      - name: DSD_CH0
+        address: '0x40008100'
+      - name: DSD_CH1
+        address: '0x40008200'
+      - name: DSD_CH2
+        address: '0x40008300'
+      - name: DSD_CH3
+        address: '0x40008400'
+    fields:
+      - name: MODCFG
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        description: (read-write) Modulator Configuration Register
+        fields:
+          - name: DWC
+            description: Write Control for Divider Factor
+            index: 23
+            width: 1
+            read: false
+            write: true
+            type: DSD_CH0_MODCFG_DWC
+          - name: DIVM
+            description: Divider Factor for Modulator Clock
+            index: 16
+            width: 4
+            read: true
+            write: true
+            type: DSD_CH0_MODCFG_DIVM
+      - name: DICFG
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 8
+        description: (read-write) Demodulator Input Configuration Register
+        fields:
+          - name: SCWC
+            description: Write Control for Strobe/Clock Selection
+            index: 31
+            width: 1
+            read: false
+            write: true
+            type: DSD_CH0_DICFG_SCWC
+          - name: STROBE
+            description: Data Strobe Generatoion Mode
+            index: 20
+            width: 4
+            read: true
+            write: true
+            type: DSD_CH0_DICFG_STROBE
+          - name: CSRC
+            description: Sample Clock Source Select
+            index: 16
+            width: 4
+            read: true
+            write: true
+            type: DSD_CH0_DICFG_CSRC
+          - name: TRWC
+            description: Write Control for Trigger Parameters
+            index: 15
+            width: 1
+            read: false
+            write: true
+            type: DSD_CH0_DICFG_TRWC
+          - name: TRSEL
+            description: Trigger Select
+            index: 12
+            width: 3
+            read: true
+            write: true
+          - name: TSTRMODE
+            description: Timestamp Trigger Mode
+            index: 10
+            width: 2
+            read: true
+            write: true
+            type: DSD_CH0_DICFG_TSTRMODE
+          - name: ITRMODE
+            description: Integrator Trigger Mode
+            index: 8
+            width: 2
+            read: true
+            write: true
+            type: DSD_CH0_DICFG_ITRMODE
+          - name: DSWC
+            description: Write Control for Data Selection
+            index: 7
+            width: 1
+            read: false
+            write: true
+            type: DSD_CH0_DICFG_DSWC
+          - name: DSRC
+            description: Input Data Source Select
+            index: 0
+            width: 4
+            read: true
+            write: true
+            type: DSD_CH0_DICFG_DSRC
+      - name: FCFGC
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 20
+        description: (read-write) Filter Configuration Register, Main CIC Filter
+        fields:
+          - name: CFMDCNT
+            description: CIC Filter (Main Chain) Decimation Counter
+            index: 24
+            width: 8
+            read: true
+            write: false
+          - name: CFMSV
+            description: CIC Filter (Main Chain) Start Value
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: SRGM
+            description: Service Request Generation Main Chain
+            index: 14
+            width: 2
+            read: true
+            write: true
+            type: DSD_CH0_FCFGC_SRGM
+          - name: CFEN
+            description: CIC Filter Enable
+            index: 10
+            width: 1
+            read: true
+            write: true
+            type: DSD_CH0_FCFGC_CFEN
+          - name: CFMC
+            description: CIC Filter (Main Chain) Configuration
+            index: 8
+            width: 2
+            read: true
+            write: true
+            type: DSD_CH0_FCFGC_CFMC
+          - name: CFMDF
+            description: CIC Filter (Main Chain) Decimation Factor
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: FCFGA
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 24
+        description: (read-write) Filter Configuration Register, Auxiliary Filter
+        fields:
+          - name: CFADCNT
+            description: CIC Filter (Auxiliary) Decimation Counter
+            index: 24
+            width: 8
+            read: true
+            write: false
+          - name: EGT
+            description: Event Gating
+            index: 14
+            width: 1
+            read: true
+            write: true
+            type: DSD_CH0_FCFGA_EGT
+          - name: ESEL
+            description: Event Select
+            index: 12
+            width: 2
+            read: true
+            write: true
+            type: DSD_CH0_FCFGA_ESEL
+          - name: SRGA
+            description: Service Request Generation Auxiliary Filter
+            index: 10
+            width: 2
+            read: true
+            write: true
+            type: DSD_CH0_FCFGA_SRGA
+          - name: CFAC
+            description: CIC Filter (Auxiliary) Configuration
+            index: 8
+            width: 2
+            read: true
+            write: true
+            type: DSD_CH0_FCFGA_CFAC
+          - name: CFADF
+            description: CIC Filter (Auxiliary) Decimation Factor
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: IWCTR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 32
+        description: (read-write) Integration Window Control Register
+        fields:
+          - name: NVALINT
+            description: Number of Values Integrated
+            index: 24
+            width: 6
+            read: true
+            write: true
+          - name: IWS
+            description: Integration Window SIze
+            index: 23
+            width: 1
+            read: true
+            write: true
+            type: DSD_CH0_IWCTR_IWS
+          - name: NVALDIS
+            description: Number of Values Discarded
+            index: 16
+            width: 6
+            read: true
+            write: true
+          - name: REPVAL
+            description: Number of Integration Cycles
+            index: 12
+            width: 4
+            read: true
+            write: true
+          - name: REPCNT
+            description: Integration Cycle Counter
+            index: 8
+            width: 4
+            read: true
+            write: false
+          - name: INTEN
+            description: Integration Enable
+            index: 7
+            width: 1
+            read: true
+            write: false
+            type: DSD_CH0_IWCTR_INTEN
+          - name: NVALCNT
+            description: Number of Values Counted
+            index: 0
+            width: 6
+            read: true
+            write: false
+      - name: BOUNDSEL
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 40
+        description: (read-write) Boundary Select Register
+        fields:
+          - name: BOUNDARYU
+            description: Upper Boundary Value for Limit Checking
+            index: 16
+            width: 16
+            read: true
+            write: true
+          - name: BOUNDARYL
+            description: Lower Boundary Value for Limit Checking
+            index: 0
+            width: 16
+            read: true
+            write: true
+      - name: RESM
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 48
+        const: true
+        description: (read-only) Result Register, Main Filter
+        fields:
+          - name: RESULT
+            description: Result of most recent conversion
+            index: 0
+            width: 16
+            read: true
+            write: false
+      - name: OFFM
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 56
+        description: (read-write) Offset Register, Main Filter
+        fields:
+          - name: OFFSET
+            description: Offset Value
+            index: 0
+            width: 16
+            read: true
+            write: true
+      - name: RESA
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 64
+        const: true
+        description: (read-only) Result Register, Auxiliary Filter
+        fields:
+          - name: RESULT
+            description: Result of most recent conversion
+            index: 0
+            width: 16
+            read: true
+            write: false
+      - name: TSTMP
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 80
+        const: true
+        description: (read-only) Time-Stamp Register
+        fields:
+          - name: NVALCNT
+            description: Number of Values Counted
+            index: 24
+            width: 6
+            read: true
+            write: false
+          - name: CFMDCNT
+            description: CIC Filter (Main Chain) Decimation Counter
+            index: 16
+            width: 8
+            read: true
+            write: false
+          - name: RESULT
+            description: Result of most recent conversion
+            index: 0
+            width: 16
+            read: true
+            write: false
+      - name: CGSYNC
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 160
+        description: (read-write) Carrier Generator Synchronization Register
+        fields:
+          - name: SDNEG
+            description: Sign Delay Value for Negative Halfwave
+            index: 24
+            width: 8
+            read: true
+            write: true
+          - name: SDPOS
+            description: Sign Delay Value for Positive Halfwave
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: SDCAP
+            description: Sign Delay Capture Value
+            index: 8
+            width: 8
+            read: true
+            write: false
+          - name: SDCOUNT
+            description: Sign Delay Counter
+            index: 0
+            width: 8
+            read: true
+            write: false
+      - name: RECTCFG
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 168
+        description: (read-write) Rectification Configuration Register
+        fields:
+          - name: SGND
+            description: Sign Signal Delayed
+            index: 31
+            width: 1
+            read: true
+            write: false
+            type: DSD_CH0_RECTCFG_SGND
+          - name: SGNCS
+            description: Selected Carrier Sign Signal
+            index: 30
+            width: 1
+            read: true
+            write: false
+            type: DSD_CH0_RECTCFG_SGNCS
+          - name: SDVAL
+            description: Valid Flag
+            index: 15
+            width: 1
+            read: true
+            write: false
+            type: DSD_CH0_RECTCFG_SDVAL
+          - name: SSRC
+            description: Sign Source
+            index: 4
+            width: 2
+            read: true
+            write: true
+            type: DSD_CH0_RECTCFG_SSRC
+          - name: RFEN
+            description: Rectification Enable
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: DSD_CH0_RECTCFG_RFEN
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums:
+  DSD_CH0_MODCFG_DWC:
+    enum:
+      value1:
+        description: No write access to divider factor
+        value: 0
+      value2:
+        description: Bitfield DIVM can be written
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_MODCFG_DIVM:
+    enum:
+      value1:
+        description: fMOD = fCLK / 2
+        value: 0
+      value2:
+        description: fMOD = fCLK / 4
+        value: 1
+      value3:
+        description: fMOD = fCLK / 6
+        value: 2
+      value4:
+        description: fMOD = fCLK / 32
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_DICFG_SCWC:
+    enum:
+      value1:
+        description: No write access to strobe/clock parameters
+        value: 0
+      value2:
+        description: Bitfields STROBE, CSRC can be written
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_DICFG_STROBE:
+    enum:
+      value1:
+        description: No data strobe
+        value: 0
+      value2:
+        description: Direct clock, a sample trigger is generated at each rising clock
+          edge
+        value: 1
+      value3:
+        description: Direct clock, a sample trigger is generated at each falling clock
+          edge
+        value: 2
+      value4:
+        description: Double data, a sample trigger is generated at each rising and
+          falling clock edge
+        value: 3
+      value6:
+        description: Double clock, a sample trigger is generated at every 2nd rising
+          clock edge
+        value: 5
+      value7:
+        description: Double clock, a sample trigger is generated at every 2nd falling
+          clock edge
+        value: 6
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_DICFG_CSRC:
+    enum:
+      value2:
+        description: External, from input A
+        value: 1
+      value3:
+        description: External, from input B
+        value: 2
+      value4:
+        description: External, from input C
+        value: 3
+      value5:
+        description: External, from input D
+        value: 4
+      value6:
+        description: Internal clock
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_DICFG_TRWC:
+    enum:
+      value1:
+        description: No write access to trigger parameters
+        value: 0
+      value2:
+        description: Bitfields TRSEL, TSTRMODE, ITRMODE can be written
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_DICFG_TSTRMODE:
+    enum:
+      value1:
+        description: No timestamp trigger
+        value: 0
+      value2:
+        description: Trigger event upon a falling edge
+        value: 1
+      value3:
+        description: Trigger event upon a rising edge
+        value: 2
+      value4:
+        description: Trigger event upon each edge
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_DICFG_ITRMODE:
+    enum:
+      value1:
+        description: No integration trigger, integrator bypassed, INTEN = 0 all the
+          time
+        value: 0
+      value2:
+        description: Trigger event upon a falling edge
+        value: 1
+      value3:
+        description: Trigger event upon a rising edge
+        value: 2
+      value4:
+        description: No trigger, integrator active all the time, INTEN = 1 all the
+          time
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_DICFG_DSWC:
+    enum:
+      value1:
+        description: No write access to data parameters
+        value: 0
+      value2:
+        description: Bitfield DSRC can be written
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_DICFG_DSRC:
+    enum:
+      value1:
+        description: Disconnected
+        value: 1
+      value2:
+        description: External, from input A, direct
+        value: 2
+      value3:
+        description: External, from input A, inverted
+        value: 3
+      value4:
+        description: External, from input B, direct
+        value: 4
+      value5:
+        description: External, from input B, inverted
+        value: 5
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_FCFGC_SRGM:
+    enum:
+      value1:
+        description: Never, service requests disabled
+        value: 0
+      value4:
+        description: Always, for each new result value
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_FCFGC_CFEN:
+    enum:
+      value1:
+        description: CIC filter disabled and bypassed
+        value: 0
+      value2:
+        description: Enable CIC filter
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_FCFGC_CFMC:
+    enum:
+      value1:
+        description: CIC1
+        value: 0
+      value2:
+        description: CIC2
+        value: 1
+      value3:
+        description: CIC3
+        value: 2
+      value4:
+        description: CICF
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_FCFGA_EGT:
+    enum:
+      value1:
+        description: 'Separate: generate events according to ESEL'
+        value: 0
+      value2:
+        description: 'Coupled: generate events only when the integrator is enabled
+          and after the discard phase defined by bitfield NVALDISWhile the integrator
+          is bypassed, event gating is disabled, i.e. service requests are generated
+          according to bitfield ESEL. The event gating suppresses service requests,
+          result values are still stored in register RESAx.'
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_FCFGA_ESEL:
+    enum:
+      value1:
+        description: Always, for each new result value
+        value: 0
+      value2:
+        description: If result is inside the boundary band
+        value: 1
+      value3:
+        description: If result is outside the boundary band
+        value: 2
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_FCFGA_SRGA:
+    enum:
+      value1:
+        description: Never, service requests disabled
+        value: 0
+      value2:
+        description: 'Auxiliary filter: As selected by bitfields ESEL and EGT (if
+          integrator enabled)'
+        value: 1
+      value3:
+        description: 'Alternate source: Capturing of a sign delay value to register
+          CGSYNCx (x = 0 - 3)'
+        value: 2
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_FCFGA_CFAC:
+    enum:
+      value1:
+        description: CIC1
+        value: 0
+      value2:
+        description: CIC2
+        value: 1
+      value3:
+        description: CIC3
+        value: 2
+      value4:
+        description: CICF
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_IWCTR_IWS:
+    enum:
+      value1:
+        description: 'Internal control: stop integrator after REPVAL+1 integration
+          cycles'
+        value: 0
+      value2:
+        description: 'External control: stop integrator when bit INTEN becomes 0'
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_IWCTR_INTEN:
+    enum:
+      value1:
+        description: Integration stopped. INTEN is cleared at the end of the integration
+          window, i.e. upon the inverse trigger event transition of the external trigger
+          signal.
+        value: 0
+      value2:
+        description: Integration enabled. INTEN is set upon the defined trigger event.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_RECTCFG_SGND:
+    enum:
+      value1:
+        description: Positive values
+        value: 0
+      value2:
+        description: Negative values
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_RECTCFG_SGNCS:
+    enum:
+      value1:
+        description: Positive values
+        value: 0
+      value2:
+        description: Negative values
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_RECTCFG_SDVAL:
+    enum:
+      value1:
+        description: No new result available
+        value: 0
+      value2:
+        description: Bitfield SDCAP has been updated with a new captured value and
+          has not yet been read
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_RECTCFG_SSRC:
+    enum:
+      value1:
+        description: On-chip carrier generator
+        value: 0
+      value2:
+        description: Sign of result of next channel
+        value: 1
+      value3:
+        description: External sign signal A
+        value: 2
+      value4:
+        description: External sign signal B
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  DSD_CH0_RECTCFG_RFEN:
+    enum:
+      value1:
+        description: No rectification, data not altered
+        value: 0
+      value2:
+        description: Data are rectified according to SGND
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false

@@ -1,0 +1,4033 @@
+---
+structs:
+  eth0:
+    description: Ethernet Unit 0
+    instances:
+      - name: ETH0
+        address: '0x5000C000'
+    fields:
+      - name: MAC_CONFIGURATION
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        description: (read-write) MAC Configuration Register
+        fields:
+          - name: SARC
+            description: Source Address Insertion or Replacement Control
+            index: 28
+            width: 3
+            read: true
+            write: false
+          - name: TWOKPE
+            description: IEEE 802.3as support for 2K packets Enable
+            index: 27
+            width: 1
+            read: true
+            write: true
+          - name: CST
+            description: CRC Stripping of Type Frames
+            index: 25
+            width: 1
+            read: true
+            write: true
+          - name: TC
+            description: Transmit Configuration in RMII
+            index: 24
+            width: 1
+            read: true
+            write: false
+          - name: WD
+            description: Watchdog Disable
+            index: 23
+            width: 1
+            read: true
+            write: true
+          - name: JD
+            description: Jabber Disable
+            index: 22
+            width: 1
+            read: true
+            write: true
+          - name: BE
+            description: Frame Burst Enable
+            index: 21
+            width: 1
+            read: true
+            write: false
+          - name: JE
+            description: Jumbo Frame Enable
+            index: 20
+            width: 1
+            read: true
+            write: true
+          - name: IFG
+            description: Inter-Frame Gap
+            index: 17
+            width: 3
+            read: true
+            write: true
+          - name: DCRS
+            description: Disable Carrier Sense During Transmission
+            index: 16
+            width: 1
+            read: true
+            write: true
+          - name: FES
+            description: Speed
+            index: 14
+            width: 1
+            read: true
+            write: true
+          - name: DO
+            description: Disable Receive Own
+            index: 13
+            width: 1
+            read: true
+            write: true
+          - name: LM
+            description: Loopback Mode
+            index: 12
+            width: 1
+            read: true
+            write: true
+          - name: DM
+            description: Duplex Mode
+            index: 11
+            width: 1
+            read: true
+            write: true
+          - name: IPC
+            description: Checksum Offload
+            index: 10
+            width: 1
+            read: true
+            write: true
+          - name: DR
+            description: Disable Retry
+            index: 9
+            width: 1
+            read: true
+            write: true
+          - name: ACS
+            description: Automatic Pad or CRC Stripping
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: BL
+            description: Back-Off Limit
+            index: 5
+            width: 2
+            read: true
+            write: true
+          - name: DC
+            description: Deferral Check
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: TE
+            description: Transmitter Enable
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: RE
+            description: Receiver Enable
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: PRELEN
+            description: Preamble Length for Transmit Frames
+            index: 0
+            width: 2
+            read: true
+            write: true
+      - name: MAC_FRAME_FILTER
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4
+        description: (read-write) MAC Frame Filter
+        fields:
+          - name: RA
+            description: Receive All
+            index: 31
+            width: 1
+            read: true
+            write: true
+          - name: DNTU
+            description: Drop non-TCP/UDP over IP Frames
+            index: 21
+            width: 1
+            read: true
+            write: false
+          - name: IPFE
+            description: Layer 3 and Layer 4 Filter Enable
+            index: 20
+            width: 1
+            read: true
+            write: false
+          - name: VTFE
+            description: VLAN Tag Filter Enable
+            index: 16
+            width: 1
+            read: true
+            write: true
+          - name: HPF
+            description: Hash or Perfect Filter
+            index: 10
+            width: 1
+            read: true
+            write: true
+          - name: SAF
+            description: Source Address Filter Enable
+            index: 9
+            width: 1
+            read: true
+            write: true
+          - name: SAIF
+            description: SA Inverse Filtering
+            index: 8
+            width: 1
+            read: true
+            write: true
+          - name: PCF
+            description: Pass Control Frames
+            index: 6
+            width: 2
+            read: true
+            write: true
+          - name: DBF
+            description: Disable Broadcast Frames
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: PM
+            description: Pass All Multicast
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: DAIF
+            description: DA Inverse Filtering
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: HMC
+            description: Hash Multicast
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: HUC
+            description: Hash Unicast
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: PR
+            description: Promiscuous Mode
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: HASH_TABLE_HIGH
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 8
+        description: (read-write) Hash Table High Register
+        fields:
+          - name: HTH
+            description: Hash Table High
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: HASH_TABLE_LOW
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 12
+        description: (read-write) Hash Table Low Register
+        fields:
+          - name: HTL
+            description: Hash Table Low
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: GMII_ADDRESS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 16
+        description: (read-write) MII Address Register
+        fields:
+          - name: PA
+            description: Physical Layer Address
+            index: 11
+            width: 5
+            read: true
+            write: true
+          - name: MR
+            description: MII Register
+            index: 6
+            width: 5
+            read: true
+            write: true
+          - name: CR
+            description: CSR Clock Range
+            index: 2
+            width: 4
+            read: true
+            write: true
+          - name: MW
+            description: MII Write
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: MB
+            description: MII Busy
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: GMII_DATA
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 20
+        description: (read-write) MII Data Register
+        fields:
+          - name: MD
+            description: MII Data
+            index: 0
+            width: 16
+            read: true
+            write: true
+      - name: FLOW_CONTROL
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 24
+        description: (read-write) Flow Control Register
+        fields:
+          - name: PT
+            description: Pause Time
+            index: 16
+            width: 16
+            read: true
+            write: true
+          - name: DZPQ
+            description: Disable Zero-Quanta Pause
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: PLT
+            description: Pause Low Threshold
+            index: 4
+            width: 2
+            read: true
+            write: true
+          - name: UP
+            description: Unicast Pause Frame Detect
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: RFE
+            description: Receive Flow Control Enable
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: TFE
+            description: Transmit Flow Control Enable
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: FCA_BPA
+            description: Flow Control Busy or Backpressure Activate
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: VLAN_TAG
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 28
+        description: (read-write) VLAN Tag Register
+        fields:
+          - name: VTHM
+            description: VLAN Tag Hash Table Match Enable
+            index: 19
+            width: 1
+            read: true
+            write: false
+          - name: ESVL
+            description: Enable S-VLAN
+            index: 18
+            width: 1
+            read: true
+            write: true
+          - name: VTIM
+            description: VLAN Tag Inverse Match Enable
+            index: 17
+            width: 1
+            read: true
+            write: true
+          - name: ETV
+            description: Enable 12-Bit VLAN Tag Comparison
+            index: 16
+            width: 1
+            read: true
+            write: true
+          - name: VL
+            description: VLAN Tag Identifier for Receive Frames
+            index: 0
+            width: 16
+            read: true
+            write: true
+      - name: VERSION
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 32
+        const: true
+        description: (read-only) Version Register
+        fields:
+          - name: USERVER
+            description: User-defined Version (Configured with the coreConsultant)
+            index: 8
+            width: 8
+            read: true
+            write: false
+          - name: SNPSVER
+            description: Synopsys-defined Version (3.7)
+            index: 0
+            width: 8
+            read: true
+            write: false
+      - name: DEBUG
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 36
+        const: true
+        description: (read-only) Debug Register
+        fields:
+          - name: TXSTSFSTS
+            description: MTL TxStatus FIFO Full Status
+            index: 25
+            width: 1
+            read: true
+            write: false
+          - name: TXFSTS
+            description: MTL Tx FIFO Not Empty Status
+            index: 24
+            width: 1
+            read: true
+            write: false
+          - name: TWCSTS
+            description: MTL Tx FIFO Write Controller Active Status
+            index: 22
+            width: 1
+            read: true
+            write: false
+          - name: TRCSTS
+            description: MTL Tx FIFO Read Controller Status
+            index: 20
+            width: 2
+            read: true
+            write: false
+          - name: TXPAUSED
+            description: MAC transmitter in PAUSE
+            index: 19
+            width: 1
+            read: true
+            write: false
+          - name: TFCSTS
+            description: MAC Transmit Frame Controller Status
+            index: 17
+            width: 2
+            read: true
+            write: false
+          - name: TPESTS
+            description: MAC MII Transmit Protocol Engine Status
+            index: 16
+            width: 1
+            read: true
+            write: false
+          - name: RXFSTS
+            description: MTL Rx FIFO Fill-level Status
+            index: 8
+            width: 2
+            read: true
+            write: false
+          - name: RRCSTS
+            description: MTL Rx FIFO Read Controller State
+            index: 5
+            width: 2
+            read: true
+            write: false
+          - name: RWCSTS
+            description: MTL Rx FIFO Write Controller Active Status
+            index: 4
+            width: 1
+            read: true
+            write: false
+          - name: RFCFCSTS
+            description: MAC Receive Frame Controller FIFO Status
+            index: 1
+            width: 2
+            read: true
+            write: false
+          - name: RPESTS
+            description: MAC MII Receive Protocol Engine Status
+            index: 0
+            width: 1
+            read: true
+            write: false
+      - name: REMOTE_WAKE_UP_FRAME_FILTER
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 40
+        description: (read-write) Remote Wake Up Frame Filter Register
+        fields:
+          - name: WKUPFRMFTR
+            description: Remote Wake-Up Frame Filter
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: PMT_CONTROL_STATUS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 44
+        description: (read-write) PMT Control and Status Register
+        fields:
+          - name: RWKFILTRST
+            description: Wake-Up Frame Filter Register Pointer Reset
+            index: 31
+            width: 1
+            read: true
+            write: true
+          - name: GLBLUCAST
+            description: Global Unicast
+            index: 9
+            width: 1
+            read: true
+            write: true
+          - name: RWKPRCVD
+            description: Wake-Up Frame Received
+            index: 6
+            width: 1
+            read: true
+            write: false
+          - name: MGKPRCVD
+            description: Magic Packet Received
+            index: 5
+            width: 1
+            read: true
+            write: false
+          - name: RWKPKTEN
+            description: Wake-Up Frame Enable
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: MGKPKTEN
+            description: Magic Packet Enable
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: PWRDWN
+            description: Power Down
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: INTERRUPT_STATUS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 56
+        const: true
+        description: (read-only) Interrupt Register
+        fields:
+          - name: TSIS
+            description: Timestamp Interrupt Status
+            index: 9
+            width: 1
+            read: true
+            write: false
+          - name: MMCRXIPIS
+            description: MMC Receive Checksum Offload Interrupt Status
+            index: 7
+            width: 1
+            read: true
+            write: false
+          - name: MMCTXIS
+            description: MMC Transmit Interrupt Status
+            index: 6
+            width: 1
+            read: true
+            write: false
+          - name: MMCRXIS
+            description: MMC Receive Interrupt Status
+            index: 5
+            width: 1
+            read: true
+            write: false
+          - name: MMCIS
+            description: MMC Interrupt Status
+            index: 4
+            width: 1
+            read: true
+            write: false
+          - name: PMTIS
+            description: PMT Interrupt Status
+            index: 3
+            width: 1
+            read: true
+            write: false
+      - name: INTERRUPT_MASK
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 60
+        description: (read-write) Interrupt Mask Register
+        fields:
+          - name: TSIM
+            description: Timestamp Interrupt Mask
+            index: 9
+            width: 1
+            read: true
+            write: true
+          - name: PMTIM
+            description: PMT Interrupt Mask
+            index: 3
+            width: 1
+            read: true
+            write: true
+      - name: MAC_ADDRESS0_HIGH
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 64
+        description: (read-write) MAC Address0 High Register
+        fields:
+          - name: AE
+            description: Address Enable
+            index: 31
+            width: 1
+            read: true
+            write: false
+          - name: ADDRHI
+            description: MAC Address0 [47:32]
+            index: 0
+            width: 16
+            read: true
+            write: true
+      - name: MAC_ADDRESS0_LOW
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 68
+        description: (read-write) MAC Address0 Low Register
+        fields:
+          - name: ADDRLO
+            description: MAC Address0 [31:0]
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: MAC_ADDRESS1_HIGH
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 72
+        description: (read-write) MAC Address1 High Register
+        fields:
+          - name: AE
+            description: Address Enable
+            index: 31
+            width: 1
+            read: true
+            write: true
+          - name: SA
+            description: Source Address
+            index: 30
+            width: 1
+            read: true
+            write: true
+          - name: MBC
+            description: Mask Byte Control
+            index: 24
+            width: 6
+            read: true
+            write: true
+          - name: ADDRHI
+            description: MAC Address1 [47:32]
+            index: 0
+            width: 16
+            read: true
+            write: true
+      - name: MAC_ADDRESS1_LOW
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 76
+        description: (read-write) MAC Address1 Low Register
+        fields:
+          - name: ADDRLO
+            description: MAC Address1 [31:0]
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: MAC_ADDRESS2_HIGH
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 80
+        description: (read-write) MAC Address2 High Register
+        fields:
+          - name: AE
+            description: Address Enable
+            index: 31
+            width: 1
+            read: true
+            write: true
+          - name: SA
+            description: Source Address
+            index: 30
+            width: 1
+            read: true
+            write: true
+          - name: MBC
+            description: Mask Byte Control
+            index: 24
+            width: 6
+            read: true
+            write: true
+          - name: ADDRHI
+            description: MAC Address2 [47:32]
+            index: 0
+            width: 16
+            read: true
+            write: true
+      - name: MAC_ADDRESS2_LOW
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 84
+        description: (read-write) MAC Address2 Low Register
+        fields:
+          - name: ADDRLO
+            description: MAC Address2 [31:0]
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: MAC_ADDRESS3_HIGH
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 88
+        description: (read-write) MAC Address3 High Register
+        fields:
+          - name: AE
+            description: Address Enable
+            index: 31
+            width: 1
+            read: true
+            write: true
+          - name: SA
+            description: Source Address
+            index: 30
+            width: 1
+            read: true
+            write: true
+          - name: MBC
+            description: Mask Byte Control
+            index: 24
+            width: 6
+            read: true
+            write: true
+          - name: ADDRHI
+            description: MAC Address3 [47:32]
+            index: 0
+            width: 16
+            read: true
+            write: true
+      - name: MAC_ADDRESS3_LOW
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 92
+        description: (read-write) MAC Address3 Low Register
+        fields:
+          - name: ADDRLO
+            description: MAC Address3 [31:0]
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: MMC_CONTROL
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 256
+        description: (read-write) MMC Control Register
+        fields:
+          - name: UCDBC
+            description: Update MMC Counters for Dropped Broadcast Frames
+            index: 8
+            width: 1
+            read: true
+            write: true
+          - name: CNTPRSTLVL
+            description: Full-Half Preset
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: CNTPRST
+            description: Counters Preset
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: CNTFREEZ
+            description: MMC Counter Freeze
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: RSTONRD
+            description: Reset on Read
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: CNTSTOPRO
+            description: Counters Stop Rollover
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: CNTRST
+            description: Counters Reset
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: MMC_RECEIVE_INTERRUPT
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 260
+        const: true
+        description: (read-only) MMC Receive Interrupt Register
+        fields:
+          - name: RXCTRLFIS
+            description: MMC Receive Control Frame Counter Interrupt Status
+            index: 25
+            width: 1
+            read: true
+            write: false
+          - name: RXRCVERRFIS
+            description: MMC Receive Error Frame Counter Interrupt Status
+            index: 24
+            width: 1
+            read: true
+            write: false
+          - name: RXWDOGFIS
+            description: MMC Receive Watchdog Error Frame Counter Interrupt Status
+            index: 23
+            width: 1
+            read: true
+            write: false
+          - name: RXVLANGBFIS
+            description: MMC Receive VLAN Good Bad Frame Counter Interrupt Status
+            index: 22
+            width: 1
+            read: true
+            write: false
+          - name: RXFOVFIS
+            description: MMC Receive FIFO Overflow Frame Counter Interrupt Status
+            index: 21
+            width: 1
+            read: true
+            write: false
+          - name: RXPAUSFIS
+            description: MMC Receive Pause Frame Counter Interrupt Status
+            index: 20
+            width: 1
+            read: true
+            write: false
+          - name: RXORANGEFIS
+            description: MMC Receive Out Of Range Error Frame Counter Interrupt Status
+            index: 19
+            width: 1
+            read: true
+            write: false
+          - name: RXLENERFIS
+            description: MMC Receive Length Error Frame Counter Interrupt Status
+            index: 18
+            width: 1
+            read: true
+            write: false
+          - name: RXUCGFIS
+            description: MMC Receive Unicast Good Frame Counter Interrupt Status
+            index: 17
+            width: 1
+            read: true
+            write: false
+          - name: RX1024TMAXOCTGBFIS
+            description: MMC Receive 1024 to Maximum Octet Good Bad Frame Counter
+              Interrupt Status
+            index: 16
+            width: 1
+            read: true
+            write: false
+          - name: RX512T1023OCTGBFIS
+            description: MMC Receive 512 to 1023 Octet Good Bad Frame Counter Interrupt
+              Status
+            index: 15
+            width: 1
+            read: true
+            write: false
+          - name: RX256T511OCTGBFIS
+            description: MMC Receive 256 to 511 Octet Good Bad Frame Counter Interrupt
+              Status
+            index: 14
+            width: 1
+            read: true
+            write: false
+          - name: RX128T255OCTGBFIS
+            description: MMC Receive 128 to 255 Octet Good Bad Frame Counter Interrupt
+              Status
+            index: 13
+            width: 1
+            read: true
+            write: false
+          - name: RX65T127OCTGBFIS
+            description: MMC Receive 65 to 127 Octet Good Bad Frame Counter Interrupt
+              Status
+            index: 12
+            width: 1
+            read: true
+            write: false
+          - name: RX64OCTGBFIS
+            description: MMC Receive 64 Octet Good Bad Frame Counter Interrupt Status
+            index: 11
+            width: 1
+            read: true
+            write: false
+          - name: RXOSIZEGFIS
+            description: MMC Receive Oversize Good Frame Counter Interrupt Status
+            index: 10
+            width: 1
+            read: true
+            write: false
+          - name: RXUSIZEGFIS
+            description: MMC Receive Undersize Good Frame Counter Interrupt Status
+            index: 9
+            width: 1
+            read: true
+            write: false
+          - name: RXJABERFIS
+            description: MMC Receive Jabber Error Frame Counter Interrupt Status
+            index: 8
+            width: 1
+            read: true
+            write: false
+          - name: RXRUNTFIS
+            description: MMC Receive Runt Frame Counter Interrupt Status
+            index: 7
+            width: 1
+            read: true
+            write: false
+          - name: RXALGNERFIS
+            description: MMC Receive Alignment Error Frame Counter Interrupt Status
+            index: 6
+            width: 1
+            read: true
+            write: false
+          - name: RXCRCERFIS
+            description: MMC Receive CRC Error Frame Counter Interrupt Status
+            index: 5
+            width: 1
+            read: true
+            write: false
+          - name: RXMCGFIS
+            description: MMC Receive Multicast Good Frame Counter Interrupt Status
+            index: 4
+            width: 1
+            read: true
+            write: false
+          - name: RXBCGFIS
+            description: MMC Receive Broadcast Good Frame Counter Interrupt Status.
+            index: 3
+            width: 1
+            read: true
+            write: false
+          - name: RXGOCTIS
+            description: MMC Receive Good Octet Counter Interrupt Status.
+            index: 2
+            width: 1
+            read: true
+            write: false
+          - name: RXGBOCTIS
+            description: MMC Receive Good Bad Octet Counter Interrupt Status
+            index: 1
+            width: 1
+            read: true
+            write: false
+          - name: RXGBFRMIS
+            description: MMC Receive Good Bad Frame Counter Interrupt Status
+            index: 0
+            width: 1
+            read: true
+            write: false
+      - name: MMC_TRANSMIT_INTERRUPT
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 264
+        const: true
+        description: (read-only) MMC Transmit Interrupt Register
+        fields:
+          - name: TXOSIZEGFIS
+            description: MMC Transmit Oversize Good Frame Counter Interrupt Status
+            index: 25
+            width: 1
+            read: true
+            write: false
+          - name: TXVLANGFIS
+            description: MMC Transmit VLAN Good Frame Counter Interrupt Status
+            index: 24
+            width: 1
+            read: true
+            write: false
+          - name: TXPAUSFIS
+            description: MMC Transmit Pause Frame Counter Interrupt Status
+            index: 23
+            width: 1
+            read: true
+            write: false
+          - name: TXEXDEFFIS
+            description: MMC Transmit Excessive Deferral Frame Counter Interrupt Status
+            index: 22
+            width: 1
+            read: true
+            write: false
+          - name: TXGFRMIS
+            description: MMC Transmit Good Frame Counter Interrupt Status
+            index: 21
+            width: 1
+            read: true
+            write: false
+          - name: TXGOCTIS
+            description: MMC Transmit Good Octet Counter Interrupt Status
+            index: 20
+            width: 1
+            read: true
+            write: false
+          - name: TXCARERFIS
+            description: MMC Transmit Carrier Error Frame Counter Interrupt Status
+            index: 19
+            width: 1
+            read: true
+            write: false
+          - name: TXEXCOLFIS
+            description: MMC Transmit Excessive Collision Frame Counter Interrupt
+              Status
+            index: 18
+            width: 1
+            read: true
+            write: false
+          - name: TXLATCOLFIS
+            description: MMC Transmit Late Collision Frame Counter Interrupt Status
+            index: 17
+            width: 1
+            read: true
+            write: false
+          - name: TXDEFFIS
+            description: MMC Transmit Deferred Frame Counter Interrupt Status
+            index: 16
+            width: 1
+            read: true
+            write: false
+          - name: TXMCOLGFIS
+            description: MMC Transmit Multiple Collision Good Frame Counter Interrupt
+              Status
+            index: 15
+            width: 1
+            read: true
+            write: false
+          - name: TXSCOLGFIS
+            description: MMC Transmit Single Collision Good Frame Counter Interrupt
+              Status
+            index: 14
+            width: 1
+            read: true
+            write: false
+          - name: TXUFLOWERFIS
+            description: MMC Transmit Underflow Error Frame Counter Interrupt Status
+            index: 13
+            width: 1
+            read: true
+            write: false
+          - name: TXBCGBFIS
+            description: MMC Transmit Broadcast Good Bad Frame Counter Interrupt Status
+            index: 12
+            width: 1
+            read: true
+            write: false
+          - name: TXMCGBFIS
+            description: MMC Transmit Multicast Good Bad Frame Counter Interrupt Status
+            index: 11
+            width: 1
+            read: true
+            write: false
+          - name: TXUCGBFIS
+            description: MMC Transmit Unicast Good Bad Frame Counter Interrupt Status
+            index: 10
+            width: 1
+            read: true
+            write: false
+          - name: TX1024TMAXOCTGBFIS
+            description: MMC Transmit 1024 to Maximum Octet Good Bad Frame Counter
+              Interrupt Status
+            index: 9
+            width: 1
+            read: true
+            write: false
+          - name: TX512T1023OCTGBFIS
+            description: MMC Transmit 512 to 1023 Octet Good Bad Frame Counter Interrupt
+              Status
+            index: 8
+            width: 1
+            read: true
+            write: false
+          - name: TX256T511OCTGBFIS
+            description: MMC Transmit 256 to 511 Octet Good Bad Frame Counter Interrupt
+              Status
+            index: 7
+            width: 1
+            read: true
+            write: false
+          - name: TX128T255OCTGBFIS
+            description: MMC Transmit 128 to 255 Octet Good Bad Frame Counter Interrupt
+              Status
+            index: 6
+            width: 1
+            read: true
+            write: false
+          - name: TX65T127OCTGBFIS
+            description: MMC Transmit 65 to 127 Octet Good Bad Frame Counter Interrupt
+              Status
+            index: 5
+            width: 1
+            read: true
+            write: false
+          - name: TX64OCTGBFIS
+            description: MMC Transmit 64 Octet Good Bad Frame Counter Interrupt Status.
+            index: 4
+            width: 1
+            read: true
+            write: false
+          - name: TXMCGFIS
+            description: MMC Transmit Multicast Good Frame Counter Interrupt Status
+            index: 3
+            width: 1
+            read: true
+            write: false
+          - name: TXBCGFIS
+            description: MMC Transmit Broadcast Good Frame Counter Interrupt Status
+            index: 2
+            width: 1
+            read: true
+            write: false
+          - name: TXGBFRMIS
+            description: MMC Transmit Good Bad Frame Counter Interrupt Status
+            index: 1
+            width: 1
+            read: true
+            write: false
+          - name: TXGBOCTIS
+            description: MMC Transmit Good Bad Octet Counter Interrupt Status
+            index: 0
+            width: 1
+            read: true
+            write: false
+      - name: MMC_RECEIVE_INTERRUPT_MASK
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 268
+        description: (read-write) MMC Reveive Interrupt Mask Register
+        fields:
+          - name: RXCTRLFIM
+            description: MMC Receive Control Frame Counter Interrupt Mask
+            index: 25
+            width: 1
+            read: true
+            write: true
+          - name: RXRCVERRFIM
+            description: MMC Receive Error Frame Counter Interrupt Mask
+            index: 24
+            width: 1
+            read: true
+            write: true
+          - name: RXWDOGFIM
+            description: MMC Receive Watchdog Error Frame Counter Interrupt Mask
+            index: 23
+            width: 1
+            read: true
+            write: true
+          - name: RXVLANGBFIM
+            description: MMC Receive VLAN Good Bad Frame Counter Interrupt Mask
+            index: 22
+            width: 1
+            read: true
+            write: true
+          - name: RXFOVFIM
+            description: MMC Receive FIFO Overflow Frame Counter Interrupt Mask
+            index: 21
+            width: 1
+            read: true
+            write: true
+          - name: RXPAUSFIM
+            description: MMC Receive Pause Frame Counter Interrupt Mask
+            index: 20
+            width: 1
+            read: true
+            write: true
+          - name: RXORANGEFIM
+            description: MMC Receive Out Of Range Error Frame Counter Interrupt Mask
+            index: 19
+            width: 1
+            read: true
+            write: true
+          - name: RXLENERFIM
+            description: MMC Receive Length Error Frame Counter Interrupt Mask
+            index: 18
+            width: 1
+            read: true
+            write: true
+          - name: RXUCGFIM
+            description: MMC Receive Unicast Good Frame Counter Interrupt Mask
+            index: 17
+            width: 1
+            read: true
+            write: true
+          - name: RX1024TMAXOCTGBFIM
+            description: MMC Receive 1024 to Maximum Octet Good Bad Frame Counter
+              Interrupt Mask
+            index: 16
+            width: 1
+            read: true
+            write: true
+          - name: RX512T1023OCTGBFIM
+            description: MMC Receive 512 to 1023 Octet Good Bad Frame Counter Interrupt
+              Mask
+            index: 15
+            width: 1
+            read: true
+            write: true
+          - name: RX256T511OCTGBFIM
+            description: MMC Receive 256 to 511 Octet Good Bad Frame Counter Interrupt
+              Mask
+            index: 14
+            width: 1
+            read: true
+            write: true
+          - name: RX128T255OCTGBFIM
+            description: MMC Receive 128 to 255 Octet Good Bad Frame Counter Interrupt
+              Mask
+            index: 13
+            width: 1
+            read: true
+            write: true
+          - name: RX65T127OCTGBFIM
+            description: MMC Receive 65 to 127 Octet Good Bad Frame Counter Interrupt
+              Mask
+            index: 12
+            width: 1
+            read: true
+            write: true
+          - name: RX64OCTGBFIM
+            description: MMC Receive 64 Octet Good Bad Frame Counter Interrupt Mask
+            index: 11
+            width: 1
+            read: true
+            write: true
+          - name: RXOSIZEGFIM
+            description: MMC Receive Oversize Good Frame Counter Interrupt Mask
+            index: 10
+            width: 1
+            read: true
+            write: true
+          - name: RXUSIZEGFIM
+            description: MMC Receive Undersize Good Frame Counter Interrupt Mask
+            index: 9
+            width: 1
+            read: true
+            write: true
+          - name: RXJABERFIM
+            description: MMC Receive Jabber Error Frame Counter Interrupt Mask
+            index: 8
+            width: 1
+            read: true
+            write: true
+          - name: RXRUNTFIM
+            description: MMC Receive Runt Frame Counter Interrupt Mask
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: RXALGNERFIM
+            description: MMC Receive Alignment Error Frame Counter Interrupt Mask
+            index: 6
+            width: 1
+            read: true
+            write: true
+          - name: RXCRCERFIM
+            description: MMC Receive CRC Error Frame Counter Interrupt Mask
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: RXMCGFIM
+            description: MMC Receive Multicast Good Frame Counter Interrupt Mask
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: RXBCGFIM
+            description: MMC Receive Broadcast Good Frame Counter Interrupt Mask
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: RXGOCTIM
+            description: MMC Receive Good Octet Counter Interrupt Mask
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: RXGBOCTIM
+            description: MMC Receive Good Bad Octet Counter Interrupt Mask
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: RXGBFRMIM
+            description: MMC Receive Good Bad Frame Counter Interrupt Mask
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: MMC_TRANSMIT_INTERRUPT_MASK
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 272
+        description: (read-write) MMC Transmit Interrupt Mask Register
+        fields:
+          - name: TXOSIZEGFIM
+            description: MMC Transmit Oversize Good Frame Counter Interrupt Mask
+            index: 25
+            width: 1
+            read: true
+            write: true
+          - name: TXVLANGFIM
+            description: MMC Transmit VLAN Good Frame Counter Interrupt Mask
+            index: 24
+            width: 1
+            read: true
+            write: true
+          - name: TXPAUSFIM
+            description: MMC Transmit Pause Frame Counter Interrupt Mask
+            index: 23
+            width: 1
+            read: true
+            write: true
+          - name: TXEXDEFFIM
+            description: MMC Transmit Excessive Deferral Frame Counter Interrupt Mask
+            index: 22
+            width: 1
+            read: true
+            write: true
+          - name: TXGFRMIM
+            description: MMC Transmit Good Frame Counter Interrupt Mask
+            index: 21
+            width: 1
+            read: true
+            write: true
+          - name: TXGOCTIM
+            description: MMC Transmit Good Octet Counter Interrupt Mask
+            index: 20
+            width: 1
+            read: true
+            write: true
+          - name: TXCARERFIM
+            description: MMC Transmit Carrier Error Frame Counter Interrupt Mask
+            index: 19
+            width: 1
+            read: true
+            write: true
+          - name: TXEXCOLFIM
+            description: MMC Transmit Excessive Collision Frame Counter Interrupt
+              Mask
+            index: 18
+            width: 1
+            read: true
+            write: true
+          - name: TXLATCOLFIM
+            description: MMC Transmit Late Collision Frame Counter Interrupt Mask
+            index: 17
+            width: 1
+            read: true
+            write: true
+          - name: TXDEFFIM
+            description: MMC Transmit Deferred Frame Counter Interrupt Mask
+            index: 16
+            width: 1
+            read: true
+            write: true
+          - name: TXMCOLGFIM
+            description: MMC Transmit Multiple Collision Good Frame Counter Interrupt
+              Mask
+            index: 15
+            width: 1
+            read: true
+            write: true
+          - name: TXSCOLGFIM
+            description: MMC Transmit Single Collision Good Frame Counter Interrupt
+              Mask
+            index: 14
+            width: 1
+            read: true
+            write: true
+          - name: TXUFLOWERFIM
+            description: MMC Transmit Underflow Error Frame Counter Interrupt Mask
+            index: 13
+            width: 1
+            read: true
+            write: true
+          - name: TXBCGBFIM
+            description: MMC Transmit Broadcast Good Bad Frame Counter Interrupt Mask
+            index: 12
+            width: 1
+            read: true
+            write: true
+          - name: TXMCGBFIM
+            description: MMC Transmit Multicast Good Bad Frame Counter Interrupt Mask
+            index: 11
+            width: 1
+            read: true
+            write: true
+          - name: TXUCGBFIM
+            description: MMC Transmit Unicast Good Bad Frame Counter Interrupt Mask
+            index: 10
+            width: 1
+            read: true
+            write: true
+          - name: TX1024TMAXOCTGBFIM
+            description: MMC Transmit 1024 to Maximum Octet Good Bad Frame Counter
+              Interrupt Mask
+            index: 9
+            width: 1
+            read: true
+            write: true
+          - name: TX512T1023OCTGBFIM
+            description: MMC Transmit 512 to 1023 Octet Good Bad Frame Counter Interrupt
+              Mask
+            index: 8
+            width: 1
+            read: true
+            write: true
+          - name: TX256T511OCTGBFIM
+            description: MMC Transmit 256 to 511 Octet Good Bad Frame Counter Interrupt
+              Mask
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: TX128T255OCTGBFIM
+            description: MMC Transmit 128 to 255 Octet Good Bad Frame Counter Interrupt
+              Mask
+            index: 6
+            width: 1
+            read: true
+            write: true
+          - name: TX65T127OCTGBFIM
+            description: MMC Transmit 65 to 127 Octet Good Bad Frame Counter Interrupt
+              Mask
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: TX64OCTGBFIM
+            description: MMC Transmit 64 Octet Good Bad Frame Counter Interrupt Mask
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: TXMCGFIM
+            description: MMC Transmit Multicast Good Frame Counter Interrupt Mask
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: TXBCGFIM
+            description: MMC Transmit Broadcast Good Frame Counter Interrupt Mask
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: TXGBFRMIM
+            description: MMC Transmit Good Bad Frame Counter Interrupt Mask
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: TXGBOCTIM
+            description: MMC Transmit Good Bad Octet Counter Interrupt Mask
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: TX_OCTET_COUNT_GOOD_BAD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 276
+        const: true
+        description: (read-only) Transmit Octet Count for Good and Bad Frames Register
+        fields:
+          - name: TXOCTGB
+            description: This field indicates the number of bytes transmitted in good
+              and bad frames exclusive of preamble and retried bytes.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_FRAME_COUNT_GOOD_BAD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 280
+        const: true
+        description: (read-only) Transmit Frame Count for Goodand Bad Frames Register
+        fields:
+          - name: TXFRMGB
+            description: This field indicates the number of good and bad frames transmitted,
+              exclusive of retried frames
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_BROADCAST_FRAMES_GOOD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 284
+        const: true
+        description: (read-only) Transmit Frame Count for Good Broadcast Frames
+        fields:
+          - name: TXBCASTG
+            description: This field indicates the number of transmitted good broadcast
+              frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_MULTICAST_FRAMES_GOOD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 288
+        const: true
+        description: (read-only) Transmit Frame Count for Good Multicast Frames
+        fields:
+          - name: TXMCASTG
+            description: This field indicates the number of transmitted good multicast
+              frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_64OCTETS_FRAMES_GOOD_BAD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 292
+        const: true
+        description: (read-only) Transmit Octet Count for Good and Bad 64 Byte Frames
+        fields:
+          - name: TX64OCTGB
+            description: This field indicates the number of transmitted good and bad
+              frames with length of 64 bytes, exclusive of preamble and retried frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_65TO127OCTETS_FRAMES_GOOD_BAD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 296
+        const: true
+        description: (read-only) Transmit Octet Count for Good and Bad 65 to 127 Bytes
+          Frames
+        fields:
+          - name: TX65_127OCTGB
+            description: This field indicates the number of transmitted good and bad
+              frames with length between 65 and 127 (inclusive) bytes, exclusive of
+              preamble and retried frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_128TO255OCTETS_FRAMES_GOOD_BAD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 300
+        const: true
+        description: (read-only) Transmit Octet Count for Good and Bad 128 to 255
+          Bytes Frames
+        fields:
+          - name: TX128_255OCTGB
+            description: This field indicates the number of transmitted good and bad
+              frames with length between 128 and 255 (inclusive) bytes, exclusive
+              of preamble and retried frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_256TO511OCTETS_FRAMES_GOOD_BAD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 304
+        const: true
+        description: (read-only) Transmit Octet Count for Good and Bad 256 to 511
+          Bytes Frames
+        fields:
+          - name: TX256_511OCTGB
+            description: This field indicates the number of transmitted good and bad
+              frames with length between 256 and 511 (inclusive) bytes, exclusive
+              of preamble and retried frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_512TO1023OCTETS_FRAMES_GOOD_BAD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 308
+        const: true
+        description: (read-only) Transmit Octet Count for Good and Bad 512 to 1023
+          Bytes Frames
+        fields:
+          - name: TX512_1023OCTGB
+            description: This field indicates the number of transmitted good and bad
+              frames with length between 512 and 1,023 (inclusive) bytes, exclusive
+              of preamble and retried frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_1024TOMAXOCTETS_FRAMES_GOOD_BAD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 312
+        const: true
+        description: (read-only) Transmit Octet Count for Good and Bad 1024 to Maxsize
+          Bytes Frames
+        fields:
+          - name: TX1024_MAXOCTGB
+            description: This field indicates the number of good and bad frames transmitted
+              with length between 1,024 and maxsize (inclusive) bytes, exclusive of
+              preamble and retried frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_UNICAST_FRAMES_GOOD_BAD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 316
+        const: true
+        description: (read-only) Transmit Frame Count for Good and Bad Unicast Frames
+        fields:
+          - name: TXUCASTGB
+            description: This field indicates the number of transmitted good and bad
+              unicast frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_MULTICAST_FRAMES_GOOD_BAD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 320
+        const: true
+        description: (read-only) Transmit Frame Count for Good and Bad Multicast Frames
+        fields:
+          - name: TXMCASTGB
+            description: This field indicates the number of transmitted good and bad
+              multicast frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_BROADCAST_FRAMES_GOOD_BAD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 324
+        const: true
+        description: (read-only) Transmit Frame Count for Good and Bad Broadcast Frames
+        fields:
+          - name: TXBCASTGB
+            description: This field indicates the number of transmitted good and bad
+              broadcast frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_UNDERFLOW_ERROR_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 328
+        const: true
+        description: (read-only) Transmit Frame Count for Underflow Error Frames
+        fields:
+          - name: TXUNDRFLW
+            description: This field indicates the number of frames aborted because
+              of frame underflow error.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_SINGLE_COLLISION_GOOD_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 332
+        const: true
+        description: (read-only) Transmit Frame Count for Frames Transmitted after
+          Single Collision
+        fields:
+          - name: TXSNGLCOLG
+            description: This field indicates the number of successfully transmitted
+              frames after a single collision in the half-duplex mode.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_MULTIPLE_COLLISION_GOOD_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 336
+        const: true
+        description: (read-only) Transmit Frame Count for Frames Transmitted after
+          Multiple Collision
+        fields:
+          - name: TXMULTCOLG
+            description: This field indicates the number of successfully transmitted
+              frames after multiple collisions in the half-duplex mode.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_DEFERRED_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 340
+        const: true
+        description: (read-only) Tx Deferred Frames Register
+        fields:
+          - name: TXDEFRD
+            description: This field indicates the number of successfully transmitted
+              frames after a deferral in the half-duplex mode.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_LATE_COLLISION_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 344
+        const: true
+        description: (read-only) Transmit Frame Count for Late Collision Error Frames
+        fields:
+          - name: TXLATECOL
+            description: This field indicates the number of frames aborted because
+              of late collision error.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_EXCESSIVE_COLLISION_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 348
+        const: true
+        description: (read-only) Transmit Frame Count for Excessive Collision Error
+          Frames
+        fields:
+          - name: TXEXSCOL
+            description: This field indicates the number of frames aborted because
+              of excessive (16) collision error.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_CARRIER_ERROR_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 352
+        const: true
+        description: (read-only) Transmit Frame Count for Carrier Sense Error Frames
+        fields:
+          - name: TXCARR
+            description: This field indicates the number of frames aborted because
+              of carrier sense error (no carrier or loss of carrier).
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_OCTET_COUNT_GOOD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 356
+        const: true
+        description: (read-only) Tx Octet Count Good Register
+        fields:
+          - name: TXOCTG
+            description: This field indicates the number of bytes transmitted, exclusive
+              of preamble, in good frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_FRAME_COUNT_GOOD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 360
+        const: true
+        description: (read-only) Tx Frame Count Good Register
+        fields:
+          - name: TXFRMG
+            description: This field indicates the number of transmitted good frames,
+              exclusive of preamble.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_EXCESSIVE_DEFERRAL_ERROR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 364
+        const: true
+        description: (read-only) Transmit Frame Count for Excessive Deferral Error
+          Frames
+        fields:
+          - name: TXEXSDEF
+            description: This field indicates the number of frames aborted because
+              of excessive deferral error, that is, frames deferred for more than
+              two max-sized frame times.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_PAUSE_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 368
+        const: true
+        description: (read-only) Transmit Frame Count for Good PAUSE Frames
+        fields:
+          - name: TXPAUSE
+            description: This field indicates the number of transmitted good PAUSE
+              frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_VLAN_FRAMES_GOOD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 372
+        const: true
+        description: (read-only) Transmit Frame Count for Good VLAN Frames
+        fields:
+          - name: TXVLANG
+            description: This register maintains the number of transmitted good VLAN
+              frames, exclusive of retried frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TX_OSIZE_FRAMES_GOOD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 376
+        const: true
+        description: (read-only) Transmit Frame Count for Good Oversize Frames
+        fields:
+          - name: TXOSIZG
+            description: This field indicates the number of frames transmitted without
+              errors and with length greater than the maxsize (1,518 or 1,522 bytes
+              for VLAN tagged frames; 2000 bytes if enabled by setting MAC Configuration.2KPE).
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_FRAMES_COUNT_GOOD_BAD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 384
+        const: true
+        description: (read-only) Receive Frame Count for Good and Bad Frames
+        fields:
+          - name: RXFRMGB
+            description: This field indicates the number of received good and bad
+              frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_OCTET_COUNT_GOOD_BAD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 388
+        const: true
+        description: (read-only) Receive Octet Count for Good and Bad Frames
+        fields:
+          - name: RXOCTGB
+            description: This field indicates the number of bytes received, exclusive
+              of preamble, in good and bad frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_OCTET_COUNT_GOOD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 392
+        const: true
+        description: (read-only) Rx Octet Count Good Register
+        fields:
+          - name: RXOCTG
+            description: This field indicates the number of bytes received, exclusive
+              of preamble, only in good frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_BROADCAST_FRAMES_GOOD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 396
+        const: true
+        description: (read-only) Receive Frame Count for Good Broadcast Frames
+        fields:
+          - name: RXBCASTG
+            description: This field indicates the number of received good broadcast
+              frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_MULTICAST_FRAMES_GOOD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 400
+        const: true
+        description: (read-only) Receive Frame Count for Good Multicast Frames
+        fields:
+          - name: RXMCASTG
+            description: This field indicates the number of received good multicast
+              frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_CRC_ERROR_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 404
+        const: true
+        description: (read-only) Receive Frame Count for CRC Error Frames
+        fields:
+          - name: RXCRCERR
+            description: This field indicates the number of frames received with CRC
+              error.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_ALIGNMENT_ERROR_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 408
+        const: true
+        description: (read-only) Receive Frame Count for Alignment Error Frames
+        fields:
+          - name: RXALGNERR
+            description: This field indicates the number of frames received with alignment
+              (dribble) error.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_RUNT_ERROR_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 412
+        const: true
+        description: (read-only) Receive Frame Count for Runt Error Frames
+        fields:
+          - name: RXRUNTERR
+            description: This field indicates the number of frames received with runt
+              error(<64 bytes and CRC error).
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_JABBER_ERROR_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 416
+        const: true
+        description: (read-only) Receive Frame Count for Jabber Error Frames
+        fields:
+          - name: RXJABERR
+            description: This field indicates the number of giant frames received
+              with length (including CRC) greater than 1,518 bytes (1,522 bytes for
+              VLAN tagged) and with CRC error. If Jumbo Frame mode is enabled, then
+              frames of length greater than 9,018 bytes (9,022 for VLAN tagged) are
+              considered as giant frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_UNDERSIZE_FRAMES_GOOD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 420
+        const: true
+        description: (read-only) Receive Frame Count for Undersize Frames
+        fields:
+          - name: RXUNDERSZG
+            description: This field indicates the number of frames received with length
+              less than 64 bytes and without errors.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_OVERSIZE_FRAMES_GOOD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 424
+        const: true
+        description: (read-only) Rx Oversize Frames Good Register
+        fields:
+          - name: RXOVERSZG
+            description: This field indicates the number of frames received without
+              errors, with length greater than the maxsize (1,518 or 1,522 for VLAN
+              tagged frames; 2,000 bytes if enabled by setting MAC Configuration.2KPE).
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_64OCTETS_FRAMES_GOOD_BAD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 428
+        const: true
+        description: (read-only) Receive Frame Count for Good and Bad 64 Byte Frames
+        fields:
+          - name: RX64OCTGB
+            description: This field indicates the number of received good and bad
+              frames with length 64 bytes, exclusive of preamble.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_65TO127OCTETS_FRAMES_GOOD_BAD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 432
+        const: true
+        description: (read-only) Receive Frame Count for Good and Bad 65 to 127 Bytes
+          Frames
+        fields:
+          - name: RX65_127OCTGB
+            description: This field indicates the number of received good and bad
+              frames received with length between 65 and 127 (inclusive) bytes, exclusive
+              of preamble.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_128TO255OCTETS_FRAMES_GOOD_BAD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 436
+        const: true
+        description: (read-only) Receive Frame Count for Good and Bad 128 to 255 Bytes
+          Frames
+        fields:
+          - name: RX128_255OCTGB
+            description: This field indicates the number of received good and bad
+              frames with length between 128 and 255 (inclusive) bytes, exclusive
+              of preamble.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_256TO511OCTETS_FRAMES_GOOD_BAD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 440
+        const: true
+        description: (read-only) Receive Frame Count for Good and Bad 256 to 511 Bytes
+          Frames
+        fields:
+          - name: RX256_511OCTGB
+            description: This field indicates the number of received good and bad
+              frames with length between 256 and 511 (inclusive) bytes, exclusive
+              of preamble.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_512TO1023OCTETS_FRAMES_GOOD_BAD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 444
+        const: true
+        description: (read-only) Receive Frame Count for Good and Bad 512 to 1,023
+          Bytes Frames
+        fields:
+          - name: RX512_1023OCTGB
+            description: This field indicates the number of received good and bad
+              frames with length between 512 and 1,023 (inclusive) bytes, exclusive
+              of preamble.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_1024TOMAXOCTETS_FRAMES_GOOD_BAD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 448
+        const: true
+        description: (read-only) Receive Frame Count for Good and Bad 1,024 to Maxsize
+          Bytes Frames
+        fields:
+          - name: RX1024_MAXOCTGB
+            description: This field indicates the number of received good and bad
+              frames with length between 1,024 and maxsize (inclusive) bytes, exclusive
+              of preamble and retried frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_UNICAST_FRAMES_GOOD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 452
+        const: true
+        description: (read-only) Receive Frame Count for Good Unicast Frames
+        fields:
+          - name: RXUCASTG
+            description: This field indicates the number of received good unicast
+              frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_LENGTH_ERROR_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 456
+        const: true
+        description: (read-only) Receive Frame Count for Length Error Frames
+        fields:
+          - name: RXLENERR
+            description: This field indicates the number of frames received with length
+              error (Length type field not equal to frame size) for all frames with
+              valid length field.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_OUT_OF_RANGE_TYPE_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 460
+        const: true
+        description: (read-only) Receive Frame Count for Out of Range Frames
+        fields:
+          - name: RXOUTOFRNG
+            description: This field indicates the number of received frames with length
+              field not equal to the valid frame size (greater than 1,500 but less
+              than 1,536).
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_PAUSE_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 464
+        const: true
+        description: (read-only) Receive Frame Count for PAUSE Frames
+        fields:
+          - name: RXPAUSEFRM
+            description: This field indicates the number of received good and valid
+              PAUSE frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_FIFO_OVERFLOW_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 468
+        const: true
+        description: (read-only) Receive Frame Count for FIFO Overflow Frames
+        fields:
+          - name: RXFIFOOVFL
+            description: This field indicates the number of received frames missed
+              because of FIFO overflow.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_VLAN_FRAMES_GOOD_BAD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 472
+        const: true
+        description: (read-only) Receive Frame Count for Good and Bad VLAN Frames
+        fields:
+          - name: RXVLANFRGB
+            description: This field indicates the number of received good and bad
+              VLAN frames.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_WATCHDOG_ERROR_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 476
+        const: true
+        description: (read-only) Receive Frame Count for Watchdog Error Frames
+        fields:
+          - name: RXWDGERR
+            description: This field indicates the number of frames received with error
+              because of the watchdog timeout error (frames with more than 2,048 bytes
+              data load).
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_RECEIVE_ERROR_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 480
+        const: true
+        description: (read-only) Receive Frame Count for Receive Error Frames
+        fields:
+          - name: RXRCVERR
+            description: This field indicates the number of frames received with error
+              because of the watchdog timeout error (frames with more than 2,048 bytes
+              data load).
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RX_CONTROL_FRAMES_GOOD
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 484
+        const: true
+        description: (read-only) Receive Frame Count for Good Control Frames Frames
+        fields:
+          - name: RXCTRLG
+            description: This field indicates the number of frames received with error
+              because of the watchdog timeout error (frames with more than 2,048 bytes
+              data load).
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: MMC_IPC_RECEIVE_INTERRUPT_MASK
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 512
+        description: (read-write) MMC Receive Checksum Offload Interrupt Mask Register
+        fields:
+          - name: RXICMPEROIM
+            description: MMC Receive ICMP Error Octet Counter Interrupt Mask
+            index: 29
+            width: 1
+            read: true
+            write: true
+          - name: RXICMPGOIM
+            description: MMC Receive ICMP Good Octet Counter Interrupt Mask
+            index: 28
+            width: 1
+            read: true
+            write: true
+          - name: RXTCPEROIM
+            description: MMC Receive TCP Error Octet Counter Interrupt Mask
+            index: 27
+            width: 1
+            read: true
+            write: true
+          - name: RXTCPGOIM
+            description: MMC Receive TCP Good Octet Counter Interrupt Mask
+            index: 26
+            width: 1
+            read: true
+            write: true
+          - name: RXUDPEROIM
+            description: MMC Receive UDP Error Octet Counter Interrupt Mask
+            index: 25
+            width: 1
+            read: true
+            write: true
+          - name: RXUDPGOIM
+            description: MMC Receive UDP Good Octet Counter Interrupt Mask
+            index: 24
+            width: 1
+            read: true
+            write: true
+          - name: RXIPV6NOPAYOIM
+            description: MMC Receive IPV6 No Payload Octet Counter Interrupt Mask
+            index: 23
+            width: 1
+            read: true
+            write: true
+          - name: RXIPV6HEROIM
+            description: MMC Receive IPV6 Header Error Octet Counter Interrupt Mask
+            index: 22
+            width: 1
+            read: true
+            write: true
+          - name: RXIPV6GOIM
+            description: MMC Receive IPV6 Good Octet Counter Interrupt Mask
+            index: 21
+            width: 1
+            read: true
+            write: true
+          - name: RXIPV4UDSBLOIM
+            description: MMC Receive IPV4 UDP Checksum Disabled Octet Counter Interrupt
+              Mask
+            index: 20
+            width: 1
+            read: true
+            write: true
+          - name: RXIPV4FRAGOIM
+            description: MMC Receive IPV4 Fragmented Octet Counter Interrupt Mask
+            index: 19
+            width: 1
+            read: true
+            write: true
+          - name: RXIPV4NOPAYOIM
+            description: MMC Receive IPV4 No Payload Octet Counter Interrupt Mask
+            index: 18
+            width: 1
+            read: true
+            write: true
+          - name: RXIPV4HEROIM
+            description: MMC Receive IPV4 Header Error Octet Counter Interrupt Mask
+            index: 17
+            width: 1
+            read: true
+            write: true
+          - name: RXIPV4GOIM
+            description: MMC Receive IPV4 Good Octet Counter Interrupt Mask
+            index: 16
+            width: 1
+            read: true
+            write: true
+          - name: RXICMPERFIM
+            description: MMC Receive ICMP Error Frame Counter Interrupt Mask
+            index: 13
+            width: 1
+            read: true
+            write: true
+          - name: RXICMPGFIM
+            description: MMC Receive ICMP Good Frame Counter Interrupt Mask
+            index: 12
+            width: 1
+            read: true
+            write: true
+          - name: RXTCPERFIM
+            description: MMC Receive TCP Error Frame Counter Interrupt Mask
+            index: 11
+            width: 1
+            read: true
+            write: true
+          - name: RXTCPGFIM
+            description: MMC Receive TCP Good Frame Counter Interrupt Mask
+            index: 10
+            width: 1
+            read: true
+            write: true
+          - name: RXUDPERFIM
+            description: MMC Receive UDP Error Frame Counter Interrupt Mask
+            index: 9
+            width: 1
+            read: true
+            write: true
+          - name: RXUDPGFIM
+            description: MMC Receive UDP Good Frame Counter Interrupt Mask
+            index: 8
+            width: 1
+            read: true
+            write: true
+          - name: RXIPV6NOPAYFIM
+            description: MMC Receive IPV6 No Payload Frame Counter Interrupt Mask
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: RXIPV6HERFIM
+            description: MMC Receive IPV6 Header Error Frame Counter Interrupt Mask
+            index: 6
+            width: 1
+            read: true
+            write: true
+          - name: RXIPV6GFIM
+            description: MMC Receive IPV6 Good Frame Counter Interrupt Mask
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: RXIPV4UDSBLFIM
+            description: MMC Receive IPV4 UDP Checksum Disabled Frame Counter Interrupt
+              Mask
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: RXIPV4FRAGFIM
+            description: MMC Receive IPV4 Fragmented Frame Counter Interrupt Mask
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: RXIPV4NOPAYFIM
+            description: MMC Receive IPV4 No Payload Frame Counter Interrupt Mask
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: RXIPV4HERFIM
+            description: MMC Receive IPV4 Header Error Frame Counter Interrupt Mask
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: RXIPV4GFIM
+            description: MMC Receive IPV4 Good Frame Counter Interrupt Mask
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: MMC_IPC_RECEIVE_INTERRUPT
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 520
+        const: true
+        description: (read-only) MMC Receive Checksum Offload Interrupt Register
+        fields:
+          - name: RXICMPEROIS
+            description: MMC Receive ICMP Error Octet Counter Interrupt Status
+            index: 29
+            width: 1
+            read: true
+            write: false
+          - name: RXICMPGOIS
+            description: MMC Receive ICMP Good Octet Counter Interrupt Status
+            index: 28
+            width: 1
+            read: true
+            write: false
+          - name: RXTCPEROIS
+            description: MMC Receive TCP Error Octet Counter Interrupt Status
+            index: 27
+            width: 1
+            read: true
+            write: false
+          - name: RXTCPGOIS
+            description: MMC Receive TCP Good Octet Counter Interrupt Status
+            index: 26
+            width: 1
+            read: true
+            write: false
+          - name: RXUDPEROIS
+            description: MMC Receive UDP Error Octet Counter Interrupt Status
+            index: 25
+            width: 1
+            read: true
+            write: false
+          - name: RXUDPGOIS
+            description: MMC Receive UDP Good Octet Counter Interrupt Status
+            index: 24
+            width: 1
+            read: true
+            write: false
+          - name: RXIPV6NOPAYOIS
+            description: MMC Receive IPV6 No Payload Octet Counter Interrupt Status
+            index: 23
+            width: 1
+            read: true
+            write: false
+          - name: RXIPV6HEROIS
+            description: MMC Receive IPV6 Header Error Octet Counter Interrupt Status
+            index: 22
+            width: 1
+            read: true
+            write: false
+          - name: RXIPV6GOIS
+            description: MMC Receive IPV6 Good Octet Counter Interrupt Status
+            index: 21
+            width: 1
+            read: true
+            write: false
+          - name: RXIPV4UDSBLOIS
+            description: MMC Receive IPV4 UDP Checksum Disabled Octet Counter Interrupt
+              Status
+            index: 20
+            width: 1
+            read: true
+            write: false
+          - name: RXIPV4FRAGOIS
+            description: MMC Receive IPV4 Fragmented Octet Counter Interrupt Status
+            index: 19
+            width: 1
+            read: true
+            write: false
+          - name: RXIPV4NOPAYOIS
+            description: MMC Receive IPV4 No Payload Octet Counter Interrupt Status
+            index: 18
+            width: 1
+            read: true
+            write: false
+          - name: RXIPV4HEROIS
+            description: MMC Receive IPV4 Header Error Octet Counter Interrupt Status
+            index: 17
+            width: 1
+            read: true
+            write: false
+          - name: RXIPV4GOIS
+            description: MMC Receive IPV4 Good Octet Counter Interrupt Status
+            index: 16
+            width: 1
+            read: true
+            write: false
+          - name: RXICMPERFIS
+            description: MMC Receive ICMP Error Frame Counter Interrupt Status
+            index: 13
+            width: 1
+            read: true
+            write: false
+          - name: RXICMPGFIS
+            description: MMC Receive ICMP Good Frame Counter Interrupt Status
+            index: 12
+            width: 1
+            read: true
+            write: false
+          - name: RXTCPERFIS
+            description: MMC Receive TCP Error Frame Counter Interrupt Status
+            index: 11
+            width: 1
+            read: true
+            write: false
+          - name: RXTCPGFIS
+            description: MMC Receive TCP Good Frame Counter Interrupt Status
+            index: 10
+            width: 1
+            read: true
+            write: false
+          - name: RXUDPERFIS
+            description: MMC Receive UDP Error Frame Counter Interrupt Status
+            index: 9
+            width: 1
+            read: true
+            write: false
+          - name: RXUDPGFIS
+            description: MMC Receive UDP Good Frame Counter Interrupt Status
+            index: 8
+            width: 1
+            read: true
+            write: false
+          - name: RXIPV6NOPAYFIS
+            description: MMC Receive IPV6 No Payload Frame Counter Interrupt Status
+            index: 7
+            width: 1
+            read: true
+            write: false
+          - name: RXIPV6HERFIS
+            description: MMC Receive IPV6 Header Error Frame Counter Interrupt Status
+            index: 6
+            width: 1
+            read: true
+            write: false
+          - name: RXIPV6GFIS
+            description: MMC Receive IPV6 Good Frame Counter Interrupt Status
+            index: 5
+            width: 1
+            read: true
+            write: false
+          - name: RXIPV4UDSBLFIS
+            description: MMC Receive IPV4 UDP Checksum Disabled Frame Counter Interrupt
+              Status
+            index: 4
+            width: 1
+            read: true
+            write: false
+          - name: RXIPV4FRAGFIS
+            description: MMC Receive IPV4 Fragmented Frame Counter Interrupt Status
+            index: 3
+            width: 1
+            read: true
+            write: false
+          - name: RXIPV4NOPAYFIS
+            description: MMC Receive IPV4 No Payload Frame Counter Interrupt Status
+            index: 2
+            width: 1
+            read: true
+            write: false
+          - name: RXIPV4HERFIS
+            description: MMC Receive IPV4 Header Error Frame Counter Interrupt Status
+            index: 1
+            width: 1
+            read: true
+            write: false
+          - name: RXIPV4GFIS
+            description: MMC Receive IPV4 Good Frame Counter Interrupt Status
+            index: 0
+            width: 1
+            read: true
+            write: false
+      - name: RXIPV4_GOOD_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 528
+        const: true
+        description: (read-only) RxIPv4 Good Frames Register
+        fields:
+          - name: RXIPV4GDFRM
+            description: This field indicates the number of good IPv4 datagrams received
+              with the TCP, UDP, or ICMP payload.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXIPV4_HEADER_ERROR_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 532
+        const: true
+        description: (read-only) Receive IPV4 Header Error Frame Counter Register
+        fields:
+          - name: RXIPV4HDRERRFRM
+            description: This field indicates the number of IPv4 datagrams received
+              with header errors (checksum, length, or version mismatch).
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXIPV4_NO_PAYLOAD_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 536
+        const: true
+        description: (read-only) Receive IPV4 No Payload Frame Counter Register
+        fields:
+          - name: RXIPV4NOPAYFRM
+            description: This field indicates the number of IPv4 datagram frames received
+              that did not have a TCP, UDP, or ICMP payload processed by the Checksum
+              engine.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXIPV4_FRAGMENTED_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 540
+        const: true
+        description: (read-only) Receive IPV4 Fragmented Frame Counter Register
+        fields:
+          - name: RXIPV4FRAGFRM
+            description: This field indicates the number of good IPv4 datagrams received
+              with fragmentation.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXIPV4_UDP_CHECKSUM_DISABLED_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 544
+        const: true
+        description: (read-only) Receive IPV4 UDP Checksum Disabled Frame Counter
+          Register
+        fields:
+          - name: RXIPV4UDSBLFRM
+            description: This field indicates the number of received good IPv4 datagrams
+              which have the UDP payload with checksum disabled.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXIPV6_GOOD_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 548
+        const: true
+        description: (read-only) RxIPv6 Good Frames Register
+        fields:
+          - name: RXIPV6GDFRM
+            description: This field indicates the number of good IPv6 datagrams received
+              with TCP, UDP, or ICMP payloads.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXIPV6_HEADER_ERROR_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 552
+        const: true
+        description: (read-only) Receive IPV6 Header Error Frame Counter Register
+        fields:
+          - name: RXIPV6HDRERRFRM
+            description: This field indicates the number of IPv6 datagrams received
+              with header errors (length or version mismatch).
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXIPV6_NO_PAYLOAD_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 556
+        const: true
+        description: (read-only) Receive IPV6 No Payload Frame Counter Register
+        fields:
+          - name: RXIPV6NOPAYFRM
+            description: This field indicates the number of IPv6 datagram frames received
+              that did not have a TCP, UDP, or ICMP payload. This includes all IPv6
+              datagrams with fragmentation or security extension headers.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXUDP_GOOD_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 560
+        const: true
+        description: (read-only) RxUDP Good Frames Register
+        fields:
+          - name: RXUDPGDFRM
+            description: This field indicates the number of good IP datagrams with
+              a good UDP payload. This counter is not updated when the counter is
+              incremented.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXUDP_ERROR_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 564
+        const: true
+        description: (read-only) RxUDP Error Frames Register
+        fields:
+          - name: RXUDPERRFRM
+            description: This field indicates the number of good IP datagrams whose
+              UDP payload has a checksum error.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXTCP_GOOD_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 568
+        const: true
+        description: (read-only) RxTCP Good Frames Register
+        fields:
+          - name: RXTCPGDFRM
+            description: This field indicates the number of good IP datagrams with
+              a good TCP payload.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXTCP_ERROR_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 572
+        const: true
+        description: (read-only) RxTCP Error Frames Register
+        fields:
+          - name: RXTCPERRFRM
+            description: This field indicates the number of good IP datagrams whose
+              TCP payload has a checksum error.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXICMP_GOOD_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 576
+        const: true
+        description: (read-only) RxICMP Good Frames Register
+        fields:
+          - name: RXICMPGDFRM
+            description: This field indicates the number of good IP datagrams with
+              a good ICMP payload.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXICMP_ERROR_FRAMES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 580
+        const: true
+        description: (read-only) RxICMP Error Frames Register
+        fields:
+          - name: RXICMPERRFRM
+            description: This field indicates the number of good IP datagrams whose
+              ICMP payload has a checksum error.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXIPV4_GOOD_OCTETS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 592
+        const: true
+        description: (read-only) RxIPv4 Good Octets Register
+        fields:
+          - name: RXIPV4GDOCT
+            description: This field indicates the number of bytes received in good
+              IPv4 datagrams encapsulating TCP, UDP, or ICMP data. The Ethernet header,
+              FCS, pad, or IP pad
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXIPV4_HEADER_ERROR_OCTETS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 596
+        const: true
+        description: (read-only) Receive IPV4 Header Error Octet Counter Register
+        fields:
+          - name: RXIPV4HDRERROCT
+            description: This field indicates the number of bytes received in the
+              IPv4 datagrams with header errors (checksum, length, or version mismatch).
+              The value in the Length field of IPv4 header is used to update this
+              counter.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXIPV4_NO_PAYLOAD_OCTETS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 600
+        const: true
+        description: (read-only) Receive IPV4 No Payload Octet Counter Register
+        fields:
+          - name: RXIPV4NOPAYOCT
+            description: This field indicates the number of bytes received in IPv4
+              datagrams that did not have a TCP, UDP, or ICMP payload. The value in
+              the IPv4 headers Length field is used to update this counter.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXIPV4_FRAGMENTED_OCTETS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 604
+        const: true
+        description: (read-only) Receive IPV4 Fragmented Octet Counter Register
+        fields:
+          - name: RXIPV4FRAGOCT
+            description: This field indicates the number of bytes received in fragmented
+              IPv4 datagrams. The value in the IPv4 headers Length field is used to
+              update this counter.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXIPV4_UDP_CHECKSUM_DISABLE_OCTETS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 608
+        const: true
+        description: (read-only) Receive IPV4 Fragmented Octet Counter Register
+        fields:
+          - name: RXIPV4UDSBLOCT
+            description: This field indicates the number of bytes received in a UDP
+              segment that had the UDP checksum disabled. This counter does not count
+              the IP Header bytes. The Ethernet header, FCS, pad, or IP pad bytes
+              are not included in this counter.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXIPV6_GOOD_OCTETS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 612
+        const: true
+        description: (read-only) RxIPv6 Good Octets Register
+        fields:
+          - name: RXIPV6GDOCT
+            description: Thsi field indicates the number of bytes received in good
+              IPv6 datagrams encapsulating TCP, UDP or ICMPv6 data.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXIPV6_HEADER_ERROR_OCTETS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 616
+        const: true
+        description: (read-only) Receive IPV6 Header Error Octet Counter Register
+        fields:
+          - name: RXIPV6HDRERROCT
+            description: This field indicates the number of bytes received in IPv6
+              datagrams with header errors (length or version mismatch). The value
+              in the IPv6 headers Length field is used to update this counter.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXIPV6_NO_PAYLOAD_OCTETS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 620
+        const: true
+        description: (read-only) Receive IPV6 No Payload Octet Counter Register
+        fields:
+          - name: RXIPV6NOPAYOCT
+            description: This field indicates the number of bytes received in IPv6
+              datagrams that did not have a TCP, UDP, or ICMP payload. The value in
+              the IPv6 headers Length field is used to update this counter.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXUDP_GOOD_OCTETS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 624
+        const: true
+        description: (read-only) Receive UDP Good Octets Register
+        fields:
+          - name: RXUDPGDOCT
+            description: This field indicates the number of bytes received in a good
+              UDP segment. This counter does not count IP header bytes. The Ethernet
+              header, FCS, pad, or IP pad bytes are not included in this counter.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXUDP_ERROR_OCTETS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 628
+        const: true
+        description: (read-only) Receive UDP Error Octets Register
+        fields:
+          - name: RXUDPERROCT
+            description: This field indicates the number of bytes received in a UDP
+              segment with checksum errors. This counter does not count the IP Header
+              bytes. The Ethernet header, FCS, pad, or IP pad bytes are not included
+              in this counter.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXTCP_GOOD_OCTETS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 632
+        const: true
+        description: (read-only) Receive TCP Good Octets Register
+        fields:
+          - name: RXTCPGDOCT
+            description: This field indicates the number of bytes received in a good
+              TCP segment. This counter does not count the IP Header bytes. The Ethernet
+              header, FCS, pad, or IP pad bytes are not included in this counter.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXTCP_ERROR_OCTETS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 636
+        const: true
+        description: (read-only) Receive TCP Error Octets Register
+        fields:
+          - name: RXTCPERROCT
+            description: Thsi field indicates the number of bytes received in a TCP
+              segment with checksum errors. This counter does not count the IP Header
+              bytes. The Ethernet header, FCS, pad, or IP pad bytes are not included
+              in this counter.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXICMP_GOOD_OCTETS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 640
+        const: true
+        description: (read-only) Receive ICMP Good Octets Register
+        fields:
+          - name: RXICMPGDOCT
+            description: This field indicates the number of bytes received in a good
+              ICMP segment. This counter does not count the IP Header bytes. The Ethernet
+              header, FCS, pad, or IP pad bytes are not included in this counter.
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: RXICMP_ERROR_OCTETS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 644
+        const: true
+        description: (read-only) Receive ICMP Error Octets Register
+        fields:
+          - name: RXICMPERROCT
+            description: Number of bytes received in an ICMP segment with checksum
+              errors
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: TIMESTAMP_CONTROL
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1792
+        description: (read-write) Timestamp Control Register
+        fields:
+          - name: TSENMACADDR
+            description: Enable MAC address for PTP Frame Filtering
+            index: 18
+            width: 1
+            read: true
+            write: true
+          - name: SNAPTYPSEL
+            description: Select PTP packets for Taking Snapshots
+            index: 16
+            width: 2
+            read: true
+            write: true
+          - name: TSMSTRENA
+            description: Enable Snapshot for Messages Relevant to Master
+            index: 15
+            width: 1
+            read: true
+            write: true
+          - name: TSEVNTENA
+            description: Enable Timestamp Snapshot for Event Messages
+            index: 14
+            width: 1
+            read: true
+            write: true
+          - name: TSIPV4ENA
+            description: Enable Processing of PTP Frames Sent over IPv4-UDP
+            index: 13
+            width: 1
+            read: true
+            write: true
+          - name: TSIPV6ENA
+            description: Enable Processing of PTP Frames Sent Over IPv6-UDP
+            index: 12
+            width: 1
+            read: true
+            write: true
+          - name: TSIPENA
+            description: Enable Processing of PTP over Ethernet Frames
+            index: 11
+            width: 1
+            read: true
+            write: true
+          - name: TSVER2ENA
+            description: Enable PTP packet Processing for Version 2 Format
+            index: 10
+            width: 1
+            read: true
+            write: true
+          - name: TSCTRLSSR
+            description: Timestamp Digital or Binary Rollover Control
+            index: 9
+            width: 1
+            read: true
+            write: true
+          - name: TSENALL
+            description: Enable Timestamp for All Frames
+            index: 8
+            width: 1
+            read: true
+            write: true
+          - name: TSADDREG
+            description: Addend Reg Update
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: TSTRIG
+            description: Timestamp Interrupt Trigger Enable
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: TSUPDT
+            description: Timestamp Update
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: TSINIT
+            description: Timestamp Initialize
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: TSCFUPDT
+            description: Timestamp Fine or Coarse Update
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: TSENA
+            description: Timestamp Enable
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: SUB_SECOND_INCREMENT
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1796
+        description: (read-write) Sub-Second Increment Register
+        fields:
+          - name: SSINC
+            description: Sub-second Increment Value
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: SYSTEM_TIME_SECONDS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1800
+        const: true
+        description: (read-only) System Time - Seconds Register
+        fields:
+          - name: TSS
+            description: Timestamp Second
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: SYSTEM_TIME_NANOSECONDS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1804
+        const: true
+        description: (read-only) System Time Nanoseconds Register
+        fields:
+          - name: TSSS
+            description: Timestamp Sub Seconds
+            index: 0
+            width: 31
+            read: true
+            write: false
+      - name: SYSTEM_TIME_SECONDS_UPDATE
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1808
+        description: (read-write) System Time - Seconds Update Register
+        fields:
+          - name: TSS
+            description: Timestamp Second
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: SYSTEM_TIME_NANOSECONDS_UPDATE
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1812
+        description: (read-write) System Time Nanoseconds Update Register
+        fields:
+          - name: ADDSUB
+            description: Add or subtract time
+            index: 31
+            width: 1
+            read: true
+            write: true
+          - name: TSSS
+            description: Timestamp Sub Second
+            index: 0
+            width: 31
+            read: true
+            write: true
+      - name: TIMESTAMP_ADDEND
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1816
+        description: (read-write) Timestamp Addend Register
+        fields:
+          - name: TSAR
+            description: Timestamp Addend Register
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: TARGET_TIME_SECONDS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1820
+        description: (read-write) Target Time Seconds Register
+        fields:
+          - name: TSTR
+            description: Target Time Seconds Register
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: TARGET_TIME_NANOSECONDS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1824
+        description: (read-write) Target Time Nanoseconds Register
+        fields:
+          - name: TRGTBUSY
+            description: Target Time Register Busy
+            index: 31
+            width: 1
+            read: true
+            write: false
+          - name: TTSLO
+            description: Target Timestamp Low Register
+            index: 0
+            width: 31
+            read: true
+            write: true
+      - name: SYSTEM_TIME_HIGHER_WORD_SECONDS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1828
+        description: (read-write) System Time - Higher Word Seconds Register
+        fields:
+          - name: TSHWR
+            description: Timestamp Higher Word Register
+            index: 0
+            width: 16
+            read: true
+            write: true
+      - name: TIMESTAMP_STATUS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 1832
+        const: true
+        description: (read-only) Timestamp Status Register
+        fields:
+          - name: TSTRGTERR3
+            description: Timestamp Target Time Error
+            index: 9
+            width: 1
+            read: true
+            write: false
+          - name: TSTARGT3
+            description: Timestamp Target Time Reached for Target Time PPS3
+            index: 8
+            width: 1
+            read: true
+            write: false
+          - name: TSTRGTERR2
+            description: Timestamp Target Time Error
+            index: 7
+            width: 1
+            read: true
+            write: false
+          - name: TSTARGT2
+            description: Timestamp Target Time Reached for Target Time PPS2
+            index: 6
+            width: 1
+            read: true
+            write: false
+          - name: TSTRGTERR1
+            description: Timestamp Target Time Error
+            index: 5
+            width: 1
+            read: true
+            write: false
+          - name: TSTARGT1
+            description: Timestamp Target Time Reached for Target Time PPS1
+            index: 4
+            width: 1
+            read: true
+            write: false
+          - name: TSTRGTERR
+            description: Timestamp Target Time Error
+            index: 3
+            width: 1
+            read: true
+            write: false
+          - name: TSTARGT
+            description: Timestamp Target Time Reached
+            index: 1
+            width: 1
+            read: true
+            write: false
+          - name: TSSOVF
+            description: Timestamp Seconds Overflow
+            index: 0
+            width: 1
+            read: true
+            write: false
+      - name: BUS_MODE
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4096
+        description: (read-write) Bus Mode Register
+        fields:
+          - name: PRWG
+            description: Channel Priority Weights
+            index: 28
+            width: 2
+            read: true
+            write: false
+          - name: TXPR
+            description: Transmit Priority
+            index: 27
+            width: 1
+            read: true
+            write: true
+          - name: MB
+            description: Mixed Burst
+            index: 26
+            width: 1
+            read: true
+            write: true
+          - name: AAL
+            description: Address Aligned Beats
+            index: 25
+            width: 1
+            read: true
+            write: true
+          - name: PBLX8
+            description: 8xPBL Mode
+            index: 24
+            width: 1
+            read: true
+            write: true
+          - name: USP
+            description: Use Seperate PBL
+            index: 23
+            width: 1
+            read: true
+            write: true
+          - name: RPBL
+            description: Rx DMA PBL
+            index: 17
+            width: 6
+            read: true
+            write: true
+          - name: FB
+            description: Fixed Burst
+            index: 16
+            width: 1
+            read: true
+            write: true
+          - name: PR
+            description: Priority Ratio
+            index: 14
+            width: 2
+            read: true
+            write: true
+          - name: PBL
+            description: Programmable Burst Length
+            index: 8
+            width: 6
+            read: true
+            write: true
+          - name: ATDS
+            description: Alternate Descriptor Size
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: DSL
+            description: Descriptor Skip Length
+            index: 2
+            width: 5
+            read: true
+            write: true
+          - name: DA
+            description: DMA Arbitration Scheme
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: SWR
+            description: Software Reset
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: TRANSMIT_POLL_DEMAND
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4100
+        description: (read-write) Transmit Poll Demand Register
+        fields:
+          - name: TPD
+            description: Transmit Poll Demand
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: RECEIVE_POLL_DEMAND
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4104
+        description: (read-write) Receive Poll Demand Register
+        fields:
+          - name: RPD
+            description: Receive Poll Demand
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: RECEIVE_DESCRIPTOR_LIST_ADDRESS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4108
+        description: (read-write) Receive Descriptor Address Register
+        fields:
+          - name: RDESLA_32bit
+            description: Start of Receive List
+            index: 2
+            width: 30
+            read: true
+            write: true
+      - name: TRANSMIT_DESCRIPTOR_LIST_ADDRESS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4112
+        description: (read-write) Transmit descripter Address Register
+        fields:
+          - name: TDESLA_32bit
+            description: Start of Transmit List
+            index: 2
+            width: 30
+            read: true
+            write: true
+      - name: STATUS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4116
+        description: (read-write) Status Register
+        fields:
+          - name: TTI
+            description: Timestamp Trigger Interrupt
+            index: 29
+            width: 1
+            read: true
+            write: false
+          - name: EPI
+            description: ETH PMT Interrupt
+            index: 28
+            width: 1
+            read: true
+            write: false
+          - name: EMI
+            description: ETH MMC Interrupt
+            index: 27
+            width: 1
+            read: true
+            write: false
+          - name: EB
+            description: Error Bits
+            index: 23
+            width: 3
+            read: true
+            write: false
+          - name: TS
+            description: Transmit Process State
+            index: 20
+            width: 3
+            read: true
+            write: false
+          - name: RS
+            description: Received Process State
+            index: 17
+            width: 3
+            read: true
+            write: false
+          - name: NIS
+            description: Normal Interrupt Summary
+            index: 16
+            width: 1
+            read: true
+            write: true
+          - name: AIS
+            description: Abnormal Interrupt Summary
+            index: 15
+            width: 1
+            read: true
+            write: true
+          - name: ERI
+            description: Early Receive Interrupt
+            index: 14
+            width: 1
+            read: true
+            write: true
+          - name: FBI
+            description: Fatal Bus Error Interrupt
+            index: 13
+            width: 1
+            read: true
+            write: true
+          - name: ETI
+            description: Early Transmit Interrupt
+            index: 10
+            width: 1
+            read: true
+            write: true
+          - name: RWT
+            description: Receive Watchdog Timeout
+            index: 9
+            width: 1
+            read: true
+            write: true
+          - name: RPS
+            description: Receive Process Stopped
+            index: 8
+            width: 1
+            read: true
+            write: true
+          - name: RU
+            description: Receive Buffer Unavailable
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: RI
+            description: Receive Interrupt
+            index: 6
+            width: 1
+            read: true
+            write: true
+          - name: UNF
+            description: Transmit Underflow
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: OVF
+            description: Receive Overflow
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: TJT
+            description: Transmit Jabber Timeout
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: TU
+            description: Transmit Buffer Unavailable
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: TPS
+            description: Transmit Process Stopped
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: TI
+            description: Transmit Interrupt
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: OPERATION_MODE
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4120
+        description: (read-write) Operation Mode Register
+        fields:
+          - name: DT
+            description: Disable Dropping of TCP/IP Checksum Error Frames
+            index: 26
+            width: 1
+            read: true
+            write: true
+          - name: RSF
+            description: Receive Store and Forward
+            index: 25
+            width: 1
+            read: true
+            write: true
+          - name: DFF
+            description: Disable Flushing of Received Frames
+            index: 24
+            width: 1
+            read: true
+            write: true
+          - name: TSF
+            description: Transmit Store and Forward
+            index: 21
+            width: 1
+            read: true
+            write: true
+          - name: FTF
+            description: Flush Transmit FIFO
+            index: 20
+            width: 1
+            read: true
+            write: true
+          - name: TTC
+            description: Transmit Threshold Control
+            index: 14
+            width: 3
+            read: true
+            write: true
+          - name: ST
+            description: Start or Stop Transmission Command
+            index: 13
+            width: 1
+            read: true
+            write: true
+          - name: FEF
+            description: Forward Error Frames
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: FUF
+            description: Forward Undersized Good Frames
+            index: 6
+            width: 1
+            read: true
+            write: true
+          - name: RTC
+            description: Receive Threshold Control
+            index: 3
+            width: 2
+            read: true
+            write: true
+          - name: OSF
+            description: Operate on Second Frame
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: SR
+            description: Start or Stop Receive
+            index: 1
+            width: 1
+            read: true
+            write: true
+      - name: INTERRUPT_ENABLE
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4124
+        description: (read-write) Interrupt Enable Register
+        fields:
+          - name: NIE
+            description: Normal Interrupt Summary Enable
+            index: 16
+            width: 1
+            read: true
+            write: true
+          - name: AIE
+            description: Abnormal Interrupt Summary Enable
+            index: 15
+            width: 1
+            read: true
+            write: true
+          - name: ERE
+            description: Early Receive Interrupt Enable
+            index: 14
+            width: 1
+            read: true
+            write: true
+          - name: FBE
+            description: Fatal Bus Error Enable
+            index: 13
+            width: 1
+            read: true
+            write: true
+          - name: ETE
+            description: Early Transmit Interrupt Enable
+            index: 10
+            width: 1
+            read: true
+            write: true
+          - name: RWE
+            description: Receive Watchdog Timeout Enable
+            index: 9
+            width: 1
+            read: true
+            write: true
+          - name: RSE
+            description: Receive Stopped Enable
+            index: 8
+            width: 1
+            read: true
+            write: true
+          - name: RUE
+            description: Receive Buffer Unavailable Enable
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: RIE
+            description: Receive Interrupt Enable
+            index: 6
+            width: 1
+            read: true
+            write: true
+          - name: UNE
+            description: Underflow Interrupt Enable
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: OVE
+            description: Overflow Interrupt Enable
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: TJE
+            description: Transmit Jabber Timeout Enable
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: TUE
+            description: Transmit Buffer Unvailable Enable
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: TSE
+            description: Transmit Stopped Enable
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: TIE
+            description: Transmit Interrupt Enable
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: MISSED_FRAME_AND_BUFFER_OVERFLOW_COUNTER
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4128
+        const: true
+        description: (read-only) Missed Frame and Buffer Overflow Counter Register
+        fields:
+          - name: OVFCNTOVF
+            description: Overflow bit for FIFO Overflow Counter
+            index: 28
+            width: 1
+            read: true
+            write: false
+          - name: OVFFRMCNT
+            description: This field indicates the number of frames missed by the application.
+              The counter is cleared when this register is read.
+            index: 17
+            width: 11
+            read: true
+            write: false
+          - name: MISCNTOVF
+            description: Overflow bit for Missed Frame Counter
+            index: 16
+            width: 1
+            read: true
+            write: false
+          - name: MISFRMCNT
+            description: This field indicates the number of frames missed by the controller
+              because of the RAM Receive Buffer being unavailable. This counter is
+              incremented each time the DMA discards an incoming frame. The counter
+              is cleared when this register is read.
+            index: 0
+            width: 16
+            read: true
+            write: false
+      - name: RECEIVE_INTERRUPT_WATCHDOG_TIMER
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4132
+        description: (read-write) Receive Interrupt Watchdog Timer Register
+        fields:
+          - name: RIWT
+            description: RI Watchdog Timer Count
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: AHB_STATUS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4140
+        const: true
+        description: (read-only) AHB Status Register
+        fields:
+          - name: AHBMS
+            description: AHB Master Status
+            index: 0
+            width: 1
+            read: true
+            write: false
+      - name: CURRENT_HOST_TRANSMIT_DESCRIPTOR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4168
+        const: true
+        description: (read-only) Current Host Transmit Descriptor Register
+        fields:
+          - name: CURTDESAPTR
+            description: Host Transmit Descriptor Address Pointer
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: CURRENT_HOST_RECEIVE_DESCRIPTOR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4172
+        const: true
+        description: (read-only) Current Host Receive Descriptor Register
+        fields:
+          - name: CURRDESAPTR
+            description: Host Receive Descriptor Address Pointer
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: CURRENT_HOST_TRANSMIT_BUFFER_ADDRESS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4176
+        const: true
+        description: (read-only) Current Host Transmit Buffer Address Register
+        fields:
+          - name: CURTBUFAPTR
+            description: Host Transmit Buffer Address Pointer
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: CURRENT_HOST_RECEIVE_BUFFER_ADDRESS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4180
+        const: true
+        description: (read-only) Current Host Receive Buffer Address Register
+        fields:
+          - name: CURRBUFAPTR
+            description: Host Receive Buffer Address Pointer
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: HW_FEATURE
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4184
+        description: (read-write) HW Feature Register
+        fields:
+          - name: ACTPHYIF
+            description: Active or Selected PHY interface
+            index: 28
+            width: 3
+            read: true
+            write: false
+          - name: SAVLANINS
+            description: Source Address or VLAN Insertion
+            index: 27
+            width: 1
+            read: true
+            write: false
+          - name: FLEXIPPSEN
+            description: Flexible Pulse-Per-Second Output
+            index: 26
+            width: 1
+            read: true
+            write: false
+          - name: INTTSEN
+            description: Timestamping with Internal System Time
+            index: 25
+            width: 1
+            read: true
+            write: false
+          - name: ENHDESSEL
+            description: Alternate (Enhanced Descriptor)
+            index: 24
+            width: 1
+            read: true
+            write: false
+          - name: TXCHCNT
+            description: Number of additional Tx channels
+            index: 22
+            width: 2
+            read: true
+            write: false
+          - name: RXCHCNT
+            description: Number of additional Rx channels
+            index: 20
+            width: 2
+            read: true
+            write: false
+          - name: RXFIFOSIZE
+            description: Rx FIFO > 2,048 Bytes
+            index: 19
+            width: 1
+            read: true
+            write: true
+          - name: RXTYP2COE
+            description: IP Checksum Offload (Type 2) in Rx
+            index: 18
+            width: 1
+            read: true
+            write: false
+          - name: RXTYP1COE
+            description: IP Checksum Offload (Type 1) in Rx
+            index: 17
+            width: 1
+            read: true
+            write: false
+          - name: TXCOESEL
+            description: Checksum Offload in Tx
+            index: 16
+            width: 1
+            read: true
+            write: false
+          - name: AVSEL
+            description: AV Feature
+            index: 15
+            width: 1
+            read: true
+            write: false
+          - name: EEESEL
+            description: Energy Efficient Ethernet
+            index: 14
+            width: 1
+            read: true
+            write: false
+          - name: TSVER2SEL
+            description: IEEE 1588-2008 Advanced Timestamp
+            index: 13
+            width: 1
+            read: true
+            write: false
+          - name: TSVER1SEL
+            description: Only IEEE 1588-2002 Timestamp
+            index: 12
+            width: 1
+            read: true
+            write: false
+          - name: MMCSEL
+            description: RMON Module
+            index: 11
+            width: 1
+            read: true
+            write: false
+          - name: MGKSEL
+            description: PMT Magic Packet
+            index: 10
+            width: 1
+            read: true
+            write: false
+          - name: RWKSEL
+            description: PMT Remote Wakeup
+            index: 9
+            width: 1
+            read: true
+            write: false
+          - name: SMASEL
+            description: SMA (MDIO) Interface
+            index: 8
+            width: 1
+            read: true
+            write: false
+          - name: L3L4FLTREN
+            description: Layer 3 and Layer 4 Filter Feature
+            index: 7
+            width: 1
+            read: true
+            write: false
+          - name: PCSSEL
+            description: PCS registers (TBI, SGMII, or RTBI PHY interface)
+            index: 6
+            width: 1
+            read: true
+            write: false
+          - name: ADDMACADRSEL
+            description: Multiple MAC Address Registers
+            index: 5
+            width: 1
+            read: true
+            write: false
+          - name: HASHSEL
+            description: HASH Filter
+            index: 4
+            width: 1
+            read: true
+            write: false
+          - name: EXTHASHEN
+            description: Expanded DA Hash Filter
+            index: 3
+            width: 1
+            read: true
+            write: false
+          - name: HDSEL
+            description: Half-Duplex support
+            index: 2
+            width: 1
+            read: true
+            write: false
+          - name: GMIISEL
+            description: 1000 Mbps support
+            index: 1
+            width: 1
+            read: true
+            write: false
+          - name: MIISEL
+            description: 10 or 100 Mbps support
+            index: 0
+            width: 1
+            read: true
+            write: false
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums: {}

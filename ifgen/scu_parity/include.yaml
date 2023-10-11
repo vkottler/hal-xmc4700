@@ -1,0 +1,1255 @@
+---
+structs:
+  scu_parity:
+    description: System Control Unit
+    instances:
+      - name: SCU_PARITY
+        address: '0x5000413C'
+    fields:
+      - name: PEEN
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        description: (read-write) Parity Error Enable Register
+        fields:
+          - name: PEENSD1
+            description: Parity Error Enable for SDMMC Memory 1
+            index: 20
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEEN_PEENSD1
+          - name: PEENSD0
+            description: Parity Error Enable for SDMMC Memory 0
+            index: 19
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEEN_PEENSD0
+          - name: PEENETH0RX
+            description: Parity Error Enable for ETH RX Memory
+            index: 18
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEEN_PEENETH0RX
+          - name: PEENETH0TX
+            description: Parity Error Enable for ETH TX Memory
+            index: 17
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEEN_PEENETH0TX
+          - name: PEENUSB
+            description: Parity Error Enable for USB Memory
+            index: 16
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEEN_PEENUSB
+          - name: PEENPPRF
+            description: Parity Error Enable for PMU Prefetch Memory
+            index: 13
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEEN_PEENPPRF
+          - name: PEENMC
+            description: Parity Error Enable for MultiCAN Memory
+            index: 12
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEEN_PEENMC
+          - name: PEENU2
+            description: Parity Error Enable for USIC2 Memory
+            index: 10
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEEN_PEENU2
+          - name: PEENU1
+            description: Parity Error Enable for USIC1 Memory
+            index: 9
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEEN_PEENU1
+          - name: PEENU0
+            description: Parity Error Enable for USIC0 Memory
+            index: 8
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEEN_PEENU0
+          - name: PEENDS2
+            description: Parity Error Enable for DSRAM2
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEEN_PEENDS2
+          - name: PEENDS1
+            description: Parity Error Enable for DSRAM1
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEEN_PEENDS1
+          - name: PEENPS
+            description: Parity Error Enable for PSRAM
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEEN_PEENPS
+      - name: MCHKCON
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4
+        description: (read-write) Memory Checking Control Register
+        fields:
+          - name: SELSD1
+            description: Select Memory Check for SDMMC SRAM 1
+            index: 20
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_MCHKCON_SELSD1
+          - name: SELSD0
+            description: Select Memory Check for SDMMC SRAM 0
+            index: 19
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_MCHKCON_SELSD0
+          - name: SELETH0RX
+            description: Select Memory Check for ETH0 RX SRAM
+            index: 18
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_MCHKCON_SELETH0RX
+          - name: SELETH0TX
+            description: Select Memory Check for ETH0 TX SRAM
+            index: 17
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_MCHKCON_SELETH0TX
+          - name: SELUSB
+            description: Select Memory Check for USB SRAM
+            index: 16
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_MCHKCON_SELUSB
+          - name: PPRFDRA
+            description: Select Memory Check for PMU
+            index: 13
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_MCHKCON_PPRFDRA
+          - name: MCANDRA
+            description: Select Memory Check for MultiCAN
+            index: 12
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_MCHKCON_MCANDRA
+          - name: USIC2DRA
+            description: Select Memory Check for USIC2
+            index: 10
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_MCHKCON_USIC2DRA
+          - name: USIC1DRA
+            description: Select Memory Check for USIC1
+            index: 9
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_MCHKCON_USIC1DRA
+          - name: USIC0DRA
+            description: Select Memory Check for USIC0
+            index: 8
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_MCHKCON_USIC0DRA
+          - name: SELDS2
+            description: Select Memory Check for DSRAM2
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_MCHKCON_SELDS2
+          - name: SELDS1
+            description: Select Memory Check for DSRAM1
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_MCHKCON_SELDS1
+          - name: SELPS
+            description: Select Memory Check for PSRAM
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_MCHKCON_SELPS
+      - name: PETE
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 8
+        description: (read-write) Parity Error Trap Enable Register
+        fields:
+          - name: PETESD1
+            description: Parity Error Trap Enable for SDMMC SRAM 1 Memory
+            index: 20
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PETE_PETESD1
+          - name: PETESD0
+            description: Parity Error Trap Enable for SDMMC SRAM 0 Memory
+            index: 19
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PETE_PETESD0
+          - name: PETEETH0RX
+            description: Parity Error Trap Enable for ETH0 RX Memory
+            index: 18
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PETE_PETEETH0RX
+          - name: PETEETH0TX
+            description: Parity Error Trap Enable for ETH 0TX Memory
+            index: 17
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PETE_PETEETH0TX
+          - name: PETEUSB
+            description: Parity Error Trap Enable for USB Memory
+            index: 16
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PETE_PETEUSB
+          - name: PETEPPRF
+            description: Parity Error Trap Enable for PMU Prefetch Memory
+            index: 13
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PETE_PETEPPRF
+          - name: PETEMC
+            description: Parity Error Trap Enable for MultiCAN Memory
+            index: 12
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PETE_PETEMC
+          - name: PETEU2
+            description: Parity Error Trap Enable for USIC2 Memory
+            index: 10
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PETE_PETEU2
+          - name: PETEU1
+            description: Parity Error Trap Enable for USIC1 Memory
+            index: 9
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PETE_PETEU1
+          - name: PETEU0
+            description: Parity Error Trap Enable for USIC0 Memory
+            index: 8
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PETE_PETEU0
+          - name: PETEDS2
+            description: Parity Error Trap Enable for DSRAM2
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PETE_PETEDS2
+          - name: PETEDS1
+            description: Parity Error Trap Enable for DSRAM1
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PETE_PETEDS1
+          - name: PETEPS
+            description: Parity Error Trap Enable for PSRAM
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PETE_PETEPS
+      - name: PERSTEN
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 12
+        description: (read-write) Parity Error Reset Enable Register
+        fields:
+          - name: RSEN
+            description: System Reset Enable upon Parity Error Trap
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PERSTEN_RSEN
+      - name: PEFLAG
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 20
+        description: (read-write) Parity Error Flag Register
+        fields:
+          - name: PESD1
+            description: Parity Error Flag for SDMMC Memory 1
+            index: 20
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEFLAG_PESD1
+          - name: PESD0
+            description: Parity Error Flag for SDMMC Memory 0
+            index: 19
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEFLAG_PESD0
+          - name: PEETH0RX
+            description: Parity Error Flag for ETH RX Memory
+            index: 18
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEFLAG_PEETH0RX
+          - name: PEETH0TX
+            description: Parity Error Flag for ETH TX Memory
+            index: 17
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEFLAG_PEETH0TX
+          - name: PEUSB
+            description: Parity Error Flag for USB Memory
+            index: 16
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEFLAG_PEUSB
+          - name: PEFPPRF
+            description: Parity Error Flag for PMU Prefetch Memory
+            index: 13
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEFLAG_PEFPPRF
+          - name: PEFMC
+            description: Parity Error Flag for MultiCAN Memory
+            index: 12
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEFLAG_PEFMC
+          - name: PEFU2
+            description: Parity Error Flag for USIC2 Memory
+            index: 10
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEFLAG_PEFU2
+          - name: PEFU1
+            description: Parity Error Flag for USIC1 Memory
+            index: 9
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEFLAG_PEFU1
+          - name: PEFU0
+            description: Parity Error Flag for USIC0 Memory
+            index: 8
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEFLAG_PEFU0
+          - name: PEFDS2
+            description: Parity Error Flag for DSRAM2
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEFLAG_PEFDS2
+          - name: PEFDS1
+            description: Parity Error Flag for DSRAM1
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEFLAG_PEFDS1
+          - name: PEFPS
+            description: Parity Error Flag for PSRAM
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PEFLAG_PEFPS
+      - name: PMTPR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 24
+        description: (read-write) Parity Memory Test Pattern Register
+        fields:
+          - name: PWR
+            description: Parity Write Values for Memory Test
+            index: 0
+            width: 8
+            read: true
+            write: true
+          - name: PRD
+            description: Parity Read Values for Memory Test
+            index: 8
+            width: 8
+            read: true
+            write: false
+      - name: PMTSR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 28
+        description: (read-write) Parity Memory Test Select Register
+        fields:
+          - name: MTSD1
+            description: Test Enable Control for SDMMC Memory 1
+            index: 20
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PMTSR_MTSD1
+          - name: MTSD0
+            description: Test Enable Control for SDMMC Memory 0
+            index: 19
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PMTSR_MTSD0
+          - name: MTETH0RX
+            description: Test Enable Control for ETH RX Memory
+            index: 18
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PMTSR_MTETH0RX
+          - name: MTETH0TX
+            description: Test Enable Control for ETH TX Memory
+            index: 17
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PMTSR_MTETH0TX
+          - name: MTUSB
+            description: Test Enable Control for USB Memory
+            index: 16
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PMTSR_MTUSB
+          - name: MTEPPRF
+            description: Test Enable Control for PMU Prefetch Memory
+            index: 13
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PMTSR_MTEPPRF
+          - name: MTEMC
+            description: Test Enable Control for MultiCAN Memory
+            index: 12
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PMTSR_MTEMC
+          - name: MTEU2
+            description: Test Enable Control for USIC2 Memory
+            index: 10
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PMTSR_MTEU2
+          - name: MTEU1
+            description: Test Enable Control for USIC1 Memory
+            index: 9
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PMTSR_MTEU1
+          - name: MTEU0
+            description: Test Enable Control for USIC0 Memory
+            index: 8
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PMTSR_MTEU0
+          - name: MTENDS2
+            description: Test Enable Control for DSRAM2
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PMTSR_MTENDS2
+          - name: MTENDS1
+            description: Test Enable Control for DSRAM1
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PMTSR_MTENDS1
+          - name: MTENPS
+            description: Test Enable Control for PSRAM
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: SCU_PARITY_PMTSR_MTENPS
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums:
+  SCU_PARITY_PEEN_PEENSD1:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEEN_PEENSD0:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEEN_PEENETH0RX:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEEN_PEENETH0TX:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEEN_PEENUSB:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEEN_PEENPPRF:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEEN_PEENMC:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEEN_PEENU2:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEEN_PEENU1:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEEN_PEENU0:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEEN_PEENDS2:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEEN_PEENDS1:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEEN_PEENPS:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_MCHKCON_SELSD1:
+    enum:
+      value1:
+        description: Not selected
+        value: 0
+      value2:
+        description: Selected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_MCHKCON_SELSD0:
+    enum:
+      value1:
+        description: Not selected
+        value: 0
+      value2:
+        description: Selected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_MCHKCON_SELETH0RX:
+    enum:
+      value1:
+        description: Not selected
+        value: 0
+      value2:
+        description: Selected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_MCHKCON_SELETH0TX:
+    enum:
+      value1:
+        description: Not selected
+        value: 0
+      value2:
+        description: Selected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_MCHKCON_SELUSB:
+    enum:
+      value1:
+        description: Not selected
+        value: 0
+      value2:
+        description: Selected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_MCHKCON_PPRFDRA:
+    enum:
+      value1:
+        description: Not selected
+        value: 0
+      value2:
+        description: Selected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_MCHKCON_MCANDRA:
+    enum:
+      value1:
+        description: Not selected
+        value: 0
+      value2:
+        description: Selected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_MCHKCON_USIC2DRA:
+    enum:
+      value1:
+        description: Not selected
+        value: 0
+      value2:
+        description: Selected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_MCHKCON_USIC1DRA:
+    enum:
+      value1:
+        description: Not selected
+        value: 0
+      value2:
+        description: Selected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_MCHKCON_USIC0DRA:
+    enum:
+      value1:
+        description: Not selected
+        value: 0
+      value2:
+        description: Selected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_MCHKCON_SELDS2:
+    enum:
+      value1:
+        description: Not selected
+        value: 0
+      value2:
+        description: Selected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_MCHKCON_SELDS1:
+    enum:
+      value1:
+        description: Not selected
+        value: 0
+      value2:
+        description: Selected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_MCHKCON_SELPS:
+    enum:
+      value1:
+        description: Not selected
+        value: 0
+      value2:
+        description: Selected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PETE_PETESD1:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PETE_PETESD0:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PETE_PETEETH0RX:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PETE_PETEETH0TX:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PETE_PETEUSB:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PETE_PETEPPRF:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PETE_PETEMC:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PETE_PETEU2:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PETE_PETEU1:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PETE_PETEU0:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PETE_PETEDS2:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PETE_PETEDS1:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PETE_PETEPS:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PERSTEN_RSEN:
+    enum:
+      value1:
+        description: Reset request disabled
+        value: 0
+      value2:
+        description: Reset request enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEFLAG_PESD1:
+    enum:
+      value1:
+        description: No parity error detected
+        value: 0
+      value2:
+        description: Parity error detected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEFLAG_PESD0:
+    enum:
+      value1:
+        description: No parity error detected
+        value: 0
+      value2:
+        description: Parity error detected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEFLAG_PEETH0RX:
+    enum:
+      value1:
+        description: No parity error detected
+        value: 0
+      value2:
+        description: Parity error detected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEFLAG_PEETH0TX:
+    enum:
+      value1:
+        description: No parity error detected
+        value: 0
+      value2:
+        description: Parity error detected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEFLAG_PEUSB:
+    enum:
+      value1:
+        description: No parity error detected
+        value: 0
+      value2:
+        description: Parity error detected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEFLAG_PEFPPRF:
+    enum:
+      value1:
+        description: No parity error detected
+        value: 0
+      value2:
+        description: Parity error detected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEFLAG_PEFMC:
+    enum:
+      value1:
+        description: No parity error detected
+        value: 0
+      value2:
+        description: Parity error detected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEFLAG_PEFU2:
+    enum:
+      value1:
+        description: No parity error detected
+        value: 0
+      value2:
+        description: Parity error detected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEFLAG_PEFU1:
+    enum:
+      value1:
+        description: No parity error detected
+        value: 0
+      value2:
+        description: Parity error detected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEFLAG_PEFU0:
+    enum:
+      value1:
+        description: No parity error detected
+        value: 0
+      value2:
+        description: Parity error detected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEFLAG_PEFDS2:
+    enum:
+      value1:
+        description: No parity error detected
+        value: 0
+      value2:
+        description: Parity error detected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEFLAG_PEFDS1:
+    enum:
+      value1:
+        description: No parity error detected
+        value: 0
+      value2:
+        description: Parity error detected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PEFLAG_PEFPS:
+    enum:
+      value1:
+        description: No parity error detected
+        value: 0
+      value2:
+        description: Parity error detected
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PMTSR_MTSD1:
+    enum:
+      value1:
+        description: Standard operation
+        value: 0
+      value2:
+        description: Parity bits under test
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PMTSR_MTSD0:
+    enum:
+      value1:
+        description: Standard operation
+        value: 0
+      value2:
+        description: Parity bits under test
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PMTSR_MTETH0RX:
+    enum:
+      value1:
+        description: Standard operation
+        value: 0
+      value2:
+        description: Parity bits under test
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PMTSR_MTETH0TX:
+    enum:
+      value1:
+        description: Standard operation
+        value: 0
+      value2:
+        description: Parity bits under test
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PMTSR_MTUSB:
+    enum:
+      value1:
+        description: Standard operation
+        value: 0
+      value2:
+        description: Parity bits under test
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PMTSR_MTEPPRF:
+    enum:
+      value1:
+        description: Standard operation
+        value: 0
+      value2:
+        description: Parity bits under test
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PMTSR_MTEMC:
+    enum:
+      value1:
+        description: Standard operation
+        value: 0
+      value2:
+        description: Parity bits under test
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PMTSR_MTEU2:
+    enum:
+      value1:
+        description: Standard operation
+        value: 0
+      value2:
+        description: Parity bits under test
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PMTSR_MTEU1:
+    enum:
+      value1:
+        description: Standard operation
+        value: 0
+      value2:
+        description: Parity bits under test
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PMTSR_MTEU0:
+    enum:
+      value1:
+        description: Standard operation
+        value: 0
+      value2:
+        description: Parity bits under test
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PMTSR_MTENDS2:
+    enum:
+      value1:
+        description: Standard operation
+        value: 0
+      value2:
+        description: Parity bits under test
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PMTSR_MTENDS1:
+    enum:
+      value1:
+        description: Standard operation
+        value: 0
+      value2:
+        description: Parity bits under test
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_PARITY_PMTSR_MTENPS:
+    enum:
+      value1:
+        description: Standard operation
+        value: 0
+      value2:
+        description: Parity bits under test
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false

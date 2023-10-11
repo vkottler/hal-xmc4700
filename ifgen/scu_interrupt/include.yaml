@@ -1,0 +1,1455 @@
+---
+structs:
+  scu_interrupt:
+    description: System Control Unit
+    instances:
+      - name: SCU_INTERRUPT
+        address: '0x50004074'
+    fields:
+      - name: SRSTAT
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        const: true
+        description: (read-only) SCU Service Request Status
+        fields:
+          - name: RMX
+            description: Retention Memory Mirror Register Update Status
+            index: 29
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRSTAT_RMX
+          - name: RTC_TIM1
+            description: RTC TIM1 Mirror Register Update Status
+            index: 28
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRSTAT_RTC_TIM1
+          - name: RTC_TIM0
+            description: RTC TIM0 Mirror Register Update Status
+            index: 27
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRSTAT_RTC_TIM0
+          - name: RTC_ATIM1
+            description: RTC ATIM1 Mirror Register Update Status
+            index: 26
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRSTAT_RTC_ATIM1
+          - name: RTC_ATIM0
+            description: RTC ATIM0 Mirror Register Update Status
+            index: 25
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRSTAT_RTC_ATIM0
+          - name: RTC_CTR
+            description: RTC CTR Mirror Register Update Status
+            index: 24
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRSTAT_RTC_CTR
+          - name: OSCULCTRL
+            description: OSCULCTRL Mirror Register Update Status
+            index: 23
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRSTAT_OSCULCTRL
+          - name: OSCSICTRL
+            description: OSCSICTRL Mirror Register Update Status
+            index: 21
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRSTAT_OSCSICTRL
+          - name: HDCR
+            description: HDCR Mirror Register Update Status
+            index: 19
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRSTAT_HDCR
+          - name: HDSET
+            description: HDSET Mirror Register Update Status
+            index: 18
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRSTAT_HDSET
+          - name: HDCLR
+            description: HDCLR Mirror Register Update Status
+            index: 17
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRSTAT_HDCLR
+          - name: DLROVR
+            description: DLR Request Overrun Interrupt Status
+            index: 3
+            width: 1
+            read: true
+            write: false
+          - name: AI
+            description: Alarm Interrupt Status
+            index: 2
+            width: 1
+            read: true
+            write: false
+          - name: PI
+            description: RTC Periodic Interrupt Status
+            index: 1
+            width: 1
+            read: true
+            write: false
+          - name: PRWARN
+            description: WDT pre-warning Interrupt Status
+            index: 0
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRSTAT_PRWARN
+      - name: SRRAW
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4
+        const: true
+        description: (read-only) SCU Raw Service Request Status
+        fields:
+          - name: RMX
+            description: Retention Memory Mirror Register Update Status Before Masking
+            index: 29
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRRAW_RMX
+          - name: RTC_TIM1
+            description: RTC TIM1 Mirror Register Update Status Before Masking
+            index: 28
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRRAW_RTC_TIM1
+          - name: RTC_TIM0
+            description: RTC TIM0 Mirror Register Update Before Masking Status
+            index: 27
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRRAW_RTC_TIM0
+          - name: RTC_ATIM1
+            description: RTC ATIM1 Mirror Register Update Status Before Masking
+            index: 26
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRRAW_RTC_ATIM1
+          - name: RTC_ATIM0
+            description: RTC ATIM0 Mirror Register Update Status Before Masking
+            index: 25
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRRAW_RTC_ATIM0
+          - name: RTC_CTR
+            description: RTC CTR Mirror Register Update Status Before Masking
+            index: 24
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRRAW_RTC_CTR
+          - name: OSCULCTRL
+            description: OSCULCTRL Mirror Register Update Status Before Masking
+            index: 23
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRRAW_OSCULCTRL
+          - name: OSCSICTRL
+            description: OSCSICTRL Mirror Register Update Status Before Masking
+            index: 21
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRRAW_OSCSICTRL
+          - name: HDCR
+            description: HDCR Mirror Register Update Status Before Masking
+            index: 19
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRRAW_HDCR
+          - name: HDSET
+            description: HDSET Mirror Register Update Status Before Masking
+            index: 18
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRRAW_HDSET
+          - name: HDCLR
+            description: HDCLR Mirror Register Update Status Before Masking
+            index: 17
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRRAW_HDCLR
+          - name: DLROVR
+            description: DLR Request Overrun Interrupt Status Before Masking
+            index: 3
+            width: 1
+            read: true
+            write: false
+          - name: AI
+            description: RTC Raw Alarm Interrupt Status Before Masking
+            index: 2
+            width: 1
+            read: true
+            write: false
+          - name: PI
+            description: RTC Raw Periodic Interrupt Status Before Masking
+            index: 1
+            width: 1
+            read: true
+            write: false
+          - name: PRWARN
+            description: WDT pre-warning Interrupt Status Before Masking
+            index: 0
+            width: 1
+            read: true
+            write: false
+            type: SCU_INTERRUPT_SRRAW_PRWARN
+      - name: SRMSK
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 8
+        description: (read-write) SCU Service Request Mask
+        fields:
+          - name: RMX
+            description: Retention Memory Mirror Register Update Mask
+            index: 29
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_SRMSK_RMX
+          - name: RTC_TIM1
+            description: RTC TIM1 Mirror Register Update Mask
+            index: 28
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_SRMSK_RTC_TIM1
+          - name: RTC_TIM0
+            description: RTC TIM0 Mirror Register Update Mask
+            index: 27
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_SRMSK_RTC_TIM0
+          - name: RTC_ATIM1
+            description: RTC ATIM1 Mirror Register Update Mask
+            index: 26
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_SRMSK_RTC_ATIM1
+          - name: RTC_ATIM0
+            description: RTC ATIM0 Mirror Register Update Mask
+            index: 25
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_SRMSK_RTC_ATIM0
+          - name: RTC_CTR
+            description: RTC CTR Mirror Register Update Mask
+            index: 24
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_SRMSK_RTC_CTR
+          - name: OSCULCTRL
+            description: OSCULCTRL Mirror Register Update Mask
+            index: 23
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_SRMSK_OSCULCTRL
+          - name: OSCSICTRL
+            description: OSCSICTRL Mirror Register Update Mask
+            index: 21
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_SRMSK_OSCSICTRL
+          - name: HDCR
+            description: HDCR Mirror Register Update Mask
+            index: 19
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_SRMSK_HDCR
+          - name: HDSET
+            description: HDSET Mirror Register Update Mask
+            index: 18
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_SRMSK_HDSET
+          - name: HDCLR
+            description: HDCLR Mirror Register Update Mask
+            index: 17
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_SRMSK_HDCLR
+          - name: DLROVR
+            description: DLR Request Overrun Interrupt Mask
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_SRMSK_DLROVR
+          - name: AI
+            description: RTC Alarm Interrupt Mask
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_SRMSK_AI
+          - name: PI
+            description: RTC Periodic Interrupt Mask
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_SRMSK_PI
+          - name: PRWARN
+            description: WDT pre-warning Interrupt Mask
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_SRMSK_PRWARN
+      - name: SRCLR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 12
+        description: (write-only) SCU Service Request Clear
+        fields:
+          - name: RMX
+            description: Retention Memory Mirror Register Update Clear
+            index: 29
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRCLR_RMX
+          - name: RTC_TIM1
+            description: RTC TIM1 Mirror Register Update Clear
+            index: 28
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRCLR_RTC_TIM1
+          - name: RTC_TIM0
+            description: RTC TIM0 Mirror Register Update Clear
+            index: 27
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRCLR_RTC_TIM0
+          - name: RTC_ATIM1
+            description: RTC ATIM1 Mirror Register Update Clear
+            index: 26
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRCLR_RTC_ATIM1
+          - name: RTC_ATIM0
+            description: RTC ATIM0 Mirror Register Update Clear
+            index: 25
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRCLR_RTC_ATIM0
+          - name: RTC_CTR
+            description: RTC CTR Mirror Register Update Clear
+            index: 24
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRCLR_RTC_CTR
+          - name: OSCULCTRL
+            description: OSCULCTRL Mirror Register Update Clear
+            index: 23
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRCLR_OSCULCTRL
+          - name: OSCSICTRL
+            description: OSCSICTRL Mirror Register Update Clear
+            index: 21
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRCLR_OSCSICTRL
+          - name: HDCR
+            description: HDCR Mirror Register Update Clear
+            index: 19
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRCLR_HDCR
+          - name: HDSET
+            description: HDSET Mirror Register Update Clear
+            index: 18
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRCLR_HDSET
+          - name: HDCLR
+            description: HDCLR Mirror Register Update Clear
+            index: 17
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRCLR_HDCLR
+          - name: DLROVR
+            description: DLR Request Overrun Interrupt clear
+            index: 3
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRCLR_DLROVR
+          - name: AI
+            description: RTC Alarm Interrupt Clear
+            index: 2
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRCLR_AI
+          - name: PI
+            description: RTC Periodic Interrupt Clear
+            index: 1
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRCLR_PI
+          - name: PRWARN
+            description: WDT pre-warning Interrupt Clear
+            index: 0
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRCLR_PRWARN
+      - name: SRSET
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 16
+        description: (write-only) SCU Service Request Set
+        fields:
+          - name: RMX
+            description: Retention Memory Mirror Register Update Set
+            index: 29
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRSET_RMX
+          - name: RTC_TIM1
+            description: RTC TIM1 Mirror Register Update Set
+            index: 28
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRSET_RTC_TIM1
+          - name: RTC_TIM0
+            description: RTC TIM0 Mirror Register Update Set
+            index: 27
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRSET_RTC_TIM0
+          - name: RTC_ATIM1
+            description: RTC ATIM1 Mirror Register Update Set
+            index: 26
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRSET_RTC_ATIM1
+          - name: RTC_ATIM0
+            description: RTC ATIM0 Mirror Register Update Set
+            index: 25
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRSET_RTC_ATIM0
+          - name: RTC_CTR
+            description: RTC CTR Mirror Register Update Set
+            index: 24
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRSET_RTC_CTR
+          - name: OSCULCTRL
+            description: OSCULCTRL Mirror Register Update Set
+            index: 23
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRSET_OSCULCTRL
+          - name: OSCSICTRL
+            description: OSCSICTRL Mirror Register Update Set
+            index: 21
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRSET_OSCSICTRL
+          - name: HDCR
+            description: HDCR Mirror Register Update Set
+            index: 19
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRSET_HDCR
+          - name: HDCRSET
+            description: HDCRSET Mirror Register Update Set
+            index: 18
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRSET_HDCRSET
+          - name: HDCRCLR
+            description: HDCRCLR Mirror Register Update Set
+            index: 17
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRSET_HDCRCLR
+          - name: DLROVR
+            description: DLR Request Overrun Interrupt Set
+            index: 3
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRSET_DLROVR
+          - name: AI
+            description: RTC Alarm Interrupt Set
+            index: 2
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRSET_AI
+          - name: PI
+            description: RTC Periodic Interrupt Set
+            index: 1
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRSET_PI
+          - name: PRWARN
+            description: WDT pre-warning Interrupt Set
+            index: 0
+            width: 1
+            read: false
+            write: true
+            type: SCU_INTERRUPT_SRSET_PRWARN
+      - name: NMIREQEN
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 20
+        description: (read-write) SCU Service Request Mask
+        fields:
+          - name: ERU03
+            description: Promote Channel 3 Interrupt of ERU0 Request to NMI Request
+            index: 19
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_NMIREQEN_ERU03
+          - name: ERU02
+            description: Promote Channel 2 Interrupt of ERU0 Request to NMI Request
+            index: 18
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_NMIREQEN_ERU02
+          - name: ERU01
+            description: Promote Channel 1 Interrupt of ERU0 Request to NMI Request
+            index: 17
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_NMIREQEN_ERU01
+          - name: ERU00
+            description: Promote Channel 0 Interrupt of ERU0 Request to NMI Request
+            index: 16
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_NMIREQEN_ERU00
+          - name: AI
+            description: Promote RTC Alarm Interrupt Request to NMI Request
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_NMIREQEN_AI
+          - name: PI
+            description: Promote RTC Periodic Interrupt request to NMI Request
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_NMIREQEN_PI
+          - name: PRWARN
+            description: Promote Pre-Warning Interrupt Request to NMI Request
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: SCU_INTERRUPT_NMIREQEN_PRWARN
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums:
+  SCU_INTERRUPT_SRSTAT_RMX:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSTAT_RTC_TIM1:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSTAT_RTC_TIM0:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSTAT_RTC_ATIM1:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSTAT_RTC_ATIM0:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSTAT_RTC_CTR:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSTAT_OSCULCTRL:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSTAT_OSCSICTRL:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSTAT_HDCR:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSTAT_HDSET:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSTAT_HDCLR:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSTAT_PRWARN:
+    enum:
+      value1:
+        description: Inactive
+        value: 0
+      value2:
+        description: Active
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRRAW_RMX:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRRAW_RTC_TIM1:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRRAW_RTC_TIM0:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRRAW_RTC_ATIM1:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRRAW_RTC_ATIM0:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRRAW_RTC_CTR:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRRAW_OSCULCTRL:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRRAW_OSCSICTRL:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRRAW_HDCR:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRRAW_HDSET:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRRAW_HDCLR:
+    enum:
+      value1:
+        description: Not updated
+        value: 0
+      value2:
+        description: Update completed
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRRAW_PRWARN:
+    enum:
+      value1:
+        description: Inactive
+        value: 0
+      value2:
+        description: Active
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRMSK_RMX:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRMSK_RTC_TIM1:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRMSK_RTC_TIM0:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRMSK_RTC_ATIM1:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRMSK_RTC_ATIM0:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRMSK_RTC_CTR:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRMSK_OSCULCTRL:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRMSK_OSCSICTRL:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRMSK_HDCR:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRMSK_HDSET:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRMSK_HDCLR:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRMSK_DLROVR:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRMSK_AI:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRMSK_PI:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRMSK_PRWARN:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRCLR_RMX:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Clear the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRCLR_RTC_TIM1:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Clear the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRCLR_RTC_TIM0:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Clear the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRCLR_RTC_ATIM1:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Clear the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRCLR_RTC_ATIM0:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Clear the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRCLR_RTC_CTR:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Clear the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRCLR_OSCULCTRL:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Clear the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRCLR_OSCSICTRL:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Clear the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRCLR_HDCR:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Clear the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRCLR_HDSET:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Clear the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRCLR_HDCLR:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Clear the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRCLR_DLROVR:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Clear the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRCLR_AI:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Clear the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRCLR_PI:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Clear the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRCLR_PRWARN:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: Clear the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSET_RMX:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: set the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSET_RTC_TIM1:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: set the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSET_RTC_TIM0:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: set the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSET_RTC_ATIM1:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: set the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSET_RTC_ATIM0:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: set the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSET_RTC_CTR:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: set the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSET_OSCULCTRL:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: set the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSET_OSCSICTRL:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: set the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSET_HDCR:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: set the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSET_HDCRSET:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: set the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSET_HDCRCLR:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: set the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSET_DLROVR:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: set the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSET_AI:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: set the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSET_PI:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: set the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_SRSET_PRWARN:
+    enum:
+      value1:
+        description: No effect
+        value: 0
+      value2:
+        description: set the status bit
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_NMIREQEN_ERU03:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_NMIREQEN_ERU02:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_NMIREQEN_ERU01:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_NMIREQEN_ERU00:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_NMIREQEN_AI:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_NMIREQEN_PI:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  SCU_INTERRUPT_NMIREQEN_PRWARN:
+    enum:
+      value1:
+        description: Disabled
+        value: 0
+      value2:
+        description: Enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false

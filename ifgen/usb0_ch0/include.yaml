@@ -1,0 +1,482 @@
+---
+structs:
+  usb0_ch0:
+    description: Universal Serial Bus
+    instances:
+      - name: USB0_CH0
+        address: '0x50040500'
+      - name: USB0_CH1
+        address: '0x50040520'
+      - name: USB0_CH2
+        address: '0x50040540'
+      - name: USB0_CH3
+        address: '0x50040560'
+      - name: USB0_CH4
+        address: '0x50040580'
+      - name: USB0_CH5
+        address: '0x500405A0'
+      - name: USB0_CH6
+        address: '0x500405C0'
+      - name: USB0_CH7
+        address: '0x500405E0'
+      - name: USB0_CH8
+        address: '0x50040600'
+      - name: USB0_CH9
+        address: '0x50040620'
+      - name: USB0_CH10
+        address: '0x50040640'
+      - name: USB0_CH11
+        address: '0x50040660'
+      - name: USB0_CH12
+        address: '0x50040680'
+      - name: USB0_CH13
+        address: '0x500406A0'
+    fields:
+      - name: HCCHAR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        description: (read-write) Host Channel Characteristics Register
+        fields:
+          - name: ChEna
+            description: Channel Enable
+            index: 31
+            width: 1
+            read: true
+            write: true
+            type: USB0_CH0_HCCHAR_ChEna
+          - name: ChDis
+            description: Channel Disable
+            index: 30
+            width: 1
+            read: true
+            write: true
+          - name: OddFrm
+            description: Odd Frame
+            index: 29
+            width: 1
+            read: true
+            write: true
+            type: USB0_CH0_HCCHAR_OddFrm
+          - name: DevAddr
+            description: Device Address
+            index: 22
+            width: 7
+            read: true
+            write: true
+          - name: MC_EC
+            description: Multi Count / Error Count
+            index: 20
+            width: 2
+            read: true
+            write: true
+            type: USB0_CH0_HCCHAR_MC_EC
+          - name: EPType
+            description: Endpoint Type
+            index: 18
+            width: 2
+            read: true
+            write: true
+            type: USB0_CH0_HCCHAR_EPType
+          - name: EPDir
+            description: Endpoint Direction
+            index: 15
+            width: 1
+            read: true
+            write: true
+            type: USB0_CH0_HCCHAR_EPDir
+          - name: EPNum
+            description: Endpoint Number
+            index: 11
+            width: 4
+            read: true
+            write: true
+          - name: MPS
+            description: Maximum Packet Size
+            index: 0
+            width: 11
+            read: true
+            write: true
+      - name: HCINT
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 8
+        description: (read-write) Host Channel Interrupt Register
+        fields:
+          - name: DESC_LST_ROLLIntr
+            description: Descriptor rollover interrupt
+            index: 13
+            width: 1
+            read: true
+            write: true
+          - name: XCS_XACT_ERR
+            description: Excessive Transaction Error
+            index: 12
+            width: 1
+            read: true
+            write: true
+          - name: BNAIntr
+            description: BNA (Buffer Not Available) Interrupt
+            index: 11
+            width: 1
+            read: true
+            write: true
+          - name: DataTglErr
+            description: Data Toggle Error
+            index: 10
+            width: 1
+            read: true
+            write: true
+          - name: FrmOvrun
+            description: Frame Overrun
+            index: 9
+            width: 1
+            read: true
+            write: true
+          - name: BblErr
+            description: Babble Error
+            index: 8
+            width: 1
+            read: true
+            write: true
+          - name: XactErr
+            description: Transaction Error
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: NYET
+            description: NYET Response Received Interrupt
+            index: 6
+            width: 1
+            read: true
+            write: true
+          - name: ACK
+            description: ACK Response Received/Transmitted Interrupt
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: NAK
+            description: NAK Response Received Interrupt
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: STALL
+            description: STALL Response Received Interrupt
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: AHBErr
+            description: AHB Error
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: ChHltd
+            description: Channel Halted
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: XferCompl
+            description: Transfer Completed
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: HCINTMSK
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 12
+        description: (read-write) Host Channel Interrupt Mask Register
+        fields:
+          - name: DESC_LST_ROLLIntrMsk
+            description: Descriptor rollover interrupt Mask register
+            index: 13
+            width: 1
+            read: true
+            write: true
+          - name: BNAIntrMsk
+            description: BNA (Buffer Not Available) Interrupt mask register
+            index: 11
+            width: 1
+            read: true
+            write: true
+          - name: DataTglErrMsk
+            description: Data Toggle Error Mask
+            index: 10
+            width: 1
+            read: true
+            write: true
+          - name: FrmOvrunMsk
+            description: Frame Overrun Mask
+            index: 9
+            width: 1
+            read: true
+            write: true
+          - name: BblErrMsk
+            description: Babble Error Mask
+            index: 8
+            width: 1
+            read: true
+            write: true
+          - name: XactErrMsk
+            description: Transaction Error Mask
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: NyetMsk
+            description: NYET Response Received Interrupt Mask
+            index: 6
+            width: 1
+            read: true
+            write: true
+          - name: AckMsk
+            description: ACK Response Received/Transmitted Interrupt Mask
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: NakMsk
+            description: NAK Response Received Interrupt Mask
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: StallMsk
+            description: STALL Response Received Interrupt Mask
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: AHBErrMsk
+            description: AHB Error Mask
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: ChHltdMsk
+            description: Channel Halted Mask
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: XferComplMsk
+            description: Transfer Completed Mask
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: HCTSIZ_BUFFERMODE
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 16
+        description: (read-write) Host Channel Transfer Size Register [BUFFERMODE]
+        fields:
+          - name: Pid
+            description: PID
+            index: 29
+            width: 2
+            read: true
+            write: true
+            type: USB0_CH0_HCTSIZ_BUFFERMODE_Pid
+          - name: PktCnt
+            description: Packet Count
+            index: 19
+            width: 10
+            read: true
+            write: true
+          - name: XferSize
+            description: Transfer Size
+            index: 0
+            width: 19
+            read: true
+            write: true
+        alternates:
+          - name: HCTSIZ_SCATGATHER
+            description: (read-write) Host Channel Transfer Size Register [SCATGATHER]
+            fields:
+              - name: Pid
+                description: PID
+                index: 29
+                width: 2
+                read: true
+                write: true
+                type: USB0_CH0_HCTSIZ_SCATGATHER_Pid
+              - name: NTD
+                description: 'Number of Transfer Descriptors: 0=1 descriptor, 63=64
+                  descriptors, 1=2 descriptors, 3=4 descriptors, 7=8 descriptors,
+                  15=16 descriptors, 31=32 descriptors, 63=64 descriptors, '
+                index: 8
+                width: 8
+                read: true
+                write: true
+              - name: SCHED_INFO
+                description: Schedule information
+                index: 0
+                width: 8
+                read: true
+                write: true
+      - name: HCDMA_BUFFERMODE
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 20
+        description: (read-write) Host Channel DMA Address Register [BUFFERMODE]
+        fields:
+          - name: DMAAddr
+            description: DMA Address
+            index: 0
+            width: 32
+            read: true
+            write: true
+        alternates:
+          - name: HCDMA_SCATGATHER
+            description: (read-write) Host Channel DMA Address Register [SCATGATHER]
+            fields:
+              - name: DMAAddr
+                description: DMA Address
+                index: 9
+                width: 23
+                read: true
+                write: true
+              - name: CTD
+                description: 'Current Transfer Desc:'
+                index: 3
+                width: 6
+                read: true
+                write: true
+                type: USB0_CH0_HCDMA_SCATGATHER_CTD
+      - name: HCDMAB
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 28
+        const: true
+        description: (read-only) Host Channel DMA Buffer Address Register
+        fields:
+          - name: Buffer_Address
+            description: Buffer Address
+            index: 0
+            width: 32
+            read: true
+            write: false
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums:
+  USB0_CH0_HCCHAR_ChEna:
+    enum:
+      value1:
+        description: 'Scatter/Gather mode enabled: Indicates that the descriptor structure
+          is not yet ready. Scatter/Gather mode disabled: Channel disabled'
+        value: 0
+      value2:
+        description: 'Scatter/Gather mode enabled: Indicates that the descriptor structure
+          and data buffer with data is setup and this channel can access the descriptor.
+          Scatter/Gather mode disabled: Channel enabled'
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  USB0_CH0_HCCHAR_OddFrm:
+    enum:
+      value1:
+        description: Even frame
+        value: 0
+      value2:
+        description: Odd frame
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  USB0_CH0_HCCHAR_MC_EC:
+    enum:
+      value2:
+        description: 1 transaction
+        value: 1
+      value3:
+        description: 2 transactions to be issued for this endpoint per frame
+        value: 2
+      value4:
+        description: 3 transactions to be issued for this endpoint per frame
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  USB0_CH0_HCCHAR_EPType:
+    enum:
+      value1:
+        description: Control
+        value: 0
+      value2:
+        description: Isochronous
+        value: 1
+      value3:
+        description: Bulk
+        value: 2
+      value4:
+        description: Interrupt
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  USB0_CH0_HCCHAR_EPDir:
+    enum:
+      value1:
+        description: OUT
+        value: 0
+      value2:
+        description: IN
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  USB0_CH0_HCTSIZ_BUFFERMODE_Pid:
+    enum:
+      value1:
+        description: DATA0
+        value: 0
+      value2:
+        description: DATA2
+        value: 1
+      value3:
+        description: DATA1
+        value: 2
+      value4:
+        description: MDATA (non-control)/SETUP (control)
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  USB0_CH0_HCTSIZ_SCATGATHER_Pid:
+    enum:
+      value1:
+        description: DATA0
+        value: 0
+      value2:
+        description: DATA2
+        value: 1
+      value3:
+        description: DATA1
+        value: 2
+      value4:
+        description: MDATA (non-control)
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  USB0_CH0_HCDMA_SCATGATHER_CTD:
+    enum:
+      value1:
+        description: 1 descriptor
+        value: 0
+      value2:
+        description: 64 descriptors
+        value: 63
+    unit_test: false
+    json: false
+    use_map: false

@@ -2,7 +2,10 @@
 name: hal-xmc4700
 description: A hardware abstraction layer generated from the XMC4700's SVD.
 
+# Too many arguments (https://github.com/vkottler/yambs/issues/77).
+format: false
+
 version:
   major: 0
-  minor: 2
+  minor: 3
   patch: 0

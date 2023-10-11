@@ -1,0 +1,1090 @@
+---
+structs:
+  ccu80:
+    description: Capture Compare Unit 8 - Unit 0
+    instances:
+      - name: CCU80
+        address: '0x40020000'
+      - name: CCU81
+        address: '0x40024000'
+    fields:
+      - name: GCTRL
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        description: (read-write) Global Control Register
+        fields:
+          - name: MSDE
+            description: Multi Channel shadow transfer request configuration
+            index: 14
+            width: 2
+            read: true
+            write: true
+            type: CCU80_GCTRL_MSDE
+          - name: MSE3
+            description: Slice 3 Multi Channel shadow transfer enable
+            index: 13
+            width: 1
+            read: true
+            write: true
+            type: CCU80_GCTRL_MSE3
+          - name: MSE2
+            description: Slice 2 Multi Channel shadow transfer enable
+            index: 12
+            width: 1
+            read: true
+            write: true
+            type: CCU80_GCTRL_MSE2
+          - name: MSE1
+            description: Slice 1 Multi Channel shadow transfer enable
+            index: 11
+            width: 1
+            read: true
+            write: true
+            type: CCU80_GCTRL_MSE1
+          - name: MSE0
+            description: Slice 0 Multi Channel shadow transfer enable
+            index: 10
+            width: 1
+            read: true
+            write: true
+            type: CCU80_GCTRL_MSE0
+          - name: SUSCFG
+            description: Suspend Mode Configuration
+            index: 8
+            width: 2
+            read: true
+            write: true
+            type: CCU80_GCTRL_SUSCFG
+          - name: PCIS
+            description: Prescaler Input Clock Selection
+            index: 4
+            width: 2
+            read: true
+            write: true
+            type: CCU80_GCTRL_PCIS
+          - name: PRBC
+            description: Prescaler Clear Configuration
+            index: 0
+            width: 3
+            read: true
+            write: true
+            type: CCU80_GCTRL_PRBC
+      - name: GSTAT
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4
+        const: true
+        description: (read-only) Global Status Register
+        fields:
+          - name: PCRB
+            description: Parity Checker Run Bit
+            index: 10
+            width: 1
+            read: true
+            write: false
+            type: CCU80_GSTAT_PCRB
+          - name: PRB
+            description: Prescaler Run Bit
+            index: 8
+            width: 1
+            read: true
+            write: false
+            type: CCU80_GSTAT_PRB
+          - name: S3I
+            description: CC83 IDLE status
+            index: 3
+            width: 1
+            read: true
+            write: false
+            type: CCU80_GSTAT_S3I
+          - name: S2I
+            description: CC82 IDLE status
+            index: 2
+            width: 1
+            read: true
+            write: false
+            type: CCU80_GSTAT_S2I
+          - name: S1I
+            description: CC81 IDLE status
+            index: 1
+            width: 1
+            read: true
+            write: false
+            type: CCU80_GSTAT_S1I
+          - name: S0I
+            description: CC80 IDLE status
+            index: 0
+            width: 1
+            read: true
+            write: false
+            type: CCU80_GSTAT_S0I
+      - name: GIDLS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 8
+        description: (write-only) Global Idle Set
+        fields:
+          - name: CPCH
+            description: Parity Checker Run bit clear
+            index: 10
+            width: 1
+            read: false
+            write: true
+          - name: PSIC
+            description: Prescaler clear
+            index: 9
+            width: 1
+            read: false
+            write: true
+          - name: CPRB
+            description: Prescaler# Run Bit Clear
+            index: 8
+            width: 1
+            read: false
+            write: true
+          - name: SS3I
+            description: CC83 IDLE mode set
+            index: 3
+            width: 1
+            read: false
+            write: true
+          - name: SS2I
+            description: CC82 IDLE mode set
+            index: 2
+            width: 1
+            read: false
+            write: true
+          - name: SS1I
+            description: CC81 IDLE mode set
+            index: 1
+            width: 1
+            read: false
+            write: true
+          - name: SS0I
+            description: CC80 IDLE mode set
+            index: 0
+            width: 1
+            read: false
+            write: true
+      - name: GIDLC
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 12
+        description: (write-only) Global Idle Clear
+        fields:
+          - name: SPCH
+            description: Parity Checker run bit set
+            index: 10
+            width: 1
+            read: false
+            write: true
+          - name: SPRB
+            description: Prescaler Run Bit Set
+            index: 8
+            width: 1
+            read: false
+            write: true
+          - name: CS3I
+            description: CC83 IDLE mode clear
+            index: 3
+            width: 1
+            read: false
+            write: true
+          - name: CS2I
+            description: CC82 IDLE mode clear
+            index: 2
+            width: 1
+            read: false
+            write: true
+          - name: CS1I
+            description: CC81 IDLE mode clear
+            index: 1
+            width: 1
+            read: false
+            write: true
+          - name: CS0I
+            description: CC80 IDLE mode clear
+            index: 0
+            width: 1
+            read: false
+            write: true
+      - name: GCSS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 16
+        description: (write-only) Global Channel Set
+        fields:
+          - name: S3ST2S
+            description: Slice 3 status bit 2 set
+            index: 23
+            width: 1
+            read: false
+            write: true
+          - name: S2ST2S
+            description: Slice 2 status bit 2 set
+            index: 22
+            width: 1
+            read: false
+            write: true
+          - name: S1ST2S
+            description: Slice 1 status bit 2 set
+            index: 21
+            width: 1
+            read: false
+            write: true
+          - name: S0ST2S
+            description: Slice 0 status bit 2 set
+            index: 20
+            width: 1
+            read: false
+            write: true
+          - name: S3ST1S
+            description: Slice 3 status bit 1 set
+            index: 19
+            width: 1
+            read: false
+            write: true
+          - name: S2ST1S
+            description: Slice 2 status bit 1 set
+            index: 18
+            width: 1
+            read: false
+            write: true
+          - name: S1ST1S
+            description: Slice 1 status bit 1 set
+            index: 17
+            width: 1
+            read: false
+            write: true
+          - name: S0ST1S
+            description: Slice 0 status bit 1 set
+            index: 16
+            width: 1
+            read: false
+            write: true
+          - name: S3PSE
+            description: Slice 3 Prescaler shadow transfer set enable
+            index: 14
+            width: 1
+            read: false
+            write: true
+          - name: S3DSE
+            description: Slice 3 Dither shadow transfer set enable
+            index: 13
+            width: 1
+            read: false
+            write: true
+          - name: S3SE
+            description: Slice 3 shadow transfer set enable
+            index: 12
+            width: 1
+            read: false
+            write: true
+          - name: S2PSE
+            description: Slice 2 Prescaler shadow transfer set enable
+            index: 10
+            width: 1
+            read: false
+            write: true
+          - name: S2DSE
+            description: Slice 2 Dither shadow transfer set enable
+            index: 9
+            width: 1
+            read: false
+            write: true
+          - name: S2SE
+            description: Slice 2 shadow transfer set enable
+            index: 8
+            width: 1
+            read: false
+            write: true
+          - name: S1PSE
+            description: Slice 1 Prescaler shadow transfer set enable
+            index: 6
+            width: 1
+            read: false
+            write: true
+          - name: S1DSE
+            description: Slice 1 Dither shadow transfer set enable
+            index: 5
+            width: 1
+            read: false
+            write: true
+          - name: S1SE
+            description: Slice 1 shadow transfer set enable
+            index: 4
+            width: 1
+            read: false
+            write: true
+          - name: S0PSE
+            description: Slice 0 Prescaler shadow transfer set enable
+            index: 2
+            width: 1
+            read: false
+            write: true
+          - name: S0DSE
+            description: Slice 0 Dither shadow transfer set enable
+            index: 1
+            width: 1
+            read: false
+            write: true
+          - name: S0SE
+            description: Slice 0 shadow transfer set enable
+            index: 0
+            width: 1
+            read: false
+            write: true
+      - name: GCSC
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 20
+        description: (write-only) Global Channel Clear
+        fields:
+          - name: S3ST2C
+            description: Slice 3 status bit 2 clear
+            index: 23
+            width: 1
+            read: false
+            write: true
+          - name: S2ST2C
+            description: Slice 2 status bit 2 clear
+            index: 22
+            width: 1
+            read: false
+            write: true
+          - name: S1ST2C
+            description: Slice 1 status bit 2 clear
+            index: 21
+            width: 1
+            read: false
+            write: true
+          - name: S0ST2C
+            description: Slice 0 status bit 2 clear
+            index: 20
+            width: 1
+            read: false
+            write: true
+          - name: S3ST1C
+            description: Slice 3 status bit 1 clear
+            index: 19
+            width: 1
+            read: false
+            write: true
+          - name: S2ST1C
+            description: Slice 2 status bit 1 clear
+            index: 18
+            width: 1
+            read: false
+            write: true
+          - name: S1ST1C
+            description: Slice 1 status bit 1 clear
+            index: 17
+            width: 1
+            read: false
+            write: true
+          - name: S0ST1C
+            description: Slice 0 status bit 1 clear
+            index: 16
+            width: 1
+            read: false
+            write: true
+          - name: S3PSC
+            description: Slice 3 Prescaler shadow transfer clear
+            index: 14
+            width: 1
+            read: false
+            write: true
+          - name: S3DSC
+            description: Slice 3 Dither shadow transfer clear
+            index: 13
+            width: 1
+            read: false
+            write: true
+          - name: S3SC
+            description: Slice 3 shadow transfer clear
+            index: 12
+            width: 1
+            read: false
+            write: true
+          - name: S2PSC
+            description: Slice 2 Prescaler shadow transfer clear
+            index: 10
+            width: 1
+            read: false
+            write: true
+          - name: S2DSC
+            description: Slice 2 Dither shadow transfer clear
+            index: 9
+            width: 1
+            read: false
+            write: true
+          - name: S2SC
+            description: Slice 2 shadow transfer clear
+            index: 8
+            width: 1
+            read: false
+            write: true
+          - name: S1PSC
+            description: Slice 1 Prescaler shadow transfer clear
+            index: 6
+            width: 1
+            read: false
+            write: true
+          - name: S1DSC
+            description: Slice 1 Dither shadow transfer clear
+            index: 5
+            width: 1
+            read: false
+            write: true
+          - name: S1SC
+            description: Slice 1 shadow transfer clear
+            index: 4
+            width: 1
+            read: false
+            write: true
+          - name: S0PSC
+            description: Slice 0 Prescaler shadow transfer clear
+            index: 2
+            width: 1
+            read: false
+            write: true
+          - name: S0DSC
+            description: Slice 0 Dither shadow transfer clear
+            index: 1
+            width: 1
+            read: false
+            write: true
+          - name: S0SC
+            description: Slice 0 shadow transfer request clear
+            index: 0
+            width: 1
+            read: false
+            write: true
+      - name: GCST
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 24
+        const: true
+        description: (read-only) Global Channel status
+        fields:
+          - name: CC83ST2
+            description: Slice 3 compare channel 2 status bit
+            index: 23
+            width: 1
+            read: true
+            write: false
+          - name: CC82ST2
+            description: Slice 2 compare channel 2 status bit
+            index: 22
+            width: 1
+            read: true
+            write: false
+          - name: CC81ST2
+            description: Slice 1 compare channel 2 status bit
+            index: 21
+            width: 1
+            read: true
+            write: false
+          - name: CC80ST2
+            description: Slice 0 compare channel 2 status bit
+            index: 20
+            width: 1
+            read: true
+            write: false
+          - name: CC83ST1
+            description: Slice 3 compare channel 1 status bit
+            index: 19
+            width: 1
+            read: true
+            write: false
+          - name: CC82ST1
+            description: Slice 2 compare channel 1 status bit
+            index: 18
+            width: 1
+            read: true
+            write: false
+          - name: CC81ST1
+            description: Slice 1 compare channel 1 status bit
+            index: 17
+            width: 1
+            read: true
+            write: false
+          - name: CC80ST1
+            description: Slice 0 compare channel 1 status bit
+            index: 16
+            width: 1
+            read: true
+            write: false
+          - name: S3PSS
+            description: Slice 3 Prescaler shadow transfer status
+            index: 14
+            width: 1
+            read: true
+            write: false
+            type: CCU80_GCST_S3PSS
+          - name: S3DSS
+            description: Slice 3 Dither shadow transfer status
+            index: 13
+            width: 1
+            read: true
+            write: false
+            type: CCU80_GCST_S3DSS
+          - name: S3SS
+            description: Slice 3 shadow transfer status
+            index: 12
+            width: 1
+            read: true
+            write: false
+            type: CCU80_GCST_S3SS
+          - name: S2PSS
+            description: Slice 2 Prescaler shadow transfer status
+            index: 10
+            width: 1
+            read: true
+            write: false
+            type: CCU80_GCST_S2PSS
+          - name: S2DSS
+            description: Slice 2 Dither shadow transfer status
+            index: 9
+            width: 1
+            read: true
+            write: false
+            type: CCU80_GCST_S2DSS
+          - name: S2SS
+            description: Slice 2 shadow transfer status
+            index: 8
+            width: 1
+            read: true
+            write: false
+            type: CCU80_GCST_S2SS
+          - name: S1PSS
+            description: Slice 1 Prescaler shadow transfer status
+            index: 6
+            width: 1
+            read: true
+            write: false
+            type: CCU80_GCST_S1PSS
+          - name: S1DSS
+            description: Slice 1 Dither shadow transfer status
+            index: 5
+            width: 1
+            read: true
+            write: false
+            type: CCU80_GCST_S1DSS
+          - name: S1SS
+            description: Slice 1 shadow transfer status
+            index: 4
+            width: 1
+            read: true
+            write: false
+            type: CCU80_GCST_S1SS
+          - name: S0PSS
+            description: Slice 0 Prescaler shadow transfer status
+            index: 2
+            width: 1
+            read: true
+            write: false
+            type: CCU80_GCST_S0PSS
+          - name: S0DSS
+            description: Slice 0 Dither shadow transfer status
+            index: 1
+            width: 1
+            read: true
+            write: false
+            type: CCU80_GCST_S0DSS
+          - name: S0SS
+            description: Slice 0 shadow transfer status
+            index: 0
+            width: 1
+            read: true
+            write: false
+            type: CCU80_GCST_S0SS
+      - name: GPCHK
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 28
+        description: (read-write) Parity Checker Configuration
+        fields:
+          - name: PCSEL3
+            description: Parity Checker Slice 3 output selection
+            index: 28
+            width: 4
+            read: true
+            write: true
+          - name: PCSEL2
+            description: Parity Checker Slice 2 output selection
+            index: 24
+            width: 4
+            read: true
+            write: true
+          - name: PCSEL1
+            description: Parity Checker Slice 1 output selection
+            index: 20
+            width: 4
+            read: true
+            write: true
+          - name: PCSEL0
+            description: Parity Checker Slice 0 output selection
+            index: 16
+            width: 4
+            read: true
+            write: true
+          - name: PCST
+            description: Parity Checker XOR status
+            index: 15
+            width: 1
+            read: true
+            write: false
+          - name: PCTS
+            description: Parity Checker type selector
+            index: 7
+            width: 1
+            read: true
+            write: true
+            type: CCU80_GPCHK_PCTS
+          - name: PCDS
+            description: Parity Checker Delay Input Selector
+            index: 5
+            width: 2
+            read: true
+            write: true
+            type: CCU80_GPCHK_PCDS
+          - name: PISEL
+            description: Driver Input signal selector
+            index: 3
+            width: 2
+            read: true
+            write: true
+            type: CCU80_GPCHK_PISEL
+          - name: PACS
+            description: Parity Checker Automatic start/stop selector
+            index: 1
+            width: 2
+            read: true
+            write: true
+            type: CCU80_GPCHK_PACS
+          - name: PASE
+            description: Parity Checker Automatic start/stop
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: MIDR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 128
+        const: true
+        description: (read-only) Module Identification
+        fields:
+          - name: MODN
+            description: Module Number
+            index: 16
+            width: 16
+            read: true
+            write: false
+          - name: MODT
+            description: Module Type
+            index: 8
+            width: 8
+            read: true
+            write: false
+          - name: MODR
+            description: Module Revision
+            index: 0
+            width: 8
+            read: true
+            write: false
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums:
+  CCU80_GCTRL_MSDE:
+    enum:
+      value1:
+        description: Only the shadow transfer for period and compare values is requested
+        value: 0
+      value2:
+        description: Shadow transfer for the compare, period and prescaler compare
+          values is requested
+        value: 1
+      value4:
+        description: Shadow transfer for the compare, period, prescaler and dither
+          compare values is requested
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GCTRL_MSE3:
+    enum:
+      value1:
+        description: Shadow transfer can only be requested by SW
+        value: 0
+      value2:
+        description: Shadow transfer can be requested via SW and via the CCU8x.MCSS
+          input.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GCTRL_MSE2:
+    enum:
+      value1:
+        description: Shadow transfer can only be requested by SW
+        value: 0
+      value2:
+        description: Shadow transfer can be requested via SW and via the CCU8xMCSS
+          input.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GCTRL_MSE1:
+    enum:
+      value1:
+        description: Shadow transfer can only be requested by SW
+        value: 0
+      value2:
+        description: Shadow transfer can be requested via SW and via the CCU8x.MCSS
+          input.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GCTRL_MSE0:
+    enum:
+      value1:
+        description: Shadow transfer can only be requested by SW
+        value: 0
+      value2:
+        description: Shadow transfer can be requested via SW and via the CCU8x.MCSS
+          input.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GCTRL_SUSCFG:
+    enum:
+      value1:
+        description: Suspend request ignored. The module never enters in suspend
+        value: 0
+      value2:
+        description: Stops all the running slices immediately. Safe stop is not applied.
+        value: 1
+      value3:
+        description: Stops the block immediately and clamps all the outputs to PASSIVE
+          state. Safe stop is applied.
+        value: 2
+      value4:
+        description: Waits for the roll over of each slice to stop and clamp the slices
+          outputs. Safe stop is applied.
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GCTRL_PCIS:
+    enum:
+      value1:
+        description: Module clock
+        value: 0
+      value2:
+        description: CCU8x.ECLKA
+        value: 1
+      value3:
+        description: CCU8x.ECLKB
+        value: 2
+      value4:
+        description: CCU8x.ECLKC
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GCTRL_PRBC:
+    enum:
+      value1:
+        description: SW only
+        value: 0
+      value2:
+        description: GSTATThe register contains the status of the prescaler and each
+          timer slice (idle mode or running)..PRB and prescaler registers are cleared
+          when the Run Bit of CC80 is cleared.
+        value: 1
+      value3:
+        description: GSTATThe register contains the status of the prescaler and each
+          timer slice (idle mode or running)..PRB and prescaler registers are cleared
+          when the Run Bit of CC81 is cleared.
+        value: 2
+      value4:
+        description: GSTATThe register contains the status of the prescaler and each
+          timer slice (idle mode or running)..PRB and prescaler registers are cleared
+          when the Run Bit of CC82 is cleared.
+        value: 3
+      value5:
+        description: GSTATThe register contains the status of the prescaler and each
+          timer slice (idle mode or running)..PRB and prescaler registers are cleared
+          when the Run Bit of CC83 is cleared.
+        value: 4
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GSTAT_PCRB:
+    enum:
+      value1:
+        description: Parity Checker is stopped
+        value: 0
+      value2:
+        description: Parity Checker is running
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GSTAT_PRB:
+    enum:
+      value1:
+        description: Prescaler is stopped
+        value: 0
+      value2:
+        description: Prescaler is running
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GSTAT_S3I:
+    enum:
+      value1:
+        description: Running
+        value: 0
+      value2:
+        description: Idle
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GSTAT_S2I:
+    enum:
+      value1:
+        description: Running
+        value: 0
+      value2:
+        description: Idle
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GSTAT_S1I:
+    enum:
+      value1:
+        description: Running
+        value: 0
+      value2:
+        description: Idle
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GSTAT_S0I:
+    enum:
+      value1:
+        description: Running
+        value: 0
+      value2:
+        description: Idle
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GCST_S3PSS:
+    enum:
+      value1:
+        description: Prescaler shadow transfer has not been requested
+        value: 0
+      value2:
+        description: Prescaler shadow transfer has been requested
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GCST_S3DSS:
+    enum:
+      value1:
+        description: Dither shadow transfer has not been requested
+        value: 0
+      value2:
+        description: Dither shadow transfer has been requested
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GCST_S3SS:
+    enum:
+      value1:
+        description: Shadow transfer has not been requested
+        value: 0
+      value2:
+        description: Shadow transfer has been requested
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GCST_S2PSS:
+    enum:
+      value1:
+        description: Prescaler shadow transfer has not been requested
+        value: 0
+      value2:
+        description: Prescaler shadow transfer has been requested
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GCST_S2DSS:
+    enum:
+      value1:
+        description: Dither shadow transfer has not been requested
+        value: 0
+      value2:
+        description: Dither shadow transfer has been requested
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GCST_S2SS:
+    enum:
+      value1:
+        description: Shadow transfer has not been requested
+        value: 0
+      value2:
+        description: Shadow transfer has been requested
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GCST_S1PSS:
+    enum:
+      value1:
+        description: Prescaler shadow transfer has not been requested
+        value: 0
+      value2:
+        description: Prescaler shadow transfer has been requested
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GCST_S1DSS:
+    enum:
+      value1:
+        description: Dither shadow transfer has not been requested
+        value: 0
+      value2:
+        description: Dither shadow transfer has been requested
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GCST_S1SS:
+    enum:
+      value1:
+        description: Shadow transfer has not been requested
+        value: 0
+      value2:
+        description: Shadow transfer has been requested
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GCST_S0PSS:
+    enum:
+      value1:
+        description: Prescaler shadow transfer has not been requested
+        value: 0
+      value2:
+        description: Prescaler shadow transfer has been requested
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GCST_S0DSS:
+    enum:
+      value1:
+        description: Dither shadow transfer has not been requested
+        value: 0
+      value2:
+        description: Dither shadow transfer has been requested
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GCST_S0SS:
+    enum:
+      value1:
+        description: Shadow transfer has not been requested
+        value: 0
+      value2:
+        description: Shadow transfer has been requested
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GPCHK_PCTS:
+    enum:
+      value1:
+        description: Even parity enabled
+        value: 0
+      value2:
+        description: Odd parity enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GPCHK_PCDS:
+    enum:
+      value1:
+        description: CCU8x.IGBTA
+        value: 0
+      value2:
+        description: CCU8x.IGBTB
+        value: 1
+      value3:
+        description: CCU8x.IGBTC
+        value: 2
+      value4:
+        description: CCU8x.IGBTD
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GPCHK_PISEL:
+    enum:
+      value1:
+        description: CC8x.GP01 - driver output is connected to event 1 of slice 0
+        value: 0
+      value2:
+        description: CC8x.GP11 - drive output is connected to event 1 of slice 1
+        value: 1
+      value3:
+        description: CC8x.GP21 - driver output is connected to event 1 of slice 2
+        value: 2
+      value4:
+        description: CC8x.GP31 - driver output is connected to event 1 of slice 3
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false
+  CCU80_GPCHK_PACS:
+    enum:
+      value1:
+        description: CC80
+        value: 0
+      value2:
+        description: CC81
+        value: 1
+      value3:
+        description: CC82
+        value: 2
+      value4:
+        description: CC83
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false

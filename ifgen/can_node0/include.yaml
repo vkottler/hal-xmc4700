@@ -1,0 +1,610 @@
+---
+structs:
+  can_node0:
+    description: Controller Area Networks
+    instances:
+      - name: CAN_NODE0
+        address: '0x48014200'
+      - name: CAN_NODE1
+        address: '0x48014300'
+      - name: CAN_NODE2
+        address: '0x48014400'
+      - name: CAN_NODE3
+        address: '0x48014500'
+      - name: CAN_NODE4
+        address: '0x48014600'
+      - name: CAN_NODE5
+        address: '0x48014700'
+    fields:
+      - name: NCR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        description: (read-write) Node Control Register
+        fields:
+          - name: CALM
+            description: CAN Analyzer Mode
+            index: 7
+            width: 1
+            read: true
+            write: true
+          - name: CCE
+            description: Configuration Change Enable
+            index: 6
+            width: 1
+            read: true
+            write: true
+            type: CAN_NODE0_NCR_CCE
+          - name: TXDIS
+            description: Transmit Disable
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: CANDIS
+            description: CAN Disable
+            index: 4
+            width: 1
+            read: true
+            write: true
+          - name: ALIE
+            description: Alert Interrupt Enable
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: CAN_NODE0_NCR_ALIE
+          - name: LECIE
+            description: LEC Indicated Error Interrupt Enable
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: CAN_NODE0_NCR_LECIE
+          - name: TRIE
+            description: Transfer Interrupt Enable
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: CAN_NODE0_NCR_TRIE
+          - name: INIT
+            description: Node Initialization
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: CAN_NODE0_NCR_INIT
+      - name: NSR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4
+        description: (read-write) Node Status Register
+        fields:
+          - name: LOE
+            description: List Object Error
+            index: 9
+            width: 1
+            read: true
+            write: true
+            type: CAN_NODE0_NSR_LOE
+          - name: LLE
+            description: List Length Error
+            index: 8
+            width: 1
+            read: true
+            write: true
+            type: CAN_NODE0_NSR_LLE
+          - name: BOFF
+            description: Bus-off Status
+            index: 7
+            width: 1
+            read: true
+            write: false
+            type: CAN_NODE0_NSR_BOFF
+          - name: EWRN
+            description: Error Warning Status
+            index: 6
+            width: 1
+            read: true
+            write: false
+            type: CAN_NODE0_NSR_EWRN
+          - name: ALERT
+            description: Alert Warning
+            index: 5
+            width: 1
+            read: true
+            write: true
+          - name: RXOK
+            description: Message Received Successfully
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: CAN_NODE0_NSR_RXOK
+          - name: TXOK
+            description: Message Transmitted Successfully
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: CAN_NODE0_NSR_TXOK
+          - name: LEC
+            description: Last Error Code
+            index: 0
+            width: 3
+            read: true
+            write: true
+      - name: NIPR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 8
+        description: (read-write) Node Interrupt Pointer Register
+        fields:
+          - name: CFCINP
+            description: Frame Counter Interrupt Node Pointer
+            index: 12
+            width: 4
+            read: true
+            write: true
+            type: CAN_NODE0_NIPR_CFCINP
+          - name: TRINP
+            description: Transfer OK Interrupt Node Pointer
+            index: 8
+            width: 4
+            read: true
+            write: true
+            type: CAN_NODE0_NIPR_TRINP
+          - name: LECINP
+            description: Last Error Code Interrupt Node Pointer
+            index: 4
+            width: 4
+            read: true
+            write: true
+            type: CAN_NODE0_NIPR_LECINP
+          - name: ALINP
+            description: Alert Interrupt Node Pointer
+            index: 0
+            width: 4
+            read: true
+            write: true
+            type: CAN_NODE0_NIPR_ALINP
+      - name: NPCR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 12
+        description: (read-write) Node Port Control Register
+        fields:
+          - name: LBM
+            description: Loop-Back Mode
+            index: 8
+            width: 1
+            read: true
+            write: true
+            type: CAN_NODE0_NPCR_LBM
+          - name: RXSEL
+            description: Receive Select
+            index: 0
+            width: 3
+            read: true
+            write: true
+      - name: NBTR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 16
+        description: (read-write) Node Bit Timing Register
+        fields:
+          - name: DIV8
+            description: Divide Prescaler Clock by 8
+            index: 15
+            width: 1
+            read: true
+            write: true
+            type: CAN_NODE0_NBTR_DIV8
+          - name: TSEG2
+            description: Time Segment After Sample Point
+            index: 12
+            width: 3
+            read: true
+            write: true
+          - name: TSEG1
+            description: Time Segment Before Sample Point
+            index: 8
+            width: 4
+            read: true
+            write: true
+          - name: SJW
+            description: (Re) Synchronization Jump Width
+            index: 6
+            width: 2
+            read: true
+            write: true
+          - name: BRP
+            description: Baud Rate Prescaler
+            index: 0
+            width: 6
+            read: true
+            write: true
+      - name: NECNT
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 20
+        description: (read-write) Node Error Counter Register
+        fields:
+          - name: LEINC
+            description: Last Error Increment
+            index: 25
+            width: 1
+            read: true
+            write: false
+            type: CAN_NODE0_NECNT_LEINC
+          - name: LETD
+            description: Last Error Transfer Direction
+            index: 24
+            width: 1
+            read: true
+            write: false
+            type: CAN_NODE0_NECNT_LETD
+          - name: EWRNLVL
+            description: Error Warning Level
+            index: 16
+            width: 8
+            read: true
+            write: true
+          - name: TEC
+            description: Transmit Error Counter
+            index: 8
+            width: 8
+            read: true
+            write: true
+          - name: REC
+            description: Receive Error Counter
+            index: 0
+            width: 8
+            read: true
+            write: true
+      - name: NFCR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 24
+        description: (read-write) Node Frame Counter Register
+        fields:
+          - name: CFCOV
+            description: CAN Frame Counter Overflow Flag
+            index: 23
+            width: 1
+            read: true
+            write: true
+            type: CAN_NODE0_NFCR_CFCOV
+          - name: CFCIE
+            description: CAN Frame Count Interrupt Enable
+            index: 22
+            width: 1
+            read: true
+            write: true
+            type: CAN_NODE0_NFCR_CFCIE
+          - name: CFMOD
+            description: CAN Frame Counter Mode
+            index: 19
+            width: 2
+            read: true
+            write: true
+            type: CAN_NODE0_NFCR_CFMOD
+          - name: CFSEL
+            description: CAN Frame Count Selection
+            index: 16
+            width: 3
+            read: true
+            write: true
+          - name: CFC
+            description: CAN Frame Counter
+            index: 0
+            width: 16
+            read: true
+            write: true
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums:
+  CAN_NODE0_NCR_CCE:
+    enum:
+      value1:
+        description: The Bit Timing Register, the Port Control Register, Error Counter
+          Register may only be read. All attempts to modify them are ignored.
+        value: 0
+      value2:
+        description: The Bit Timing Register, the Port Control Register, Error Counter
+          Register may be read and written.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NCR_ALIE:
+    enum:
+      value1:
+        description: Alert interrupt is disabled.
+        value: 0
+      value2:
+        description: Alert interrupt is enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NCR_LECIE:
+    enum:
+      value1:
+        description: Last error code interrupt is disabled.
+        value: 0
+      value2:
+        description: Last error code interrupt is enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NCR_TRIE:
+    enum:
+      value1:
+        description: Transfer interrupt is disabled.
+        value: 0
+      value2:
+        description: Transfer interrupt is enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NCR_INIT:
+    enum:
+      value1:
+        description: Resetting bit INIT enables the participation of the node in the
+          CAN traffic. If the CAN node is in the bus-off state, the ongoing bus-off
+          recovery (which does not depend on the INIT bit) is continued. With the
+          end of the bus-off recovery sequence the CAN node is allowed to take part
+          in the CAN traffic. If the CAN node is not in the bus-off state, a sequence
+          of 11 consecutive recessive bits must be detected before the node is allowed
+          to take part in the CAN traffic.
+        value: 0
+      value2:
+        description: Setting this bit terminates the participation of this node in
+          the CAN traffic. Any ongoing frame transfer is cancelled and the transmit
+          line goes recessive. If the CAN node is in the bus-off state, then the running
+          bus-off recovery sequence is continued. If the INIT bit is still set after
+          the successful completion of the bus-off recovery sequence, i.e. after detecting
+          128 sequences of 11 consecutive recessive bits (11 1), then the CAN node
+          leaves the bus-off state but remains inactive as long as INIT remains set.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NSR_LOE:
+    enum:
+      value1:
+        description: No List Object Error since last (most recent) flag reset.
+        value: 0
+      value2:
+        description: A List Object Error has been detected during message acceptance
+          filtering. A message object with wrong LIST index entry in the Message Object
+          Status Register has been detected.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NSR_LLE:
+    enum:
+      value1:
+        description: No List Length Error since last (most recent) flag reset.
+        value: 0
+      value2:
+        description: A List Length Error has been detected during message acceptance
+          filtering. The number of elements in the list that belongs to this CAN node
+          differs from the list SIZE given in the list termination pointer.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NSR_BOFF:
+    enum:
+      value1:
+        description: CAN controller is not in the bus-off state.
+        value: 0
+      value2:
+        description: CAN controller is in the bus-off state.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NSR_EWRN:
+    enum:
+      value1:
+        description: No warning limit exceeded.
+        value: 0
+      value2:
+        description: One of the error counters REC or TEC reached the warning limit
+          EWRNLVL.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NSR_RXOK:
+    enum:
+      value1:
+        description: No successful reception since last (most recent) flag reset.
+        value: 0
+      value2:
+        description: A message has been received successfully.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NSR_TXOK:
+    enum:
+      value1:
+        description: No successful transmission since last (most recent) flag reset.
+        value: 0
+      value2:
+        description: A message has been transmitted successfully (error-free and acknowledged
+          by at least another node).
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NIPR_CFCINP:
+    enum:
+      value1:
+        description: Interrupt output line INT_O0 is selected.
+        value: 0
+      value2:
+        description: Interrupt output line INT_O1 is selected.
+        value: 1
+      value3:
+        description: Interrupt output line INT_O14 is selected.
+        value: 14
+      value4:
+        description: Interrupt output line INT_O15 is selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NIPR_TRINP:
+    enum:
+      value1:
+        description: Interrupt output line INT_O0 is selected.
+        value: 0
+      value2:
+        description: Interrupt output line INT_O1 is selected.
+        value: 1
+      value3:
+        description: Interrupt output line INT_O14 is selected.
+        value: 14
+      value4:
+        description: Interrupt output line INT_O15 is selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NIPR_LECINP:
+    enum:
+      value1:
+        description: Interrupt output line INT_O0 is selected.
+        value: 0
+      value2:
+        description: Interrupt output line INT_O1 is selected.
+        value: 1
+      value3:
+        description: Interrupt output line INT_O14 is selected.
+        value: 14
+      value4:
+        description: Interrupt output line INT_O15 is selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NIPR_ALINP:
+    enum:
+      value1:
+        description: Interrupt output line INT_O0 is selected.
+        value: 0
+      value2:
+        description: Interrupt output line INT_O1 is selected.
+        value: 1
+      value3:
+        description: Interrupt output line INT_O14 is selected.
+        value: 14
+      value4:
+        description: Interrupt output line INT_O15 is selected.
+        value: 15
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NPCR_LBM:
+    enum:
+      value1:
+        description: Loop-Back Mode is disabled.
+        value: 0
+      value2:
+        description: Loop-Back Mode is enabled. This node is connected to an internal
+          (virtual) loop-back CAN bus. All CAN nodes which are in Loop-Back Mode are
+          connected to this virtual CAN bus so that they can communicate with each
+          other internally. The external transmit line is forced recessive in Loop-Back
+          Mode.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NBTR_DIV8:
+    enum:
+      value1:
+        description: A time quantum lasts (BRP+1) clock cycles.
+        value: 0
+      value2:
+        description: A time quantum lasts 8 (BRP+1) clock cycles.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NECNT_LEINC:
+    enum:
+      value1:
+        description: The last error led to an error counter increment of 1.
+        value: 0
+      value2:
+        description: The last error led to an error counter increment of 8.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NECNT_LETD:
+    enum:
+      value1:
+        description: The last error occurred while the CAN node x was receiver (REC
+          has been incremented).
+        value: 0
+      value2:
+        description: The last error occurred while the CAN node x was transmitter
+          (TEC has been incremented).
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NFCR_CFCOV:
+    enum:
+      value1:
+        description: No overflow has occurred since last flag reset.
+        value: 0
+      value2:
+        description: An overflow has occurred since last flag reset.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NFCR_CFCIE:
+    enum:
+      value1:
+        description: CAN frame counter overflow interrupt is disabled.
+        value: 0
+      value2:
+        description: CAN frame counter overflow interrupt is enabled.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  CAN_NODE0_NFCR_CFMOD:
+    enum:
+      value1:
+        description: 'Frame Count Mode: The frame counter is incremented upon the
+          reception and transmission of frames.'
+        value: 0
+      value2:
+        description: 'Time Stamp Mode: The frame counter is used to count bit times.'
+        value: 1
+      value3:
+        description: 'Bit Timing Mode: The frame counter is used for analysis of the
+          bit timing.'
+        value: 2
+      value4:
+        description: 'Error Count Mode: The frame counter is used for counting when
+          an error frame is received or an error is detected by the node.'
+        value: 3
+    unit_test: false
+    json: false
+    use_map: false

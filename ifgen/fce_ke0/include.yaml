@@ -1,0 +1,303 @@
+---
+structs:
+  fce_ke0:
+    description: Flexible CRC Engine
+    instances:
+      - name: FCE_KE0
+        address: '0x50020020'
+      - name: FCE_KE1
+        address: '0x50020040'
+      - name: FCE_KE2
+        address: '0x50020060'
+      - name: FCE_KE3
+        address: '0x50020080'
+    fields:
+      - name: IR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 0
+        description: (read-write) Input Register
+        fields:
+          - name: IR
+            description: Input Register
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: RES
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 4
+        const: true
+        description: (read-only) CRC Result Register
+        fields:
+          - name: RES
+            description: Result Register
+            index: 0
+            width: 32
+            read: true
+            write: false
+      - name: CFG
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 8
+        description: (read-write) CRC Configuration Register
+        fields:
+          - name: XSEL
+            description: Selects the value to be xored with the final CRC
+            index: 10
+            width: 1
+            read: true
+            write: true
+            type: FCE_KE0_CFG_XSEL
+          - name: REFOUT
+            description: CRC 32-Bit Wise Reflection
+            index: 9
+            width: 1
+            read: true
+            write: true
+            type: FCE_KE0_CFG_REFOUT
+          - name: REFIN
+            description: IR Byte Wise Reflection
+            index: 8
+            width: 1
+            read: true
+            write: true
+            type: FCE_KE0_CFG_REFIN
+          - name: ALR
+            description: Automatic Length Reload
+            index: 5
+            width: 1
+            read: true
+            write: true
+            type: FCE_KE0_CFG_ALR
+          - name: CCE
+            description: CRC Check Comparison
+            index: 4
+            width: 1
+            read: true
+            write: true
+            type: FCE_KE0_CFG_CCE
+          - name: BEI
+            description: Bus Error Interrupt
+            index: 3
+            width: 1
+            read: true
+            write: true
+            type: FCE_KE0_CFG_BEI
+          - name: LEI
+            description: Length Error Interrupt
+            index: 2
+            width: 1
+            read: true
+            write: true
+            type: FCE_KE0_CFG_LEI
+          - name: CEI
+            description: Configuration Error Interrupt
+            index: 1
+            width: 1
+            read: true
+            write: true
+            type: FCE_KE0_CFG_CEI
+          - name: CMI
+            description: CRC Mismatch Interrupt
+            index: 0
+            width: 1
+            read: true
+            write: true
+            type: FCE_KE0_CFG_CMI
+      - name: STS
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 12
+        description: (read-write) CRC Status Register
+        fields:
+          - name: BEF
+            description: Bus Error Flag
+            index: 3
+            width: 1
+            read: true
+            write: true
+          - name: LEF
+            description: Length Error Flag
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: CEF
+            description: Configuration Error Flag
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: CMF
+            description: CRC Mismatch Flag
+            index: 0
+            width: 1
+            read: true
+            write: true
+      - name: LENGTH
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 16
+        description: (read-write) CRC Length Register
+        fields:
+          - name: LENGTH
+            description: Message Length Register
+            index: 0
+            width: 16
+            read: true
+            write: true
+      - name: CHECK
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 20
+        description: (read-write) CRC Check Register
+        fields:
+          - name: CHECK
+            description: CHECK Register
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: CRC
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 24
+        description: (read-write) CRC Register
+        fields:
+          - name: CRC
+            description: CRC Register
+            index: 0
+            width: 32
+            read: true
+            write: true
+      - name: CTR
+        type: uint32_t
+        expected_size: 4
+        expected_offset: 28
+        description: (read-write) CRC Test Register
+        fields:
+          - name: FRM_CHECK
+            description: Force Check Register Mismatch
+            index: 2
+            width: 1
+            read: true
+            write: true
+          - name: FRM_CFG
+            description: Force CFG Register Mismatch
+            index: 1
+            width: 1
+            read: true
+            write: true
+          - name: FCM
+            description: Force CRC Mismatch
+            index: 0
+            width: 1
+            read: true
+            write: true
+    stream: false
+    codec: false
+    methods: false
+    unit_test: false
+enums:
+  FCE_KE0_CFG_XSEL:
+    enum:
+      value1:
+        description: '0x00000000'
+        value: 0
+      value2:
+        description: '0xFFFFFFFF'
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  FCE_KE0_CFG_REFOUT:
+    enum:
+      value1:
+        description: CRC 32-bit wise is disabled
+        value: 0
+      value2:
+        description: CRC 32-bit wise is enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  FCE_KE0_CFG_REFIN:
+    enum:
+      value1:
+        description: IR Byte Wise Reflection is disabled
+        value: 0
+      value2:
+        description: IR Byte Wise Reflection is enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  FCE_KE0_CFG_ALR:
+    enum:
+      value1:
+        description: Disables automatic reload of the LENGTH field.
+        value: 0
+      value2:
+        description: Enables automatic reload of the LENGTH field at the end of a
+          message.
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  FCE_KE0_CFG_CCE:
+    enum:
+      value1:
+        description: CRC check comparison at the end of a message is disabled
+        value: 0
+      value2:
+        description: CRC check comparison at the end of a message is enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  FCE_KE0_CFG_BEI:
+    enum:
+      value1:
+        description: Bus Error Interrupt is disabled
+        value: 0
+      value2:
+        description: Bus Error Interrupt is enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  FCE_KE0_CFG_LEI:
+    enum:
+      value1:
+        description: Length Error Interrupt is disabled
+        value: 0
+      value2:
+        description: Length Error Interrupt is enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  FCE_KE0_CFG_CEI:
+    enum:
+      value1:
+        description: Configuration Error Interrupt is disabled
+        value: 0
+      value2:
+        description: Configuration Error Interrupt is enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
+  FCE_KE0_CFG_CMI:
+    enum:
+      value1:
+        description: CRC Mismatch Interrupt is disabled
+        value: 0
+      value2:
+        description: CRC Mismatch Interrupt is enabled
+        value: 1
+    unit_test: false
+    json: false
+    use_map: false
