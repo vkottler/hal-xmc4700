@@ -2375,6 +2375,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   PPB_SYST_CSR_CLKSOURCE:
     enum:
@@ -2387,6 +2388,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_SYST_CSR_TICKINT:
     enum:
       value1:
@@ -2398,6 +2400,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_SYST_CSR_ENABLE:
     enum:
       value1:
@@ -2409,6 +2412,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_SYST_CALIB_NOREF:
     enum:
       value1:
@@ -2420,6 +2424,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_SYST_CALIB_SKEW:
     enum:
       value1:
@@ -2431,6 +2436,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_NVIC_ISER0_SETENA:
     enum:
       value3:
@@ -2442,6 +2448,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_NVIC_ISER1_SETENA:
     enum:
@@ -2454,6 +2461,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_NVIC_ISER2_SETENA:
     enum:
@@ -2466,6 +2474,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_NVIC_ISER3_SETENA:
     enum:
@@ -2478,6 +2487,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_NVIC_ICER0_CLRENA:
     enum:
@@ -2490,6 +2500,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_NVIC_ICER1_CLRENA:
     enum:
@@ -2502,6 +2513,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_NVIC_ICER2_CLRENA:
     enum:
@@ -2514,6 +2526,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_NVIC_ICER3_CLRENA:
     enum:
@@ -2526,6 +2539,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_NVIC_ISPR0_SETPEND:
     enum:
@@ -2538,6 +2552,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_NVIC_ISPR1_SETPEND:
     enum:
@@ -2550,6 +2565,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_NVIC_ISPR2_SETPEND:
     enum:
@@ -2562,6 +2578,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_NVIC_ISPR3_SETPEND:
     enum:
@@ -2574,6 +2591,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_NVIC_ICPR0_CLRPEND:
     enum:
@@ -2586,6 +2604,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_NVIC_ICPR1_CLRPEND:
     enum:
@@ -2598,6 +2617,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_NVIC_ICPR2_CLRPEND:
     enum:
@@ -2610,6 +2630,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_NVIC_ICPR3_CLRPEND:
     enum:
@@ -2622,6 +2643,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_NVIC_IABR0_ACTIVE:
     enum:
@@ -2634,6 +2656,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_NVIC_IABR1_ACTIVE:
     enum:
@@ -2646,6 +2669,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_NVIC_IABR2_ACTIVE:
     enum:
@@ -2658,6 +2682,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_NVIC_IABR3_ACTIVE:
     enum:
@@ -2670,6 +2695,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_CPUID_Implementer:
     enum:
@@ -2679,6 +2705,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CPUID_Variant:
     enum:
       value1:
@@ -2687,6 +2714,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CPUID_PartNo:
     enum:
       value1:
@@ -2695,6 +2723,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_CPUID_Revision:
     enum:
@@ -2704,6 +2733,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_ICSR_PENDSVCLR:
     enum:
       value1:
@@ -2715,6 +2745,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_ICSR_PENDSTSET:
     enum:
       value1:
@@ -2726,6 +2757,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_ICSR_PENDSTCLR:
     enum:
       value1:
@@ -2737,6 +2769,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_ICSR_ISRPENDING:
     enum:
       value1:
@@ -2748,6 +2781,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_ICSR_VECTPENDING:
     enum:
       value1:
@@ -2756,6 +2790,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_ICSR_RETTOBASE:
     enum:
       value1:
@@ -2768,6 +2803,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_ICSR_VECTACTIVE:
     enum:
       value1:
@@ -2776,6 +2812,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   PPB_AIRCR_ENDIANNESS:
     enum:
@@ -2788,6 +2825,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_AIRCR_SYSRESETREQ:
     enum:
       value1:
@@ -2799,6 +2837,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_SCR_SEVONPEND:
     enum:
       value1:
@@ -2812,6 +2851,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_SCR_SLEEPDEEP:
     enum:
       value1:
@@ -2823,6 +2863,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_SCR_SLEEPONEXIT:
     enum:
       value1:
@@ -2834,6 +2875,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CCR_STKALIGN:
     enum:
       value1:
@@ -2845,6 +2887,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CCR_BFHFNMIGN:
     enum:
       value1:
@@ -2858,6 +2901,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CCR_DIV_0_TRP:
     enum:
       value1:
@@ -2869,6 +2913,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CCR_UNALIGN_TRP:
     enum:
       value1:
@@ -2880,6 +2925,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CCR_USERSETMPEND:
     enum:
       value1:
@@ -2891,6 +2937,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CCR_NONBASETHRDENA:
     enum:
       value1:
@@ -2925,6 +2972,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CFSR_DIVBYZERO:
     enum:
       value1:
@@ -2937,6 +2985,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CFSR_UNALIGNED:
     enum:
       value1:
@@ -2948,6 +2997,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CFSR_NOCP:
     enum:
       value1:
@@ -2959,6 +3009,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CFSR_INVPC:
     enum:
       value1:
@@ -2971,6 +3022,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CFSR_INVSTATE:
     enum:
       value1:
@@ -2983,6 +3035,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CFSR_UNDEFINSTR:
     enum:
       value1:
@@ -2994,6 +3047,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CFSR_BFARVALID:
     enum:
       value1:
@@ -3005,6 +3059,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CFSR_LSPERR:
     enum:
       value1:
@@ -3016,6 +3071,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CFSR_STKERR:
     enum:
       value1:
@@ -3027,6 +3083,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CFSR_UNSTKERR:
     enum:
       value1:
@@ -3038,6 +3095,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CFSR_IMPRECISERR:
     enum:
       value1:
@@ -3050,6 +3108,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CFSR_PRECISERR:
     enum:
       value1:
@@ -3062,6 +3121,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CFSR_IBUSERR:
     enum:
       value1:
@@ -3073,6 +3133,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CFSR_MMARVALID:
     enum:
       value1:
@@ -3084,6 +3145,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CFSR_MLSPERR:
     enum:
       value1:
@@ -3096,6 +3158,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CFSR_MSTKERR:
     enum:
       value1:
@@ -3108,6 +3171,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CFSR_MUNSTKERR:
     enum:
       value1:
@@ -3120,6 +3184,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CFSR_DACCVIOL:
     enum:
       value1:
@@ -3132,6 +3197,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CFSR_IACCVIOL:
     enum:
       value1:
@@ -3144,6 +3210,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_HFSR_FORCED:
     enum:
       value1:
@@ -3155,6 +3222,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_HFSR_VECTTBL:
     enum:
       value1:
@@ -3166,6 +3234,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CPACR_CP11:
     enum:
       value1:
@@ -3181,6 +3250,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_CPACR_CP10:
     enum:
       value1:
@@ -3196,6 +3266,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_MPU_CTRL_PRIVDEFENA:
     enum:
       value1:
@@ -3210,6 +3281,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_MPU_CTRL_HFNMIENA:
     enum:
       value1:
@@ -3222,6 +3294,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_MPU_CTRL_ENABLE:
     enum:
       value1:
@@ -3233,6 +3306,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_MPU_RBAR_VALID:
     enum:
       value1:
@@ -3248,6 +3322,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_MPU_RASR_XN:
     enum:
       value1:
@@ -3259,6 +3334,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_MPU_RASR_SRD:
     enum:
       value1:
@@ -3270,6 +3346,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_MPU_RBAR_A1_VALID:
     enum:
       value1:
@@ -3285,6 +3362,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_MPU_RASR_A1_XN:
     enum:
       value1:
@@ -3296,6 +3374,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_MPU_RASR_A1_SRD:
     enum:
       value1:
@@ -3307,6 +3386,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_MPU_RBAR_A2_VALID:
     enum:
       value1:
@@ -3322,6 +3402,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_MPU_RASR_A2_XN:
     enum:
       value1:
@@ -3333,6 +3414,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_MPU_RASR_A2_SRD:
     enum:
       value1:
@@ -3344,6 +3426,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_MPU_RBAR_A3_VALID:
     enum:
       value1:
@@ -3359,6 +3442,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_MPU_RASR_A3_XN:
     enum:
       value1:
@@ -3370,6 +3454,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_MPU_RASR_A3_SRD:
     enum:
       value1:
@@ -3381,6 +3466,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_FPCCR_ASPEN:
     enum:
       value1:
@@ -3392,6 +3478,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_FPCCR_LSPEN:
     enum:
       value1:
@@ -3404,6 +3491,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_FPCCR_MONRDY:
     enum:
       value1:
@@ -3417,6 +3505,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_FPCCR_BFRDY:
     enum:
       value1:
@@ -3430,6 +3519,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_FPCCR_MMRDY:
     enum:
       value1:
@@ -3444,6 +3534,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_FPCCR_HFRDY:
     enum:
       value1:
@@ -3457,6 +3548,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_FPCCR_THREAD:
     enum:
       value1:
@@ -3470,6 +3562,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_FPCCR_USER:
     enum:
       value1:
@@ -3483,6 +3576,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PPB_FPCCR_LSPACT:
     enum:
       value1:
@@ -3495,3 +3589,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

@@ -385,6 +385,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   USB0_EP0_DIEPCTL0_NAKSts:
     enum:
@@ -398,6 +399,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_EP0_DIEPCTL0_MPS:
     enum:
       value1:
@@ -415,6 +417,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_EP0_DTXFSTS0_INEPTxFSpcAvail:
     enum:
       value1:
@@ -429,6 +432,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   USB0_EP0_DOEPCTL0_NAKSts:
     enum:
@@ -442,6 +446,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_EP0_DOEPCTL0_MPS:
     enum:
       value1:
@@ -459,6 +464,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_EP0_DOEPTSIZ0_SUPCnt:
     enum:
       value1:
@@ -473,3 +479,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

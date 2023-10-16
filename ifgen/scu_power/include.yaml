@@ -170,6 +170,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   SCU_POWER_PWRSTAT_USBPUWQ:
     enum:
@@ -182,6 +183,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_POWER_PWRSTAT_USBOTGEN:
     enum:
       value1:
@@ -193,6 +195,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_POWER_PWRSTAT_USBPHYPDQ:
     enum:
       value1:
@@ -204,6 +207,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_POWER_PWRSTAT_HIBEN:
     enum:
       value1:
@@ -215,6 +219,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_POWER_PWRSET_USBPUWQ:
     enum:
       value1:
@@ -226,6 +231,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_POWER_PWRSET_USBOTGEN:
     enum:
       value1:
@@ -237,6 +243,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_POWER_PWRSET_USBPHYPDQ:
     enum:
       value1:
@@ -248,6 +255,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_POWER_PWRSET_HIB:
     enum:
       value1:
@@ -259,6 +267,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_POWER_PWRCLR_USBPUWQ:
     enum:
       value1:
@@ -270,6 +279,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_POWER_PWRCLR_USBOTGEN:
     enum:
       value1:
@@ -281,6 +291,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_POWER_PWRCLR_USBPHYPDQ:
     enum:
       value1:
@@ -292,6 +303,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_POWER_PWRCLR_HIB:
     enum:
       value1:
@@ -303,6 +315,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_POWER_EVRSTAT_OV13:
     enum:
       value1:
@@ -314,3 +327,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

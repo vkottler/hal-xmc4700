@@ -306,6 +306,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   CAN_NODE0_NCR_CCE:
     enum:
@@ -320,6 +321,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NCR_ALIE:
     enum:
       value1:
@@ -331,6 +333,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NCR_LECIE:
     enum:
       value1:
@@ -342,6 +345,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NCR_TRIE:
     enum:
       value1:
@@ -353,6 +357,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NCR_INIT:
     enum:
       value1:
@@ -376,6 +381,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NSR_LOE:
     enum:
       value1:
@@ -389,6 +395,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NSR_LLE:
     enum:
       value1:
@@ -402,6 +409,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NSR_BOFF:
     enum:
       value1:
@@ -413,6 +421,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NSR_EWRN:
     enum:
       value1:
@@ -425,6 +434,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NSR_RXOK:
     enum:
       value1:
@@ -436,6 +446,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NSR_TXOK:
     enum:
       value1:
@@ -448,6 +459,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NIPR_CFCINP:
     enum:
       value1:
@@ -465,6 +477,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NIPR_TRINP:
     enum:
       value1:
@@ -482,6 +495,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NIPR_LECINP:
     enum:
       value1:
@@ -499,6 +513,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NIPR_ALINP:
     enum:
       value1:
@@ -516,6 +531,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NPCR_LBM:
     enum:
       value1:
@@ -531,6 +547,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NBTR_DIV8:
     enum:
       value1:
@@ -542,6 +559,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NECNT_LEINC:
     enum:
       value1:
@@ -553,6 +571,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NECNT_LETD:
     enum:
       value1:
@@ -566,6 +585,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NFCR_CFCOV:
     enum:
       value1:
@@ -577,6 +597,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NFCR_CFCIE:
     enum:
       value1:
@@ -588,6 +609,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_NODE0_NFCR_CFMOD:
     enum:
       value1:
@@ -608,3 +630,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

@@ -2136,6 +2136,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   VADC_G0_ARBCFG_SAMPLE:
     enum:
@@ -2148,6 +2149,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ARBCFG_BUSY:
     enum:
       value1:
@@ -2159,6 +2161,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ARBCFG_CAL:
     enum:
       value1:
@@ -2170,6 +2173,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ARBCFG_ANONS:
     enum:
       value1:
@@ -2181,6 +2185,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ARBCFG_ARBM:
     enum:
       value1:
@@ -2197,6 +2202,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ARBCFG_ARBRND:
     enum:
       value1:
@@ -2214,6 +2220,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ARBPR_ASEN2:
     enum:
       value1:
@@ -2228,6 +2235,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ARBPR_ASEN1:
     enum:
       value1:
@@ -2242,6 +2250,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ARBPR_ASEN0:
     enum:
       value1:
@@ -2256,6 +2265,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ARBPR_CSM2:
     enum:
       value1:
@@ -2268,6 +2278,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ARBPR_CSM1:
     enum:
       value1:
@@ -2280,6 +2291,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ARBPR_CSM0:
     enum:
       value1:
@@ -2292,6 +2304,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ARBPR_PRIO2:
     enum:
       value1:
@@ -2303,6 +2316,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ARBPR_PRIO1:
     enum:
       value1:
@@ -2314,6 +2328,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ARBPR_PRIO0:
     enum:
       value1:
@@ -2325,6 +2340,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CHASS_ASSCH7:
     enum:
       value1:
@@ -2336,6 +2352,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CHASS_ASSCH6:
     enum:
       value1:
@@ -2347,6 +2364,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CHASS_ASSCH5:
     enum:
       value1:
@@ -2358,6 +2376,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CHASS_ASSCH4:
     enum:
       value1:
@@ -2369,6 +2388,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CHASS_ASSCH3:
     enum:
       value1:
@@ -2380,6 +2400,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CHASS_ASSCH2:
     enum:
       value1:
@@ -2391,6 +2412,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CHASS_ASSCH1:
     enum:
       value1:
@@ -2402,6 +2424,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CHASS_ASSCH0:
     enum:
       value1:
@@ -2413,6 +2436,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ICLASS_CME:
     enum:
       value1:
@@ -2430,6 +2454,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ICLASS_CMS:
     enum:
       value1:
@@ -2447,6 +2472,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_SYNCTR_EVALR3:
     enum:
       value1:
@@ -2459,6 +2485,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_SYNCTR_EVALR2:
     enum:
       value1:
@@ -2471,6 +2498,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_SYNCTR_EVALR1:
     enum:
       value1:
@@ -2483,6 +2511,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_SYNCTR_STSEL:
     enum:
       value1:
@@ -2503,6 +2532,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFL_BFI3:
     enum:
       value1:
@@ -2514,6 +2544,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFL_BFI2:
     enum:
       value1:
@@ -2525,6 +2556,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFL_BFI1:
     enum:
       value1:
@@ -2536,6 +2568,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFL_BFI0:
     enum:
       value1:
@@ -2547,6 +2580,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFL_BFA3:
     enum:
       value1:
@@ -2560,6 +2594,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFL_BFA2:
     enum:
       value1:
@@ -2573,6 +2608,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFL_BFA1:
     enum:
       value1:
@@ -2586,6 +2622,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFL_BFA0:
     enum:
       value1:
@@ -2599,6 +2636,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFL_BFL3:
     enum:
       value1:
@@ -2612,6 +2650,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFL_BFL2:
     enum:
       value1:
@@ -2625,6 +2664,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFL_BFL1:
     enum:
       value1:
@@ -2638,6 +2678,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFL_BFL0:
     enum:
       value1:
@@ -2651,6 +2692,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFLS_BFS3:
     enum:
       value1:
@@ -2662,6 +2704,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFLS_BFS2:
     enum:
       value1:
@@ -2673,6 +2716,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFLS_BFS1:
     enum:
       value1:
@@ -2684,6 +2728,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFLS_BFS0:
     enum:
       value1:
@@ -2695,6 +2740,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFLS_BFC3:
     enum:
       value1:
@@ -2706,6 +2752,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFLS_BFC2:
     enum:
       value1:
@@ -2717,6 +2764,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFLS_BFC1:
     enum:
       value1:
@@ -2728,6 +2776,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFLS_BFC0:
     enum:
       value1:
@@ -2739,6 +2788,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFLC_BFM3:
     enum:
       value1:
@@ -2758,6 +2808,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFLC_BFM2:
     enum:
       value1:
@@ -2777,6 +2828,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFLC_BFM1:
     enum:
       value1:
@@ -2796,6 +2848,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFLC_BFM0:
     enum:
       value1:
@@ -2815,6 +2868,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFLNP_BFL3NP:
     enum:
       value1:
@@ -2835,6 +2889,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFLNP_BFL2NP:
     enum:
       value1:
@@ -2855,6 +2910,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFLNP_BFL1NP:
     enum:
       value1:
@@ -2875,6 +2931,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_BFLNP_BFL0NP:
     enum:
       value1:
@@ -2895,6 +2952,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QCTRL0_TMWC:
     enum:
       value1:
@@ -2906,6 +2964,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QCTRL0_TMEN:
     enum:
       value1:
@@ -2918,6 +2977,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QCTRL0_GTWC:
     enum:
       value1:
@@ -2929,6 +2989,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QCTRL0_XTWC:
     enum:
       value1:
@@ -2940,6 +3001,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QCTRL0_XTMODE:
     enum:
       value1:
@@ -2957,6 +3019,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QCTRL0_SRCRESREG:
     enum:
       value1:
@@ -2971,6 +3034,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QMR0_RPTDIS:
     enum:
       value1:
@@ -2982,6 +3046,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QMR0_CEV:
     enum:
       value1:
@@ -2993,6 +3058,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QMR0_FLUSH:
     enum:
       value1:
@@ -3005,6 +3071,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QMR0_TREV:
     enum:
       value1:
@@ -3016,6 +3083,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QMR0_CLRV:
     enum:
       value1:
@@ -3030,6 +3098,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QMR0_ENTR:
     enum:
       value1:
@@ -3042,6 +3111,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QMR0_ENGT:
     enum:
       value1:
@@ -3064,6 +3134,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QSR0_EV:
     enum:
       value1:
@@ -3075,6 +3146,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QSR0_REQGT:
     enum:
       value1:
@@ -3086,6 +3158,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QSR0_EMPTY:
     enum:
       value1:
@@ -3097,6 +3170,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QSR0_FILL:
     enum:
       value1:
@@ -3115,6 +3189,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_Q0R0_V:
     enum:
       value1:
@@ -3126,6 +3201,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_Q0R0_EXTR:
     enum:
       value1:
@@ -3137,6 +3213,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_Q0R0_ENSI:
     enum:
       value1:
@@ -3149,6 +3226,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_Q0R0_RF:
     enum:
       value1:
@@ -3161,6 +3239,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QINR0_EXTR:
     enum:
       value1:
@@ -3173,6 +3252,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QINR0_ENSI:
     enum:
       value1:
@@ -3185,6 +3265,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QINR0_RF:
     enum:
       value1:
@@ -3197,6 +3278,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_QBUR0_V:
     enum:
       value1:
@@ -3209,6 +3291,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASCTRL_TMWC:
     enum:
       value1:
@@ -3220,6 +3303,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASCTRL_TMEN:
     enum:
       value1:
@@ -3232,6 +3316,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASCTRL_GTWC:
     enum:
       value1:
@@ -3243,6 +3328,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASCTRL_XTWC:
     enum:
       value1:
@@ -3254,6 +3340,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASCTRL_XTMODE:
     enum:
       value1:
@@ -3271,6 +3358,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASCTRL_SRCRESREG:
     enum:
       value1:
@@ -3285,6 +3373,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASMR_RPTDIS:
     enum:
       value1:
@@ -3296,6 +3385,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASMR_LDEV:
     enum:
       value1:
@@ -3307,6 +3397,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASMR_CLRPND:
     enum:
       value1:
@@ -3318,6 +3409,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASMR_REQGT:
     enum:
       value1:
@@ -3329,6 +3421,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASMR_LDM:
     enum:
       value1:
@@ -3342,6 +3435,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASMR_SCAN:
     enum:
       value1:
@@ -3354,6 +3448,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASMR_ENSI:
     enum:
       value1:
@@ -3366,6 +3461,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASMR_ENTR:
     enum:
       value1:
@@ -3378,6 +3474,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASMR_ENGT:
     enum:
       value1:
@@ -3398,6 +3495,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASSEL_CHSEL7:
     enum:
       value1:
@@ -3409,6 +3507,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASSEL_CHSEL6:
     enum:
       value1:
@@ -3420,6 +3519,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASSEL_CHSEL5:
     enum:
       value1:
@@ -3431,6 +3531,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASSEL_CHSEL4:
     enum:
       value1:
@@ -3442,6 +3543,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASSEL_CHSEL3:
     enum:
       value1:
@@ -3453,6 +3555,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASSEL_CHSEL2:
     enum:
       value1:
@@ -3464,6 +3567,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASSEL_CHSEL1:
     enum:
       value1:
@@ -3475,6 +3579,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASSEL_CHSEL0:
     enum:
       value1:
@@ -3486,6 +3591,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASPND_CHPND7:
     enum:
       value1:
@@ -3497,6 +3603,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASPND_CHPND6:
     enum:
       value1:
@@ -3508,6 +3615,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASPND_CHPND5:
     enum:
       value1:
@@ -3519,6 +3627,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASPND_CHPND4:
     enum:
       value1:
@@ -3530,6 +3639,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASPND_CHPND3:
     enum:
       value1:
@@ -3541,6 +3651,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASPND_CHPND2:
     enum:
       value1:
@@ -3552,6 +3663,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASPND_CHPND1:
     enum:
       value1:
@@ -3563,6 +3675,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_ASPND_CHPND0:
     enum:
       value1:
@@ -3574,6 +3687,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEFLAG_CEV7:
     enum:
       value1:
@@ -3585,6 +3699,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEFLAG_CEV6:
     enum:
       value1:
@@ -3596,6 +3711,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEFLAG_CEV5:
     enum:
       value1:
@@ -3607,6 +3723,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEFLAG_CEV4:
     enum:
       value1:
@@ -3618,6 +3735,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEFLAG_CEV3:
     enum:
       value1:
@@ -3629,6 +3747,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEFLAG_CEV2:
     enum:
       value1:
@@ -3640,6 +3759,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEFLAG_CEV1:
     enum:
       value1:
@@ -3651,6 +3771,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEFLAG_CEV0:
     enum:
       value1:
@@ -3662,6 +3783,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFLAG_REV15:
     enum:
       value1:
@@ -3673,6 +3795,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFLAG_REV14:
     enum:
       value1:
@@ -3684,6 +3807,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFLAG_REV13:
     enum:
       value1:
@@ -3695,6 +3819,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFLAG_REV12:
     enum:
       value1:
@@ -3706,6 +3831,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFLAG_REV11:
     enum:
       value1:
@@ -3717,6 +3843,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFLAG_REV10:
     enum:
       value1:
@@ -3728,6 +3855,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFLAG_REV9:
     enum:
       value1:
@@ -3739,6 +3867,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFLAG_REV8:
     enum:
       value1:
@@ -3750,6 +3879,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFLAG_REV7:
     enum:
       value1:
@@ -3761,6 +3891,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFLAG_REV6:
     enum:
       value1:
@@ -3772,6 +3903,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFLAG_REV5:
     enum:
       value1:
@@ -3783,6 +3915,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFLAG_REV4:
     enum:
       value1:
@@ -3794,6 +3927,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFLAG_REV3:
     enum:
       value1:
@@ -3805,6 +3939,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFLAG_REV2:
     enum:
       value1:
@@ -3816,6 +3951,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFLAG_REV1:
     enum:
       value1:
@@ -3827,6 +3963,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFLAG_REV0:
     enum:
       value1:
@@ -3838,6 +3975,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_SEFLAG_SEV1:
     enum:
       value1:
@@ -3849,6 +3987,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_SEFLAG_SEV0:
     enum:
       value1:
@@ -3860,6 +3999,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEFCLR_CEV7:
     enum:
       value1:
@@ -3871,6 +4011,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEFCLR_CEV6:
     enum:
       value1:
@@ -3882,6 +4023,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEFCLR_CEV5:
     enum:
       value1:
@@ -3893,6 +4035,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEFCLR_CEV4:
     enum:
       value1:
@@ -3904,6 +4047,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEFCLR_CEV3:
     enum:
       value1:
@@ -3915,6 +4059,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEFCLR_CEV2:
     enum:
       value1:
@@ -3926,6 +4071,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEFCLR_CEV1:
     enum:
       value1:
@@ -3937,6 +4083,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEFCLR_CEV0:
     enum:
       value1:
@@ -3948,6 +4095,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFCLR_REV15:
     enum:
       value1:
@@ -3959,6 +4107,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFCLR_REV14:
     enum:
       value1:
@@ -3970,6 +4119,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFCLR_REV13:
     enum:
       value1:
@@ -3981,6 +4131,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFCLR_REV12:
     enum:
       value1:
@@ -3992,6 +4143,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFCLR_REV11:
     enum:
       value1:
@@ -4003,6 +4155,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFCLR_REV10:
     enum:
       value1:
@@ -4014,6 +4167,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFCLR_REV9:
     enum:
       value1:
@@ -4025,6 +4179,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFCLR_REV8:
     enum:
       value1:
@@ -4036,6 +4191,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFCLR_REV7:
     enum:
       value1:
@@ -4047,6 +4203,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFCLR_REV6:
     enum:
       value1:
@@ -4058,6 +4215,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFCLR_REV5:
     enum:
       value1:
@@ -4069,6 +4227,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFCLR_REV4:
     enum:
       value1:
@@ -4080,6 +4239,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFCLR_REV3:
     enum:
       value1:
@@ -4091,6 +4251,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFCLR_REV2:
     enum:
       value1:
@@ -4102,6 +4263,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFCLR_REV1:
     enum:
       value1:
@@ -4113,6 +4275,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REFCLR_REV0:
     enum:
       value1:
@@ -4124,6 +4287,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_SEFCLR_SEV1:
     enum:
       value1:
@@ -4135,6 +4299,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_SEFCLR_SEV0:
     enum:
       value1:
@@ -4146,6 +4311,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEVNP0_CEV7NP:
     enum:
       value1:
@@ -4163,6 +4329,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEVNP0_CEV6NP:
     enum:
       value1:
@@ -4180,6 +4347,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEVNP0_CEV5NP:
     enum:
       value1:
@@ -4197,6 +4365,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEVNP0_CEV4NP:
     enum:
       value1:
@@ -4214,6 +4383,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEVNP0_CEV3NP:
     enum:
       value1:
@@ -4231,6 +4401,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEVNP0_CEV2NP:
     enum:
       value1:
@@ -4248,6 +4419,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEVNP0_CEV1NP:
     enum:
       value1:
@@ -4265,6 +4437,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CEVNP0_CEV0NP:
     enum:
       value1:
@@ -4282,6 +4455,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REVNP0_REV7NP:
     enum:
       value1:
@@ -4299,6 +4473,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REVNP0_REV6NP:
     enum:
       value1:
@@ -4316,6 +4491,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REVNP0_REV5NP:
     enum:
       value1:
@@ -4333,6 +4509,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REVNP0_REV4NP:
     enum:
       value1:
@@ -4350,6 +4527,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REVNP0_REV3NP:
     enum:
       value1:
@@ -4367,6 +4545,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REVNP0_REV2NP:
     enum:
       value1:
@@ -4384,6 +4563,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REVNP0_REV1NP:
     enum:
       value1:
@@ -4401,6 +4581,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REVNP0_REV0NP:
     enum:
       value1:
@@ -4418,6 +4599,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REVNP1_REV15NP:
     enum:
       value1:
@@ -4435,6 +4617,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REVNP1_REV14NP:
     enum:
       value1:
@@ -4452,6 +4635,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REVNP1_REV13NP:
     enum:
       value1:
@@ -4469,6 +4653,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REVNP1_REV12NP:
     enum:
       value1:
@@ -4486,6 +4671,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REVNP1_REV11NP:
     enum:
       value1:
@@ -4503,6 +4689,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REVNP1_REV10NP:
     enum:
       value1:
@@ -4520,6 +4707,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REVNP1_REV9NP:
     enum:
       value1:
@@ -4537,6 +4725,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_REVNP1_REV8NP:
     enum:
       value1:
@@ -4554,6 +4743,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_SEVNP_SEV1NP:
     enum:
       value1:
@@ -4571,6 +4761,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_SEVNP_SEV0NP:
     enum:
       value1:
@@ -4588,6 +4779,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_SRACT_ASSR3:
     enum:
       value1:
@@ -4599,6 +4791,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_SRACT_ASSR2:
     enum:
       value1:
@@ -4610,6 +4803,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_SRACT_ASSR1:
     enum:
       value1:
@@ -4621,6 +4815,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_SRACT_ASSR0:
     enum:
       value1:
@@ -4632,6 +4827,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_SRACT_AGSR3:
     enum:
       value1:
@@ -4643,6 +4839,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_SRACT_AGSR2:
     enum:
       value1:
@@ -4654,6 +4851,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_SRACT_AGSR1:
     enum:
       value1:
@@ -4665,6 +4863,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_SRACT_AGSR0:
     enum:
       value1:
@@ -4676,6 +4875,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_EMUXCTR_EMXWC:
     enum:
       value1:
@@ -4687,6 +4887,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_EMUXCTR_EMXCSS:
     enum:
       value1:
@@ -4699,6 +4900,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_EMUXCTR_EMXST:
     enum:
       value1:
@@ -4710,6 +4912,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_EMUXCTR_EMXCOD:
     enum:
       value1:
@@ -4721,6 +4924,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_EMUXCTR_EMUXMODE:
     enum:
       value1:
@@ -4738,6 +4942,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_VFR_VF15:
     enum:
       value1:
@@ -4751,6 +4956,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_VFR_VF14:
     enum:
       value1:
@@ -4764,6 +4970,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_VFR_VF13:
     enum:
       value1:
@@ -4777,6 +4984,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_VFR_VF12:
     enum:
       value1:
@@ -4790,6 +4998,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_VFR_VF11:
     enum:
       value1:
@@ -4803,6 +5012,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_VFR_VF10:
     enum:
       value1:
@@ -4816,6 +5026,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_VFR_VF9:
     enum:
       value1:
@@ -4829,6 +5040,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_VFR_VF8:
     enum:
       value1:
@@ -4842,6 +5054,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_VFR_VF7:
     enum:
       value1:
@@ -4855,6 +5068,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_VFR_VF6:
     enum:
       value1:
@@ -4868,6 +5082,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_VFR_VF5:
     enum:
       value1:
@@ -4881,6 +5096,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_VFR_VF4:
     enum:
       value1:
@@ -4894,6 +5110,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_VFR_VF3:
     enum:
       value1:
@@ -4907,6 +5124,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_VFR_VF2:
     enum:
       value1:
@@ -4920,6 +5138,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_VFR_VF1:
     enum:
       value1:
@@ -4933,6 +5152,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_VFR_VF0:
     enum:
       value1:
@@ -4946,6 +5166,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CHCTR_BWDEN:
     enum:
       value1:
@@ -4957,6 +5178,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CHCTR_BWDCH:
     enum:
       value1:
@@ -4968,6 +5190,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CHCTR_RESPOS:
     enum:
       value1:
@@ -4979,6 +5202,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CHCTR_RESTBS:
     enum:
       value1:
@@ -4990,6 +5214,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CHCTR_RESREG:
     enum:
       value1:
@@ -5001,6 +5226,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CHCTR_REFSEL:
     enum:
       value1:
@@ -5012,6 +5238,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CHCTR_SYNC:
     enum:
       value1:
@@ -5024,6 +5251,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CHCTR_CHEVMODE:
     enum:
       value1:
@@ -5044,6 +5272,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CHCTR_BNDSELU:
     enum:
       value1:
@@ -5061,6 +5290,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CHCTR_BNDSELL:
     enum:
       value1:
@@ -5078,6 +5308,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_CHCTR_ICLSEL:
     enum:
       value1:
@@ -5095,6 +5326,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_RCR_SRGEN:
     enum:
       value1:
@@ -5106,6 +5338,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_RCR_FEN:
     enum:
       value1:
@@ -5117,6 +5350,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_RCR_WFR:
     enum:
       value1:
@@ -5128,6 +5362,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_RCR_DMM:
     enum:
       value1:
@@ -5142,6 +5377,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_RES_VF:
     enum:
       value1:
@@ -5154,6 +5390,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_RES_FCR:
     enum:
       value1:
@@ -5165,6 +5402,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_RES_CRS:
     enum:
       value1:
@@ -5179,6 +5417,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_RESD_VF:
     enum:
       value1:
@@ -5191,6 +5430,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_RESD_FCR:
     enum:
       value1:
@@ -5202,6 +5442,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   VADC_G0_RESD_CRS:
     enum:
       value1:
@@ -5216,3 +5457,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

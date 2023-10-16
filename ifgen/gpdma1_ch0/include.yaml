@@ -238,6 +238,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   GPDMA1_CH0_CTLL_DINC:
     enum:
@@ -253,6 +254,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CH0_CTLL_SINC:
     enum:
       value1:
@@ -267,6 +269,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CH0_CFGL_CH_SUSP:
     enum:
       value1:
@@ -278,6 +281,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CH0_CFGL_FIFO_EMPTY:
     enum:
       value1:
@@ -289,6 +293,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CH0_CFGL_HS_SEL_DST:
     enum:
       value1:
@@ -302,6 +307,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CH0_CFGL_HS_SEL_SRC:
     enum:
       value1:
@@ -315,6 +321,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CH0_CFGL_LOCK_CH_L:
     enum:
       value1:
@@ -329,6 +336,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CH0_CFGL_LOCK_B_L:
     enum:
       value1:
@@ -343,6 +351,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CH0_CFGL_DST_HS_POL:
     enum:
       value1:
@@ -354,6 +363,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CH0_CFGL_SRC_HS_POL:
     enum:
       value1:
@@ -365,6 +375,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CH0_CFGH_FCMODE:
     enum:
       value1:
@@ -381,6 +392,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CH0_CFGH_FIFO_MODE:
     enum:
       value1:
@@ -396,3 +408,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

@@ -333,6 +333,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   DSD_CLC_EDIS:
     enum:
@@ -345,6 +346,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_CLC_DISS:
     enum:
       value1:
@@ -356,6 +358,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_CLC_DISR:
     enum:
       value1:
@@ -367,6 +370,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_OCS_SUSSTA:
     enum:
       value1:
@@ -378,6 +382,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_OCS_SUS:
     enum:
       value1:
@@ -398,6 +403,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_GLOBCFG_MCSEL:
     enum:
       value1:
@@ -409,6 +415,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_GLOBRC_CH3RUN:
     enum:
       value1:
@@ -420,6 +427,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_GLOBRC_CH2RUN:
     enum:
       value1:
@@ -431,6 +439,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_GLOBRC_CH1RUN:
     enum:
       value1:
@@ -442,6 +451,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_GLOBRC_CH0RUN:
     enum:
       value1:
@@ -453,6 +463,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_CGCFG_SGNCG:
     enum:
       value1:
@@ -464,6 +475,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_CGCFG_STEPD:
     enum:
       value1:
@@ -475,6 +487,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_CGCFG_STEPS:
     enum:
       value1:
@@ -486,6 +499,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_CGCFG_RUN:
     enum:
       value1:
@@ -497,6 +511,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_CGCFG_DIVCG:
     enum:
       value1:
@@ -514,6 +529,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_CGCFG_SIGPOL:
     enum:
       value1:
@@ -525,6 +541,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_CGCFG_BREV:
     enum:
       value1:
@@ -536,6 +553,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_CGCFG_CGMOD:
     enum:
       value1:
@@ -553,6 +571,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_EVFLAG_ALEV3:
     enum:
       value1:
@@ -564,6 +583,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_EVFLAG_ALEV2:
     enum:
       value1:
@@ -575,6 +595,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_EVFLAG_ALEV1:
     enum:
       value1:
@@ -586,6 +607,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_EVFLAG_ALEV0:
     enum:
       value1:
@@ -597,6 +619,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_EVFLAG_RESEV3:
     enum:
       value1:
@@ -608,6 +631,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_EVFLAG_RESEV2:
     enum:
       value1:
@@ -619,6 +643,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_EVFLAG_RESEV1:
     enum:
       value1:
@@ -630,6 +655,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_EVFLAG_RESEV0:
     enum:
       value1:
@@ -641,6 +667,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_EVFLAGCLR_ALEC3:
     enum:
       value1:
@@ -652,6 +679,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_EVFLAGCLR_ALEC2:
     enum:
       value1:
@@ -663,6 +691,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_EVFLAGCLR_ALEC1:
     enum:
       value1:
@@ -674,6 +703,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_EVFLAGCLR_ALEC0:
     enum:
       value1:
@@ -685,6 +715,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_EVFLAGCLR_RESEC3:
     enum:
       value1:
@@ -696,6 +727,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_EVFLAGCLR_RESEC2:
     enum:
       value1:
@@ -707,6 +739,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_EVFLAGCLR_RESEC1:
     enum:
       value1:
@@ -718,6 +751,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DSD_EVFLAGCLR_RESEC0:
     enum:
       value1:
@@ -729,3 +763,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

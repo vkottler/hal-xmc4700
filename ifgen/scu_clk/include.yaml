@@ -1094,6 +1094,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   SCU_CLK_CLKSTAT_WDTCST:
     enum:
@@ -1106,6 +1107,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CLKSTAT_CCUCST:
     enum:
       value1:
@@ -1117,6 +1119,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CLKSTAT_EBUCST:
     enum:
       value1:
@@ -1128,6 +1131,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CLKSTAT_ETH0CST:
     enum:
       value1:
@@ -1139,6 +1143,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CLKSTAT_MMCCST:
     enum:
       value1:
@@ -1150,6 +1155,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CLKSTAT_USBCST:
     enum:
       value1:
@@ -1161,6 +1167,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CLKSET_WDTCEN:
     enum:
       value1:
@@ -1172,6 +1179,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CLKSET_CCUCEN:
     enum:
       value1:
@@ -1183,6 +1191,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CLKSET_EBUCEN:
     enum:
       value1:
@@ -1194,6 +1203,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CLKSET_ETH0CEN:
     enum:
       value1:
@@ -1205,6 +1215,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CLKSET_MMCCEN:
     enum:
       value1:
@@ -1216,6 +1227,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CLKSET_USBCEN:
     enum:
       value1:
@@ -1227,6 +1239,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CLKCLR_WDTCDI:
     enum:
       value1:
@@ -1238,6 +1251,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CLKCLR_CCUCDI:
     enum:
       value1:
@@ -1249,6 +1263,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CLKCLR_EBUCDI:
     enum:
       value1:
@@ -1260,6 +1275,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CLKCLR_ETH0CDI:
     enum:
       value1:
@@ -1271,6 +1287,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CLKCLR_MMCCDI:
     enum:
       value1:
@@ -1282,6 +1299,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CLKCLR_USBCDI:
     enum:
       value1:
@@ -1293,6 +1311,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_SYSCLKCR_SYSSEL:
     enum:
       value1:
@@ -1304,6 +1323,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CPUCLKCR_CPUDIV:
     enum:
       value1:
@@ -1315,6 +1335,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_PBCLKCR_PBDIV:
     enum:
       value1:
@@ -1326,6 +1347,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_USBCLKCR_USBSEL:
     enum:
       value1:
@@ -1337,6 +1359,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CCUCLKCR_CCUDIV:
     enum:
       value1:
@@ -1348,6 +1371,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_WDTCLKCR_WDTSEL:
     enum:
       value1:
@@ -1362,6 +1386,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_EXTCLKCR_ECKSEL:
     enum:
       value1:
@@ -1376,6 +1401,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_MLINKCLKCR_WDTSEL:
     enum:
       value1:
@@ -1390,6 +1416,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_MLINKCLKCR_CCUDIV:
     enum:
       value1:
@@ -1401,6 +1428,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_MLINKCLKCR_PBDIV:
     enum:
       value1:
@@ -1412,6 +1440,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_MLINKCLKCR_CPUDIV:
     enum:
       value1:
@@ -1423,6 +1452,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_MLINKCLKCR_SYSSEL:
     enum:
       value1:
@@ -1434,6 +1464,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_SLEEPCR_WDTCR:
     enum:
       value1:
@@ -1445,6 +1476,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_SLEEPCR_CCUCR:
     enum:
       value1:
@@ -1456,6 +1488,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_SLEEPCR_EBUCR:
     enum:
       value1:
@@ -1467,6 +1500,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_SLEEPCR_ETH0CR:
     enum:
       value1:
@@ -1478,6 +1512,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_SLEEPCR_MMCCR:
     enum:
       value1:
@@ -1489,6 +1524,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_SLEEPCR_USBCR:
     enum:
       value1:
@@ -1500,6 +1536,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_SLEEPCR_SYSSEL:
     enum:
       value1:
@@ -1511,6 +1548,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_DSLEEPCR_WDTCR:
     enum:
       value1:
@@ -1522,6 +1560,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_DSLEEPCR_CCUCR:
     enum:
       value1:
@@ -1533,6 +1572,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_DSLEEPCR_EBUCR:
     enum:
       value1:
@@ -1544,6 +1584,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_DSLEEPCR_ETH0CR:
     enum:
       value1:
@@ -1555,6 +1596,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_DSLEEPCR_MMCCR:
     enum:
       value1:
@@ -1566,6 +1608,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_DSLEEPCR_USBCR:
     enum:
       value1:
@@ -1577,6 +1620,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_DSLEEPCR_VCOPDN:
     enum:
       value1:
@@ -1588,6 +1632,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_DSLEEPCR_PLLPDN:
     enum:
       value1:
@@ -1599,6 +1644,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_DSLEEPCR_FPDN:
     enum:
       value1:
@@ -1610,6 +1656,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_DSLEEPCR_SYSSEL:
     enum:
       value1:
@@ -1621,6 +1668,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT0_ERU1:
     enum:
       value1:
@@ -1632,6 +1680,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT0_USIC0:
     enum:
       value1:
@@ -1643,6 +1692,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT0_POSIF1:
     enum:
       value1:
@@ -1654,6 +1704,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT0_POSIF0:
     enum:
       value1:
@@ -1665,6 +1716,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT0_CCU81:
     enum:
       value1:
@@ -1676,6 +1728,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT0_CCU80:
     enum:
       value1:
@@ -1687,6 +1740,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT0_CCU42:
     enum:
       value1:
@@ -1698,6 +1752,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT0_CCU41:
     enum:
       value1:
@@ -1709,6 +1764,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT0_CCU40:
     enum:
       value1:
@@ -1720,6 +1776,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT0_DSD:
     enum:
       value1:
@@ -1731,6 +1788,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT0_VADC:
     enum:
       value1:
@@ -1742,6 +1800,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET0_ERU1:
     enum:
       value1:
@@ -1753,6 +1812,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET0_USIC0:
     enum:
       value1:
@@ -1764,6 +1824,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET0_POSIF1:
     enum:
       value1:
@@ -1775,6 +1836,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET0_POSIF0:
     enum:
       value1:
@@ -1786,6 +1848,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET0_CCU81:
     enum:
       value1:
@@ -1797,6 +1860,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET0_CCU80:
     enum:
       value1:
@@ -1808,6 +1872,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET0_CCU42:
     enum:
       value1:
@@ -1819,6 +1884,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET0_CCU41:
     enum:
       value1:
@@ -1830,6 +1896,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET0_CCU40:
     enum:
       value1:
@@ -1841,6 +1908,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET0_DSD:
     enum:
       value1:
@@ -1852,6 +1920,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET0_VADC:
     enum:
       value1:
@@ -1863,6 +1932,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR0_ERU1:
     enum:
       value1:
@@ -1874,6 +1944,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR0_USIC0:
     enum:
       value1:
@@ -1885,6 +1956,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR0_POSIF1:
     enum:
       value1:
@@ -1896,6 +1968,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR0_POSIF0:
     enum:
       value1:
@@ -1907,6 +1980,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR0_CCU81:
     enum:
       value1:
@@ -1918,6 +1992,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR0_CCU80:
     enum:
       value1:
@@ -1929,6 +2004,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR0_CCU42:
     enum:
       value1:
@@ -1940,6 +2016,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR0_CCU41:
     enum:
       value1:
@@ -1951,6 +2028,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR0_CCU40:
     enum:
       value1:
@@ -1962,6 +2040,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR0_DSD:
     enum:
       value1:
@@ -1973,6 +2052,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR0_VADC:
     enum:
       value1:
@@ -1984,6 +2064,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT1_PPORTS:
     enum:
       value1:
@@ -1995,6 +2076,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT1_USIC2:
     enum:
       value1:
@@ -2006,6 +2088,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT1_USIC1:
     enum:
       value1:
@@ -2017,6 +2100,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT1_MMCI:
     enum:
       value1:
@@ -2028,6 +2112,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT1_DAC:
     enum:
       value1:
@@ -2039,6 +2124,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT1_MCAN0:
     enum:
       value1:
@@ -2050,6 +2136,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT1_LEDTSCU0:
     enum:
       value1:
@@ -2061,6 +2148,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT1_CCU43:
     enum:
       value1:
@@ -2072,6 +2160,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET1_PPORTS:
     enum:
       value1:
@@ -2083,6 +2172,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET1_USIC2:
     enum:
       value1:
@@ -2094,6 +2184,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET1_USIC1:
     enum:
       value1:
@@ -2105,6 +2196,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET1_MMCI:
     enum:
       value1:
@@ -2116,6 +2208,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET1_DAC:
     enum:
       value1:
@@ -2127,6 +2220,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET1_MCAN0:
     enum:
       value1:
@@ -2138,6 +2232,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET1_LEDTSCU0:
     enum:
       value1:
@@ -2149,6 +2244,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET1_CCU43:
     enum:
       value1:
@@ -2160,6 +2256,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR1_PPORTS:
     enum:
       value1:
@@ -2171,6 +2268,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR1_USIC2:
     enum:
       value1:
@@ -2182,6 +2280,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR1_USIC1:
     enum:
       value1:
@@ -2193,6 +2292,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR1_MMCI:
     enum:
       value1:
@@ -2204,6 +2304,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR1_DAC:
     enum:
       value1:
@@ -2215,6 +2316,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR1_MCAN0:
     enum:
       value1:
@@ -2226,6 +2328,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR1_LEDTSCU0:
     enum:
       value1:
@@ -2237,6 +2340,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR1_CCU43:
     enum:
       value1:
@@ -2248,6 +2352,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT2_USB:
     enum:
       value1:
@@ -2259,6 +2364,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT2_FCE:
     enum:
       value1:
@@ -2270,6 +2376,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT2_DMA1:
     enum:
       value1:
@@ -2281,6 +2388,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT2_DMA0:
     enum:
       value1:
@@ -2292,6 +2400,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT2_ETH0:
     enum:
       value1:
@@ -2303,6 +2412,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT2_WDT:
     enum:
       value1:
@@ -2314,6 +2424,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET2_USB:
     enum:
       value1:
@@ -2325,6 +2436,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET2_FCE:
     enum:
       value1:
@@ -2336,6 +2448,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET2_DMA1:
     enum:
       value1:
@@ -2347,6 +2460,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET2_DMA0:
     enum:
       value1:
@@ -2358,6 +2472,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET2_ETH0:
     enum:
       value1:
@@ -2369,6 +2484,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET2_WDT:
     enum:
       value1:
@@ -2380,6 +2496,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR2_USB:
     enum:
       value1:
@@ -2391,6 +2508,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR2_FCE:
     enum:
       value1:
@@ -2402,6 +2520,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR2_DMA1:
     enum:
       value1:
@@ -2413,6 +2532,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR2_DMA0:
     enum:
       value1:
@@ -2424,6 +2544,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR2_ETH0:
     enum:
       value1:
@@ -2435,6 +2556,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR2_WDT:
     enum:
       value1:
@@ -2446,6 +2568,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSTAT3_EBU:
     enum:
       value1:
@@ -2457,6 +2580,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATSET3_EBU:
     enum:
       value1:
@@ -2468,6 +2592,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_CLK_CGATCLR3_EBU:
     enum:
       value1:
@@ -2479,3 +2604,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

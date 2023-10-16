@@ -207,6 +207,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   ERU0_EXISEL_EXS3B:
     enum:
@@ -225,6 +226,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXISEL_EXS3A:
     enum:
       value1:
@@ -242,6 +244,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXISEL_EXS2B:
     enum:
       value1:
@@ -259,6 +262,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXISEL_EXS2A:
     enum:
       value1:
@@ -276,6 +280,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXISEL_EXS1B:
     enum:
       value1:
@@ -293,6 +298,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXISEL_EXS1A:
     enum:
       value1:
@@ -310,6 +316,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXISEL_EXS0B:
     enum:
       value1:
@@ -327,6 +334,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXISEL_EXS0A:
     enum:
       value1:
@@ -344,6 +352,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXICON_NB:
     enum:
       value1:
@@ -355,6 +364,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXICON_NA:
     enum:
       value1:
@@ -366,6 +376,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXICON_SS:
     enum:
       value1:
@@ -383,6 +394,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXICON_FL:
     enum:
       value1:
@@ -394,6 +406,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXICON_OCS:
     enum:
       value1:
@@ -411,6 +424,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXICON_FE:
     enum:
       value1:
@@ -422,6 +436,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXICON_RE:
     enum:
       value1:
@@ -433,6 +448,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXICON_LD:
     enum:
       value1:
@@ -449,6 +465,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXICON_PE:
     enum:
       value1:
@@ -460,6 +477,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXOCON_IPEN3:
     enum:
       value1:
@@ -471,6 +489,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXOCON_IPEN2:
     enum:
       value1:
@@ -482,6 +501,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXOCON_IPEN1:
     enum:
       value1:
@@ -493,6 +513,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXOCON_IPEN0:
     enum:
       value1:
@@ -504,6 +525,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXOCON_GP:
     enum:
       value1:
@@ -526,6 +548,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXOCON_PDR:
     enum:
       value1:
@@ -537,6 +560,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXOCON_GEEN:
     enum:
       value1:
@@ -548,6 +572,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   ERU0_EXOCON_ISS:
     enum:
       value1:
@@ -565,3 +590,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

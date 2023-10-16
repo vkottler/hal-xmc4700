@@ -418,6 +418,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   SCU_GENERAL_STCON_SWCON:
     enum:
@@ -448,6 +449,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_STCON_HWCON:
     enum:
       value1:
@@ -465,6 +467,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_CCUCON_GSC81:
     enum:
       value1:
@@ -476,6 +479,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_CCUCON_GSC80:
     enum:
       value1:
@@ -487,6 +491,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_CCUCON_GSC43:
     enum:
       value1:
@@ -498,6 +503,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_CCUCON_GSC42:
     enum:
       value1:
@@ -509,6 +515,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_CCUCON_GSC41:
     enum:
       value1:
@@ -520,6 +527,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_CCUCON_GSC40:
     enum:
       value1:
@@ -531,6 +539,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_DTSCON_START:
     enum:
       value1:
@@ -542,6 +551,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_DTSCON_PWD:
     enum:
       value1:
@@ -553,6 +563,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_DTSSTAT_BUSY:
     enum:
       value1:
@@ -564,6 +575,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_DTSSTAT_RDY:
     enum:
       value1:
@@ -575,6 +587,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_SDMMCDEL_TAPEN:
     enum:
       value1:
@@ -586,6 +599,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_G0ORCEN_ENORC7:
     enum:
       value1:
@@ -597,6 +611,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_G0ORCEN_ENORC6:
     enum:
       value1:
@@ -608,6 +623,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_G1ORCEN_ENORC7:
     enum:
       value1:
@@ -619,6 +635,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_G1ORCEN_ENORC6:
     enum:
       value1:
@@ -630,6 +647,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_MIRRSTS_RTC_CLRSR:
     enum:
       value1:
@@ -641,6 +659,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_MIRRSTS_RTC_MSKSR:
     enum:
       value1:
@@ -652,6 +671,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_MIRRSTS_RMX:
     enum:
       value1:
@@ -663,6 +683,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_MIRRSTS_RTC_TIM1:
     enum:
       value1:
@@ -674,6 +695,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_MIRRSTS_RTC_TIM0:
     enum:
       value1:
@@ -685,6 +707,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_MIRRSTS_RTC_ATIM1:
     enum:
       value1:
@@ -696,6 +719,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_MIRRSTS_RTC_ATIM0:
     enum:
       value1:
@@ -707,6 +731,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_MIRRSTS_RTC_CTR:
     enum:
       value1:
@@ -718,6 +743,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_MIRRSTS_OSCULCTRL:
     enum:
       value1:
@@ -729,6 +755,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_MIRRSTS_OSCSICTRL:
     enum:
       value1:
@@ -740,6 +767,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_MIRRSTS_HDCR:
     enum:
       value1:
@@ -751,6 +779,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_MIRRSTS_HDSET:
     enum:
       value1:
@@ -762,6 +791,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_MIRRSTS_HDCLR:
     enum:
       value1:
@@ -773,6 +803,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_GENERAL_RMACR_RDWR:
     enum:
       value1:
@@ -786,3 +817,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

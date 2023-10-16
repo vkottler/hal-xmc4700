@@ -322,6 +322,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   SCU_TRAP_TRAPSTAT_BWERR1T:
     enum:
@@ -334,6 +335,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPSTAT_BWERR0T:
     enum:
       value1:
@@ -345,6 +347,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPSTAT_ULPWDGT:
     enum:
       value1:
@@ -356,6 +359,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPSTAT_BRWNT:
     enum:
       value1:
@@ -367,6 +371,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPSTAT_PET:
     enum:
       value1:
@@ -378,6 +383,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPSTAT_UVCOLCKT:
     enum:
       value1:
@@ -389,6 +395,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPSTAT_SVCOLCKT:
     enum:
       value1:
@@ -400,6 +407,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPSTAT_SOSCWDGT:
     enum:
       value1:
@@ -411,6 +419,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPRAW_BWERR1T:
     enum:
       value1:
@@ -422,6 +431,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPRAW_BWERR0T:
     enum:
       value1:
@@ -433,6 +443,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPRAW_ULPWDGT:
     enum:
       value1:
@@ -444,6 +455,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPRAW_BRWNT:
     enum:
       value1:
@@ -455,6 +467,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPRAW_PET:
     enum:
       value1:
@@ -466,6 +479,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPRAW_UVCOLCKT:
     enum:
       value1:
@@ -477,6 +491,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPRAW_SVCOLCKT:
     enum:
       value1:
@@ -488,6 +503,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPRAW_SOSCWDGT:
     enum:
       value1:
@@ -499,6 +515,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPDIS_BWERR1T:
     enum:
       value1:
@@ -510,6 +527,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPDIS_BWERR0T:
     enum:
       value1:
@@ -521,6 +539,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPDIS_ULPWDGT:
     enum:
       value1:
@@ -532,6 +551,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPDIS_BRWNT:
     enum:
       value1:
@@ -543,6 +563,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPDIS_PET:
     enum:
       value1:
@@ -554,6 +575,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPDIS_UVCOLCKT:
     enum:
       value1:
@@ -565,6 +587,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPDIS_SVCOLCKT:
     enum:
       value1:
@@ -576,6 +599,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPDIS_SOSCWDGT:
     enum:
       value1:
@@ -587,6 +611,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPCLR_BWERR1T:
     enum:
       value1:
@@ -598,6 +623,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPCLR_BWERR0T:
     enum:
       value1:
@@ -609,6 +635,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPCLR_ULPWDGT:
     enum:
       value1:
@@ -620,6 +647,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPCLR_BRWNT:
     enum:
       value1:
@@ -631,6 +659,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPCLR_PET:
     enum:
       value1:
@@ -642,6 +671,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPCLR_UVCOLCKT:
     enum:
       value1:
@@ -653,6 +683,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPCLR_SVCOLCKT:
     enum:
       value1:
@@ -664,6 +695,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPCLR_SOSCWDGT:
     enum:
       value1:
@@ -675,6 +707,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPSET_BWERR1T:
     enum:
       value1:
@@ -686,6 +719,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPSET_BWERR0T:
     enum:
       value1:
@@ -697,6 +731,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPSET_ULPWDT:
     enum:
       value1:
@@ -708,6 +743,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPSET_BRWNT:
     enum:
       value1:
@@ -719,6 +755,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPSET_PET:
     enum:
       value1:
@@ -730,6 +767,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPSET_UVCOLCKT:
     enum:
       value1:
@@ -741,6 +779,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPSET_SVCOLCKT:
     enum:
       value1:
@@ -752,6 +791,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_TRAP_TRAPSET_SOSCWDGT:
     enum:
       value1:
@@ -763,3 +803,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

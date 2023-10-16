@@ -1060,6 +1060,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   PORT1_OUT_P15:
     enum:
@@ -1072,6 +1073,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_OUT_P14:
     enum:
       value1:
@@ -1083,6 +1085,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_OUT_P13:
     enum:
       value1:
@@ -1094,6 +1097,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_OUT_P12:
     enum:
       value1:
@@ -1105,6 +1109,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_OUT_P11:
     enum:
       value1:
@@ -1116,6 +1121,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_OUT_P10:
     enum:
       value1:
@@ -1127,6 +1133,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_OUT_P9:
     enum:
       value1:
@@ -1138,6 +1145,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_OUT_P8:
     enum:
       value1:
@@ -1149,6 +1157,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_OUT_P7:
     enum:
       value1:
@@ -1160,6 +1169,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_OUT_P6:
     enum:
       value1:
@@ -1171,6 +1181,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_OUT_P5:
     enum:
       value1:
@@ -1182,6 +1193,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_OUT_P4:
     enum:
       value1:
@@ -1193,6 +1205,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_OUT_P3:
     enum:
       value1:
@@ -1204,6 +1217,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_OUT_P2:
     enum:
       value1:
@@ -1215,6 +1229,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_OUT_P1:
     enum:
       value1:
@@ -1226,6 +1241,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_OUT_P0:
     enum:
       value1:
@@ -1237,6 +1253,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IOCR0_PC3:
     enum:
       value1:
@@ -1296,6 +1313,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IOCR0_PC2:
     enum:
       value1:
@@ -1355,6 +1373,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IOCR0_PC1:
     enum:
       value1:
@@ -1414,6 +1433,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IOCR0_PC0:
     enum:
       value1:
@@ -1473,6 +1493,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IOCR4_PC7:
     enum:
       value1:
@@ -1532,6 +1553,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IOCR4_PC6:
     enum:
       value1:
@@ -1591,6 +1613,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IOCR4_PC5:
     enum:
       value1:
@@ -1650,6 +1673,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IOCR4_PC4:
     enum:
       value1:
@@ -1709,6 +1733,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IOCR8_PC11:
     enum:
       value1:
@@ -1768,6 +1793,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IOCR8_PC10:
     enum:
       value1:
@@ -1827,6 +1853,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IOCR8_PC9:
     enum:
       value1:
@@ -1886,6 +1913,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IOCR8_PC8:
     enum:
       value1:
@@ -1945,6 +1973,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IOCR12_PC15:
     enum:
       value1:
@@ -2004,6 +2033,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IOCR12_PC14:
     enum:
       value1:
@@ -2063,6 +2093,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IOCR12_PC13:
     enum:
       value1:
@@ -2122,6 +2153,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IOCR12_PC12:
     enum:
       value1:
@@ -2181,6 +2213,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IN_P15:
     enum:
       value1:
@@ -2192,6 +2225,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IN_P14:
     enum:
       value1:
@@ -2203,6 +2237,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IN_P13:
     enum:
       value1:
@@ -2214,6 +2249,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IN_P12:
     enum:
       value1:
@@ -2225,6 +2261,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IN_P11:
     enum:
       value1:
@@ -2236,6 +2273,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IN_P10:
     enum:
       value1:
@@ -2247,6 +2285,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IN_P9:
     enum:
       value1:
@@ -2258,6 +2297,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IN_P8:
     enum:
       value1:
@@ -2269,6 +2309,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IN_P7:
     enum:
       value1:
@@ -2280,6 +2321,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IN_P6:
     enum:
       value1:
@@ -2291,6 +2333,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IN_P5:
     enum:
       value1:
@@ -2302,6 +2345,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IN_P4:
     enum:
       value1:
@@ -2313,6 +2357,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IN_P3:
     enum:
       value1:
@@ -2324,6 +2369,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IN_P2:
     enum:
       value1:
@@ -2335,6 +2381,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IN_P1:
     enum:
       value1:
@@ -2346,6 +2393,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_IN_P0:
     enum:
       value1:
@@ -2357,6 +2405,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDR0_PD7:
     enum:
       sd_she:
@@ -2377,6 +2426,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDR0_PD6:
     enum:
       sd_she:
@@ -2397,6 +2447,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDR0_PD5:
     enum:
       sd_soe:
@@ -2426,6 +2477,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDR0_PD4:
     enum:
       sd_soe:
@@ -2455,6 +2507,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDR0_PD3:
     enum:
       sd_she:
@@ -2475,6 +2528,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDR0_PD2:
     enum:
       sd_she:
@@ -2495,6 +2549,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDR0_PD1:
     enum:
       sd_soe:
@@ -2524,6 +2579,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDR0_PD0:
     enum:
       sd_soe:
@@ -2553,6 +2609,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDR1_PD15:
     enum:
       sd_she:
@@ -2573,6 +2630,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDR1_PD14:
     enum:
       sd_she:
@@ -2593,6 +2651,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDR1_PD13:
     enum:
       sd_she:
@@ -2613,6 +2672,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDR1_PD12:
     enum:
       sd_she:
@@ -2633,6 +2693,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDR1_PD11:
     enum:
       sd_soe:
@@ -2662,6 +2723,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDR1_PD10:
     enum:
       sd_soe:
@@ -2691,6 +2753,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDR1_PD9:
     enum:
       sd_she:
@@ -2711,6 +2774,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDR1_PD8:
     enum:
       sd_she:
@@ -2731,6 +2795,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDISC_PDIS15:
     enum:
       value1:
@@ -2742,6 +2807,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDISC_PDIS14:
     enum:
       value1:
@@ -2753,6 +2819,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDISC_PDIS13:
     enum:
       value1:
@@ -2764,6 +2831,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDISC_PDIS12:
     enum:
       value1:
@@ -2775,6 +2843,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDISC_PDIS11:
     enum:
       value1:
@@ -2786,6 +2855,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDISC_PDIS10:
     enum:
       value1:
@@ -2797,6 +2867,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDISC_PDIS9:
     enum:
       value1:
@@ -2808,6 +2879,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDISC_PDIS8:
     enum:
       value1:
@@ -2819,6 +2891,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDISC_PDIS7:
     enum:
       value1:
@@ -2830,6 +2903,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDISC_PDIS6:
     enum:
       value1:
@@ -2841,6 +2915,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDISC_PDIS5:
     enum:
       value1:
@@ -2852,6 +2927,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDISC_PDIS4:
     enum:
       value1:
@@ -2863,6 +2939,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDISC_PDIS3:
     enum:
       value1:
@@ -2874,6 +2951,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDISC_PDIS2:
     enum:
       value1:
@@ -2885,6 +2963,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDISC_PDIS1:
     enum:
       value1:
@@ -2896,6 +2975,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PDISC_PDIS0:
     enum:
       value1:
@@ -2907,6 +2987,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PPS_PPS15:
     enum:
       value1:
@@ -2918,6 +2999,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PPS_PPS14:
     enum:
       value1:
@@ -2929,6 +3011,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PPS_PPS13:
     enum:
       value1:
@@ -2940,6 +3023,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PPS_PPS12:
     enum:
       value1:
@@ -2951,6 +3035,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PPS_PPS11:
     enum:
       value1:
@@ -2962,6 +3047,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PPS_PPS10:
     enum:
       value1:
@@ -2973,6 +3059,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PPS_PPS9:
     enum:
       value1:
@@ -2984,6 +3071,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PPS_PPS8:
     enum:
       value1:
@@ -2995,6 +3083,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PPS_PPS7:
     enum:
       value1:
@@ -3006,6 +3095,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PPS_PPS6:
     enum:
       value1:
@@ -3017,6 +3107,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PPS_PPS5:
     enum:
       value1:
@@ -3028,6 +3119,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PPS_PPS4:
     enum:
       value1:
@@ -3039,6 +3131,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PPS_PPS3:
     enum:
       value1:
@@ -3050,6 +3143,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PPS_PPS2:
     enum:
       value1:
@@ -3061,6 +3155,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PPS_PPS1:
     enum:
       value1:
@@ -3072,6 +3167,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_PPS_PPS0:
     enum:
       value1:
@@ -3083,6 +3179,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_HWSEL_HW15:
     enum:
       value1:
@@ -3097,6 +3194,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_HWSEL_HW14:
     enum:
       value1:
@@ -3111,6 +3209,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_HWSEL_HW13:
     enum:
       value1:
@@ -3125,6 +3224,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_HWSEL_HW12:
     enum:
       value1:
@@ -3139,6 +3239,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_HWSEL_HW11:
     enum:
       value1:
@@ -3153,6 +3254,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_HWSEL_HW10:
     enum:
       value1:
@@ -3167,6 +3269,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_HWSEL_HW9:
     enum:
       value1:
@@ -3181,6 +3284,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_HWSEL_HW8:
     enum:
       value1:
@@ -3195,6 +3299,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_HWSEL_HW7:
     enum:
       value1:
@@ -3209,6 +3314,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_HWSEL_HW6:
     enum:
       value1:
@@ -3223,6 +3329,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_HWSEL_HW5:
     enum:
       value1:
@@ -3237,6 +3344,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_HWSEL_HW4:
     enum:
       value1:
@@ -3251,6 +3359,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_HWSEL_HW3:
     enum:
       value1:
@@ -3265,6 +3374,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_HWSEL_HW2:
     enum:
       value1:
@@ -3279,6 +3389,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_HWSEL_HW1:
     enum:
       value1:
@@ -3293,6 +3404,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PORT1_HWSEL_HW0:
     enum:
       value1:
@@ -3307,3 +3419,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

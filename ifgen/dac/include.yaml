@@ -495,6 +495,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   DAC_DAC0CFG0_RUN:
     enum:
@@ -507,6 +508,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC0CFG0_SREN:
     enum:
       value1:
@@ -518,6 +520,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC0CFG0_SIGNEN:
     enum:
       value1:
@@ -529,6 +532,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC0CFG0_NEGATE:
     enum:
       value1:
@@ -540,6 +544,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC0CFG0_FIFOFUL:
     enum:
       value1:
@@ -551,6 +556,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC0CFG0_FIFOEMP:
     enum:
       value1:
@@ -562,6 +568,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC0CFG0_SIGN:
     enum:
       value1:
@@ -573,6 +580,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC0CFG0_MODE:
     enum:
       value1:
@@ -602,6 +610,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC0CFG1_ANAEN:
     enum:
       value1:
@@ -613,6 +622,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC0CFG1_TRIGMOD:
     enum:
       value1:
@@ -627,6 +637,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC0CFG1_DATMOD:
     enum:
       value1:
@@ -640,6 +651,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC0CFG1_MULDIV:
     enum:
       value1:
@@ -651,6 +663,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC0CFG1_SCALE:
     enum:
       value1:
@@ -680,6 +693,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC1CFG0_RUN:
     enum:
       value1:
@@ -691,6 +705,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC1CFG0_SREN:
     enum:
       value1:
@@ -702,6 +717,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC1CFG0_SIGNEN:
     enum:
       value1:
@@ -713,6 +729,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC1CFG0_NEGATE:
     enum:
       value1:
@@ -724,6 +741,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC1CFG0_FIFOFUL:
     enum:
       value1:
@@ -735,6 +753,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC1CFG0_FIFOEMP:
     enum:
       value1:
@@ -746,6 +765,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC1CFG0_SIGN:
     enum:
       value1:
@@ -757,6 +777,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC1CFG0_MODE:
     enum:
       value1:
@@ -786,6 +807,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC1CFG1_ANAEN:
     enum:
       value1:
@@ -797,6 +819,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC1CFG1_TRIGMOD:
     enum:
       value1:
@@ -811,6 +834,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC1CFG1_MULDIV:
     enum:
       value1:
@@ -822,6 +846,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   DAC_DAC1CFG1_SCALE:
     enum:
       value1:
@@ -851,3 +876,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

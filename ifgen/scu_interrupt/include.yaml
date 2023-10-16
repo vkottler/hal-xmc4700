@@ -616,6 +616,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   SCU_INTERRUPT_SRSTAT_RMX:
     enum:
@@ -628,6 +629,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSTAT_RTC_TIM1:
     enum:
       value1:
@@ -639,6 +641,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSTAT_RTC_TIM0:
     enum:
       value1:
@@ -650,6 +653,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSTAT_RTC_ATIM1:
     enum:
       value1:
@@ -661,6 +665,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSTAT_RTC_ATIM0:
     enum:
       value1:
@@ -672,6 +677,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSTAT_RTC_CTR:
     enum:
       value1:
@@ -683,6 +689,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSTAT_OSCULCTRL:
     enum:
       value1:
@@ -694,6 +701,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSTAT_OSCSICTRL:
     enum:
       value1:
@@ -705,6 +713,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSTAT_HDCR:
     enum:
       value1:
@@ -716,6 +725,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSTAT_HDSET:
     enum:
       value1:
@@ -727,6 +737,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSTAT_HDCLR:
     enum:
       value1:
@@ -738,6 +749,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSTAT_PRWARN:
     enum:
       value1:
@@ -749,6 +761,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRRAW_RMX:
     enum:
       value1:
@@ -760,6 +773,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRRAW_RTC_TIM1:
     enum:
       value1:
@@ -771,6 +785,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRRAW_RTC_TIM0:
     enum:
       value1:
@@ -782,6 +797,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRRAW_RTC_ATIM1:
     enum:
       value1:
@@ -793,6 +809,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRRAW_RTC_ATIM0:
     enum:
       value1:
@@ -804,6 +821,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRRAW_RTC_CTR:
     enum:
       value1:
@@ -815,6 +833,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRRAW_OSCULCTRL:
     enum:
       value1:
@@ -826,6 +845,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRRAW_OSCSICTRL:
     enum:
       value1:
@@ -837,6 +857,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRRAW_HDCR:
     enum:
       value1:
@@ -848,6 +869,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRRAW_HDSET:
     enum:
       value1:
@@ -859,6 +881,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRRAW_HDCLR:
     enum:
       value1:
@@ -870,6 +893,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRRAW_PRWARN:
     enum:
       value1:
@@ -881,6 +905,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRMSK_RMX:
     enum:
       value1:
@@ -892,6 +917,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRMSK_RTC_TIM1:
     enum:
       value1:
@@ -903,6 +929,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRMSK_RTC_TIM0:
     enum:
       value1:
@@ -914,6 +941,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRMSK_RTC_ATIM1:
     enum:
       value1:
@@ -925,6 +953,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRMSK_RTC_ATIM0:
     enum:
       value1:
@@ -936,6 +965,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRMSK_RTC_CTR:
     enum:
       value1:
@@ -947,6 +977,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRMSK_OSCULCTRL:
     enum:
       value1:
@@ -958,6 +989,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRMSK_OSCSICTRL:
     enum:
       value1:
@@ -969,6 +1001,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRMSK_HDCR:
     enum:
       value1:
@@ -980,6 +1013,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRMSK_HDSET:
     enum:
       value1:
@@ -991,6 +1025,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRMSK_HDCLR:
     enum:
       value1:
@@ -1002,6 +1037,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRMSK_DLROVR:
     enum:
       value1:
@@ -1013,6 +1049,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRMSK_AI:
     enum:
       value1:
@@ -1024,6 +1061,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRMSK_PI:
     enum:
       value1:
@@ -1035,6 +1073,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRMSK_PRWARN:
     enum:
       value1:
@@ -1046,6 +1085,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRCLR_RMX:
     enum:
       value1:
@@ -1057,6 +1097,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRCLR_RTC_TIM1:
     enum:
       value1:
@@ -1068,6 +1109,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRCLR_RTC_TIM0:
     enum:
       value1:
@@ -1079,6 +1121,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRCLR_RTC_ATIM1:
     enum:
       value1:
@@ -1090,6 +1133,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRCLR_RTC_ATIM0:
     enum:
       value1:
@@ -1101,6 +1145,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRCLR_RTC_CTR:
     enum:
       value1:
@@ -1112,6 +1157,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRCLR_OSCULCTRL:
     enum:
       value1:
@@ -1123,6 +1169,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRCLR_OSCSICTRL:
     enum:
       value1:
@@ -1134,6 +1181,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRCLR_HDCR:
     enum:
       value1:
@@ -1145,6 +1193,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRCLR_HDSET:
     enum:
       value1:
@@ -1156,6 +1205,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRCLR_HDCLR:
     enum:
       value1:
@@ -1167,6 +1217,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRCLR_DLROVR:
     enum:
       value1:
@@ -1178,6 +1229,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRCLR_AI:
     enum:
       value1:
@@ -1189,6 +1241,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRCLR_PI:
     enum:
       value1:
@@ -1200,6 +1253,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRCLR_PRWARN:
     enum:
       value1:
@@ -1211,6 +1265,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSET_RMX:
     enum:
       value1:
@@ -1222,6 +1277,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSET_RTC_TIM1:
     enum:
       value1:
@@ -1233,6 +1289,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSET_RTC_TIM0:
     enum:
       value1:
@@ -1244,6 +1301,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSET_RTC_ATIM1:
     enum:
       value1:
@@ -1255,6 +1313,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSET_RTC_ATIM0:
     enum:
       value1:
@@ -1266,6 +1325,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSET_RTC_CTR:
     enum:
       value1:
@@ -1277,6 +1337,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSET_OSCULCTRL:
     enum:
       value1:
@@ -1288,6 +1349,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSET_OSCSICTRL:
     enum:
       value1:
@@ -1299,6 +1361,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSET_HDCR:
     enum:
       value1:
@@ -1310,6 +1373,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSET_HDCRSET:
     enum:
       value1:
@@ -1321,6 +1385,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSET_HDCRCLR:
     enum:
       value1:
@@ -1332,6 +1397,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSET_DLROVR:
     enum:
       value1:
@@ -1343,6 +1409,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSET_AI:
     enum:
       value1:
@@ -1354,6 +1421,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSET_PI:
     enum:
       value1:
@@ -1365,6 +1433,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_SRSET_PRWARN:
     enum:
       value1:
@@ -1376,6 +1445,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_NMIREQEN_ERU03:
     enum:
       value1:
@@ -1387,6 +1457,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_NMIREQEN_ERU02:
     enum:
       value1:
@@ -1398,6 +1469,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_NMIREQEN_ERU01:
     enum:
       value1:
@@ -1409,6 +1481,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_NMIREQEN_ERU00:
     enum:
       value1:
@@ -1420,6 +1493,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_NMIREQEN_AI:
     enum:
       value1:
@@ -1431,6 +1505,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_NMIREQEN_PI:
     enum:
       value1:
@@ -1442,6 +1517,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_INTERRUPT_NMIREQEN_PRWARN:
     enum:
       value1:
@@ -1453,3 +1529,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

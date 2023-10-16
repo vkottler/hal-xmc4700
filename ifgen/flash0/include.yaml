@@ -613,6 +613,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   FLASH0_FSR_VER:
     enum:
@@ -628,6 +629,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FSR_SLM:
     enum:
       value1:
@@ -639,6 +641,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FSR_WPRODIS1:
     enum:
       value1:
@@ -652,6 +655,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FSR_WPRODIS0:
     enum:
       value1:
@@ -665,6 +669,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FSR_WPROIN2:
     enum:
       value1:
@@ -677,6 +682,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FSR_WPROIN1:
     enum:
       value1:
@@ -689,6 +695,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FSR_WPROIN0:
     enum:
       value1:
@@ -701,6 +708,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FSR_RPRODIS:
     enum:
       value1:
@@ -712,6 +720,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FSR_RPROIN:
     enum:
       value1:
@@ -724,6 +733,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FSR_PROIN:
     enum:
       value1:
@@ -736,6 +746,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FSR_PFDBER:
     enum:
       value1:
@@ -747,6 +758,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FSR_PFSBER:
     enum:
       value1:
@@ -758,6 +770,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FSR_PROER:
     enum:
       value1:
@@ -769,6 +782,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FSR_SQER:
     enum:
       value1:
@@ -781,6 +795,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FSR_PFOPER:
     enum:
       value1:
@@ -793,6 +808,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FSR_PFPAGE:
     enum:
       value1:
@@ -805,6 +821,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FSR_ERASE:
     enum:
       value1:
@@ -817,6 +834,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FSR_PROG:
     enum:
       value1:
@@ -830,6 +848,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FSR_PBUSY:
     enum:
       value1:
@@ -841,6 +860,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FCON_EOBM:
     enum:
       value1:
@@ -852,6 +872,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FCON_PFDBERM:
     enum:
       value1:
@@ -864,6 +885,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FCON_PFSBERM:
     enum:
       value1:
@@ -875,6 +897,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FCON_PROERM:
     enum:
       value1:
@@ -886,6 +909,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FCON_SQERM:
     enum:
       value1:
@@ -897,6 +921,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FCON_VOPERM:
     enum:
       value1:
@@ -909,6 +934,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FCON_DDF:
     enum:
       value1:
@@ -921,6 +947,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FCON_DCF:
     enum:
       value1:
@@ -933,6 +960,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FCON_RPA:
     enum:
       value1:
@@ -946,6 +974,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FCON_SLEEP:
     enum:
       value1:
@@ -957,6 +986,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FCON_ESLDIS:
     enum:
       value1:
@@ -968,6 +998,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FCON_IDLE:
     enum:
       value1:
@@ -980,6 +1011,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FCON_WSECPF:
     enum:
       value1:
@@ -993,6 +1025,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_FCON_WSPFLASH:
     enum:
       value1:
@@ -1013,6 +1046,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_MARP_TRAPDIS:
     enum:
       value1:
@@ -1025,6 +1059,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_MARP_MARGIN:
     enum:
       value1:
@@ -1041,6 +1076,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON0_RPRO:
     enum:
       value1:
@@ -1053,6 +1089,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON0_S14_S15L:
     enum:
       value1:
@@ -1064,6 +1101,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON0_S12_S13L:
     enum:
       value1:
@@ -1075,6 +1113,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON0_S10_S11L:
     enum:
       value1:
@@ -1086,6 +1125,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON0_S9L:
     enum:
       value1:
@@ -1097,6 +1137,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON0_S8L:
     enum:
       value1:
@@ -1108,6 +1149,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON0_S7L:
     enum:
       value1:
@@ -1119,6 +1161,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON0_S6L:
     enum:
       value1:
@@ -1130,6 +1173,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON0_S5L:
     enum:
       value1:
@@ -1141,6 +1185,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON0_S4L:
     enum:
       value1:
@@ -1152,6 +1197,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON0_S3L:
     enum:
       value1:
@@ -1163,6 +1209,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON0_S2L:
     enum:
       value1:
@@ -1174,6 +1221,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON0_S1L:
     enum:
       value1:
@@ -1185,6 +1233,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON0_S0L:
     enum:
       value1:
@@ -1196,6 +1245,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON1_PSR:
     enum:
       value1:
@@ -1209,6 +1259,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON1_S14_S15L:
     enum:
       value1:
@@ -1220,6 +1271,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON1_S12_S13L:
     enum:
       value1:
@@ -1231,6 +1283,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON1_S10_S11L:
     enum:
       value1:
@@ -1242,6 +1295,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON1_S9L:
     enum:
       value1:
@@ -1253,6 +1307,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON1_S8L:
     enum:
       value1:
@@ -1264,6 +1319,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON1_S7L:
     enum:
       value1:
@@ -1275,6 +1331,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON1_S6L:
     enum:
       value1:
@@ -1286,6 +1343,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON1_S5L:
     enum:
       value1:
@@ -1297,6 +1355,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON1_S4L:
     enum:
       value1:
@@ -1308,6 +1367,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON1_S3L:
     enum:
       value1:
@@ -1319,6 +1379,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON1_S2L:
     enum:
       value1:
@@ -1330,6 +1391,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON1_S1L:
     enum:
       value1:
@@ -1341,6 +1403,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON1_S0L:
     enum:
       value1:
@@ -1352,6 +1415,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON2_S14_S15ROM:
     enum:
       value1:
@@ -1363,6 +1427,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON2_S12_S13ROM:
     enum:
       value1:
@@ -1374,6 +1439,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON2_S10_S11ROM:
     enum:
       value1:
@@ -1385,6 +1451,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON2_S9ROM:
     enum:
       value1:
@@ -1397,6 +1464,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON2_S8ROM:
     enum:
       value1:
@@ -1409,6 +1477,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON2_S7ROM:
     enum:
       value1:
@@ -1421,6 +1490,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON2_S6ROM:
     enum:
       value1:
@@ -1433,6 +1503,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON2_S5ROM:
     enum:
       value1:
@@ -1445,6 +1516,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON2_S4ROM:
     enum:
       value1:
@@ -1457,6 +1529,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON2_S3ROM:
     enum:
       value1:
@@ -1469,6 +1542,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON2_S2ROM:
     enum:
       value1:
@@ -1481,6 +1555,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON2_S1ROM:
     enum:
       value1:
@@ -1493,6 +1568,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FLASH0_PROCON2_S0ROM:
     enum:
       value1:
@@ -1505,3 +1581,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

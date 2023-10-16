@@ -748,6 +748,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   POSIF0_PCONF_LPC:
     enum:
@@ -778,6 +779,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PCONF_EWIL:
     enum:
       value1:
@@ -789,6 +791,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PCONF_EWIE:
     enum:
       value1:
@@ -802,6 +805,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PCONF_EWIS:
     enum:
       value1:
@@ -819,6 +823,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PCONF_MSYNS:
     enum:
       value1:
@@ -836,6 +841,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PCONF_MSES:
     enum:
       value1:
@@ -849,6 +855,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PCONF_MSETS:
     enum:
       value1:
@@ -878,6 +885,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PCONF_SPES:
     enum:
       value1:
@@ -889,6 +897,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PCONF_DSEL:
     enum:
       value1:
@@ -900,6 +909,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PCONF_INSEL2:
     enum:
       value1:
@@ -917,6 +927,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PCONF_INSEL1:
     enum:
       value1:
@@ -934,6 +945,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PCONF_INSEL0:
     enum:
       value1:
@@ -951,6 +963,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PCONF_MCUE:
     enum:
       value1:
@@ -962,6 +975,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PCONF_QDCM:
     enum:
       value1:
@@ -973,6 +987,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PCONF_FSEL:
     enum:
       value1:
@@ -990,6 +1005,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PSUS_MSUS:
     enum:
       value1:
@@ -1009,6 +1025,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PSUS_QSUS:
     enum:
       value1:
@@ -1026,6 +1043,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PRUN_RB:
     enum:
       value1:
@@ -1037,6 +1055,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_MCMF_MSS:
     enum:
       value1:
@@ -1048,6 +1067,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_QDC_DVAL:
     enum:
       value1:
@@ -1059,6 +1079,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_QDC_ICM:
     enum:
       value1:
@@ -1073,6 +1094,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_QDC_PHS:
     enum:
       value1:
@@ -1084,6 +1106,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_QDC_PBLS:
     enum:
       value1:
@@ -1095,6 +1118,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_QDC_PALS:
     enum:
       value1:
@@ -1106,6 +1130,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLG_PCLKS:
     enum:
       value1:
@@ -1117,6 +1142,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLG_DIRS:
     enum:
       value1:
@@ -1128,6 +1154,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLG_CNTS:
     enum:
       value1:
@@ -1139,6 +1166,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLG_ERRS:
     enum:
       value1:
@@ -1150,6 +1178,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLG_INDXS:
     enum:
       value1:
@@ -1161,6 +1190,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLG_MSTS:
     enum:
       value1:
@@ -1172,6 +1202,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLG_HIES:
     enum:
       value1:
@@ -1183,6 +1214,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLG_WHES:
     enum:
       value1:
@@ -1194,6 +1226,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLG_CHES:
     enum:
       value1:
@@ -1205,6 +1238,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLGE_PCLSEL:
     enum:
       value1:
@@ -1216,6 +1250,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLGE_DIRSEL:
     enum:
       value1:
@@ -1227,6 +1262,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLGE_CNTSEL:
     enum:
       value1:
@@ -1238,6 +1274,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLGE_ERRSEL:
     enum:
       value1:
@@ -1249,6 +1286,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLGE_INDSEL:
     enum:
       value1:
@@ -1260,6 +1298,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLGE_MSTSEL:
     enum:
       value1:
@@ -1271,6 +1310,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLGE_HIESEL:
     enum:
       value1:
@@ -1282,6 +1322,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLGE_WHESEL:
     enum:
       value1:
@@ -1293,6 +1334,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLGE_CHESEL:
     enum:
       value1:
@@ -1304,6 +1346,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLGE_EPCLK:
     enum:
       value1:
@@ -1315,6 +1358,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLGE_EDIR:
     enum:
       value1:
@@ -1326,6 +1370,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLGE_ECNT:
     enum:
       value1:
@@ -1337,6 +1382,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLGE_EERR:
     enum:
       value1:
@@ -1348,6 +1394,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLGE_EINDX:
     enum:
       value1:
@@ -1359,6 +1406,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLGE_EMST:
     enum:
       value1:
@@ -1370,6 +1418,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLGE_EHIE:
     enum:
       value1:
@@ -1381,6 +1430,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLGE_EWHE:
     enum:
       value1:
@@ -1392,6 +1442,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   POSIF0_PFLGE_ECHE:
     enum:
       value1:
@@ -1403,3 +1454,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

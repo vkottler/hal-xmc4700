@@ -1338,6 +1338,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   CCU80_CC80_INS_LPF2M:
     enum:
@@ -1356,6 +1357,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INS_LPF1M:
     enum:
       value1:
@@ -1373,6 +1375,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INS_LPF0M:
     enum:
       value1:
@@ -1390,6 +1393,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INS_EV2LM:
     enum:
       value1:
@@ -1401,6 +1405,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INS_EV1LM:
     enum:
       value1:
@@ -1412,6 +1417,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INS_EV0LM:
     enum:
       value1:
@@ -1423,6 +1429,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INS_EV2EM:
     enum:
       value1:
@@ -1440,6 +1447,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INS_EV1EM:
     enum:
       value1:
@@ -1457,6 +1465,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INS_EV0EM:
     enum:
       value1:
@@ -1474,6 +1483,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INS_EV2IS:
     enum:
       value1:
@@ -1527,6 +1537,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INS_EV1IS:
     enum:
       value1:
@@ -1580,6 +1591,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INS_EV0IS:
     enum:
       value1:
@@ -1633,6 +1645,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_CMC_TCE:
     enum:
       value1:
@@ -1644,6 +1657,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_CMC_TS:
     enum:
       value1:
@@ -1655,6 +1669,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_CMC_OFS:
     enum:
       value1:
@@ -1667,6 +1682,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_CMC_CNTS:
     enum:
       value1:
@@ -1684,6 +1700,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_CMC_UDS:
     enum:
       value1:
@@ -1701,6 +1718,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_CMC_GATES:
     enum:
       value1:
@@ -1718,6 +1736,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_CMC_CAP1S:
     enum:
       value1:
@@ -1735,6 +1754,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_CMC_CAP0S:
     enum:
       value1:
@@ -1752,6 +1772,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_CMC_ENDS:
     enum:
       value1:
@@ -1769,6 +1790,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_CMC_STRTS:
     enum:
       value1:
@@ -1786,6 +1808,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TCST_DTR2:
     enum:
       value1:
@@ -1797,6 +1820,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TCST_DTR1:
     enum:
       value1:
@@ -1808,6 +1832,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TCST_CDIR:
     enum:
       value1:
@@ -1819,6 +1844,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TCST_TRB:
     enum:
       value1:
@@ -1830,6 +1856,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_STOS:
     enum:
       value1:
@@ -1847,6 +1874,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_EME:
     enum:
       value1:
@@ -1864,6 +1892,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_MCME2:
     enum:
       value1:
@@ -1875,6 +1904,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_MCME1:
     enum:
       value1:
@@ -1886,6 +1916,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_EMT:
     enum:
       value1:
@@ -1897,6 +1928,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_EMS:
     enum:
       value1:
@@ -1910,6 +1942,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_TRPSW:
     enum:
       value1:
@@ -1922,6 +1955,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_TRPSE:
     enum:
       value1:
@@ -1933,6 +1967,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_TRAPE0:
     enum:
       value1:
@@ -1944,6 +1979,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_FPE:
     enum:
       value1:
@@ -1955,6 +1991,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_DIM:
     enum:
       value1:
@@ -1966,6 +2003,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_DITHE:
     enum:
       value1:
@@ -1983,6 +2021,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_CCS:
     enum:
       value1:
@@ -1996,6 +2035,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_SCE:
     enum:
       value1:
@@ -2016,6 +2056,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_STRM:
     enum:
       value1:
@@ -2027,6 +2068,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_ENDM:
     enum:
       value1:
@@ -2041,6 +2083,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_TLS:
     enum:
       value1:
@@ -2052,6 +2095,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_CAPC:
     enum:
       value1:
@@ -2071,6 +2115,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_ECM:
     enum:
       value1:
@@ -2086,6 +2131,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_CMOD:
     enum:
       value1:
@@ -2097,6 +2143,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_TSSM:
     enum:
       value1:
@@ -2108,6 +2155,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_TC_TCM:
     enum:
       value1:
@@ -2119,6 +2167,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_PSL_PSL22:
     enum:
       value1:
@@ -2130,6 +2179,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_PSL_PSL21:
     enum:
       value1:
@@ -2141,6 +2191,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_PSL_PSL12:
     enum:
       value1:
@@ -2152,6 +2203,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_PSL_PSL11:
     enum:
       value1:
@@ -2163,6 +2215,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_CHC_OCS4:
     enum:
       value1:
@@ -2174,6 +2227,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_CHC_OCS3:
     enum:
       value1:
@@ -2185,6 +2239,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_CHC_OCS2:
     enum:
       value1:
@@ -2196,6 +2251,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_CHC_OCS1:
     enum:
       value1:
@@ -2207,6 +2263,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_CHC_ASE:
     enum:
       value1:
@@ -2218,6 +2275,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_DTC_DTCC:
     enum:
       value1:
@@ -2235,6 +2293,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_DTC_DCEN4:
     enum:
       value1:
@@ -2246,6 +2305,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_DTC_DCEN3:
     enum:
       value1:
@@ -2257,6 +2317,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_DTC_DCEN2:
     enum:
       value1:
@@ -2268,6 +2329,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_DTC_DCEN1:
     enum:
       value1:
@@ -2279,6 +2341,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_DTC_DTE2:
     enum:
       value1:
@@ -2290,6 +2353,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_DTC_DTE1:
     enum:
       value1:
@@ -2301,6 +2365,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_C0V_FFL:
     enum:
       value1:
@@ -2312,6 +2377,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_C1V_FFL:
     enum:
       value1:
@@ -2323,6 +2389,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_C2V_FFL:
     enum:
       value1:
@@ -2334,6 +2401,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_C3V_FFL:
     enum:
       value1:
@@ -2345,6 +2413,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INTS_E2AS:
     enum:
       value1:
@@ -2356,6 +2425,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INTS_E1AS:
     enum:
       value1:
@@ -2367,6 +2437,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INTS_E0AS:
     enum:
       value1:
@@ -2378,6 +2449,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INTS_CMD2S:
     enum:
       value1:
@@ -2389,6 +2461,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INTS_CMU2S:
     enum:
       value1:
@@ -2400,6 +2473,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INTS_CMD1S:
     enum:
       value1:
@@ -2411,6 +2485,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INTS_CMU1S:
     enum:
       value1:
@@ -2422,6 +2497,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INTS_OMDS:
     enum:
       value1:
@@ -2433,6 +2509,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INTS_PMUS:
     enum:
       value1:
@@ -2444,6 +2521,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INTE_E2AE:
     enum:
       value1:
@@ -2455,6 +2533,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INTE_E1AE:
     enum:
       value1:
@@ -2466,6 +2545,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INTE_E0AE:
     enum:
       value1:
@@ -2477,6 +2557,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INTE_CMD2E:
     enum:
       value1:
@@ -2488,6 +2569,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INTE_CMU2E:
     enum:
       value1:
@@ -2499,6 +2581,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INTE_CMD1E:
     enum:
       value1:
@@ -2510,6 +2593,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INTE_CMU1E:
     enum:
       value1:
@@ -2521,6 +2605,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INTE_OME:
     enum:
       value1:
@@ -2532,6 +2617,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_INTE_PME:
     enum:
       value1:
@@ -2543,6 +2629,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_SRS_E2SR:
     enum:
       value1:
@@ -2560,6 +2647,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_SRS_E1SR:
     enum:
       value1:
@@ -2577,6 +2665,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_SRS_E0SR:
     enum:
       value1:
@@ -2594,6 +2683,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_SRS_CM2SR:
     enum:
       value1:
@@ -2611,6 +2701,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_SRS_CM1SR:
     enum:
       value1:
@@ -2628,6 +2719,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_SRS_POSR:
     enum:
       value1:
@@ -2645,6 +2737,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_STC_STM:
     enum:
       value1:
@@ -2659,6 +2752,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_STC_CSE:
     enum:
       value1:
@@ -2670,6 +2764,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_ECRD0_LCV:
     enum:
       value1:
@@ -2681,6 +2776,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_ECRD0_FFL:
     enum:
       value1:
@@ -2692,6 +2788,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_ECRD0_VPTR:
     enum:
       value1:
@@ -2709,6 +2806,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_ECRD0_SPTR:
     enum:
       value1:
@@ -2726,6 +2824,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_ECRD1_LCV:
     enum:
       value1:
@@ -2737,6 +2836,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_ECRD1_FFL:
     enum:
       value1:
@@ -2748,6 +2848,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_ECRD1_VPTR:
     enum:
       value1:
@@ -2765,6 +2866,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_CC80_ECRD1_SPTR:
     enum:
       value1:
@@ -2782,3 +2884,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

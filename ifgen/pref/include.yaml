@@ -37,6 +37,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   PREF_PCON_DBYP:
     enum:
@@ -49,6 +50,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PREF_PCON_IINV:
     enum:
       value1:
@@ -60,6 +62,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   PREF_PCON_IBYP:
     enum:
       value1:
@@ -71,3 +74,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

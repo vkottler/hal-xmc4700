@@ -526,6 +526,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   SCU_PARITY_PEEN_PEENSD1:
     enum:
@@ -538,6 +539,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEEN_PEENSD0:
     enum:
       value1:
@@ -549,6 +551,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEEN_PEENETH0RX:
     enum:
       value1:
@@ -560,6 +563,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEEN_PEENETH0TX:
     enum:
       value1:
@@ -571,6 +575,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEEN_PEENUSB:
     enum:
       value1:
@@ -582,6 +587,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEEN_PEENPPRF:
     enum:
       value1:
@@ -593,6 +599,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEEN_PEENMC:
     enum:
       value1:
@@ -604,6 +611,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEEN_PEENU2:
     enum:
       value1:
@@ -615,6 +623,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEEN_PEENU1:
     enum:
       value1:
@@ -626,6 +635,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEEN_PEENU0:
     enum:
       value1:
@@ -637,6 +647,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEEN_PEENDS2:
     enum:
       value1:
@@ -648,6 +659,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEEN_PEENDS1:
     enum:
       value1:
@@ -659,6 +671,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEEN_PEENPS:
     enum:
       value1:
@@ -670,6 +683,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_MCHKCON_SELSD1:
     enum:
       value1:
@@ -681,6 +695,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_MCHKCON_SELSD0:
     enum:
       value1:
@@ -692,6 +707,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_MCHKCON_SELETH0RX:
     enum:
       value1:
@@ -703,6 +719,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_MCHKCON_SELETH0TX:
     enum:
       value1:
@@ -714,6 +731,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_MCHKCON_SELUSB:
     enum:
       value1:
@@ -725,6 +743,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_MCHKCON_PPRFDRA:
     enum:
       value1:
@@ -736,6 +755,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_MCHKCON_MCANDRA:
     enum:
       value1:
@@ -747,6 +767,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_MCHKCON_USIC2DRA:
     enum:
       value1:
@@ -758,6 +779,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_MCHKCON_USIC1DRA:
     enum:
       value1:
@@ -769,6 +791,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_MCHKCON_USIC0DRA:
     enum:
       value1:
@@ -780,6 +803,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_MCHKCON_SELDS2:
     enum:
       value1:
@@ -791,6 +815,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_MCHKCON_SELDS1:
     enum:
       value1:
@@ -802,6 +827,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_MCHKCON_SELPS:
     enum:
       value1:
@@ -813,6 +839,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PETE_PETESD1:
     enum:
       value1:
@@ -824,6 +851,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PETE_PETESD0:
     enum:
       value1:
@@ -835,6 +863,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PETE_PETEETH0RX:
     enum:
       value1:
@@ -846,6 +875,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PETE_PETEETH0TX:
     enum:
       value1:
@@ -857,6 +887,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PETE_PETEUSB:
     enum:
       value1:
@@ -868,6 +899,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PETE_PETEPPRF:
     enum:
       value1:
@@ -879,6 +911,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PETE_PETEMC:
     enum:
       value1:
@@ -890,6 +923,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PETE_PETEU2:
     enum:
       value1:
@@ -901,6 +935,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PETE_PETEU1:
     enum:
       value1:
@@ -912,6 +947,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PETE_PETEU0:
     enum:
       value1:
@@ -923,6 +959,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PETE_PETEDS2:
     enum:
       value1:
@@ -934,6 +971,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PETE_PETEDS1:
     enum:
       value1:
@@ -945,6 +983,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PETE_PETEPS:
     enum:
       value1:
@@ -956,6 +995,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PERSTEN_RSEN:
     enum:
       value1:
@@ -967,6 +1007,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEFLAG_PESD1:
     enum:
       value1:
@@ -978,6 +1019,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEFLAG_PESD0:
     enum:
       value1:
@@ -989,6 +1031,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEFLAG_PEETH0RX:
     enum:
       value1:
@@ -1000,6 +1043,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEFLAG_PEETH0TX:
     enum:
       value1:
@@ -1011,6 +1055,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEFLAG_PEUSB:
     enum:
       value1:
@@ -1022,6 +1067,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEFLAG_PEFPPRF:
     enum:
       value1:
@@ -1033,6 +1079,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEFLAG_PEFMC:
     enum:
       value1:
@@ -1044,6 +1091,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEFLAG_PEFU2:
     enum:
       value1:
@@ -1055,6 +1103,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEFLAG_PEFU1:
     enum:
       value1:
@@ -1066,6 +1115,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEFLAG_PEFU0:
     enum:
       value1:
@@ -1077,6 +1127,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEFLAG_PEFDS2:
     enum:
       value1:
@@ -1088,6 +1139,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEFLAG_PEFDS1:
     enum:
       value1:
@@ -1099,6 +1151,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PEFLAG_PEFPS:
     enum:
       value1:
@@ -1110,6 +1163,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PMTSR_MTSD1:
     enum:
       value1:
@@ -1121,6 +1175,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PMTSR_MTSD0:
     enum:
       value1:
@@ -1132,6 +1187,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PMTSR_MTETH0RX:
     enum:
       value1:
@@ -1143,6 +1199,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PMTSR_MTETH0TX:
     enum:
       value1:
@@ -1154,6 +1211,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PMTSR_MTUSB:
     enum:
       value1:
@@ -1165,6 +1223,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PMTSR_MTEPPRF:
     enum:
       value1:
@@ -1176,6 +1235,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PMTSR_MTEMC:
     enum:
       value1:
@@ -1187,6 +1247,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PMTSR_MTEU2:
     enum:
       value1:
@@ -1198,6 +1259,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PMTSR_MTEU1:
     enum:
       value1:
@@ -1209,6 +1271,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PMTSR_MTEU0:
     enum:
       value1:
@@ -1220,6 +1283,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PMTSR_MTENDS2:
     enum:
       value1:
@@ -1231,6 +1295,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PMTSR_MTENDS1:
     enum:
       value1:
@@ -1242,6 +1307,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_PARITY_PMTSR_MTENPS:
     enum:
       value1:
@@ -1253,3 +1319,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

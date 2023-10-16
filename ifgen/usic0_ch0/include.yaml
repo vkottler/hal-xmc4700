@@ -2903,6 +2903,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   USIC0_CH0_CCFG_TB:
     enum:
@@ -2915,6 +2916,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_CCFG_RB:
     enum:
       value1:
@@ -2926,6 +2928,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_CCFG_IIS:
     enum:
       value1:
@@ -2937,6 +2940,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_CCFG_IIC:
     enum:
       value1:
@@ -2948,6 +2952,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_CCFG_ASC:
     enum:
       value1:
@@ -2959,6 +2964,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_CCFG_SSC:
     enum:
       value1:
@@ -2970,6 +2976,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_KSCFG_BPSUM:
     enum:
       value1:
@@ -2981,6 +2988,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_KSCFG_BPNOM:
     enum:
       value1:
@@ -2992,6 +3000,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_KSCFG_NOMCFG:
     enum:
       value1:
@@ -3009,6 +3018,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_KSCFG_BPMODEN:
     enum:
       value1:
@@ -3020,6 +3030,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_KSCFG_MODEN:
     enum:
       value1:
@@ -3036,6 +3047,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_FDR_DM:
     enum:
       value1:
@@ -3053,6 +3065,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_BRG_SCLKCFG:
     enum:
       value1:
@@ -3070,6 +3083,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_BRG_MCLKCFG:
     enum:
       value1:
@@ -3081,6 +3095,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_BRG_SCLKOSEL:
     enum:
       value1:
@@ -3094,6 +3109,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_BRG_CTQSEL:
     enum:
       value1:
@@ -3111,6 +3127,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_BRG_PPPEN:
     enum:
       value1:
@@ -3122,6 +3139,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_BRG_TMEN:
     enum:
       value1:
@@ -3138,6 +3156,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_BRG_CLKSEL:
     enum:
       value1:
@@ -3154,6 +3173,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_INPR_TSINP:
     enum:
       value1:
@@ -3177,6 +3197,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX0CR_DXS:
     enum:
       value1:
@@ -3188,6 +3209,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX0CR_CM:
     enum:
       value1:
@@ -3205,6 +3227,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX0CR_SFSEL:
     enum:
       value1:
@@ -3216,6 +3239,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX0CR_DPOL:
     enum:
       value1:
@@ -3227,6 +3251,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX0CR_DSEN:
     enum:
       value1:
@@ -3240,6 +3265,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX0CR_DFEN:
     enum:
       value1:
@@ -3251,6 +3277,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX0CR_INSW:
     enum:
       value1:
@@ -3265,6 +3292,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX0CR_DSEL:
     enum:
       value1:
@@ -3294,6 +3322,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX1CR_DXS:
     enum:
       value1:
@@ -3305,6 +3334,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX1CR_CM:
     enum:
       value1:
@@ -3322,6 +3352,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX1CR_SFSEL:
     enum:
       value1:
@@ -3333,6 +3364,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX1CR_DPOL:
     enum:
       value1:
@@ -3344,6 +3376,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX1CR_DSEN:
     enum:
       value1:
@@ -3357,6 +3390,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX1CR_DFEN:
     enum:
       value1:
@@ -3368,6 +3402,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX1CR_INSW:
     enum:
       value1:
@@ -3382,6 +3417,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX1CR_DCEN:
     enum:
       value1:
@@ -3395,6 +3431,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX1CR_DSEL:
     enum:
       value1:
@@ -3424,6 +3461,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX2CR_DXS:
     enum:
       value1:
@@ -3435,6 +3473,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX2CR_CM:
     enum:
       value1:
@@ -3452,6 +3491,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX2CR_SFSEL:
     enum:
       value1:
@@ -3463,6 +3503,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX2CR_DPOL:
     enum:
       value1:
@@ -3474,6 +3515,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX2CR_DSEN:
     enum:
       value1:
@@ -3487,6 +3529,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX2CR_DFEN:
     enum:
       value1:
@@ -3498,6 +3541,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX2CR_INSW:
     enum:
       value1:
@@ -3512,6 +3556,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX2CR_DSEL:
     enum:
       value1:
@@ -3541,6 +3586,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX3CR_DXS:
     enum:
       value1:
@@ -3552,6 +3598,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX3CR_CM:
     enum:
       value1:
@@ -3569,6 +3616,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX3CR_SFSEL:
     enum:
       value1:
@@ -3580,6 +3628,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX3CR_DPOL:
     enum:
       value1:
@@ -3591,6 +3640,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX3CR_DSEN:
     enum:
       value1:
@@ -3604,6 +3654,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX3CR_DFEN:
     enum:
       value1:
@@ -3615,6 +3666,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX3CR_INSW:
     enum:
       value1:
@@ -3629,6 +3681,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX3CR_DSEL:
     enum:
       value1:
@@ -3658,6 +3711,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX4CR_DXS:
     enum:
       value1:
@@ -3669,6 +3723,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX4CR_CM:
     enum:
       value1:
@@ -3686,6 +3741,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX4CR_SFSEL:
     enum:
       value1:
@@ -3697,6 +3753,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX4CR_DPOL:
     enum:
       value1:
@@ -3708,6 +3765,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX4CR_DSEN:
     enum:
       value1:
@@ -3721,6 +3779,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX4CR_DFEN:
     enum:
       value1:
@@ -3732,6 +3791,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX4CR_INSW:
     enum:
       value1:
@@ -3746,6 +3806,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX4CR_DSEL:
     enum:
       value1:
@@ -3775,6 +3836,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX5CR_DXS:
     enum:
       value1:
@@ -3786,6 +3848,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX5CR_CM:
     enum:
       value1:
@@ -3803,6 +3866,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX5CR_SFSEL:
     enum:
       value1:
@@ -3814,6 +3878,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX5CR_DPOL:
     enum:
       value1:
@@ -3825,6 +3890,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX5CR_DSEN:
     enum:
       value1:
@@ -3838,6 +3904,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX5CR_DFEN:
     enum:
       value1:
@@ -3849,6 +3916,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX5CR_INSW:
     enum:
       value1:
@@ -3863,6 +3931,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_DX5CR_DSEL:
     enum:
       value1:
@@ -3892,6 +3961,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_SCTR_WLE:
     enum:
       value1:
@@ -3911,6 +3981,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_SCTR_TRM:
     enum:
       value1:
@@ -3934,6 +4005,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_SCTR_DOCFG:
     enum:
       value1:
@@ -3945,6 +4017,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_SCTR_HPCDIR:
     enum:
       value1:
@@ -3958,6 +4031,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_SCTR_DSM:
     enum:
       value1:
@@ -3975,6 +4049,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_SCTR_PDL:
     enum:
       value1:
@@ -3986,6 +4061,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_SCTR_SDIR:
     enum:
       value1:
@@ -3999,6 +4075,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TCSR_TE:
     enum:
       value1:
@@ -4013,6 +4090,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TCSR_TVC:
     enum:
       value1:
@@ -4026,6 +4104,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TCSR_TV:
     enum:
       value1:
@@ -4040,6 +4119,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TCSR_TSOF:
     enum:
       value1:
@@ -4053,6 +4133,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TCSR_WA:
     enum:
       value1:
@@ -4066,6 +4147,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TCSR_TDVTR:
     enum:
       value1:
@@ -4077,6 +4159,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TCSR_TDEN:
     enum:
       value1:
@@ -4098,6 +4181,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TCSR_TDSSM:
     enum:
       value1:
@@ -4114,6 +4198,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TCSR_TDV:
     enum:
       value1:
@@ -4127,6 +4212,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TCSR_EOF:
     enum:
       value1:
@@ -4139,6 +4225,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TCSR_SOF:
     enum:
       value1:
@@ -4152,6 +4239,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TCSR_HPCMD:
     enum:
       value1:
@@ -4163,6 +4251,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TCSR_WAMD:
     enum:
       value1:
@@ -4174,6 +4263,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TCSR_FLEMD:
     enum:
       value1:
@@ -4185,6 +4275,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TCSR_SELMD:
     enum:
       value1:
@@ -4196,6 +4287,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TCSR_WLEMD:
     enum:
       value1:
@@ -4207,6 +4299,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_ASCMode_MCLK:
     enum:
       value1:
@@ -4218,6 +4311,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_ASCMode_TSTEN:
     enum:
       value1:
@@ -4229,6 +4323,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_ASCMode_RSTEN:
     enum:
       value1:
@@ -4240,6 +4335,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_ASCMode_PL:
     enum:
       value1:
@@ -4257,6 +4353,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_ASCMode_FFIEN:
     enum:
       value1:
@@ -4268,6 +4365,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_ASCMode_FEIEN:
     enum:
       value1:
@@ -4279,6 +4377,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_ASCMode_RNIEN:
     enum:
       value1:
@@ -4290,6 +4389,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_ASCMode_CDEN:
     enum:
       value1:
@@ -4303,6 +4403,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_ASCMode_SBIEN:
     enum:
       value1:
@@ -4314,6 +4415,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_ASCMode_IDM:
     enum:
       value1:
@@ -4329,6 +4431,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_ASCMode_STPB:
     enum:
       value1:
@@ -4340,6 +4443,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_ASCMode_SMD:
     enum:
       value1:
@@ -4353,6 +4457,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_SSCMode_MCLK:
     enum:
       value1:
@@ -4364,6 +4469,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_SSCMode_SLPHSEL:
     enum:
       value1:
@@ -4379,6 +4485,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_SSCMode_TIWEN:
     enum:
       value1:
@@ -4391,6 +4498,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_SSCMode_SELO:
     enum:
       value1:
@@ -4403,6 +4511,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_SSCMode_DX2TIEN:
     enum:
       value1:
@@ -4414,6 +4523,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_SSCMode_MSLSIEN:
     enum:
       value1:
@@ -4427,6 +4537,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_SSCMode_PARIEN:
     enum:
       value1:
@@ -4440,6 +4551,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_SSCMode_CTQSEL1:
     enum:
       value1:
@@ -4457,6 +4569,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_SSCMode_FEM:
     enum:
       value1:
@@ -4473,6 +4586,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_SSCMode_SELINV:
     enum:
       value1:
@@ -4486,6 +4600,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_SSCMode_SELCTR:
     enum:
       value1:
@@ -4497,6 +4612,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_SSCMode_MSLSEN:
     enum:
       value1:
@@ -4510,6 +4626,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_IICMode_MCLK:
     enum:
       value1:
@@ -4521,6 +4638,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_IICMode_ACKIEN:
     enum:
       value1:
@@ -4532,6 +4650,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_IICMode_SACKDIS:
     enum:
       value1:
@@ -4545,6 +4664,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_IICMode_ERRIEN:
     enum:
       value1:
@@ -4556,6 +4676,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_IICMode_SRRIEN:
     enum:
       value1:
@@ -4567,6 +4688,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_IICMode_ARLIEN:
     enum:
       value1:
@@ -4578,6 +4700,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_IICMode_NACKIEN:
     enum:
       value1:
@@ -4589,6 +4712,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_IICMode_PCRIEN:
     enum:
       value1:
@@ -4600,6 +4724,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_IICMode_RSCRIEN:
     enum:
       value1:
@@ -4611,6 +4736,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_IICMode_SCRIEN:
     enum:
       value1:
@@ -4622,6 +4748,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_IICMode_STIM:
     enum:
       value1:
@@ -4635,6 +4762,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_IICMode_ACK00:
     enum:
       value1:
@@ -4646,6 +4774,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_IISMode_MCLK:
     enum:
       value1:
@@ -4657,6 +4786,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_IISMode_DX2TIEN:
     enum:
       value1:
@@ -4668,6 +4798,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_IISMode_ENDIEN:
     enum:
       value1:
@@ -4679,6 +4810,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_IISMode_WAREIEN:
     enum:
       value1:
@@ -4691,6 +4823,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_IISMode_WAFEIEN:
     enum:
       value1:
@@ -4704,6 +4837,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_IISMode_SELINV:
     enum:
       value1:
@@ -4715,6 +4849,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_IISMode_DTEN:
     enum:
       value1:
@@ -4727,6 +4862,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PCR_IISMode_WAGEN:
     enum:
       value1:
@@ -4743,6 +4879,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_CCR_BRGIEN:
     enum:
       value1:
@@ -4756,6 +4893,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_CCR_AIEN:
     enum:
       value1:
@@ -4769,6 +4907,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_CCR_RIEN:
     enum:
       value1:
@@ -4781,6 +4920,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_CCR_TBIEN:
     enum:
       value1:
@@ -4794,6 +4934,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_CCR_TSIEN:
     enum:
       value1:
@@ -4807,6 +4948,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_CCR_DLIEN:
     enum:
       value1:
@@ -4819,6 +4961,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_CCR_RSIEN:
     enum:
       value1:
@@ -4831,6 +4974,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_CCR_PM:
     enum:
       value1:
@@ -4847,6 +4991,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_CCR_HPCEN:
     enum:
       value1:
@@ -4864,6 +5009,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_CCR_MODE:
     enum:
       value1:
@@ -4885,6 +5031,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_BRGIF:
     enum:
       value1:
@@ -4896,6 +5043,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_AIF:
     enum:
       value1:
@@ -4907,6 +5055,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_RIF:
     enum:
       value1:
@@ -4918,6 +5067,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_TBIF:
     enum:
       value1:
@@ -4929,6 +5079,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_TSIF:
     enum:
       value1:
@@ -4940,6 +5091,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_DLIF:
     enum:
       value1:
@@ -4951,6 +5103,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_RSIF:
     enum:
       value1:
@@ -4962,6 +5115,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_ASCMode_BRGIF:
     enum:
       value1:
@@ -4973,6 +5127,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_ASCMode_AIF:
     enum:
       value1:
@@ -4984,6 +5139,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_ASCMode_RIF:
     enum:
       value1:
@@ -4995,6 +5151,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_ASCMode_TBIF:
     enum:
       value1:
@@ -5006,6 +5163,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_ASCMode_TSIF:
     enum:
       value1:
@@ -5017,6 +5175,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_ASCMode_DLIF:
     enum:
       value1:
@@ -5028,6 +5187,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_ASCMode_RSIF:
     enum:
       value1:
@@ -5039,6 +5199,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_ASCMode_BUSY:
     enum:
       value1:
@@ -5050,6 +5211,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_ASCMode_TFF:
     enum:
       value1:
@@ -5061,6 +5223,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_ASCMode_RFF:
     enum:
       value1:
@@ -5072,6 +5235,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_ASCMode_FER1:
     enum:
       value1:
@@ -5083,6 +5247,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_ASCMode_FER0:
     enum:
       value1:
@@ -5094,6 +5259,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_ASCMode_RNS:
     enum:
       value1:
@@ -5105,6 +5271,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_ASCMode_COL:
     enum:
       value1:
@@ -5117,6 +5284,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_ASCMode_SBD:
     enum:
       value1:
@@ -5128,6 +5296,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_ASCMode_RXIDLE:
     enum:
       value1:
@@ -5139,6 +5308,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_ASCMode_TXIDLE:
     enum:
       value1:
@@ -5151,6 +5321,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_SSCMode_BRGIF:
     enum:
       value1:
@@ -5162,6 +5333,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_SSCMode_AIF:
     enum:
       value1:
@@ -5173,6 +5345,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_SSCMode_RIF:
     enum:
       value1:
@@ -5184,6 +5357,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_SSCMode_TBIF:
     enum:
       value1:
@@ -5195,6 +5369,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_SSCMode_TSIF:
     enum:
       value1:
@@ -5206,6 +5381,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_SSCMode_DLIF:
     enum:
       value1:
@@ -5217,6 +5393,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_SSCMode_RSIF:
     enum:
       value1:
@@ -5228,6 +5405,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_SSCMode_PARERR:
     enum:
       value1:
@@ -5239,6 +5417,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_SSCMode_DX2TEV:
     enum:
       value1:
@@ -5250,6 +5429,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_SSCMode_MSLSEV:
     enum:
       value1:
@@ -5261,6 +5441,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_SSCMode_DX2S:
     enum:
       value1:
@@ -5272,6 +5453,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_SSCMode_MSLS:
     enum:
       value1:
@@ -5283,6 +5465,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IICMode_BRGIF:
     enum:
       value1:
@@ -5294,6 +5477,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IICMode_AIF:
     enum:
       value1:
@@ -5305,6 +5489,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IICMode_RIF:
     enum:
       value1:
@@ -5316,6 +5501,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IICMode_TBIF:
     enum:
       value1:
@@ -5327,6 +5513,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IICMode_TSIF:
     enum:
       value1:
@@ -5338,6 +5525,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IICMode_DLIF:
     enum:
       value1:
@@ -5349,6 +5537,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IICMode_RSIF:
     enum:
       value1:
@@ -5360,6 +5549,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IICMode_ACK:
     enum:
       value1:
@@ -5371,6 +5561,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IICMode_ERR:
     enum:
       value1:
@@ -5382,6 +5573,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IICMode_SRR:
     enum:
       value1:
@@ -5393,6 +5585,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IICMode_ARL:
     enum:
       value1:
@@ -5404,6 +5597,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IICMode_NACK:
     enum:
       value1:
@@ -5415,6 +5609,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IICMode_PCR:
     enum:
       value1:
@@ -5426,6 +5621,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IICMode_RSCR:
     enum:
       value1:
@@ -5437,6 +5633,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IICMode_SCR:
     enum:
       value1:
@@ -5448,6 +5645,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IICMode_WTDF:
     enum:
       value1:
@@ -5459,6 +5657,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IICMode_SLSEL:
     enum:
       value1:
@@ -5470,6 +5669,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IISMode_BRGIF:
     enum:
       value1:
@@ -5481,6 +5681,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IISMode_AIF:
     enum:
       value1:
@@ -5492,6 +5693,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IISMode_RIF:
     enum:
       value1:
@@ -5503,6 +5705,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IISMode_TBIF:
     enum:
       value1:
@@ -5514,6 +5717,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IISMode_TSIF:
     enum:
       value1:
@@ -5525,6 +5729,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IISMode_DLIF:
     enum:
       value1:
@@ -5536,6 +5741,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IISMode_RSIF:
     enum:
       value1:
@@ -5547,6 +5753,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IISMode_END:
     enum:
       value1:
@@ -5559,6 +5766,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IISMode_WARE:
     enum:
       value1:
@@ -5570,6 +5778,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IISMode_WAFE:
     enum:
       value1:
@@ -5581,6 +5790,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IISMode_DX2TEV:
     enum:
       value1:
@@ -5592,6 +5802,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IISMode_DX2S:
     enum:
       value1:
@@ -5603,6 +5814,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSR_IISMode_WA:
     enum:
       value1:
@@ -5614,6 +5826,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSCR_CBRGIF:
     enum:
       value1:
@@ -5625,6 +5838,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSCR_CAIF:
     enum:
       value1:
@@ -5636,6 +5850,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSCR_CRIF:
     enum:
       value1:
@@ -5647,6 +5862,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSCR_CTBIF:
     enum:
       value1:
@@ -5658,6 +5874,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSCR_CTSIF:
     enum:
       value1:
@@ -5669,6 +5886,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSCR_CDLIF:
     enum:
       value1:
@@ -5680,6 +5898,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSCR_CRSIF:
     enum:
       value1:
@@ -5691,6 +5910,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSCR_CST9:
     enum:
       value1:
@@ -5702,6 +5922,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSCR_CST8:
     enum:
       value1:
@@ -5713,6 +5934,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSCR_CST7:
     enum:
       value1:
@@ -5724,6 +5946,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSCR_CST6:
     enum:
       value1:
@@ -5735,6 +5958,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSCR_CST5:
     enum:
       value1:
@@ -5746,6 +5970,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSCR_CST4:
     enum:
       value1:
@@ -5757,6 +5982,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSCR_CST3:
     enum:
       value1:
@@ -5768,6 +5994,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSCR_CST2:
     enum:
       value1:
@@ -5779,6 +6006,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSCR_CST1:
     enum:
       value1:
@@ -5790,6 +6018,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_PSCR_CST0:
     enum:
       value1:
@@ -5801,6 +6030,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBUF01SR_DS1:
     enum:
       value1:
@@ -5814,6 +6044,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBUF01SR_RDV11:
     enum:
       value1:
@@ -5826,6 +6057,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBUF01SR_RDV10:
     enum:
       value1:
@@ -5838,6 +6070,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBUF01SR_PERR1:
     enum:
       value1:
@@ -5853,6 +6086,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBUF01SR_SOF1:
     enum:
       value1:
@@ -5865,6 +6099,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBUF01SR_WLEN1:
     enum:
       value1:
@@ -5876,6 +6111,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBUF01SR_DS0:
     enum:
       value1:
@@ -5889,6 +6125,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBUF01SR_RDV01:
     enum:
       value1:
@@ -5901,6 +6138,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBUF01SR_RDV00:
     enum:
       value1:
@@ -5913,6 +6151,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBUF01SR_PERR0:
     enum:
       value1:
@@ -5928,6 +6167,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBUF01SR_SOF0:
     enum:
       value1:
@@ -5940,6 +6180,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_FMR_SIO5:
     enum:
       value1:
@@ -5951,6 +6192,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_FMR_SIO4:
     enum:
       value1:
@@ -5962,6 +6204,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_FMR_SIO3:
     enum:
       value1:
@@ -5973,6 +6216,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_FMR_SIO2:
     enum:
       value1:
@@ -5984,6 +6228,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_FMR_SIO1:
     enum:
       value1:
@@ -5995,6 +6240,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_FMR_SIO0:
     enum:
       value1:
@@ -6006,6 +6252,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_FMR_CRDV1:
     enum:
       value1:
@@ -6017,6 +6264,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_FMR_CRDV0:
     enum:
       value1:
@@ -6028,6 +6276,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_FMR_ATVC:
     enum:
       value1:
@@ -6039,6 +6288,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_FMR_MTDV:
     enum:
       value1:
@@ -6053,6 +6303,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_BYPCR_BDV:
     enum:
       value1:
@@ -6064,6 +6315,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_BYPCR_BPRIO:
     enum:
       value1:
@@ -6077,6 +6329,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_BYPCR_BDVTR:
     enum:
       value1:
@@ -6088,6 +6341,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_BYPCR_BDEN:
     enum:
       value1:
@@ -6108,6 +6362,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_BYPCR_BDSSM:
     enum:
       value1:
@@ -6121,6 +6376,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TBCTR_TBERIEN:
     enum:
       value1:
@@ -6132,6 +6388,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TBCTR_STBIEN:
     enum:
       value1:
@@ -6143,6 +6400,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TBCTR_LOF:
     enum:
       value1:
@@ -6157,6 +6415,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TBCTR_SIZE:
     enum:
       value1:
@@ -6184,6 +6443,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TBCTR_ATBINP:
     enum:
       value1:
@@ -6207,6 +6467,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TBCTR_STBINP:
     enum:
       value1:
@@ -6230,6 +6491,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TBCTR_STBTEN:
     enum:
       value1:
@@ -6243,6 +6505,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TBCTR_STBTM:
     enum:
       value1:
@@ -6258,6 +6521,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBCTR_RBERIEN:
     enum:
       value1:
@@ -6269,6 +6533,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBCTR_SRBIEN:
     enum:
       value1:
@@ -6280,6 +6545,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBCTR_ARBIEN:
     enum:
       value1:
@@ -6291,6 +6557,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBCTR_LOF:
     enum:
       value1:
@@ -6305,6 +6572,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBCTR_RNM:
     enum:
       value1:
@@ -6321,6 +6589,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBCTR_SIZE:
     enum:
       value1:
@@ -6348,6 +6617,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBCTR_RCIM:
     enum:
       value1:
@@ -6365,6 +6635,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBCTR_ARBINP:
     enum:
       value1:
@@ -6388,6 +6659,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBCTR_SRBINP:
     enum:
       value1:
@@ -6411,6 +6683,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBCTR_SRBTEN:
     enum:
       value1:
@@ -6424,6 +6697,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_RBCTR_SRBTM:
     enum:
       value1:
@@ -6439,6 +6713,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSR_STBT:
     enum:
       value1:
@@ -6451,6 +6726,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSR_TBUS:
     enum:
       value1:
@@ -6464,6 +6740,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSR_TFULL:
     enum:
       value1:
@@ -6475,6 +6752,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSR_TEMPTY:
     enum:
       value1:
@@ -6486,6 +6764,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSR_TBERI:
     enum:
       value1:
@@ -6497,6 +6776,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSR_STBI:
     enum:
       value1:
@@ -6508,6 +6788,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSR_SRBT:
     enum:
       value1:
@@ -6519,6 +6800,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSR_RBUS:
     enum:
       value1:
@@ -6531,6 +6813,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSR_RFULL:
     enum:
       value1:
@@ -6542,6 +6825,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSR_REMPTY:
     enum:
       value1:
@@ -6553,6 +6837,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSR_ARBI:
     enum:
       value1:
@@ -6564,6 +6849,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSR_RBERI:
     enum:
       value1:
@@ -6575,6 +6861,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSR_SRBI:
     enum:
       value1:
@@ -6586,6 +6873,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSCR_FLUSHTB:
     enum:
       value1:
@@ -6599,6 +6887,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSCR_FLUSHRB:
     enum:
       value1:
@@ -6612,6 +6901,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSCR_CBDV:
     enum:
       value1:
@@ -6623,6 +6913,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSCR_CTBERI:
     enum:
       value1:
@@ -6634,6 +6925,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSCR_CSTBI:
     enum:
       value1:
@@ -6645,6 +6937,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSCR_CARBI:
     enum:
       value1:
@@ -6656,6 +6949,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSCR_CRBERI:
     enum:
       value1:
@@ -6667,6 +6961,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USIC0_CH0_TRBSCR_CSRBI:
     enum:
       value1:
@@ -6678,3 +6973,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

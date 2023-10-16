@@ -1,14 +1,14 @@
 # =====================================
 # generator=datazen
 # version=3.1.4
-# hash=d432aade6177a302e350d7cd1c88e4d7
+# hash=83313c16f9e0f0a4d2223b5408eb7db9
 # =====================================
 ---
 project:
   name: hal-xmc4700
 
   github: {owner: &self vkottler}
-  version: {major: 0, minor: 3, patch: 0}
+  version: {major: 0, minor: 4, patch: 0}
 variants:
   clang:
     suffix: &clang_version "-15"

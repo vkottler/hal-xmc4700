@@ -75,6 +75,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   SCU_OSC_OSCHPCTRL_MODE:
     enum:
@@ -95,6 +96,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_OSC_OSCHPCTRL_GAINSEL:
     enum:
       value1:
@@ -116,6 +118,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_OSC_OSCHPCTRL_SHBY:
     enum:
       value1:
@@ -127,6 +130,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SCU_OSC_OSCHPCTRL_X1DEN:
     enum:
       value1:
@@ -138,3 +142,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

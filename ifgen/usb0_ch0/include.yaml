@@ -367,6 +367,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   USB0_CH0_HCCHAR_ChEna:
     enum:
@@ -382,6 +383,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_CH0_HCCHAR_OddFrm:
     enum:
       value1:
@@ -393,6 +395,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_CH0_HCCHAR_MC_EC:
     enum:
       value2:
@@ -407,6 +410,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_CH0_HCCHAR_EPType:
     enum:
       value1:
@@ -424,6 +428,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_CH0_HCCHAR_EPDir:
     enum:
       value1:
@@ -435,6 +440,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_CH0_HCTSIZ_BUFFERMODE_Pid:
     enum:
       value1:
@@ -452,6 +458,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_CH0_HCTSIZ_SCATGATHER_Pid:
     enum:
       value1:
@@ -469,6 +476,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_CH0_HCDMA_SCATGATHER_CTD:
     enum:
       value1:
@@ -480,3 +488,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

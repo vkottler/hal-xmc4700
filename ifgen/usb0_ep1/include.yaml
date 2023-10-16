@@ -650,6 +650,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   USB0_EP1_DIEPCTL_ISOCONT_EPType:
     enum:
@@ -668,6 +669,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_EP1_DIEPCTL_ISOCONT_NAKSts:
     enum:
       value1:
@@ -680,6 +682,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_EP1_DIEPCTL_ISOCONT_EO_FrNum:
     enum:
       value1:
@@ -691,6 +694,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_EP1_DIEPCTL_INTBULK_EPType:
     enum:
       value1:
@@ -708,6 +712,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_EP1_DIEPCTL_INTBULK_NAKSts:
     enum:
       value1:
@@ -720,6 +725,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_EP1_DIEPCTL_INTBULK_DPID:
     enum:
       value1:
@@ -731,6 +737,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_EP1_DTXFSTS_INEPTxFSpcAvail:
     enum:
       value1:
@@ -745,6 +752,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
     underlying: uint16_t
   USB0_EP1_DOEPCTL_ISOCONT_EPType:
     enum:
@@ -763,6 +771,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_EP1_DOEPCTL_ISOCONT_NAKSts:
     enum:
       value1:
@@ -775,6 +784,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_EP1_DOEPCTL_ISOCONT_EO_FrNum:
     enum:
       value1:
@@ -786,6 +796,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_EP1_DOEPCTL_INTBULK_EPType:
     enum:
       value1:
@@ -803,6 +814,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_EP1_DOEPCTL_INTBULK_NAKSts:
     enum:
       value1:
@@ -815,6 +827,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_EP1_DOEPCTL_INTBULK_DPID:
     enum:
       value1:
@@ -826,6 +839,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   USB0_EP1_DOEPTSIZ_ISO_RxDPID:
     enum:
       value1:
@@ -843,3 +857,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

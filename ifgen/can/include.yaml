@@ -219,6 +219,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   CAN_ID_MOD_TYPE:
     enum:
@@ -228,6 +229,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_LIST_EMPTY:
     enum:
       value1:
@@ -239,6 +241,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_PANCTR_RBUSY:
     enum:
       value1:
@@ -251,6 +254,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_PANCTR_BUSY:
     enum:
       value1:
@@ -262,6 +266,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MCR_CLKSEL:
     enum:
       value1:
@@ -282,3 +287,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

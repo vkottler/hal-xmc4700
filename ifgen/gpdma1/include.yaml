@@ -1267,6 +1267,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   GPDMA1_MASKTFR_CH3:
     enum:
@@ -1279,6 +1280,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKTFR_CH2:
     enum:
       value1:
@@ -1290,6 +1292,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKTFR_CH1:
     enum:
       value1:
@@ -1301,6 +1304,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKTFR_CH0:
     enum:
       value1:
@@ -1312,6 +1316,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKTFR_WE_CH3:
     enum:
       value1:
@@ -1323,6 +1328,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKTFR_WE_CH2:
     enum:
       value1:
@@ -1334,6 +1340,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKTFR_WE_CH1:
     enum:
       value1:
@@ -1345,6 +1352,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKTFR_WE_CH0:
     enum:
       value1:
@@ -1356,6 +1364,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKBLOCK_CH3:
     enum:
       value1:
@@ -1367,6 +1376,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKBLOCK_CH2:
     enum:
       value1:
@@ -1378,6 +1388,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKBLOCK_CH1:
     enum:
       value1:
@@ -1389,6 +1400,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKBLOCK_CH0:
     enum:
       value1:
@@ -1400,6 +1412,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKBLOCK_WE_CH3:
     enum:
       value1:
@@ -1411,6 +1424,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKBLOCK_WE_CH2:
     enum:
       value1:
@@ -1422,6 +1436,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKBLOCK_WE_CH1:
     enum:
       value1:
@@ -1433,6 +1448,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKBLOCK_WE_CH0:
     enum:
       value1:
@@ -1444,6 +1460,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKSRCTRAN_CH3:
     enum:
       value1:
@@ -1455,6 +1472,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKSRCTRAN_CH2:
     enum:
       value1:
@@ -1466,6 +1484,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKSRCTRAN_CH1:
     enum:
       value1:
@@ -1477,6 +1496,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKSRCTRAN_CH0:
     enum:
       value1:
@@ -1488,6 +1508,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKSRCTRAN_WE_CH3:
     enum:
       value1:
@@ -1499,6 +1520,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKSRCTRAN_WE_CH2:
     enum:
       value1:
@@ -1510,6 +1532,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKSRCTRAN_WE_CH1:
     enum:
       value1:
@@ -1521,6 +1544,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKSRCTRAN_WE_CH0:
     enum:
       value1:
@@ -1532,6 +1556,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKDSTTRAN_CH3:
     enum:
       value1:
@@ -1543,6 +1568,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKDSTTRAN_CH2:
     enum:
       value1:
@@ -1554,6 +1580,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKDSTTRAN_CH1:
     enum:
       value1:
@@ -1565,6 +1592,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKDSTTRAN_CH0:
     enum:
       value1:
@@ -1576,6 +1604,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKDSTTRAN_WE_CH3:
     enum:
       value1:
@@ -1587,6 +1616,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKDSTTRAN_WE_CH2:
     enum:
       value1:
@@ -1598,6 +1628,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKDSTTRAN_WE_CH1:
     enum:
       value1:
@@ -1609,6 +1640,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKDSTTRAN_WE_CH0:
     enum:
       value1:
@@ -1620,6 +1652,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKERR_CH3:
     enum:
       value1:
@@ -1631,6 +1664,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKERR_CH2:
     enum:
       value1:
@@ -1642,6 +1676,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKERR_CH1:
     enum:
       value1:
@@ -1653,6 +1688,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKERR_CH0:
     enum:
       value1:
@@ -1664,6 +1700,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKERR_WE_CH3:
     enum:
       value1:
@@ -1675,6 +1712,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKERR_WE_CH2:
     enum:
       value1:
@@ -1686,6 +1724,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKERR_WE_CH1:
     enum:
       value1:
@@ -1697,6 +1736,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_MASKERR_WE_CH0:
     enum:
       value1:
@@ -1708,6 +1748,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CLEARTFR_CH3:
     enum:
       value1:
@@ -1719,6 +1760,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CLEARTFR_CH2:
     enum:
       value1:
@@ -1730,6 +1772,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CLEARTFR_CH1:
     enum:
       value1:
@@ -1741,6 +1784,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CLEARTFR_CH0:
     enum:
       value1:
@@ -1752,6 +1796,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CLEARBLOCK_CH3:
     enum:
       value1:
@@ -1763,6 +1808,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CLEARBLOCK_CH2:
     enum:
       value1:
@@ -1774,6 +1820,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CLEARBLOCK_CH1:
     enum:
       value1:
@@ -1785,6 +1832,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CLEARBLOCK_CH0:
     enum:
       value1:
@@ -1796,6 +1844,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CLEARSRCTRAN_CH3:
     enum:
       value1:
@@ -1807,6 +1856,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CLEARSRCTRAN_CH2:
     enum:
       value1:
@@ -1818,6 +1868,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CLEARSRCTRAN_CH1:
     enum:
       value1:
@@ -1829,6 +1880,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CLEARSRCTRAN_CH0:
     enum:
       value1:
@@ -1840,6 +1892,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CLEARDSTTRAN_CH3:
     enum:
       value1:
@@ -1851,6 +1904,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CLEARDSTTRAN_CH2:
     enum:
       value1:
@@ -1862,6 +1916,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CLEARDSTTRAN_CH1:
     enum:
       value1:
@@ -1873,6 +1928,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CLEARDSTTRAN_CH0:
     enum:
       value1:
@@ -1884,6 +1940,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CLEARERR_CH3:
     enum:
       value1:
@@ -1895,6 +1952,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CLEARERR_CH2:
     enum:
       value1:
@@ -1906,6 +1964,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CLEARERR_CH1:
     enum:
       value1:
@@ -1917,6 +1976,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CLEARERR_CH0:
     enum:
       value1:
@@ -1928,6 +1988,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_REQSRCREG_WE_CH3:
     enum:
       value1:
@@ -1939,6 +2000,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_REQSRCREG_WE_CH2:
     enum:
       value1:
@@ -1950,6 +2012,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_REQSRCREG_WE_CH1:
     enum:
       value1:
@@ -1961,6 +2024,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_REQSRCREG_WE_CH0:
     enum:
       value1:
@@ -1972,6 +2036,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_REQDSTREG_WE_CH3:
     enum:
       value1:
@@ -1983,6 +2048,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_REQDSTREG_WE_CH2:
     enum:
       value1:
@@ -1994,6 +2060,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_REQDSTREG_WE_CH1:
     enum:
       value1:
@@ -2005,6 +2072,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_REQDSTREG_WE_CH0:
     enum:
       value1:
@@ -2016,6 +2084,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_SGLREQSRCREG_WE_CH3:
     enum:
       value1:
@@ -2027,6 +2096,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_SGLREQSRCREG_WE_CH2:
     enum:
       value1:
@@ -2038,6 +2108,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_SGLREQSRCREG_WE_CH1:
     enum:
       value1:
@@ -2049,6 +2120,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_SGLREQSRCREG_WE_CH0:
     enum:
       value1:
@@ -2060,6 +2132,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_SGLREQDSTREG_WE_CH3:
     enum:
       value1:
@@ -2071,6 +2144,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_SGLREQDSTREG_WE_CH2:
     enum:
       value1:
@@ -2082,6 +2156,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_SGLREQDSTREG_WE_CH1:
     enum:
       value1:
@@ -2093,6 +2168,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_SGLREQDSTREG_WE_CH0:
     enum:
       value1:
@@ -2104,6 +2180,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_LSTSRCREG_CH3:
     enum:
       value1:
@@ -2115,6 +2192,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_LSTSRCREG_CH2:
     enum:
       value1:
@@ -2126,6 +2204,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_LSTSRCREG_CH1:
     enum:
       value1:
@@ -2137,6 +2216,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_LSTSRCREG_CH0:
     enum:
       value1:
@@ -2148,6 +2228,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_LSTSRCREG_WE_CH3:
     enum:
       value1:
@@ -2159,6 +2240,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_LSTSRCREG_WE_CH2:
     enum:
       value1:
@@ -2170,6 +2252,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_LSTSRCREG_WE_CH1:
     enum:
       value1:
@@ -2181,6 +2264,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_LSTSRCREG_WE_CH0:
     enum:
       value1:
@@ -2192,6 +2276,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_LSTDSTREG_CH3:
     enum:
       value1:
@@ -2203,6 +2288,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_LSTDSTREG_CH2:
     enum:
       value1:
@@ -2214,6 +2300,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_LSTDSTREG_CH1:
     enum:
       value1:
@@ -2225,6 +2312,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_LSTDSTREG_CH0:
     enum:
       value1:
@@ -2236,6 +2324,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_LSTDSTREG_WE_CH3:
     enum:
       value1:
@@ -2247,6 +2336,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_LSTDSTREG_WE_CH2:
     enum:
       value1:
@@ -2258,6 +2348,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_LSTDSTREG_WE_CH1:
     enum:
       value1:
@@ -2269,6 +2360,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_LSTDSTREG_WE_CH0:
     enum:
       value1:
@@ -2280,6 +2372,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_DMACFGREG_DMA_EN:
     enum:
       value1:
@@ -2291,6 +2384,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   GPDMA1_CHENREG_CH:
     enum:
       value1:
@@ -2302,3 +2396,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

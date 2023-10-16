@@ -1392,6 +1392,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   SDMMC_TRANSFER_MODE_BLOCK_COUNT_EN:
     enum:
@@ -1404,6 +1405,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_TRANSFER_MODE_ACMD_EN:
     enum:
       value1:
@@ -1415,6 +1417,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_TRANSFER_MODE_TX_DIR_SELECT:
     enum:
       value1:
@@ -1426,6 +1429,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_TRANSFER_MODE_MULTI_BLOCK_SELECT:
     enum:
       value1:
@@ -1437,6 +1441,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_TRANSFER_MODE_CMD_COMP_ATA:
     enum:
       value1:
@@ -1448,6 +1453,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_COMMAND_RESP_TYPE_SELECT:
     enum:
       value1:
@@ -1465,6 +1471,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_COMMAND_CMD_CRC_CHECK_EN:
     enum:
       value1:
@@ -1476,6 +1483,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_COMMAND_CMD_IND_CHECK_EN:
     enum:
       value1:
@@ -1487,6 +1495,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_COMMAND_DATA_PRESENT_SELECT:
     enum:
       value1:
@@ -1498,6 +1507,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_COMMAND_CMD_TYPE:
     enum:
       value1:
@@ -1515,6 +1525,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_PRESENT_STATE_COMMAND_INHIBIT_DAT:
     enum:
       value1:
@@ -1526,6 +1537,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_PRESENT_STATE_DAT_LINE_ACTIVE:
     enum:
       value1:
@@ -1537,6 +1549,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_PRESENT_STATE_WRITE_TRANSFER_ACTIVE:
     enum:
       value1:
@@ -1548,6 +1561,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_PRESENT_STATE_READ_TRANSFER_ACTIVE:
     enum:
       value1:
@@ -1559,6 +1573,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_PRESENT_STATE_BUFFER_WRITE_ENABLE:
     enum:
       value1:
@@ -1570,6 +1585,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_PRESENT_STATE_BUFFER_READ_ENABLE:
     enum:
       value1:
@@ -1581,6 +1597,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_PRESENT_STATE_CARD_INSERTED:
     enum:
       value1:
@@ -1592,6 +1609,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_PRESENT_STATE_CARD_STATE_STABLE:
     enum:
       value1:
@@ -1603,6 +1621,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_PRESENT_STATE_CARD_DETECT_PIN_LEVEL:
     enum:
       value1:
@@ -1614,6 +1633,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_PRESENT_STATE_WRITE_PROTECT_PIN_LEVEL:
     enum:
       value1:
@@ -1625,6 +1645,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_HOST_CTRL_LED_CTRL:
     enum:
       value1:
@@ -1636,6 +1657,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_HOST_CTRL_DATA_TX_WIDTH:
     enum:
       value1:
@@ -1647,6 +1669,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_HOST_CTRL_HIGH_SPEED_EN:
     enum:
       value1:
@@ -1658,6 +1681,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_HOST_CTRL_SD_8BIT_MODE:
     enum:
       value1:
@@ -1669,6 +1693,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_HOST_CTRL_CARD_DETECT_TEST_LEVEL:
     enum:
       value1:
@@ -1680,6 +1705,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_HOST_CTRL_CARD_DET_SIGNAL_DETECT:
     enum:
       value1:
@@ -1691,6 +1717,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_POWER_CTRL_SD_BUS_POWER:
     enum:
       value1:
@@ -1702,6 +1729,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_POWER_CTRL_SD_BUS_VOLTAGE_SEL:
     enum:
       value1:
@@ -1710,6 +1738,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_BLOCK_GAP_CTRL_STOP_AT_BLOCK_GAP:
     enum:
       value1:
@@ -1721,6 +1750,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_BLOCK_GAP_CTRL_CONTINUE_REQ:
     enum:
       value1:
@@ -1732,6 +1762,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_BLOCK_GAP_CTRL_READ_WAIT_CTRL:
     enum:
       value1:
@@ -1743,6 +1774,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_WAKEUP_CTRL_WAKEUP_EVENT_EN_INT:
     enum:
       value1:
@@ -1754,6 +1786,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_WAKEUP_CTRL_WAKEUP_EVENT_EN_INS:
     enum:
       value1:
@@ -1765,6 +1798,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_WAKEUP_CTRL_WAKEUP_EVENT_EN_REM:
     enum:
       value1:
@@ -1776,6 +1810,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CLOCK_CTRL_INTERNAL_CLOCK_EN:
     enum:
       value1:
@@ -1787,6 +1822,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CLOCK_CTRL_INTERNAL_CLOCK_STABLE:
     enum:
       value1:
@@ -1798,6 +1834,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CLOCK_CTRL_SDCLOCK_EN:
     enum:
       value1:
@@ -1809,6 +1846,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CLOCK_CTRL_SDCLK_FREQ_SEL:
     enum:
       value1:
@@ -1841,6 +1879,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_TIMEOUT_CTRL_DAT_TIMEOUT_CNT_VAL:
     enum:
       value1:
@@ -1855,6 +1894,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_SW_RESET_SW_RST_CMD_LINE:
     enum:
       value1:
@@ -1866,6 +1906,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_SW_RESET_SW_RST_DAT_LINE:
     enum:
       value1:
@@ -1877,6 +1918,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_INT_STATUS_NORM_CMD_COMPLETE:
     enum:
       value1:
@@ -1888,6 +1930,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_INT_STATUS_NORM_TX_COMPLETE:
     enum:
       value1:
@@ -1899,6 +1942,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_INT_STATUS_NORM_BLOCK_GAP_EVENT:
     enum:
       value1:
@@ -1910,6 +1954,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_INT_STATUS_NORM_BUFF_WRITE_READY:
     enum:
       value1:
@@ -1921,6 +1966,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_INT_STATUS_NORM_BUFF_READ_READY:
     enum:
       value1:
@@ -1932,6 +1978,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_INT_STATUS_NORM_CARD_INS:
     enum:
       value1:
@@ -1943,6 +1990,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_INT_STATUS_NORM_CARD_REMOVAL:
     enum:
       value1:
@@ -1954,6 +2002,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_INT_STATUS_NORM_CARD_INT:
     enum:
       value1:
@@ -1965,6 +2014,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_INT_STATUS_NORM_ERR_INT:
     enum:
       value1:
@@ -1976,6 +2026,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_INT_STATUS_ERR_CMD_TIMEOUT_ERR:
     enum:
       value1:
@@ -1987,6 +2038,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_INT_STATUS_ERR_CMD_CRC_ERR:
     enum:
       value1:
@@ -1998,6 +2050,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_INT_STATUS_ERR_CMD_END_BIT_ERR:
     enum:
       value1:
@@ -2009,6 +2062,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_INT_STATUS_ERR_CMD_IND_ERR:
     enum:
       value1:
@@ -2020,6 +2074,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_INT_STATUS_ERR_DATA_TIMEOUT_ERR:
     enum:
       value1:
@@ -2031,6 +2086,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_INT_STATUS_ERR_DATA_CRC_ERR:
     enum:
       value1:
@@ -2042,6 +2098,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_INT_STATUS_ERR_DATA_END_BIT_ERR:
     enum:
       value1:
@@ -2053,6 +2110,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_INT_STATUS_ERR_CURRENT_LIMIT_ERR:
     enum:
       value1:
@@ -2064,6 +2122,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_INT_STATUS_ERR_ACMD_ERR:
     enum:
       value1:
@@ -2075,6 +2134,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_INT_STATUS_ERR_CEATA_ERR:
     enum:
       value1:
@@ -2086,6 +2146,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN:
     enum:
       value1:
@@ -2097,6 +2158,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_STATUS_NORM_TX_COMPLETE_EN:
     enum:
       value1:
@@ -2108,6 +2170,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_STATUS_NORM_BLOCK_GAP_EVENT_EN:
     enum:
       value1:
@@ -2119,6 +2182,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_STATUS_NORM_BUFF_WRITE_READY_EN:
     enum:
       value1:
@@ -2130,6 +2194,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_STATUS_NORM_BUFF_READ_READY_EN:
     enum:
       value1:
@@ -2141,6 +2206,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_STATUS_NORM_CARD_INS_EN:
     enum:
       value1:
@@ -2152,6 +2218,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_STATUS_NORM_CARD_REMOVAL_EN:
     enum:
       value1:
@@ -2163,6 +2230,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_STATUS_NORM_CARD_INT_EN:
     enum:
       value1:
@@ -2174,6 +2242,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_STATUS_ERR_CMD_TIMEOUT_ERR_EN:
     enum:
       value1:
@@ -2185,6 +2254,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_STATUS_ERR_CMD_CRC_ERR_EN:
     enum:
       value1:
@@ -2196,6 +2266,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_STATUS_ERR_CMD_END_BIT_ERR_EN:
     enum:
       value1:
@@ -2207,6 +2278,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_STATUS_ERR_CMD_IND_ERR_EN:
     enum:
       value1:
@@ -2218,6 +2290,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_STATUS_ERR_DATA_TIMEOUT_ERR_EN:
     enum:
       value1:
@@ -2229,6 +2302,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_STATUS_ERR_DATA_CRC_ERR_EN:
     enum:
       value1:
@@ -2240,6 +2314,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_STATUS_ERR_DATA_END_BIT_ERR_EN:
     enum:
       value1:
@@ -2251,6 +2326,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_STATUS_ERR_CURRENT_LIMIT_ERR_EN:
     enum:
       value1:
@@ -2262,6 +2338,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_STATUS_ERR_ACMD_ERR_EN:
     enum:
       value1:
@@ -2273,6 +2350,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_STATUS_ERR_TARGET_RESP_ERR_EN:
     enum:
       value1:
@@ -2284,6 +2362,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_STATUS_ERR_CEATA_ERR_EN:
     enum:
       value1:
@@ -2295,6 +2374,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_SIGNAL_NORM_CMD_COMPLETE_EN:
     enum:
       value1:
@@ -2306,6 +2386,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_SIGNAL_NORM_TX_COMPLETE_EN:
     enum:
       value1:
@@ -2317,6 +2398,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_SIGNAL_NORM_BLOCK_GAP_EVENT_EN:
     enum:
       value1:
@@ -2328,6 +2410,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_SIGNAL_NORM_BUFF_WRITE_READY_EN:
     enum:
       value1:
@@ -2339,6 +2422,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_SIGNAL_NORM_BUFF_READ_READY_EN:
     enum:
       value1:
@@ -2350,6 +2434,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_SIGNAL_NORM_CARD_INS_EN:
     enum:
       value1:
@@ -2361,6 +2446,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_SIGNAL_NORM_CARD_REMOVAL_EN:
     enum:
       value1:
@@ -2372,6 +2458,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_SIGNAL_NORM_CARD_INT_EN:
     enum:
       value1:
@@ -2383,6 +2470,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_SIGNAL_ERR_CMD_TIMEOUT_ERR_EN:
     enum:
       value1:
@@ -2394,6 +2482,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_SIGNAL_ERR_CMD_CRC_ERR_EN:
     enum:
       value1:
@@ -2405,6 +2494,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_SIGNAL_ERR_CMD_END_BIT_ERR_EN:
     enum:
       value1:
@@ -2416,6 +2506,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_SIGNAL_ERR_CMD_IND_ERR_EN:
     enum:
       value1:
@@ -2427,6 +2518,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_SIGNAL_ERR_DATA_TIMEOUT_ERR_EN:
     enum:
       value1:
@@ -2438,6 +2530,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_SIGNAL_ERR_DATA_CRC_ERR_EN:
     enum:
       value1:
@@ -2449,6 +2542,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_SIGNAL_ERR_DATA_END_BIT_ERR_EN:
     enum:
       value1:
@@ -2460,6 +2554,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_SIGNAL_ERR_CURRENT_LIMIT_ERR_EN:
     enum:
       value1:
@@ -2471,6 +2566,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_SIGNAL_ERR_ACMD_ERR_EN:
     enum:
       value1:
@@ -2482,6 +2578,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_SIGNAL_ERR_TARGET_RESP_ERR_EN:
     enum:
       value1:
@@ -2493,6 +2590,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_EN_INT_SIGNAL_ERR_CEATA_ERR_EN:
     enum:
       value1:
@@ -2504,6 +2602,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_ACMD_ERR_STATUS_ACMD12_NOT_EXEC_ERR:
     enum:
       value1:
@@ -2515,6 +2614,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_ACMD_ERR_STATUS_ACMD_TIMEOUT_ERR:
     enum:
       value1:
@@ -2526,6 +2626,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_ACMD_ERR_STATUS_ACMD_CRC_ERR:
     enum:
       value1:
@@ -2537,6 +2638,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_ACMD_ERR_STATUS_ACMD_END_BIT_ERR:
     enum:
       value1:
@@ -2548,6 +2650,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_ACMD_ERR_STATUS_ACMD_IND_ERR:
     enum:
       value1:
@@ -2559,6 +2662,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_ACMD_ERR_STATUS_CMD_NOT_ISSUED_BY_ACMD12_ERR:
     enum:
       value1:
@@ -2570,6 +2674,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_SLOT_TYPE:
     enum:
       value1:
@@ -2578,6 +2683,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_ASYNC_INT_SUPPORT:
     enum:
       value1:
@@ -2586,6 +2692,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_SYSBUS_64_SUPPORT:
     enum:
       value1:
@@ -2594,6 +2701,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_VOLTAGE_SUPPORT_1_8V:
     enum:
       value1:
@@ -2602,6 +2710,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_VOLTAGE_SUPPORT_3V:
     enum:
       value1:
@@ -2610,6 +2719,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_VOLTAGE_SUPPORT_3_3V:
     enum:
       value1:
@@ -2618,6 +2728,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_SUSPEND_RESUME_SUPPORT:
     enum:
       value1:
@@ -2626,6 +2737,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_SDMA_SUPPORT:
     enum:
       value1:
@@ -2634,6 +2746,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_HIGH_SPEED_SUPPORT:
     enum:
       value1:
@@ -2642,6 +2755,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_ADMA2_SUPPORT:
     enum:
       value1:
@@ -2650,6 +2764,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_EXT_MEDIA_BUS_SUPPORT:
     enum:
       value1:
@@ -2658,6 +2773,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_MAX_BLOCK_LENGTH:
     enum:
       value1:
@@ -2666,6 +2782,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_BASE_SD_CLOCK_FREQ:
     enum:
       value1:
@@ -2674,6 +2791,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_TIMEOUT_CLOCK_UNIT:
     enum:
       value1:
@@ -2682,6 +2800,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_TIMEOUT_CLOCK_FREQ:
     enum:
       value1:
@@ -2690,6 +2809,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_HI_CLK_MULT:
     enum:
       value1:
@@ -2698,6 +2818,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_HI_RE_TUNING_MODES:
     enum:
       value1:
@@ -2706,6 +2827,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_HI_USE_TUNING_SDR50:
     enum:
       value1:
@@ -2714,6 +2836,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_HI_TIM_CNT_RETUNE:
     enum:
       value1:
@@ -2722,6 +2845,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_HI_DRV_D_SUPPORT:
     enum:
       value1:
@@ -2730,6 +2854,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_HI_DRV_C_SUPPORT:
     enum:
       value1:
@@ -2738,6 +2863,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_HI_DRV_A_SUPPORT:
     enum:
       value1:
@@ -2746,6 +2872,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_HI_DDR50_SUPPORT:
     enum:
       value1:
@@ -2754,6 +2881,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_HI_SDR104_SUPPORT:
     enum:
       value1:
@@ -2762,6 +2890,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CAPABILITIES_HI_SDR50_SUPPORT:
     enum:
       value1:
@@ -2770,6 +2899,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_NOT_EXEC:
     enum:
       value1:
@@ -2781,6 +2911,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_TIMEOUT_ERR:
     enum:
       value1:
@@ -2792,6 +2923,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_CRC_ERR:
     enum:
       value1:
@@ -2803,6 +2935,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_END_BIT_ERR:
     enum:
       value1:
@@ -2814,6 +2947,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_IND_ERR:
     enum:
       value1:
@@ -2825,6 +2959,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_CMD_NOT_ISSUED_ACMD12_ERR:
     enum:
       value1:
@@ -2836,6 +2971,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_FORCE_EVENT_ERR_STATUS_FE_CMD_TIMEOUT_ERR:
     enum:
       value1:
@@ -2847,6 +2983,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_FORCE_EVENT_ERR_STATUS_FE_CMD_CRC_ERR:
     enum:
       value1:
@@ -2858,6 +2995,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_FORCE_EVENT_ERR_STATUS_FE_CMD_END_BIT_ERR:
     enum:
       value1:
@@ -2869,6 +3007,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_FORCE_EVENT_ERR_STATUS_FE_CMD_IND_ERR:
     enum:
       value1:
@@ -2880,6 +3019,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_FORCE_EVENT_ERR_STATUS_FE_DATA_TIMEOUT_ERR:
     enum:
       value1:
@@ -2891,6 +3031,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_FORCE_EVENT_ERR_STATUS_FE_DATA_CRC_ERR:
     enum:
       value1:
@@ -2902,6 +3043,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_FORCE_EVENT_ERR_STATUS_FE_DATA_END_BIT_ERR:
     enum:
       value1:
@@ -2913,6 +3055,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_FORCE_EVENT_ERR_STATUS_FE_CURRENT_LIMIT_ERR:
     enum:
       value1:
@@ -2924,6 +3067,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_FORCE_EVENT_ERR_STATUS_FE_ACMD12_ERR:
     enum:
       value1:
@@ -2935,6 +3079,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_FORCE_EVENT_ERR_STATUS_FE_TARGET_RESPONSE_ERR:
     enum:
       value1:
@@ -2946,6 +3091,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_FORCE_EVENT_ERR_STATUS_FE_CEATA_ERR:
     enum:
       value1:
@@ -2957,6 +3103,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_DEBUG_SEL_DEBUG_SEL:
     enum:
       value1:
@@ -2969,6 +3116,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_SLOT_INT_STATUS_SLOT_INT_STATUS:
     enum:
       value1:
@@ -2977,3 +3125,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

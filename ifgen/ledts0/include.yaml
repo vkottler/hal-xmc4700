@@ -455,6 +455,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   LEDTS0_GLOBCTL_ITP_EN:
     enum:
@@ -467,6 +468,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_GLOBCTL_ITF_EN:
     enum:
       value1:
@@ -478,6 +480,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_GLOBCTL_ITS_EN:
     enum:
       value1:
@@ -489,6 +492,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_GLOBCTL_FENVAL:
     enum:
       value1:
@@ -500,6 +504,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_GLOBCTL_MASKVAL:
     enum:
       value1:
@@ -514,6 +519,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_GLOBCTL_SUSCFG:
     enum:
       value1:
@@ -525,6 +531,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_GLOBCTL_ENSYNC:
     enum:
       value1:
@@ -536,6 +543,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_GLOBCTL_CMTR:
     enum:
       value1:
@@ -548,6 +556,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_FNCTL_NR_LEDCOL:
     enum:
       value1:
@@ -577,6 +586,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_FNCTL_COLLEV:
     enum:
       value1:
@@ -588,6 +598,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_FNCTL_NR_TSIN:
     enum:
       value1:
@@ -599,6 +610,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_FNCTL_TSCTRSAT:
     enum:
       value1:
@@ -612,6 +624,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_FNCTL_TSCTRR:
     enum:
       value1:
@@ -624,6 +637,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_FNCTL_TSOEXT:
     enum:
       value1:
@@ -641,6 +655,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_FNCTL_TSCCMP:
     enum:
       value1:
@@ -652,6 +667,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_FNCTL_ACCCNT:
     enum:
       value1:
@@ -666,6 +682,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_FNCTL_EPULL:
     enum:
       value1:
@@ -680,6 +697,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_FNCTL_PADTSW:
     enum:
       value1:
@@ -693,6 +711,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_FNCTL_PADT:
     enum:
       value1:
@@ -704,6 +723,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_EVFR_CTPF:
     enum:
       value1:
@@ -715,6 +735,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_EVFR_CTFF:
     enum:
       value1:
@@ -726,6 +747,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_EVFR_CTSF:
     enum:
       value1:
@@ -737,6 +759,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   LEDTS0_EVFR_TSCTROVF:
     enum:
       value1:
@@ -748,3 +771,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

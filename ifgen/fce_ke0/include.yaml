@@ -200,6 +200,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   FCE_KE0_CFG_XSEL:
     enum:
@@ -212,6 +213,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FCE_KE0_CFG_REFOUT:
     enum:
       value1:
@@ -223,6 +225,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FCE_KE0_CFG_REFIN:
     enum:
       value1:
@@ -234,6 +237,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FCE_KE0_CFG_ALR:
     enum:
       value1:
@@ -246,6 +250,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FCE_KE0_CFG_CCE:
     enum:
       value1:
@@ -257,6 +262,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FCE_KE0_CFG_BEI:
     enum:
       value1:
@@ -268,6 +274,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FCE_KE0_CFG_LEI:
     enum:
       value1:
@@ -279,6 +286,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FCE_KE0_CFG_CEI:
     enum:
       value1:
@@ -290,6 +298,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   FCE_KE0_CFG_CMI:
     enum:
       value1:
@@ -301,3 +310,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

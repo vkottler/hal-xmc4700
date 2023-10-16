@@ -44,6 +44,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   SDMMC_CON_SDMMC_CON_CDSVAL:
     enum:
@@ -56,6 +57,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CON_SDMMC_CON_CDSEL:
     enum:
       value1:
@@ -67,6 +69,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CON_SDMMC_CON_WPSVAL:
     enum:
       value1:
@@ -78,6 +81,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   SDMMC_CON_SDMMC_CON_WPSEL:
     enum:
       value1:
@@ -89,3 +93,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

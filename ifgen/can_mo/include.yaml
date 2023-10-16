@@ -533,6 +533,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
   can_mo:
     description: Controller Area Networks
     instances:
@@ -549,6 +550,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   CAN_MO_MOFCR_RMM:
     enum:
@@ -565,6 +567,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOFCR_FRREN:
     enum:
       value1:
@@ -578,6 +581,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOFCR_OVIE:
     enum:
       value1:
@@ -589,6 +593,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOFCR_TXIE:
     enum:
       value1:
@@ -600,6 +605,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOFCR_RXIE:
     enum:
       value1:
@@ -611,6 +617,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOFCR_DATC:
     enum:
       value1:
@@ -624,6 +631,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOFCR_DLCC:
     enum:
       value1:
@@ -636,6 +644,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOFCR_IDC:
     enum:
       value1:
@@ -648,6 +657,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOFCR_GDFS:
     enum:
       value1:
@@ -660,6 +670,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOFCR_RXTOE:
     enum:
       value1:
@@ -671,6 +682,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOFCR_MMC:
     enum:
       value1:
@@ -691,6 +703,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOIPR_TXINP:
     enum:
       value1:
@@ -708,6 +721,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOIPR_RXINP:
     enum:
       value1:
@@ -725,6 +739,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOAMR_MIDE:
     enum:
       value1:
@@ -737,6 +752,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOAR_PRI:
     enum:
       value2:
@@ -758,6 +774,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOAR_IDE:
     enum:
       value1:
@@ -769,6 +786,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOSTAT_DIR:
     enum:
       value1:
@@ -785,6 +803,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOSTAT_TXEN1:
     enum:
       value1:
@@ -796,6 +815,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOSTAT_TXEN0:
     enum:
       value1:
@@ -807,6 +827,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOSTAT_TXRQ:
     enum:
       value1:
@@ -818,6 +839,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOSTAT_RXEN:
     enum:
       value1:
@@ -829,6 +851,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOSTAT_RTSEL:
     enum:
       value1:
@@ -840,6 +863,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOSTAT_MSGVAL:
     enum:
       value1:
@@ -851,6 +875,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOSTAT_MSGLST:
     enum:
       value1:
@@ -863,6 +888,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOSTAT_NEWDAT:
     enum:
       value1:
@@ -874,6 +900,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOSTAT_RXUPD:
     enum:
       value1:
@@ -886,6 +913,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOSTAT_TXPND:
     enum:
       value1:
@@ -898,6 +926,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CAN_MO_MOSTAT_RXPND:
     enum:
       value1:
@@ -910,3 +939,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

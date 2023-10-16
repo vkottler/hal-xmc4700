@@ -699,6 +699,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   CCU80_GCTRL_MSDE:
     enum:
@@ -716,6 +717,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GCTRL_MSE3:
     enum:
       value1:
@@ -728,6 +730,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GCTRL_MSE2:
     enum:
       value1:
@@ -740,6 +743,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GCTRL_MSE1:
     enum:
       value1:
@@ -752,6 +756,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GCTRL_MSE0:
     enum:
       value1:
@@ -764,6 +769,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GCTRL_SUSCFG:
     enum:
       value1:
@@ -783,6 +789,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GCTRL_PCIS:
     enum:
       value1:
@@ -800,6 +807,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GCTRL_PRBC:
     enum:
       value1:
@@ -828,6 +836,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GSTAT_PCRB:
     enum:
       value1:
@@ -839,6 +848,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GSTAT_PRB:
     enum:
       value1:
@@ -850,6 +860,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GSTAT_S3I:
     enum:
       value1:
@@ -861,6 +872,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GSTAT_S2I:
     enum:
       value1:
@@ -872,6 +884,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GSTAT_S1I:
     enum:
       value1:
@@ -883,6 +896,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GSTAT_S0I:
     enum:
       value1:
@@ -894,6 +908,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GCST_S3PSS:
     enum:
       value1:
@@ -905,6 +920,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GCST_S3DSS:
     enum:
       value1:
@@ -916,6 +932,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GCST_S3SS:
     enum:
       value1:
@@ -927,6 +944,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GCST_S2PSS:
     enum:
       value1:
@@ -938,6 +956,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GCST_S2DSS:
     enum:
       value1:
@@ -949,6 +968,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GCST_S2SS:
     enum:
       value1:
@@ -960,6 +980,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GCST_S1PSS:
     enum:
       value1:
@@ -971,6 +992,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GCST_S1DSS:
     enum:
       value1:
@@ -982,6 +1004,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GCST_S1SS:
     enum:
       value1:
@@ -993,6 +1016,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GCST_S0PSS:
     enum:
       value1:
@@ -1004,6 +1028,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GCST_S0DSS:
     enum:
       value1:
@@ -1015,6 +1040,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GCST_S0SS:
     enum:
       value1:
@@ -1026,6 +1052,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GPCHK_PCTS:
     enum:
       value1:
@@ -1037,6 +1064,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GPCHK_PCDS:
     enum:
       value1:
@@ -1054,6 +1082,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GPCHK_PISEL:
     enum:
       value1:
@@ -1071,6 +1100,7 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
   CCU80_GPCHK_PACS:
     enum:
       value1:
@@ -1088,3 +1118,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false

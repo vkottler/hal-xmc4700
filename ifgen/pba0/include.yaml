@@ -38,6 +38,7 @@ structs:
     codec: false
     methods: false
     unit_test: false
+    identifier: false
 enums:
   PBA0_STS_WERR:
     enum:
@@ -50,3 +51,4 @@ enums:
     unit_test: false
     json: false
     use_map: false
+    identifier: false
