@@ -36,35 +36,35 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_CCFG_RB
+            type: USIC0_CH0_CCFG_TB
           - name: IIS
             description: IIS Protocol Available
             index: 3
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_CCFG_IIS
+            type: USIC0_CH0_CCFG_TB
           - name: IIC
             description: IIC Protocol Available
             index: 2
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_CCFG_IIC
+            type: USIC0_CH0_CCFG_TB
           - name: ASC
             description: ASC Protocol Available
             index: 1
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_CCFG_ASC
+            type: USIC0_CH0_CCFG_TB
           - name: SSC
             description: SSC Protocol Available
             index: 0
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_CCFG_SSC
+            type: USIC0_CH0_CCFG_TB
       - name: KSCFG
         type: uint32_t
         expected_size: 4
@@ -90,7 +90,7 @@ structs:
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_KSCFG_BPNOM
+            type: USIC0_CH0_KSCFG_BPSUM
           - name: NOMCFG
             description: Normal Operation Mode Configuration
             index: 4
@@ -104,7 +104,7 @@ structs:
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_KSCFG_BPMODEN
+            type: USIC0_CH0_KSCFG_BPSUM
           - name: MODEN
             description: Module Enable
             index: 0
@@ -259,7 +259,7 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_DX0CR_DXS
+            type: USIC0_CH0_BRG_MCLKCFG
           - name: CM
             description: Combination Mode
             index: 10
@@ -321,7 +321,7 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_DX1CR_DXS
+            type: USIC0_CH0_BRG_MCLKCFG
           - name: CM
             description: Combination Mode
             index: 10
@@ -335,35 +335,35 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX1CR_SFSEL
+            type: USIC0_CH0_DX0CR_SFSEL
           - name: DPOL
             description: Data Polarity for DXn
             index: 8
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX1CR_DPOL
+            type: USIC0_CH0_DX0CR_DPOL
           - name: DSEN
             description: Data Synchronization Enable
             index: 6
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX1CR_DSEN
+            type: USIC0_CH0_DX0CR_DSEN
           - name: DFEN
             description: Digital Filter Enable
             index: 5
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX1CR_DFEN
+            type: USIC0_CH0_DX0CR_DFEN
           - name: INSW
             description: Input Switch
             index: 4
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX1CR_INSW
+            type: USIC0_CH0_DX0CR_INSW
           - name: DCEN
             description: Delay Compensation Enable
             index: 3
@@ -390,56 +390,56 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_DX2CR_DXS
+            type: USIC0_CH0_BRG_MCLKCFG
           - name: CM
             description: Combination Mode
             index: 10
             width: 2
             read: true
             write: true
-            type: USIC0_CH0_DX2CR_CM
+            type: USIC0_CH0_DX0CR_CM
           - name: SFSEL
             description: Sampling Frequency Selection
             index: 9
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX2CR_SFSEL
+            type: USIC0_CH0_DX0CR_SFSEL
           - name: DPOL
             description: Data Polarity for DXn
             index: 8
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX2CR_DPOL
+            type: USIC0_CH0_DX0CR_DPOL
           - name: DSEN
             description: Data Synchronization Enable
             index: 6
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX2CR_DSEN
+            type: USIC0_CH0_DX0CR_DSEN
           - name: DFEN
             description: Digital Filter Enable
             index: 5
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX2CR_DFEN
+            type: USIC0_CH0_DX0CR_DFEN
           - name: INSW
             description: Input Switch
             index: 4
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX2CR_INSW
+            type: USIC0_CH0_DX0CR_INSW
           - name: DSEL
             description: Data Selection for Input Signal
             index: 0
             width: 3
             read: true
             write: true
-            type: USIC0_CH0_DX2CR_DSEL
+            type: USIC0_CH0_DX0CR_DSEL
       - name: DX3CR
         type: uint32_t
         expected_size: 4
@@ -452,56 +452,56 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_DX3CR_DXS
+            type: USIC0_CH0_BRG_MCLKCFG
           - name: CM
             description: Combination Mode
             index: 10
             width: 2
             read: true
             write: true
-            type: USIC0_CH0_DX3CR_CM
+            type: USIC0_CH0_DX0CR_CM
           - name: SFSEL
             description: Sampling Frequency Selection
             index: 9
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX3CR_SFSEL
+            type: USIC0_CH0_DX0CR_SFSEL
           - name: DPOL
             description: Data Polarity for DXn
             index: 8
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX3CR_DPOL
+            type: USIC0_CH0_DX0CR_DPOL
           - name: DSEN
             description: Data Synchronization Enable
             index: 6
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX3CR_DSEN
+            type: USIC0_CH0_DX0CR_DSEN
           - name: DFEN
             description: Digital Filter Enable
             index: 5
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX3CR_DFEN
+            type: USIC0_CH0_DX0CR_DFEN
           - name: INSW
             description: Input Switch
             index: 4
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX3CR_INSW
+            type: USIC0_CH0_DX0CR_INSW
           - name: DSEL
             description: Data Selection for Input Signal
             index: 0
             width: 3
             read: true
             write: true
-            type: USIC0_CH0_DX3CR_DSEL
+            type: USIC0_CH0_DX0CR_DSEL
       - name: DX4CR
         type: uint32_t
         expected_size: 4
@@ -514,56 +514,56 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_DX4CR_DXS
+            type: USIC0_CH0_BRG_MCLKCFG
           - name: CM
             description: Combination Mode
             index: 10
             width: 2
             read: true
             write: true
-            type: USIC0_CH0_DX4CR_CM
+            type: USIC0_CH0_DX0CR_CM
           - name: SFSEL
             description: Sampling Frequency Selection
             index: 9
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX4CR_SFSEL
+            type: USIC0_CH0_DX0CR_SFSEL
           - name: DPOL
             description: Data Polarity for DXn
             index: 8
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX4CR_DPOL
+            type: USIC0_CH0_DX0CR_DPOL
           - name: DSEN
             description: Data Synchronization Enable
             index: 6
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX4CR_DSEN
+            type: USIC0_CH0_DX0CR_DSEN
           - name: DFEN
             description: Digital Filter Enable
             index: 5
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX4CR_DFEN
+            type: USIC0_CH0_DX0CR_DFEN
           - name: INSW
             description: Input Switch
             index: 4
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX4CR_INSW
+            type: USIC0_CH0_DX0CR_INSW
           - name: DSEL
             description: Data Selection for Input Signal
             index: 0
             width: 3
             read: true
             write: true
-            type: USIC0_CH0_DX4CR_DSEL
+            type: USIC0_CH0_DX0CR_DSEL
       - name: DX5CR
         type: uint32_t
         expected_size: 4
@@ -576,56 +576,56 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_DX5CR_DXS
+            type: USIC0_CH0_BRG_MCLKCFG
           - name: CM
             description: Combination Mode
             index: 10
             width: 2
             read: true
             write: true
-            type: USIC0_CH0_DX5CR_CM
+            type: USIC0_CH0_DX0CR_CM
           - name: SFSEL
             description: Sampling Frequency Selection
             index: 9
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX5CR_SFSEL
+            type: USIC0_CH0_DX0CR_SFSEL
           - name: DPOL
             description: Data Polarity for DXn
             index: 8
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX5CR_DPOL
+            type: USIC0_CH0_DX0CR_DPOL
           - name: DSEN
             description: Data Synchronization Enable
             index: 6
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX5CR_DSEN
+            type: USIC0_CH0_DX0CR_DSEN
           - name: DFEN
             description: Digital Filter Enable
             index: 5
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX5CR_DFEN
+            type: USIC0_CH0_DX0CR_DFEN
           - name: INSW
             description: Input Switch
             index: 4
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX5CR_INSW
+            type: USIC0_CH0_DX0CR_INSW
           - name: DSEL
             description: Data Selection for Input Signal
             index: 0
             width: 3
             read: true
             write: true
-            type: USIC0_CH0_DX5CR_DSEL
+            type: USIC0_CH0_DX0CR_DSEL
       - name: SCTR
         type: uint32_t
         expected_size: 4
@@ -679,7 +679,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_SCTR_PDL
+            type: USIC0_CH0_BRG_MCLKCFG
           - name: SDIR
             description: Shift Direction
             index: 0
@@ -783,14 +783,14 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TCSR_WAMD
+            type: USIC0_CH0_TCSR_HPCMD
           - name: FLEMD
             description: FLE Mode
             index: 2
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TCSR_FLEMD
+            type: USIC0_CH0_TCSR_HPCMD
           - name: SELMD
             description: Select Mode
             index: 1
@@ -804,7 +804,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TCSR_WLEMD
+            type: USIC0_CH0_TCSR_HPCMD
       - name: PCR
         type: uint32_t
         expected_size: 4
@@ -1047,21 +1047,21 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_ASCMode_FFIEN
+                type: USIC0_CH0_TCSR_HPCMD
               - name: FEIEN
                 description: Format Error Interrupt Enable
                 index: 6
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_ASCMode_FEIEN
+                type: USIC0_CH0_TCSR_HPCMD
               - name: RNIEN
                 description: Receiver Noise Detection Interrupt Enable
                 index: 5
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_ASCMode_RNIEN
+                type: USIC0_CH0_TCSR_HPCMD
               - name: CDEN
                 description: Collision Detection Enable
                 index: 4
@@ -1075,7 +1075,7 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_ASCMode_SBIEN
+                type: USIC0_CH0_TCSR_HPCMD
               - name: IDM
                 description: Idle Detection Mode
                 index: 2
@@ -1167,7 +1167,7 @@ structs:
                 width: 2
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_SSCMode_CTQSEL1
+                type: USIC0_CH0_BRG_CTQSEL
               - name: FEM
                 description: Frame End Mode
                 index: 3
@@ -1212,7 +1212,7 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IICMode_ACKIEN
+                type: USIC0_CH0_TCSR_HPCMD
               - name: HDEL
                 description: Hardware Delay
                 index: 26
@@ -1232,49 +1232,49 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IICMode_ERRIEN
+                type: USIC0_CH0_TCSR_HPCMD
               - name: SRRIEN
                 description: Slave Read Request Interrupt Enable
                 index: 23
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IICMode_SRRIEN
+                type: USIC0_CH0_TCSR_HPCMD
               - name: ARLIEN
                 description: Arbitration Lost Interrupt Enable
                 index: 22
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IICMode_ARLIEN
+                type: USIC0_CH0_TCSR_HPCMD
               - name: NACKIEN
                 description: Non-Acknowledge Interrupt Enable
                 index: 21
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IICMode_NACKIEN
+                type: USIC0_CH0_TCSR_HPCMD
               - name: PCRIEN
                 description: Stop Condition Received Interrupt Enable
                 index: 20
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IICMode_PCRIEN
+                type: USIC0_CH0_TCSR_HPCMD
               - name: RSCRIEN
                 description: Repeated Start Condition Received Interrupt Enable
                 index: 19
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IICMode_RSCRIEN
+                type: USIC0_CH0_TCSR_HPCMD
               - name: SCRIEN
                 description: Start Condition Received Interrupt Enable
                 index: 18
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IICMode_SCRIEN
+                type: USIC0_CH0_TCSR_HPCMD
               - name: STIM
                 description: Symbol Timing
                 index: 17
@@ -1304,7 +1304,7 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IISMode_MCLK
+                type: USIC0_CH0_PCR_IICMode_MCLK
               - name: TDEL
                 description: Transfer Delay
                 index: 16
@@ -1467,42 +1467,42 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_PSR_AIF
+            type: USIC0_CH0_PSR_BRGIF
           - name: RIF
             description: Receive Indication Flag
             index: 14
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_PSR_RIF
+            type: USIC0_CH0_PSR_BRGIF
           - name: TBIF
             description: Transmit Buffer Indication Flag
             index: 13
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_PSR_TBIF
+            type: USIC0_CH0_PSR_BRGIF
           - name: TSIF
             description: Transmit Shift Indication Flag
             index: 12
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_PSR_TSIF
+            type: USIC0_CH0_PSR_BRGIF
           - name: DLIF
             description: Data Lost Indication Flag
             index: 11
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_PSR_DLIF
+            type: USIC0_CH0_PSR_BRGIF
           - name: RSIF
             description: Receiver Start Indication Flag
             index: 10
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_PSR_RSIF
+            type: USIC0_CH0_PSR_BRGIF
           - name: ST9
             description: Protocol Status Flag 9
             index: 9
@@ -1573,49 +1573,49 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_BRGIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: AIF
                 description: Alternative Receive Indication Flag
                 index: 15
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_AIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: RIF
                 description: Receive Indication Flag
                 index: 14
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_RIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: TBIF
                 description: Transmit Buffer Indication Flag
                 index: 13
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_TBIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: TSIF
                 description: Transmit Shift Indication Flag
                 index: 12
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_TSIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: DLIF
                 description: Data Lost Indication Flag
                 index: 11
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_DLIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: RSIF
                 description: Receiver Start Indication Flag
                 index: 10
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_RSIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: BUSY
                 description: Transfer Status BUSY
                 index: 9
@@ -1636,7 +1636,7 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_RFF
+                type: USIC0_CH0_PSR_ASCMode_TFF
               - name: FER1
                 description: Format Error in Stop Bit 1
                 index: 6
@@ -1650,14 +1650,14 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_FER0
+                type: USIC0_CH0_PSR_ASCMode_FER1
               - name: RNS
                 description: Receiver Noise Detected
                 index: 4
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_RNS
+                type: USIC0_CH0_PSR_ASCMode_FER1
               - name: COL
                 description: Collision Detected
                 index: 3
@@ -1671,7 +1671,7 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_SBD
+                type: USIC0_CH0_PSR_ASCMode_FER1
               - name: RXIDLE
                 description: Reception Idle
                 index: 1
@@ -1695,49 +1695,49 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_SSCMode_BRGIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: AIF
                 description: Alternative Receive Indication Flag
                 index: 15
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_SSCMode_AIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: RIF
                 description: Receive Indication Flag
                 index: 14
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_SSCMode_RIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: TBIF
                 description: Transmit Buffer Indication Flag
                 index: 13
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_SSCMode_TBIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: TSIF
                 description: Transmit Shift Indication Flag
                 index: 12
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_SSCMode_TSIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: DLIF
                 description: Data Lost Indication Flag
                 index: 11
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_SSCMode_DLIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: RSIF
                 description: Receiver Start Indication Flag
                 index: 10
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_SSCMode_RSIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: PARERR
                 description: Parity Error Event Detected
                 index: 4
@@ -1751,7 +1751,7 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_SSCMode_DX2TEV
+                type: USIC0_CH0_PSR_SSCMode_PARERR
               - name: MSLSEV
                 description: MSLS Event Detected
                 index: 2
@@ -1765,7 +1765,7 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_SSCMode_DX2S
+                type: USIC0_CH0_BRG_MCLKCFG
               - name: MSLS
                 description: MSLS Status
                 index: 0
@@ -1782,49 +1782,49 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IICMode_BRGIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: AIF
                 description: Alternative Receive Indication Flag
                 index: 15
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IICMode_AIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: RIF
                 description: Receive Indication Flag
                 index: 14
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IICMode_RIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: TBIF
                 description: Transmit Buffer Indication Flag
                 index: 13
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IICMode_TBIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: TSIF
                 description: Transmit Shift Indication Flag
                 index: 12
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IICMode_TSIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: DLIF
                 description: Data Lost Indication Flag
                 index: 11
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IICMode_DLIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: RSIF
                 description: Receiver Start Indication Flag
                 index: 10
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IICMode_RSIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: ACK
                 description: Acknowledge Received
                 index: 9
@@ -1838,14 +1838,14 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IICMode_ERR
+                type: USIC0_CH0_PSR_ASCMode_FER1
               - name: SRR
                 description: Slave Read Request
                 index: 7
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IICMode_SRR
+                type: USIC0_CH0_PSR_ASCMode_FER1
               - name: ARL
                 description: Arbitration Lost
                 index: 6
@@ -1859,28 +1859,28 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IICMode_NACK
+                type: USIC0_CH0_PSR_IICMode_ACK
               - name: PCR
                 description: Stop Condition Received
                 index: 4
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IICMode_PCR
+                type: USIC0_CH0_PSR_ASCMode_FER1
               - name: RSCR
                 description: Repeated Start Condition Received
                 index: 3
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IICMode_RSCR
+                type: USIC0_CH0_PSR_ASCMode_FER1
               - name: SCR
                 description: Start Condition Received
                 index: 2
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IICMode_SCR
+                type: USIC0_CH0_PSR_ASCMode_FER1
               - name: WTDF
                 description: Wrong TDF Code Found
                 index: 1
@@ -1904,49 +1904,49 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IISMode_BRGIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: AIF
                 description: Alternative Receive Indication Flag
                 index: 15
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IISMode_AIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: RIF
                 description: Receive Indication Flag
                 index: 14
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IISMode_RIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: TBIF
                 description: Transmit Buffer Indication Flag
                 index: 13
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IISMode_TBIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: TSIF
                 description: Transmit Shift Indication Flag
                 index: 12
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IISMode_TSIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: DLIF
                 description: Data Lost Indication Flag
                 index: 11
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IISMode_DLIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: RSIF
                 description: Receiver Start Indication Flag
                 index: 10
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IISMode_RSIF
+                type: USIC0_CH0_PSR_BRGIF
               - name: END
                 description: WA Generation End
                 index: 6
@@ -1967,28 +1967,28 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IISMode_WAFE
+                type: USIC0_CH0_PSR_IISMode_WARE
               - name: DX2TEV
                 description: DX2T Event Detected
                 index: 3
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IISMode_DX2TEV
+                type: USIC0_CH0_PSR_SSCMode_PARERR
               - name: DX2S
                 description: DX2S Status
                 index: 1
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IISMode_DX2S
+                type: USIC0_CH0_BRG_MCLKCFG
               - name: WA
                 description: Word Address
                 index: 0
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IISMode_WA
+                type: USIC0_CH0_BRG_MCLKCFG
       - name: PSCR
         type: uint32_t
         expected_size: 4
@@ -2057,63 +2057,63 @@ structs:
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CST8
+            type: USIC0_CH0_PSCR_CST9
           - name: CST7
             description: Clear Status Flag 7 in PSR
             index: 7
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CST7
+            type: USIC0_CH0_PSCR_CST9
           - name: CST6
             description: Clear Status Flag 6 in PSR
             index: 6
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CST6
+            type: USIC0_CH0_PSCR_CST9
           - name: CST5
             description: Clear Status Flag 5 in PSR
             index: 5
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CST5
+            type: USIC0_CH0_PSCR_CST9
           - name: CST4
             description: Clear Status Flag 4 in PSR
             index: 4
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CST4
+            type: USIC0_CH0_PSCR_CST9
           - name: CST3
             description: Clear Status Flag 3 in PSR
             index: 3
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CST3
+            type: USIC0_CH0_PSCR_CST9
           - name: CST2
             description: Clear Status Flag 2 in PSR
             index: 2
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CST2
+            type: USIC0_CH0_PSCR_CST9
           - name: CST1
             description: Clear Status Flag 1 in PSR
             index: 1
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CST1
+            type: USIC0_CH0_PSCR_CST9
           - name: CST0
             description: Clear Status Flag 0 in PSR
             index: 0
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CST0
+            type: USIC0_CH0_PSCR_CST9
       - name: RBUFSR
         type: uint32_t
         expected_size: 4
@@ -2242,7 +2242,7 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_RBUF01SR_RDV10
+            type: USIC0_CH0_RBUF01SR_RDV11
           - name: PERR1
             description: Protocol-related Error in RBUF1
             index: 25
@@ -2276,28 +2276,28 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_RBUF01SR_DS0
+            type: USIC0_CH0_RBUF01SR_DS1
           - name: RDV01
             description: Receive Data Valid in RBUF1
             index: 14
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_RBUF01SR_RDV01
+            type: USIC0_CH0_RBUF01SR_RDV11
           - name: RDV00
             description: Receive Data Valid in RBUF0
             index: 13
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_RBUF01SR_RDV00
+            type: USIC0_CH0_RBUF01SR_RDV11
           - name: PERR0
             description: Protocol-related Error in RBUF0
             index: 9
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_RBUF01SR_PERR0
+            type: USIC0_CH0_RBUF01SR_PERR1
           - name: PAR0
             description: Protocol-Related Argument in RBUF0
             index: 8
@@ -2310,7 +2310,7 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_RBUF01SR_SOF0
+            type: USIC0_CH0_RBUF01SR_SOF1
           - name: WLEN0
             description: Received Data Word Length in RBUF0
             index: 0
@@ -2336,35 +2336,35 @@ structs:
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_FMR_SIO4
+            type: USIC0_CH0_FMR_SIO5
           - name: SIO3
             description: Set Interrupt Output SRx
             index: 19
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_FMR_SIO3
+            type: USIC0_CH0_FMR_SIO5
           - name: SIO2
             description: Set Interrupt Output SRx
             index: 18
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_FMR_SIO2
+            type: USIC0_CH0_FMR_SIO5
           - name: SIO1
             description: Set Interrupt Output SRx
             index: 17
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_FMR_SIO1
+            type: USIC0_CH0_FMR_SIO5
           - name: SIO0
             description: Set Interrupt Output SRx
             index: 16
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_FMR_SIO0
+            type: USIC0_CH0_FMR_SIO5
           - name: CRDV1
             description: Clear Bit RDV for RBUF1
             index: 15
@@ -2517,14 +2517,14 @@ structs:
             width: 3
             read: true
             write: true
-            type: USIC0_CH0_TBCTR_ATBINP
+            type: USIC0_CH0_INPR_TSINP
           - name: STBINP
             description: Standard Transmit Buffer Interrupt Node Pointer
             index: 16
             width: 3
             read: true
             write: true
-            type: USIC0_CH0_TBCTR_STBINP
+            type: USIC0_CH0_INPR_TSINP
           - name: STBTEN
             description: Standard Transmit Buffer Trigger Enable
             index: 15
@@ -2563,7 +2563,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_RBCTR_RBERIEN
+            type: USIC0_CH0_TCSR_HPCMD
           - name: SRBIEN
             description: Standard Receive Buffer Interrupt Enable
             index: 30
@@ -2598,7 +2598,7 @@ structs:
             width: 3
             read: true
             write: true
-            type: USIC0_CH0_RBCTR_SIZE
+            type: USIC0_CH0_TBCTR_SIZE
           - name: RCIM
             description: Receiver Control Information Mode
             index: 22
@@ -2612,14 +2612,14 @@ structs:
             width: 3
             read: true
             write: true
-            type: USIC0_CH0_RBCTR_ARBINP
+            type: USIC0_CH0_INPR_TSINP
           - name: SRBINP
             description: Standard Receive Buffer Interrupt Node Pointer
             index: 16
             width: 3
             read: true
             write: true
-            type: USIC0_CH0_RBCTR_SRBINP
+            type: USIC0_CH0_INPR_TSINP
           - name: SRBTEN
             description: Standard Receive Buffer Trigger Enable
             index: 15
@@ -2729,7 +2729,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TRBSR_TBERI
+            type: USIC0_CH0_PSR_ASCMode_FER1
           - name: STBI
             description: Standard Transmit Buffer Event
             index: 8
@@ -2757,14 +2757,14 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_TRBSR_RFULL
+            type: USIC0_CH0_TRBSR_TFULL
           - name: REMPTY
             description: Receive Buffer Empty
             index: 3
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_TRBSR_REMPTY
+            type: USIC0_CH0_TRBSR_TEMPTY
           - name: ARBI
             description: Alternative Receive Buffer Event
             index: 2
@@ -2778,7 +2778,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TRBSR_RBERI
+            type: USIC0_CH0_PSR_ASCMode_FER1
           - name: SRBI
             description: Standard Receive Buffer Event
             index: 0
@@ -2907,71 +2907,11 @@ structs:
 enums:
   USIC0_CH0_CCFG_TB:
     enum:
-      value1:
+      not_available:
         description: A transmit FIFO buffer is not available.
         value: 0
-      value2:
+      available:
         description: A transmit FIFO buffer is available.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_CCFG_RB:
-    enum:
-      value1:
-        description: A receive FIFO buffer is not available.
-        value: 0
-      value2:
-        description: A receive FIFO buffer is available.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_CCFG_IIS:
-    enum:
-      value1:
-        description: The IIS protocol is not available.
-        value: 0
-      value2:
-        description: The IIS protocol is available.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_CCFG_IIC:
-    enum:
-      value1:
-        description: The IIC protocol is not available.
-        value: 0
-      value2:
-        description: The IIC protocol is available.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_CCFG_ASC:
-    enum:
-      value1:
-        description: The ASC protocol is not available.
-        value: 0
-      value2:
-        description: The ASC protocol is available.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_CCFG_SSC:
-    enum:
-      value1:
-        description: The SSC protocol is not available.
-        value: 0
-      value2:
-        description: The SSC protocol is available.
         value: 1
     unit_test: false
     json: false
@@ -2979,23 +2919,11 @@ enums:
     identifier: false
   USIC0_CH0_KSCFG_BPSUM:
     enum:
-      value1:
+      not_changed:
         description: SUMCFG is not changed.
         value: 0
-      value2:
+      updated_with_written_value:
         description: SUMCFG is updated with the written value.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_KSCFG_BPNOM:
-    enum:
-      value1:
-        description: NOMCFG is not changed.
-        value: 0
-      value2:
-        description: NOMCFG is updated with the written value.
         value: 1
     unit_test: false
     json: false
@@ -3003,43 +2931,31 @@ enums:
     identifier: false
   USIC0_CH0_KSCFG_NOMCFG:
     enum:
-      value1:
+      run_mode_0_selected:
         description: Run mode 0 is selected.
         value: 0
-      value2:
+      run_mode_1_selected:
         description: Run mode 1 is selected.
         value: 1
-      value3:
+      stop_mode_0_selected:
         description: Stop mode 0 is selected.
         value: 2
-      value4:
+      stop_mode_1_selected:
         description: Stop mode 1 is selected.
         value: 3
     unit_test: false
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_KSCFG_BPMODEN:
-    enum:
-      value1:
-        description: MODEN is not changed.
-        value: 0
-      value2:
-        description: MODEN is updated with the written value.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_KSCFG_MODEN:
     enum:
-      value1:
+      off_immediately_without_respe_cont:
         description: The module is switched off immediately (without respecting a
           stop condition). It does not react on mode control actions and the module
           clock is switched off. The module does not react on read accesses and ignores
           write accesses (except to KSCFG).
         value: 0
-      value2:
+      can_operate_after_writing_1_m_cont:
         description: The module is switched on and can operate. After writing 1 to
           MODEN, it is recommended to read register KSCFG to avoid pipeline effects
           in the control block before accessing other Service Request Processing registers.
@@ -3050,16 +2966,16 @@ enums:
     identifier: false
   USIC0_CH0_FDR_DM:
     enum:
-      value1:
+      divider_switched_off_ffd_0:
         description: The divider is switched off, fFD = 0.
         value: 0
-      value2:
+      normal_divider_mode_selected:
         description: Normal divider mode selected.
         value: 1
-      value3:
+      fractional_divider_mode_selected:
         description: Fractional divider mode selected.
         value: 2
-      value4:
+      divider_switched_off_ffd_0_:
         description: The divider is switched off, fFD = 0.
         value: 3
     unit_test: false
@@ -3068,16 +2984,16 @@ enums:
     identifier: false
   USIC0_CH0_BRG_SCLKCFG:
     enum:
-      value1:
+      0_delay_disabled:
         description: The passive level is 0 and the delay is disabled.
         value: 0
-      value2:
+      1_delay_disabled:
         description: The passive level is 1 and the delay is disabled.
         value: 1
-      value3:
+      0_delay_enabled:
         description: The passive level is 0 and the delay is enabled.
         value: 2
-      value4:
+      1_delay_enabled:
         description: The passive level is 1 and the delay is enabled.
         value: 3
     unit_test: false
@@ -3086,10 +3002,10 @@ enums:
     identifier: false
   USIC0_CH0_BRG_MCLKCFG:
     enum:
-      value1:
+      '0':
         description: The passive level is 0.
         value: 0
-      value2:
+      '1':
         description: The passive level is 1.
         value: 1
     unit_test: false
@@ -3098,11 +3014,11 @@ enums:
     identifier: false
   USIC0_CH0_BRG_SCLKOSEL:
     enum:
-      value1:
+      sclk_baud_rate_generator_selected_sclkout_inp_cont:
         description: SCLK from the baud rate generator is selected as the SCLKOUT
           input source.
         value: 0
-      value2:
+      transmit_shift_clock_dx1_input_stage_selected_cont:
         description: The transmit shift clock from DX1 input stage is selected as
           the SCLKOUT input source.
         value: 1
@@ -3112,16 +3028,16 @@ enums:
     identifier: false
   USIC0_CH0_BRG_CTQSEL:
     enum:
-      value1:
+      pdiv:
         description: fCTQIN = fPDIV
         value: 0
-      value2:
+      ppp:
         description: fCTQIN = fPPP
         value: 1
-      value3:
+      sclk:
         description: fCTQIN = fSCLK
         value: 2
-      value4:
+      mclk:
         description: fCTQIN = fMCLK
         value: 3
     unit_test: false
@@ -3130,10 +3046,10 @@ enums:
     identifier: false
   USIC0_CH0_BRG_PPPEN:
     enum:
-      value1:
+      disabled_fppp_fpin:
         description: The 2:1 divider for fPPP is disabled. fPPP = fPIN
         value: 0
-      value2:
+      enabled_fppp_fmclk_fpin_2:
         description: The 2:1 divider for fPPP is enabled. fPPP = fMCLK = fPIN / 2.
         value: 1
     unit_test: false
@@ -3142,11 +3058,11 @@ enums:
     identifier: false
   USIC0_CH0_BRG_TMEN:
     enum:
-      value1:
+      disabled_trigger_signals_d_cont:
         description: 'Timing measurement is disabled: The trigger signals DX0T and
           DX1T are ignored.'
         value: 0
-      value2:
+      enabled_10_bit_counter_inc_cont:
         description: 'Timing measurement is enabled: The 10-bit counter is incremented
           by 1 with fPPP and stops counting when reaching its maximum value. If one
           of the trigger signals DX0T or DX1T become active, the counter value is
@@ -3159,14 +3075,14 @@ enums:
     identifier: false
   USIC0_CH0_BRG_CLKSEL:
     enum:
-      value1:
+      fractional_divider_frequency_ffd_selected:
         description: The fractional divider frequency fFD is selected.
         value: 0
-      value3:
+      trigger_signal_dx1t_defines_fpin_signal_mclk__cont:
         description: The trigger signal DX1T defines fPIN. Signal MCLK toggles with
           fPIN.
         value: 2
-      value4:
+      signal_mclk_corresponds_dx1s_signal_frequency_cont:
         description: Signal MCLK corresponds to the DX1S signal and the frequency
           fPIN is derived from the rising edges of DX1S.
         value: 3
@@ -3176,52 +3092,40 @@ enums:
     identifier: false
   USIC0_CH0_INPR_TSINP:
     enum:
-      value1:
+      0_becomes_activated:
         description: Output SR0 becomes activated.
         value: 0
-      value2:
+      1_becomes_activated:
         description: Output SR1 becomes activated.
         value: 1
-      value3:
+      2_becomes_activated:
         description: Output SR2 becomes activated.
         value: 2
-      value4:
+      3_becomes_activated:
         description: Output SR3 becomes activated.
         value: 3
-      value5:
+      4_becomes_activated:
         description: Output SR4 becomes activated.
         value: 4
-      value6:
+      5_becomes_activated:
         description: Output SR5 becomes activated.
         value: 5
     unit_test: false
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_DX0CR_DXS:
-    enum:
-      value1:
-        description: The current value of DXnS is 0.
-        value: 0
-      value2:
-        description: The current value of DXnS is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_DX0CR_CM:
     enum:
-      value1:
+      trigger_activation_disabled:
         description: The trigger activation is disabled.
         value: 0
-      value2:
+      rising_edge_activates_dxnt:
         description: A rising edge activates DXnT.
         value: 1
-      value3:
+      falling_edge_activates_dxnt:
         description: A falling edge activates DXnT.
         value: 2
-      value4:
+      both_edges_activate_dxnt:
         description: Both edges activate DXnT.
         value: 3
     unit_test: false
@@ -3230,10 +3134,10 @@ enums:
     identifier: false
   USIC0_CH0_DX0CR_SFSEL:
     enum:
-      value1:
+      pb:
         description: The sampling frequency is fPB.
         value: 0
-      value2:
+      fd:
         description: The sampling frequency is fFD.
         value: 1
     unit_test: false
@@ -3242,10 +3146,10 @@ enums:
     identifier: false
   USIC0_CH0_DX0CR_DPOL:
     enum:
-      value1:
+      not_inverted:
         description: The input signal is not inverted.
         value: 0
-      value2:
+      inverted:
         description: The input signal is inverted.
         value: 1
     unit_test: false
@@ -3254,11 +3158,11 @@ enums:
     identifier: false
   USIC0_CH0_DX0CR_DSEN:
     enum:
-      value1:
+      un_synchronized_signal_can_be_taken_input_dat_cont:
         description: The un-synchronized signal can be taken as input for the data
           shift unit.
         value: 0
-      value2:
+      synchronized_signal_can_be_taken_input_data_s_cont:
         description: The synchronized signal can be taken as input for the data shift
           unit.
         value: 1
@@ -3268,10 +3172,10 @@ enums:
     identifier: false
   USIC0_CH0_DX0CR_DFEN:
     enum:
-      value1:
+      not_digitally_filtered:
         description: The input signal is not digitally filtered.
         value: 0
-      value2:
+      digitally_filtered:
         description: The input signal is digitally filtered.
         value: 1
     unit_test: false
@@ -3280,11 +3184,11 @@ enums:
     identifier: false
   USIC0_CH0_DX0CR_INSW:
     enum:
-      value1:
+      trolled_by_protocol__cont:
         description: The input of the data shift unit is controlled by the protocol
           pre-processor.
         value: 0
-      value2:
+      nected_selected_data_cont:
         description: The input of the data shift unit is connected to the selected
           data input line. This setting is used if the signals are directly derived
           from an input pin without treatment by the protocol pre-processor.
@@ -3295,135 +3199,58 @@ enums:
     identifier: false
   USIC0_CH0_DX0CR_DSEL:
     enum:
-      value1:
+      dxna_selected:
         description: The data input DXnA is selected.
         value: 0
-      value2:
+      dxnb_selected:
         description: The data input DXnB is selected.
         value: 1
-      value3:
+      dxnc_selected:
         description: The data input DXnC is selected.
         value: 2
-      value4:
+      dxnd_selected:
         description: The data input DXnD is selected.
         value: 3
-      value5:
+      dxne_selected:
         description: The data input DXnE is selected.
         value: 4
-      value6:
+      dxnf_selected:
         description: The data input DXnF is selected.
         value: 5
-      value7:
+      dxng_selected:
         description: The data input DXnG is selected.
         value: 6
-      value8:
+      always_1:
         description: The data input is always 1.
         value: 7
     unit_test: false
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_DX1CR_DXS:
-    enum:
-      value1:
-        description: The current value of DX1S is 0.
-        value: 0
-      value2:
-        description: The current value of DX1S is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_DX1CR_CM:
     enum:
-      value1:
+      trigger_activation_disabled:
         description: The trigger activation is disabled.
         value: 0
-      value2:
+      rising_edge_activates_dx1t:
         description: A rising edge activates DX1T.
         value: 1
-      value3:
+      falling_edge_activates_dx1t:
         description: A falling edge activates DX1T.
         value: 2
-      value4:
+      both_edges_activate_dx1t:
         description: Both edges activate DX1T.
         value: 3
     unit_test: false
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_DX1CR_SFSEL:
-    enum:
-      value1:
-        description: The sampling frequency is fPB.
-        value: 0
-      value2:
-        description: The sampling frequency is fFD.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX1CR_DPOL:
-    enum:
-      value1:
-        description: The input signal is not inverted.
-        value: 0
-      value2:
-        description: The input signal is inverted.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX1CR_DSEN:
-    enum:
-      value1:
-        description: The un-synchronized signal can be taken as input for the data
-          shift unit.
-        value: 0
-      value2:
-        description: The synchronized signal can be taken as input for the data shift
-          unit.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX1CR_DFEN:
-    enum:
-      value1:
-        description: The input signal is not digitally filtered.
-        value: 0
-      value2:
-        description: The input signal is digitally filtered.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX1CR_INSW:
-    enum:
-      value1:
-        description: The input of the data shift unit is controlled by the protocol
-          pre-processor.
-        value: 0
-      value2:
-        description: The input of the data shift unit is connected to the selected
-          data input line. This setting is used if the signals are directly derived
-          from an input pin without treatment by the protocol pre-processor.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_DX1CR_DCEN:
     enum:
-      value1:
+      dependent_insw_selection:
         description: The receive shift clock is dependent on INSW selection.
         value: 0
-      value2:
+      connected_selected_data_i_cont:
         description: The receive shift clock is connected to the selected data input
           line. This setting is used if delay compensation is required in SSC and
           IIS protocols, else DCEN should always be 0.
@@ -3434,528 +3261,28 @@ enums:
     identifier: false
   USIC0_CH0_DX1CR_DSEL:
     enum:
-      value1:
+      dx1a_selected:
         description: The data input DX1A is selected.
         value: 0
-      value2:
+      dx1b_selected:
         description: The data input DX1B is selected.
         value: 1
-      value3:
+      dx1c_selected:
         description: The data input DX1C is selected.
         value: 2
-      value4:
+      dx1d_selected:
         description: The data input DX1D is selected.
         value: 3
-      value5:
+      dx1e_selected:
         description: The data input DX1E is selected.
         value: 4
-      value6:
+      dx1f_selected:
         description: The data input DX1F is selected.
         value: 5
-      value7:
+      dx1g_selected:
         description: The data input DX1G is selected.
         value: 6
-      value8:
-        description: The data input is always 1.
-        value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX2CR_DXS:
-    enum:
-      value1:
-        description: The current value of DXnS is 0.
-        value: 0
-      value2:
-        description: The current value of DXnS is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX2CR_CM:
-    enum:
-      value1:
-        description: The trigger activation is disabled.
-        value: 0
-      value2:
-        description: A rising edge activates DXnT.
-        value: 1
-      value3:
-        description: A falling edge activates DXnT.
-        value: 2
-      value4:
-        description: Both edges activate DXnT.
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX2CR_SFSEL:
-    enum:
-      value1:
-        description: The sampling frequency is fPB.
-        value: 0
-      value2:
-        description: The sampling frequency is fFD.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX2CR_DPOL:
-    enum:
-      value1:
-        description: The input signal is not inverted.
-        value: 0
-      value2:
-        description: The input signal is inverted.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX2CR_DSEN:
-    enum:
-      value1:
-        description: The un-synchronized signal can be taken as input for the data
-          shift unit.
-        value: 0
-      value2:
-        description: The synchronized signal can be taken as input for the data shift
-          unit.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX2CR_DFEN:
-    enum:
-      value1:
-        description: The input signal is not digitally filtered.
-        value: 0
-      value2:
-        description: The input signal is digitally filtered.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX2CR_INSW:
-    enum:
-      value1:
-        description: The input of the data shift unit is controlled by the protocol
-          pre-processor.
-        value: 0
-      value2:
-        description: The input of the data shift unit is connected to the selected
-          data input line. This setting is used if the signals are directly derived
-          from an input pin without treatment by the protocol pre-processor.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX2CR_DSEL:
-    enum:
-      value1:
-        description: The data input DXnA is selected.
-        value: 0
-      value2:
-        description: The data input DXnB is selected.
-        value: 1
-      value3:
-        description: The data input DXnC is selected.
-        value: 2
-      value4:
-        description: The data input DXnD is selected.
-        value: 3
-      value5:
-        description: The data input DXnE is selected.
-        value: 4
-      value6:
-        description: The data input DXnF is selected.
-        value: 5
-      value7:
-        description: The data input DXnG is selected.
-        value: 6
-      value8:
-        description: The data input is always 1.
-        value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX3CR_DXS:
-    enum:
-      value1:
-        description: The current value of DXnS is 0.
-        value: 0
-      value2:
-        description: The current value of DXnS is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX3CR_CM:
-    enum:
-      value1:
-        description: The trigger activation is disabled.
-        value: 0
-      value2:
-        description: A rising edge activates DXnT.
-        value: 1
-      value3:
-        description: A falling edge activates DXnT.
-        value: 2
-      value4:
-        description: Both edges activate DXnT.
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX3CR_SFSEL:
-    enum:
-      value1:
-        description: The sampling frequency is fPB.
-        value: 0
-      value2:
-        description: The sampling frequency is fFD.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX3CR_DPOL:
-    enum:
-      value1:
-        description: The input signal is not inverted.
-        value: 0
-      value2:
-        description: The input signal is inverted.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX3CR_DSEN:
-    enum:
-      value1:
-        description: The un-synchronized signal can be taken as input for the data
-          shift unit.
-        value: 0
-      value2:
-        description: The synchronized signal can be taken as input for the data shift
-          unit.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX3CR_DFEN:
-    enum:
-      value1:
-        description: The input signal is not digitally filtered.
-        value: 0
-      value2:
-        description: The input signal is digitally filtered.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX3CR_INSW:
-    enum:
-      value1:
-        description: The input of the data shift unit is controlled by the protocol
-          pre-processor.
-        value: 0
-      value2:
-        description: The input of the data shift unit is connected to the selected
-          data input line. This setting is used if the signals are directly derived
-          from an input pin without treatment by the protocol pre-processor.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX3CR_DSEL:
-    enum:
-      value1:
-        description: The data input DXnA is selected.
-        value: 0
-      value2:
-        description: The data input DXnB is selected.
-        value: 1
-      value3:
-        description: The data input DXnC is selected.
-        value: 2
-      value4:
-        description: The data input DXnD is selected.
-        value: 3
-      value5:
-        description: The data input DXnE is selected.
-        value: 4
-      value6:
-        description: The data input DXnF is selected.
-        value: 5
-      value7:
-        description: The data input DXnG is selected.
-        value: 6
-      value8:
-        description: The data input is always 1.
-        value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX4CR_DXS:
-    enum:
-      value1:
-        description: The current value of DXnS is 0.
-        value: 0
-      value2:
-        description: The current value of DXnS is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX4CR_CM:
-    enum:
-      value1:
-        description: The trigger activation is disabled.
-        value: 0
-      value2:
-        description: A rising edge activates DXnT.
-        value: 1
-      value3:
-        description: A falling edge activates DXnT.
-        value: 2
-      value4:
-        description: Both edges activate DXnT.
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX4CR_SFSEL:
-    enum:
-      value1:
-        description: The sampling frequency is fPB.
-        value: 0
-      value2:
-        description: The sampling frequency is fFD.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX4CR_DPOL:
-    enum:
-      value1:
-        description: The input signal is not inverted.
-        value: 0
-      value2:
-        description: The input signal is inverted.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX4CR_DSEN:
-    enum:
-      value1:
-        description: The un-synchronized signal can be taken as input for the data
-          shift unit.
-        value: 0
-      value2:
-        description: The synchronized signal can be taken as input for the data shift
-          unit.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX4CR_DFEN:
-    enum:
-      value1:
-        description: The input signal is not digitally filtered.
-        value: 0
-      value2:
-        description: The input signal is digitally filtered.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX4CR_INSW:
-    enum:
-      value1:
-        description: The input of the data shift unit is controlled by the protocol
-          pre-processor.
-        value: 0
-      value2:
-        description: The input of the data shift unit is connected to the selected
-          data input line. This setting is used if the signals are directly derived
-          from an input pin without treatment by the protocol pre-processor.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX4CR_DSEL:
-    enum:
-      value1:
-        description: The data input DXnA is selected.
-        value: 0
-      value2:
-        description: The data input DXnB is selected.
-        value: 1
-      value3:
-        description: The data input DXnC is selected.
-        value: 2
-      value4:
-        description: The data input DXnD is selected.
-        value: 3
-      value5:
-        description: The data input DXnE is selected.
-        value: 4
-      value6:
-        description: The data input DXnF is selected.
-        value: 5
-      value7:
-        description: The data input DXnG is selected.
-        value: 6
-      value8:
-        description: The data input is always 1.
-        value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX5CR_DXS:
-    enum:
-      value1:
-        description: The current value of DXnS is 0.
-        value: 0
-      value2:
-        description: The current value of DXnS is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX5CR_CM:
-    enum:
-      value1:
-        description: The trigger activation is disabled.
-        value: 0
-      value2:
-        description: A rising edge activates DXnT.
-        value: 1
-      value3:
-        description: A falling edge activates DXnT.
-        value: 2
-      value4:
-        description: Both edges activate DXnT.
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX5CR_SFSEL:
-    enum:
-      value1:
-        description: The sampling frequency is fPB.
-        value: 0
-      value2:
-        description: The sampling frequency is fFD.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX5CR_DPOL:
-    enum:
-      value1:
-        description: The input signal is not inverted.
-        value: 0
-      value2:
-        description: The input signal is inverted.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX5CR_DSEN:
-    enum:
-      value1:
-        description: The un-synchronized signal can be taken as input for the data
-          shift unit.
-        value: 0
-      value2:
-        description: The synchronized signal can be taken as input for the data shift
-          unit.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX5CR_DFEN:
-    enum:
-      value1:
-        description: The input signal is not digitally filtered.
-        value: 0
-      value2:
-        description: The input signal is digitally filtered.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX5CR_INSW:
-    enum:
-      value1:
-        description: The input of the data shift unit is controlled by the protocol
-          pre-processor.
-        value: 0
-      value2:
-        description: The input of the data shift unit is connected to the selected
-          data input line. This setting is used if the signals are directly derived
-          from an input pin without treatment by the protocol pre-processor.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX5CR_DSEL:
-    enum:
-      value1:
-        description: The data input DXnA is selected.
-        value: 0
-      value2:
-        description: The data input DXnB is selected.
-        value: 1
-      value3:
-        description: The data input DXnC is selected.
-        value: 2
-      value4:
-        description: The data input DXnD is selected.
-        value: 3
-      value5:
-        description: The data input DXnE is selected.
-        value: 4
-      value6:
-        description: The data input DXnF is selected.
-        value: 5
-      value7:
-        description: The data input DXnG is selected.
-        value: 6
-      value8:
+      always_1:
         description: The data input is always 1.
         value: 7
     unit_test: false
@@ -3964,17 +3291,17 @@ enums:
     identifier: false
   USIC0_CH0_SCTR_WLE:
     enum:
-      value1:
+      1_data_bit_located_at_bit__cont:
         description: The data word contains 1 data bit located at bit position 0.
         value: 0
-      value2:
+      2_data_bits_located_at_bit_cont:
         description: The data word contains 2 data bits located at bit positions [1:0].
         value: 1
-      value3:
+      15_data_bits_located_at_bi_cont:
         description: The data word contains 15 data bits located at bit positions
           [14:0].
         value: 14
-      value4:
+      16_data_bits_located_at_bi_cont:
         description: The data word contains 16 data bits located at bit positions
           [15:0].
         value: 15
@@ -3984,20 +3311,20 @@ enums:
     identifier: false
   USIC0_CH0_SCTR_TRM:
     enum:
-      value1:
+      inactive_data_cont:
         description: The shift control signal is considered as inactive and data frame
           transfers are not possible.
         value: 0
-      value2:
+      active_if_at__cont:
         description: The shift control signal is considered active if it is at 1-level.
           This is the setting to be programmed to allow data transfers.
         value: 1
-      value3:
+      active_if_at__cont_:
         description: The shift control signal is considered active if it is at 0-level.
           It is recommended to avoid this setting and to use the inversion in the
           DX2 stage in case of a low-active signal.
         value: 2
-      value4:
+      active_withou_cont:
         description: The shift control signal is considered active without referring
           to the actual signal level. Data frame transfer is possible after each edge
           of the signal.
@@ -4008,10 +3335,10 @@ enums:
     identifier: false
   USIC0_CH0_SCTR_DOCFG:
     enum:
-      value1:
+      shift_data_value:
         description: DOUTx = shift data value
         value: 0
-      value2:
+      inverted_shift_data_value:
         description: DOUTx = inverted shift data value
         value: 1
     unit_test: false
@@ -4020,11 +3347,11 @@ enums:
     identifier: false
   USIC0_CH0_SCTR_HPCDIR:
     enum:
-      value1:
+      pins_with_hardware_pin_control_enabled_select_cont:
         description: The pin(s) with hardware pin control enabled are selected to
           be in input mode.
         value: 0
-      value2:
+      _:
         description: The pin(s) with hardware pin control enabled are selected to
           be in output mode.
         value: 1
@@ -4034,15 +3361,15 @@ enums:
     identifier: false
   USIC0_CH0_SCTR_DSM:
     enum:
-      value1:
+      one_bit_at__cont:
         description: Receive and transmit data is shifted in and out one bit at a
           time through DX0 and DOUT0.
         value: 0
-      value3:
+      two_bits_at_cont:
         description: Receive and transmit data is shifted in and out two bits at a
           time through two input stages (DX0 and DX3) and DOUT[1:0] respectively.
         value: 2
-      value4:
+      four_bits_a_cont:
         description: Receive and transmit data is shifted in and out four bits at
           a time through four input stages (DX0, DX[5:3]) and DOUT[3:0] respectively.
         value: 3
@@ -4050,25 +3377,13 @@ enums:
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_SCTR_PDL:
-    enum:
-      value1:
-        description: The passive data level is 0.
-        value: 0
-      value2:
-        description: The passive data level is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_SCTR_SDIR:
     enum:
-      value1:
+      lsb_first_first_data_bit_data_word_loca_cont:
         description: Shift LSB first. The first data bit of a data word is located
           at bit position 0.
         value: 0
-      value2:
+      msb_first_first_data_bit_data_word_loca_cont:
         description: Shift MSB first. The first data bit of a data word is located
           at the bit position given by bit field SCTR.WLE.
         value: 1
@@ -4078,11 +3393,11 @@ enums:
     identifier: false
   USIC0_CH0_TCSR_TE:
     enum:
-      value1:
+      not_been_detected_transmiss_cont:
         description: The trigger event has not yet been detected. A transmission of
           the data word in TBUF can not be started.
         value: 0
-      value2:
+      been_detected_or_trigger_me_cont:
         description: The trigger event has been detected (or the trigger mechanism
           is switched off) and a transmission of the data word in TBUF can not be
           started.
@@ -4093,11 +3408,11 @@ enums:
     identifier: false
   USIC0_CH0_TCSR_TVC:
     enum:
-      value1:
+      at_least_one_data_buff_cont:
         description: Since TVC has been set, at least one data buffer underflow condition
           has occurred.
         value: 0
-      value2:
+      no_data_buffer_underfl_cont:
         description: Since TVC has been set, no data buffer underflow condition has
           occurred.
         value: 1
@@ -4107,12 +3422,12 @@ enums:
     identifier: false
   USIC0_CH0_TCSR_TV:
     enum:
-      value1:
+      latest_start_data_word_transmission_has_taken_cont:
         description: The latest start of a data word transmission has taken place
           while no valid data was available. As a result, the transmission of a data
           words with passive level (SCTR.PDL) has been started.
         value: 0
-      value2:
+      _:
         description: The latest start of a data word transmission has taken place
           with valid data from TBUF.
         value: 1
@@ -4122,11 +3437,11 @@ enums:
     identifier: false
   USIC0_CH0_TCSR_TSOF:
     enum:
-      value1:
+      not_been_st_cont:
         description: The latest data word transmission has not been started for the
           first word of a data frame.
         value: 0
-      value2:
+      been_starte_cont:
         description: The latest data word transmission has been started for the first
           word of a data frame.
         value: 1
@@ -4136,11 +3451,11 @@ enums:
     identifier: false
   USIC0_CH0_TCSR_WA:
     enum:
-      value1:
+      falling_e_cont:
         description: The data word in TBUF will be transmitted after a falling edge
           of WA has been detected (referring to PSR.WA).
         value: 0
-      value2:
+      rising_ed_cont:
         description: The data word in TBUF will be transmitted after a rising edge
           of WA has been detected (referring to PSR.WA).
         value: 1
@@ -4150,10 +3465,10 @@ enums:
     identifier: false
   USIC0_CH0_TCSR_TDVTR:
     enum:
-      value1:
+      permanently_set:
         description: Bit TCSR.TE is permanently set.
         value: 0
-      value2:
+      set_if_dx2t_becomes_active_while_tdv_1:
         description: Bit TCSR.TE is set if DX2T becomes active while TDV = 1.
         value: 1
     unit_test: false
@@ -4162,19 +3477,19 @@ enums:
     identifier: false
   USIC0_CH0_TCSR_TDEN:
     enum:
-      value1:
+      start_data_word_tbuf_disabled_if_cont:
         description: A transmission start of the data word in TBUF is disabled. If
           a transmission is started, the passive data level is sent out.
         value: 0
-      value2:
+      data_word_tbuf_can_be_started_if_cont:
         description: A transmission of the data word in TBUF can be started if TDV
           = 1.
         value: 1
-      value3:
+      data_word_tbuf_can_be_started_if_cont_:
         description: A transmission of the data word in TBUF can be started if TDV
           = 1 while DX2S = 0.
         value: 2
-      value4:
+      data_word_tbuf_can_be_started_if_cont__:
         description: A transmission of the data word in TBUF can be started if TDV
           = 1 while DX2S = 1.
         value: 3
@@ -4184,12 +3499,12 @@ enums:
     identifier: false
   USIC0_CH0_TCSR_TDSSM:
     enum:
-      value1:
+      not_considered_invalid_after_h_cont:
         description: The data word in TBUF is not considered as invalid after it has
           been loaded into the transmit shift register. The loading of the TBUF data
           into the shift register does not clear TDV.
         value: 0
-      value2:
+      considered_invalid_after_has_b_cont:
         description: The data word in TBUF is considered as invalid after it has been
           loaded into the shift register. In ASC and IIC mode, TDV is cleared with
           the TBI event, whereas in SSC and IIS mode, it is cleared with the RSI event.
@@ -4201,10 +3516,10 @@ enums:
     identifier: false
   USIC0_CH0_TCSR_TDV:
     enum:
-      value1:
+      not_valid_transmission:
         description: The data word in TBUF is not valid for transmission.
         value: 0
-      value2:
+      valid_transmission_transmissio_cont:
         description: The data word in TBUF is valid for transmission and a transmission
           start is possible. New data should not be written to a TBUFx input location
           while TDV = 1.
@@ -4215,11 +3530,11 @@ enums:
     identifier: false
   USIC0_CH0_TCSR_EOF:
     enum:
-      value1:
+      not_considered_last_word_an_ss_cont:
         description: The data word in TBUF is not considered as last word of an SSC
           frame.
         value: 0
-      value2:
+      considered_last_word_an_ssc_frame:
         description: The data word in TBUF is considered as last word of an SSC frame.
         value: 1
     unit_test: false
@@ -4228,10 +3543,10 @@ enums:
     identifier: false
   USIC0_CH0_TCSR_SOF:
     enum:
-      value1:
+      not_considered_first_word_frame:
         description: The data word in TBUF is not considered as first word of a frame.
         value: 0
-      value2:
+      considered_first_word_frame_cu_cont:
         description: The data word in TBUF is considered as first word of a frame.
           A currently running frame is finished and MSLS becomes deactivated (respecting
           the programmed delays).
@@ -4242,35 +3557,11 @@ enums:
     identifier: false
   USIC0_CH0_TCSR_HPCMD:
     enum:
-      value1:
+      disabled:
         description: The automatic update of bits SCTR.DSM and SCTR.HPCDIR is disabled.
         value: 0
-      value2:
+      enabled:
         description: The automatic update of bits SCTR.DSM and SCTR.HPCDIR is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TCSR_WAMD:
-    enum:
-      value1:
-        description: The automatic update of bit WA is disabled.
-        value: 0
-      value2:
-        description: The automatic update of bit WA is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TCSR_FLEMD:
-    enum:
-      value1:
-        description: The automatic update of FLE is disabled.
-        value: 0
-      value2:
-        description: The automatic update of FLE is enabled.
         value: 1
     unit_test: false
     json: false
@@ -4278,23 +3569,11 @@ enums:
     identifier: false
   USIC0_CH0_TCSR_SELMD:
     enum:
-      value1:
+      automatic_update_pcrctr2316_disabled:
         description: The automatic update of PCR.CTR[23:16] is disabled.
         value: 0
-      value2:
+      _:
         description: The automatic update of PCR.CTR[23:16] is disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TCSR_WLEMD:
-    enum:
-      value1:
-        description: The automatic update of SCTR.WLE and TCSR.EOF is disabled.
-        value: 0
-      value2:
-        description: The automatic update of SCTR.WLE and TCSR.EOF is enabled.
         value: 1
     unit_test: false
     json: false
@@ -4302,10 +3581,10 @@ enums:
     identifier: false
   USIC0_CH0_PCR_ASCMode_MCLK:
     enum:
-      value1:
+      disabled_mclk_signal_0:
         description: The MCLK generation is disabled and the MCLK signal is 0.
         value: 0
-      value2:
+      enabled:
         description: The MCLK generation is enabled.
         value: 1
     unit_test: false
@@ -4314,10 +3593,10 @@ enums:
     identifier: false
   USIC0_CH0_PCR_ASCMode_TSTEN:
     enum:
-      value1:
+      not_modified_depending_transmitter__cont:
         description: Flag PSR[9] is not modified depending on the transmitter status.
         value: 0
-      value2:
+      set_during_complete_transmission_frame:
         description: Flag PSR[9] is set during the complete transmission of a frame.
         value: 1
     unit_test: false
@@ -4326,10 +3605,10 @@ enums:
     identifier: false
   USIC0_CH0_PCR_ASCMode_RSTEN:
     enum:
-      value1:
+      not_modified_depending_receiver_status:
         description: Flag PSR[9] is not modified depending on the receiver status.
         value: 0
-      value2:
+      set_during_complete_reception_frame:
         description: Flag PSR[9] is set during the complete reception of a frame.
         value: 1
     unit_test: false
@@ -4338,64 +3617,28 @@ enums:
     identifier: false
   USIC0_CH0_PCR_ASCMode_PL:
     enum:
-      value1:
+      equal_bit_length_no_shortened_0:
         description: The pulse length is equal to the bit length (no shortened 0).
         value: 0
-      value2:
+      0_bit_2_time_quanta:
         description: The pulse length of a 0 bit is 2 time quanta.
         value: 1
-      value3:
+      0_bit_3_time_quanta:
         description: The pulse length of a 0 bit is 3 time quanta.
         value: 2
-      value4:
+      0_bit_8_time_quanta:
         description: The pulse length of a 0 bit is 8 time quanta.
         value: 7
     unit_test: false
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_PCR_ASCMode_FFIEN:
-    enum:
-      value1:
-        description: The interrupt generation is disabled.
-        value: 0
-      value2:
-        description: The interrupt generation is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_ASCMode_FEIEN:
-    enum:
-      value1:
-        description: The interrupt generation is disabled.
-        value: 0
-      value2:
-        description: The interrupt generation is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_ASCMode_RNIEN:
-    enum:
-      value1:
-        description: The interrupt generation is disabled.
-        value: 0
-      value2:
-        description: The interrupt generation is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_PCR_ASCMode_CDEN:
     enum:
-      value1:
+      collision_detection_disabled:
         description: The collision detection is disabled.
         value: 0
-      value2:
+      if_collision_detected_transmitter_stops_data__cont:
         description: If a collision is detected, the transmitter stops its data transmission,
           outputs a 1, sets bit PSR.COL and generates a protocol interrupt. In order
           to allow data transmission again, PSR.COL has to be cleared by software.
@@ -4404,26 +3647,14 @@ enums:
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_PCR_ASCMode_SBIEN:
-    enum:
-      value1:
-        description: The interrupt generation is disabled.
-        value: 0
-      value2:
-        description: The interrupt generation is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_PCR_ASCMode_IDM:
     enum:
-      value1:
+      idle_detection_switched_off_bits_psrtxidl_cont:
         description: The bus idle detection is switched off and bits PSR.TXIDLE and
           PSR.RXIDLE are set automatically to enable data transfers without checking
           the inputs before.
         value: 0
-      value2:
+      considered_idle_after_number_consecutive__cont:
         description: The bus is considered as idle after a number of consecutive passive
           bit times defined by SCTR.FLE plus 2 (in the case without parity bit) or
           plus 3 (in the case with parity bit).
@@ -4434,10 +3665,10 @@ enums:
     identifier: false
   USIC0_CH0_PCR_ASCMode_STPB:
     enum:
-      value1:
+      '1':
         description: The number of stop bits is 1.
         value: 0
-      value2:
+      '2':
         description: The number of stop bits is 2.
         value: 1
     unit_test: false
@@ -4446,11 +3677,11 @@ enums:
     identifier: false
   USIC0_CH0_PCR_ASCMode_SMD:
     enum:
-      value1:
+      only_one_sample_taken_per_bit_time_current_in_cont:
         description: Only one sample is taken per bit time. The current input value
           is sampled.
         value: 0
-      value2:
+      three_samples_taken_per_bit_time_majority_dec_cont:
         description: Three samples are taken per bit time and a majority decision
           is made.
         value: 1
@@ -4460,10 +3691,10 @@ enums:
     identifier: false
   USIC0_CH0_PCR_SSCMode_MCLK:
     enum:
-      value1:
+      disabled_output_mclk_0:
         description: The MCLK generation is disabled and output MCLK = 0.
         value: 0
-      value2:
+      enabled:
         description: The MCLK generation is enabled.
         value: 1
     unit_test: false
@@ -4472,11 +3703,11 @@ enums:
     identifier: false
   USIC0_CH0_PCR_SSCMode_SLPHSEL:
     enum:
-      value1:
+      data_bits_shifted_out_with_leading_edge_shift_cont:
         description: Data bits are shifted out with the leading edge of the shift
           clock signal and latched in with the trailing edge.
         value: 0
-      value2:
+      first_data_bit_shifted_out_when_data_shift_un_cont:
         description: The first data bit is shifted out when the data shift unit receives
           a low to high transition from the DX2 stage. Subsequent bits are shifted
           out with the trailing edge of the shift clock signal. Data bits are always
@@ -4488,10 +3719,10 @@ enums:
     identifier: false
   USIC0_CH0_PCR_SSCMode_TIWEN:
     enum:
-      value1:
+      no_delay_between_data_words_same_frame:
         description: No delay between data words of the same frame.
         value: 0
-      value2:
+      inter_word_delay_tiw_enabled_introduced_betwe_cont:
         description: The inter-word delay Tiw is enabled and introduced between data
           words of the same frame.
         value: 1
@@ -4501,10 +3732,10 @@ enums:
     identifier: false
   USIC0_CH0_PCR_SSCMode_SELO:
     enum:
-      value1:
+      not_be_activated:
         description: The corresponding SELOx line cannot be activated.
         value: 0
-      value2:
+      _be_activated_acc_cont:
         description: The corresponding SELOx line can be activated (according to the
           mode selected by SELCTR).
         value: 1
@@ -4514,10 +3745,10 @@ enums:
     identifier: false
   USIC0_CH0_PCR_SSCMode_DX2TIEN:
     enum:
-      value1:
+      not_generated_if_dx2t_activated:
         description: A protocol interrupt is not generated if DX2T is activated.
         value: 0
-      value2:
+      generated_if_dx2t_activated:
         description: A protocol interrupt is generated if DX2T is activated.
         value: 1
     unit_test: false
@@ -4526,11 +3757,11 @@ enums:
     identifier: false
   USIC0_CH0_PCR_SSCMode_MSLSIEN:
     enum:
-      value1:
+      not_generated_if_change_si_cont:
         description: A protocol interrupt is not generated if a change of signal MSLS
           is detected.
         value: 0
-      value2:
+      generated_if_change_signal_cont:
         description: A protocol interrupt is generated if a change of signal MSLS
           is detected.
         value: 1
@@ -4540,11 +3771,11 @@ enums:
     identifier: false
   USIC0_CH0_PCR_SSCMode_PARIEN:
     enum:
-      value1:
+      not_generated_with_detecti_cont:
         description: A protocol interrupt is not generated with the detection of a
           parity error.
         value: 0
-      value2:
+      generated_with_detection_p_cont:
         description: A protocol interrupt is generated with the detection of a parity
           error.
         value: 1
@@ -4552,32 +3783,14 @@ enums:
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_PCR_SSCMode_CTQSEL1:
-    enum:
-      value1:
-        description: fCTQIN = fPDIV
-        value: 0
-      value2:
-        description: fCTQIN = fPPP
-        value: 1
-      value3:
-        description: fCTQIN = fSCLK
-        value: 2
-      value4:
-        description: fCTQIN = fMCLK
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_PCR_SSCMode_FEM:
     enum:
-      value1:
+      current_data_frame_considered_finished_when_l_cont:
         description: The current data frame is considered as finished when the last
           bit of a data word has been sent out and the transmit buffer TBUF does not
           contain new data (TDV = 0).
         value: 0
-      value2:
+      msls_signal_kept_active_also_while_no_new_dat_cont:
         description: The MSLS signal is kept active also while no new data is available
           and no other end of frame condition is reached. In this case, the software
           can accept delays in delivering the data without automatic deactivation
@@ -4589,11 +3802,11 @@ enums:
     identifier: false
   USIC0_CH0_PCR_SSCMode_SELINV:
     enum:
-      value1:
+      same_polarity_msls_signal_a_cont:
         description: The SELO outputs have the same polarity as the MSLS signal (active
           high).
         value: 0
-      value2:
+      inverted_polarity_msls_sign_cont:
         description: The SELO outputs have the inverted polarity to the MSLS signal
           (active low).
         value: 1
@@ -4603,10 +3816,10 @@ enums:
     identifier: false
   USIC0_CH0_PCR_SSCMode_SELCTR:
     enum:
-      value1:
+      coded_select_mode_enabled:
         description: The coded select mode is enabled.
         value: 0
-      value2:
+      direct_select_mode_enabled:
         description: The direct select mode is enabled.
         value: 1
     unit_test: false
@@ -4615,11 +3828,11 @@ enums:
     identifier: false
   USIC0_CH0_PCR_SSCMode_MSLSEN:
     enum:
-      value1:
+      disabled_msls_0_this_setting__cont:
         description: The MSLS generation is disabled (MSLS = 0). This is the setting
           for SSC slave mode.
         value: 0
-      value2:
+      enabled_this_setting_ssc_mast_cont:
         description: The MSLS generation is enabled. This is the setting for SSC master
           mode.
         value: 1
@@ -4629,23 +3842,11 @@ enums:
     identifier: false
   USIC0_CH0_PCR_IICMode_MCLK:
     enum:
-      value1:
+      disabled_mclk_0:
         description: The MCLK generation is disabled and MCLK is 0.
         value: 0
-      value2:
+      enabled:
         description: The MCLK generation is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_IICMode_ACKIEN:
-    enum:
-      value1:
-        description: The acknowledge interrupt is disabled.
-        value: 0
-      value2:
-        description: The acknowledge interrupt is enabled.
         value: 1
     unit_test: false
     json: false
@@ -4653,11 +3854,11 @@ enums:
     identifier: false
   USIC0_CH0_PCR_IICMode_SACKDIS:
     enum:
-      value1:
+      enable_cont:
         description: The generation of an active slave acknowledge is enabled (slave
           acknowledge with 0 level = more bytes can be received).
         value: 0
-      value2:
+      disabl_cont:
         description: The generation of an active slave acknowledge is disabled (slave
           acknowledge with 1 level = reception stopped).
         value: 1
@@ -4665,97 +3866,13 @@ enums:
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_PCR_IICMode_ERRIEN:
-    enum:
-      value1:
-        description: The error interrupt is disabled.
-        value: 0
-      value2:
-        description: The error interrupt is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_IICMode_SRRIEN:
-    enum:
-      value1:
-        description: The slave read request interrupt is disabled.
-        value: 0
-      value2:
-        description: The slave read request interrupt is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_IICMode_ARLIEN:
-    enum:
-      value1:
-        description: The arbitration lost interrupt is disabled.
-        value: 0
-      value2:
-        description: The arbitration lost interrupt is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_IICMode_NACKIEN:
-    enum:
-      value1:
-        description: The non-acknowledge interrupt is disabled.
-        value: 0
-      value2:
-        description: The non-acknowledge interrupt is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_IICMode_PCRIEN:
-    enum:
-      value1:
-        description: The stop condition interrupt is disabled.
-        value: 0
-      value2:
-        description: The stop condition interrupt is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_IICMode_RSCRIEN:
-    enum:
-      value1:
-        description: The repeated start condition interrupt is disabled.
-        value: 0
-      value2:
-        description: The repeated start condition interrupt is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_IICMode_SCRIEN:
-    enum:
-      value1:
-        description: The start condition interrupt is disabled.
-        value: 0
-      value2:
-        description: The start condition interrupt is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_PCR_IICMode_STIM:
     enum:
-      value1:
+      10_time_quanta_timing_adapted_cont:
         description: A symbol contains 10 time quanta. The timing is adapted for standard
           mode (100 kBaud).
         value: 0
-      value2:
+      25_time_quanta_timing_adapted_cont:
         description: A symbol contains 25 time quanta. The timing is adapted for fast
           mode (400 kBaud).
         value: 1
@@ -4765,23 +3882,11 @@ enums:
     identifier: false
   USIC0_CH0_PCR_IICMode_ACK00:
     enum:
-      value1:
+      not_sensitive_this_address:
         description: The slave device is not sensitive to this address.
         value: 0
-      value2:
+      sensitive_this_address:
         description: The slave device is sensitive to this address.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_IISMode_MCLK:
-    enum:
-      value1:
-        description: The MCLK generation is disabled and MCLK is 0.
-        value: 0
-      value2:
-        description: The MCLK generation is enabled.
         value: 1
     unit_test: false
     json: false
@@ -4789,10 +3894,10 @@ enums:
     identifier: false
   USIC0_CH0_PCR_IISMode_DX2TIEN:
     enum:
-      value1:
+      not_generated_if_dx2t_active:
         description: A protocol interrupt is not generated if DX2T is active.
         value: 0
-      value2:
+      generated_if_dx2t_active:
         description: A protocol interrupt is generated if DX2T is active.
         value: 1
     unit_test: false
@@ -4801,10 +3906,10 @@ enums:
     identifier: false
   USIC0_CH0_PCR_IISMode_ENDIEN:
     enum:
-      value1:
+      not_activated:
         description: A protocol interrupt is not activated.
         value: 0
-      value2:
+      activated:
         description: A protocol interrupt is activated.
         value: 1
     unit_test: false
@@ -4813,11 +3918,11 @@ enums:
     identifier: false
   USIC0_CH0_PCR_IISMode_WAREIEN:
     enum:
-      value1:
+      not_activated_if_rising_ed_cont:
         description: A protocol interrupt is not activated if a rising edge of WA
           is generated.
         value: 0
-      value2:
+      activated_if_rising_edge_w_cont:
         description: A protocol interrupt is activated if a rising edge of WA is generated.
         value: 1
     unit_test: false
@@ -4826,11 +3931,11 @@ enums:
     identifier: false
   USIC0_CH0_PCR_IISMode_WAFEIEN:
     enum:
-      value1:
+      not_activated_if_falling_e_cont:
         description: A protocol interrupt is not activated if a falling edge of WA
           is generated.
         value: 0
-      value2:
+      activated_if_falling_edge__cont:
         description: A protocol interrupt is activated if a falling edge of WA is
           generated.
         value: 1
@@ -4840,10 +3945,10 @@ enums:
     identifier: false
   USIC0_CH0_PCR_IISMode_SELINV:
     enum:
-      value1:
+      same_polarity_wa_signal:
         description: The SELOx outputs have the same polarity as the WA signal.
         value: 0
-      value2:
+      inverted_polarity_wa_signal:
         description: The SELOx outputs have the inverted polarity to the WA signal.
         value: 1
     unit_test: false
@@ -4852,11 +3957,11 @@ enums:
     identifier: false
   USIC0_CH0_PCR_IISMode_DTEN:
     enum:
-      value1:
+      changes_wa_input_signal_ignored_no_transfers__cont:
         description: The changes of the WA input signal are ignored and no transfers
           take place.
         value: 0
-      value2:
+      transfers_enabled:
         description: Transfers are enabled.
         value: 1
     unit_test: false
@@ -4865,12 +3970,12 @@ enums:
     identifier: false
   USIC0_CH0_PCR_IISMode_WAGEN:
     enum:
-      value1:
+      slave_generation_word_address_cont:
         description: The IIS can be used as slave. The generation of the word address
           signal is disabled. The output signal WA is 0. The MCLKO signal generation
           depends on PCR.MCLK.
         value: 0
-      value2:
+      master_generation_word_addres_cont:
         description: The IIS can be used as master. The generation of the word address
           signal is enabled. The signal starts with a 0 after being enabled. The generation
           of MCLK is enabled, independent of PCR.MCLK. After clearing WAGEN, the USIC
@@ -4882,10 +3987,10 @@ enums:
     identifier: false
   USIC0_CH0_CCR_BRGIEN:
     enum:
-      value1:
+      disabled:
         description: The baud rate generator interrupt is disabled.
         value: 0
-      value2:
+      enabled_case_ba_cont:
         description: The baud rate generator interrupt is enabled. In case of a baud
           rate generator event, the service request output SRx indicated by INPR.PINP
           is activated.
@@ -4896,10 +4001,10 @@ enums:
     identifier: false
   USIC0_CH0_CCR_AIEN:
     enum:
-      value1:
+      disabled:
         description: The alternative receive interrupt is disabled.
         value: 0
-      value2:
+      enabled_case_an_cont:
         description: The alternative receive interrupt is enabled. In case of an alternative
           receive event, the service request output SRx indicated by INPR.AINP is
           activated.
@@ -4910,10 +4015,10 @@ enums:
     identifier: false
   USIC0_CH0_CCR_RIEN:
     enum:
-      value1:
+      disabled:
         description: The receive interrupt is disabled.
         value: 0
-      value2:
+      enabled_case_receive_event__cont:
         description: The receive interrupt is enabled. In case of a receive event,
           the service request output SRx indicated by INPR.RINP is activated.
         value: 1
@@ -4923,10 +4028,10 @@ enums:
     identifier: false
   USIC0_CH0_CCR_TBIEN:
     enum:
-      value1:
+      disabled:
         description: The transmit buffer interrupt is disabled.
         value: 0
-      value2:
+      enabled_case_transm_cont:
         description: The transmit buffer interrupt is enabled. In case of a transmit
           buffer event, the service request output SRx indicated by INPR.TBINP is
           activated.
@@ -4937,10 +4042,10 @@ enums:
     identifier: false
   USIC0_CH0_CCR_TSIEN:
     enum:
-      value1:
+      disabled:
         description: The transmit shift interrupt is disabled.
         value: 0
-      value2:
+      enabled_case_transmi_cont:
         description: The transmit shift interrupt is enabled. In case of a transmit
           shift interrupt event, the service request output SRx indicated by INPR.TSINP
           is activated.
@@ -4951,10 +4056,10 @@ enums:
     identifier: false
   USIC0_CH0_CCR_DLIEN:
     enum:
-      value1:
+      disabled:
         description: The data lost interrupt is disabled.
         value: 0
-      value2:
+      enabled_case_data_lost_ev_cont:
         description: The data lost interrupt is enabled. In case of a data lost event,
           the service request output SRx indicated by INPR.PINP is activated.
         value: 1
@@ -4964,10 +4069,10 @@ enums:
     identifier: false
   USIC0_CH0_CCR_RSIEN:
     enum:
-      value1:
+      disabled:
         description: The receiver start interrupt is disabled.
         value: 0
-      value2:
+      enabled_case_receive_cont:
         description: The receiver start interrupt is enabled. In case of a receiver
           start event, the service request output SRx indicated by INPR.TBINP is activated.
         value: 1
@@ -4977,14 +4082,14 @@ enums:
     identifier: false
   USIC0_CH0_CCR_PM:
     enum:
-      value1:
+      parity_generation_disabled:
         description: The parity generation is disabled.
         value: 0
-      value3:
+      even_parity_selected_parity_bit_1_odd_number__cont:
         description: Even parity is selected (parity bit = 1 on odd number of 1s in
           data, parity bit = 0 on even number of 1s in data).
         value: 2
-      value4:
+      odd_parity_selected_parity_bit_0_odd_number_1_cont:
         description: Odd parity is selected (parity bit = 0 on odd number of 1s in
           data, parity bit = 1 on even number of 1s in data).
         value: 3
@@ -4994,16 +4099,16 @@ enums:
     identifier: false
   USIC0_CH0_CCR_HPCEN:
     enum:
-      value1:
+      disabled:
         description: The hardware port control is disabled.
         value: 0
-      value2:
+      enabled_dx0_dout0:
         description: The hardware port control is enabled for DX0 and DOUT0.
         value: 1
-      value3:
+      enabled_dx3_dx0_dout10:
         description: The hardware port control is enabled for DX3, DX0 and DOUT[1:0].
         value: 2
-      value4:
+      enabled_dx0_dx53_dout30:
         description: The hardware port control is enabled for DX0, DX[5:3] and DOUT[3:0].
         value: 3
     unit_test: false
@@ -5012,20 +4117,20 @@ enums:
     identifier: false
   USIC0_CH0_CCR_MODE:
     enum:
-      value1:
+      usic_channel_disabled_all_protocol_related_st_cont:
         description: The USIC channel is disabled. All protocol-related state machines
           are set to an idle state.
         value: 0
-      value2:
+      ssc_spi_protocol_selected:
         description: The SSC (SPI) protocol is selected.
         value: 1
-      value3:
+      asc_sci_uart_protocol_selected:
         description: The ASC (SCI, UART) protocol is selected.
         value: 2
-      value4:
+      iis_protocol_selected:
         description: The IIS protocol is selected.
         value: 3
-      value5:
+      iic_protocol_selected:
         description: The IIC protocol is selected.
         value: 4
     unit_test: false
@@ -5034,167 +4139,11 @@ enums:
     identifier: false
   USIC0_CH0_PSR_BRGIF:
     enum:
-      value1:
+      not_occurred:
         description: A baud rate generator event has not occurred.
         value: 0
-      value2:
+      occurred:
         description: A baud rate generator event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_AIF:
-    enum:
-      value1:
-        description: An alternative receive event has not occurred.
-        value: 0
-      value2:
-        description: An alternative receive event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_RIF:
-    enum:
-      value1:
-        description: A receive event has not occurred.
-        value: 0
-      value2:
-        description: A receive event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_TBIF:
-    enum:
-      value1:
-        description: A transmit buffer event has not occurred.
-        value: 0
-      value2:
-        description: A transmit buffer event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_TSIF:
-    enum:
-      value1:
-        description: A transmit shift event has not occurred.
-        value: 0
-      value2:
-        description: A transmit shift event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_DLIF:
-    enum:
-      value1:
-        description: A data lost event has not occurred.
-        value: 0
-      value2:
-        description: A data lost event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_RSIF:
-    enum:
-      value1:
-        description: A receiver start event has not occurred.
-        value: 0
-      value2:
-        description: A receiver start event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_ASCMode_BRGIF:
-    enum:
-      value1:
-        description: A baud rate generator event has not occurred.
-        value: 0
-      value2:
-        description: A baud rate generator event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_ASCMode_AIF:
-    enum:
-      value1:
-        description: An alternative receive event has not occurred.
-        value: 0
-      value2:
-        description: An alternative receive event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_ASCMode_RIF:
-    enum:
-      value1:
-        description: A receive event has not occurred.
-        value: 0
-      value2:
-        description: A receive event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_ASCMode_TBIF:
-    enum:
-      value1:
-        description: A transmit buffer event has not occurred.
-        value: 0
-      value2:
-        description: A transmit buffer event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_ASCMode_TSIF:
-    enum:
-      value1:
-        description: A transmit shift event has not occurred.
-        value: 0
-      value2:
-        description: A transmit shift event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_ASCMode_DLIF:
-    enum:
-      value1:
-        description: A data lost event has not occurred.
-        value: 0
-      value2:
-        description: A data lost event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_ASCMode_RSIF:
-    enum:
-      value1:
-        description: A receiver start event has not occurred.
-        value: 0
-      value2:
-        description: A receiver start event has occurred.
         value: 1
     unit_test: false
     json: false
@@ -5202,10 +4151,10 @@ enums:
     identifier: false
   USIC0_CH0_PSR_ASCMode_BUSY:
     enum:
-      value1:
+      does_not_take_place:
         description: A data transfer does not take place.
         value: 0
-      value2:
+      currently_takes_place:
         description: A data transfer currently takes place.
         value: 1
     unit_test: false
@@ -5214,23 +4163,11 @@ enums:
     identifier: false
   USIC0_CH0_PSR_ASCMode_TFF:
     enum:
-      value1:
+      not_finished:
         description: The transmitter frame is not yet finished.
         value: 0
-      value2:
+      finished:
         description: The transmitter frame is finished.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_ASCMode_RFF:
-    enum:
-      value1:
-        description: The received frame is not yet finished.
-        value: 0
-      value2:
-        description: The received frame is finished.
         value: 1
     unit_test: false
     json: false
@@ -5238,35 +4175,11 @@ enums:
     identifier: false
   USIC0_CH0_PSR_ASCMode_FER1:
     enum:
-      value1:
+      not_been_detected:
         description: A format error 1 has not been detected.
         value: 0
-      value2:
+      been_detected:
         description: A format error 1 has been detected.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_ASCMode_FER0:
-    enum:
-      value1:
-        description: A format error 0 has not been detected.
-        value: 0
-      value2:
-        description: A format error 0 has been detected.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_ASCMode_RNS:
-    enum:
-      value1:
-        description: Receiver noise has not been detected.
-        value: 0
-      value2:
-        description: Receiver noise has been detected.
         value: 1
     unit_test: false
     json: false
@@ -5274,24 +4187,12 @@ enums:
     identifier: false
   USIC0_CH0_PSR_ASCMode_COL:
     enum:
-      value1:
+      not_been_detected_frame_transmi_cont:
         description: A collision has not yet been detected and frame transmission
           is possible.
         value: 0
-      value2:
+      been_detected_frame_transmissio_cont:
         description: A collision has been detected and frame transmission is not possible.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_ASCMode_SBD:
-    enum:
-      value1:
-        description: A synchronization break has not yet been detected.
-        value: 0
-      value2:
-        description: A synchronization break has been detected.
         value: 1
     unit_test: false
     json: false
@@ -5299,10 +4200,10 @@ enums:
     identifier: false
   USIC0_CH0_PSR_ASCMode_RXIDLE:
     enum:
-      value1:
+      not_been_idle:
         description: The receiver line has not yet been idle.
         value: 0
-      value2:
+      been_idle_frame_reception_p_cont:
         description: The receiver line has been idle and frame reception is possible.
         value: 1
     unit_test: false
@@ -5311,10 +4212,10 @@ enums:
     identifier: false
   USIC0_CH0_PSR_ASCMode_TXIDLE:
     enum:
-      value1:
+      not_been_idle:
         description: The transmitter line has not yet been idle.
         value: 0
-      value2:
+      been_idle_frame_transmis_cont:
         description: The transmitter line has been idle and frame transmission is
           possible.
         value: 1
@@ -5322,109 +4223,13 @@ enums:
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_PSR_SSCMode_BRGIF:
-    enum:
-      value1:
-        description: A baud rate generator event has not occurred.
-        value: 0
-      value2:
-        description: A baud rate generator event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_SSCMode_AIF:
-    enum:
-      value1:
-        description: An alternative receive event has not occurred.
-        value: 0
-      value2:
-        description: An alternative receive event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_SSCMode_RIF:
-    enum:
-      value1:
-        description: A receive event has not occurred.
-        value: 0
-      value2:
-        description: A receive event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_SSCMode_TBIF:
-    enum:
-      value1:
-        description: A transmit buffer event has not occurred.
-        value: 0
-      value2:
-        description: A transmit buffer event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_SSCMode_TSIF:
-    enum:
-      value1:
-        description: A transmit shift event has not occurred.
-        value: 0
-      value2:
-        description: A transmit shift event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_SSCMode_DLIF:
-    enum:
-      value1:
-        description: A data lost event has not occurred.
-        value: 0
-      value2:
-        description: A data lost event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_SSCMode_RSIF:
-    enum:
-      value1:
-        description: A receiver start event has not occurred.
-        value: 0
-      value2:
-        description: A receiver start event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_PSR_SSCMode_PARERR:
     enum:
-      value1:
+      not_been_activated:
         description: A parity error event has not been activated.
         value: 0
-      value2:
+      been_activated:
         description: A parity error event has been activated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_SSCMode_DX2TEV:
-    enum:
-      value1:
-        description: The DX2T signal has not been activated.
-        value: 0
-      value2:
-        description: The DX2T signal has been activated.
         value: 1
     unit_test: false
     json: false
@@ -5432,23 +4237,11 @@ enums:
     identifier: false
   USIC0_CH0_PSR_SSCMode_MSLSEV:
     enum:
-      value1:
+      not_changed_state:
         description: The MSLS signal has not changed its state.
         value: 0
-      value2:
+      changed_state:
         description: The MSLS signal has changed its state.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_SSCMode_DX2S:
-    enum:
-      value1:
-        description: DX2S is 0.
-        value: 0
-      value2:
-        description: DX2S is 1.
         value: 1
     unit_test: false
     json: false
@@ -5456,95 +4249,11 @@ enums:
     identifier: false
   USIC0_CH0_PSR_SSCMode_MSLS:
     enum:
-      value1:
+      inactive_0:
         description: The internal signal MSLS is inactive (0).
         value: 0
-      value2:
+      active_1:
         description: The internal signal MSLS is active (1).
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IICMode_BRGIF:
-    enum:
-      value1:
-        description: A baud rate generator event has not occurred.
-        value: 0
-      value2:
-        description: A baud rate generator event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IICMode_AIF:
-    enum:
-      value1:
-        description: An alternative receive event has not occurred.
-        value: 0
-      value2:
-        description: An alternative receive event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IICMode_RIF:
-    enum:
-      value1:
-        description: A receive event has not occurred.
-        value: 0
-      value2:
-        description: A receive event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IICMode_TBIF:
-    enum:
-      value1:
-        description: A transmit buffer event has not occurred.
-        value: 0
-      value2:
-        description: A transmit buffer event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IICMode_TSIF:
-    enum:
-      value1:
-        description: A transmit shift event has not occurred.
-        value: 0
-      value2:
-        description: A transmit shift event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IICMode_DLIF:
-    enum:
-      value1:
-        description: A data lost event has not occurred.
-        value: 0
-      value2:
-        description: A data lost event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IICMode_RSIF:
-    enum:
-      value1:
-        description: A receiver start event has not occurred.
-        value: 0
-      value2:
-        description: A receiver start event has occurred.
         value: 1
     unit_test: false
     json: false
@@ -5552,35 +4261,11 @@ enums:
     identifier: false
   USIC0_CH0_PSR_IICMode_ACK:
     enum:
-      value1:
+      not_been_received:
         description: An acknowledge has not been received.
         value: 0
-      value2:
+      been_received:
         description: An acknowledge has been received.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IICMode_ERR:
-    enum:
-      value1:
-        description: An IIC error has not been detected.
-        value: 0
-      value2:
-        description: An IIC error has been detected.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IICMode_SRR:
-    enum:
-      value1:
-        description: A slave read request has not been detected.
-        value: 0
-      value2:
-        description: A slave read request has been detected.
         value: 1
     unit_test: false
     json: false
@@ -5588,59 +4273,11 @@ enums:
     identifier: false
   USIC0_CH0_PSR_IICMode_ARL:
     enum:
-      value1:
+      not_been_lost:
         description: An arbitration has not been lost.
         value: 0
-      value2:
+      been_lost:
         description: An arbitration has been lost.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IICMode_NACK:
-    enum:
-      value1:
-        description: A non-acknowledge has not been received.
-        value: 0
-      value2:
-        description: A non-acknowledge has been received.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IICMode_PCR:
-    enum:
-      value1:
-        description: A stop condition has not yet been detected.
-        value: 0
-      value2:
-        description: A stop condition has been detected.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IICMode_RSCR:
-    enum:
-      value1:
-        description: A repeated start condition has not yet been detected.
-        value: 0
-      value2:
-        description: A repeated start condition has been detected.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IICMode_SCR:
-    enum:
-      value1:
-        description: A start condition has not yet been detected.
-        value: 0
-      value2:
-        description: A start condition has been detected.
         value: 1
     unit_test: false
     json: false
@@ -5648,10 +4285,10 @@ enums:
     identifier: false
   USIC0_CH0_PSR_IICMode_WTDF:
     enum:
-      value1:
+      not_been_found:
         description: A wrong TDF code has not been found.
         value: 0
-      value2:
+      been_found:
         description: A wrong TDF code has been found.
         value: 1
     unit_test: false
@@ -5660,95 +4297,11 @@ enums:
     identifier: false
   USIC0_CH0_PSR_IICMode_SLSEL:
     enum:
-      value1:
+      not_selected_slave:
         description: The device is not selected as slave.
         value: 0
-      value2:
+      selected_slave:
         description: The device is selected as slave.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IISMode_BRGIF:
-    enum:
-      value1:
-        description: A baud rate generator event has not occurred.
-        value: 0
-      value2:
-        description: A baud rate generator event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IISMode_AIF:
-    enum:
-      value1:
-        description: An alternative receive event has not occurred.
-        value: 0
-      value2:
-        description: An alternative receive event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IISMode_RIF:
-    enum:
-      value1:
-        description: A receive event has not occurred.
-        value: 0
-      value2:
-        description: A receive event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IISMode_TBIF:
-    enum:
-      value1:
-        description: A transmit buffer event has not occurred.
-        value: 0
-      value2:
-        description: A transmit buffer event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IISMode_TSIF:
-    enum:
-      value1:
-        description: A transmit shift event has not occurred.
-        value: 0
-      value2:
-        description: A transmit shift event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IISMode_DLIF:
-    enum:
-      value1:
-        description: A data lost event has not occurred.
-        value: 0
-      value2:
-        description: A data lost event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IISMode_RSIF:
-    enum:
-      value1:
-        description: A receiver start event has not occurred.
-        value: 0
-      value2:
-        description: A receiver start event has occurred.
         value: 1
     unit_test: false
     json: false
@@ -5756,11 +4309,11 @@ enums:
     identifier: false
   USIC0_CH0_PSR_IISMode_END:
     enum:
-      value1:
+      not_ended_if_running_wagen__cont:
         description: The WA generation has not yet ended (if it is running and WAGEN
           has been cleared).
         value: 0
-      value2:
+      ended_if_has_been_running:
         description: The WA generation has ended (if it has been running).
         value: 1
     unit_test: false
@@ -5769,59 +4322,11 @@ enums:
     identifier: false
   USIC0_CH0_PSR_IISMode_WARE:
     enum:
-      value1:
+      not_been_generated:
         description: A WA rising edge has not been generated.
         value: 0
-      value2:
+      been_generated:
         description: A WA rising edge has been generated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IISMode_WAFE:
-    enum:
-      value1:
-        description: A WA falling edge has not been generated.
-        value: 0
-      value2:
-        description: A WA falling edge has been generated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IISMode_DX2TEV:
-    enum:
-      value1:
-        description: The DX2T signal has not been activated.
-        value: 0
-      value2:
-        description: The DX2T signal has been activated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IISMode_DX2S:
-    enum:
-      value1:
-        description: DX2S is 0.
-        value: 0
-      value2:
-        description: DX2S is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IISMode_WA:
-    enum:
-      value1:
-        description: WA has been sampled 0.
-        value: 0
-      value2:
-        description: WA has been sampled 1.
         value: 1
     unit_test: false
     json: false
@@ -5829,10 +4334,10 @@ enums:
     identifier: false
   USIC0_CH0_PSCR_CBRGIF:
     enum:
-      value1:
+      no_action:
         description: No action
         value: 0
-      value2:
+      flag_psrbrgif_cleared:
         description: Flag PSR.BRGIF is cleared.
         value: 1
     unit_test: false
@@ -5841,10 +4346,10 @@ enums:
     identifier: false
   USIC0_CH0_PSCR_CAIF:
     enum:
-      value1:
+      no_action:
         description: No action
         value: 0
-      value2:
+      flag_psraif_cleared:
         description: Flag PSR.AIF is cleared.
         value: 1
     unit_test: false
@@ -5853,10 +4358,10 @@ enums:
     identifier: false
   USIC0_CH0_PSCR_CRIF:
     enum:
-      value1:
+      no_action:
         description: No action
         value: 0
-      value2:
+      flag_psrrif_cleared:
         description: Flag PSR.RIF is cleared.
         value: 1
     unit_test: false
@@ -5865,10 +4370,10 @@ enums:
     identifier: false
   USIC0_CH0_PSCR_CTBIF:
     enum:
-      value1:
+      no_action:
         description: No action
         value: 0
-      value2:
+      flag_psrtbif_cleared:
         description: Flag PSR.TBIF is cleared.
         value: 1
     unit_test: false
@@ -5877,10 +4382,10 @@ enums:
     identifier: false
   USIC0_CH0_PSCR_CTSIF:
     enum:
-      value1:
+      no_action:
         description: No action
         value: 0
-      value2:
+      flag_psrtsif_cleared:
         description: Flag PSR.TSIF is cleared.
         value: 1
     unit_test: false
@@ -5889,10 +4394,10 @@ enums:
     identifier: false
   USIC0_CH0_PSCR_CDLIF:
     enum:
-      value1:
+      no_action:
         description: No action
         value: 0
-      value2:
+      flag_psrdlif_cleared:
         description: Flag PSR.DLIF is cleared.
         value: 1
     unit_test: false
@@ -5901,10 +4406,10 @@ enums:
     identifier: false
   USIC0_CH0_PSCR_CRSIF:
     enum:
-      value1:
+      no_action:
         description: No action
         value: 0
-      value2:
+      flag_psrrsif_cleared:
         description: Flag PSR.RSIF is cleared.
         value: 1
     unit_test: false
@@ -5913,118 +4418,10 @@ enums:
     identifier: false
   USIC0_CH0_PSCR_CST9:
     enum:
-      value1:
+      no_action:
         description: No action
         value: 0
-      value2:
-        description: Flag PSR.STx is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSCR_CST8:
-    enum:
-      value1:
-        description: No action
-        value: 0
-      value2:
-        description: Flag PSR.STx is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSCR_CST7:
-    enum:
-      value1:
-        description: No action
-        value: 0
-      value2:
-        description: Flag PSR.STx is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSCR_CST6:
-    enum:
-      value1:
-        description: No action
-        value: 0
-      value2:
-        description: Flag PSR.STx is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSCR_CST5:
-    enum:
-      value1:
-        description: No action
-        value: 0
-      value2:
-        description: Flag PSR.STx is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSCR_CST4:
-    enum:
-      value1:
-        description: No action
-        value: 0
-      value2:
-        description: Flag PSR.STx is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSCR_CST3:
-    enum:
-      value1:
-        description: No action
-        value: 0
-      value2:
-        description: Flag PSR.STx is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSCR_CST2:
-    enum:
-      value1:
-        description: No action
-        value: 0
-      value2:
-        description: Flag PSR.STx is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSCR_CST1:
-    enum:
-      value1:
-        description: No action
-        value: 0
-      value2:
-        description: Flag PSR.STx is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSCR_CST0:
-    enum:
-      value1:
-        description: No action
-        value: 0
-      value2:
+      flag_psrstx_cleared:
         description: Flag PSR.STx is cleared.
         value: 1
     unit_test: false
@@ -6033,11 +4430,11 @@ enums:
     identifier: false
   USIC0_CH0_RBUF01SR_DS1:
     enum:
-      value1:
+      0_same_associ_cont:
         description: The register RBUF contains the data of RBUF0 (same for associated
           status information).
         value: 0
-      value2:
+      1_same_associ_cont:
         description: The register RBUF contains the data of RBUF1 (same for associated
           status information).
         value: 1
@@ -6047,25 +4444,12 @@ enums:
     identifier: false
   USIC0_CH0_RBUF01SR_RDV11:
     enum:
-      value1:
+      does_not_contain_data_has_not__cont:
         description: Register RBUF1 does not contain data that has not yet been read
           out.
         value: 0
-      value2:
+      contains_data_has_not_been_read_out:
         description: Register RBUF1 contains data that has not yet been read out.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_RBUF01SR_RDV10:
-    enum:
-      value1:
-        description: Register RBUF0 does not contain data that has not yet been read
-          out.
-        value: 0
-      value2:
-        description: Register RBUF0 contains data that has not yet been read out.
         value: 1
     unit_test: false
     json: false
@@ -6073,12 +4457,12 @@ enums:
     identifier: false
   USIC0_CH0_RBUF01SR_PERR1:
     enum:
-      value1:
+      matche_cont:
         description: The received protocol-related argument PAR matches the expected
           value. The reception of the data word sets bit PSR.RIF and can generate
           a receive interrupt.
         value: 0
-      value2:
+      does_n_cont:
         description: The received protocol-related argument PAR does not match the
           expected value. The reception of the data word sets bit PSR.AIF and can
           generate an alternative receive interrupt.
@@ -6089,11 +4473,11 @@ enums:
     identifier: false
   USIC0_CH0_RBUF01SR_SOF1:
     enum:
-      value1:
+      not_been_first_data_word_data_frame:
         description: The data in RBUF1 has not been the first data word of a data
           frame.
         value: 0
-      value2:
+      been_first_data_word_data_frame:
         description: The data in RBUF1 has been the first data word of a data frame.
         value: 1
     unit_test: false
@@ -6102,151 +4486,22 @@ enums:
     identifier: false
   USIC0_CH0_RBUF01SR_WLEN1:
     enum:
-      value1:
+      one_bit_has_been_received:
         description: One bit has been received.
         value: 0
-      value2:
+      sixteen_bits_have_been_received:
         description: Sixteen bits have been received.
         value: 15
     unit_test: false
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_RBUF01SR_DS0:
-    enum:
-      value1:
-        description: The register RBUF contains the data of RBUF0 (same for associated
-          status information).
-        value: 0
-      value2:
-        description: The register RBUF contains the data of RBUF1 (same for associated
-          status information).
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_RBUF01SR_RDV01:
-    enum:
-      value1:
-        description: Register RBUF1 does not contain data that has not yet been read
-          out.
-        value: 0
-      value2:
-        description: Register RBUF1 contains data that has not yet been read out.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_RBUF01SR_RDV00:
-    enum:
-      value1:
-        description: Register RBUF0 does not contain data that has not yet been read
-          out.
-        value: 0
-      value2:
-        description: Register RBUF0 contains data that has not yet been read out.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_RBUF01SR_PERR0:
-    enum:
-      value1:
-        description: The received protocol-related argument PAR matches the expected
-          value. The reception of the data word sets bit PSR.RIF and can generate
-          a receive interrupt.
-        value: 0
-      value2:
-        description: The received protocol-related argument PAR does not match the
-          expected value. The reception of the data word sets bit PSR.AIF and can
-          generate an alternative receive interrupt.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_RBUF01SR_SOF0:
-    enum:
-      value1:
-        description: The data in RBUF0 has not been the first data word of a data
-          frame.
-        value: 0
-      value2:
-        description: The data in RBUF0 has been the first data word of a data frame.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_FMR_SIO5:
     enum:
-      value1:
+      no_action:
         description: No action.
         value: 0
-      value2:
-        description: The service request output SRx is activated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_FMR_SIO4:
-    enum:
-      value1:
-        description: No action.
-        value: 0
-      value2:
-        description: The service request output SRx is activated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_FMR_SIO3:
-    enum:
-      value1:
-        description: No action.
-        value: 0
-      value2:
-        description: The service request output SRx is activated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_FMR_SIO2:
-    enum:
-      value1:
-        description: No action.
-        value: 0
-      value2:
-        description: The service request output SRx is activated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_FMR_SIO1:
-    enum:
-      value1:
-        description: No action.
-        value: 0
-      value2:
-        description: The service request output SRx is activated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_FMR_SIO0:
-    enum:
-      value1:
-        description: No action.
-        value: 0
-      value2:
+      service_request_output_srx_activated:
         description: The service request output SRx is activated.
         value: 1
     unit_test: false
@@ -6255,10 +4510,10 @@ enums:
     identifier: false
   USIC0_CH0_FMR_CRDV1:
     enum:
-      value1:
+      no_action:
         description: No action.
         value: 0
-      value2:
+      bits_rbuf01srrdv01_rbuf01srrdv11_cleared:
         description: Bits RBUF01SR.RDV01 and RBUF01SR.RDV11 are cleared.
         value: 1
     unit_test: false
@@ -6267,10 +4522,10 @@ enums:
     identifier: false
   USIC0_CH0_FMR_CRDV0:
     enum:
-      value1:
+      no_action:
         description: No action.
         value: 0
-      value2:
+      bits_rbuf01srrdv00_rbuf01srrdv10_cleared:
         description: Bits RBUF01SR.RDV00 and RBUF01SR.RDV10 are cleared.
         value: 1
     unit_test: false
@@ -6279,10 +4534,10 @@ enums:
     identifier: false
   USIC0_CH0_FMR_ATVC:
     enum:
-      value1:
+      no_action:
         description: No action.
         value: 0
-      value2:
+      bit_tcsrtvc_set:
         description: Bit TCSR.TVC is set.
         value: 1
     unit_test: false
@@ -6291,13 +4546,13 @@ enums:
     identifier: false
   USIC0_CH0_FMR_MTDV:
     enum:
-      value1:
+      no_action:
         description: No action.
         value: 0
-      value2:
+      bit_tdv_set_te_unchanged:
         description: Bit TDV is set, TE is unchanged.
         value: 1
-      value3:
+      bits_tdv_te_cleared:
         description: Bits TDV and TE are cleared.
         value: 2
     unit_test: false
@@ -6306,10 +4561,10 @@ enums:
     identifier: false
   USIC0_CH0_BYPCR_BDV:
     enum:
-      value1:
+      not_valid:
         description: The bypass data is not valid.
         value: 0
-      value2:
+      valid:
         description: The bypass data is valid.
         value: 1
     unit_test: false
@@ -6318,11 +4573,11 @@ enums:
     identifier: false
   USIC0_CH0_BYPCR_BPRIO:
     enum:
-      value1:
+      transmit_fifo_data_has_higher_priority_than_b_cont:
         description: The transmit FIFO data has a higher priority than the bypass
           data.
         value: 0
-      value2:
+      bypass_data_has_higher_priority_than_transmit_cont:
         description: The bypass data has a higher priority than the transmit FIFO
           data.
         value: 1
@@ -6332,10 +4587,10 @@ enums:
     identifier: false
   USIC0_CH0_BYPCR_BDVTR:
     enum:
-      value1:
+      not_influenced_by_dx2t:
         description: Bit BDV is not influenced by DX2T.
         value: 0
-      value2:
+      set_if_dx2t_active:
         description: Bit BDV is set if DX2T is active.
         value: 1
     unit_test: false
@@ -6344,18 +4599,18 @@ enums:
     identifier: false
   USIC0_CH0_BYPCR_BDEN:
     enum:
-      value1:
+      transfer_bypass_data_disabled:
         description: The transfer of bypass data is disabled.
         value: 0
-      value2:
+      transfer_bypass_data_tbuf_possible_bypass_dat_cont:
         description: The transfer of bypass data to TBUF is possible. Bypass data
           will be transferred to TBUF according to its priority if BDV = 1.
         value: 1
-      value3:
+      gated_bypass_data_transfer_enabled_bypass_dat_cont:
         description: Gated bypass data transfer is enabled. Bypass data will be transferred
           to TBUF according to its priority if BDV = 1 and while DX2S = 0.
         value: 2
-      value4:
+      gated_bypass_data_transfer_enabled_bypass_dat_cont_:
         description: Gated bypass data transfer is enabled. Bypass data will be transferred
           to TBUF according to its priority if BDV = 1 and while DX2S = 1.
         value: 3
@@ -6365,11 +4620,11 @@ enums:
     identifier: false
   USIC0_CH0_BYPCR_BDSSM:
     enum:
-      value1:
+      still_considered_valid_after_has__cont:
         description: The bypass data is still considered as valid after it has been
           loaded into TBUF. The loading of the data into TBUF does not clear BDV.
         value: 0
-      value2:
+      considered_invalid_after_has_been_cont:
         description: The bypass data is considered as invalid after it has been loaded
           into TBUF. The loading of the data into TBUF clears BDV.
         value: 1
@@ -6379,10 +4634,10 @@ enums:
     identifier: false
   USIC0_CH0_TBCTR_TBERIEN:
     enum:
-      value1:
+      di_cont:
         description: The transmit buffer error interrupt generation is disabled.
         value: 0
-      value2:
+      enabled:
         description: The transmit buffer error interrupt generation is enabled.
         value: 1
     unit_test: false
@@ -6391,10 +4646,10 @@ enums:
     identifier: false
   USIC0_CH0_TBCTR_STBIEN:
     enum:
-      value1:
+      standard_transmit_buffer_interrupt_generation_cont:
         description: The standard transmit buffer interrupt generation is disabled.
         value: 0
-      value2:
+      _:
         description: The standard transmit buffer interrupt generation is enabled.
         value: 1
     unit_test: false
@@ -6403,11 +4658,11 @@ enums:
     identifier: false
   USIC0_CH0_TBCTR_LOF:
     enum:
-      value1:
+      event_occurs_when_fi_cont:
         description: A standard transmit buffer event occurs when the filling level
           equals the limit value and gets lower due to transmission of a data word.
         value: 0
-      value2:
+      interrupt_event_occu_cont:
         description: A standard transmit buffer interrupt event occurs when the filling
           level equals the limit value and gets bigger due to a write access to a
           data input location INx.
@@ -6418,87 +4673,39 @@ enums:
     identifier: false
   USIC0_CH0_TBCTR_SIZE:
     enum:
-      value1:
+      mechanism_disabled_buffer_does_not_accep_cont:
         description: The FIFO mechanism is disabled. The buffer does not accept any
           request for data.
         value: 0
-      value2:
+      buffer_contains_2_entries:
         description: The FIFO buffer contains 2 entries.
         value: 1
-      value3:
+      buffer_contains_4_entries:
         description: The FIFO buffer contains 4 entries.
         value: 2
-      value4:
+      buffer_contains_8_entries:
         description: The FIFO buffer contains 8 entries.
         value: 3
-      value5:
+      buffer_contains_16_entries:
         description: The FIFO buffer contains 16 entries.
         value: 4
-      value6:
+      buffer_contains_32_entries:
         description: The FIFO buffer contains 32 entries.
         value: 5
-      value7:
+      buffer_contains_64_entries:
         description: The FIFO buffer contains 64 entries.
         value: 6
     unit_test: false
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_TBCTR_ATBINP:
-    enum:
-      value1:
-        description: Output SR0 becomes activated.
-        value: 0
-      value2:
-        description: Output SR1 becomes activated.
-        value: 1
-      value3:
-        description: Output SR2 becomes activated.
-        value: 2
-      value4:
-        description: Output SR3 becomes activated.
-        value: 3
-      value5:
-        description: Output SR4 becomes activated.
-        value: 4
-      value6:
-        description: Output SR5 becomes activated.
-        value: 5
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TBCTR_STBINP:
-    enum:
-      value1:
-        description: Output SR0 becomes activated.
-        value: 0
-      value2:
-        description: Output SR1 becomes activated.
-        value: 1
-      value3:
-        description: Output SR2 becomes activated.
-        value: 2
-      value4:
-        description: Output SR3 becomes activated.
-        value: 3
-      value5:
-        description: Output SR4 becomes activated.
-        value: 4
-      value6:
-        description: Output SR5 becomes activated.
-        value: 5
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_TBCTR_STBTEN:
     enum:
-      value1:
+      standard_transmit_buffer_event_trigger_throug_cont:
         description: The standard transmit buffer event trigger through bit TRBSR.STBT
           is disabled.
         value: 0
-      value2:
+      _:
         description: The standard transmit buffer event trigger through bit TRBSR.STBT
           is enabled.
         value: 1
@@ -6508,12 +4715,12 @@ enums:
     identifier: false
   USIC0_CH0_TBCTR_STBTM:
     enum:
-      value1:
+      0_while_trbsrstbt1_standard_buff_cont:
         description: 'Trigger mode 0: While TRBSR.STBT=1, a standard buffer event
           will be generated whenever there is a data transfer to TBUF or data write
           to INx (depending on TBCTR.LOF setting). STBT is cleared when TRBSR.TBFLVL=TBCTR.LIMIT.'
         value: 0
-      value2:
+      1_while_trbsrstbt1_standard_buff_cont:
         description: 'Trigger mode 1: While TRBSR.STBT=1, a standard buffer event
           will be generated whenever there is a data transfer to TBUF or data write
           to INx (depending on TBCTR.LOF setting). STBT is cleared when TRBSR.TBFLVL=TBCTR.SIZE.'
@@ -6522,24 +4729,12 @@ enums:
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_RBCTR_RBERIEN:
-    enum:
-      value1:
-        description: The receive buffer error interrupt generation is disabled.
-        value: 0
-      value2:
-        description: The receive buffer error interrupt generation is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_RBCTR_SRBIEN:
     enum:
-      value1:
+      standard_receive_buffer_interrupt_generation__cont:
         description: The standard receive buffer interrupt generation is disabled.
         value: 0
-      value2:
+      _:
         description: The standard receive buffer interrupt generation is enabled.
         value: 1
     unit_test: false
@@ -6548,10 +4743,10 @@ enums:
     identifier: false
   USIC0_CH0_RBCTR_ARBIEN:
     enum:
-      value1:
+      alternative_receive_buffer_interrupt_generati_cont:
         description: The alternative receive buffer interrupt generation is disabled.
         value: 0
-      value2:
+      _:
         description: The alternative receive buffer interrupt generation is enabled.
         value: 1
     unit_test: false
@@ -6560,11 +4755,11 @@ enums:
     identifier: false
   USIC0_CH0_RBCTR_LOF:
     enum:
-      value1:
+      standard_receive_buffer_event_occurs_when_fil_cont:
         description: A standard receive buffer event occurs when the filling level
           equals the limit value and gets lower due to a read access from OUTR.
         value: 0
-      value2:
+      _:
         description: A standard receive buffer event occurs when the filling level
           equals the limit value and gets bigger due to the reception of a new data
           word.
@@ -6575,12 +4770,12 @@ enums:
     identifier: false
   USIC0_CH0_RBCTR_RNM:
     enum:
-      value1:
+      filling_level_mode_standard_receive_buffer_ev_cont:
         description: 'Filling level mode: A standard receive buffer event occurs when
           the filling level equals the limit value and changes, either due to a read
           access from OUTR (LOF = 0) or due to a new received data word (LOF = 1).'
         value: 0
-      value2:
+      rci_mode_standard_receive_buffer_event_occurs_cont:
         description: 'RCI mode: A standard receive buffer event occurs when register
           OUTR is updated with a new value if the corresponding value in OUTR.RCI[4]
           = 0. If OUTR.RCI[4] = 1, an alternative receive buffer event occurs instead
@@ -6590,107 +4785,31 @@ enums:
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_RBCTR_SIZE:
-    enum:
-      value1:
-        description: The FIFO mechanism is disabled. The buffer does not accept any
-          request for data.
-        value: 0
-      value2:
-        description: The FIFO buffer contains 2 entries.
-        value: 1
-      value3:
-        description: The FIFO buffer contains 4 entries.
-        value: 2
-      value4:
-        description: The FIFO buffer contains 8 entries.
-        value: 3
-      value5:
-        description: The FIFO buffer contains 16 entries.
-        value: 4
-      value6:
-        description: The FIFO buffer contains 32 entries.
-        value: 5
-      value7:
-        description: The FIFO buffer contains 64 entries.
-        value: 6
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_RBCTR_RCIM:
     enum:
-      value1:
+      perr_rci30_wlen:
         description: RCI[4] = PERR, RCI[3:0] = WLEN
         value: 0
-      value2:
+      sof_rci30_wlen:
         description: RCI[4] = SOF, RCI[3:0] = WLEN
         value: 1
-      value3:
+      0_rci30_wlen:
         description: RCI[4] = 0, RCI[3:0] = WLEN
         value: 2
-      value4:
+      perr_rci3_par_rci21_00b_rci0_sof:
         description: RCI[4] = PERR, RCI[3] = PAR, RCI[2:1] = 00B, RCI[0] = SOF
         value: 3
     unit_test: false
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_RBCTR_ARBINP:
-    enum:
-      value1:
-        description: Output SR0 becomes activated.
-        value: 0
-      value2:
-        description: Output SR1 becomes activated.
-        value: 1
-      value3:
-        description: Output SR2 becomes activated.
-        value: 2
-      value4:
-        description: Output SR3 becomes activated.
-        value: 3
-      value5:
-        description: Output SR4 becomes activated.
-        value: 4
-      value6:
-        description: Output SR5 becomes activated.
-        value: 5
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_RBCTR_SRBINP:
-    enum:
-      value1:
-        description: Output SR0 becomes activated.
-        value: 0
-      value2:
-        description: Output SR1 becomes activated.
-        value: 1
-      value3:
-        description: Output SR2 becomes activated.
-        value: 2
-      value4:
-        description: Output SR3 becomes activated.
-        value: 3
-      value5:
-        description: Output SR4 becomes activated.
-        value: 4
-      value6:
-        description: Output SR5 becomes activated.
-        value: 5
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_RBCTR_SRBTEN:
     enum:
-      value1:
+      standard_receive_buffer_event_trigger_through_cont:
         description: The standard receive buffer event trigger through bit TRBSR.SRBT
           is disabled.
         value: 0
-      value2:
+      _:
         description: The standard receive buffer event trigger through bit TRBSR.SRBT
           is enabled.
         value: 1
@@ -6700,12 +4819,12 @@ enums:
     identifier: false
   USIC0_CH0_RBCTR_SRBTM:
     enum:
-      value1:
+      0_while_trbsrsrbt1_standard_rece_cont:
         description: 'Trigger mode 0: While TRBSR.SRBT=1, a standard receive buffer
           event will be generated whenever there is a new data received or data read
           out (depending on RBCTR.LOF setting). SRBT is cleared when TRBSR.RBFLVL=RBCTR.LIMIT.'
         value: 0
-      value2:
+      1_while_trbsrsrbt1_standard_rece_cont:
         description: 'Trigger mode 1: While TRBSR.SRBT=1, a standard receive buffer
           event will be generated whenever there is a new data received or data read
           out (depending on RBCTR.LOF setting). SRBT is cleared when TRBSR.RBFLVL=0.'
@@ -6716,11 +4835,11 @@ enums:
     identifier: false
   USIC0_CH0_TRBSR_STBT:
     enum:
-      value1:
+      not_triggered__cont:
         description: A standard transmit buffer event is not triggered using this
           bit.
         value: 0
-      value2:
+      triggered_usin_cont:
         description: A standard transmit buffer event is triggered using this bit.
         value: 1
     unit_test: false
@@ -6729,10 +4848,10 @@ enums:
     identifier: false
   USIC0_CH0_TRBSR_TBUS:
     enum:
-      value1:
+      transmit_buffer_information_has_been_complete_cont:
         description: The transmit buffer information has been completely updated.
         value: 0
-      value2:
+      fifo_memory_update_after_write_inx_ongoing_wr_cont:
         description: The FIFO memory update after write to INx is ongoing. A write
           to INx will be delayed. FIFO pointers from the previous INx write are not
           yet updated.
@@ -6743,10 +4862,10 @@ enums:
     identifier: false
   USIC0_CH0_TRBSR_TFULL:
     enum:
-      value1:
+      not_full:
         description: The transmit buffer is not full.
         value: 0
-      value2:
+      full:
         description: The transmit buffer is full.
         value: 1
     unit_test: false
@@ -6755,23 +4874,11 @@ enums:
     identifier: false
   USIC0_CH0_TRBSR_TEMPTY:
     enum:
-      value1:
+      not_empty:
         description: The transmit buffer is not empty.
         value: 0
-      value2:
+      empty:
         description: The transmit buffer is empty.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TRBSR_TBERI:
-    enum:
-      value1:
-        description: A transmit buffer error event has not been detected.
-        value: 0
-      value2:
-        description: A transmit buffer error event has been detected.
         value: 1
     unit_test: false
     json: false
@@ -6779,10 +4886,10 @@ enums:
     identifier: false
   USIC0_CH0_TRBSR_STBI:
     enum:
-      value1:
+      not_been_d_cont:
         description: A standard transmit buffer event has not been detected.
         value: 0
-      value2:
+      been_detected:
         description: A standard transmit buffer event has been detected.
         value: 1
     unit_test: false
@@ -6791,10 +4898,10 @@ enums:
     identifier: false
   USIC0_CH0_TRBSR_SRBT:
     enum:
-      value1:
+      not_triggered_u_cont:
         description: A standard receive buffer event is not triggered using this bit.
         value: 0
-      value2:
+      triggered_using_cont:
         description: A standard receive buffer event is triggered using this bit.
         value: 1
     unit_test: false
@@ -6803,10 +4910,10 @@ enums:
     identifier: false
   USIC0_CH0_TRBSR_RBUS:
     enum:
-      value1:
+      receive_buffer_information_has_been_completel_cont:
         description: The receive buffer information has been completely updated.
         value: 0
-      value2:
+      outr_update_fifo_memory_ongoing_read_outr_be__cont:
         description: The OUTR update from the FIFO memory is ongoing. A read from
           OUTR will be delayed. FIFO pointers from the previous read are not yet updated.
         value: 1
@@ -6814,49 +4921,13 @@ enums:
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_TRBSR_RFULL:
-    enum:
-      value1:
-        description: The receive buffer is not full.
-        value: 0
-      value2:
-        description: The receive buffer is full.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TRBSR_REMPTY:
-    enum:
-      value1:
-        description: The receive buffer is not empty.
-        value: 0
-      value2:
-        description: The receive buffer is empty.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_TRBSR_ARBI:
     enum:
-      value1:
+      not_b_cont:
         description: An alternative receive buffer event has not been detected.
         value: 0
-      value2:
+      been__cont:
         description: An alternative receive buffer event has been detected.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TRBSR_RBERI:
-    enum:
-      value1:
-        description: A receive buffer error event has not been detected.
-        value: 0
-      value2:
-        description: A receive buffer error event has been detected.
         value: 1
     unit_test: false
     json: false
@@ -6864,10 +4935,10 @@ enums:
     identifier: false
   USIC0_CH0_TRBSR_SRBI:
     enum:
-      value1:
+      not_been_de_cont:
         description: A standard receive buffer event has not been detected.
         value: 0
-      value2:
+      been_detected:
         description: A standard receive buffer event has been detected.
         value: 1
     unit_test: false
@@ -6876,10 +4947,10 @@ enums:
     identifier: false
   USIC0_CH0_TRBSCR_FLUSHTB:
     enum:
-      value1:
+      no_effect:
         description: No effect.
         value: 0
-      value2:
+      transmit_fifo_buffer_cleared_filling_level_cl_cont:
         description: The transmit FIFO buffer is cleared (filling level is cleared
           and output pointer is set to input pointer value). Should only be used while
           the FIFO buffer is not taking part in data traffic.
@@ -6890,10 +4961,10 @@ enums:
     identifier: false
   USIC0_CH0_TRBSCR_FLUSHRB:
     enum:
-      value1:
+      no_effect:
         description: No effect.
         value: 0
-      value2:
+      receive_fifo_buffer_cleared_filling_level_cle_cont:
         description: The receive FIFO buffer is cleared (filling level is cleared
           and output pointer is set to input pointer value). Should only be used while
           the FIFO buffer is not taking part in data traffic.
@@ -6904,10 +4975,10 @@ enums:
     identifier: false
   USIC0_CH0_TRBSCR_CBDV:
     enum:
-      value1:
+      no_effect:
         description: No effect.
         value: 0
-      value2:
+      clear_bypcrbdv:
         description: Clear BYPCR.BDV.
         value: 1
     unit_test: false
@@ -6916,10 +4987,10 @@ enums:
     identifier: false
   USIC0_CH0_TRBSCR_CTBERI:
     enum:
-      value1:
+      no_effect:
         description: No effect.
         value: 0
-      value2:
+      clear_trbsrtberi:
         description: Clear TRBSR.TBERI.
         value: 1
     unit_test: false
@@ -6928,10 +4999,10 @@ enums:
     identifier: false
   USIC0_CH0_TRBSCR_CSTBI:
     enum:
-      value1:
+      no_effect:
         description: No effect.
         value: 0
-      value2:
+      clear_trbsrstbi:
         description: Clear TRBSR.STBI.
         value: 1
     unit_test: false
@@ -6940,10 +5011,10 @@ enums:
     identifier: false
   USIC0_CH0_TRBSCR_CARBI:
     enum:
-      value1:
+      no_effect:
         description: No effect.
         value: 0
-      value2:
+      clear_trbsrarbi:
         description: Clear TRBSR.ARBI.
         value: 1
     unit_test: false
@@ -6952,10 +5023,10 @@ enums:
     identifier: false
   USIC0_CH0_TRBSCR_CRBERI:
     enum:
-      value1:
+      no_effect:
         description: No effect.
         value: 0
-      value2:
+      clear_trbsrrberi:
         description: Clear TRBSR.RBERI.
         value: 1
     unit_test: false
@@ -6964,10 +5035,10 @@ enums:
     identifier: false
   USIC0_CH0_TRBSCR_CSRBI:
     enum:
-      value1:
+      no_effect:
         description: No effect.
         value: 0
-      value2:
+      clear_trbsrsrbi:
         description: Clear TRBSR.SRBI.
         value: 1
     unit_test: false

@@ -54,14 +54,14 @@ structs:
             width: 1
             read: true
             write: true
-            type: CAN_MO_MOFCR_TXIE
+            type: CAN_MO_MOFCR_OVIE
           - name: RXIE
             description: Receive Interrupt Enable
             index: 16
             width: 1
             read: true
             write: true
-            type: CAN_MO_MOFCR_RXIE
+            type: CAN_MO_MOFCR_OVIE
           - name: DATC
             description: Data Copy
             index: 11
@@ -165,7 +165,7 @@ structs:
             width: 4
             read: true
             write: true
-            type: CAN_MO_MOIPR_RXINP
+            type: CAN_MO_MOIPR_TXINP
       - name: MOAMR
         type: uint32_t
         expected_size: 4
@@ -464,7 +464,7 @@ structs:
                 width: 1
                 read: true
                 write: false
-                type: CAN_MO_MOSTAT_TXEN0
+                type: CAN_MO_MOSTAT_TXEN1
               - name: TXRQ
                 description: Transmit Request
                 index: 8
@@ -554,12 +554,12 @@ structs:
 enums:
   CAN_MO_MOFCR_RMM:
     enum:
-      value1:
+      disabled_identifier_ide_bit_cont:
         description: 'Remote monitoring is disabled: Identifier, IDE bit, and DLC
           of message object n remain unchanged upon the reception of a matching Remote
           Frame.'
         value: 0
-      value2:
+      enabled_identifier_ide_bit__cont:
         description: 'Remote monitoring is enabled: Identifier, IDE bit, and DLC of
           a matching Remote Frame are copied to transmit object n in order to monitor
           incoming Remote Frames.'
@@ -570,11 +570,11 @@ enums:
     identifier: false
   CAN_MO_MOFCR_FRREN:
     enum:
-      value1:
+      n_set_reception_matching__cont:
         description: TXRQ of message object n is set on reception of a matching Remote
           Frame.
         value: 0
-      value2:
+      referenced_by_pointer_cur_cont:
         description: TXRQ of the message object referenced by the pointer CUR is set
           on reception of a matching Remote Frame.
         value: 1
@@ -584,35 +584,11 @@ enums:
     identifier: false
   CAN_MO_MOFCR_OVIE:
     enum:
-      value1:
+      disabled:
         description: FIFO full interrupt is disabled.
         value: 0
-      value2:
+      enabled:
         description: FIFO full interrupt is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOFCR_TXIE:
-    enum:
-      value1:
-        description: Message transmit interrupt is disabled.
-        value: 0
-      value2:
-        description: Message transmit interrupt is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOFCR_RXIE:
-    enum:
-      value1:
-        description: Message receive interrupt is disabled.
-        value: 0
-      value2:
-        description: Message receive interrupt is enabled.
         value: 1
     unit_test: false
     json: false
@@ -620,10 +596,10 @@ enums:
     identifier: false
   CAN_MO_MOFCR_DATC:
     enum:
-      value1:
+      not_copied:
         description: Data fields are not copied.
         value: 0
-      value2:
+      registers_modataln_modatahn_gatew_cont:
         description: Data fields in registers MODATALn and MODATAHn of the gateway
           source object (after storing the received frame in the source) are copied
           to the gateway destination.
@@ -634,10 +610,10 @@ enums:
     identifier: false
   CAN_MO_MOFCR_DLCC:
     enum:
-      value1:
+      not_copied:
         description: Data length code is not copied.
         value: 0
-      value2:
+      gateway_source_object_after__cont:
         description: Data length code of the gateway source object (after storing
           the received frame in the source) is copied to the gateway destination object.
         value: 1
@@ -647,10 +623,10 @@ enums:
     identifier: false
   CAN_MO_MOFCR_IDC:
     enum:
-      value1:
+      not_copied:
         description: The identifier of the gateway source object is not copied.
         value: 0
-      value2:
+      after_storin_cont:
         description: The identifier of the gateway source object (after storing the
           received frame in the source) is copied to the gateway destination object.
         value: 1
@@ -660,10 +636,10 @@ enums:
     identifier: false
   CAN_MO_MOFCR_GDFS:
     enum:
-      value1:
+      unchanged_destination_object:
         description: TXRQ is unchanged in the destination object.
         value: 0
-      value2:
+      set_gateway_destination_object_after_int_cont:
         description: TXRQ is set in the gateway destination object after the internal
           transfer from the gateway source to the gateway destination object.
         value: 1
@@ -673,10 +649,10 @@ enums:
     identifier: false
   CAN_MO_MOFCR_RXTOE:
     enum:
-      value1:
+      does_not_take_part_receive_time_out_check:
         description: Message does not take part in receive time-out check
         value: 0
-      value2:
+      takes_part_receive_time_out_check:
         description: Message takes part in receive time-out check
         value: 1
     unit_test: false
@@ -685,19 +661,19 @@ enums:
     identifier: false
   CAN_MO_MOFCR_MMC:
     enum:
-      value1:
+      standard_message_object:
         description: Standard Message Object
         value: 0
-      value2:
+      receive_fifo_base_object:
         description: Receive FIFO Base Object
         value: 1
-      value3:
+      transmit_fifo_base_object:
         description: Transmit FIFO Base Object
         value: 2
-      value4:
+      transmit_fifo_slave_object:
         description: Transmit FIFO Slave Object
         value: 3
-      value5:
+      gateway_source_object:
         description: Gateway Source Object
         value: 4
     unit_test: false
@@ -706,34 +682,16 @@ enums:
     identifier: false
   CAN_MO_MOIPR_TXINP:
     enum:
-      value1:
+      0_selected:
         description: Interrupt output line INT_O0 is selected.
         value: 0
-      value2:
+      1_selected:
         description: Interrupt output line INT_O1 is selected.
         value: 1
-      value3:
+      14_selected:
         description: Interrupt output line INT_O14 is selected.
         value: 14
-      value4:
-        description: Interrupt output line INT_O15 is selected.
-        value: 15
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOIPR_RXINP:
-    enum:
-      value1:
-        description: Interrupt output line INT_O0 is selected.
-        value: 0
-      value2:
-        description: Interrupt output line INT_O1 is selected.
-        value: 1
-      value3:
-        description: Interrupt output line INT_O14 is selected.
-        value: 14
-      value4:
+      15_selected:
         description: Interrupt output line INT_O15 is selected.
         value: 15
     unit_test: false
@@ -742,11 +700,11 @@ enums:
     identifier: false
   CAN_MO_MOAMR_MIDE:
     enum:
-      value1:
+      accepts_reception_both_stand_cont:
         description: Message object n accepts the reception of both, standard and
           extended frames.
         value: 0
-      value2:
+      receives_frames_only_with_ma_cont:
         description: Message object n receives frames only with matching IDE bit.
         value: 1
     unit_test: false
@@ -755,19 +713,19 @@ enums:
     identifier: false
   CAN_MO_MOAR_PRI:
     enum:
-      value2:
+      list_orde_cont:
         description: Transmit acceptance filtering is based on the list order. This
           means that message object n is considered for transmission only if there
           is no other message object with valid transmit request (MSGVAL & TXEN0 &
           TXEN1 = 1) somewhere before this object in the list.
         value: 1
-      value3:
+      can_ident_cont:
         description: Transmit acceptance filtering is based on the CAN identifier.
           This means, message object n is considered for transmission only if there
           is no other message object with higher priority identifier + IDE + DIR (with
           respect to CAN arbitration rules) somewhere in the list (see ).
         value: 2
-      value4:
+      list_orde_cont_:
         description: Transmit acceptance filtering is based on the list order (as
           PRI = 01B).
         value: 3
@@ -777,10 +735,10 @@ enums:
     identifier: false
   CAN_MO_MOAR_IDE:
     enum:
-      value1:
+      standard_frames_with_cont:
         description: Message object n handles standard frames with 11-bit identifier.
         value: 0
-      value2:
+      extended_frames_with_cont:
         description: Message object n handles extended frames with 29-bit identifier.
         value: 1
     unit_test: false
@@ -789,13 +747,13 @@ enums:
     identifier: false
   CAN_MO_MOSTAT_DIR:
     enum:
-      value1:
+      receive_object_selected_with_txrq_1_remote_fr_cont:
         description: 'Receive Object selected: With TXRQ = 1, a Remote Frame with
           the identifier of message object n is scheduled for transmission. On reception
           of a Data Frame with matching identifier, the message is stored in message
           object n.'
         value: 0
-      value2:
+      transmit_object_selected_if_txrq_1_message_ob_cont:
         description: 'Transmit Object selected: If TXRQ = 1, message object n is scheduled
           for transmission of a Data Frame. On reception of a Remote Frame with matching
           identifier, bit TXRQ is set.'
@@ -806,22 +764,10 @@ enums:
     identifier: false
   CAN_MO_MOSTAT_TXEN1:
     enum:
-      value1:
+      not_enabled_frame_transmission:
         description: Message object n is not enabled for frame transmission.
         value: 0
-      value2:
-        description: Message object n is enabled for frame transmission.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOSTAT_TXEN0:
-    enum:
-      value1:
-        description: Message object n is not enabled for frame transmission.
-        value: 0
-      value2:
+      enabled_frame_transmission:
         description: Message object n is enabled for frame transmission.
         value: 1
     unit_test: false
@@ -830,10 +776,10 @@ enums:
     identifier: false
   CAN_MO_MOSTAT_TXRQ:
     enum:
-      value1:
+      no_transmission_message_object_n_requested:
         description: No transmission of message object n is requested.
         value: 0
-      value2:
+      transmission_message_object_n_can_bus_requested:
         description: Transmission of message object n on the CAN bus is requested.
         value: 1
     unit_test: false
@@ -842,10 +788,10 @@ enums:
     identifier: false
   CAN_MO_MOSTAT_RXEN:
     enum:
-      value1:
+      not_enabled_frame_reception:
         description: Message object n is not enabled for frame reception.
         value: 0
-      value2:
+      enabled_frame_reception:
         description: Message object n is enabled for frame reception.
         value: 1
     unit_test: false
@@ -854,10 +800,10 @@ enums:
     identifier: false
   CAN_MO_MOSTAT_RTSEL:
     enum:
-      value1:
+      not_selected_receive_or_tran_cont:
         description: Message object n is not selected for receive or transmit operation.
         value: 0
-      value2:
+      selected_receive_or_transmit_cont:
         description: Message object n is selected for receive or transmit operation.
         value: 1
     unit_test: false
@@ -866,10 +812,10 @@ enums:
     identifier: false
   CAN_MO_MOSTAT_MSGVAL:
     enum:
-      value1:
+      not_valid:
         description: Message object n is not valid.
         value: 0
-      value2:
+      valid:
         description: Message object n is valid.
         value: 1
     unit_test: false
@@ -878,10 +824,10 @@ enums:
     identifier: false
   CAN_MO_MOSTAT_MSGLST:
     enum:
-      value1:
+      no_can_message_lost:
         description: No CAN message is lost.
         value: 0
-      value2:
+      can_message_lost_because_newdat_has_become_se_cont:
         description: A CAN message is lost because NEWDAT has become set again when
           it has already been set.
         value: 1
@@ -891,10 +837,10 @@ enums:
     identifier: false
   CAN_MO_MOSTAT_NEWDAT:
     enum:
-      value1:
+      no_update_message_object_n_since_last_flag_reset:
         description: No update of the message object n since last flag reset.
         value: 0
-      value2:
+      message_object_n_has_been_updated:
         description: Message object n has been updated.
         value: 1
     unit_test: false
@@ -903,10 +849,10 @@ enums:
     identifier: false
   CAN_MO_MOSTAT_RXUPD:
     enum:
-      value1:
+      no_receive_update_ongoing:
         description: No receive update ongoing.
         value: 0
-      value2:
+      message_identifier_dlc_data_message_object_cu_cont:
         description: Message identifier, DLC, and data of the message object are currently
           updated.
         value: 1
@@ -916,10 +862,10 @@ enums:
     identifier: false
   CAN_MO_MOSTAT_TXPND:
     enum:
-      value1:
+      no_can_message_has_been_transmitted:
         description: No CAN message has been transmitted.
         value: 0
-      value2:
+      can_message_message_object_n_has_been_transmi_cont:
         description: A CAN message from message object n has been transmitted successfully
           over the CAN bus.
         value: 1
@@ -929,10 +875,10 @@ enums:
     identifier: false
   CAN_MO_MOSTAT_RXPND:
     enum:
-      value1:
+      no_can_message_has_been_received:
         description: No CAN message has been received.
         value: 0
-      value2:
+      can_message_has_been_received_by_message_obje_cont:
         description: A CAN message has been received by the message object n, either
           directly or via gateway copy action.
         value: 1

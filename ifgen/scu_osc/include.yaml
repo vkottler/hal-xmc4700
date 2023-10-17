@@ -79,18 +79,18 @@ structs:
 enums:
   SCU_OSC_OSCHPCTRL_MODE:
     enum:
-      value1:
+      external_crystal_mode_external_input_clock_mo_cont:
         description: External Crystal Mode and External Input Clock Mode. The oscillator
           Power-Saving Mode is not entered.
         value: 0
-      value2:
+      osc_disabled_oscillator_power_saving_mode_not_cont:
         description: OSC is disabled. The oscillator Power-Saving Mode is not entered.
         value: 1
-      value3:
+      external_input_clock_mode_oscillator_power_sa_cont:
         description: External Input Clock Mode and the oscillator Power-Saving Mode
           is entered
         value: 2
-      value4:
+      osc_disabled_oscillator_power_saving_mode_entered:
         description: OSC is disabled. The oscillator Power-Saving Mode is entered.
         value: 3
     unit_test: false
@@ -99,19 +99,19 @@ enums:
     identifier: false
   SCU_OSC_OSCHPCTRL_GAINSEL:
     enum:
-      value1:
+      8_mhz:
         description: The gain control is configured for frequencies from 4 MHz to
           8 MHz
         value: 0
-      value2:
+      16_mhz:
         description: The gain control is configured for frequencies from 4 MHz to
           16 MHz
         value: 1
-      value3:
+      20_mhz:
         description: The gain control is configured for frequencies from 4 MHz to
           20 MHz
         value: 2
-      value4:
+      25_mhz:
         description: The gain control is configured for frequencies from 4 MHz to
           25 MHz
         value: 3
@@ -121,10 +121,10 @@ enums:
     identifier: false
   SCU_OSC_OSCHPCTRL_SHBY:
     enum:
-      value1:
+      not_bypassed:
         description: The shaper is not bypassed
         value: 0
-      value2:
+      bypassed:
         description: The shaper is bypassed
         value: 1
     unit_test: false
@@ -133,10 +133,10 @@ enums:
     identifier: false
   SCU_OSC_OSCHPCTRL_X1DEN:
     enum:
-      value1:
+      not_updated:
         description: Bit X1D is not updated
         value: 0
-      value2:
+      can_be_updated:
         description: Bit X1D can be updated
         value: 1
     unit_test: false

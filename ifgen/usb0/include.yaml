@@ -32,7 +32,7 @@ structs:
             width: 1
             read: true
             write: false
-            type: USB0_GOTGCTL_ASesVId
+            type: USB0_GOTGCTL_BSesVld
           - name: DbncTime
             description: Long/Short Debounce Time
             index: 17
@@ -130,7 +130,7 @@ structs:
             width: 1
             read: true
             write: false
-            type: USB0_GOTGCTL_SesReqScs
+            type: USB0_GOTGCTL_HstNegScs
       - name: GOTGINT
         type: uint32_t
         expected_size: 4
@@ -273,14 +273,14 @@ structs:
             width: 1
             read: true
             write: true
-            type: USB0_GUSBCFG_HNPCap
+            type: USB0_GOTGCTL_HstSetHNPEn
           - name: SRPCap
             description: SRP-Capable
             index: 8
             width: 1
             read: true
             write: true
-            type: USB0_GUSBCFG_SRPCap
+            type: USB0_GOTGCTL_HstSetHNPEn
           - name: PHYSel
             description: USB 1.1 Full-Speed Serial Transceiver Select
             index: 6
@@ -552,7 +552,7 @@ structs:
                 width: 1
                 read: true
                 write: false
-                type: USB0_GINTSTS_DEVICEMODE_CurMod
+                type: USB0_GINTSTS_HOSTMODE_CurMod
       - name: GINTMSK_HOSTMODE
         type: uint32_t
         expected_size: 4
@@ -812,7 +812,7 @@ structs:
                 width: 2
                 read: true
                 write: false
-                type: USB0_GRXSTSR_DEVICEMODE_DPID
+                type: USB0_GRXSTSR_HOSTMODE_DPID
               - name: BCnt
                 description: Byte Count
                 index: 4
@@ -844,14 +844,14 @@ structs:
             width: 4
             read: true
             write: false
-            type: USB0_GRXSTSP_DEVICEMODE_PktSts
+            type: USB0_GRXSTSR_DEVICEMODE_PktSts
           - name: DPID
             description: Data PID
             index: 15
             width: 2
             read: true
             write: false
-            type: USB0_GRXSTSP_DEVICEMODE_DPID
+            type: USB0_GRXSTSR_HOSTMODE_DPID
           - name: BCnt
             description: Byte Count
             index: 4
@@ -875,14 +875,14 @@ structs:
                 width: 4
                 read: true
                 write: false
-                type: USB0_GRXSTSP_HOSTMODE_PktSts
+                type: USB0_GRXSTSR_HOSTMODE_PktSts
               - name: DPID
                 description: Data PID
                 index: 15
                 width: 2
                 read: true
                 write: false
-                type: USB0_GRXSTSP_HOSTMODE_DPID
+                type: USB0_GRXSTSR_HOSTMODE_DPID
               - name: BCnt
                 description: Byte Count
                 index: 4
@@ -1756,11 +1756,11 @@ structs:
 enums:
   USB0_GOTGCTL_OTGVer:
     enum:
-      value1:
+      13_this_version_core_supports_dat_cont:
         description: OTG Version 1.3. In this version the core supports Data line
           pulsing and VBus pulsing for SRP.
         value: 0
-      value2:
+      20_this_version_core_supports_onl_cont:
         description: OTG Version 2.0. In this version the core supports only Data
           line pulsing for SRP.
         value: 1
@@ -1770,23 +1770,11 @@ enums:
     identifier: false
   USB0_GOTGCTL_BSesVld:
     enum:
-      value1:
+      not_valid:
         description: B-session is not valid.
         value: 0
-      value2:
+      valid:
         description: B-session is valid.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USB0_GOTGCTL_ASesVId:
-    enum:
-      value1:
-        description: A-session is not valid
-        value: 0
-      value2:
-        description: A-session is valid
         value: 1
     unit_test: false
     json: false
@@ -1794,11 +1782,11 @@ enums:
     identifier: false
   USB0_GOTGCTL_DbncTime:
     enum:
-      value1:
+      long_debounce_time_used_physical_connections__cont:
         description: Long debounce time, used for physical connections (100 ms + 2.5
           us)
         value: 0
-      value2:
+      short_debounce_time_used_soft_connections_25_us:
         description: Short debounce time, used for soft connections (2.5 us)
         value: 1
     unit_test: false
@@ -1807,10 +1795,10 @@ enums:
     identifier: false
   USB0_GOTGCTL_ConlDSts:
     enum:
-      value1:
+      a_device_mode:
         description: The USB core is in A-Device mode
         value: 0
-      value2:
+      b_device_mode:
         description: The USB core is in B-Device mode
         value: 1
     unit_test: false
@@ -1819,10 +1807,10 @@ enums:
     identifier: false
   USB0_GOTGCTL_DevHNPEn:
     enum:
-      value1:
+      not_enabled_application:
         description: HNP is not enabled in the application
         value: 0
-      value2:
+      enabled_application:
         description: HNP is enabled in the application
         value: 1
     unit_test: false
@@ -1831,10 +1819,10 @@ enums:
     identifier: false
   USB0_GOTGCTL_HstSetHNPEn:
     enum:
-      value1:
+      not_enabled:
         description: Host Set HNP is not enabled
         value: 0
-      value2:
+      enabled:
         description: Host Set HNP is enabled
         value: 1
     unit_test: false
@@ -1843,10 +1831,10 @@ enums:
     identifier: false
   USB0_GOTGCTL_HNPReq:
     enum:
-      value1:
+      no_hnp_request:
         description: No HNP request
         value: 0
-      value2:
+      hnp_request:
         description: HNP request
         value: 1
     unit_test: false
@@ -1855,10 +1843,10 @@ enums:
     identifier: false
   USB0_GOTGCTL_HstNegScs:
     enum:
-      value1:
+      failure:
         description: Host negotiation failure
         value: 0
-      value2:
+      success:
         description: Host negotiation success
         value: 1
     unit_test: false
@@ -1867,10 +1855,10 @@ enums:
     identifier: false
   USB0_GOTGCTL_BvalidOvVal:
     enum:
-      value1:
+      0_when_gotgctlbvalidoven_1:
         description: Bvalid value is 0# when GOTGCTL.BvalidOvEn = 1
         value: 0
-      value2:
+      1_when_gotgctlbvalidoven_1:
         description: Bvalid value is 1# when GOTGCTL.BvalidOvEn = 1
         value: 1
     unit_test: false
@@ -1879,11 +1867,11 @@ enums:
     identifier: false
   USB0_GOTGCTL_BvalidOvEn:
     enum:
-      value1:
+      override_disabled_bvalid_signal_phy_used_inte_cont:
         description: Override is disabled and Bvalid signal from the PHY is used internally
           by the core.
         value: 0
-      value2:
+      internally_bvalid_received_phy_overridden_wit_cont:
         description: Internally Bvalid received from the PHY is overridden with GOTGCTL.BvalidOvVal.
         value: 1
     unit_test: false
@@ -1892,10 +1880,10 @@ enums:
     identifier: false
   USB0_GOTGCTL_AvalidOvVal:
     enum:
-      value1:
+      0_when_gotgctlavalidoven_1:
         description: Avalid value is 0# when GOTGCTL.AvalidOvEn = 1
         value: 0
-      value2:
+      1_when_gotgctlavalidoven_1:
         description: Avalid value is 1# when GOTGCTL.AvalidOvEn = 1
         value: 1
     unit_test: false
@@ -1904,11 +1892,11 @@ enums:
     identifier: false
   USB0_GOTGCTL_AvalidOvEn:
     enum:
-      value1:
+      override_disabled_avalid_signal_phy_used_inte_cont:
         description: Override is disabled and Avalid signal from the PHY is used internally
           by the core.
         value: 0
-      value2:
+      internally_avalid_received_phy_overridden_wit_cont:
         description: Internally Avalid received from the PHY is overridden with GOTGCTL.AvalidOvVal.
         value: 1
     unit_test: false
@@ -1917,10 +1905,10 @@ enums:
     identifier: false
   USB0_GOTGCTL_VbvalidOvVal:
     enum:
-      value1:
+      0_when_gotgctlvbvalidoven_1:
         description: vbusvalid value is 0# when GOTGCTL.VbvalidOvEn = 1
         value: 0
-      value2:
+      1_when_gotgctlvbvalidoven_1:
         description: vbusvalid value is 1# when GOTGCTL.VbvalidOvEn = 1
         value: 1
     unit_test: false
@@ -1929,11 +1917,11 @@ enums:
     identifier: false
   USB0_GOTGCTL_VbvalidOvEn:
     enum:
-      value1:
+      override_disabled_vbus_valid_signal_phy_used__cont:
         description: Override is disabled and vbus valid signal from the PHY is used
           internally by the core.
         value: 0
-      value2:
+      internally_vbus_valid_received_phy_overridden_cont:
         description: Internally vbus valid received from the PHY is overridden with
           GOTGCTL.VbvalidOvVal.
         value: 1
@@ -1943,23 +1931,11 @@ enums:
     identifier: false
   USB0_GOTGCTL_SesReq:
     enum:
-      value1:
+      no_session_request:
         description: No session request
         value: 0
-      value2:
+      session_request:
         description: Session request
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USB0_GOTGCTL_SesReqScs:
-    enum:
-      value1:
-        description: Session request failure
-        value: 0
-      value2:
-        description: Session request success
         value: 1
     unit_test: false
     json: false
@@ -1967,11 +1943,11 @@ enums:
     identifier: false
   USB0_GAHBCFG_AHBSingle:
     enum:
-      value1:
+      incr_burst_cont:
         description: The remaining data in a transfer is sent using INCR burst size.
           This is the default mode.
         value: 0
-      value2:
+      single_bur_cont:
         description: The remaining data in a transfer is sent using single burst size.
         value: 1
     unit_test: false
@@ -1980,11 +1956,11 @@ enums:
     identifier: false
   USB0_GAHBCFG_PTxFEmpLvl:
     enum:
-      value1:
+      gintstsptxfemp_interrupt_indicates_periodic_t_cont:
         description: GINTSTS.PTxFEmp interrupt indicates that the Periodic TxFIFO
           is half empty
         value: 0
-      value2:
+      _:
         description: GINTSTS.PTxFEmp interrupt indicates that the Periodic TxFIFO
           is completely empty
         value: 1
@@ -1994,11 +1970,11 @@ enums:
     identifier: false
   USB0_GAHBCFG_NPTxFEmpLvl:
     enum:
-      value1:
+      diepintxtxfemp_interrupt_indicates_endpoint_t_cont:
         description: DIEPINTx.TxFEmp interrupt indicates that the IN Endpoint TxFIFO
           is half empty
         value: 0
-      value2:
+      _:
         description: DIEPINTx.TxFEmp interrupt indicates that the IN Endpoint TxFIFO
           is completely empty
         value: 1
@@ -2008,10 +1984,10 @@ enums:
     identifier: false
   USB0_GAHBCFG_DMAEn:
     enum:
-      value1:
+      slave_mode:
         description: Core operates in Slave mode
         value: 0
-      value2:
+      dma_mode:
         description: Core operates in a DMA mode
         value: 1
     unit_test: false
@@ -2020,19 +1996,19 @@ enums:
     identifier: false
   USB0_GAHBCFG_HBstLen:
     enum:
-      value1:
+      single:
         description: Single
         value: 0
-      value2:
+      incr:
         description: INCR
         value: 1
-      value3:
+      incr4:
         description: INCR4
         value: 3
-      value4:
+      incr8:
         description: INCR8
         value: 5
-      value5:
+      incr16:
         description: INCR16
         value: 7
     unit_test: false
@@ -2041,10 +2017,10 @@ enums:
     identifier: false
   USB0_GAHBCFG_GlblIntrMsk:
     enum:
-      value1:
+      mask_interrupt_assertion_application:
         description: Mask the interrupt assertion to the application.
         value: 0
-      value2:
+      unmask_interrupt_assertion_application:
         description: Unmask the interrupt assertion to the application.
         value: 1
     unit_test: false
@@ -2053,10 +2029,10 @@ enums:
     identifier: false
   USB0_GUSBCFG_ForceDevMode:
     enum:
-      value1:
+      normal_mode:
         description: Normal Mode
         value: 0
-      value2:
+      force_device_mode:
         description: Force Device Mode
         value: 1
     unit_test: false
@@ -2065,10 +2041,10 @@ enums:
     identifier: false
   USB0_GUSBCFG_ForceHstMode:
     enum:
-      value1:
+      normal_mode:
         description: Normal Mode
         value: 0
-      value2:
+      force_host_mode:
         description: Force Host Mode
         value: 1
     unit_test: false
@@ -2077,10 +2053,10 @@ enums:
     identifier: false
   USB0_GUSBCFG_TxEndDelay:
     enum:
-      value1:
+      normal_mode:
         description: Normal mode
         value: 0
-      value2:
+      introduce_tx_end_delay_timers:
         description: Introduce Tx end delay timers
         value: 1
     unit_test: false
@@ -2089,40 +2065,16 @@ enums:
     identifier: false
   USB0_GUSBCFG_OtgI2CSel:
     enum:
-      value1:
+      utmi_usb_11_full_speed_interface_otg_signals:
         description: UTMI USB 1.1 Full-Speed interface for OTG signals
         value: 0
     unit_test: false
     json: false
     use_map: false
     identifier: false
-  USB0_GUSBCFG_HNPCap:
-    enum:
-      value1:
-        description: HNP capability is not enabled.
-        value: 0
-      value2:
-        description: HNP capability is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USB0_GUSBCFG_SRPCap:
-    enum:
-      value1:
-        description: SRP capability is not enabled.
-        value: 0
-      value2:
-        description: SRP capability is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USB0_GUSBCFG_PHYSel:
     enum:
-      value2:
+      usb_11_full_speed_serial_transceiver:
         description: USB 1.1 full-speed serial transceiver
         value: 1
     unit_test: false
@@ -2131,21 +2083,21 @@ enums:
     identifier: false
   USB0_GRSTCTL_TxFNum:
     enum:
-      value1:
+      non_periodic_txfifo_flush_host_mode_or_tx_fif_cont:
         description: Non-periodic TxFIFO flush in Host mode or Tx FIFO 0 flush in
           device mode
         value: 0
-      value2:
+      periodic_txfifo_flush_host_mode_or_tx_fifo_1__cont:
         description: Periodic TxFIFO flush in Host mode or Tx FIFO 1 flush in device
           mode
         value: 1
-      value3:
+      tx_fifo_2_flush_device_mode:
         description: Tx FIFO 2 flush in device mode
         value: 2
-      value4:
+      tx_fifo_15_flush_device_mode:
         description: Tx FIFO 15 flush in device mode
         value: 15
-      value5:
+      flush_all_transmit_fifos_device_or_host_mode:
         description: Flush all the transmit FIFOs in device or host mode.
         value: 16
     unit_test: false
@@ -2154,22 +2106,10 @@ enums:
     identifier: false
   USB0_GINTSTS_HOSTMODE_CurMod:
     enum:
-      value1:
+      device_mode:
         description: Device mode
         value: 0
-      value2:
-        description: Host mode
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USB0_GINTSTS_DEVICEMODE_CurMod:
-    enum:
-      value1:
-        description: Device mode
-        value: 0
-      value2:
+      host_mode:
         description: Host mode
         value: 1
     unit_test: false
@@ -2178,16 +2118,16 @@ enums:
     identifier: false
   USB0_GRXSTSR_HOSTMODE_PktSts:
     enum:
-      value1:
+      data_packet_received:
         description: IN data packet received
         value: 2
-      value2:
+      transfer_completed_triggers_an_interrupt:
         description: IN transfer completed (triggers an interrupt)
         value: 3
-      value3:
+      data_toggle_error_triggers_an_interrupt:
         description: Data toggle error (triggers an interrupt)
         value: 5
-      value4:
+      channel_halted_triggers_an_interrupt:
         description: Channel halted (triggers an interrupt)
         value: 7
     unit_test: false
@@ -2196,16 +2136,16 @@ enums:
     identifier: false
   USB0_GRXSTSR_HOSTMODE_DPID:
     enum:
-      value1:
+      data0:
         description: DATA0
         value: 0
-      value2:
+      data1:
         description: DATA1
         value: 2
-      value3:
+      data2:
         description: DATA2
         value: 1
-      value4:
+      mdata:
         description: MDATA
         value: 3
     unit_test: false
@@ -2214,127 +2154,34 @@ enums:
     identifier: false
   USB0_GRXSTSR_DEVICEMODE_PktSts:
     enum:
-      value1:
+      global_out_nak_triggers_an_interrupt:
         description: Global OUT NAK (triggers an interrupt)
         value: 1
-      value2:
+      out_data_packet_received:
         description: OUT data packet received
         value: 2
-      value3:
+      out_transfer_completed_triggers_an_interrupt:
         description: OUT transfer completed (triggers an interrupt)
         value: 3
-      value4:
+      setup_transaction_completed_triggers_an_interrupt:
         description: SETUP transaction completed (triggers an interrupt)
         value: 4
-      value5:
+      setup_data_packet_received:
         description: SETUP data packet received
         value: 6
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USB0_GRXSTSR_DEVICEMODE_DPID:
-    enum:
-      value1:
-        description: DATA0
-        value: 0
-      value2:
-        description: DATA1
-        value: 2
-      value3:
-        description: DATA2
-        value: 1
-      value4:
-        description: MDATA
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USB0_GRXSTSP_DEVICEMODE_PktSts:
-    enum:
-      value1:
-        description: Global OUT NAK (triggers an interrupt)
-        value: 1
-      value2:
-        description: OUT data packet received
-        value: 2
-      value3:
-        description: OUT transfer completed (triggers an interrupt)
-        value: 3
-      value4:
-        description: SETUP transaction completed (triggers an interrupt)
-        value: 4
-      value5:
-        description: SETUP data packet received
-        value: 6
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USB0_GRXSTSP_DEVICEMODE_DPID:
-    enum:
-      value1:
-        description: DATA0
-        value: 0
-      value2:
-        description: DATA1
-        value: 2
-      value3:
-        description: DATA2
-        value: 1
-      value4:
-        description: MDATA
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USB0_GRXSTSP_HOSTMODE_PktSts:
-    enum:
-      value1:
-        description: IN data packet received
-        value: 2
-      value2:
-        description: IN transfer completed (triggers an interrupt)
-        value: 3
-      value3:
-        description: Data toggle error (triggers an interrupt)
-        value: 5
-      value4:
-        description: Channel halted (triggers an interrupt)
-        value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USB0_GRXSTSP_HOSTMODE_DPID:
-    enum:
-      value1:
-        description: DATA0
-        value: 0
-      value2:
-        description: DATA1
-        value: 2
-      value3:
-        description: DATA2
-        value: 1
-      value4:
-        description: MDATA
-        value: 3
     unit_test: false
     json: false
     use_map: false
     identifier: false
   USB0_GNPTXSTS_NPTxQTop:
     enum:
-      value1:
+      inout_token:
         description: IN/OUT token
         value: 0
-      value2:
+      zero_length_transmit_packet_device_inhost_out:
         description: Zero-length transmit packet (device IN/host OUT)
         value: 1
-      value4:
+      channel_halt_command:
         description: Channel halt command
         value: 3
     unit_test: false
@@ -2343,13 +2190,13 @@ enums:
     identifier: false
   USB0_GNPTXSTS_NPTxQSpcAvail:
     enum:
-      value1:
+      non_periodic_transmit_request_queue_full:
         description: Non-periodic Transmit Request Queue is full
         value: 0
-      value2:
+      1_location_available:
         description: 1 location available
         value: 1
-      value3:
+      2_locations_available:
         description: 2 locations available
         value: 2
     unit_test: false
@@ -2358,13 +2205,13 @@ enums:
     identifier: false
   USB0_GNPTXSTS_NPTxFSpcAvail:
     enum:
-      value1:
+      non_periodic_txfifo_full:
         description: Non-periodic TxFIFO is full
         value: 0
-      value2:
+      1_word_available:
         description: 1 word available
         value: 1
-      value3:
+      2_words_available:
         description: 2 words available
         value: 2
     unit_test: false
@@ -2374,16 +2221,16 @@ enums:
     underlying: uint16_t
   USB0_HCFG_FrListEn:
     enum:
-      value1:
+      8_entries:
         description: 8 Entries
         value: 0
-      value2:
+      16_entries:
         description: 16 Entries
         value: 1
-      value3:
+      32_entries:
         description: 32 Entries
         value: 2
-      value4:
+      64_entries:
         description: 64 Entries
         value: 3
     unit_test: false
@@ -2392,10 +2239,10 @@ enums:
     identifier: false
   USB0_HCFG_FSLSSupp:
     enum:
-      value1:
+      connected_device_can_supports_also_only_fs:
         description: FS-only, connected device can supports also only FS.
         value: 0
-      value2:
+      even_if_connected_device_can_support_hs:
         description: FS-only, even if the connected device can support HS
         value: 1
     unit_test: false
@@ -2404,7 +2251,7 @@ enums:
     identifier: false
   USB0_HCFG_FSLSPclkSel:
     enum:
-      value1:
+      phy_clock_running_at_48_mhz:
         description: PHY clock is running at 48 MHz
         value: 1
     unit_test: false
@@ -2413,10 +2260,10 @@ enums:
     identifier: false
   USB0_HFIR_HFIRRldCtrl:
     enum:
-      value1:
+      not_be_reloaded_dynamically:
         description: HFIR cannot be reloaded dynamically
         value: 0
-      value2:
+      _be_dynamically_reloaded_during_runtime:
         description: HFIR can be dynamically reloaded during runtime
         value: 1
     unit_test: false
@@ -2425,13 +2272,13 @@ enums:
     identifier: false
   USB0_HPTXSTS_PTxQSpcAvail:
     enum:
-      value1:
+      periodic_transmit_request_queue_full:
         description: Periodic Transmit Request Queue is full
         value: 0
-      value2:
+      1_location_available:
         description: 1 location available
         value: 1
-      value3:
+      2_locations_available:
         description: 2 locations available
         value: 2
     unit_test: false
@@ -2440,13 +2287,13 @@ enums:
     identifier: false
   USB0_HPTXSTS_PTxFSpcAvail:
     enum:
-      value1:
+      periodic_txfifo_full:
         description: Periodic TxFIFO is full
         value: 0
-      value2:
+      1_word_available:
         description: 1 word available
         value: 1
-      value3:
+      2_words_available:
         description: 2 words available
         value: 2
     unit_test: false
@@ -2456,7 +2303,7 @@ enums:
     underlying: uint16_t
   USB0_HPRT_PrtSpd:
     enum:
-      value1:
+      full_speed:
         description: Full speed
         value: 1
     unit_test: false
@@ -2465,10 +2312,10 @@ enums:
     identifier: false
   USB0_HPRT_PrtPwr:
     enum:
-      value1:
+      _off:
         description: Power off
         value: 0
-      value2:
+      power:
         description: Power on
         value: 1
     unit_test: false
@@ -2477,10 +2324,10 @@ enums:
     identifier: false
   USB0_HPRT_PrtRst:
     enum:
-      value1:
+      not_reset:
         description: Port not in reset
         value: 0
-      value2:
+      reset:
         description: Port in reset
         value: 1
     unit_test: false
@@ -2489,10 +2336,10 @@ enums:
     identifier: false
   USB0_HPRT_PrtSusp:
     enum:
-      value1:
+      not_suspend_mode:
         description: Port not in Suspend mode
         value: 0
-      value2:
+      suspend_mode:
         description: Port in Suspend mode
         value: 1
     unit_test: false
@@ -2501,10 +2348,10 @@ enums:
     identifier: false
   USB0_HPRT_PrtRes:
     enum:
-      value1:
+      no_resume_driven:
         description: No resume driven
         value: 0
-      value2:
+      resume_driven:
         description: Resume driven
         value: 1
     unit_test: false
@@ -2513,10 +2360,10 @@ enums:
     identifier: false
   USB0_HPRT_PrtOvrCurrAct:
     enum:
-      value1:
+      no_overcurrent_condition:
         description: No overcurrent condition
         value: 0
-      value2:
+      overcurrent_condition:
         description: Overcurrent condition
         value: 1
     unit_test: false
@@ -2525,10 +2372,10 @@ enums:
     identifier: false
   USB0_HPRT_PrtEna:
     enum:
-      value1:
+      disabled:
         description: Port disabled
         value: 0
-      value2:
+      enabled:
         description: Port enabled
         value: 1
     unit_test: false
@@ -2537,10 +2384,10 @@ enums:
     identifier: false
   USB0_HPRT_PrtConnSts:
     enum:
-      value1:
+      no_device_attached_port:
         description: No device is attached to the port.
         value: 0
-      value2:
+      device_attached_port:
         description: A device is attached to the port.
         value: 1
     unit_test: false
@@ -2549,13 +2396,13 @@ enums:
     identifier: false
   USB0_DCFG_PerSchIntvl:
     enum:
-      value1:
+      25_frame:
         description: 25% of frame.
         value: 0
-      value2:
+      50_frame:
         description: 50% of frame.
         value: 1
-      value3:
+      75_frame:
         description: 75% of frame.
         value: 2
     unit_test: false
@@ -2564,16 +2411,16 @@ enums:
     identifier: false
   USB0_DCFG_PerFrInt:
     enum:
-      value1:
+      80_frame_interval:
         description: 80% of the frame interval
         value: 0
-      value2:
+      '85':
         description: 85%
         value: 1
-      value3:
+      '90':
         description: 90%
         value: 2
-      value4:
+      '95':
         description: 95%
         value: 3
     unit_test: false
@@ -2582,11 +2429,11 @@ enums:
     identifier: false
   USB0_DCFG_NZStsOUTHShk:
     enum:
-      value1:
+      stall_handshake_nonzero_length_status_ou_cont:
         description: Send a STALL handshake on a nonzero-length status OUT transaction
           and do not send the received OUT packet to the application.
         value: 1
-      value2:
+      received_out_packet_application_zero_len_cont:
         description: Send the received OUT packet to the application (zero-length
           or nonzero-length) and send a handshake based on the NAK and STALL bits
           for the endpoint in the Device Endpoint Control register.
@@ -2597,7 +2444,7 @@ enums:
     identifier: false
   USB0_DCFG_DevSpd:
     enum:
-      value4:
+      full_speed_usb_11_transceiver_clock_48_mhz:
         description: Full speed (USB 1.1 transceiver clock is 48 MHz)
         value: 3
     unit_test: false
@@ -2606,12 +2453,12 @@ enums:
     identifier: false
   USB0_DCTL_EnContOnBNA:
     enum:
-      value1:
+      after_receiving_bna_interrupt_core_disables_e_cont:
         description: After receiving BNA interrupt, the core disables the endpoint.
           When the endpoint is re-enabled by the application, the core starts processing
           from the DOEPDMA descriptor.
         value: 0
-      value2:
+      _:
         description: After receiving BNA interrupt, the core disables the endpoint.
           When the endpoint is re-enabled by the application, the core starts processing
           from the descriptor that received the BNA interrupt.
@@ -2622,13 +2469,13 @@ enums:
     identifier: false
   USB0_DCTL_IgnrFrmNum:
     enum:
-      value1:
+      transmits_packets__cont:
         description: 'Scatter/Gather enabled: The core transmits the packets only
           in the frame number in which they are intended to be transmitted. Scatter/Gather
           disabled: Periodic transfer interrupt feature is disabled; the application
           must program transfers for periodic endpoints every frame'
         value: 0
-      value2:
+      ignores_frame_numb_cont:
         description: 'Scatter/Gather enabled: The core ignores the frame number, sending
           packets immediately as the packets are ready. Scatter/Gather disabled: Periodic
           transfer interrupt feature is enabled; the application can program transfers
@@ -2640,16 +2487,16 @@ enums:
     identifier: false
   USB0_DCTL_GMC:
     enum:
-      value1:
+      invalid:
         description: Invalid.
         value: 0
-      value2:
+      1_packet:
         description: 1 packet.
         value: 1
-      value3:
+      2_packets:
         description: 2 packets.
         value: 2
-      value4:
+      3_packets:
         description: 3 packets.
         value: 3
     unit_test: false
@@ -2658,11 +2505,11 @@ enums:
     identifier: false
   USB0_DCTL_GOUTNakSts:
     enum:
-      value1:
+      handshake_sent_based_fifo_status_nak_stall_bi_cont:
         description: A handshake is sent based on the FIFO Status and the NAK and
           STALL bit settings.
         value: 0
-      value2:
+      no_data_written_rxfifo_irrespective_space_ava_cont:
         description: No data is written to the RxFIFO, irrespective of space availability.
           Sends a NAK handshake on all packets, except on SETUP transactions. All
           isochronous OUT packets are dropped.
@@ -2673,11 +2520,11 @@ enums:
     identifier: false
   USB0_DCTL_GNPINNakSts:
     enum:
-      value1:
+      handshake_sent_out_based_data_availability_tr_cont:
         description: A handshake is sent out based on the data availability in the
           transmit FIFO.
         value: 0
-      value2:
+      nak_handshake_sent_out_all_non_periodic_endpo_cont:
         description: A NAK handshake is sent out on all non-periodic IN endpoints,
           irrespective of the data availability in the transmit FIFO.
         value: 1
@@ -2687,12 +2534,12 @@ enums:
     identifier: false
   USB0_DCTL_SftDiscon:
     enum:
-      value1:
+      normal_operation_when_this_bit_cleared_after__cont:
         description: Normal operation. When this bit is cleared after a soft disconnect,
           the core drives a device connect event to the USB host. When the device
           is reconnected, the USB host restarts device enumeration.
         value: 0
-      value2:
+      core_drives_device_disconnect_event_usb_host:
         description: The core drives a device disconnect event to the USB host.
         value: 1
     unit_test: false
@@ -2701,7 +2548,7 @@ enums:
     identifier: false
   USB0_DSTS_EnumSpd:
     enum:
-      value4:
+      full_speed_phy_clock_running_at_48_mhz:
         description: Full speed (PHY clock is running at 48 MHz)
         value: 3
     unit_test: false

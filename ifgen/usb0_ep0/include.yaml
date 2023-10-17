@@ -239,7 +239,7 @@ structs:
             width: 1
             read: true
             write: false
-            type: USB0_EP0_DOEPCTL0_NAKSts
+            type: USB0_EP0_DIEPCTL0_NAKSts
           - name: USBActEP
             description: USB Active Endpoint
             index: 15
@@ -252,7 +252,7 @@ structs:
             width: 2
             read: true
             write: false
-            type: USB0_EP0_DOEPCTL0_MPS
+            type: USB0_EP0_DIEPCTL0_MPS
       - name: DOEPINT0
         type: uint32_t
         expected_size: 4
@@ -389,11 +389,11 @@ structs:
 enums:
   USB0_EP0_DIEPCTL0_NAKSts:
     enum:
-      value1:
+      on_nak_handshakes_based_fi_cont:
         description: The core is transmitting non-NAK handshakes based on the FIFO
           status
         value: 0
-      value2:
+      ak_handshakes_this_endpoint:
         description: The core is transmitting NAK handshakes on this endpoint.
         value: 1
     unit_test: false
@@ -402,16 +402,16 @@ enums:
     identifier: false
   USB0_EP0_DIEPCTL0_MPS:
     enum:
-      value1:
+      64_bytes:
         description: 64 bytes
         value: 0
-      value2:
+      32_bytes:
         description: 32 bytes
         value: 1
-      value3:
+      16_bytes:
         description: 16 bytes
         value: 2
-      value4:
+      8_bytes:
         description: 8 bytes
         value: 3
     unit_test: false
@@ -420,13 +420,13 @@ enums:
     identifier: false
   USB0_EP0_DTXFSTS0_INEPTxFSpcAvail:
     enum:
-      value1:
+      endpoint_txfifo_full:
         description: Endpoint TxFIFO is full
         value: 0
-      value2:
+      1_word_available:
         description: 1 word available
         value: 1
-      value3:
+      2_words_available:
         description: 2 words available
         value: 2
     unit_test: false
@@ -434,46 +434,15 @@ enums:
     use_map: false
     identifier: false
     underlying: uint16_t
-  USB0_EP0_DOEPCTL0_NAKSts:
-    enum:
-      value1:
-        description: The core is transmitting non-NAK handshakes based on the FIFO
-          status.
-        value: 0
-      value2:
-        description: The core is transmitting NAK handshakes on this endpoint.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USB0_EP0_DOEPCTL0_MPS:
-    enum:
-      value1:
-        description: 64 bytes
-        value: 0
-      value2:
-        description: 32 bytes
-        value: 1
-      value3:
-        description: 16 bytes
-        value: 2
-      value4:
-        description: 8 bytes
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USB0_EP0_DOEPTSIZ0_SUPCnt:
     enum:
-      value1:
+      1_packet:
         description: 1 packet
         value: 1
-      value2:
+      2_packets:
         description: 2 packets
         value: 2
-      value3:
+      3_packets:
         description: 3 packets
         value: 3
     unit_test: false

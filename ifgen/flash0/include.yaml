@@ -5,6 +5,10 @@ structs:
     instances:
       - name: FLASH0
         address: '0x58001000'
+      - name: PMU0
+        address: '0x58000508'
+      - name: USIC0
+        address: '0x40030008'
     fields:
       - name: ID
         type: uint32_t
@@ -349,63 +353,63 @@ structs:
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON0_S8L
+            type: FLASH0_PROCON0_S9L
           - name: S7L
             description: Sector 7 Locked for Write Protection by User 0
             index: 7
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON0_S7L
+            type: FLASH0_PROCON0_S9L
           - name: S6L
             description: Sector 6 Locked for Write Protection by User 0
             index: 6
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON0_S6L
+            type: FLASH0_PROCON0_S9L
           - name: S5L
             description: Sector 5 Locked for Write Protection by User 0
             index: 5
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON0_S5L
+            type: FLASH0_PROCON0_S9L
           - name: S4L
             description: Sector 4 Locked for Write Protection by User 0
             index: 4
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON0_S4L
+            type: FLASH0_PROCON0_S9L
           - name: S3L
             description: Sector 3 Locked for Write Protection by User 0
             index: 3
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON0_S3L
+            type: FLASH0_PROCON0_S9L
           - name: S2L
             description: Sector 2 Locked for Write Protection by User 0
             index: 2
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON0_S2L
+            type: FLASH0_PROCON0_S9L
           - name: S1L
             description: Sector 1 Locked for Write Protection by User 0
             index: 1
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON0_S1L
+            type: FLASH0_PROCON0_S9L
           - name: S0L
             description: Sector 0 Locked for Write Protection by User 0
             index: 0
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON0_S0L
+            type: FLASH0_PROCON0_S9L
       - name: PROCON1
         type: uint32_t
         expected_size: 4
@@ -426,91 +430,91 @@ structs:
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON1_S14_S15L
+            type: FLASH0_PROCON0_S14_S15L
           - name: S12_S13L
             description: Sectors 12 and 13 Locked for Write Protection by User 1
             index: 11
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON1_S12_S13L
+            type: FLASH0_PROCON0_S12_S13L
           - name: S10_S11L
             description: Sectors 10 and 11 Locked for Write Protection by User 1
             index: 10
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON1_S10_S11L
+            type: FLASH0_PROCON0_S10_S11L
           - name: S9L
             description: Sector 9 Locked for Write Protection by User 1
             index: 9
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON1_S9L
+            type: FLASH0_PROCON0_S9L
           - name: S8L
             description: Sector 8 Locked for Write Protection by User 1
             index: 8
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON1_S8L
+            type: FLASH0_PROCON0_S9L
           - name: S7L
             description: Sector 7 Locked for Write Protection by User 1
             index: 7
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON1_S7L
+            type: FLASH0_PROCON0_S9L
           - name: S6L
             description: Sector 6 Locked for Write Protection by User 1
             index: 6
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON1_S6L
+            type: FLASH0_PROCON0_S9L
           - name: S5L
             description: Sector 5 Locked for Write Protection by User 1
             index: 5
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON1_S5L
+            type: FLASH0_PROCON0_S9L
           - name: S4L
             description: Sector 4 Locked for Write Protection by User 1
             index: 4
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON1_S4L
+            type: FLASH0_PROCON0_S9L
           - name: S3L
             description: Sector 3 Locked for Write Protection by User 1
             index: 3
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON1_S3L
+            type: FLASH0_PROCON0_S9L
           - name: S2L
             description: Sector 2 Locked for Write Protection by User 1
             index: 2
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON1_S2L
+            type: FLASH0_PROCON0_S9L
           - name: S1L
             description: Sector 1 Locked for Write Protection by User 1
             index: 1
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON1_S1L
+            type: FLASH0_PROCON0_S9L
           - name: S0L
             description: Sector 0 Locked for Write Protection by User 1
             index: 0
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON1_S0L
+            type: FLASH0_PROCON0_S9L
       - name: PROCON2
         type: uint32_t
         expected_size: 4
@@ -552,63 +556,63 @@ structs:
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON2_S8ROM
+            type: FLASH0_PROCON2_S9ROM
           - name: S7ROM
             description: Sector 7 Locked Forever by User 2
             index: 7
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON2_S7ROM
+            type: FLASH0_PROCON2_S9ROM
           - name: S6ROM
             description: Sector 6 Locked Forever by User 2
             index: 6
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON2_S6ROM
+            type: FLASH0_PROCON2_S9ROM
           - name: S5ROM
             description: Sector 5 Locked Forever by User 2
             index: 5
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON2_S5ROM
+            type: FLASH0_PROCON2_S9ROM
           - name: S4ROM
             description: Sector 4 Locked Forever by User 2
             index: 4
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON2_S4ROM
+            type: FLASH0_PROCON2_S9ROM
           - name: S3ROM
             description: Sector 3 Locked Forever by User 2
             index: 3
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON2_S3ROM
+            type: FLASH0_PROCON2_S9ROM
           - name: S2ROM
             description: Sector 2 Locked Forever by User 2
             index: 2
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON2_S2ROM
+            type: FLASH0_PROCON2_S9ROM
           - name: S1ROM
             description: Sector 1 Locked Forever by User 2
             index: 1
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON2_S1ROM
+            type: FLASH0_PROCON2_S9ROM
           - name: S0ROM
             description: Sector 0 Locked Forever by User 2
             index: 0
             width: 1
             read: true
             write: false
-            type: FLASH0_PROCON2_S0ROM
+            type: FLASH0_PROCON2_S9ROM
     stream: false
     codec: false
     methods: false
@@ -617,11 +621,11 @@ structs:
 enums:
   FLASH0_FSR_VER:
     enum:
-      value1:
+      page_correctly_programmed_or_sector_correctly_cont:
         description: The page is correctly programmed or the sector correctly erased.
           All programmed or erased bits have full expected quality.
         value: 0
-      value2:
+      program_verify_error_or_an_erase_verify_error_cont:
         description: A program verify error or an erase verify error has been detected.
           Full quality (retention time) of all programmed ("1") or erased ("0") bits
           cannot be guaranteed.
@@ -632,10 +636,10 @@ enums:
     identifier: false
   FLASH0_FSR_SLM:
     enum:
-      value1:
+      not_sleep_mode:
         description: Flash not in sleep mode
         value: 0
-      value2:
+      sleep_or_shut_down_mode:
         description: Flash is in sleep or shut down mode
         value: 1
     unit_test: false
@@ -644,11 +648,11 @@ enums:
     identifier: false
   FLASH0_FSR_WPRODIS1:
     enum:
-      value1:
+      protected_sectors_user_1_locked_if_write__cont:
         description: All protected sectors of user 1 are locked if write protection
           is installed
         value: 0
-      value2:
+      write_protected_sectors_user_1_temporaril_cont:
         description: All write-protected sectors of user 1 are temporarily unlocked,
           if not coincidently locked by user 0 or user 2 or via read protection.
         value: 1
@@ -658,11 +662,11 @@ enums:
     identifier: false
   FLASH0_FSR_WPRODIS0:
     enum:
-      value1:
+      protected_sectors_user_0_locked_if_write__cont:
         description: All protected sectors of user 0 are locked if write protection
           is installed
         value: 0
-      value2:
+      write_protected_sectors_user_0_temporaril_cont:
         description: All write-protected sectors of user 0 are temporarily unlocked,
           if not coincidently locked by user 2 or via read protection.
         value: 1
@@ -672,10 +676,10 @@ enums:
     identifier: false
   FLASH0_FSR_WPROIN2:
     enum:
-      value1:
+      no_otp_write_protection_installed_user_2:
         description: No OTP write protection installed for user 2
         value: 0
-      value2:
+      sector_otp_write_protection_with_rom_function_cont:
         description: Sector OTP write protection with ROM functionality is configured
           and correctly confirmed in the UCB2. The protection is locked for ever.
         value: 1
@@ -685,10 +689,10 @@ enums:
     identifier: false
   FLASH0_FSR_WPROIN1:
     enum:
-      value1:
+      no_write_protection_installed_user_1:
         description: No write protection installed for user 1
         value: 0
-      value2:
+      sector_write_protection_user_1_configured_cor_cont:
         description: Sector write protection for user 1 is configured and correctly
           confirmed in the User Configuration Block 1.
         value: 1
@@ -698,10 +702,10 @@ enums:
     identifier: false
   FLASH0_FSR_WPROIN0:
     enum:
-      value1:
+      no_write_protection_installed_user_0:
         description: No write protection installed for user 0
         value: 0
-      value2:
+      sector_write_protection_user_0_configured_cor_cont:
         description: Sector write protection for user 0 is configured and correctly
           confirmed in the User Configuration Block 0.
         value: 1
@@ -711,10 +715,10 @@ enums:
     identifier: false
   FLASH0_FSR_RPRODIS:
     enum:
-      value1:
+      protection_if_installed_not_disabled:
         description: Read protection (if installed) is not disabled
         value: 0
-      value2:
+      global_write_protection_temporarily_disabled:
         description: Read and global write protection is temporarily disabled.
         value: 1
     unit_test: false
@@ -723,10 +727,10 @@ enums:
     identifier: false
   FLASH0_FSR_RPROIN:
     enum:
-      value1:
+      no_read_protection_installed:
         description: No read protection installed
         value: 0
-      value2:
+      read_protection_global_write_protection_confi_cont:
         description: Read protection and global write protection is configured and
           correctly confirmed in the User Configuration Block 0.
         value: 1
@@ -736,10 +740,10 @@ enums:
     identifier: false
   FLASH0_FSR_PROIN:
     enum:
-      value1:
+      no_protection_installed:
         description: No protection is installed
         value: 0
-      value2:
+      read_orand_write_protection_one_or_more_users_cont:
         description: Read or/and write protection for one or more users is configured
           and correctly confirmed in the User Configuration Block(s).
         value: 1
@@ -749,10 +753,10 @@ enums:
     identifier: false
   FLASH0_FSR_PFDBER:
     enum:
-      value1:
+      no_double_bit_error_detected_during_read_acce_cont:
         description: No Double-Bit Error detected during read access to PFLASH
         value: 0
-      value2:
+      double_bit_error_detected_pflash:
         description: Double-Bit Error detected in PFLASH
         value: 1
     unit_test: false
@@ -761,10 +765,10 @@ enums:
     identifier: false
   FLASH0_FSR_PFSBER:
     enum:
-      value1:
+      no_single_bit_error_detected_during_read_acce_cont:
         description: No Single-Bit Error detected during read access to PFLASH
         value: 0
-      value2:
+      single_bit_error_detected_corrected:
         description: Single-Bit Error detected and corrected
         value: 1
     unit_test: false
@@ -773,10 +777,10 @@ enums:
     identifier: false
   FLASH0_FSR_PROER:
     enum:
-      value1:
+      no_protection_error:
         description: No protection error
         value: 0
-      value2:
+      protection_error:
         description: Protection error.
         value: 1
     unit_test: false
@@ -785,10 +789,10 @@ enums:
     identifier: false
   FLASH0_FSR_SQER:
     enum:
-      value1:
+      no_sequence_error:
         description: No sequence error
         value: 0
-      value2:
+      command_state_machine_operation_unsuccessful__cont:
         description: Command state machine operation unsuccessful because of improper
           address or command sequence.
         value: 1
@@ -798,10 +802,10 @@ enums:
     identifier: false
   FLASH0_FSR_PFOPER:
     enum:
-      value1:
+      no_operation_error_reported_by_program_flash:
         description: No operation error reported by Program Flash
         value: 0
-      value2:
+      flash_array_operation_aborted_because_flash_a_cont:
         description: Flash array operation aborted, because of a Flash array failure,
           e.g. an ECC error in microcode.
         value: 1
@@ -811,10 +815,10 @@ enums:
     identifier: false
   FLASH0_FSR_PFPAGE:
     enum:
-      value1:
+      not_page_mode:
         description: Program Flash not in page mode
         value: 0
-      value2:
+      page_mode_assembly_buffer_pflas_cont:
         description: Program Flash in page mode; assembly buffer of PFLASH (256 byte)
           is in use (being filled up)
         value: 1
@@ -824,11 +828,11 @@ enums:
     identifier: false
   FLASH0_FSR_ERASE:
     enum:
-      value1:
+      there_no_erase_operation_requested_or_progres_cont:
         description: There is no erase operation requested or in progress or just
           finished
         value: 0
-      value2:
+      erase_operation_requested_fim_or_action_or_fi_cont:
         description: Erase operation requested (from FIM) or in action or finished.
         value: 1
     unit_test: false
@@ -837,11 +841,11 @@ enums:
     identifier: false
   FLASH0_FSR_PROG:
     enum:
-      value1:
+      there_no_program_operation_requested_or_progr_cont:
         description: There is no program operation requested or in progress or just
           finished.
         value: 0
-      value2:
+      programming_operation_write_page_requested_fi_cont:
         description: Programming operation (write page) requested (from FIM) or in
           action or finished.
         value: 1
@@ -851,10 +855,10 @@ enums:
     identifier: false
   FLASH0_FSR_PBUSY:
     enum:
-      value1:
+      ready_not_busy_pflash_read_mode:
         description: PFLASH ready, not busy; PFLASH in read mode.
         value: 0
-      value2:
+      busy_pflash_not_read_mode:
         description: PFLASH busy; PFLASH not in read mode.
         value: 1
     unit_test: false
@@ -863,10 +867,10 @@ enums:
     identifier: false
   FLASH0_FCON_EOBM:
     enum:
-      value1:
+      interrupt_not_enabled:
         description: Interrupt not enabled
         value: 0
-      value2:
+      eob_interrupt_enabled:
         description: EOB interrupt is enabled
         value: 1
     unit_test: false
@@ -875,10 +879,10 @@ enums:
     identifier: false
   FLASH0_FCON_PFDBERM:
     enum:
-      value1:
+      not_enabled:
         description: Double-Bit Error interrupt for PFLASH not enabled
         value: 0
-      value2:
+      enabled_esp_cont:
         description: Double-Bit Error interrupt for PFLASH enabled. Especially intended
           for margin check
         value: 1
@@ -888,10 +892,10 @@ enums:
     identifier: false
   FLASH0_FCON_PFSBERM:
     enum:
-      value1:
+      no_single_bit_error_interrupt_enabled:
         description: No Single-Bit Error interrupt enabled
         value: 0
-      value2:
+      single_bit_error_interrupt_enabled_pflash:
         description: Single-Bit Error interrupt enabled for PFLASH
         value: 1
     unit_test: false
@@ -900,10 +904,10 @@ enums:
     identifier: false
   FLASH0_FCON_PROERM:
     enum:
-      value1:
+      interrupt_not_enabled:
         description: Interrupt not enabled
         value: 0
-      value2:
+      flash_interrupt_because_protection_error_enabled:
         description: Flash interrupt because of Protection Error is enabled
         value: 1
     unit_test: false
@@ -912,10 +916,10 @@ enums:
     identifier: false
   FLASH0_FCON_SQERM:
     enum:
-      value1:
+      interrupt_not_enabled:
         description: Interrupt not enabled
         value: 0
-      value2:
+      flash_interrupt_because_sequence_error_enabled:
         description: Flash interrupt because of Sequence Error is enabled
         value: 1
     unit_test: false
@@ -924,10 +928,10 @@ enums:
     identifier: false
   FLASH0_FCON_VOPERM:
     enum:
-      value1:
+      interrupt_not_enabled:
         description: Interrupt not enabled
         value: 0
-      value2:
+      flash_interrupt_because_verify_error_or_opera_cont:
         description: Flash interrupt because of Verify Error or Operation Error in
           Flash array (FSI) is enabled
         value: 1
@@ -937,10 +941,10 @@ enums:
     identifier: false
   FLASH0_FCON_DDF:
     enum:
-      value1:
+      allowed:
         description: Data read access to the Flash memory area is allowed.
         value: 0
-      value2:
+      not_allowe_cont:
         description: Data read access to the Flash memory area is not allowed. This
           bit is not taken into account while RPA='0'.
         value: 1
@@ -950,10 +954,10 @@ enums:
     identifier: false
   FLASH0_FCON_DCF:
     enum:
-      value1:
+      allowed:
         description: Code fetching from the Flash memory area is allowed.
         value: 0
-      value2:
+      not_allowed_t_cont:
         description: Code fetching from the Flash memory area is not allowed. This
           bit is not taken into account while RPA='0'.
         value: 1
@@ -963,11 +967,11 @@ enums:
     identifier: false
   FLASH0_FCON_RPA:
     enum:
-      value1:
+      not_activated__cont:
         description: The Flash-internal read protection is not activated. Bits DCF,
           DDF are not taken into account. Bits DCF, DDFx can be cleared
         value: 0
-      value2:
+      activated_bits_cont:
         description: The Flash-internal read protection is activated. Bits DCF, DDF
           are enabled and evaluated.
         value: 1
@@ -977,10 +981,10 @@ enums:
     identifier: false
   FLASH0_FCON_SLEEP:
     enum:
-      value1:
+      normal_state_or_wake_up:
         description: Normal state or wake-up
         value: 0
-      value2:
+      flash_sleep_mode_requested:
         description: Flash sleep mode is requested
         value: 1
     unit_test: false
@@ -989,10 +993,10 @@ enums:
     identifier: false
   FLASH0_FCON_ESLDIS:
     enum:
-      value1:
+      _sleep_request_signal_input_enabled:
         description: External sleep request signal input is enabled
         value: 0
-      value2:
+      ly_requested_flash_sleep_disabled:
         description: Externally requested Flash sleep is disabled
         value: 1
     unit_test: false
@@ -1001,10 +1005,10 @@ enums:
     identifier: false
   FLASH0_FCON_IDLE:
     enum:
-      value1:
+      normalstandard_flash_read_operation:
         description: Normal/standard Flash read operation
         value: 0
-      value2:
+      dynamic_idle_program_flash_enabled_power_savi_cont:
         description: Dynamic idle of Program Flash enabled for power saving; static
           prefetching disabled
         value: 1
@@ -1014,10 +1018,10 @@ enums:
     identifier: false
   FLASH0_FCON_WSECPF:
     enum:
-      value1:
+      no_additional_wait_state_error_correction:
         description: No additional wait state for error correction
         value: 0
-      value2:
+      one_additional_wait_state_error_correction_du_cont:
         description: One additional wait state for error correction during read access
           to Program Flash. If enabled, this wait state is only used for the first
           transfer of a burst transfer.
@@ -1028,19 +1032,19 @@ enums:
     identifier: false
   FLASH0_FCON_WSPFLASH:
     enum:
-      value1:
+      one_clock_cycle:
         description: PFLASH access in one clock cycle
         value: 0
-      value2:
+      one_clock_cycle_:
         description: PFLASH access in one clock cycle
         value: 1
-      value3:
+      two_clock_cycles:
         description: PFLASH access in two clock cycles
         value: 2
-      value4:
+      three_clock_cycles:
         description: PFLASH access in three clock cycles
         value: 3
-      value5:
+      fifteen_clock_cycles:
         description: PFLASH access in fifteen clock cycles.
         value: 15
     unit_test: false
@@ -1049,10 +1053,10 @@ enums:
     identifier: false
   FLASH0_MARP_TRAPDIS:
     enum:
-      value1:
+      if_double_bit_error_occurs_pflash_bus_error_t_cont:
         description: If a double-bit error occurs in PFLASH, a bus error trap is generated.
         value: 0
-      value2:
+      double_bit_error_trap_disabled_shall_be_used__cont:
         description: The double-bit error trap is disabled. Shall be used only during
           margin check
         value: 1
@@ -1062,14 +1066,14 @@ enums:
     identifier: false
   FLASH0_MARP_MARGIN:
     enum:
-      value1:
+      standard_default_margin:
         description: Standard (default) margin.
         value: 0
-      value2:
+      tight_margin_0_low_level_suboptimal_0_bits_read_1s:
         description: Tight margin for 0 (low) level. Suboptimal 0-bits are read as
           1s.
         value: 1
-      value3:
+      tight_margin_1_high_level_suboptimal_1_bits_r_cont:
         description: Tight margin for 1 (high) level. Suboptimal 1-bits are read as
           0s.
         value: 4
@@ -1079,10 +1083,10 @@ enums:
     identifier: false
   FLASH0_PROCON0_RPRO:
     enum:
-      value1:
+      no_read_protection_configured:
         description: No read protection configured
         value: 0
-      value2:
+      read_protection_global_write_protection_confi_cont:
         description: Read protection and global write protection is configured by
           user 0 (master user)
         value: 1
@@ -1092,10 +1096,10 @@ enums:
     identifier: false
   FLASH0_PROCON0_S14_S15L:
     enum:
-      value1:
+      no_write_protection_configured_sectors_1415:
         description: No write protection is configured for sectors 14+15.
         value: 0
-      value2:
+      write_protection_configured_sectors_1415:
         description: Write protection is configured for sectors 14+15.
         value: 1
     unit_test: false
@@ -1104,10 +1108,10 @@ enums:
     identifier: false
   FLASH0_PROCON0_S12_S13L:
     enum:
-      value1:
+      no_write_protection_configured_sectors_1213:
         description: No write protection is configured for sectors 12+13.
         value: 0
-      value2:
+      write_protection_configured_sectors_1213:
         description: Write protection is configured for sectors 12+13.
         value: 1
     unit_test: false
@@ -1116,10 +1120,10 @@ enums:
     identifier: false
   FLASH0_PROCON0_S10_S11L:
     enum:
-      value1:
+      no_write_protection_configured_sectors_1011:
         description: No write protection is configured for sectors 10+11.
         value: 0
-      value2:
+      write_protection_configured_sectors_1011:
         description: Write protection is configured for sectors 10+11.
         value: 1
     unit_test: false
@@ -1128,118 +1132,10 @@ enums:
     identifier: false
   FLASH0_PROCON0_S9L:
     enum:
-      value1:
+      no_write_protection_configured_sector_n:
         description: No write protection is configured for sector n.
         value: 0
-      value2:
-        description: Write protection is configured for sector n.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON0_S8L:
-    enum:
-      value1:
-        description: No write protection is configured for sector n.
-        value: 0
-      value2:
-        description: Write protection is configured for sector n.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON0_S7L:
-    enum:
-      value1:
-        description: No write protection is configured for sector n.
-        value: 0
-      value2:
-        description: Write protection is configured for sector n.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON0_S6L:
-    enum:
-      value1:
-        description: No write protection is configured for sector n.
-        value: 0
-      value2:
-        description: Write protection is configured for sector n.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON0_S5L:
-    enum:
-      value1:
-        description: No write protection is configured for sector n.
-        value: 0
-      value2:
-        description: Write protection is configured for sector n.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON0_S4L:
-    enum:
-      value1:
-        description: No write protection is configured for sector n.
-        value: 0
-      value2:
-        description: Write protection is configured for sector n.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON0_S3L:
-    enum:
-      value1:
-        description: No write protection is configured for sector n.
-        value: 0
-      value2:
-        description: Write protection is configured for sector n.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON0_S2L:
-    enum:
-      value1:
-        description: No write protection is configured for sector n.
-        value: 0
-      value2:
-        description: Write protection is configured for sector n.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON0_S1L:
-    enum:
-      value1:
-        description: No write protection is configured for sector n.
-        value: 0
-      value2:
-        description: Write protection is configured for sector n.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON0_S0L:
-    enum:
-      value1:
-        description: No write protection is configured for sector n.
-        value: 0
-      value2:
+      write_protection_configured_sector_n:
         description: Write protection is configured for sector n.
         value: 1
     unit_test: false
@@ -1248,11 +1144,11 @@ enums:
     identifier: false
   FLASH0_PROCON1_PSR:
     enum:
-      value1:
+      disabled_erase_cont:
         description: Physical Sector Repair command disabled; Erase Physical Sector
           command sequence available.
         value: 0
-      value2:
+      sequence_enabl_cont:
         description: Physical Sector Repair command sequence enabled; Erase Physical
           Sector command sequence disabled.
         value: 1
@@ -1260,168 +1156,12 @@ enums:
     json: false
     use_map: false
     identifier: false
-  FLASH0_PROCON1_S14_S15L:
-    enum:
-      value1:
-        description: No write protection is configured for sectors 14+15.
-        value: 0
-      value2:
-        description: Write protection is configured for sectors 14+15.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON1_S12_S13L:
-    enum:
-      value1:
-        description: No write protection is configured for sectors 12+13.
-        value: 0
-      value2:
-        description: Write protection is configured for sectors 12+13.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON1_S10_S11L:
-    enum:
-      value1:
-        description: No write protection is configured for sectors 10+11.
-        value: 0
-      value2:
-        description: Write protection is configured for sectors 10+11.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON1_S9L:
-    enum:
-      value1:
-        description: No write protection is configured for sector n.
-        value: 0
-      value2:
-        description: Write protection is configured for sector n.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON1_S8L:
-    enum:
-      value1:
-        description: No write protection is configured for sector n.
-        value: 0
-      value2:
-        description: Write protection is configured for sector n.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON1_S7L:
-    enum:
-      value1:
-        description: No write protection is configured for sector n.
-        value: 0
-      value2:
-        description: Write protection is configured for sector n.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON1_S6L:
-    enum:
-      value1:
-        description: No write protection is configured for sector n.
-        value: 0
-      value2:
-        description: Write protection is configured for sector n.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON1_S5L:
-    enum:
-      value1:
-        description: No write protection is configured for sector n.
-        value: 0
-      value2:
-        description: Write protection is configured for sector n.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON1_S4L:
-    enum:
-      value1:
-        description: No write protection is configured for sector n.
-        value: 0
-      value2:
-        description: Write protection is configured for sector n.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON1_S3L:
-    enum:
-      value1:
-        description: No write protection is configured for sector n.
-        value: 0
-      value2:
-        description: Write protection is configured for sector n.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON1_S2L:
-    enum:
-      value1:
-        description: No write protection is configured for sector n.
-        value: 0
-      value2:
-        description: Write protection is configured for sector n.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON1_S1L:
-    enum:
-      value1:
-        description: No write protection is configured for sector n.
-        value: 0
-      value2:
-        description: Write protection is configured for sector n.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON1_S0L:
-    enum:
-      value1:
-        description: No write protection is configured for sector n.
-        value: 0
-      value2:
-        description: Write protection is configured for sector n.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   FLASH0_PROCON2_S14_S15ROM:
     enum:
-      value1:
+      no_rom_functionality_configured_sectors_1415:
         description: No ROM functionality is configured for sectors 14+15.
         value: 0
-      value2:
+      rom_functionality_configured_sectors_1415:
         description: ROM functionality is configured for sectors 14+15.
         value: 1
     unit_test: false
@@ -1430,10 +1170,10 @@ enums:
     identifier: false
   FLASH0_PROCON2_S12_S13ROM:
     enum:
-      value1:
+      no_rom_functionality_configured_sectors_1213:
         description: No ROM functionality is configured for sectors 12+13.
         value: 0
-      value2:
+      rom_functionality_configured_sectors_1213:
         description: ROM functionality is configured for sectors 12+13.
         value: 1
     unit_test: false
@@ -1442,10 +1182,10 @@ enums:
     identifier: false
   FLASH0_PROCON2_S10_S11ROM:
     enum:
-      value1:
+      no_rom_functionality_configured_sectors_1011:
         description: No ROM functionality is configured for sectors 10+11.
         value: 0
-      value2:
+      rom_functionality_configured_sectors_1011:
         description: ROM functionality is configured for sectors 10+11.
         value: 1
     unit_test: false
@@ -1454,127 +1194,10 @@ enums:
     identifier: false
   FLASH0_PROCON2_S9ROM:
     enum:
-      value1:
+      no_rom_functionality_configured_sector_n:
         description: No ROM functionality configured for sector n.
         value: 0
-      value2:
-        description: ROM functionality is configured for sector n. Re-programming
-          of this sector is no longer possible.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON2_S8ROM:
-    enum:
-      value1:
-        description: No ROM functionality configured for sector n.
-        value: 0
-      value2:
-        description: ROM functionality is configured for sector n. Re-programming
-          of this sector is no longer possible.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON2_S7ROM:
-    enum:
-      value1:
-        description: No ROM functionality configured for sector n.
-        value: 0
-      value2:
-        description: ROM functionality is configured for sector n. Re-programming
-          of this sector is no longer possible.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON2_S6ROM:
-    enum:
-      value1:
-        description: No ROM functionality configured for sector n.
-        value: 0
-      value2:
-        description: ROM functionality is configured for sector n. Re-programming
-          of this sector is no longer possible.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON2_S5ROM:
-    enum:
-      value1:
-        description: No ROM functionality configured for sector n.
-        value: 0
-      value2:
-        description: ROM functionality is configured for sector n. Re-programming
-          of this sector is no longer possible.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON2_S4ROM:
-    enum:
-      value1:
-        description: No ROM functionality configured for sector n.
-        value: 0
-      value2:
-        description: ROM functionality is configured for sector n. Re-programming
-          of this sector is no longer possible.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON2_S3ROM:
-    enum:
-      value1:
-        description: No ROM functionality configured for sector n.
-        value: 0
-      value2:
-        description: ROM functionality is configured for sector n. Re-programming
-          of this sector is no longer possible.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON2_S2ROM:
-    enum:
-      value1:
-        description: No ROM functionality configured for sector n.
-        value: 0
-      value2:
-        description: ROM functionality is configured for sector n. Re-programming
-          of this sector is no longer possible.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON2_S1ROM:
-    enum:
-      value1:
-        description: No ROM functionality configured for sector n.
-        value: 0
-      value2:
-        description: ROM functionality is configured for sector n. Re-programming
-          of this sector is no longer possible.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_PROCON2_S0ROM:
-    enum:
-      value1:
-        description: No ROM functionality configured for sector n.
-        value: 0
-      value2:
+      rom_functionality_configured_sector_n_re_prog_cont:
         description: ROM functionality is configured for sector n. Re-programming
           of this sector is no longer possible.
         value: 1

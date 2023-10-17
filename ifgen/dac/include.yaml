@@ -57,7 +57,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: DAC_DAC0CFG0_SIGNEN
+            type: DAC_DAC0CFG0_SREN
           - name: NEGATE
             description: Negates the DAC0 output
             index: 28
@@ -190,42 +190,42 @@ structs:
             width: 1
             read: true
             write: false
-            type: DAC_DAC1CFG0_RUN
+            type: DAC_DAC0CFG0_RUN
           - name: SREN
             description: Enable DAC1 service request interrupt generation
             index: 30
             width: 1
             read: true
             write: true
-            type: DAC_DAC1CFG0_SREN
+            type: DAC_DAC0CFG0_SREN
           - name: SIGNEN
             description: Enable sign output of DAC1 pattern generator
             index: 29
             width: 1
             read: true
             write: true
-            type: DAC_DAC1CFG0_SIGNEN
+            type: DAC_DAC0CFG0_SREN
           - name: NEGATE
             description: Negates the DAC1 output
             index: 28
             width: 1
             read: true
             write: true
-            type: DAC_DAC1CFG0_NEGATE
+            type: DAC_DAC0CFG0_NEGATE
           - name: FIFOFUL
             description: Indicate if the FIFO is full
             index: 27
             width: 1
             read: true
             write: false
-            type: DAC_DAC1CFG0_FIFOFUL
+            type: DAC_DAC0CFG0_FIFOFUL
           - name: FIFOEMP
             description: Indicate if the FIFO is empty
             index: 26
             width: 1
             read: true
             write: false
-            type: DAC_DAC1CFG0_FIFOEMP
+            type: DAC_DAC0CFG0_FIFOEMP
           - name: FIFOIND
             description: Current write position inside the data FIFO
             index: 24
@@ -238,14 +238,14 @@ structs:
             width: 1
             read: true
             write: true
-            type: DAC_DAC1CFG0_SIGN
+            type: DAC_DAC0CFG0_SIGN
           - name: MODE
             description: Enables and sets the Mode for DAC1
             index: 20
             width: 3
             read: true
             write: true
-            type: DAC_DAC1CFG0_MODE
+            type: DAC_DAC0CFG0_MODE
           - name: FREQ
             description: Integer Frequency Divider Value
             index: 0
@@ -283,7 +283,7 @@ structs:
             width: 2
             read: true
             write: true
-            type: DAC_DAC1CFG1_TRIGMOD
+            type: DAC_DAC0CFG1_TRIGMOD
           - name: SWTRIG
             description: Software Trigger
             index: 16
@@ -308,7 +308,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: DAC_DAC1CFG1_MULDIV
+            type: DAC_DAC0CFG1_MULDIV
           - name: SCALE
             description: Scale value for up- or downscale of the DAC1 input data in
               steps by the power of 2 (=shift operation)
@@ -316,7 +316,7 @@ structs:
             width: 3
             read: true
             write: true
-            type: DAC_DAC1CFG1_SCALE
+            type: DAC_DAC0CFG1_SCALE
       - name: DAC0DATA
         type: uint32_t
         expected_size: 4
@@ -499,10 +499,10 @@ structs:
 enums:
   DAC_DAC0CFG0_RUN:
     enum:
-      value1:
+      disabled:
         description: DAC0 channel disabled
         value: 0
-      value2:
+      operation:
         description: DAC0 channel in operation
         value: 1
     unit_test: false
@@ -511,23 +511,11 @@ enums:
     identifier: false
   DAC_DAC0CFG0_SREN:
     enum:
-      value1:
+      disable:
         description: disable
         value: 0
-      value2:
+      enable:
         description: enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DAC_DAC0CFG0_SIGNEN:
-    enum:
-      value1:
-        description: Disable
-        value: 0
-      value2:
-        description: Enable
         value: 1
     unit_test: false
     json: false
@@ -535,10 +523,10 @@ enums:
     identifier: false
   DAC_DAC0CFG0_NEGATE:
     enum:
-      value1:
+      ot_negated:
         description: DAC output not negated
         value: 0
-      value2:
+      egated:
         description: DAC output negated
         value: 1
     unit_test: false
@@ -547,10 +535,10 @@ enums:
     identifier: false
   DAC_DAC0CFG0_FIFOFUL:
     enum:
-      value1:
+      not_full:
         description: FIFO not full
         value: 0
-      value2:
+      full:
         description: FIFO full
         value: 1
     unit_test: false
@@ -559,10 +547,10 @@ enums:
     identifier: false
   DAC_DAC0CFG0_FIFOEMP:
     enum:
-      value1:
+      not_empty:
         description: FIFO not empty
         value: 0
-      value2:
+      empty:
         description: FIFO empty
         value: 1
     unit_test: false
@@ -571,10 +559,10 @@ enums:
     identifier: false
   DAC_DAC0CFG0_SIGN:
     enum:
-      value1:
+      unsigned_input_data:
         description: DAC expects unsigned input data
         value: 0
-      value2:
+      signed_input_data:
         description: DAC expects signed input data
         value: 1
     unit_test: false
@@ -583,28 +571,28 @@ enums:
     identifier: false
   DAC_DAC0CFG0_MODE:
     enum:
-      value1:
+      disableswitch_off_dac:
         description: disable/switch-off DAC
         value: 0
-      value2:
+      single_value_mode:
         description: Single Value Mode
         value: 1
-      value3:
+      data_mode:
         description: Data Mode
         value: 2
-      value4:
+      patgen_mode:
         description: Patgen Mode
         value: 3
-      value5:
+      noise_mode:
         description: Noise Mode
         value: 4
-      value6:
+      ramp_mode:
         description: Ramp Mode
         value: 5
-      value7:
+      na:
         description: na
         value: 6
-      value8:
+      na_:
         description: na
         value: 7
     unit_test: false
@@ -613,10 +601,10 @@ enums:
     identifier: false
   DAC_DAC0CFG1_ANAEN:
     enum:
-      value1:
+      dac0_set_standby_analog_output_only:
         description: DAC0 is set to standby (analog output only)
         value: 0
-      value2:
+      enable_dac0_analog_output_only:
         description: enable DAC0 (analog output only)
         value: 1
     unit_test: false
@@ -625,13 +613,13 @@ enums:
     identifier: false
   DAC_DAC0CFG1_TRIGMOD:
     enum:
-      value1:
+      internal_trigger_integer_divided_clock___see__cont:
         description: internal Trigger (integer divided clock - see FREQ parameter)
         value: 0
-      value2:
+      external_trigger_preselected_trigger_by_trigs_cont:
         description: external Trigger (preselected trigger by TRIGSEL parameter)
         value: 1
-      value3:
+      software_trigger_see_swtrig_parameter:
         description: software Trigger (see SWTRIG parameter)
         value: 2
     unit_test: false
@@ -640,11 +628,11 @@ enums:
     identifier: false
   DAC_DAC0CFG1_DATMOD:
     enum:
-      value1:
+      independent_data_handling___process_data_data_cont:
         description: independent data handling - process data from DATA0 register
           (bits 11:0) to DAC0 and data from DATA1 register (bits 11:0) to DAC1
         value: 0
-      value2:
+      simultaneous_data_handling___process_data_dac_cont:
         description: simultaneous data handling - process data from DAC01 register
           to both DACs (bits 11:0 to DAC0 and bits 23:12 to DAC1).
         value: 1
@@ -654,10 +642,10 @@ enums:
     identifier: false
   DAC_DAC0CFG1_MULDIV:
     enum:
-      value1:
+      downscale_division_shift_scale_positions_right:
         description: downscale = division (shift SCALE positions to the right)
         value: 0
-      value2:
+      upscale_multiplication_shift_scale_positions_left:
         description: upscale = multiplication (shift SCALE positions to the left)
         value: 1
     unit_test: false
@@ -666,143 +654,29 @@ enums:
     identifier: false
   DAC_DAC0CFG1_SCALE:
     enum:
-      value1:
+      no_shift_multiplicationdivision_by_1:
         description: no shift = multiplication/division by 1
         value: 0
-      value2:
+      shift_by_1_multiplicationdivision_by_2:
         description: shift by 1 = multiplication/division by 2
         value: 1
-      value3:
+      shift_by_2_multiplicationdivision_by_4:
         description: shift by 2 = multiplication/division by 4
         value: 2
-      value4:
+      shift_left_by_3_multiplicationdivision_by_8:
         description: shift left by 3 = multiplication/division by 8
         value: 3
-      value5:
+      shift_left_by_4_multiplicationdivision_by_16:
         description: shift left by 4 = multiplication/division by 16
         value: 4
-      value6:
+      shift_left_by_5_multiplicationdivision_by_32:
         description: shift left by 5 = multiplication/division by 32
         value: 5
-      value7:
+      shift_left_by_6_multiplicationdivision_by_64:
         description: shift left by 6 = multiplication/division by 64
         value: 6
-      value8:
+      shift_left_by_7_multiplicationdivision_by_128:
         description: shift left by 7 = multiplication/division by 128
-        value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DAC_DAC1CFG0_RUN:
-    enum:
-      value1:
-        description: DAC1 channel disabled
-        value: 0
-      value2:
-        description: DAC1 channel in operation
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DAC_DAC1CFG0_SREN:
-    enum:
-      value1:
-        description: disable
-        value: 0
-      value2:
-        description: enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DAC_DAC1CFG0_SIGNEN:
-    enum:
-      value1:
-        description: disable
-        value: 0
-      value2:
-        description: enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DAC_DAC1CFG0_NEGATE:
-    enum:
-      value1:
-        description: DAC output not negated
-        value: 0
-      value2:
-        description: DAC output negated
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DAC_DAC1CFG0_FIFOFUL:
-    enum:
-      value1:
-        description: FIFO not full
-        value: 0
-      value2:
-        description: FIFO full
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DAC_DAC1CFG0_FIFOEMP:
-    enum:
-      value1:
-        description: FIFO not empty
-        value: 0
-      value2:
-        description: FIFO empty
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DAC_DAC1CFG0_SIGN:
-    enum:
-      value1:
-        description: DAC expects unsigned input data
-        value: 0
-      value2:
-        description: DAC expects signed input data
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DAC_DAC1CFG0_MODE:
-    enum:
-      value1:
-        description: disable/switch-off DAC
-        value: 0
-      value2:
-        description: Single Value Mode
-        value: 1
-      value3:
-        description: Data Mode
-        value: 2
-      value4:
-        description: Patgen Mode
-        value: 3
-      value5:
-        description: Noise Mode
-        value: 4
-      value6:
-        description: Ramp Mode
-        value: 5
-      value7:
-        description: na
-        value: 6
-      value8:
-        description: na
         value: 7
     unit_test: false
     json: false
@@ -810,69 +684,12 @@ enums:
     identifier: false
   DAC_DAC1CFG1_ANAEN:
     enum:
-      value1:
+      dac1_set_standby_analog_output_only:
         description: DAC1 is set to standby (analog output only)
         value: 0
-      value2:
+      enable_dac1_analog_output_only:
         description: enable DAC1 (analog output only)
         value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DAC_DAC1CFG1_TRIGMOD:
-    enum:
-      value1:
-        description: internal Trigger (integer divided clock - see FREQ parameter)
-        value: 0
-      value2:
-        description: external Trigger (preselected trigger by TRIGSEL parameter)
-        value: 1
-      value3:
-        description: software Trigger (see SWTRIG parameter)
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DAC_DAC1CFG1_MULDIV:
-    enum:
-      value1:
-        description: downscale = division (shift SCALE positions to the right)
-        value: 0
-      value2:
-        description: upscale = multiplication (shift SCALE positions to the left)
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DAC_DAC1CFG1_SCALE:
-    enum:
-      value1:
-        description: no shift = multiplication/division by 1
-        value: 0
-      value2:
-        description: shift by 1 = multiplication/division by 2
-        value: 1
-      value3:
-        description: shift by 2 = multiplication/division by 4
-        value: 2
-      value4:
-        description: shift left by 3 = multiplication/division by 8
-        value: 3
-      value5:
-        description: shift left by 4 = multiplication/division by 16
-        value: 4
-      value6:
-        description: shift left by 5 = multiplication/division by 32
-        value: 5
-      value7:
-        description: shift left by 6 = multiplication/division by 64
-        value: 6
-      value8:
-        description: shift left by 7 = multiplication/division by 128
-        value: 7
     unit_test: false
     json: false
     use_map: false

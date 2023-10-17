@@ -116,21 +116,21 @@ structs:
             width: 1
             read: true
             write: true
-            type: DSD_GLOBRC_CH2RUN
+            type: DSD_GLOBRC_CH3RUN
           - name: CH1RUN
             description: Channel 1 Run Control
             index: 1
             width: 1
             read: true
             write: true
-            type: DSD_GLOBRC_CH1RUN
+            type: DSD_GLOBRC_CH3RUN
           - name: CH0RUN
             description: Channel 0 Run Control
             index: 0
             width: 1
             read: true
             write: true
-            type: DSD_GLOBRC_CH0RUN
+            type: DSD_GLOBRC_CH3RUN
       - name: CGCFG
         type: uint32_t
         expected_size: 4
@@ -224,21 +224,21 @@ structs:
             width: 1
             read: true
             write: true
-            type: DSD_EVFLAG_ALEV2
+            type: DSD_EVFLAG_ALEV3
           - name: ALEV1
             description: Alarm Event
             index: 17
             width: 1
             read: true
             write: true
-            type: DSD_EVFLAG_ALEV1
+            type: DSD_EVFLAG_ALEV3
           - name: ALEV0
             description: Alarm Event
             index: 16
             width: 1
             read: true
             write: true
-            type: DSD_EVFLAG_ALEV0
+            type: DSD_EVFLAG_ALEV3
           - name: RESEV3
             description: Result Event
             index: 3
@@ -252,21 +252,21 @@ structs:
             width: 1
             read: true
             write: true
-            type: DSD_EVFLAG_RESEV2
+            type: DSD_EVFLAG_RESEV3
           - name: RESEV1
             description: Result Event
             index: 1
             width: 1
             read: true
             write: true
-            type: DSD_EVFLAG_RESEV1
+            type: DSD_EVFLAG_RESEV3
           - name: RESEV0
             description: Result Event
             index: 0
             width: 1
             read: true
             write: true
-            type: DSD_EVFLAG_RESEV0
+            type: DSD_EVFLAG_RESEV3
       - name: EVFLAGCLR
         type: uint32_t
         expected_size: 4
@@ -286,21 +286,21 @@ structs:
             width: 1
             read: false
             write: true
-            type: DSD_EVFLAGCLR_ALEC2
+            type: DSD_EVFLAGCLR_ALEC3
           - name: ALEC1
             description: Alarm Event Clear
             index: 17
             width: 1
             read: false
             write: true
-            type: DSD_EVFLAGCLR_ALEC1
+            type: DSD_EVFLAGCLR_ALEC3
           - name: ALEC0
             description: Alarm Event Clear
             index: 16
             width: 1
             read: false
             write: true
-            type: DSD_EVFLAGCLR_ALEC0
+            type: DSD_EVFLAGCLR_ALEC3
           - name: RESEC3
             description: Result Event Clear
             index: 3
@@ -314,21 +314,21 @@ structs:
             width: 1
             read: false
             write: true
-            type: DSD_EVFLAGCLR_RESEC2
+            type: DSD_EVFLAGCLR_RESEC3
           - name: RESEC1
             description: Result Event Clear
             index: 1
             width: 1
             read: false
             write: true
-            type: DSD_EVFLAGCLR_RESEC1
+            type: DSD_EVFLAGCLR_RESEC3
           - name: RESEC0
             description: Result Event Clear
             index: 0
             width: 1
             read: false
             write: true
-            type: DSD_EVFLAGCLR_RESEC0
+            type: DSD_EVFLAGCLR_RESEC3
     stream: false
     codec: false
     methods: false
@@ -337,10 +337,10 @@ structs:
 enums:
   DSD_CLC_EDIS:
     enum:
-      value1:
+      sleep_mode_request_enabled_functional:
         description: Sleep mode request is enabled and functional
         value: 0
-      value2:
+      module_disregards_sleep_mode_control_signal:
         description: Module disregards the sleep mode control signal
         value: 1
     unit_test: false
@@ -349,10 +349,10 @@ enums:
     identifier: false
   DSD_CLC_DISS:
     enum:
-      value1:
+      module_clock_enabled:
         description: Module clock is enabled
         value: 0
-      value2:
+      off_module_not_clocked:
         description: 'Off: module is not clocked'
         value: 1
     unit_test: false
@@ -361,10 +361,10 @@ enums:
     identifier: false
   DSD_CLC_DISR:
     enum:
-      value1:
+      request_enable_module_clock:
         description: 'On request: enable the module clock'
         value: 0
-      value2:
+      off_request_stop_module_clock:
         description: 'Off request: stop the module clock'
         value: 1
     unit_test: false
@@ -373,10 +373,10 @@ enums:
     identifier: false
   DSD_OCS_SUSSTA:
     enum:
-      value1:
+      not_suspended:
         description: Module is not (yet) suspended
         value: 0
-      value2:
+      suspended:
         description: Module is suspended
         value: 1
     unit_test: false
@@ -385,19 +385,19 @@ enums:
     identifier: false
   DSD_OCS_SUS:
     enum:
-      value1:
+      not_suspend:
         description: Will not suspend
         value: 0
-      value2:
+      hard_suspend_clock_switched_off_immediately:
         description: 'Hard suspend: Clock is switched off immediately.'
         value: 1
-      value3:
+      soft_suspend_channel_0:
         description: Soft suspend channel 0
         value: 2
-      value4:
+      soft_suspend_channel_1:
         description: Soft suspend channel 1
         value: 3
-      value5:
+      soft_suspend_channel_3:
         description: Soft suspend channel 3
         value: 5
     unit_test: false
@@ -406,10 +406,10 @@ enums:
     identifier: false
   DSD_GLOBCFG_MCSEL:
     enum:
-      value1:
+      internal_clock_off_no_source_selected:
         description: Internal clock off, no source selected
         value: 0
-      value2:
+      fdsd:
         description: fDSD
         value: 1
     unit_test: false
@@ -418,46 +418,10 @@ enums:
     identifier: false
   DSD_GLOBRC_CH3RUN:
     enum:
-      value1:
+      stop_channel_x:
         description: Stop channel x
         value: 0
-      value2:
-        description: Demodulator channel x is enabled and runs
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_GLOBRC_CH2RUN:
-    enum:
-      value1:
-        description: Stop channel x
-        value: 0
-      value2:
-        description: Demodulator channel x is enabled and runs
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_GLOBRC_CH1RUN:
-    enum:
-      value1:
-        description: Stop channel x
-        value: 0
-      value2:
-        description: Demodulator channel x is enabled and runs
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_GLOBRC_CH0RUN:
-    enum:
-      value1:
-        description: Stop channel x
-        value: 0
-      value2:
+      demodulator_channel_x_enabled_runs:
         description: Demodulator channel x is enabled and runs
         value: 1
     unit_test: false
@@ -466,10 +430,10 @@ enums:
     identifier: false
   DSD_CGCFG_SGNCG:
     enum:
-      value1:
+      positive_values:
         description: Positive values
         value: 0
-      value2:
+      negative_values:
         description: Negative values
         value: 1
     unit_test: false
@@ -478,10 +442,10 @@ enums:
     identifier: false
   DSD_CGCFG_STEPD:
     enum:
-      value1:
+      up:
         description: Step counter is counting up
         value: 0
-      value2:
+      down:
         description: Step counter is counting down
         value: 1
     unit_test: false
@@ -490,10 +454,10 @@ enums:
     identifier: false
   DSD_CGCFG_STEPS:
     enum:
-      value1:
+      positive:
         description: Step counter value is positive
         value: 0
-      value2:
+      negative:
         description: Step counter value is negative
         value: 1
     unit_test: false
@@ -502,10 +466,10 @@ enums:
     identifier: false
   DSD_CGCFG_RUN:
     enum:
-      value1:
+      stopped_cleared_at_end_period:
         description: Stopped (cleared at the end of a period)
         value: 0
-      value2:
+      running:
         description: Running
         value: 1
     unit_test: false
@@ -514,16 +478,16 @@ enums:
     identifier: false
   DSD_CGCFG_DIVCG:
     enum:
-      value1:
+      '2':
         description: fCG = fCLK / 2
         value: 0
-      value2:
+      '4':
         description: fCG = fCLK / 4
         value: 1
-      value3:
+      '6':
         description: fCG = fCLK / 6
         value: 2
-      value4:
+      '32':
         description: fCG = fCLK / 32
         value: 15
     unit_test: false
@@ -532,10 +496,10 @@ enums:
     identifier: false
   DSD_CGCFG_SIGPOL:
     enum:
-      value1:
+      normal_carrier_signal_begins_with_1:
         description: 'Normal: carrier signal begins with +1'
         value: 0
-      value2:
+      inverted_carrier_signal_begins_with__1:
         description: 'Inverted: carrier signal begins with -1'
         value: 1
     unit_test: false
@@ -544,10 +508,10 @@ enums:
     identifier: false
   DSD_CGCFG_BREV:
     enum:
-      value1:
+      normal_mode:
         description: Normal mode
         value: 0
-      value2:
+      bit_reverse_mode:
         description: Bit-reverse mode
         value: 1
     unit_test: false
@@ -556,16 +520,16 @@ enums:
     identifier: false
   DSD_CGCFG_CGMOD:
     enum:
-      value1:
+      stopped:
         description: Stopped
         value: 0
-      value2:
+      square_wave:
         description: Square wave
         value: 1
-      value3:
+      triangle:
         description: Triangle
         value: 2
-      value4:
+      sine_wave:
         description: Sine wave
         value: 3
     unit_test: false
@@ -574,46 +538,10 @@ enums:
     identifier: false
   DSD_EVFLAG_ALEV3:
     enum:
-      value1:
+      no_alarm_event:
         description: No alarm event
         value: 0
-      value2:
-        description: An alarm event has occurred
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_EVFLAG_ALEV2:
-    enum:
-      value1:
-        description: No alarm event
-        value: 0
-      value2:
-        description: An alarm event has occurred
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_EVFLAG_ALEV1:
-    enum:
-      value1:
-        description: No alarm event
-        value: 0
-      value2:
-        description: An alarm event has occurred
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_EVFLAG_ALEV0:
-    enum:
-      value1:
-        description: No alarm event
-        value: 0
-      value2:
+      an_alarm_event_has_occurred:
         description: An alarm event has occurred
         value: 1
     unit_test: false
@@ -622,46 +550,10 @@ enums:
     identifier: false
   DSD_EVFLAG_RESEV3:
     enum:
-      value1:
+      no_result_event:
         description: No result event
         value: 0
-      value2:
-        description: A new result has been stored in register RESMx
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_EVFLAG_RESEV2:
-    enum:
-      value1:
-        description: No result event
-        value: 0
-      value2:
-        description: A new result has been stored in register RESMx
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_EVFLAG_RESEV1:
-    enum:
-      value1:
-        description: No result event
-        value: 0
-      value2:
-        description: A new result has been stored in register RESMx
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_EVFLAG_RESEV0:
-    enum:
-      value1:
-        description: No result event
-        value: 0
-      value2:
+      new_result_has_been_stored_register_resmx:
         description: A new result has been stored in register RESMx
         value: 1
     unit_test: false
@@ -670,46 +562,10 @@ enums:
     identifier: false
   DSD_EVFLAGCLR_ALEC3:
     enum:
-      value1:
+      no_action:
         description: No action
         value: 0
-      value2:
-        description: Clear bit ALEVx
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_EVFLAGCLR_ALEC2:
-    enum:
-      value1:
-        description: No action
-        value: 0
-      value2:
-        description: Clear bit ALEVx
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_EVFLAGCLR_ALEC1:
-    enum:
-      value1:
-        description: No action
-        value: 0
-      value2:
-        description: Clear bit ALEVx
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_EVFLAGCLR_ALEC0:
-    enum:
-      value1:
-        description: No action
-        value: 0
-      value2:
+      clear_bit_alevx:
         description: Clear bit ALEVx
         value: 1
     unit_test: false
@@ -718,46 +574,10 @@ enums:
     identifier: false
   DSD_EVFLAGCLR_RESEC3:
     enum:
-      value1:
+      no_action:
         description: No action
         value: 0
-      value2:
-        description: Clear bit RESEVx
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_EVFLAGCLR_RESEC2:
-    enum:
-      value1:
-        description: No action
-        value: 0
-      value2:
-        description: Clear bit RESEVx
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_EVFLAGCLR_RESEC1:
-    enum:
-      value1:
-        description: No action
-        value: 0
-      value2:
-        description: Clear bit RESEVx
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_EVFLAGCLR_RESEC0:
-    enum:
-      value1:
-        description: No action
-        value: 0
-      value2:
+      clear_bit_resevx:
         description: Clear bit RESEVx
         value: 1
     unit_test: false

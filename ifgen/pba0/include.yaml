@@ -42,10 +42,10 @@ structs:
 enums:
   PBA0_STS_WERR:
     enum:
-      value1:
+      no_write_error_occurred:
         description: no write error occurred.
         value: 0
-      value2:
+      write_error_occurred_interrupt_request_pending:
         description: write error occurred, interrupt request is pending.
         value: 1
     unit_test: false

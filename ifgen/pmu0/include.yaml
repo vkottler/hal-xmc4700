@@ -5,6 +5,10 @@ structs:
     instances:
       - name: PMU0
         address: '0x58000508'
+      - name: SCU_GENERAL
+        address: '0x50004000'
+      - name: WDT
+        address: '0x50008000'
     fields:
       - name: ID
         type: uint32_t

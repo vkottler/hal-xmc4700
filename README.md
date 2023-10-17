@@ -2,11 +2,11 @@
     =====================================
     generator=datazen
     version=3.1.4
-    hash=02f0814b610b6d640fd1924fb660b62d
+    hash=23c10b9d527ce333feaed35ac21f4c38
     =====================================
 -->
 
-# hal-xmc4700 ([0.4.1](https://github.com/vkottler/hal-xmc4700/releases/tag/0.4.1))
+# hal-xmc4700 ([1.1.0](https://github.com/vkottler/hal-xmc4700/releases/tag/1.1.0))
 
 [![codecov](https://codecov.io/gh/vkottler/hal-xmc4700/branch/master/graph/badge.svg)](https://codecov.io/gh/vkottler/hal-xmc4700)
 ![Build Status](https://github.com/vkottler/hal-xmc4700/actions/workflows/yambs-project.yml/badge.svg)

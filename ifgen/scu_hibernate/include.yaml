@@ -40,14 +40,14 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_HIBERNATE_HDSTAT_ENEV
+            type: SCU_HIBERNATE_HDSTAT_RTCEV
           - name: EPEV
             description: Wake-up Pin Event Positive Edge
             index: 0
             width: 1
             read: true
             write: false
-            type: SCU_HIBERNATE_HDSTAT_EPEV
+            type: SCU_HIBERNATE_HDSTAT_RTCEV
       - name: HDCLR
         type: uint32_t
         expected_size: 4
@@ -74,14 +74,14 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_HIBERNATE_HDCLR_ENEV
+            type: SCU_HIBERNATE_HDCLR_RTCEV
           - name: EPEV
             description: Wake-up Pin Event Positive Edge Clear
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_HIBERNATE_HDCLR_EPEV
+            type: SCU_HIBERNATE_HDCLR_RTCEV
       - name: HDSET
         type: uint32_t
         expected_size: 4
@@ -108,14 +108,14 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_HIBERNATE_HDSET_ENEV
+            type: SCU_HIBERNATE_HDSET_RTCEV
           - name: EPEV
             description: Wake-up Pin Event Positive Edge Set
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_HIBERNATE_HDSET_EPEV
+            type: SCU_HIBERNATE_HDSET_RTCEV
       - name: HDCR
         type: uint32_t
         expected_size: 4
@@ -135,7 +135,7 @@ structs:
             width: 4
             read: true
             write: true
-            type: SCU_HIBERNATE_HDCR_HIBIO0SEL
+            type: SCU_HIBERNATE_HDCR_HIBIO1SEL
           - name: HIBIO1POL
             description: HIBIO1 Polarity Set
             index: 13
@@ -149,7 +149,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_HIBERNATE_HDCR_HIBIO0POL
+            type: SCU_HIBERNATE_HDCR_HIBIO1POL
           - name: GPI0SEL
             description: General Purpose Input 0 Selection
             index: 10
@@ -163,7 +163,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_HIBERNATE_HDCR_WKUPSEL
+            type: SCU_HIBERNATE_HDCR_GPI0SEL
           - name: STDBYSEL
             description: fSTDBY Clock Selection
             index: 7
@@ -177,14 +177,14 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_HIBERNATE_HDCR_RCS
+            type: SCU_HIBERNATE_HDCR_STDBYSEL
           - name: HIB
             description: Hibernate Request Value Set
             index: 4
             width: 1
             read: true
             write: true
-            type: SCU_HIBERNATE_HDCR_HIB
+            type: SCU_HIBERNATE_HDSTAT_RTCEV
           - name: ULPWDGEN
             description: ULP WDG Alarm Enable
             index: 3
@@ -198,21 +198,21 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_HIBERNATE_HDCR_RTCE
+            type: SCU_HIBERNATE_HDCR_ULPWDGEN
           - name: WKPEN
             description: Wake-up on Pin Event Negative Edge Enable
             index: 1
             width: 1
             read: true
             write: true
-            type: SCU_HIBERNATE_HDCR_WKPEN
+            type: SCU_HIBERNATE_HDCR_ULPWDGEN
           - name: WKPEP
             description: Wake-Up on Pin Event Positive Edge Enable
             index: 0
             width: 1
             read: true
             write: true
-            type: SCU_HIBERNATE_HDCR_WKPEP
+            type: SCU_HIBERNATE_HDCR_ULPWDGEN
       - name: OSCSICTRL
         type: uint32_t
         expected_size: 4
@@ -267,10 +267,10 @@ structs:
 enums:
   SCU_HIBERNATE_HDSTAT_HIBNOUT:
     enum:
-      value1:
+      not_driven_active_pads:
         description: Hibernate not driven active to pads
         value: 0
-      value2:
+      driven_active_pads:
         description: Hibernate driven active to pads
         value: 1
     unit_test: false
@@ -279,10 +279,10 @@ enums:
     identifier: false
   SCU_HIBERNATE_HDSTAT_ULPWDG:
     enum:
-      value1:
+      did_not_occur:
         description: Watchdog alarm did not occur
         value: 0
-      value2:
+      occurred:
         description: Watchdog alarm occurred
         value: 1
     unit_test: false
@@ -291,35 +291,11 @@ enums:
     identifier: false
   SCU_HIBERNATE_HDSTAT_RTCEV:
     enum:
-      value1:
+      inactive:
         description: Wake-up on RTC event inactive
         value: 0
-      value2:
+      active:
         description: Wake-up on RTC event active
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDSTAT_ENEV:
-    enum:
-      value1:
-        description: Wake-up on negative edge pin event inactive
-        value: 0
-      value2:
-        description: Wake-up on negative edge pin event active
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDSTAT_EPEV:
-    enum:
-      value1:
-        description: Wake-up on positive edge pin event inactive
-        value: 0
-      value2:
-        description: Wake-up on positive edge pin event active
         value: 1
     unit_test: false
     json: false
@@ -327,10 +303,10 @@ enums:
     identifier: false
   SCU_HIBERNATE_HDCLR_ULPWDG:
     enum:
-      value1:
+      no_effect:
         description: No effect
         value: 0
-      value2:
+      clear_watchdog_alarm:
         description: Clear watchdog alarm
         value: 1
     unit_test: false
@@ -339,34 +315,10 @@ enums:
     identifier: false
   SCU_HIBERNATE_HDCLR_RTCEV:
     enum:
-      value1:
+      no_effect:
         description: No effect
         value: 0
-      value2:
-        description: Clear wake-up event
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDCLR_ENEV:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Clear wake-up event
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDCLR_EPEV:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
+      clear_wake_up_event:
         description: Clear wake-up event
         value: 1
     unit_test: false
@@ -375,10 +327,10 @@ enums:
     identifier: false
   SCU_HIBERNATE_HDSET_ULPWDG:
     enum:
-      value1:
+      no_effect:
         description: No effect
         value: 0
-      value2:
+      set_watchdog_alarm:
         description: Set watchdog alarm
         value: 1
     unit_test: false
@@ -387,34 +339,10 @@ enums:
     identifier: false
   SCU_HIBERNATE_HDSET_RTCEV:
     enum:
-      value1:
+      no_effect:
         description: No effect
         value: 0
-      value2:
-        description: Set wake-up event
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDSET_ENEV:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Set wake-up event
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDSET_EPEV:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
+      set_wake_up_event:
         description: Set wake-up event
         value: 1
     unit_test: false
@@ -423,70 +351,34 @@ enums:
     identifier: false
   SCU_HIBERNATE_HDCR_HIBIO1SEL:
     enum:
-      value1:
+      direct_input_no_input_pull_device_connected:
         description: Direct input, No input pull device connected
         value: 0
-      value2:
+      direct_input_input_pull_down_device_connected:
         description: Direct input, Input pull-down device connected
         value: 1
-      value3:
+      direct_input_input_pull_up_device_connected:
         description: Direct input, Input pull-up device connected
         value: 2
-      value4:
+      push_pull_hib_control_output:
         description: Push-pull HIB Control output
         value: 8
-      value5:
+      push_pull_wdt_service_output:
         description: Push-pull WDT service output
         value: 9
-      value6:
+      push_pull_gpio_output:
         description: Push-pull GPIO output
         value: 10
-      value7:
+      open_drain_hib_control_output:
         description: Open-drain HIB Control output
         value: 12
-      value8:
+      open_drain_wdt_service_output:
         description: Open-drain WDT service output
         value: 13
-      value9:
+      open_drain_gpio_output:
         description: Open-drain GPIO output
         value: 14
-      value10:
-        description: Analog input
-        value: 15
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDCR_HIBIO0SEL:
-    enum:
-      value1:
-        description: Direct input, No input pull device connected
-        value: 0
-      value2:
-        description: Direct input, Input pull-down device connected
-        value: 1
-      value3:
-        description: Direct input, Input pull-up device connected
-        value: 2
-      value4:
-        description: Push-pull HIB Control output
-        value: 8
-      value5:
-        description: Push-pull WDT service output
-        value: 9
-      value6:
-        description: Push-pull GPIO output
-        value: 10
-      value7:
-        description: Open-drain HIB Control output
-        value: 12
-      value8:
-        description: Open-drain WDT service output
-        value: 13
-      value9:
-        description: Open-drain GPIO output
-        value: 14
-      value10:
+      analog_input:
         description: Analog input
         value: 15
     unit_test: false
@@ -495,22 +387,10 @@ enums:
     identifier: false
   SCU_HIBERNATE_HDCR_HIBIO1POL:
     enum:
-      value1:
+      direct_value:
         description: Direct value
         value: 0
-      value2:
-        description: Inverted value
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDCR_HIBIO0POL:
-    enum:
-      value1:
-        description: Direct value
-        value: 0
-      value2:
+      inverted_value:
         description: Inverted value
         value: 1
     unit_test: false
@@ -519,22 +399,10 @@ enums:
     identifier: false
   SCU_HIBERNATE_HDCR_GPI0SEL:
     enum:
-      value1:
+      1_pin_selected:
         description: HIB_IO_1 pin selected
         value: 0
-      value2:
-        description: HIB_IO_0 pin selected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDCR_WKUPSEL:
-    enum:
-      value1:
-        description: HIB_IO_1 pin selected
-        value: 0
-      value2:
+      0_pin_selected:
         description: HIB_IO_0 pin selected
         value: 1
     unit_test: false
@@ -543,35 +411,11 @@ enums:
     identifier: false
   SCU_HIBERNATE_HDCR_STDBYSEL:
     enum:
-      value1:
+      fosi_selected:
         description: fOSI selected
         value: 0
-      value2:
+      fulp_selected:
         description: fULP selected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDCR_RCS:
-    enum:
-      value1:
-        description: fOSI selected
-        value: 0
-      value2:
-        description: fULP selected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDCR_HIB:
-    enum:
-      value1:
-        description: External hibernate request inactive
-        value: 0
-      value2:
-        description: External hibernate request active
         value: 1
     unit_test: false
     json: false
@@ -579,46 +423,10 @@ enums:
     identifier: false
   SCU_HIBERNATE_HDCR_ULPWDGEN:
     enum:
-      value1:
+      disabled:
         description: Wake-up event disabled
         value: 0
-      value2:
-        description: Wake-up event enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDCR_RTCE:
-    enum:
-      value1:
-        description: Wake-up event disabled
-        value: 0
-      value2:
-        description: Wake-up event enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDCR_WKPEN:
-    enum:
-      value1:
-        description: Wake-up event disabled
-        value: 0
-      value2:
-        description: Wake-up event enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDCR_WKPEP:
-    enum:
-      value1:
-        description: Wake-up event disabled
-        value: 0
-      value2:
+      enabled:
         description: Wake-up event enabled
         value: 1
     unit_test: false
@@ -627,10 +435,10 @@ enums:
     identifier: false
   SCU_HIBERNATE_OSCSICTRL_PWD:
     enum:
-      value1:
+      enabled:
         description: Enabled
         value: 0
-      value2:
+      disabled:
         description: Disabled
         value: 1
     unit_test: false
@@ -639,16 +447,16 @@ enums:
     identifier: false
   SCU_HIBERNATE_OSCULCTRL_MODE:
     enum:
-      value1:
+      enabled_operation:
         description: Oscillator is enabled, in operation
         value: 0
-      value2:
+      enabled_bypass_mode:
         description: Oscillator is enabled, in bypass mode
         value: 1
-      value3:
+      power_down:
         description: Oscillator in power down
         value: 2
-      value4:
+      power_down_can_be_used_gpi:
         description: Oscillator in power down, can be used as GPI
         value: 3
     unit_test: false
@@ -657,10 +465,10 @@ enums:
     identifier: false
   SCU_HIBERNATE_OSCULCTRL_X1DEN:
     enum:
-      value1:
+      inactivated_power_down:
         description: Data input inactivated, power down
         value: 0
-      value2:
+      active:
         description: Data input active
         value: 1
     unit_test: false

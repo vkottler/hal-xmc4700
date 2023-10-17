@@ -173,14 +173,14 @@ structs:
                 width: 2
                 read: true
                 write: true
-                type: USB0_EP1_DIEPCTL_INTBULK_EPType
+                type: USB0_EP1_DIEPCTL_ISOCONT_EPType
               - name: NAKSts
                 description: NAK Status
                 index: 17
                 width: 1
                 read: true
                 write: false
-                type: USB0_EP1_DIEPCTL_INTBULK_NAKSts
+                type: USB0_EP1_DIEPCTL_ISOCONT_NAKSts
               - name: DPID
                 description: Endpoint Data PID
                 index: 16
@@ -377,21 +377,21 @@ structs:
             width: 2
             read: true
             write: true
-            type: USB0_EP1_DOEPCTL_ISOCONT_EPType
+            type: USB0_EP1_DIEPCTL_ISOCONT_EPType
           - name: NAKSts
             description: NAK Status
             index: 17
             width: 1
             read: true
             write: false
-            type: USB0_EP1_DOEPCTL_ISOCONT_NAKSts
+            type: USB0_EP1_DIEPCTL_ISOCONT_NAKSts
           - name: EO_FrNum
             description: Even/Odd Frame
             index: 16
             width: 1
             read: true
             write: false
-            type: USB0_EP1_DOEPCTL_ISOCONT_EO_FrNum
+            type: USB0_EP1_DIEPCTL_ISOCONT_EO_FrNum
           - name: USBActEP
             description: USB Active Endpoint
             index: 15
@@ -468,21 +468,21 @@ structs:
                 width: 2
                 read: true
                 write: true
-                type: USB0_EP1_DOEPCTL_INTBULK_EPType
+                type: USB0_EP1_DIEPCTL_ISOCONT_EPType
               - name: NAKSts
                 description: NAK Status
                 index: 17
                 width: 1
                 read: true
                 write: false
-                type: USB0_EP1_DOEPCTL_INTBULK_NAKSts
+                type: USB0_EP1_DIEPCTL_ISOCONT_NAKSts
               - name: DPID
                 description: Endpoint Data PID
                 index: 16
                 width: 1
                 read: true
                 write: false
-                type: USB0_EP1_DOEPCTL_INTBULK_DPID
+                type: USB0_EP1_DIEPCTL_INTBULK_DPID
               - name: USBActEP
                 description: USB Active Endpoint
                 index: 15
@@ -654,16 +654,16 @@ structs:
 enums:
   USB0_EP1_DIEPCTL_ISOCONT_EPType:
     enum:
-      value1:
+      control:
         description: Control
         value: 0
-      value2:
+      isochronous:
         description: Isochronous
         value: 1
-      value3:
+      bulk:
         description: Bulk
         value: 2
-      value4:
+      interrupt:
         description: Interrupt
         value: 3
     unit_test: false
@@ -672,11 +672,11 @@ enums:
     identifier: false
   USB0_EP1_DIEPCTL_ISOCONT_NAKSts:
     enum:
-      value1:
+      on_nak_handshakes_based_fi_cont:
         description: The core is transmitting non-NAK handshakes based on the FIFO
           status.
         value: 0
-      value2:
+      ak_handshakes_this_endpoint:
         description: The core is transmitting NAK handshakes on this endpoint.
         value: 1
     unit_test: false
@@ -685,42 +685,11 @@ enums:
     identifier: false
   USB0_EP1_DIEPCTL_ISOCONT_EO_FrNum:
     enum:
-      value1:
+      even_frame:
         description: Even frame
         value: 0
-      value2:
+      odd_rame:
         description: Odd rame
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USB0_EP1_DIEPCTL_INTBULK_EPType:
-    enum:
-      value1:
-        description: Control
-        value: 0
-      value2:
-        description: Isochronous
-        value: 1
-      value3:
-        description: Bulk
-        value: 2
-      value4:
-        description: Interrupt
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USB0_EP1_DIEPCTL_INTBULK_NAKSts:
-    enum:
-      value1:
-        description: The core is transmitting non-NAK handshakes based on the FIFO
-          status.
-        value: 0
-      value2:
-        description: The core is transmitting NAK handshakes on this endpoint.
         value: 1
     unit_test: false
     json: false
@@ -728,10 +697,10 @@ enums:
     identifier: false
   USB0_EP1_DIEPCTL_INTBULK_DPID:
     enum:
-      value1:
+      '0':
         description: DATA0
         value: 0
-      value2:
+      '1':
         description: DATA1
         value: 1
     unit_test: false
@@ -740,13 +709,13 @@ enums:
     identifier: false
   USB0_EP1_DTXFSTS_INEPTxFSpcAvail:
     enum:
-      value1:
+      endpoint_txfifo_full:
         description: Endpoint TxFIFO is full
         value: 0
-      value2:
+      1_word_available:
         description: 1 word available
         value: 1
-      value3:
+      2_words_available:
         description: 2 words available
         value: 2
     unit_test: false
@@ -754,104 +723,18 @@ enums:
     use_map: false
     identifier: false
     underlying: uint16_t
-  USB0_EP1_DOEPCTL_ISOCONT_EPType:
-    enum:
-      value1:
-        description: Control
-        value: 0
-      value2:
-        description: Isochronous
-        value: 1
-      value3:
-        description: Bulk
-        value: 2
-      value4:
-        description: Interrupt
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USB0_EP1_DOEPCTL_ISOCONT_NAKSts:
-    enum:
-      value1:
-        description: The core is transmitting non-NAK handshakes based on the FIFO
-          status.
-        value: 0
-      value2:
-        description: The core is transmitting NAK handshakes on this endpoint.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USB0_EP1_DOEPCTL_ISOCONT_EO_FrNum:
-    enum:
-      value1:
-        description: Even frame
-        value: 0
-      value2:
-        description: Odd rame
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USB0_EP1_DOEPCTL_INTBULK_EPType:
-    enum:
-      value1:
-        description: Control
-        value: 0
-      value2:
-        description: Isochronous
-        value: 1
-      value3:
-        description: Bulk
-        value: 2
-      value4:
-        description: Interrupt
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USB0_EP1_DOEPCTL_INTBULK_NAKSts:
-    enum:
-      value1:
-        description: The core is transmitting non-NAK handshakes based on the FIFO
-          status.
-        value: 0
-      value2:
-        description: The core is transmitting NAK handshakes on this endpoint.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USB0_EP1_DOEPCTL_INTBULK_DPID:
-    enum:
-      value1:
-        description: DATA0
-        value: 0
-      value2:
-        description: DATA1
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USB0_EP1_DOEPTSIZ_ISO_RxDPID:
     enum:
-      value1:
+      data0:
         description: DATA0
         value: 0
-      value2:
+      data2:
         description: DATA2
         value: 1
-      value3:
+      data1:
         description: DATA1
         value: 2
-      value4:
+      mdata:
         description: MDATA
         value: 3
     unit_test: false

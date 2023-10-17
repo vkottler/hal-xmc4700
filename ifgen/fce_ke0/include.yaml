@@ -63,7 +63,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: FCE_KE0_CFG_REFIN
+            type: FCE_KE0_CFG_REFOUT
           - name: ALR
             description: Automatic Length Reload
             index: 5
@@ -77,35 +77,35 @@ structs:
             width: 1
             read: true
             write: true
-            type: FCE_KE0_CFG_CCE
+            type: FCE_KE0_CFG_REFOUT
           - name: BEI
             description: Bus Error Interrupt
             index: 3
             width: 1
             read: true
             write: true
-            type: FCE_KE0_CFG_BEI
+            type: FCE_KE0_CFG_REFOUT
           - name: LEI
             description: Length Error Interrupt
             index: 2
             width: 1
             read: true
             write: true
-            type: FCE_KE0_CFG_LEI
+            type: FCE_KE0_CFG_REFOUT
           - name: CEI
             description: Configuration Error Interrupt
             index: 1
             width: 1
             read: true
             write: true
-            type: FCE_KE0_CFG_CEI
+            type: FCE_KE0_CFG_REFOUT
           - name: CMI
             description: CRC Mismatch Interrupt
             index: 0
             width: 1
             read: true
             write: true
-            type: FCE_KE0_CFG_CMI
+            type: FCE_KE0_CFG_REFOUT
       - name: STS
         type: uint32_t
         expected_size: 4
@@ -204,10 +204,10 @@ structs:
 enums:
   FCE_KE0_CFG_XSEL:
     enum:
-      value1:
+      '00000000':
         description: '0x00000000'
         value: 0
-      value2:
+      ffffffff:
         description: '0xFFFFFFFF'
         value: 1
     unit_test: false
@@ -216,23 +216,11 @@ enums:
     identifier: false
   FCE_KE0_CFG_REFOUT:
     enum:
-      value1:
+      disabled:
         description: CRC 32-bit wise is disabled
         value: 0
-      value2:
+      enabled:
         description: CRC 32-bit wise is enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FCE_KE0_CFG_REFIN:
-    enum:
-      value1:
-        description: IR Byte Wise Reflection is disabled
-        value: 0
-      value2:
-        description: IR Byte Wise Reflection is enabled
         value: 1
     unit_test: false
     json: false
@@ -240,72 +228,12 @@ enums:
     identifier: false
   FCE_KE0_CFG_ALR:
     enum:
-      value1:
+      disables_automatic_reload_length_field:
         description: Disables automatic reload of the LENGTH field.
         value: 0
-      value2:
+      enables_automatic_reload_length_field_at_end__cont:
         description: Enables automatic reload of the LENGTH field at the end of a
           message.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FCE_KE0_CFG_CCE:
-    enum:
-      value1:
-        description: CRC check comparison at the end of a message is disabled
-        value: 0
-      value2:
-        description: CRC check comparison at the end of a message is enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FCE_KE0_CFG_BEI:
-    enum:
-      value1:
-        description: Bus Error Interrupt is disabled
-        value: 0
-      value2:
-        description: Bus Error Interrupt is enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FCE_KE0_CFG_LEI:
-    enum:
-      value1:
-        description: Length Error Interrupt is disabled
-        value: 0
-      value2:
-        description: Length Error Interrupt is enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FCE_KE0_CFG_CEI:
-    enum:
-      value1:
-        description: Configuration Error Interrupt is disabled
-        value: 0
-      value2:
-        description: Configuration Error Interrupt is enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FCE_KE0_CFG_CMI:
-    enum:
-      value1:
-        description: CRC Mismatch Interrupt is disabled
-        value: 0
-      value2:
-        description: CRC Mismatch Interrupt is enabled
         value: 1
     unit_test: false
     json: false

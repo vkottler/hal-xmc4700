@@ -223,7 +223,7 @@ structs:
 enums:
   CAN_ID_MOD_TYPE:
     enum:
-      value1:
+      define_module_32_bit_module:
         description: Define the module as a 32-bit module.
         value: 192
     unit_test: false
@@ -232,10 +232,10 @@ enums:
     identifier: false
   CAN_LIST_EMPTY:
     enum:
-      value1:
+      at_least_one_message_object_allocated_list_i:
         description: At least one message object is allocated to list i.
         value: 0
-      value2:
+      no_message_object_allocated_list_i_list_i_empty:
         description: No message object is allocated to the list i. List i is empty.
         value: 1
     unit_test: false
@@ -244,10 +244,10 @@ enums:
     identifier: false
   CAN_PANCTR_RBUSY:
     enum:
-      value1:
+      no_update_panar1_panar2_scheduled_by_list_con_cont:
         description: No update of PANAR1 and PANAR2 is scheduled by the list controller.
         value: 0
-      value2:
+      list_command_running_busy_1_write_results_pan_cont:
         description: A list command is running (BUSY = 1) that will write results
           to PANAR1 and PANAR2, but the results are not yet available.
         value: 1
@@ -257,10 +257,10 @@ enums:
     identifier: false
   CAN_PANCTR_BUSY:
     enum:
-      value1:
+      has_finished_command_ready_accept_new_c_cont:
         description: Panel has finished command and is ready to accept a new command.
         value: 0
-      value2:
+      operation_progress:
         description: Panel operation is in progress.
         value: 1
     unit_test: false
@@ -269,19 +269,19 @@ enums:
     identifier: false
   CAN_MCR_CLKSEL:
     enum:
-      value1:
+      no_clock_supplied:
         description: No clock supplied
         value: 0
-      value2:
+      fperiph:
         description: fPERIPH
         value: 1
-      value3:
+      fohp:
         description: fOHP
         value: 2
-      value4:
+      hard_wired_0:
         description: hard wired to 0
         value: 4
-      value5:
+      hard_wired_0_:
         description: hard wired to 0
         value: 8
     unit_test: false

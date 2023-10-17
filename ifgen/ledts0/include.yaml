@@ -63,14 +63,14 @@ structs:
             width: 1
             read: true
             write: true
-            type: LEDTS0_GLOBCTL_ITS_EN
+            type: LEDTS0_GLOBCTL_ITF_EN
           - name: FENVAL
             description: Enable (Extended) Time Frame Validation
             index: 12
             width: 1
             read: true
             write: true
-            type: LEDTS0_GLOBCTL_FENVAL
+            type: LEDTS0_GLOBCTL_ITF_EN
           - name: MASKVAL
             description: Mask Number of LSB Bits for Event Validation
             index: 9
@@ -459,10 +459,10 @@ structs:
 enums:
   LEDTS0_GLOBCTL_ITP_EN:
     enum:
-      value1:
+      disable:
         description: Disable
         value: 0
-      value2:
+      enable_valid_only_case_hardware_enabled_pad_t_cont:
         description: Enable (valid only for case of hardware-enabled pad turn control)
         value: 1
     unit_test: false
@@ -471,34 +471,10 @@ enums:
     identifier: false
   LEDTS0_GLOBCTL_ITF_EN:
     enum:
-      value1:
+      disable:
         description: Disable
         value: 0
-      value2:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  LEDTS0_GLOBCTL_ITS_EN:
-    enum:
-      value1:
-        description: Disable
-        value: 0
-      value2:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  LEDTS0_GLOBCTL_FENVAL:
-    enum:
-      value1:
-        description: Disable
-        value: 0
-      value2:
+      enable:
         description: Enable
         value: 1
     unit_test: false
@@ -507,13 +483,13 @@ enums:
     identifier: false
   LEDTS0_GLOBCTL_MASKVAL:
     enum:
-      value1:
+      lsb_bit:
         description: Mask LSB bit
         value: 0
-      value2:
+      2_lsb_bits:
         description: Mask 2 LSB bits
         value: 1
-      value3:
+      8_lsb_bits:
         description: Mask 8 LSB bits
         value: 7
     unit_test: false
@@ -522,10 +498,10 @@ enums:
     identifier: false
   LEDTS0_GLOBCTL_SUSCFG:
     enum:
-      value1:
+      ignore_suspend_request:
         description: Ignore suspend request
         value: 0
-      value2:
+      enable_suspend_according_request:
         description: Enable suspend according to request
         value: 1
     unit_test: false
@@ -534,10 +510,10 @@ enums:
     identifier: false
   LEDTS0_GLOBCTL_ENSYNC:
     enum:
-      value1:
+      no_synchronization:
         description: No synchronization
         value: 0
-      value2:
+      synchronization_enabled_kernel0_autoscan_time_cont:
         description: Synchronization enabled on Kernel0 autoscan time period
         value: 1
     unit_test: false
@@ -546,11 +522,11 @@ enums:
     identifier: false
   LEDTS0_GLOBCTL_CMTR:
     enum:
-      value1:
+      kernel_generates_own_clock_ledts_counter_base_cont:
         description: Kernel generates its own clock for LEDTS-counter based on SFR
           setting
         value: 0
-      value2:
+      ledts_counter_takes_clock_another_master_kernel:
         description: LEDTS-counter takes its clock from another master kernel
         value: 1
     unit_test: false
@@ -559,28 +535,28 @@ enums:
     identifier: false
   LEDTS0_FNCTL_NR_LEDCOL:
     enum:
-      value1:
+      1_led_column:
         description: 1 LED column
         value: 0
-      value2:
+      2_led_columns:
         description: 2 LED columns
         value: 1
-      value3:
+      3_led_columns:
         description: 3 LED columns
         value: 2
-      value4:
+      4_led_columns:
         description: 4 LED columns
         value: 3
-      value5:
+      5_led_columns:
         description: 5 LED columns
         value: 4
-      value6:
+      6_led_columns:
         description: 6 LED columns
         value: 5
-      value7:
+      7_led_columns:
         description: 7 LED columns
         value: 6
-      value8:
+      8_led_columns_max_led_columns_7_if_bit_ts_en_1:
         description: 8 LED columns (max. LED columns = 7 if bit TS_EN = 1)
         value: 7
     unit_test: false
@@ -589,10 +565,10 @@ enums:
     identifier: false
   LEDTS0_FNCTL_COLLEV:
     enum:
-      value1:
+      low:
         description: Active low
         value: 0
-      value2:
+      high:
         description: Active high
         value: 1
     unit_test: false
@@ -601,10 +577,10 @@ enums:
     identifier: false
   LEDTS0_FNCTL_NR_TSIN:
     enum:
-      value1:
+      '1':
         description: '1'
         value: 0
-      value2:
+      '8':
         description: '8'
         value: 7
     unit_test: false
@@ -613,10 +589,10 @@ enums:
     identifier: false
   LEDTS0_FNCTL_TSCTRSAT:
     enum:
-      value1:
+      disable:
         description: Disable
         value: 0
-      value2:
+      enable_ts_counter_stops_counting_touch_sense__cont:
         description: Enable. TS-counter stops counting in the touch-sense time slice(s)
           of the same (extended) frame when it reaches FFH. Counter starts to count
           again on the first pad turn of a new TSIN[x], triggered on compare match.
@@ -627,10 +603,10 @@ enums:
     identifier: false
   LEDTS0_FNCTL_TSCTRR:
     enum:
-      value1:
+      disable_ts_counter_automatic_reset:
         description: Disable TS-counter automatic reset
         value: 0
-      value2:
+      enable_ts_counter_automatic_reset_00h_first_p_cont:
         description: Enable TS-counter automatic reset to 00H on the first pad turn
           of a new TSIN[x]. Triggered on compare match in time slice.
         value: 1
@@ -640,16 +616,16 @@ enums:
     identifier: false
   LEDTS0_FNCTL_TSOEXT:
     enum:
-      value1:
+      1_ledts_clk:
         description: Extend by 1 ledts_clk
         value: 0
-      value2:
+      4_ledts_clk:
         description: Extend by 4 ledts_clk
         value: 1
-      value3:
+      8_ledts_clk:
         description: Extend by 8 ledts_clk
         value: 2
-      value4:
+      16_ledts_clk:
         description: Extend by 16 ledts_clk
         value: 3
     unit_test: false
@@ -658,10 +634,10 @@ enums:
     identifier: false
   LEDTS0_FNCTL_TSCCMP:
     enum:
-      value1:
+      disable_common_compare_touch_sense:
         description: Disable common compare for touch-sense
         value: 0
-      value2:
+      enable_common_compare_touch_sense:
         description: Enable common compare for touch-sense
         value: 1
     unit_test: false
@@ -670,13 +646,13 @@ enums:
     identifier: false
   LEDTS0_FNCTL_ACCCNT:
     enum:
-      value1:
+      1_time:
         description: 1 time
         value: 0
-      value2:
+      2_times:
         description: 2 times
         value: 1
-      value3:
+      16_times:
         description: 16 times
         value: 15
     unit_test: false
@@ -685,12 +661,12 @@ enums:
     identifier: false
   LEDTS0_FNCTL_EPULL:
     enum:
-      value1:
+      hw_over_rule_enable_internal_pull_up_active_t_cont:
         description: HW over-rule to enable internal pull-up is active on TSIN[x]
           for set duration in touch-sense time slice. With this setting, it is not
           specified to assign the COLA to any pin.
         value: 0
-      value2:
+      enable_external_pull_up_output_1_pin_cola_who_cont:
         description: 'Enable external pull-up: Output 1 on pin COLA for whole duration
           of touch-sense time slice.'
         value: 1
@@ -700,11 +676,11 @@ enums:
     identifier: false
   LEDTS0_FNCTL_PADTSW:
     enum:
-      value1:
+      hardware_automatically_enables_touch_sense_in_cont:
         description: The hardware automatically enables the touch-sense inputs in
           sequence round-robin, starting from TSIN0.
         value: 0
-      value2:
+      disable_hardware_control_software_control_onl_cont:
         description: Disable hardware control for software control only. The touch-sense
           input is configured in bit PADT.
         value: 1
@@ -714,10 +690,10 @@ enums:
     identifier: false
   LEDTS0_FNCTL_PADT:
     enum:
-      value1:
+      '0':
         description: TSIN0
         value: 0
-      value2:
+      '7':
         description: TSIN7
         value: 7
     unit_test: false
@@ -726,10 +702,10 @@ enums:
     identifier: false
   LEDTS0_EVFR_CTPF:
     enum:
-      value1:
+      no_action:
         description: No action.
         value: 0
-      value2:
+      bit_tpf_cleared:
         description: Bit TPF is cleared.
         value: 1
     unit_test: false
@@ -738,10 +714,10 @@ enums:
     identifier: false
   LEDTS0_EVFR_CTFF:
     enum:
-      value1:
+      no_action:
         description: No action.
         value: 0
-      value2:
+      bit_tff_cleared:
         description: Bit TFF is cleared.
         value: 1
     unit_test: false
@@ -750,10 +726,10 @@ enums:
     identifier: false
   LEDTS0_EVFR_CTSF:
     enum:
-      value1:
+      no_action:
         description: No action.
         value: 0
-      value2:
+      bit_tsf_cleared:
         description: Bit TSF is cleared.
         value: 1
     unit_test: false
@@ -762,10 +738,10 @@ enums:
     identifier: false
   LEDTS0_EVFR_TSCTROVF:
     enum:
-      value1:
+      no_overflow_has_occurred:
         description: No overflow has occurred.
         value: 0
-      value2:
+      ts_counter_has_overflowed_at_least_once:
         description: The TS-counter has overflowed at least once.
         value: 1
     unit_test: false

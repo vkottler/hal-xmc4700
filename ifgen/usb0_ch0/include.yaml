@@ -7,6 +7,14 @@ structs:
         address: '0x50040500'
       - name: USB0_CH1
         address: '0x50040520'
+      - name: USB0_CH10
+        address: '0x50040640'
+      - name: USB0_CH11
+        address: '0x50040660'
+      - name: USB0_CH12
+        address: '0x50040680'
+      - name: USB0_CH13
+        address: '0x500406A0'
       - name: USB0_CH2
         address: '0x50040540'
       - name: USB0_CH3
@@ -23,14 +31,6 @@ structs:
         address: '0x50040600'
       - name: USB0_CH9
         address: '0x50040620'
-      - name: USB0_CH10
-        address: '0x50040640'
-      - name: USB0_CH11
-        address: '0x50040660'
-      - name: USB0_CH12
-        address: '0x50040680'
-      - name: USB0_CH13
-        address: '0x500406A0'
     fields:
       - name: HCCHAR
         type: uint32_t
@@ -371,11 +371,11 @@ structs:
 enums:
   USB0_CH0_HCCHAR_ChEna:
     enum:
-      value1:
+      scattergather_mode_enabled_indicates_descript_cont:
         description: 'Scatter/Gather mode enabled: Indicates that the descriptor structure
           is not yet ready. Scatter/Gather mode disabled: Channel disabled'
         value: 0
-      value2:
+      _:
         description: 'Scatter/Gather mode enabled: Indicates that the descriptor structure
           and data buffer with data is setup and this channel can access the descriptor.
           Scatter/Gather mode disabled: Channel enabled'
@@ -386,10 +386,10 @@ enums:
     identifier: false
   USB0_CH0_HCCHAR_OddFrm:
     enum:
-      value1:
+      even_frame:
         description: Even frame
         value: 0
-      value2:
+      odd_frame:
         description: Odd frame
         value: 1
     unit_test: false
@@ -398,13 +398,13 @@ enums:
     identifier: false
   USB0_CH0_HCCHAR_MC_EC:
     enum:
-      value2:
+      1_transaction:
         description: 1 transaction
         value: 1
-      value3:
+      2_transactions_be_issued_this_endpoint_per_frame:
         description: 2 transactions to be issued for this endpoint per frame
         value: 2
-      value4:
+      3_transactions_be_issued_this_endpoint_per_frame:
         description: 3 transactions to be issued for this endpoint per frame
         value: 3
     unit_test: false
@@ -413,16 +413,16 @@ enums:
     identifier: false
   USB0_CH0_HCCHAR_EPType:
     enum:
-      value1:
+      control:
         description: Control
         value: 0
-      value2:
+      isochronous:
         description: Isochronous
         value: 1
-      value3:
+      bulk:
         description: Bulk
         value: 2
-      value4:
+      interrupt:
         description: Interrupt
         value: 3
     unit_test: false
@@ -431,10 +431,10 @@ enums:
     identifier: false
   USB0_CH0_HCCHAR_EPDir:
     enum:
-      value1:
+      out:
         description: OUT
         value: 0
-      value2:
+      in:
         description: IN
         value: 1
     unit_test: false
@@ -443,16 +443,16 @@ enums:
     identifier: false
   USB0_CH0_HCTSIZ_BUFFERMODE_Pid:
     enum:
-      value1:
+      data0:
         description: DATA0
         value: 0
-      value2:
+      data2:
         description: DATA2
         value: 1
-      value3:
+      data1:
         description: DATA1
         value: 2
-      value4:
+      mdata_non_controlsetup_control:
         description: MDATA (non-control)/SETUP (control)
         value: 3
     unit_test: false
@@ -461,16 +461,16 @@ enums:
     identifier: false
   USB0_CH0_HCTSIZ_SCATGATHER_Pid:
     enum:
-      value1:
+      data0:
         description: DATA0
         value: 0
-      value2:
+      data2:
         description: DATA2
         value: 1
-      value3:
+      data1:
         description: DATA1
         value: 2
-      value4:
+      mdata_non_control:
         description: MDATA (non-control)
         value: 3
     unit_test: false
@@ -479,10 +479,10 @@ enums:
     identifier: false
   USB0_CH0_HCDMA_SCATGATHER_CTD:
     enum:
-      value1:
+      1_descriptor:
         description: 1 descriptor
         value: 0
-      value2:
+      64_descriptors:
         description: 64 descriptors
         value: 63
     unit_test: false

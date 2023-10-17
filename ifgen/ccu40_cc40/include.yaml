@@ -55,14 +55,14 @@ structs:
             width: 2
             read: true
             write: true
-            type: CCU40_CC40_INS_LPF1M
+            type: CCU40_CC40_INS_LPF2M
           - name: LPF0M
             description: Event 0 Low Pass Filter Configuration
             index: 25
             width: 2
             read: true
             write: true
-            type: CCU40_CC40_INS_LPF0M
+            type: CCU40_CC40_INS_LPF2M
           - name: EV2LM
             description: Event 2 Level Selection
             index: 24
@@ -76,14 +76,14 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU40_CC40_INS_EV1LM
+            type: CCU40_CC40_INS_EV2LM
           - name: EV0LM
             description: Event 0 Level Selection
             index: 22
             width: 1
             read: true
             write: true
-            type: CCU40_CC40_INS_EV0LM
+            type: CCU40_CC40_INS_EV2LM
           - name: EV2EM
             description: Event 2 Edge Selection
             index: 20
@@ -97,14 +97,14 @@ structs:
             width: 2
             read: true
             write: true
-            type: CCU40_CC40_INS_EV1EM
+            type: CCU40_CC40_INS_EV2EM
           - name: EV0EM
             description: Event 0 Edge Selection
             index: 16
             width: 2
             read: true
             write: true
-            type: CCU40_CC40_INS_EV0EM
+            type: CCU40_CC40_INS_EV2EM
           - name: EV2IS
             description: Event 2 signal selection
             index: 8
@@ -118,14 +118,14 @@ structs:
             width: 4
             read: true
             write: true
-            type: CCU40_CC40_INS_EV1IS
+            type: CCU40_CC40_INS_EV2IS
           - name: EV0IS
             description: Event 0 signal selection
             index: 0
             width: 4
             read: true
             write: true
-            type: CCU40_CC40_INS_EV0IS
+            type: CCU40_CC40_INS_EV2IS
       - name: CMC
         type: uint32_t
         expected_size: 4
@@ -178,42 +178,42 @@ structs:
             width: 2
             read: true
             write: true
-            type: CCU40_CC40_CMC_UDS
+            type: CCU40_CC40_CMC_CNTS
           - name: GATES
             description: External Gate Functionality Selector
             index: 8
             width: 2
             read: true
             write: true
-            type: CCU40_CC40_CMC_GATES
+            type: CCU40_CC40_CMC_CNTS
           - name: CAP1S
             description: External Capture 1 Functionality Selector
             index: 6
             width: 2
             read: true
             write: true
-            type: CCU40_CC40_CMC_CAP1S
+            type: CCU40_CC40_CMC_CNTS
           - name: CAP0S
             description: External Capture 0 Functionality Selector
             index: 4
             width: 2
             read: true
             write: true
-            type: CCU40_CC40_CMC_CAP0S
+            type: CCU40_CC40_CMC_CNTS
           - name: ENDS
             description: External Stop Functionality Selector
             index: 2
             width: 2
             read: true
             write: true
-            type: CCU40_CC40_CMC_ENDS
+            type: CCU40_CC40_CMC_CNTS
           - name: STRTS
             description: External Start Functionality Selector
             index: 0
             width: 2
             read: true
             write: true
-            type: CCU40_CC40_CMC_STRTS
+            type: CCU40_CC40_CMC_CNTS
       - name: TCST
         type: uint32_t
         expected_size: 4
@@ -283,7 +283,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU40_CC40_TC_MCME
+            type: CCU40_CC40_CMC_TCE
           - name: EMT
             description: External Modulation Type
             index: 24
@@ -325,7 +325,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU40_CC40_TC_FPE
+            type: CCU40_CC40_CMC_TCE
           - name: DIM
             description: Dither input selector
             index: 15
@@ -401,7 +401,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU40_CC40_TC_TSSM
+            type: CCU40_CC40_CMC_TCE
           - name: TCM
             description: Timer Counting Mode
             index: 0
@@ -596,7 +596,7 @@ structs:
             width: 1
             read: true
             write: false
-            type: CCU40_CC40_C1V_FFL
+            type: CCU40_CC40_C0V_FFL
           - name: FPCV
             description: Prescaler Value
             index: 16
@@ -622,7 +622,7 @@ structs:
             width: 1
             read: true
             write: false
-            type: CCU40_CC40_C2V_FFL
+            type: CCU40_CC40_C0V_FFL
           - name: FPCV
             description: Prescaler Value
             index: 16
@@ -648,7 +648,7 @@ structs:
             width: 1
             read: true
             write: false
-            type: CCU40_CC40_C3V_FFL
+            type: CCU40_CC40_C0V_FFL
           - name: FPCV
             description: Prescaler Value
             index: 16
@@ -687,42 +687,42 @@ structs:
             width: 1
             read: true
             write: false
-            type: CCU40_CC40_INTS_E1AS
+            type: CCU40_CC40_INTS_E2AS
           - name: E0AS
             description: Event 0 Detection Status
             index: 8
             width: 1
             read: true
             write: false
-            type: CCU40_CC40_INTS_E0AS
+            type: CCU40_CC40_INTS_E2AS
           - name: CMDS
             description: Compare Match while Counting Down
             index: 3
             width: 1
             read: true
             write: false
-            type: CCU40_CC40_INTS_CMDS
+            type: CCU40_CC40_INTS_E2AS
           - name: CMUS
             description: Compare Match while Counting Up
             index: 2
             width: 1
             read: true
             write: false
-            type: CCU40_CC40_INTS_CMUS
+            type: CCU40_CC40_INTS_E2AS
           - name: OMDS
             description: One Match while Counting Down
             index: 1
             width: 1
             read: true
             write: false
-            type: CCU40_CC40_INTS_OMDS
+            type: CCU40_CC40_INTS_E2AS
           - name: PMUS
             description: Period Match while Counting Up
             index: 0
             width: 1
             read: true
             write: false
-            type: CCU40_CC40_INTS_PMUS
+            type: CCU40_CC40_INTS_E2AS
       - name: INTE
         type: uint32_t
         expected_size: 4
@@ -735,21 +735,21 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU40_CC40_INTE_E2AE
+            type: CCU40_CC40_CMC_TCE
           - name: E1AE
             description: Event 1 interrupt enable
             index: 9
             width: 1
             read: true
             write: true
-            type: CCU40_CC40_INTE_E1AE
+            type: CCU40_CC40_CMC_TCE
           - name: E0AE
             description: Event 0 interrupt enable
             index: 8
             width: 1
             read: true
             write: true
-            type: CCU40_CC40_INTE_E0AE
+            type: CCU40_CC40_CMC_TCE
           - name: CMDE
             description: Compare match while counting down enable
             index: 3
@@ -763,21 +763,21 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU40_CC40_INTE_CMUE
+            type: CCU40_CC40_CMC_TCE
           - name: OME
             description: One match while counting down enable
             index: 1
             width: 1
             read: true
             write: true
-            type: CCU40_CC40_INTE_OME
+            type: CCU40_CC40_CMC_TCE
           - name: PME
             description: Period match while counting up enable
             index: 0
             width: 1
             read: true
             write: true
-            type: CCU40_CC40_INTE_PME
+            type: CCU40_CC40_CMC_TCE
       - name: SRS
         type: uint32_t
         expected_size: 4
@@ -797,28 +797,28 @@ structs:
             width: 2
             read: true
             write: true
-            type: CCU40_CC40_SRS_E1SR
+            type: CCU40_CC40_SRS_E2SR
           - name: E0SR
             description: Event 0 Service request selector
             index: 8
             width: 2
             read: true
             write: true
-            type: CCU40_CC40_SRS_E0SR
+            type: CCU40_CC40_SRS_E2SR
           - name: CMSR
             description: Compare match Service request selector
             index: 2
             width: 2
             read: true
             write: true
-            type: CCU40_CC40_SRS_CMSR
+            type: CCU40_CC40_SRS_E2SR
           - name: POSR
             description: Period/One match Service request selector
             index: 0
             width: 2
             read: true
             write: true
-            type: CCU40_CC40_SRS_POSR
+            type: CCU40_CC40_SRS_E2SR
       - name: SWS
         type: uint32_t
         expected_size: 4
@@ -954,14 +954,14 @@ structs:
             width: 2
             read: true
             write: false
-            type: CCU40_CC40_ECRD0_VPTR
+            type: CCU40_CC40_SRS_E2SR
           - name: SPTR
             description: Slice pointer
             index: 20
             width: 2
             read: true
             write: false
-            type: CCU40_CC40_ECRD0_SPTR
+            type: CCU40_CC40_SRS_E2SR
           - name: FPCV
             description: Prescaler Capture value
             index: 16
@@ -987,28 +987,28 @@ structs:
             width: 1
             read: true
             write: false
-            type: CCU40_CC40_ECRD1_LCV
+            type: CCU40_CC40_ECRD0_LCV
           - name: FFL
             description: Full Flag
             index: 24
             width: 1
             read: true
             write: false
-            type: CCU40_CC40_ECRD1_FFL
+            type: CCU40_CC40_ECRD0_FFL
           - name: VPTR
             description: Capture register pointer
             index: 22
             width: 2
             read: true
             write: false
-            type: CCU40_CC40_ECRD1_VPTR
+            type: CCU40_CC40_SRS_E2SR
           - name: SPTR
             description: Slice pointer
             index: 20
             width: 2
             read: true
             write: false
-            type: CCU40_CC40_ECRD1_SPTR
+            type: CCU40_CC40_SRS_E2SR
           - name: FPCV
             description: Prescaler Capture value
             index: 16
@@ -1029,52 +1029,16 @@ structs:
 enums:
   CCU40_CC40_INS_LPF2M:
     enum:
-      value1:
+      lpf_disabled:
         description: LPF is disabled
         value: 0
-      value2:
+      3_clock_cycles_fccu4:
         description: 3 clock cycles of fCCU4
         value: 1
-      value3:
+      5_clock_cycles_fccu4:
         description: 5 clock cycles of fCCU4
         value: 2
-      value4:
-        description: 7 clock cycles of fCCU4
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_INS_LPF1M:
-    enum:
-      value1:
-        description: LPF is disabled
-        value: 0
-      value2:
-        description: 3 clock cycles of fCCU4
-        value: 1
-      value3:
-        description: 5 clock cycles of fCCU4
-        value: 2
-      value4:
-        description: 7 clock cycles of fCCU4
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_INS_LPF0M:
-    enum:
-      value1:
-        description: LPF is disabled
-        value: 0
-      value2:
-        description: 3 clock cycles of fCCU4
-        value: 1
-      value3:
-        description: 5 clock cycles of fCCU4
-        value: 2
-      value4:
+      7_clock_cycles_fccu4:
         description: 7 clock cycles of fCCU4
         value: 3
     unit_test: false
@@ -1083,34 +1047,10 @@ enums:
     identifier: false
   CCU40_CC40_INS_EV2LM:
     enum:
-      value1:
+      high_level:
         description: Active on HIGH level
         value: 0
-      value2:
-        description: Active on LOW level
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_INS_EV1LM:
-    enum:
-      value1:
-        description: Active on HIGH level
-        value: 0
-      value2:
-        description: Active on LOW level
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_INS_EV0LM:
-    enum:
-      value1:
-        description: Active on HIGH level
-        value: 0
-      value2:
+      low_level:
         description: Active on LOW level
         value: 1
     unit_test: false
@@ -1119,52 +1059,16 @@ enums:
     identifier: false
   CCU40_CC40_INS_EV2EM:
     enum:
-      value1:
+      no_action:
         description: No action
         value: 0
-      value2:
+      signal_active_rising_edge:
         description: Signal active on rising edge
         value: 1
-      value3:
+      signal_active_falling_edge:
         description: Signal active on falling edge
         value: 2
-      value4:
-        description: Signal active on both edges
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_INS_EV1EM:
-    enum:
-      value1:
-        description: No action
-        value: 0
-      value2:
-        description: Signal active on rising edge
-        value: 1
-      value3:
-        description: Signal active on falling edge
-        value: 2
-      value4:
-        description: Signal active on both edges
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_INS_EV0EM:
-    enum:
-      value1:
-        description: No action
-        value: 0
-      value2:
-        description: Signal active on rising edge
-        value: 1
-      value3:
-        description: Signal active on falling edge
-        value: 2
-      value4:
+      signal_active_both_edges:
         description: Signal active on both edges
         value: 3
     unit_test: false
@@ -1173,160 +1077,52 @@ enums:
     identifier: false
   CCU40_CC40_INS_EV2IS:
     enum:
-      value1:
+      a:
         description: CCU4x.INyA
         value: 0
-      value2:
+      b:
         description: CCU4x.INyB
         value: 1
-      value3:
+      c:
         description: CCU4x.INyC
         value: 2
-      value4:
+      d:
         description: CCU4x.INyD
         value: 3
-      value5:
+      e:
         description: CCU4x.INyE
         value: 4
-      value6:
+      f:
         description: CCU4x.INyF
         value: 5
-      value7:
+      g:
         description: CCU4x.INyG
         value: 6
-      value8:
+      h:
         description: CCU4x.INyH
         value: 7
-      value9:
+      i:
         description: CCU4x.INyI
         value: 8
-      value10:
+      j:
         description: CCU4x.INyJ
         value: 9
-      value11:
+      k:
         description: CCU4x.INyK
         value: 10
-      value12:
+      l:
         description: CCU4x.INyL
         value: 11
-      value13:
+      m:
         description: CCU4x.INyM
         value: 12
-      value14:
+      n:
         description: CCU4x.INyN
         value: 13
-      value15:
+      o:
         description: CCU4x.INyO
         value: 14
-      value16:
-        description: CCU4x.INyP
-        value: 15
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_INS_EV1IS:
-    enum:
-      value1:
-        description: CCU4x.INyA
-        value: 0
-      value2:
-        description: CCU4x.INyB
-        value: 1
-      value3:
-        description: CCU4x.INyC
-        value: 2
-      value4:
-        description: CCU4x.INyD
-        value: 3
-      value5:
-        description: CCU4x.INyE
-        value: 4
-      value6:
-        description: CCU4x.INyF
-        value: 5
-      value7:
-        description: CCU4x.INyG
-        value: 6
-      value8:
-        description: CCU4x.INyH
-        value: 7
-      value9:
-        description: CCU4x.INyI
-        value: 8
-      value10:
-        description: CCU4x.INyJ
-        value: 9
-      value11:
-        description: CCU4x.INyK
-        value: 10
-      value12:
-        description: CCU4x.INyL
-        value: 11
-      value13:
-        description: CCU4x.INyM
-        value: 12
-      value14:
-        description: CCU4x.INyN
-        value: 13
-      value15:
-        description: CCU4x.INyO
-        value: 14
-      value16:
-        description: CCU4x.INyP
-        value: 15
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_INS_EV0IS:
-    enum:
-      value1:
-        description: CCU4x.INyA
-        value: 0
-      value2:
-        description: CCU4x.INyB
-        value: 1
-      value3:
-        description: CCU4x.INyC
-        value: 2
-      value4:
-        description: CCU4x.INyD
-        value: 3
-      value5:
-        description: CCU4x.INyE
-        value: 4
-      value6:
-        description: CCU4x.INyF
-        value: 5
-      value7:
-        description: CCU4x.INyG
-        value: 6
-      value8:
-        description: CCU4x.INyH
-        value: 7
-      value9:
-        description: CCU4x.INyI
-        value: 8
-      value10:
-        description: CCU4x.INyJ
-        value: 9
-      value11:
-        description: CCU4x.INyK
-        value: 10
-      value12:
-        description: CCU4x.INyL
-        value: 11
-      value13:
-        description: CCU4x.INyM
-        value: 12
-      value14:
-        description: CCU4x.INyN
-        value: 13
-      value15:
-        description: CCU4x.INyO
-        value: 14
-      value16:
+      p:
         description: CCU4x.INyP
         value: 15
     unit_test: false
@@ -1335,10 +1131,10 @@ enums:
     identifier: false
   CCU40_CC40_CMC_TCE:
     enum:
-      value1:
+      disabled:
         description: Timer concatenation is disabled
         value: 0
-      value2:
+      enabled:
         description: Timer concatenation is enabled
         value: 1
     unit_test: false
@@ -1347,10 +1143,10 @@ enums:
     identifier: false
   CCU40_CC40_CMC_TS:
     enum:
-      value1:
+      disabled:
         description: Trap function disabled
         value: 0
-      value2:
+      connected_event_2:
         description: TRAP function connected to Event 2
         value: 1
     unit_test: false
@@ -1359,10 +1155,10 @@ enums:
     identifier: false
   CCU40_CC40_CMC_OFS:
     enum:
-      value1:
+      override_functionality_disabled:
         description: Override functionality disabled
         value: 0
-      value2:
+      status_bit_trigger_override_connected_event_1_cont:
         description: Status bit trigger override connected to Event 1; Status bit
           value override connected to Event 2
         value: 1
@@ -1372,125 +1168,17 @@ enums:
     identifier: false
   CCU40_CC40_CMC_CNTS:
     enum:
-      value1:
+      deactivated:
         description: External Count Function deactivated
         value: 0
-      value2:
+      triggered_by_event_0:
         description: External Count Function triggered by Event 0
         value: 1
-      value3:
+      triggered_by_event_1:
         description: External Count Function triggered by Event 1
         value: 2
-      value4:
+      triggered_by_event_2:
         description: External Count Function triggered by Event 2
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_CMC_UDS:
-    enum:
-      value1:
-        description: External Up/Down Function deactivated
-        value: 0
-      value2:
-        description: External Up/Down Function triggered by Event 0
-        value: 1
-      value3:
-        description: External Up/Down Function triggered by Event 1
-        value: 2
-      value4:
-        description: External Up/Down Function triggered by Event 2
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_CMC_GATES:
-    enum:
-      value1:
-        description: External Gating Function deactivated
-        value: 0
-      value2:
-        description: External Gating Function triggered by Event 0
-        value: 1
-      value3:
-        description: External Gating Function triggered by Event 1
-        value: 2
-      value4:
-        description: External Gating Function triggered by Event 2
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_CMC_CAP1S:
-    enum:
-      value1:
-        description: External Capture 1 Function deactivated
-        value: 0
-      value2:
-        description: External Capture 1 Function triggered by Event 0
-        value: 1
-      value3:
-        description: External Capture 1 Function triggered by Event 1
-        value: 2
-      value4:
-        description: External Capture 1 Function triggered by Event 2
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_CMC_CAP0S:
-    enum:
-      value1:
-        description: External Capture 0 Function deactivated
-        value: 0
-      value2:
-        description: External Capture 0 Function triggered by Event 0
-        value: 1
-      value3:
-        description: External Capture 0 Function triggered by Event 1
-        value: 2
-      value4:
-        description: External Capture 0 Function triggered by Event 2
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_CMC_ENDS:
-    enum:
-      value1:
-        description: External Stop Function deactivated
-        value: 0
-      value2:
-        description: External Stop Function triggered by Event 0
-        value: 1
-      value3:
-        description: External Stop Function triggered by Event 1
-        value: 2
-      value4:
-        description: External Stop Function triggered by Event 2
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_CMC_STRTS:
-    enum:
-      value1:
-        description: External Start Function deactivated
-        value: 0
-      value2:
-        description: External Start Function triggered by Event 0
-        value: 1
-      value3:
-        description: External Start Function triggered by Event 1
-        value: 2
-      value4:
-        description: External Start Function triggered by Event 2
         value: 3
     unit_test: false
     json: false
@@ -1498,10 +1186,10 @@ enums:
     identifier: false
   CCU40_CC40_TCST_CDIR:
     enum:
-      value1:
+      up:
         description: Timer is counting up
         value: 0
-      value2:
+      down:
         description: Timer is counting down
         value: 1
     unit_test: false
@@ -1510,23 +1198,11 @@ enums:
     identifier: false
   CCU40_CC40_TCST_TRB:
     enum:
-      value1:
+      stopped:
         description: Timer is stopped
         value: 0
-      value2:
+      running:
         description: Timer is running
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_TC_MCME:
-    enum:
-      value1:
-        description: Multi Channel Mode is disabled
-        value: 0
-      value2:
-        description: Multi Channel Mode is enabled
         value: 1
     unit_test: false
     json: false
@@ -1534,10 +1210,10 @@ enums:
     identifier: false
   CCU40_CC40_TC_EMT:
     enum:
-      value1:
+      clearing_cc_cont:
         description: External Modulation functionality is clearing the CC4yST bit.
         value: 0
-      value2:
+      gating_outputs:
         description: External Modulation functionality is gating the outputs.
         value: 1
     unit_test: false
@@ -1546,11 +1222,11 @@ enums:
     identifier: false
   CCU40_CC40_TC_EMS:
     enum:
-      value1:
+      not_synchro_cont:
         description: External Modulation functionality is not synchronized with the
           PWM signal
         value: 0
-      value2:
+      synchronize_cont:
         description: External Modulation functionality is synchronized with the PWM
           signal
         value: 1
@@ -1560,11 +1236,11 @@ enums:
     identifier: false
   CCU40_CC40_TC_TRPSW:
     enum:
-      value1:
+      slice_exits_trap_state_automatically_when_tra_cont:
         description: The slice exits the TRAP state automatically when the TRAP condition
           is not present
         value: 0
-      value2:
+      trap_state_can_only_be_exited_by_sw_request:
         description: The TRAP state can only be exited by a SW request.
         value: 1
     unit_test: false
@@ -1573,10 +1249,10 @@ enums:
     identifier: false
   CCU40_CC40_TC_TRPSE:
     enum:
-      value1:
+      isnt_synchronized_with_pwm_cont:
         description: Exiting from TRAP state isn't synchronized with the PWM signal
         value: 0
-      value2:
+      synchronized_with_pwm_signal:
         description: Exiting from TRAP state is synchronized with the PWM signal
         value: 1
     unit_test: false
@@ -1585,23 +1261,11 @@ enums:
     identifier: false
   CCU40_CC40_TC_TRAPE:
     enum:
-      value1:
+      has_no_effect_output:
         description: TRAP functionality has no effect on the output
         value: 0
-      value2:
+      affects_output:
         description: TRAP functionality affects the output
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_TC_FPE:
-    enum:
-      value1:
-        description: Floating prescaler mode is disabled
-        value: 0
-      value2:
-        description: Floating prescaler mode is enabled
         value: 1
     unit_test: false
     json: false
@@ -1609,10 +1273,10 @@ enums:
     identifier: false
   CCU40_CC40_TC_DIM:
     enum:
-      value1:
+      using_own_dither_unit:
         description: Slice is using its own dither unit
         value: 0
-      value2:
+      connected_dither_unit_slice_0:
         description: Slice is connected to the dither unit of slice 0.
         value: 1
     unit_test: false
@@ -1621,16 +1285,16 @@ enums:
     identifier: false
   CCU40_CC40_TC_DITHE:
     enum:
-      value1:
+      disabled:
         description: Dither is disabled
         value: 0
-      value2:
+      applied_period:
         description: Dither is applied to the Period
         value: 1
-      value3:
+      applied_compare:
         description: Dither is applied to the Compare
         value: 2
-      value4:
+      applied_period_compare:
         description: Dither is applied to the Period and Compare
         value: 3
     unit_test: false
@@ -1639,11 +1303,11 @@ enums:
     identifier: false
   CCU40_CC40_TC_CCS:
     enum:
-      value1:
+      specific_capture_register_done_w_cont:
         description: The capture into a specific capture register is done with the
           rules linked with the full flags, described at .
         value: 0
-      value2:
+      capture_registers_always_done_re_cont:
         description: The capture into the capture registers is always done regardless
           of the full flag status (even if the register has not been read back).
         value: 1
@@ -1653,7 +1317,7 @@ enums:
     identifier: false
   CCU40_CC40_TC_SCE:
     enum:
-      value1:
+      capture_into_cc4yc0vthis_register_contains_va_cont:
         description: Capture into CC4yC0VThis register contains the values associated
           with the Capture 0 field./CC4yC1VThis register contains the values associated
           with the Capture 1 field. registers control by CCycapt0 and capture into
@@ -1661,7 +1325,7 @@ enums:
           register contains the values associated with the Capture 2 field. control
           by CCycapt1
         value: 0
-      value2:
+      _:
         description: Capture into CC4yC0VThis register contains the values associated
           with the Capture 0 field./CC4yC1VThis register contains the values associated
           with the Capture 1 field. and CC4yC3VThis register contains the values associated
@@ -1674,10 +1338,10 @@ enums:
     identifier: false
   CCU40_CC40_TC_STRM:
     enum:
-      value1:
+      sets_run_bit_only_default_start:
         description: Sets run bit only (default start)
         value: 0
-      value2:
+      clears_timer_sets_run_bit_flushstart:
         description: Clears the timer and sets run bit (flush/start)
         value: 1
     unit_test: false
@@ -1686,13 +1350,13 @@ enums:
     identifier: false
   CCU40_CC40_TC_ENDM:
     enum:
-      value1:
+      run_bit_only_default_stop:
         description: Clears the timer run bit only (default stop)
         value: 0
-      value2:
+      only_flush:
         description: Clears the timer only (flush)
         value: 1
-      value3:
+      run_bit_flushstop:
         description: Clears the timer and run bit (flush/stop)
         value: 2
     unit_test: false
@@ -1701,18 +1365,18 @@ enums:
     identifier: false
   CCU40_CC40_TC_CAPC:
     enum:
-      value1:
+      never_cleared_capture_event:
         description: Timer is never cleared on a capture event
         value: 0
-      value2:
+      cleared_capture_event_into_capture_regi_cont:
         description: Timer is cleared on a capture event into capture registers 2
           and 3. (When SCE = 1#, Timer is always cleared in a capture event)
         value: 1
-      value3:
+      cleared_capture_event_into_capture_regi_cont_:
         description: Timer is cleared on a capture event into capture registers 0
           and 1. (When SCE = 1#, Timer is always cleared in a capture event)
         value: 2
-      value4:
+      always_cleared_capture_event:
         description: Timer is always cleared in a capture event.
         value: 3
     unit_test: false
@@ -1721,11 +1385,11 @@ enums:
     identifier: false
   CCU40_CC40_TC_ECM:
     enum:
-      value1:
+      normal_capture_mode_clear_full_flag_each_capt_cont:
         description: Normal Capture Mode. Clear of the Full Flag of each capture register
           is done by accessing the registers individually only.
         value: 0
-      value2:
+      extended_capture_mode_clear_full_flag_each_ca_cont:
         description: Extended Capture Mode. Clear of the Full Flag of each capture
           register is done not only by accessing the individual registers but also
           by accessing the ECRD register. When reading the ECRD register, only the
@@ -1737,23 +1401,11 @@ enums:
     identifier: false
   CCU40_CC40_TC_CMOD:
     enum:
-      value1:
+      compare_mode:
         description: Compare Mode
         value: 0
-      value2:
+      capture_mode:
         description: Capture Mode
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_TC_TSSM:
-    enum:
-      value1:
-        description: Single shot mode is disabled
-        value: 0
-      value2:
-        description: Single shot mode is enabled
         value: 1
     unit_test: false
     json: false
@@ -1761,10 +1413,10 @@ enums:
     identifier: false
   CCU40_CC40_TC_TCM:
     enum:
-      value1:
+      edge_aligned_mode:
         description: Edge aligned mode
         value: 0
-      value2:
+      center_aligned_mode:
         description: Center aligned mode
         value: 1
     unit_test: false
@@ -1773,10 +1425,10 @@ enums:
     identifier: false
   CCU40_CC40_PSL_PSL:
     enum:
-      value1:
+      low:
         description: Passive Level is LOW
         value: 0
-      value2:
+      high:
         description: Passive Level is HIGH
         value: 1
     unit_test: false
@@ -1785,46 +1437,10 @@ enums:
     identifier: false
   CCU40_CC40_C0V_FFL:
     enum:
-      value1:
+      no_new_value_was_captured_into_specific_captu_cont:
         description: No new value was captured into the specific capture register
         value: 0
-      value2:
-        description: A new value was captured into the specific register
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_C1V_FFL:
-    enum:
-      value1:
-        description: No new value was captured into the specific capture register
-        value: 0
-      value2:
-        description: A new value was captured into the specific register
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_C2V_FFL:
-    enum:
-      value1:
-        description: No new value was captured into the specific capture register
-        value: 0
-      value2:
-        description: A new value was captured into the specific register
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_C3V_FFL:
-    enum:
-      value1:
-        description: No new value was captured into the specific capture register
-        value: 0
-      value2:
+      new_value_was_captured_into_specific_register:
         description: A new value was captured into the specific register
         value: 1
     unit_test: false
@@ -1833,119 +1449,11 @@ enums:
     identifier: false
   CCU40_CC40_INTS_E2AS:
     enum:
-      value1:
+      not_detected:
         description: Event 2 not detected
         value: 0
-      value2:
+      detected:
         description: Event 2 detected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_INTS_E1AS:
-    enum:
-      value1:
-        description: Event 1 not detected
-        value: 0
-      value2:
-        description: Event 1 detected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_INTS_E0AS:
-    enum:
-      value1:
-        description: Event 0 not detected
-        value: 0
-      value2:
-        description: Event 0 detected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_INTS_CMDS:
-    enum:
-      value1:
-        description: Compare match while counting down not detected
-        value: 0
-      value2:
-        description: Compare match while counting down detected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_INTS_CMUS:
-    enum:
-      value1:
-        description: Compare match while counting up not detected
-        value: 0
-      value2:
-        description: Compare match while counting up detected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_INTS_OMDS:
-    enum:
-      value1:
-        description: One match while counting down not detected
-        value: 0
-      value2:
-        description: One match while counting down detected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_INTS_PMUS:
-    enum:
-      value1:
-        description: Period match while counting up not detected
-        value: 0
-      value2:
-        description: Period match while counting up detected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_INTE_E2AE:
-    enum:
-      value1:
-        description: Event 2 detection interrupt is disabled
-        value: 0
-      value2:
-        description: Event 2 detection interrupt is enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_INTE_E1AE:
-    enum:
-      value1:
-        description: Event 1 detection interrupt is disabled
-        value: 0
-      value2:
-        description: Event 1 detection interrupt is enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_INTE_E0AE:
-    enum:
-      value1:
-        description: Event 0 detection interrupt is disabled
-        value: 0
-      value2:
-        description: Event 0 detection interrupt is enabled
         value: 1
     unit_test: false
     json: false
@@ -1953,47 +1461,11 @@ enums:
     identifier: false
   CCU40_CC40_INTE_CMDE:
     enum:
-      value1:
+      d_cont:
         description: Compare Match while counting down interrupt is disabled
         value: 0
-      value2:
+      e_cont:
         description: Compare Match while counting down interrupt is enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_INTE_CMUE:
-    enum:
-      value1:
-        description: Compare Match while counting up interrupt is disabled
-        value: 0
-      value2:
-        description: Compare Match while counting up interrupt is enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_INTE_OME:
-    enum:
-      value1:
-        description: One Match interrupt is disabled
-        value: 0
-      value2:
-        description: One Match interrupt is enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_INTE_PME:
-    enum:
-      value1:
-        description: Period Match interrupt is disabled
-        value: 0
-      value2:
-        description: Period Match interrupt is enabled
         value: 1
     unit_test: false
     json: false
@@ -2001,88 +1473,16 @@ enums:
     identifier: false
   CCU40_CC40_SRS_E2SR:
     enum:
-      value1:
+      '0':
         description: Forward to CC4ySR0
         value: 0
-      value2:
+      '1':
         description: Forward to CC4ySR1
         value: 1
-      value3:
+      '2':
         description: Forward to CC4ySR2
         value: 2
-      value4:
-        description: Forward to CC4ySR3
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_SRS_E1SR:
-    enum:
-      value1:
-        description: Forward to CC4ySR0
-        value: 0
-      value2:
-        description: Forward to CC4ySR1
-        value: 1
-      value3:
-        description: Forward to CC4ySR2
-        value: 2
-      value4:
-        description: Forward to CC4ySR3
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_SRS_E0SR:
-    enum:
-      value1:
-        description: Forward to CC4ySR0
-        value: 0
-      value2:
-        description: Forward to CC4ySR1
-        value: 1
-      value3:
-        description: Forward to CC4ySR2
-        value: 2
-      value4:
-        description: Forward to CC4ySR3
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_SRS_CMSR:
-    enum:
-      value1:
-        description: Forward to CC4ySR0
-        value: 0
-      value2:
-        description: Forward to CC4ySR1
-        value: 1
-      value3:
-        description: Forward to CC4ySR2
-        value: 2
-      value4:
-        description: Forward to CC4ySR3
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_SRS_POSR:
-    enum:
-      value1:
-        description: Forward to CC4ySR0
-        value: 0
-      value2:
-        description: Forward to CC4ySR1
-        value: 1
-      value3:
-        description: Forward to CC4ySR2
-        value: 2
-      value4:
+      '3':
         description: Forward to CC4ySR3
         value: 3
     unit_test: false
@@ -2091,10 +1491,10 @@ enums:
     identifier: false
   CCU40_CC40_ECRD0_LCV:
     enum:
-      value1:
+      no_capture_was_lost:
         description: No capture was lost
         value: 0
-      value2:
+      capture_was_lost:
         description: A capture was lost
         value: 1
     unit_test: false
@@ -2103,108 +1503,12 @@ enums:
     identifier: false
   CCU40_CC40_ECRD0_FFL:
     enum:
-      value1:
+      no_new_value_was_captured_into_this_register:
         description: No new value was captured into this register
         value: 0
-      value2:
+      new_value_has_been_captured_into_this_register:
         description: A new value has been captured into this register
         value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_ECRD0_VPTR:
-    enum:
-      value1:
-        description: Capture register 0
-        value: 0
-      value2:
-        description: Capture register 1
-        value: 1
-      value3:
-        description: Capture register 2
-        value: 2
-      value4:
-        description: Capture register 3
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_ECRD0_SPTR:
-    enum:
-      value1:
-        description: CC40
-        value: 0
-      value2:
-        description: CC41
-        value: 1
-      value3:
-        description: CC42
-        value: 2
-      value4:
-        description: CC43
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_ECRD1_LCV:
-    enum:
-      value1:
-        description: No capture was lost
-        value: 0
-      value2:
-        description: A capture was lost
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_ECRD1_FFL:
-    enum:
-      value1:
-        description: No new value was captured into this register
-        value: 0
-      value2:
-        description: A new value has been captured into this register
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_ECRD1_VPTR:
-    enum:
-      value1:
-        description: Capture register 0
-        value: 0
-      value2:
-        description: Capture register 1
-        value: 1
-      value3:
-        description: Capture register 2
-        value: 2
-      value4:
-        description: Capture register 3
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_CC40_ECRD1_SPTR:
-    enum:
-      value1:
-        description: CC40
-        value: 0
-      value2:
-        description: CC41
-        value: 1
-      value3:
-        description: CC42
-        value: 2
-      value4:
-        description: CC43
-        value: 3
     unit_test: false
     json: false
     use_map: false

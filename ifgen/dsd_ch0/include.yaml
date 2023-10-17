@@ -184,7 +184,7 @@ structs:
             width: 2
             read: true
             write: true
-            type: DSD_CH0_FCFGA_CFAC
+            type: DSD_CH0_FCFGC_CFMC
           - name: CFADF
             description: CIC Filter (Auxiliary) Decimation Factor
             index: 0
@@ -371,7 +371,7 @@ structs:
             width: 1
             read: true
             write: false
-            type: DSD_CH0_RECTCFG_SGNCS
+            type: DSD_CH0_RECTCFG_SGND
           - name: SDVAL
             description: Valid Flag
             index: 15
@@ -401,10 +401,10 @@ structs:
 enums:
   DSD_CH0_MODCFG_DWC:
     enum:
-      value1:
+      no_write_access_divider_factor:
         description: No write access to divider factor
         value: 0
-      value2:
+      bitfield_divm_can_be_written:
         description: Bitfield DIVM can be written
         value: 1
     unit_test: false
@@ -413,16 +413,16 @@ enums:
     identifier: false
   DSD_CH0_MODCFG_DIVM:
     enum:
-      value1:
+      '2':
         description: fMOD = fCLK / 2
         value: 0
-      value2:
+      '4':
         description: fMOD = fCLK / 4
         value: 1
-      value3:
+      '6':
         description: fMOD = fCLK / 6
         value: 2
-      value4:
+      '32':
         description: fMOD = fCLK / 32
         value: 15
     unit_test: false
@@ -431,10 +431,10 @@ enums:
     identifier: false
   DSD_CH0_DICFG_SCWC:
     enum:
-      value1:
+      no_write_access_strobeclock_parameters:
         description: No write access to strobe/clock parameters
         value: 0
-      value2:
+      bitfields_strobe_csrc_can_be_written:
         description: Bitfields STROBE, CSRC can be written
         value: 1
     unit_test: false
@@ -443,26 +443,26 @@ enums:
     identifier: false
   DSD_CH0_DICFG_STROBE:
     enum:
-      value1:
+      no_data_strobe:
         description: No data strobe
         value: 0
-      value2:
+      direct_clock_sample_trigger_generated_at_each_cont:
         description: Direct clock, a sample trigger is generated at each rising clock
           edge
         value: 1
-      value3:
+      direct_clock_sample_trigger_generated_at_each_cont_:
         description: Direct clock, a sample trigger is generated at each falling clock
           edge
         value: 2
-      value4:
+      double_data_sample_trigger_generated_at_each__cont:
         description: Double data, a sample trigger is generated at each rising and
           falling clock edge
         value: 3
-      value6:
+      double_clock_sample_trigger_generated_at_ever_cont:
         description: Double clock, a sample trigger is generated at every 2nd rising
           clock edge
         value: 5
-      value7:
+      double_clock_sample_trigger_generated_at_ever_cont_:
         description: Double clock, a sample trigger is generated at every 2nd falling
           clock edge
         value: 6
@@ -472,19 +472,19 @@ enums:
     identifier: false
   DSD_CH0_DICFG_CSRC:
     enum:
-      value2:
+      external_input:
         description: External, from input A
         value: 1
-      value3:
+      external_input_b:
         description: External, from input B
         value: 2
-      value4:
+      external_input_c:
         description: External, from input C
         value: 3
-      value5:
+      external_input_d:
         description: External, from input D
         value: 4
-      value6:
+      internal_clock:
         description: Internal clock
         value: 15
     unit_test: false
@@ -493,10 +493,10 @@ enums:
     identifier: false
   DSD_CH0_DICFG_TRWC:
     enum:
-      value1:
+      no_write_access_trigger_parameters:
         description: No write access to trigger parameters
         value: 0
-      value2:
+      bitfields_trsel_tstrmode_itrmode_can_be_written:
         description: Bitfields TRSEL, TSTRMODE, ITRMODE can be written
         value: 1
     unit_test: false
@@ -505,16 +505,16 @@ enums:
     identifier: false
   DSD_CH0_DICFG_TSTRMODE:
     enum:
-      value1:
+      no_timestamp_trigger:
         description: No timestamp trigger
         value: 0
-      value2:
+      trigger_event_upon_falling_edge:
         description: Trigger event upon a falling edge
         value: 1
-      value3:
+      trigger_event_upon_rising_edge:
         description: Trigger event upon a rising edge
         value: 2
-      value4:
+      trigger_event_upon_each_edge:
         description: Trigger event upon each edge
         value: 3
     unit_test: false
@@ -523,17 +523,17 @@ enums:
     identifier: false
   DSD_CH0_DICFG_ITRMODE:
     enum:
-      value1:
+      no_integration_trigger_integrator_bypassed_in_cont:
         description: No integration trigger, integrator bypassed, INTEN = 0 all the
           time
         value: 0
-      value2:
+      trigger_event_upon_falling_edge:
         description: Trigger event upon a falling edge
         value: 1
-      value3:
+      trigger_event_upon_rising_edge:
         description: Trigger event upon a rising edge
         value: 2
-      value4:
+      no_trigger_integrator_active_all_time_inten_1_cont:
         description: No trigger, integrator active all the time, INTEN = 1 all the
           time
         value: 3
@@ -543,10 +543,10 @@ enums:
     identifier: false
   DSD_CH0_DICFG_DSWC:
     enum:
-      value1:
+      no_write_access_data_parameters:
         description: No write access to data parameters
         value: 0
-      value2:
+      bitfield_dsrc_can_be_written:
         description: Bitfield DSRC can be written
         value: 1
     unit_test: false
@@ -555,19 +555,19 @@ enums:
     identifier: false
   DSD_CH0_DICFG_DSRC:
     enum:
-      value1:
+      disconnected:
         description: Disconnected
         value: 1
-      value2:
+      external_input_direct:
         description: External, from input A, direct
         value: 2
-      value3:
+      external_input_inverted:
         description: External, from input A, inverted
         value: 3
-      value4:
+      external_input_b_direct:
         description: External, from input B, direct
         value: 4
-      value5:
+      external_input_b_inverted:
         description: External, from input B, inverted
         value: 5
     unit_test: false
@@ -576,10 +576,10 @@ enums:
     identifier: false
   DSD_CH0_FCFGC_SRGM:
     enum:
-      value1:
+      never_service_requests_disabled:
         description: Never, service requests disabled
         value: 0
-      value4:
+      always_each_new_result_value:
         description: Always, for each new result value
         value: 3
     unit_test: false
@@ -588,10 +588,10 @@ enums:
     identifier: false
   DSD_CH0_FCFGC_CFEN:
     enum:
-      value1:
+      cic_filter_disabled_bypassed:
         description: CIC filter disabled and bypassed
         value: 0
-      value2:
+      enable_cic_filter:
         description: Enable CIC filter
         value: 1
     unit_test: false
@@ -600,16 +600,16 @@ enums:
     identifier: false
   DSD_CH0_FCFGC_CFMC:
     enum:
-      value1:
+      '1':
         description: CIC1
         value: 0
-      value2:
+      '2':
         description: CIC2
         value: 1
-      value3:
+      '3':
         description: CIC3
         value: 2
-      value4:
+      f:
         description: CICF
         value: 3
     unit_test: false
@@ -618,10 +618,10 @@ enums:
     identifier: false
   DSD_CH0_FCFGA_EGT:
     enum:
-      value1:
+      separate_generate_events_according_esel:
         description: 'Separate: generate events according to ESEL'
         value: 0
-      value2:
+      coupled_generate_events_only_when_integrator__cont:
         description: 'Coupled: generate events only when the integrator is enabled
           and after the discard phase defined by bitfield NVALDISWhile the integrator
           is bypassed, event gating is disabled, i.e. service requests are generated
@@ -634,13 +634,13 @@ enums:
     identifier: false
   DSD_CH0_FCFGA_ESEL:
     enum:
-      value1:
+      always_each_new_result_value:
         description: Always, for each new result value
         value: 0
-      value2:
+      if_result_inside_boundary_band:
         description: If result is inside the boundary band
         value: 1
-      value3:
+      if_result_outside_boundary_band:
         description: If result is outside the boundary band
         value: 2
     unit_test: false
@@ -649,14 +649,14 @@ enums:
     identifier: false
   DSD_CH0_FCFGA_SRGA:
     enum:
-      value1:
+      never_service_requests_disabled:
         description: Never, service requests disabled
         value: 0
-      value2:
+      auxiliary_filter_selected_by_bitfields_esel_e_cont:
         description: 'Auxiliary filter: As selected by bitfields ESEL and EGT (if
           integrator enabled)'
         value: 1
-      value3:
+      alternate_source_capturing_sign_delay_value_r_cont:
         description: 'Alternate source: Capturing of a sign delay value to register
           CGSYNCx (x = 0 - 3)'
         value: 2
@@ -664,31 +664,13 @@ enums:
     json: false
     use_map: false
     identifier: false
-  DSD_CH0_FCFGA_CFAC:
-    enum:
-      value1:
-        description: CIC1
-        value: 0
-      value2:
-        description: CIC2
-        value: 1
-      value3:
-        description: CIC3
-        value: 2
-      value4:
-        description: CICF
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   DSD_CH0_IWCTR_IWS:
     enum:
-      value1:
+      internal_control_stop_integrator_after_repval_cont:
         description: 'Internal control: stop integrator after REPVAL+1 integration
           cycles'
         value: 0
-      value2:
+      external_control_stop_integrator_when_bit_int_cont:
         description: 'External control: stop integrator when bit INTEN becomes 0'
         value: 1
     unit_test: false
@@ -697,12 +679,12 @@ enums:
     identifier: false
   DSD_CH0_IWCTR_INTEN:
     enum:
-      value1:
+      stopped_inten_cleared_at_end_inte_cont:
         description: Integration stopped. INTEN is cleared at the end of the integration
           window, i.e. upon the inverse trigger event transition of the external trigger
           signal.
         value: 0
-      value2:
+      enabled_inten_set_upon_defined_tr_cont:
         description: Integration enabled. INTEN is set upon the defined trigger event.
         value: 1
     unit_test: false
@@ -711,22 +693,10 @@ enums:
     identifier: false
   DSD_CH0_RECTCFG_SGND:
     enum:
-      value1:
+      positive_values:
         description: Positive values
         value: 0
-      value2:
-        description: Negative values
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_CH0_RECTCFG_SGNCS:
-    enum:
-      value1:
-        description: Positive values
-        value: 0
-      value2:
+      negative_values:
         description: Negative values
         value: 1
     unit_test: false
@@ -735,10 +705,10 @@ enums:
     identifier: false
   DSD_CH0_RECTCFG_SDVAL:
     enum:
-      value1:
+      no_new_result_available:
         description: No new result available
         value: 0
-      value2:
+      bitfield_sdcap_has_been_updated_with_new_capt_cont:
         description: Bitfield SDCAP has been updated with a new captured value and
           has not yet been read
         value: 1
@@ -748,16 +718,16 @@ enums:
     identifier: false
   DSD_CH0_RECTCFG_SSRC:
     enum:
-      value1:
+      on_chip_carrier_generator:
         description: On-chip carrier generator
         value: 0
-      value2:
+      sign_result_next_channel:
         description: Sign of result of next channel
         value: 1
-      value3:
+      external_sign_signal:
         description: External sign signal A
         value: 2
-      value4:
+      external_sign_signal_b:
         description: External sign signal B
         value: 3
     unit_test: false
@@ -766,10 +736,10 @@ enums:
     identifier: false
   DSD_CH0_RECTCFG_RFEN:
     enum:
-      value1:
+      no_rectification_data_not_altered:
         description: No rectification, data not altered
         value: 0
-      value2:
+      data_rectified_according_sgnd:
         description: Data are rectified according to SGND
         value: 1
     unit_test: false

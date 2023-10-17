@@ -48,10 +48,10 @@ structs:
 enums:
   SDMMC_CON_SDMMC_CON_CDSVAL:
     enum:
-      value1:
+      no_card_detected:
         description: No card detected
         value: 0
-      value2:
+      card_detected:
         description: Card detected
         value: 1
     unit_test: false
@@ -60,10 +60,10 @@ enums:
     identifier: false
   SDMMC_CON_SDMMC_CON_CDSEL:
     enum:
-      value1:
+      p110_input_pin_selected:
         description: P1.10 input pin selected
         value: 0
-      value2:
+      software_bit_cdsval_selected:
         description: Software bit CDSVAL is selected
         value: 1
     unit_test: false
@@ -72,10 +72,10 @@ enums:
     identifier: false
   SDMMC_CON_SDMMC_CON_WPSVAL:
     enum:
-      value1:
+      no_write_protection:
         description: No write protection
         value: 0
-      value2:
+      write_protection_active:
         description: Write protection active
         value: 1
     unit_test: false
@@ -84,10 +84,10 @@ enums:
     identifier: false
   SDMMC_CON_SDMMC_CON_WPSEL:
     enum:
-      value1:
+      p11_input_pin_selected:
         description: P1.1 input pin selected
         value: 0
-      value2:
+      software_bit_wpval_selected:
         description: Software bit WPVAL is selected
         value: 1
     unit_test: false

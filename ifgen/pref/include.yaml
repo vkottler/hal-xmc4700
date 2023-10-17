@@ -32,7 +32,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: PREF_PCON_IBYP
+            type: PREF_PCON_DBYP
     stream: false
     codec: false
     methods: false
@@ -41,10 +41,10 @@ structs:
 enums:
   PREF_PCON_DBYP:
     enum:
-      value1:
+      not_bypassed:
         description: Prefetch Data buffer not bypassed.
         value: 0
-      value2:
+      bypassed:
         description: Prefetch Data buffer bypassed.
         value: 1
     unit_test: false
@@ -53,23 +53,11 @@ enums:
     identifier: false
   PREF_PCON_IINV:
     enum:
-      value1:
+      no_effect:
         description: No effect.
         value: 0
-      value2:
+      initiate_invalidation_entire_instruction_cache:
         description: Initiate invalidation of entire instruction cache.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PREF_PCON_IBYP:
-    enum:
-      value1:
-        description: Instruction prefetch buffer not bypassed.
-        value: 0
-      value2:
-        description: Instruction prefetch buffer bypassed.
         value: 1
     unit_test: false
     json: false

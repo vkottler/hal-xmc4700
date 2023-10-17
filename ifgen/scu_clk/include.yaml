@@ -26,35 +26,35 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CLKSTAT_CCUCST
+            type: SCU_CLK_CLKSTAT_WDTCST
           - name: EBUCST
             description: EBU Clock Status
             index: 3
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CLKSTAT_EBUCST
+            type: SCU_CLK_CLKSTAT_WDTCST
           - name: ETH0CST
             description: Ethernet Clock Status
             index: 2
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CLKSTAT_ETH0CST
+            type: SCU_CLK_CLKSTAT_WDTCST
           - name: MMCCST
             description: MMC Clock Status
             index: 1
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CLKSTAT_MMCCST
+            type: SCU_CLK_CLKSTAT_WDTCST
           - name: USBCST
             description: USB Clock Status
             index: 0
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CLKSTAT_USBCST
+            type: SCU_CLK_CLKSTAT_WDTCST
       - name: CLKSET
         type: uint32_t
         expected_size: 4
@@ -74,35 +74,35 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKSET_CCUCEN
+            type: SCU_CLK_CLKSET_WDTCEN
           - name: EBUCEN
             description: EBU Clock Enable
             index: 3
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKSET_EBUCEN
+            type: SCU_CLK_CLKSET_WDTCEN
           - name: ETH0CEN
             description: Ethernet Clock Enable
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKSET_ETH0CEN
+            type: SCU_CLK_CLKSET_WDTCEN
           - name: MMCCEN
             description: MMC Clock Enable
             index: 1
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKSET_MMCCEN
+            type: SCU_CLK_CLKSET_WDTCEN
           - name: USBCEN
             description: USB Clock Enable
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKSET_USBCEN
+            type: SCU_CLK_CLKSET_WDTCEN
       - name: CLKCLR
         type: uint32_t
         expected_size: 4
@@ -122,35 +122,35 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKCLR_CCUCDI
+            type: SCU_CLK_CLKCLR_WDTCDI
           - name: EBUCDI
             description: EBU Clock Disable
             index: 3
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKCLR_EBUCDI
+            type: SCU_CLK_CLKCLR_WDTCDI
           - name: ETH0CDI
             description: Ethernet Clock Disable
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKCLR_ETH0CDI
+            type: SCU_CLK_CLKCLR_WDTCDI
           - name: MMCCDI
             description: MMC Clock Disable
             index: 1
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKCLR_MMCCDI
+            type: SCU_CLK_CLKCLR_WDTCDI
           - name: USBCDI
             description: USB Clock Disable
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKCLR_USBCDI
+            type: SCU_CLK_CLKCLR_WDTCDI
       - name: SYSCLKCR
         type: uint32_t
         expected_size: 4
@@ -356,42 +356,42 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SLEEPCR_CCUCR
+            type: SCU_CLK_SLEEPCR_WDTCR
           - name: EBUCR
             description: EBU Clock Control
             index: 19
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SLEEPCR_EBUCR
+            type: SCU_CLK_SLEEPCR_WDTCR
           - name: ETH0CR
             description: Ethernet Clock Control
             index: 18
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SLEEPCR_ETH0CR
+            type: SCU_CLK_SLEEPCR_WDTCR
           - name: MMCCR
             description: MMC Clock Control
             index: 17
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SLEEPCR_MMCCR
+            type: SCU_CLK_SLEEPCR_WDTCR
           - name: USBCR
             description: USB Clock Control
             index: 16
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SLEEPCR_USBCR
+            type: SCU_CLK_SLEEPCR_WDTCR
           - name: SYSSEL
             description: System Clock Selection Value
             index: 0
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SLEEPCR_SYSSEL
+            type: SCU_CLK_SYSCLKCR_SYSSEL
       - name: DSLEEPCR
         type: uint32_t
         expected_size: 4
@@ -404,42 +404,42 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_CLK_DSLEEPCR_WDTCR
+            type: SCU_CLK_SLEEPCR_WDTCR
           - name: CCUCR
             description: CCU Clock Control
             index: 20
             width: 1
             read: true
             write: true
-            type: SCU_CLK_DSLEEPCR_CCUCR
+            type: SCU_CLK_SLEEPCR_WDTCR
           - name: EBUCR
             description: EBU Clock Control
             index: 19
             width: 1
             read: true
             write: true
-            type: SCU_CLK_DSLEEPCR_EBUCR
+            type: SCU_CLK_SLEEPCR_WDTCR
           - name: ETH0CR
             description: Ethernet Clock Control
             index: 18
             width: 1
             read: true
             write: true
-            type: SCU_CLK_DSLEEPCR_ETH0CR
+            type: SCU_CLK_SLEEPCR_WDTCR
           - name: MMCCR
             description: MMC Clock Control
             index: 17
             width: 1
             read: true
             write: true
-            type: SCU_CLK_DSLEEPCR_MMCCR
+            type: SCU_CLK_SLEEPCR_WDTCR
           - name: USBCR
             description: USB Clock Control
             index: 16
             width: 1
             read: true
             write: true
-            type: SCU_CLK_DSLEEPCR_USBCR
+            type: SCU_CLK_SLEEPCR_WDTCR
           - name: VCOPDN
             description: VCO Power Down
             index: 13
@@ -467,7 +467,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_CLK_DSLEEPCR_SYSSEL
+            type: SCU_CLK_SYSCLKCR_SYSSEL
       - name: CGATSTAT0
         type: uint32_t
         expected_size: 4
@@ -488,70 +488,70 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_USIC0
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: POSIF1
             description: POSIF1 Gating Status
             index: 10
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_POSIF1
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: POSIF0
             description: POSIF0 Gating Status
             index: 9
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_POSIF0
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: CCU81
             description: CCU81 Gating Status
             index: 8
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_CCU81
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: CCU80
             description: CCU80 Gating Status
             index: 7
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_CCU80
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: CCU42
             description: CCU42 Gating Status
             index: 4
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_CCU42
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: CCU41
             description: CCU41 Gating Status
             index: 3
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_CCU41
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: CCU40
             description: CCU40 Gating Status
             index: 2
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_CCU40
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: DSD
             description: DSD Gating Status
             index: 1
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_DSD
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: VADC
             description: VADC Gating Status
             index: 0
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_VADC
+            type: SCU_CLK_CGATSTAT0_ERU1
       - name: CGATSET0
         type: uint32_t
         expected_size: 4
@@ -571,70 +571,70 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_USIC0
+            type: SCU_CLK_CGATSET0_ERU1
           - name: POSIF1
             description: POSIF1 Gating Set
             index: 10
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_POSIF1
+            type: SCU_CLK_CGATSET0_ERU1
           - name: POSIF0
             description: POSIF0 Gating Set
             index: 9
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_POSIF0
+            type: SCU_CLK_CGATSET0_ERU1
           - name: CCU81
             description: CCU81 Gating Set
             index: 8
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_CCU81
+            type: SCU_CLK_CGATSET0_ERU1
           - name: CCU80
             description: CCU80 Gating Set
             index: 7
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_CCU80
+            type: SCU_CLK_CGATSET0_ERU1
           - name: CCU42
             description: CCU42 Gating Set
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_CCU42
+            type: SCU_CLK_CGATSET0_ERU1
           - name: CCU41
             description: CCU41 Gating Set
             index: 3
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_CCU41
+            type: SCU_CLK_CGATSET0_ERU1
           - name: CCU40
             description: CCU40 Gating Set
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_CCU40
+            type: SCU_CLK_CGATSET0_ERU1
           - name: DSD
             description: DSD Gating Set
             index: 1
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_DSD
+            type: SCU_CLK_CGATSET0_ERU1
           - name: VADC
             description: VADC Gating Set
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_VADC
+            type: SCU_CLK_CGATSET0_ERU1
       - name: CGATCLR0
         type: uint32_t
         expected_size: 4
@@ -654,70 +654,70 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_USIC0
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: POSIF1
             description: POSIF1 Gating Clear
             index: 10
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_POSIF1
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: POSIF0
             description: POSIF0 Gating Clear
             index: 9
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_POSIF0
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: CCU81
             description: CCU81 Gating Clear
             index: 8
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_CCU81
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: CCU80
             description: CCU80 Gating Clear
             index: 7
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_CCU80
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: CCU42
             description: CCU42 Gating Clear
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_CCU42
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: CCU41
             description: CCU41 Gating Clear
             index: 3
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_CCU41
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: CCU40
             description: CCU40 Gating Clear
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_CCU40
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: DSD
             description: DSD Gating Clear
             index: 1
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_DSD
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: VADC
             description: VADC Gating Clear
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_VADC
+            type: SCU_CLK_CGATCLR0_ERU1
       - name: CGATSTAT1
         type: uint32_t
         expected_size: 4
@@ -731,56 +731,56 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT1_PPORTS
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: USIC2
             description: USIC2 Gating Status
             index: 8
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT1_USIC2
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: USIC1
             description: USIC1 Gating Status
             index: 7
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT1_USIC1
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: MMCI
             description: MMC Interface Gating Status
             index: 6
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT1_MMCI
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: DAC
             description: DAC Gating Status
             index: 5
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT1_DAC
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: MCAN0
             description: MultiCAN Gating Status
             index: 4
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT1_MCAN0
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: LEDTSCU0
             description: LEDTS Gating Status
             index: 3
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT1_LEDTSCU0
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: CCU43
             description: CCU43 Gating Status
             index: 0
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT1_CCU43
+            type: SCU_CLK_CGATSTAT0_ERU1
       - name: CGATSET1
         type: uint32_t
         expected_size: 4
@@ -793,56 +793,56 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET1_PPORTS
+            type: SCU_CLK_CGATSET0_ERU1
           - name: USIC2
             description: USIC2 Gating Set
             index: 8
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET1_USIC2
+            type: SCU_CLK_CGATSET0_ERU1
           - name: USIC1
             description: USIC1 Gating Set
             index: 7
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET1_USIC1
+            type: SCU_CLK_CGATSET0_ERU1
           - name: MMCI
             description: MMC Interface Gating Set
             index: 6
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET1_MMCI
+            type: SCU_CLK_CGATSET0_ERU1
           - name: DAC
             description: DAC Gating Set
             index: 5
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET1_DAC
+            type: SCU_CLK_CGATSET0_ERU1
           - name: MCAN0
             description: MultiCAN Gating Set
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET1_MCAN0
+            type: SCU_CLK_CGATSET0_ERU1
           - name: LEDTSCU0
             description: LEDTS Gating Set
             index: 3
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET1_LEDTSCU0
+            type: SCU_CLK_CGATSET0_ERU1
           - name: CCU43
             description: CCU43 Gating Set
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET1_CCU43
+            type: SCU_CLK_CGATSET0_ERU1
       - name: CGATCLR1
         type: uint32_t
         expected_size: 4
@@ -855,56 +855,56 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR1_PPORTS
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: USIC2
             description: USIC2 Gating Clear
             index: 8
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR1_USIC2
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: USIC1
             description: USIC1 Gating Clear
             index: 7
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR1_USIC1
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: MMCI
             description: MMC Interface Gating Clear
             index: 6
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR1_MMCI
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: DAC
             description: DAC Gating Clear
             index: 5
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR1_DAC
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: MCAN0
             description: MultiCAN Gating Clear
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR1_MCAN0
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: LEDTSCU0
             description: LEDTS Gating Clear
             index: 3
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR1_LEDTSCU0
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: CCU43
             description: CCU43 Gating Clear
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR1_CCU43
+            type: SCU_CLK_CGATCLR0_ERU1
       - name: CGATSTAT2
         type: uint32_t
         expected_size: 4
@@ -918,42 +918,42 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT2_USB
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: FCE
             description: FCE Gating Status
             index: 6
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT2_FCE
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: DMA1
             description: DMA1 Gating Status
             index: 5
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT2_DMA1
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: DMA0
             description: DMA0 Gating Status
             index: 4
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT2_DMA0
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: ETH0
             description: ETH0 Gating Status
             index: 2
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT2_ETH0
+            type: SCU_CLK_CGATSTAT0_ERU1
           - name: WDT
             description: WDT Gating Status
             index: 1
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT2_WDT
+            type: SCU_CLK_CGATSTAT0_ERU1
       - name: CGATSET2
         type: uint32_t
         expected_size: 4
@@ -966,42 +966,42 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET2_USB
+            type: SCU_CLK_CGATSET0_ERU1
           - name: FCE
             description: FCE Gating Set
             index: 6
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET2_FCE
+            type: SCU_CLK_CGATSET0_ERU1
           - name: DMA1
             description: DMA1 Gating Set
             index: 5
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET2_DMA1
+            type: SCU_CLK_CGATSET0_ERU1
           - name: DMA0
             description: DMA0 Gating Set
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET2_DMA0
+            type: SCU_CLK_CGATSET0_ERU1
           - name: ETH0
             description: ETH0 Gating Set
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET2_ETH0
+            type: SCU_CLK_CGATSET0_ERU1
           - name: WDT
             description: WDT Gating Set
             index: 1
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET2_WDT
+            type: SCU_CLK_CGATSET0_ERU1
       - name: CGATCLR2
         type: uint32_t
         expected_size: 4
@@ -1014,42 +1014,42 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR2_USB
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: FCE
             description: FCE Gating Clear
             index: 6
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR2_FCE
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: DMA1
             description: DMA1 Gating Clear
             index: 5
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR2_DMA1
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: DMA0
             description: DMA0 Gating Clear
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR2_DMA0
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: ETH0
             description: ETH0 Gating Clear
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR2_ETH0
+            type: SCU_CLK_CGATCLR0_ERU1
           - name: WDT
             description: WDT Gating Clear
             index: 1
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR2_WDT
+            type: SCU_CLK_CGATCLR0_ERU1
       - name: CGATSTAT3
         type: uint32_t
         expected_size: 4
@@ -1063,7 +1063,7 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT3_EBU
+            type: SCU_CLK_CGATSTAT0_ERU1
       - name: CGATSET3
         type: uint32_t
         expected_size: 4
@@ -1076,7 +1076,7 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET3_EBU
+            type: SCU_CLK_CGATSET0_ERU1
       - name: CGATCLR3
         type: uint32_t
         expected_size: 4
@@ -1089,7 +1089,7 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR3_EBU
+            type: SCU_CLK_CGATCLR0_ERU1
     stream: false
     codec: false
     methods: false
@@ -1098,70 +1098,10 @@ structs:
 enums:
   SCU_CLK_CLKSTAT_WDTCST:
     enum:
-      value1:
+      disabled:
         description: Clock disabled
         value: 0
-      value2:
-        description: Clock enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CLKSTAT_CCUCST:
-    enum:
-      value1:
-        description: Clock disabled
-        value: 0
-      value2:
-        description: Clock enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CLKSTAT_EBUCST:
-    enum:
-      value1:
-        description: Clock disabled
-        value: 0
-      value2:
-        description: Clock enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CLKSTAT_ETH0CST:
-    enum:
-      value1:
-        description: Clock disabled
-        value: 0
-      value2:
-        description: Clock enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CLKSTAT_MMCCST:
-    enum:
-      value1:
-        description: Clock disabled
-        value: 0
-      value2:
-        description: Clock enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CLKSTAT_USBCST:
-    enum:
-      value1:
-        description: Clock disabled
-        value: 0
-      value2:
+      enabled:
         description: Clock enabled
         value: 1
     unit_test: false
@@ -1170,70 +1110,10 @@ enums:
     identifier: false
   SCU_CLK_CLKSET_WDTCEN:
     enum:
-      value1:
+      no_effect:
         description: No effect
         value: 0
-      value2:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CLKSET_CCUCEN:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CLKSET_EBUCEN:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CLKSET_ETH0CEN:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CLKSET_MMCCEN:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CLKSET_USBCEN:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
+      enable:
         description: Enable
         value: 1
     unit_test: false
@@ -1242,70 +1122,10 @@ enums:
     identifier: false
   SCU_CLK_CLKCLR_WDTCDI:
     enum:
-      value1:
+      no_effect:
         description: No effect
         value: 0
-      value2:
-        description: Disable clock
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CLKCLR_CCUCDI:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable clock
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CLKCLR_EBUCDI:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable clock
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CLKCLR_ETH0CDI:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable clock
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CLKCLR_MMCCDI:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable clock
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CLKCLR_USBCDI:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
+      disable_clock:
         description: Disable clock
         value: 1
     unit_test: false
@@ -1314,10 +1134,10 @@ enums:
     identifier: false
   SCU_CLK_SYSCLKCR_SYSSEL:
     enum:
-      value1:
+      fofi_clock:
         description: fOFI clock
         value: 0
-      value2:
+      fpll_clock:
         description: fPLL clock
         value: 1
     unit_test: false
@@ -1326,10 +1146,10 @@ enums:
     identifier: false
   SCU_CLK_CPUCLKCR_CPUDIV:
     enum:
-      value1:
+      fcpu_fsys:
         description: fCPU = fSYS
         value: 0
-      value2:
+      _2:
         description: fCPU = fSYS / 2
         value: 1
     unit_test: false
@@ -1338,10 +1158,10 @@ enums:
     identifier: false
   SCU_CLK_PBCLKCR_PBDIV:
     enum:
-      value1:
+      fperiph_fcpu:
         description: fPERIPH = fCPU
         value: 0
-      value2:
+      _2:
         description: fPERIPH = fCPU / 2
         value: 1
     unit_test: false
@@ -1350,10 +1170,10 @@ enums:
     identifier: false
   SCU_CLK_USBCLKCR_USBSEL:
     enum:
-      value1:
+      usb_pll_clock:
         description: USB PLL Clock
         value: 0
-      value2:
+      pll_clock:
         description: PLL Clock
         value: 1
     unit_test: false
@@ -1362,10 +1182,10 @@ enums:
     identifier: false
   SCU_CLK_CCUCLKCR_CCUDIV:
     enum:
-      value1:
+      fccu_fsys:
         description: fCCU = fSYS
         value: 0
-      value2:
+      _2:
         description: fCCU = fSYS / 2
         value: 1
     unit_test: false
@@ -1374,13 +1194,13 @@ enums:
     identifier: false
   SCU_CLK_WDTCLKCR_WDTSEL:
     enum:
-      value1:
+      fofi_clock:
         description: fOFI clock
         value: 0
-      value2:
+      fstdby_clock:
         description: fSTDBY clock
         value: 1
-      value3:
+      fpll_clock:
         description: fPLL clock
         value: 2
     unit_test: false
@@ -1389,13 +1209,13 @@ enums:
     identifier: false
   SCU_CLK_EXTCLKCR_ECKSEL:
     enum:
-      value1:
+      fsys_clock:
         description: fSYS clock
         value: 0
-      value3:
+      fusb_clock:
         description: fUSB clock
         value: 2
-      value4:
+      fpll_clock_divided_according_eckdiv_bit_field_cont:
         description: fPLL clock divided according to ECKDIV bit field configuration
         value: 3
     unit_test: false
@@ -1404,13 +1224,13 @@ enums:
     identifier: false
   SCU_CLK_MLINKCLKCR_WDTSEL:
     enum:
-      value1:
+      foficlock:
         description: fOFIclock
         value: 0
-      value2:
+      fstdbyclock:
         description: fSTDBYclock
         value: 1
-      value3:
+      fpllclock:
         description: fPLLclock
         value: 2
     unit_test: false
@@ -1419,10 +1239,10 @@ enums:
     identifier: false
   SCU_CLK_MLINKCLKCR_CCUDIV:
     enum:
-      value1:
+      fccufsys:
         description: fCCU=fSYS
         value: 0
-      value2:
+      _2:
         description: fCCU=fSYS/ 2
         value: 1
     unit_test: false
@@ -1431,10 +1251,10 @@ enums:
     identifier: false
   SCU_CLK_MLINKCLKCR_PBDIV:
     enum:
-      value1:
+      fperiphfcpu:
         description: fPERIPH=fCPU
         value: 0
-      value2:
+      _2:
         description: fPERIPH=fCPU/ 2
         value: 1
     unit_test: false
@@ -1443,10 +1263,10 @@ enums:
     identifier: false
   SCU_CLK_MLINKCLKCR_CPUDIV:
     enum:
-      value1:
+      fcpufsys:
         description: fCPU=fSYS
         value: 0
-      value2:
+      _2:
         description: fCPU=fSYS/ 2
         value: 1
     unit_test: false
@@ -1455,10 +1275,10 @@ enums:
     identifier: false
   SCU_CLK_MLINKCLKCR_SYSSEL:
     enum:
-      value1:
+      foficlock:
         description: fOFIclock
         value: 0
-      value2:
+      fpllclock:
         description: fPLLclock
         value: 1
     unit_test: false
@@ -1467,154 +1287,10 @@ enums:
     identifier: false
   SCU_CLK_SLEEPCR_WDTCR:
     enum:
-      value1:
+      disable:
         description: Disable
         value: 0
-      value2:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_SLEEPCR_CCUCR:
-    enum:
-      value1:
-        description: Disable
-        value: 0
-      value2:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_SLEEPCR_EBUCR:
-    enum:
-      value1:
-        description: Disable
-        value: 0
-      value2:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_SLEEPCR_ETH0CR:
-    enum:
-      value1:
-        description: Disable
-        value: 0
-      value2:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_SLEEPCR_MMCCR:
-    enum:
-      value1:
-        description: Disable
-        value: 0
-      value2:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_SLEEPCR_USBCR:
-    enum:
-      value1:
-        description: Disable
-        value: 0
-      value2:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_SLEEPCR_SYSSEL:
-    enum:
-      value1:
-        description: fOFI clock
-        value: 0
-      value2:
-        description: fPLL clock
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_DSLEEPCR_WDTCR:
-    enum:
-      value1:
-        description: Disable
-        value: 0
-      value2:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_DSLEEPCR_CCUCR:
-    enum:
-      value1:
-        description: Disable
-        value: 0
-      value2:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_DSLEEPCR_EBUCR:
-    enum:
-      value1:
-        description: Disable
-        value: 0
-      value2:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_DSLEEPCR_ETH0CR:
-    enum:
-      value1:
-        description: Disable
-        value: 0
-      value2:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_DSLEEPCR_MMCCR:
-    enum:
-      value1:
-        description: Disable
-        value: 0
-      value2:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_DSLEEPCR_USBCR:
-    enum:
-      value1:
-        description: Disable
-        value: 0
-      value2:
+      enable:
         description: Enable
         value: 1
     unit_test: false
@@ -1623,10 +1299,10 @@ enums:
     identifier: false
   SCU_CLK_DSLEEPCR_VCOPDN:
     enum:
-      value1:
+      switch_off_vco_main_pll:
         description: Switch off VCO of main PLL
         value: 1
-      value2:
+      no_effect:
         description: No effect
         value: 0
     unit_test: false
@@ -1635,10 +1311,10 @@ enums:
     identifier: false
   SCU_CLK_DSLEEPCR_PLLPDN:
     enum:
-      value1:
+      switch_off_main_pll:
         description: Switch off main PLL
         value: 1
-      value2:
+      no_effect:
         description: No effect
         value: 0
     unit_test: false
@@ -1647,154 +1323,22 @@ enums:
     identifier: false
   SCU_CLK_DSLEEPCR_FPDN:
     enum:
-      value1:
+      flash_power_down_module:
         description: Flash power down module
         value: 1
-      value2:
+      no_effect:
         description: No effect
         value: 0
     unit_test: false
     json: false
     use_map: false
     identifier: false
-  SCU_CLK_DSLEEPCR_SYSSEL:
-    enum:
-      value1:
-        description: fOFI clock
-        value: 0
-      value2:
-        description: fPLL clock
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   SCU_CLK_CGATSTAT0_ERU1:
     enum:
-      value1:
+      de_asserted:
         description: Gating de-asserted
         value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT0_USIC0:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT0_POSIF1:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT0_POSIF0:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT0_CCU81:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT0_CCU80:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT0_CCU42:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT0_CCU41:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT0_CCU40:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT0_DSD:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT0_VADC:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
+      asserted:
         description: Gating asserted
         value: 1
     unit_test: false
@@ -1803,130 +1347,10 @@ enums:
     identifier: false
   SCU_CLK_CGATSET0_ERU1:
     enum:
-      value1:
+      no_effect:
         description: No effect
         value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET0_USIC0:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET0_POSIF1:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET0_POSIF0:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET0_CCU81:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET0_CCU80:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET0_CCU42:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET0_CCU41:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET0_CCU40:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET0_DSD:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET0_VADC:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
+      enable_gating:
         description: Enable gating
         value: 1
     unit_test: false
@@ -1935,670 +1359,10 @@ enums:
     identifier: false
   SCU_CLK_CGATCLR0_ERU1:
     enum:
-      value1:
+      no_effect:
         description: No effect
         value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR0_USIC0:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR0_POSIF1:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR0_POSIF0:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR0_CCU81:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR0_CCU80:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR0_CCU42:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR0_CCU41:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR0_CCU40:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR0_DSD:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR0_VADC:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT1_PPORTS:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT1_USIC2:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT1_USIC1:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT1_MMCI:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT1_DAC:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT1_MCAN0:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT1_LEDTSCU0:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT1_CCU43:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET1_PPORTS:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET1_USIC2:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET1_USIC1:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET1_MMCI:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET1_DAC:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET1_MCAN0:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET1_LEDTSCU0:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET1_CCU43:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR1_PPORTS:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR1_USIC2:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR1_USIC1:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR1_MMCI:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR1_DAC:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR1_MCAN0:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR1_LEDTSCU0:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR1_CCU43:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT2_USB:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT2_FCE:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT2_DMA1:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT2_DMA0:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT2_ETH0:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT2_WDT:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET2_USB:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET2_FCE:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET2_DMA1:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET2_DMA0:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET2_ETH0:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET2_WDT:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR2_USB:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR2_FCE:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR2_DMA1:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR2_DMA0:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR2_ETH0:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR2_WDT:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Disable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT3_EBU:
-    enum:
-      value1:
-        description: Gating de-asserted
-        value: 0
-      value2:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET3_EBU:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR3_EBU:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
+      disable_gating:
         description: Disable gating
         value: 1
     unit_test: false

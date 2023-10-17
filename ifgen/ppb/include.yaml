@@ -137,7 +137,7 @@ structs:
             width: 32
             read: true
             write: true
-            type: PPB_NVIC_ISER0_SETENA
+            type: PPB_SYST_CSR_ENABLE
       - name: NVIC_ISER1
         type: uint32_t
         expected_size: 4
@@ -150,7 +150,7 @@ structs:
             width: 32
             read: true
             write: true
-            type: PPB_NVIC_ISER1_SETENA
+            type: PPB_SYST_CSR_ENABLE
       - name: NVIC_ISER2
         type: uint32_t
         expected_size: 4
@@ -163,7 +163,7 @@ structs:
             width: 32
             read: true
             write: true
-            type: PPB_NVIC_ISER2_SETENA
+            type: PPB_SYST_CSR_ENABLE
       - name: NVIC_ISER3
         type: uint32_t
         expected_size: 4
@@ -176,7 +176,7 @@ structs:
             width: 32
             read: true
             write: true
-            type: PPB_NVIC_ISER3_SETENA
+            type: PPB_SYST_CSR_ENABLE
       - name: NVIC_ICER0
         type: uint32_t
         expected_size: 4
@@ -189,7 +189,7 @@ structs:
             width: 32
             read: true
             write: true
-            type: PPB_NVIC_ICER0_CLRENA
+            type: PPB_SYST_CSR_ENABLE
       - name: NVIC_ICER1
         type: uint32_t
         expected_size: 4
@@ -202,7 +202,7 @@ structs:
             width: 32
             read: true
             write: true
-            type: PPB_NVIC_ICER1_CLRENA
+            type: PPB_SYST_CSR_ENABLE
       - name: NVIC_ICER2
         type: uint32_t
         expected_size: 4
@@ -215,7 +215,7 @@ structs:
             width: 32
             read: true
             write: true
-            type: PPB_NVIC_ICER2_CLRENA
+            type: PPB_SYST_CSR_ENABLE
       - name: NVIC_ICER3
         type: uint32_t
         expected_size: 4
@@ -228,7 +228,7 @@ structs:
             width: 32
             read: true
             write: true
-            type: PPB_NVIC_ICER3_CLRENA
+            type: PPB_SYST_CSR_ENABLE
       - name: NVIC_ISPR0
         type: uint32_t
         expected_size: 4
@@ -254,7 +254,7 @@ structs:
             width: 32
             read: true
             write: true
-            type: PPB_NVIC_ISPR1_SETPEND
+            type: PPB_NVIC_ISPR0_SETPEND
       - name: NVIC_ISPR2
         type: uint32_t
         expected_size: 4
@@ -267,7 +267,7 @@ structs:
             width: 32
             read: true
             write: true
-            type: PPB_NVIC_ISPR2_SETPEND
+            type: PPB_NVIC_ISPR0_SETPEND
       - name: NVIC_ISPR3
         type: uint32_t
         expected_size: 4
@@ -280,7 +280,7 @@ structs:
             width: 32
             read: true
             write: true
-            type: PPB_NVIC_ISPR3_SETPEND
+            type: PPB_NVIC_ISPR0_SETPEND
       - name: NVIC_ICPR0
         type: uint32_t
         expected_size: 4
@@ -293,7 +293,7 @@ structs:
             width: 32
             read: true
             write: true
-            type: PPB_NVIC_ICPR0_CLRPEND
+            type: PPB_NVIC_ISPR0_SETPEND
       - name: NVIC_ICPR1
         type: uint32_t
         expected_size: 4
@@ -306,7 +306,7 @@ structs:
             width: 32
             read: true
             write: true
-            type: PPB_NVIC_ICPR1_CLRPEND
+            type: PPB_NVIC_ISPR0_SETPEND
       - name: NVIC_ICPR2
         type: uint32_t
         expected_size: 4
@@ -319,7 +319,7 @@ structs:
             width: 32
             read: true
             write: true
-            type: PPB_NVIC_ICPR2_CLRPEND
+            type: PPB_NVIC_ISPR0_SETPEND
       - name: NVIC_ICPR3
         type: uint32_t
         expected_size: 4
@@ -332,7 +332,7 @@ structs:
             width: 32
             read: true
             write: true
-            type: PPB_NVIC_ICPR3_CLRPEND
+            type: PPB_NVIC_ISPR0_SETPEND
       - name: NVIC_IABR0
         type: uint32_t
         expected_size: 4
@@ -358,7 +358,7 @@ structs:
             width: 32
             read: true
             write: true
-            type: PPB_NVIC_IABR1_ACTIVE
+            type: PPB_NVIC_IABR0_ACTIVE
       - name: NVIC_IABR2
         type: uint32_t
         expected_size: 4
@@ -371,7 +371,7 @@ structs:
             width: 32
             read: true
             write: true
-            type: PPB_NVIC_IABR2_ACTIVE
+            type: PPB_NVIC_IABR0_ACTIVE
       - name: NVIC_IABR3
         type: uint32_t
         expected_size: 4
@@ -384,7 +384,7 @@ structs:
             width: 32
             read: true
             write: true
-            type: PPB_NVIC_IABR3_ACTIVE
+            type: PPB_NVIC_IABR0_ACTIVE
       - name: NVIC_IPR0
         type: uint32_t
         expected_size: 4
@@ -1315,7 +1315,7 @@ structs:
             width: 1
             read: true
             write: false
-            type: PPB_ICSR_ISRPENDING
+            type: PPB_NVIC_ISPR0_SETPEND
           - name: VECTPENDING
             description: Vector Pending
             index: 12
@@ -1729,7 +1729,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: PPB_CFSR_MSTKERR
+            type: PPB_CFSR_STKERR
           - name: MUNSTKERR
             description: MemManage fault on unstacking for a return from exception
             index: 3
@@ -1832,7 +1832,7 @@ structs:
             width: 2
             read: true
             write: true
-            type: PPB_CPACR_CP10
+            type: PPB_CPACR_CP11
       - name: MPU_TYPE
         type: uint32_t
         expected_size: 4
@@ -1887,7 +1887,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: PPB_MPU_CTRL_ENABLE
+            type: PPB_SYST_CSR_ENABLE
       - name: MPU_RNR
         type: uint32_t
         expected_size: 4
@@ -1974,7 +1974,7 @@ structs:
             width: 8
             read: true
             write: true
-            type: PPB_MPU_RASR_SRD
+            type: PPB_MPU_RASR_XN
           - name: SIZE
             description: MPU protection region size
             index: 1
@@ -2005,7 +2005,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: PPB_MPU_RBAR_A1_VALID
+            type: PPB_MPU_RBAR_VALID
           - name: REGION
             description: MPU region field
             index: 0
@@ -2024,7 +2024,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: PPB_MPU_RASR_A1_XN
+            type: PPB_MPU_RASR_XN
           - name: AP
             description: Access permission field
             index: 24
@@ -2061,7 +2061,7 @@ structs:
             width: 8
             read: true
             write: true
-            type: PPB_MPU_RASR_A1_SRD
+            type: PPB_MPU_RASR_XN
           - name: SIZE
             description: MPU protection region size
             index: 1
@@ -2092,7 +2092,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: PPB_MPU_RBAR_A2_VALID
+            type: PPB_MPU_RBAR_VALID
           - name: REGION
             description: MPU region field
             index: 0
@@ -2111,7 +2111,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: PPB_MPU_RASR_A2_XN
+            type: PPB_MPU_RASR_XN
           - name: AP
             description: Access permission field
             index: 24
@@ -2148,7 +2148,7 @@ structs:
             width: 8
             read: true
             write: true
-            type: PPB_MPU_RASR_A2_SRD
+            type: PPB_MPU_RASR_XN
           - name: SIZE
             description: MPU protection region size
             index: 1
@@ -2179,7 +2179,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: PPB_MPU_RBAR_A3_VALID
+            type: PPB_MPU_RBAR_VALID
           - name: REGION
             description: MPU region field
             index: 0
@@ -2198,7 +2198,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: PPB_MPU_RASR_A3_XN
+            type: PPB_MPU_RASR_XN
           - name: AP
             description: Access permission field
             index: 24
@@ -2235,7 +2235,7 @@ structs:
             width: 8
             read: true
             write: true
-            type: PPB_MPU_RASR_A3_SRD
+            type: PPB_MPU_RASR_XN
           - name: SIZE
             description: MPU protection region size
             index: 1
@@ -2379,10 +2379,10 @@ structs:
 enums:
   PPB_SYST_CSR_CLKSOURCE:
     enum:
-      value1:
+      external_clock:
         description: external clock
         value: 0
-      value2:
+      processor_clock:
         description: processor clock.
         value: 1
     unit_test: false
@@ -2391,10 +2391,10 @@ enums:
     identifier: false
   PPB_SYST_CSR_TICKINT:
     enum:
-      value1:
+      does_not_assert_systick_ex_cont:
         description: counting down to zero does not assert the SysTick exception request
         value: 0
-      value2:
+      asserts_systick_exception__cont:
         description: counting down to zero to asserts the SysTick exception request.
         value: 1
     unit_test: false
@@ -2403,10 +2403,10 @@ enums:
     identifier: false
   PPB_SYST_CSR_ENABLE:
     enum:
-      value1:
+      disabled:
         description: counter disabled
         value: 0
-      value2:
+      enabled:
         description: counter enabled.
         value: 1
     unit_test: false
@@ -2415,10 +2415,10 @@ enums:
     identifier: false
   PPB_SYST_CALIB_NOREF:
     enum:
-      value1:
+      reference_clock_provided:
         description: reference clock provided
         value: 0
-      value2:
+      no_reference_clock_provided:
         description: no reference clock provided.
         value: 1
     unit_test: false
@@ -2427,217 +2427,22 @@ enums:
     identifier: false
   PPB_SYST_CALIB_SKEW:
     enum:
-      value1:
+      exact:
         description: TENMS value is exact
         value: 0
-      value2:
+      inexact_or_not_given:
         description: TENMS value is inexact, or not given.
         value: 1
     unit_test: false
     json: false
     use_map: false
     identifier: false
-  PPB_NVIC_ISER0_SETENA:
-    enum:
-      value3:
-        description: interrupt disabled
-        value: 0
-      value4:
-        description: interrupt enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-    underlying: uint16_t
-  PPB_NVIC_ISER1_SETENA:
-    enum:
-      value3:
-        description: interrupt disabled
-        value: 0
-      value4:
-        description: interrupt enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-    underlying: uint16_t
-  PPB_NVIC_ISER2_SETENA:
-    enum:
-      value3:
-        description: interrupt disabled
-        value: 0
-      value4:
-        description: interrupt enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-    underlying: uint16_t
-  PPB_NVIC_ISER3_SETENA:
-    enum:
-      value3:
-        description: interrupt disabled
-        value: 0
-      value4:
-        description: interrupt enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-    underlying: uint16_t
-  PPB_NVIC_ICER0_CLRENA:
-    enum:
-      value3:
-        description: interrupt disabled
-        value: 0
-      value4:
-        description: interrupt enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-    underlying: uint16_t
-  PPB_NVIC_ICER1_CLRENA:
-    enum:
-      value3:
-        description: interrupt disabled
-        value: 0
-      value4:
-        description: interrupt enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-    underlying: uint16_t
-  PPB_NVIC_ICER2_CLRENA:
-    enum:
-      value3:
-        description: interrupt disabled
-        value: 0
-      value4:
-        description: interrupt enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-    underlying: uint16_t
-  PPB_NVIC_ICER3_CLRENA:
-    enum:
-      value3:
-        description: interrupt disabled
-        value: 0
-      value4:
-        description: interrupt enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-    underlying: uint16_t
   PPB_NVIC_ISPR0_SETPEND:
     enum:
-      value3:
+      not_pending:
         description: interrupt is not pending
         value: 0
-      value4:
-        description: interrupt is pending.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-    underlying: uint16_t
-  PPB_NVIC_ISPR1_SETPEND:
-    enum:
-      value3:
-        description: interrupt is not pending
-        value: 0
-      value4:
-        description: interrupt is pending.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-    underlying: uint16_t
-  PPB_NVIC_ISPR2_SETPEND:
-    enum:
-      value3:
-        description: interrupt is not pending
-        value: 0
-      value4:
-        description: interrupt is pending.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-    underlying: uint16_t
-  PPB_NVIC_ISPR3_SETPEND:
-    enum:
-      value3:
-        description: interrupt is not pending
-        value: 0
-      value4:
-        description: interrupt is pending.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-    underlying: uint16_t
-  PPB_NVIC_ICPR0_CLRPEND:
-    enum:
-      value3:
-        description: interrupt is not pending
-        value: 0
-      value4:
-        description: interrupt is pending.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-    underlying: uint16_t
-  PPB_NVIC_ICPR1_CLRPEND:
-    enum:
-      value3:
-        description: interrupt is not pending
-        value: 0
-      value4:
-        description: interrupt is pending.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-    underlying: uint16_t
-  PPB_NVIC_ICPR2_CLRPEND:
-    enum:
-      value3:
-        description: interrupt is not pending
-        value: 0
-      value4:
-        description: interrupt is pending.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-    underlying: uint16_t
-  PPB_NVIC_ICPR3_CLRPEND:
-    enum:
-      value3:
-        description: interrupt is not pending
-        value: 0
-      value4:
+      pending:
         description: interrupt is pending.
         value: 1
     unit_test: false
@@ -2647,49 +2452,10 @@ enums:
     underlying: uint16_t
   PPB_NVIC_IABR0_ACTIVE:
     enum:
-      value1:
+      not_active:
         description: interrupt not active
         value: 0
-      value2:
-        description: interrupt active
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-    underlying: uint16_t
-  PPB_NVIC_IABR1_ACTIVE:
-    enum:
-      value1:
-        description: interrupt not active
-        value: 0
-      value2:
-        description: interrupt active
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-    underlying: uint16_t
-  PPB_NVIC_IABR2_ACTIVE:
-    enum:
-      value1:
-        description: interrupt not active
-        value: 0
-      value2:
-        description: interrupt active
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-    underlying: uint16_t
-  PPB_NVIC_IABR3_ACTIVE:
-    enum:
-      value1:
-        description: interrupt not active
-        value: 0
-      value2:
+      active:
         description: interrupt active
         value: 1
     unit_test: false
@@ -2699,7 +2465,7 @@ enums:
     underlying: uint16_t
   PPB_CPUID_Implementer:
     enum:
-      value1:
+      arm:
         description: ARM
         value: 65
     unit_test: false
@@ -2708,7 +2474,7 @@ enums:
     identifier: false
   PPB_CPUID_Variant:
     enum:
-      value1:
+      revision_0:
         description: Revision 0
         value: 0
     unit_test: false
@@ -2717,7 +2483,7 @@ enums:
     identifier: false
   PPB_CPUID_PartNo:
     enum:
-      value1:
+      cortex_m4:
         description: Cortex-M4
         value: 3108
     unit_test: false
@@ -2727,7 +2493,7 @@ enums:
     underlying: uint16_t
   PPB_CPUID_Revision:
     enum:
-      value1:
+      patch_1:
         description: Patch 1
         value: 1
     unit_test: false
@@ -2736,10 +2502,10 @@ enums:
     identifier: false
   PPB_ICSR_PENDSVCLR:
     enum:
-      value1:
+      no_effect:
         description: no effect
         value: 0
-      value2:
+      removes_pending_state_pendsv_exception:
         description: removes the pending state from the PendSV exception.
         value: 1
     unit_test: false
@@ -2748,10 +2514,10 @@ enums:
     identifier: false
   PPB_ICSR_PENDSTSET:
     enum:
-      value1:
+      no_effect:
         description: no effect
         value: 0
-      value2:
+      changes_systick_exception_state_pending:
         description: changes SysTick exception state to pending.
         value: 1
     unit_test: false
@@ -2760,23 +2526,11 @@ enums:
     identifier: false
   PPB_ICSR_PENDSTCLR:
     enum:
-      value1:
+      no_effect:
         description: no effect
         value: 0
-      value2:
+      removes_pending_state_systick_exception:
         description: removes the pending state from the SysTick exception.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PPB_ICSR_ISRPENDING:
-    enum:
-      value1:
-        description: interrupt not pending
-        value: 0
-      value2:
-        description: interrupt pending.
         value: 1
     unit_test: false
     json: false
@@ -2784,7 +2538,7 @@ enums:
     identifier: false
   PPB_ICSR_VECTPENDING:
     enum:
-      value1:
+      no_pending_exceptions:
         description: no pending exceptions
         value: 0
     unit_test: false
@@ -2793,10 +2547,10 @@ enums:
     identifier: false
   PPB_ICSR_RETTOBASE:
     enum:
-      value1:
+      preempted_active_exceptions_execute:
         description: there are preempted active exceptions to execute
         value: 0
-      value2:
+      no_active_exceptions_or_currently_execu_cont:
         description: there are no active exceptions, or the currently-executing exception
           is the only active exception.
         value: 1
@@ -2806,7 +2560,7 @@ enums:
     identifier: false
   PPB_ICSR_VECTACTIVE:
     enum:
-      value1:
+      thread_mode:
         description: Thread mode
         value: 0
     unit_test: false
@@ -2816,10 +2570,10 @@ enums:
     underlying: uint16_t
   PPB_AIRCR_ENDIANNESS:
     enum:
-      value1:
+      little_endian:
         description: Little-endian
         value: 0
-      value2:
+      big_endian:
         description: Big-endian.
         value: 1
     unit_test: false
@@ -2828,10 +2582,10 @@ enums:
     identifier: false
   PPB_AIRCR_SYSRESETREQ:
     enum:
-      value1:
+      no_system_reset_request:
         description: no system reset request
         value: 0
-      value2:
+      asserts_signal_outer_system_requests_reset:
         description: asserts a signal to the outer system that requests a reset.
         value: 1
     unit_test: false
@@ -2840,11 +2594,11 @@ enums:
     identifier: false
   PPB_SCR_SEVONPEND:
     enum:
-      value1:
+      only_enabled_interrupts_or_events_can_wakeup__cont:
         description: only enabled interrupts or events can wakeup the processor, disabled
           interrupts are excluded
         value: 0
-      value2:
+      enabled_events_all_interrupts_including_disab_cont:
         description: enabled events and all interrupts, including disabled interrupts,
           can wakeup the processor.
         value: 1
@@ -2854,10 +2608,10 @@ enums:
     identifier: false
   PPB_SCR_SLEEPDEEP:
     enum:
-      value1:
+      sleep:
         description: sleep
         value: 0
-      value2:
+      deep_sleep:
         description: deep sleep
         value: 1
     unit_test: false
@@ -2866,10 +2620,10 @@ enums:
     identifier: false
   PPB_SCR_SLEEPONEXIT:
     enum:
-      value1:
+      do_not_sleep_when_returning_thread_mode:
         description: do not sleep when returning to Thread mode.
         value: 0
-      value2:
+      enter_sleep_or_deep_sleep_return_an_isr:
         description: enter sleep, or deep sleep, on return from an ISR.
         value: 1
     unit_test: false
@@ -2878,10 +2632,10 @@ enums:
     identifier: false
   PPB_CCR_STKALIGN:
     enum:
-      value1:
+      4_byte_aligned:
         description: 4-byte aligned
         value: 0
-      value2:
+      8_byte_aligned:
         description: 8-byte aligned.
         value: 1
     unit_test: false
@@ -2890,11 +2644,11 @@ enums:
     identifier: false
   PPB_CCR_BFHFNMIGN:
     enum:
-      value1:
+      data_bus_faults_caused_by_load_store_instruct_cont:
         description: data bus faults caused by load and store instructions cause a
           lock-up
         value: 0
-      value2:
+      handlers_running_at_priority__1__2_ignore_dat_cont:
         description: handlers running at priority -1 and -2 ignore data bus faults
           caused by load and store instructions.
         value: 1
@@ -2904,10 +2658,10 @@ enums:
     identifier: false
   PPB_CCR_DIV_0_TRP:
     enum:
-      value1:
+      do_not_trap_divide_by_0:
         description: do not trap divide by 0
         value: 0
-      value2:
+      trap_divide_by_0:
         description: trap divide by 0.
         value: 1
     unit_test: false
@@ -2916,10 +2670,10 @@ enums:
     identifier: false
   PPB_CCR_UNALIGN_TRP:
     enum:
-      value1:
+      do_not_trap_unaligned_halfword_word_accesses:
         description: do not trap unaligned halfword and word accesses
         value: 0
-      value2:
+      trap_unaligned_halfword_word_accesses:
         description: trap unaligned halfword and word accesses.
         value: 1
     unit_test: false
@@ -2928,10 +2682,10 @@ enums:
     identifier: false
   PPB_CCR_USERSETMPEND:
     enum:
-      value1:
+      disable:
         description: disable
         value: 0
-      value2:
+      enable:
         description: enable
         value: 1
     unit_test: false
@@ -2940,10 +2694,10 @@ enums:
     identifier: false
   PPB_CCR_NONBASETHRDENA:
     enum:
-      value1:
+      only_when_no__cont:
         description: processor can enter Thread mode only when no exception is active.
         value: 0
-      value2:
+      any_level_und_cont:
         description: processor can enter Thread mode from any level under the control
           of an EXC_RETURN value, see Exception returnException return occurs when
           the processor is in Handler mode and executes one of the following instructions
@@ -2975,10 +2729,10 @@ enums:
     identifier: false
   PPB_CFSR_DIVBYZERO:
     enum:
-      value1:
+      no_divide_by_zero_fault_or_divide_by_zero_tra_cont:
         description: no divide by zero fault, or divide by zero trapping not enabled
         value: 0
-      value2:
+      processor_has_executed_an_sdiv_or_udiv_instru_cont:
         description: the processor has executed an SDIV or UDIV instruction with a
           divisor of 0
         value: 1
@@ -2988,10 +2742,10 @@ enums:
     identifier: false
   PPB_CFSR_UNALIGNED:
     enum:
-      value1:
+      no_unaligned_access_fault_or_unaligned_access_cont:
         description: no unaligned access fault, or unaligned access trapping not enabled
         value: 0
-      value2:
+      processor_has_made_an_unaligned_memory_access:
         description: the processor has made an unaligned memory access.
         value: 1
     unit_test: false
@@ -3000,10 +2754,10 @@ enums:
     identifier: false
   PPB_CFSR_NOCP:
     enum:
-      value1:
+      no_usagefault_caused_by_attempting_access_cop_cont:
         description: no UsageFault caused by attempting to access a coprocessor
         value: 0
-      value2:
+      processor_has_attempted_access_coprocessor:
         description: the processor has attempted to access a coprocessor.
         value: 1
     unit_test: false
@@ -3012,10 +2766,10 @@ enums:
     identifier: false
   PPB_CFSR_INVPC:
     enum:
-      value1:
+      no_invalid_pc_load_usagefault:
         description: no invalid PC load UsageFault
         value: 0
-      value2:
+      processor_has_attempted_an_illegal_load_exc_r_cont:
         description: the processor has attempted an illegal load of EXC_RETURN to
           the PC, as a result of an invalid context, or an invalid EXC_RETURN value.
         value: 1
@@ -3025,10 +2779,10 @@ enums:
     identifier: false
   PPB_CFSR_INVSTATE:
     enum:
-      value1:
+      no_invalid_state_usagefault:
         description: no invalid state UsageFault
         value: 0
-      value2:
+      processor_has_attempted_execute_an_instructio_cont:
         description: the processor has attempted to execute an instruction that makes
           illegal use of the EPSR.
         value: 1
@@ -3038,10 +2792,10 @@ enums:
     identifier: false
   PPB_CFSR_UNDEFINSTR:
     enum:
-      value1:
+      no_undefined_instruction_usagefault:
         description: no undefined instruction UsageFault
         value: 0
-      value2:
+      processor_has_attempted_execute_an_undefined__cont:
         description: the processor has attempted to execute an undefined instruction.
         value: 1
     unit_test: false
@@ -3050,10 +2804,10 @@ enums:
     identifier: false
   PPB_CFSR_BFARVALID:
     enum:
-      value1:
+      value_bfar_not_valid_fault_address:
         description: value in BFAR is not a valid fault address
         value: 0
-      value2:
+      bfar_holds_valid_fault_address:
         description: BFAR holds a valid fault address.
         value: 1
     unit_test: false
@@ -3062,10 +2816,10 @@ enums:
     identifier: false
   PPB_CFSR_LSPERR:
     enum:
-      value1:
+      no_bus_fault_occurred_during_floating_point_l_cont:
         description: No bus fault occurred during floating-point lazy state preservation.
         value: 0
-      value2:
+      bus_fault_occurred_during_floating_point_lazy_cont:
         description: A bus fault occurred during floating-point lazy state preservation
         value: 1
     unit_test: false
@@ -3074,10 +2828,10 @@ enums:
     identifier: false
   PPB_CFSR_STKERR:
     enum:
-      value1:
+      no_stacking_fault:
         description: no stacking fault
         value: 0
-      value2:
+      stacking_an_exception_entry_has_caused_one_or_cont:
         description: stacking for an exception entry has caused one or more BusFaults.
         value: 1
     unit_test: false
@@ -3086,10 +2840,10 @@ enums:
     identifier: false
   PPB_CFSR_UNSTKERR:
     enum:
-      value1:
+      no_unstacking_fault:
         description: no unstacking fault
         value: 0
-      value2:
+      stacking_an_exception_entry_has_caused_one_or_cont:
         description: stacking for an exception entry has caused one or more BusFaults.
         value: 1
     unit_test: false
@@ -3098,10 +2852,10 @@ enums:
     identifier: false
   PPB_CFSR_IMPRECISERR:
     enum:
-      value1:
+      no_imprecise_data_bus_error:
         description: no imprecise data bus error
         value: 0
-      value2:
+      data_bus_error_has_occurred_return_address_st_cont:
         description: a data bus error has occurred, but the return address in the
           stack frame is not related to the instruction that caused the error.
         value: 1
@@ -3111,10 +2865,10 @@ enums:
     identifier: false
   PPB_CFSR_PRECISERR:
     enum:
-      value1:
+      no_precise_data_bus_error:
         description: no precise data bus error
         value: 0
-      value2:
+      data_bus_error_has_occurred_pc_value_stacked__cont:
         description: a data bus error has occurred, and the PC value stacked for the
           exception return points to the instruction that caused the fault.
         value: 1
@@ -3124,10 +2878,10 @@ enums:
     identifier: false
   PPB_CFSR_IBUSERR:
     enum:
-      value1:
+      no_instruction_bus_error:
         description: no instruction bus error
         value: 0
-      value2:
+      instruction_bus_error:
         description: instruction bus error.
         value: 1
     unit_test: false
@@ -3136,10 +2890,10 @@ enums:
     identifier: false
   PPB_CFSR_MMARVALID:
     enum:
-      value1:
+      value_mmar_not_valid_fault_address:
         description: value in MMAR is not a valid fault address
         value: 0
-      value2:
+      mmar_holds_valid_fault_address:
         description: MMAR holds a valid fault address.
         value: 1
     unit_test: false
@@ -3148,25 +2902,12 @@ enums:
     identifier: false
   PPB_CFSR_MLSPERR:
     enum:
-      value1:
+      no_memmanage_fault_occurred_during_floating_p_cont:
         description: No MemManage fault occurred during floating-point lazy state
           preservation
         value: 0
-      value2:
+      memmanage_fault_occurred_during_floating_poin_cont:
         description: A MemManage fault occurred during floating-point lazy state preservation
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PPB_CFSR_MSTKERR:
-    enum:
-      value1:
-        description: no stacking fault
-        value: 0
-      value2:
-        description: stacking for an exception entry has caused one or more access
-          violations.
         value: 1
     unit_test: false
     json: false
@@ -3174,10 +2915,10 @@ enums:
     identifier: false
   PPB_CFSR_MUNSTKERR:
     enum:
-      value1:
+      no_unstacking_fault:
         description: no unstacking fault
         value: 0
-      value2:
+      unstack_an_exception_return_has_caused_one_or_cont:
         description: unstack for an exception return has caused one or more access
           violations.
         value: 1
@@ -3187,10 +2928,10 @@ enums:
     identifier: false
   PPB_CFSR_DACCVIOL:
     enum:
-      value1:
+      no_data_access_violation_fault:
         description: no data access violation fault
         value: 0
-      value2:
+      processor_attempted_load_or_store_at_location_cont:
         description: the processor attempted a load or store at a location that does
           not permit the operation.
         value: 1
@@ -3200,10 +2941,10 @@ enums:
     identifier: false
   PPB_CFSR_IACCVIOL:
     enum:
-      value1:
+      no_instruction_access_violation_fault:
         description: no instruction access violation fault
         value: 0
-      value2:
+      processor_attempted_an_instruction_fetch_loca_cont:
         description: the processor attempted an instruction fetch from a location
           that does not permit execution.
         value: 1
@@ -3213,10 +2954,10 @@ enums:
     identifier: false
   PPB_HFSR_FORCED:
     enum:
-      value1:
+      no_forced_hardfault:
         description: no forced HardFault
         value: 0
-      value2:
+      forced_hardfault:
         description: forced HardFault.
         value: 1
     unit_test: false
@@ -3225,10 +2966,10 @@ enums:
     identifier: false
   PPB_HFSR_VECTTBL:
     enum:
-      value1:
+      no_busfault_vector_table_read:
         description: no BusFault on vector table read
         value: 0
-      value2:
+      busfault_vector_table_read:
         description: BusFault on vector table read
         value: 1
     unit_test: false
@@ -3237,30 +2978,14 @@ enums:
     identifier: false
   PPB_CPACR_CP11:
     enum:
-      value1:
+      access_denied_any_attempted_access_generates__cont:
         description: Access denied. Any attempted access generates a NOCP UsageFault.
         value: 0
-      value2:
+      privileged_access_only_an_unprivileged_access_cont:
         description: Privileged access only. An unprivileged access generates a NOCP
           fault.
         value: 1
-      value4:
-        description: Full access.
-        value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PPB_CPACR_CP10:
-    enum:
-      value1:
-        description: Access denied. Any attempted access generates a NOCP UsageFault.
-        value: 0
-      value2:
-        description: Privileged access only. An unprivileged access generates a NOCP
-          fault.
-        value: 1
-      value4:
+      full_access:
         description: Full access.
         value: 3
     unit_test: false
@@ -3269,12 +2994,12 @@ enums:
     identifier: false
   PPB_MPU_CTRL_PRIVDEFENA:
     enum:
-      value1:
+      disables_use_default_memory_ma_cont:
         description: If the MPU is enabled, disables use of the default memory map.
           Any memory access to a location not covered by any enabled region causes
           a fault.
         value: 0
-      value2:
+      enables_use_default_memory_map_cont:
         description: If the MPU is enabled, enables use of the default memory map
           as a background region for privileged software accesses.
         value: 1
@@ -3284,24 +3009,12 @@ enums:
     identifier: false
   PPB_MPU_CTRL_HFNMIENA:
     enum:
-      value1:
+      disabled_during_hard_fault_nmi_faultmask__cont:
         description: MPU is disabled during hard fault, NMI, and FAULTMASK handlers,
           regardless of the value of the ENABLE bit
         value: 0
-      value2:
+      enabled_during_hard_fault_nmi_faultmask_h_cont:
         description: the MPU is enabled during hard fault, NMI, and FAULTMASK handlers.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PPB_MPU_CTRL_ENABLE:
-    enum:
-      value1:
-        description: MPU disabled
-        value: 0
-      value2:
-        description: MPU enabled.
         value: 1
     unit_test: false
     json: false
@@ -3309,12 +3022,12 @@ enums:
     identifier: false
   PPB_MPU_RBAR_VALID:
     enum:
-      value1:
+      mpu_rnr_not_changed_processor___updates_base__cont:
         description: 'MPU_RNR not changed, and the processor: - updates the base address
           for the region specified in the MPU_RNR - ignores the value of the REGION
           field'
         value: 0
-      value2:
+      processor___updates_value_mpu_rnr_value_regio_cont:
         description: 'the processor: - updates the value of the MPU_RNR to the value
           of the REGION field - updates the base address for the region specified
           in the REGION field.'
@@ -3325,143 +3038,11 @@ enums:
     identifier: false
   PPB_MPU_RASR_XN:
     enum:
-      value1:
+      enabled:
         description: instruction fetches enabled
         value: 0
-      value2:
+      disabled:
         description: instruction fetches disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PPB_MPU_RASR_SRD:
-    enum:
-      value1:
-        description: corresponding sub-region is enabled
-        value: 0
-      value2:
-        description: corresponding sub-region is disabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PPB_MPU_RBAR_A1_VALID:
-    enum:
-      value1:
-        description: 'MPU_RNR not changed, and the processor: - updates the base address
-          for the region specified in the MPU_RNR - ignores the value of the REGION
-          field'
-        value: 0
-      value2:
-        description: 'the processor: - updates the value of the MPU_RNR to the value
-          of the REGION field - updates the base address for the region specified
-          in the REGION field.'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PPB_MPU_RASR_A1_XN:
-    enum:
-      value1:
-        description: instruction fetches enabled
-        value: 0
-      value2:
-        description: instruction fetches disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PPB_MPU_RASR_A1_SRD:
-    enum:
-      value1:
-        description: corresponding sub-region is enabled
-        value: 0
-      value2:
-        description: corresponding sub-region is disabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PPB_MPU_RBAR_A2_VALID:
-    enum:
-      value1:
-        description: 'MPU_RNR not changed, and the processor: - updates the base address
-          for the region specified in the MPU_RNR - ignores the value of the REGION
-          field'
-        value: 0
-      value2:
-        description: 'the processor: - updates the value of the MPU_RNR to the value
-          of the REGION field - updates the base address for the region specified
-          in the REGION field.'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PPB_MPU_RASR_A2_XN:
-    enum:
-      value1:
-        description: instruction fetches enabled
-        value: 0
-      value2:
-        description: instruction fetches disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PPB_MPU_RASR_A2_SRD:
-    enum:
-      value1:
-        description: corresponding sub-region is enabled
-        value: 0
-      value2:
-        description: corresponding sub-region is disabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PPB_MPU_RBAR_A3_VALID:
-    enum:
-      value1:
-        description: 'MPU_RNR not changed, and the processor: - updates the base address
-          for the region specified in the MPU_RNR - ignores the value of the REGION
-          field'
-        value: 0
-      value2:
-        description: 'the processor: - updates the value of the MPU_RNR to the value
-          of the REGION field - updates the base address for the region specified
-          in the REGION field.'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PPB_MPU_RASR_A3_XN:
-    enum:
-      value1:
-        description: instruction fetches enabled
-        value: 0
-      value2:
-        description: instruction fetches disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PPB_MPU_RASR_A3_SRD:
-    enum:
-      value1:
-        description: corresponding sub-region is enabled
-        value: 0
-      value2:
-        description: corresponding sub-region is disabled
         value: 1
     unit_test: false
     json: false
@@ -3469,10 +3050,10 @@ enums:
     identifier: false
   PPB_FPCCR_ASPEN:
     enum:
-      value1:
+      disable_control_setting_execution_floating_po_cont:
         description: Disable CONTROL setting on execution of a floating-point instruction.
         value: 0
-      value2:
+      enable_control_setting_execution_floating_poi_cont:
         description: Enable CONTROL setting on execution of a floating-point instruction.
         value: 1
     unit_test: false
@@ -3481,11 +3062,11 @@ enums:
     identifier: false
   PPB_FPCCR_LSPEN:
     enum:
-      value1:
+      disable_automatic_lazy_state_preservation_flo_cont:
         description: Disable automatic lazy state preservation for floating-point
           context.
         value: 0
-      value2:
+      enable_automatic_lazy_state_preservation_floa_cont:
         description: Enable automatic lazy state preservation for floating-point context.
         value: 1
     unit_test: false
@@ -3494,11 +3075,11 @@ enums:
     identifier: false
   PPB_FPCCR_MONRDY:
     enum:
-      value1:
+      disabled_or_priority_did_not_pe_cont:
         description: Debug Monitor is disabled or priority did not permit setting
           MON_PEND when the floating-point stack frame was allocated.
         value: 0
-      value2:
+      enabled_priority_permits_settin_cont:
         description: Debug Monitor is enabled and priority permits setting MON_PEND
           when the floating-point stack frame was allocated.
         value: 1
@@ -3508,11 +3089,11 @@ enums:
     identifier: false
   PPB_FPCCR_BFRDY:
     enum:
-      value1:
+      disabled_or_priority_did_not_permit__cont:
         description: BusFault is disabled or priority did not permit setting the BusFault
           handler to the pending state when the floating-point stack frame was allocated.
         value: 0
-      value2:
+      enabled_priority_permitted_setting_b_cont:
         description: BusFault is enabled and priority permitted setting the BusFault
           handler to the pending state when the floating-point stack frame was allocated.
         value: 1
@@ -3522,12 +3103,12 @@ enums:
     identifier: false
   PPB_FPCCR_MMRDY:
     enum:
-      value1:
+      disabled_or_priority_did_not_permit_cont:
         description: MemManage is disabled or priority did not permit setting the
           MemManage handler to the pending state when the floating-point stack frame
           was allocated.
         value: 0
-      value2:
+      enabled_priority_permitted_setting__cont:
         description: MemManage is enabled and priority permitted setting the MemManage
           handler to the pending state when the floating-point stack frame was allocated.
         value: 1
@@ -3537,11 +3118,11 @@ enums:
     identifier: false
   PPB_FPCCR_HFRDY:
     enum:
-      value1:
+      did_not_permit_setting_hardfault_han_cont:
         description: Priority did not permit setting the HardFault handler to the
           pending state when the floating-point stack frame was allocated.
         value: 0
-      value2:
+      permitted_setting_hardfault_handler__cont:
         description: Priority permitted setting the HardFault handler to the pending
           state when the floating-point stack frame was allocated.
         value: 1
@@ -3551,11 +3132,11 @@ enums:
     identifier: false
   PPB_FPCCR_THREAD:
     enum:
-      value1:
+      not_thread_mode_when_floating_point__cont:
         description: Mode was not Thread Mode when the floating-point stack frame
           was allocated.
         value: 0
-      value2:
+      thread_mode_when_floating_point_stac_cont:
         description: Mode was Thread Mode when the floating-point stack frame was
           allocated.
         value: 1
@@ -3565,11 +3146,11 @@ enums:
     identifier: false
   PPB_FPCCR_USER:
     enum:
-      value1:
+      not_user_when_floating_po_cont:
         description: Privilege level was not user when the floating-point stack frame
           was allocated.
         value: 0
-      value2:
+      user_when_floating_point__cont:
         description: Privilege level was user when the floating-point stack frame
           was allocated.
         value: 1
@@ -3579,10 +3160,10 @@ enums:
     identifier: false
   PPB_FPCCR_LSPACT:
     enum:
-      value1:
+      not_active:
         description: Lazy state preservation is not active.
         value: 0
-      value2:
+      active_floating_point_cont:
         description: Lazy state preservation is active. floating-point stack frame
           has been allocated but saving state to it has been deferred.
         value: 1

@@ -38,21 +38,21 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU40_GCTRL_MSE2
+            type: CCU40_GCTRL_MSE3
           - name: MSE1
             description: Slice 1 Multi Channel shadow transfer enable
             index: 11
             width: 1
             read: true
             write: true
-            type: CCU40_GCTRL_MSE1
+            type: CCU40_GCTRL_MSE3
           - name: MSE0
             description: Slice 0 Multi Channel shadow transfer enable
             index: 10
             width: 1
             read: true
             write: true
-            type: CCU40_GCTRL_MSE0
+            type: CCU40_GCTRL_MSE3
           - name: SUSCFG
             description: Suspend Mode Configuration
             index: 8
@@ -101,21 +101,21 @@ structs:
             width: 1
             read: true
             write: false
-            type: CCU40_GSTAT_S2I
+            type: CCU40_GSTAT_S3I
           - name: S1I
             description: CC41 IDLE status
             index: 1
             width: 1
             read: true
             write: false
-            type: CCU40_GSTAT_S1I
+            type: CCU40_GSTAT_S3I
           - name: S0I
             description: CC40 IDLE status
             index: 0
             width: 1
             read: true
             write: false
-            type: CCU40_GSTAT_S0I
+            type: CCU40_GSTAT_S3I
       - name: GIDLS
         type: uint32_t
         expected_size: 4
@@ -442,77 +442,77 @@ structs:
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S3DSS
+            type: CCU40_GCST_S3PSS
           - name: S3SS
             description: Slice 3 shadow transfer status
             index: 12
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S3SS
+            type: CCU40_GCST_S3PSS
           - name: S2PSS
             description: Slice 2 Prescaler shadow transfer status
             index: 10
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S2PSS
+            type: CCU40_GCST_S3PSS
           - name: S2DSS
             description: Slice 2 Dither shadow transfer status
             index: 9
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S2DSS
+            type: CCU40_GCST_S3PSS
           - name: S2SS
             description: Slice 2 shadow transfer status
             index: 8
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S2SS
+            type: CCU40_GCST_S3PSS
           - name: S1PSS
             description: Slice 1 Prescaler shadow transfer status
             index: 6
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S1PSS
+            type: CCU40_GCST_S3PSS
           - name: S1DSS
             description: Slice 1 Dither shadow transfer status
             index: 5
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S1DSS
+            type: CCU40_GCST_S3PSS
           - name: S1SS
             description: Slice 1 shadow transfer status
             index: 4
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S1SS
+            type: CCU40_GCST_S3PSS
           - name: S0PSS
             description: Slice 0 Prescaler shadow transfer status
             index: 2
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S0PSS
+            type: CCU40_GCST_S3PSS
           - name: S0DSS
             description: Slice 0 Dither shadow transfer status
             index: 1
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S0DSS
+            type: CCU40_GCST_S3PSS
           - name: S0SS
             description: Slice 0 shadow transfer status
             index: 0
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S0SS
+            type: CCU40_GCST_S3PSS
       - name: MIDR
         type: uint32_t
         expected_size: 4
@@ -546,14 +546,14 @@ structs:
 enums:
   CCU40_GCTRL_MSDE:
     enum:
-      value1:
+      only_shadow_transfer_period_compare_values_re_cont:
         description: Only the shadow transfer for period and compare values is requested
         value: 0
-      value2:
+      shadow_transfer_compare_period_prescaler_comp_cont:
         description: Shadow transfer for the compare, period and prescaler compare
           values is requested
         value: 1
-      value4:
+      shadow_transfer_compare_period_prescaler_dith_cont:
         description: Shadow transfer for the compare, period, prescaler and dither
           compare values is requested
         value: 3
@@ -563,49 +563,10 @@ enums:
     identifier: false
   CCU40_GCTRL_MSE3:
     enum:
-      value1:
+      only_be_requested_by_sw:
         description: Shadow transfer can only be requested by SW
         value: 0
-      value2:
-        description: Shadow transfer can be requested via SW and via the CCU4x.MCSS
-          input.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GCTRL_MSE2:
-    enum:
-      value1:
-        description: Shadow transfer can only be requested by SW
-        value: 0
-      value2:
-        description: Shadow transfer can be requested via SW and via the CCU4x.MCSS
-          input.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GCTRL_MSE1:
-    enum:
-      value1:
-        description: Shadow transfer can only be requested by SW
-        value: 0
-      value2:
-        description: Shadow transfer can be requested via SW and via the CCU4x.MCSS
-          input.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GCTRL_MSE0:
-    enum:
-      value1:
-        description: Shadow transfer can only be requested by SW
-        value: 0
-      value2:
+      be_requested_via_sw_via_c_cont:
         description: Shadow transfer can be requested via SW and via the CCU4x.MCSS
           input.
         value: 1
@@ -615,17 +576,17 @@ enums:
     identifier: false
   CCU40_GCTRL_SUSCFG:
     enum:
-      value1:
+      suspend_request_ignored_module_never_enters_s_cont:
         description: Suspend request ignored. The module never enters in suspend
         value: 0
-      value2:
+      stops_all_running_slices_immediately_safe_sto_cont:
         description: Stops all the running slices immediately. Safe stop is not applied.
         value: 1
-      value3:
+      stops_block_immediately_clamps_all_outputs_pa_cont:
         description: Stops the block immediately and clamps all the outputs to PASSIVE
           state. Safe stop is applied.
         value: 2
-      value4:
+      waits_roll_over_each_slice_stop_clamp_slices__cont:
         description: Waits for the roll over of each slice to stop and clamp the slices
           outputs. Safe stop is applied.
         value: 3
@@ -635,16 +596,16 @@ enums:
     identifier: false
   CCU40_GCTRL_PCIS:
     enum:
-      value1:
+      module_clock:
         description: Module clock
         value: 0
-      value2:
+      ccu4xeclka:
         description: CCU4x.ECLKA
         value: 1
-      value3:
+      ccu4xeclkb:
         description: CCU4x.ECLKB
         value: 2
-      value4:
+      ccu4xeclkc:
         description: CCU4x.ECLKC
         value: 3
     unit_test: false
@@ -653,25 +614,25 @@ enums:
     identifier: false
   CCU40_GCTRL_PRBC:
     enum:
-      value1:
+      sw_only:
         description: SW only
         value: 0
-      value2:
+      gstatthe_register_contains_status_prescaler_e_cont:
         description: GSTATThe register contains the status of the prescaler and each
           timer slice (idle mode or running)..PRB and prescaler registers are cleared
           when the Run Bit of CC40 is cleared.
         value: 1
-      value3:
+      gstatthe_register_contains_status_prescaler_e_cont_:
         description: GSTATThe register contains the status of the prescaler and each
           timer slice (idle mode or running)..PRB and prescaler registers are cleared
           when the Run Bit of CC41 is cleared.
         value: 2
-      value4:
+      gstatthe_register_contains_status_prescaler_e_cont__:
         description: GSTATThe register contains the status of the prescaler and each
           timer slice (idle mode or running)..PRB and prescaler registers are cleared
           when the Run Bit of CC42 is cleared.
         value: 3
-      value5:
+      gstatthe_register_contains_status_prescaler_e_cont___:
         description: GSTATThe register contains the status of the prescaler and each
           timer slice (idle mode or running)..PRB and prescaler registers are cleared
           when the Run Bit of CC43 is cleared.
@@ -682,10 +643,10 @@ enums:
     identifier: false
   CCU40_GSTAT_PRB:
     enum:
-      value1:
+      stopped:
         description: Prescaler is stopped
         value: 0
-      value2:
+      running:
         description: Prescaler is running
         value: 1
     unit_test: false
@@ -694,46 +655,10 @@ enums:
     identifier: false
   CCU40_GSTAT_S3I:
     enum:
-      value1:
+      running:
         description: Running
         value: 0
-      value2:
-        description: Idle
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GSTAT_S2I:
-    enum:
-      value1:
-        description: Running
-        value: 0
-      value2:
-        description: Idle
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GSTAT_S1I:
-    enum:
-      value1:
-        description: Running
-        value: 0
-      value2:
-        description: Idle
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GSTAT_S0I:
-    enum:
-      value1:
-        description: Running
-        value: 0
-      value2:
+      idle:
         description: Idle
         value: 1
     unit_test: false
@@ -742,143 +667,11 @@ enums:
     identifier: false
   CCU40_GCST_S3PSS:
     enum:
-      value1:
+      not_been_requested:
         description: Prescaler shadow transfer has not been requested
         value: 0
-      value2:
+      been_requested:
         description: Prescaler shadow transfer has been requested
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GCST_S3DSS:
-    enum:
-      value1:
-        description: Dither shadow transfer has not been requested
-        value: 0
-      value2:
-        description: Dither shadow transfer has been requested
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GCST_S3SS:
-    enum:
-      value1:
-        description: Shadow transfer has not been requested
-        value: 0
-      value2:
-        description: Shadow transfer has been requested
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GCST_S2PSS:
-    enum:
-      value1:
-        description: Prescaler shadow transfer has not been requested
-        value: 0
-      value2:
-        description: Prescaler shadow transfer has been requested
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GCST_S2DSS:
-    enum:
-      value1:
-        description: Dither shadow transfer has not been requested
-        value: 0
-      value2:
-        description: Dither shadow transfer has been requested
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GCST_S2SS:
-    enum:
-      value1:
-        description: Shadow transfer has not been requested
-        value: 0
-      value2:
-        description: Shadow transfer has been requested
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GCST_S1PSS:
-    enum:
-      value1:
-        description: Prescaler shadow transfer has not been requested
-        value: 0
-      value2:
-        description: Prescaler shadow transfer has been requested
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GCST_S1DSS:
-    enum:
-      value1:
-        description: Dither shadow transfer has not been requested
-        value: 0
-      value2:
-        description: Dither shadow transfer has been requested
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GCST_S1SS:
-    enum:
-      value1:
-        description: Shadow transfer has not been requested
-        value: 0
-      value2:
-        description: Shadow transfer has been requested
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GCST_S0PSS:
-    enum:
-      value1:
-        description: Prescaler shadow transfer has not been requested
-        value: 0
-      value2:
-        description: Prescaler shadow transfer has been requested
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GCST_S0DSS:
-    enum:
-      value1:
-        description: Dither shadow transfer has not been requested
-        value: 0
-      value2:
-        description: Dither shadow transfer has been requested
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GCST_S0SS:
-    enum:
-      value1:
-        description: Shadow transfer has not been requested
-        value: 0
-      value2:
-        description: Shadow transfer has been requested
         value: 1
     unit_test: false
     json: false

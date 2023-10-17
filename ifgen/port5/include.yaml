@@ -5,6 +5,12 @@ structs:
     instances:
       - name: PORT5
         address: '0x48028500'
+      - name: PORT7
+        address: '0x48028700'
+      - name: PORT8
+        address: '0x48028800'
+      - name: PORT9
+        address: '0x48028900'
     fields:
       - name: OUT
         type: uint32_t
@@ -25,105 +31,105 @@ structs:
             width: 1
             read: true
             write: true
-            type: PORT5_OUT_P14
+            type: PORT5_OUT_P15
           - name: P13
             description: Port n Output Bit 13
             index: 13
             width: 1
             read: true
             write: true
-            type: PORT5_OUT_P13
+            type: PORT5_OUT_P15
           - name: P12
             description: Port n Output Bit 12
             index: 12
             width: 1
             read: true
             write: true
-            type: PORT5_OUT_P12
+            type: PORT5_OUT_P15
           - name: P11
             description: Port n Output Bit 11
             index: 11
             width: 1
             read: true
             write: true
-            type: PORT5_OUT_P11
+            type: PORT5_OUT_P15
           - name: P10
             description: Port n Output Bit 10
             index: 10
             width: 1
             read: true
             write: true
-            type: PORT5_OUT_P10
+            type: PORT5_OUT_P15
           - name: P9
             description: Port n Output Bit 9
             index: 9
             width: 1
             read: true
             write: true
-            type: PORT5_OUT_P9
+            type: PORT5_OUT_P15
           - name: P8
             description: Port n Output Bit 8
             index: 8
             width: 1
             read: true
             write: true
-            type: PORT5_OUT_P8
+            type: PORT5_OUT_P15
           - name: P7
             description: Port n Output Bit 7
             index: 7
             width: 1
             read: true
             write: true
-            type: PORT5_OUT_P7
+            type: PORT5_OUT_P15
           - name: P6
             description: Port n Output Bit 6
             index: 6
             width: 1
             read: true
             write: true
-            type: PORT5_OUT_P6
+            type: PORT5_OUT_P15
           - name: P5
             description: Port n Output Bit 5
             index: 5
             width: 1
             read: true
             write: true
-            type: PORT5_OUT_P5
+            type: PORT5_OUT_P15
           - name: P4
             description: Port n Output Bit 4
             index: 4
             width: 1
             read: true
             write: true
-            type: PORT5_OUT_P4
+            type: PORT5_OUT_P15
           - name: P3
             description: Port n Output Bit 3
             index: 3
             width: 1
             read: true
             write: true
-            type: PORT5_OUT_P3
+            type: PORT5_OUT_P15
           - name: P2
             description: Port n Output Bit 2
             index: 2
             width: 1
             read: true
             write: true
-            type: PORT5_OUT_P2
+            type: PORT5_OUT_P15
           - name: P1
             description: Port n Output Bit 1
             index: 1
             width: 1
             read: true
             write: true
-            type: PORT5_OUT_P1
+            type: PORT5_OUT_P15
           - name: P0
             description: Port n Output Bit 0
             index: 0
             width: 1
             read: true
             write: true
-            type: PORT5_OUT_P0
+            type: PORT5_OUT_P15
       - name: OMR
         type: uint32_t
         expected_size: 4
@@ -341,21 +347,21 @@ structs:
             width: 5
             read: true
             write: true
-            type: PORT5_IOCR0_PC2
+            type: PORT5_IOCR0_PC3
           - name: PC1
             description: Port Control for Port n Pin 0 to 3
             index: 11
             width: 5
             read: true
             write: true
-            type: PORT5_IOCR0_PC1
+            type: PORT5_IOCR0_PC3
           - name: PC0
             description: Port Control for Port n Pin 0 to 3
             index: 3
             width: 5
             read: true
             write: true
-            type: PORT5_IOCR0_PC0
+            type: PORT5_IOCR0_PC3
       - name: IOCR4
         type: uint32_t
         expected_size: 4
@@ -368,28 +374,28 @@ structs:
             width: 5
             read: true
             write: true
-            type: PORT5_IOCR4_PC7
+            type: PORT5_IOCR0_PC3
           - name: PC6
             description: Port Control for Port n Pin 4 to 7
             index: 19
             width: 5
             read: true
             write: true
-            type: PORT5_IOCR4_PC6
+            type: PORT5_IOCR0_PC3
           - name: PC5
             description: Port Control for Port n Pin 4 to 7
             index: 11
             width: 5
             read: true
             write: true
-            type: PORT5_IOCR4_PC5
+            type: PORT5_IOCR0_PC3
           - name: PC4
             description: Port Control for Port n Pin 4 to 7
             index: 3
             width: 5
             read: true
             write: true
-            type: PORT5_IOCR4_PC4
+            type: PORT5_IOCR0_PC3
       - name: IOCR8
         type: uint32_t
         expected_size: 4
@@ -402,28 +408,28 @@ structs:
             width: 5
             read: true
             write: true
-            type: PORT5_IOCR8_PC11
+            type: PORT5_IOCR0_PC3
           - name: PC10
             description: Port Control for Port n Pin 8 to 11
             index: 19
             width: 5
             read: true
             write: true
-            type: PORT5_IOCR8_PC10
+            type: PORT5_IOCR0_PC3
           - name: PC9
             description: Port Control for Port n Pin 8 to 11
             index: 11
             width: 5
             read: true
             write: true
-            type: PORT5_IOCR8_PC9
+            type: PORT5_IOCR0_PC3
           - name: PC8
             description: Port Control for Port n Pin 8 to 11
             index: 3
             width: 5
             read: true
             write: true
-            type: PORT5_IOCR8_PC8
+            type: PORT5_IOCR0_PC3
       - name: IN
         type: uint32_t
         expected_size: 4
@@ -437,112 +443,112 @@ structs:
             width: 1
             read: true
             write: false
-            type: PORT5_IN_P15
+            type: PORT5_OUT_P15
           - name: P14
             description: Port n Input Bit 14
             index: 14
             width: 1
             read: true
             write: false
-            type: PORT5_IN_P14
+            type: PORT5_OUT_P15
           - name: P13
             description: Port n Input Bit 13
             index: 13
             width: 1
             read: true
             write: false
-            type: PORT5_IN_P13
+            type: PORT5_OUT_P15
           - name: P12
             description: Port n Input Bit 12
             index: 12
             width: 1
             read: true
             write: false
-            type: PORT5_IN_P12
+            type: PORT5_OUT_P15
           - name: P11
             description: Port n Input Bit 11
             index: 11
             width: 1
             read: true
             write: false
-            type: PORT5_IN_P11
+            type: PORT5_OUT_P15
           - name: P10
             description: Port n Input Bit 10
             index: 10
             width: 1
             read: true
             write: false
-            type: PORT5_IN_P10
+            type: PORT5_OUT_P15
           - name: P9
             description: Port n Input Bit 9
             index: 9
             width: 1
             read: true
             write: false
-            type: PORT5_IN_P9
+            type: PORT5_OUT_P15
           - name: P8
             description: Port n Input Bit 8
             index: 8
             width: 1
             read: true
             write: false
-            type: PORT5_IN_P8
+            type: PORT5_OUT_P15
           - name: P7
             description: Port n Input Bit 7
             index: 7
             width: 1
             read: true
             write: false
-            type: PORT5_IN_P7
+            type: PORT5_OUT_P15
           - name: P6
             description: Port n Input Bit 6
             index: 6
             width: 1
             read: true
             write: false
-            type: PORT5_IN_P6
+            type: PORT5_OUT_P15
           - name: P5
             description: Port n Input Bit 5
             index: 5
             width: 1
             read: true
             write: false
-            type: PORT5_IN_P5
+            type: PORT5_OUT_P15
           - name: P4
             description: Port n Input Bit 4
             index: 4
             width: 1
             read: true
             write: false
-            type: PORT5_IN_P4
+            type: PORT5_OUT_P15
           - name: P3
             description: Port n Input Bit 3
             index: 3
             width: 1
             read: true
             write: false
-            type: PORT5_IN_P3
+            type: PORT5_OUT_P15
           - name: P2
             description: Port n Input Bit 2
             index: 2
             width: 1
             read: true
             write: false
-            type: PORT5_IN_P2
+            type: PORT5_OUT_P15
           - name: P1
             description: Port n Input Bit 1
             index: 1
             width: 1
             read: true
             write: false
-            type: PORT5_IN_P1
+            type: PORT5_OUT_P15
           - name: P0
             description: Port n Input Bit 0
             index: 0
             width: 1
             read: true
             write: false
-            type: PORT5_IN_P0
+            type: PORT5_OUT_P15
       - name: PDR0
         type: uint32_t
         expected_size: 4
@@ -569,42 +575,42 @@ structs:
             width: 3
             read: true
             write: true
-            type: PORT5_PDR0_PD5
+            type: PORT5_PDR0_PD6
           - name: PD4
             description: Pad Driver Mode for Pn.4
             index: 16
             width: 3
             read: true
             write: true
-            type: PORT5_PDR0_PD4
+            type: PORT5_PDR0_PD6
           - name: PD3
             description: Pad Driver Mode for Pn.3
             index: 12
             width: 3
             read: true
             write: true
-            type: PORT5_PDR0_PD3
+            type: PORT5_PDR0_PD6
           - name: PD2
             description: Pad Driver Mode for Pn.2
             index: 8
             width: 3
             read: true
             write: true
-            type: PORT5_PDR0_PD2
+            type: PORT5_PDR0_PD7
           - name: PD1
             description: Pad Driver Mode for Pn.1
             index: 4
             width: 3
             read: true
             write: true
-            type: PORT5_PDR0_PD1
+            type: PORT5_PDR0_PD7
           - name: PD0
             description: Pad Driver Mode for Pn.0
             index: 0
             width: 3
             read: true
             write: true
-            type: PORT5_PDR0_PD0
+            type: PORT5_PDR0_PD7
       - name: PDR1
         type: uint32_t
         expected_size: 4
@@ -617,56 +623,56 @@ structs:
             width: 3
             read: true
             write: true
-            type: PORT5_PDR1_PD15
+            type: PORT5_PDR0_PD6
           - name: PD14
             description: Pad Driver Mode for Pn.14
             index: 24
             width: 3
             read: true
             write: true
-            type: PORT5_PDR1_PD14
+            type: PORT5_PDR0_PD6
           - name: PD13
             description: Pad Driver Mode for Pn.13
             index: 20
             width: 3
             read: true
             write: true
-            type: PORT5_PDR1_PD13
+            type: PORT5_PDR0_PD6
           - name: PD12
             description: Pad Driver Mode for Pn.12
             index: 16
             width: 3
             read: true
             write: true
-            type: PORT5_PDR1_PD12
+            type: PORT5_PDR0_PD6
           - name: PD11
             description: Pad Driver Mode for Pn.11
             index: 12
             width: 3
             read: true
             write: true
-            type: PORT5_PDR1_PD11
+            type: PORT5_PDR0_PD7
           - name: PD10
             description: Pad Driver Mode for Pn.10
             index: 8
             width: 3
             read: true
             write: true
-            type: PORT5_PDR1_PD10
+            type: PORT5_PDR0_PD7
           - name: PD9
             description: Pad Driver Mode for Pn.9
             index: 4
             width: 3
             read: true
             write: true
-            type: PORT5_PDR1_PD9
+            type: PORT5_PDR0_PD6
           - name: PD8
             description: Pad Driver Mode for Pn.8
             index: 0
             width: 3
             read: true
             write: true
-            type: PORT5_PDR1_PD8
+            type: PORT5_PDR0_PD6
       - name: PDISC
         type: uint32_t
         expected_size: 4
@@ -687,105 +693,105 @@ structs:
             width: 1
             read: true
             write: false
-            type: PORT5_PDISC_PDIS14
+            type: PORT5_PDISC_PDIS15
           - name: PDIS13
             description: Pad Disable for Port n Pin 13
             index: 13
             width: 1
             read: true
             write: false
-            type: PORT5_PDISC_PDIS13
+            type: PORT5_PDISC_PDIS15
           - name: PDIS12
             description: Pad Disable for Port n Pin 12
             index: 12
             width: 1
             read: true
             write: false
-            type: PORT5_PDISC_PDIS12
+            type: PORT5_PDISC_PDIS15
           - name: PDIS11
             description: Pad Disable for Port n Pin 11
             index: 11
             width: 1
             read: true
             write: false
-            type: PORT5_PDISC_PDIS11
+            type: PORT5_PDISC_PDIS15
           - name: PDIS10
             description: Pad Disable for Port n Pin 10
             index: 10
             width: 1
             read: true
             write: false
-            type: PORT5_PDISC_PDIS10
+            type: PORT5_PDISC_PDIS15
           - name: PDIS9
             description: Pad Disable for Port n Pin 9
             index: 9
             width: 1
             read: true
             write: false
-            type: PORT5_PDISC_PDIS9
+            type: PORT5_PDISC_PDIS15
           - name: PDIS8
             description: Pad Disable for Port n Pin 8
             index: 8
             width: 1
             read: true
             write: false
-            type: PORT5_PDISC_PDIS8
+            type: PORT5_PDISC_PDIS15
           - name: PDIS7
             description: Pad Disable for Port n Pin 7
             index: 7
             width: 1
             read: true
             write: false
-            type: PORT5_PDISC_PDIS7
+            type: PORT5_PDISC_PDIS15
           - name: PDIS6
             description: Pad Disable for Port n Pin 6
             index: 6
             width: 1
             read: true
             write: false
-            type: PORT5_PDISC_PDIS6
+            type: PORT5_PDISC_PDIS15
           - name: PDIS5
             description: Pad Disable for Port n Pin 5
             index: 5
             width: 1
             read: true
             write: false
-            type: PORT5_PDISC_PDIS5
+            type: PORT5_PDISC_PDIS15
           - name: PDIS4
             description: Pad Disable for Port n Pin 4
             index: 4
             width: 1
             read: true
             write: false
-            type: PORT5_PDISC_PDIS4
+            type: PORT5_PDISC_PDIS15
           - name: PDIS3
             description: Pad Disable for Port n Pin 3
             index: 3
             width: 1
             read: true
             write: false
-            type: PORT5_PDISC_PDIS3
+            type: PORT5_PDISC_PDIS15
           - name: PDIS2
             description: Pad Disable for Port n Pin 2
             index: 2
             width: 1
             read: true
             write: false
-            type: PORT5_PDISC_PDIS2
+            type: PORT5_PDISC_PDIS15
           - name: PDIS1
             description: Pad Disable for Port n Pin 1
             index: 1
             width: 1
             read: true
             write: false
-            type: PORT5_PDISC_PDIS1
+            type: PORT5_PDISC_PDIS15
           - name: PDIS0
             description: Pad Disable for Port n Pin 0
             index: 0
             width: 1
             read: true
             write: false
-            type: PORT5_PDISC_PDIS0
+            type: PORT5_PDISC_PDIS15
       - name: PPS
         type: uint32_t
         expected_size: 4
@@ -805,105 +811,105 @@ structs:
             width: 1
             read: true
             write: true
-            type: PORT5_PPS_PPS14
+            type: PORT5_PPS_PPS15
           - name: PPS13
             description: Port n Pin Power Save Bit 13
             index: 13
             width: 1
             read: true
             write: true
-            type: PORT5_PPS_PPS13
+            type: PORT5_PPS_PPS15
           - name: PPS12
             description: Port n Pin Power Save Bit 12
             index: 12
             width: 1
             read: true
             write: true
-            type: PORT5_PPS_PPS12
+            type: PORT5_PPS_PPS15
           - name: PPS11
             description: Port n Pin Power Save Bit 11
             index: 11
             width: 1
             read: true
             write: true
-            type: PORT5_PPS_PPS11
+            type: PORT5_PPS_PPS15
           - name: PPS10
             description: Port n Pin Power Save Bit 10
             index: 10
             width: 1
             read: true
             write: true
-            type: PORT5_PPS_PPS10
+            type: PORT5_PPS_PPS15
           - name: PPS9
             description: Port n Pin Power Save Bit 9
             index: 9
             width: 1
             read: true
             write: true
-            type: PORT5_PPS_PPS9
+            type: PORT5_PPS_PPS15
           - name: PPS8
             description: Port n Pin Power Save Bit 8
             index: 8
             width: 1
             read: true
             write: true
-            type: PORT5_PPS_PPS8
+            type: PORT5_PPS_PPS15
           - name: PPS7
             description: Port n Pin Power Save Bit 7
             index: 7
             width: 1
             read: true
             write: true
-            type: PORT5_PPS_PPS7
+            type: PORT5_PPS_PPS15
           - name: PPS6
             description: Port n Pin Power Save Bit 6
             index: 6
             width: 1
             read: true
             write: true
-            type: PORT5_PPS_PPS6
+            type: PORT5_PPS_PPS15
           - name: PPS5
             description: Port n Pin Power Save Bit 5
             index: 5
             width: 1
             read: true
             write: true
-            type: PORT5_PPS_PPS5
+            type: PORT5_PPS_PPS15
           - name: PPS4
             description: Port n Pin Power Save Bit 4
             index: 4
             width: 1
             read: true
             write: true
-            type: PORT5_PPS_PPS4
+            type: PORT5_PPS_PPS15
           - name: PPS3
             description: Port n Pin Power Save Bit 3
             index: 3
             width: 1
             read: true
             write: true
-            type: PORT5_PPS_PPS3
+            type: PORT5_PPS_PPS15
           - name: PPS2
             description: Port n Pin Power Save Bit 2
             index: 2
             width: 1
             read: true
             write: true
-            type: PORT5_PPS_PPS2
+            type: PORT5_PPS_PPS15
           - name: PPS1
             description: Port n Pin Power Save Bit 1
             index: 1
             width: 1
             read: true
             write: true
-            type: PORT5_PPS_PPS1
+            type: PORT5_PPS_PPS15
           - name: PPS0
             description: Port n Pin Power Save Bit 0
             index: 0
             width: 1
             read: true
             write: true
-            type: PORT5_PPS_PPS0
+            type: PORT5_PPS_PPS15
       - name: HWSEL
         type: uint32_t
         expected_size: 4
@@ -923,105 +929,105 @@ structs:
             width: 2
             read: true
             write: true
-            type: PORT5_HWSEL_HW14
+            type: PORT5_HWSEL_HW15
           - name: HW13
             description: Port n Pin Hardware Select Bit 13
             index: 26
             width: 2
             read: true
             write: true
-            type: PORT5_HWSEL_HW13
+            type: PORT5_HWSEL_HW15
           - name: HW12
             description: Port n Pin Hardware Select Bit 12
             index: 24
             width: 2
             read: true
             write: true
-            type: PORT5_HWSEL_HW12
+            type: PORT5_HWSEL_HW15
           - name: HW11
             description: Port n Pin Hardware Select Bit 11
             index: 22
             width: 2
             read: true
             write: true
-            type: PORT5_HWSEL_HW11
+            type: PORT5_HWSEL_HW15
           - name: HW10
             description: Port n Pin Hardware Select Bit 10
             index: 20
             width: 2
             read: true
             write: true
-            type: PORT5_HWSEL_HW10
+            type: PORT5_HWSEL_HW15
           - name: HW9
             description: Port n Pin Hardware Select Bit 9
             index: 18
             width: 2
             read: true
             write: true
-            type: PORT5_HWSEL_HW9
+            type: PORT5_HWSEL_HW15
           - name: HW8
             description: Port n Pin Hardware Select Bit 8
             index: 16
             width: 2
             read: true
             write: true
-            type: PORT5_HWSEL_HW8
+            type: PORT5_HWSEL_HW15
           - name: HW7
             description: Port n Pin Hardware Select Bit 7
             index: 14
             width: 2
             read: true
             write: true
-            type: PORT5_HWSEL_HW7
+            type: PORT5_HWSEL_HW15
           - name: HW6
             description: Port n Pin Hardware Select Bit 6
             index: 12
             width: 2
             read: true
             write: true
-            type: PORT5_HWSEL_HW6
+            type: PORT5_HWSEL_HW15
           - name: HW5
             description: Port n Pin Hardware Select Bit 5
             index: 10
             width: 2
             read: true
             write: true
-            type: PORT5_HWSEL_HW5
+            type: PORT5_HWSEL_HW15
           - name: HW4
             description: Port n Pin Hardware Select Bit 4
             index: 8
             width: 2
             read: true
             write: true
-            type: PORT5_HWSEL_HW4
+            type: PORT5_HWSEL_HW15
           - name: HW3
             description: Port n Pin Hardware Select Bit 3
             index: 6
             width: 2
             read: true
             write: true
-            type: PORT5_HWSEL_HW3
+            type: PORT5_HWSEL_HW15
           - name: HW2
             description: Port n Pin Hardware Select Bit 2
             index: 4
             width: 2
             read: true
             write: true
-            type: PORT5_HWSEL_HW2
+            type: PORT5_HWSEL_HW15
           - name: HW1
             description: Port n Pin Hardware Select Bit 1
             index: 2
             width: 2
             read: true
             write: true
-            type: PORT5_HWSEL_HW1
+            type: PORT5_HWSEL_HW15
           - name: HW0
             description: Port n Pin Hardware Select Bit 0
             index: 0
             width: 2
             read: true
             write: true
-            type: PORT5_HWSEL_HW0
+            type: PORT5_HWSEL_HW15
     stream: false
     codec: false
     methods: false
@@ -1030,190 +1036,10 @@ structs:
 enums:
   PORT5_OUT_P15:
     enum:
-      value1:
+      '0':
         description: The output level of Pn.x is 0.
         value: 0
-      value2:
-        description: The output level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_OUT_P14:
-    enum:
-      value1:
-        description: The output level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The output level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_OUT_P13:
-    enum:
-      value1:
-        description: The output level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The output level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_OUT_P12:
-    enum:
-      value1:
-        description: The output level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The output level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_OUT_P11:
-    enum:
-      value1:
-        description: The output level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The output level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_OUT_P10:
-    enum:
-      value1:
-        description: The output level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The output level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_OUT_P9:
-    enum:
-      value1:
-        description: The output level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The output level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_OUT_P8:
-    enum:
-      value1:
-        description: The output level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The output level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_OUT_P7:
-    enum:
-      value1:
-        description: The output level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The output level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_OUT_P6:
-    enum:
-      value1:
-        description: The output level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The output level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_OUT_P5:
-    enum:
-      value1:
-        description: The output level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The output level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_OUT_P4:
-    enum:
-      value1:
-        description: The output level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The output level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_OUT_P3:
-    enum:
-      value1:
-        description: The output level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The output level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_OUT_P2:
-    enum:
-      value1:
-        description: The output level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The output level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_OUT_P1:
-    enum:
-      value1:
-        description: The output level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The output level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_OUT_P0:
-    enum:
-      value1:
-        description: The output level of Pn.x is 0.
-        value: 0
-      value2:
+      '1':
         description: The output level of Pn.x is 1.
         value: 1
     unit_test: false
@@ -1222,912 +1048,60 @@ enums:
     identifier: false
   PORT5_IOCR0_PC3:
     enum:
-      value1:
+      input___no_internal_pull_device_active:
         description: Input - No internal pull device active
         value: 0
-      value2:
+      input___internal_pull_down_device_active:
         description: Input - Internal pull-down device active
         value: 1
-      value3:
+      input___internal_pull_up_device_active:
         description: Input - Internal pull-up device active
         value: 2
-      value4:
+      input___no_internal_pull_device_pn_outx_input_cont:
         description: Input - No internal pull device, Pn_OUTx = input value
         value: 3
-      value5:
+      input_inverted___no_internal_pull_device_active:
         description: Input inverted - No internal pull device active
         value: 4
-      value6:
+      input_inverted___internal_pull_down_device_active:
         description: Input inverted - Internal pull-down device active
         value: 5
-      value7:
+      input_inverted___internal_pull_up_device_active:
         description: Input inverted - Internal pull-up device active
         value: 6
-      value8:
+      input_inverted___no_internal_pull_device_pn_o_cont:
         description: Input inverted - No internal pull device, Pn_OUTx = input value
         value: 7
-      value9:
+      output_push_pull___general_purpose_output:
         description: Output Push-Pull - General-purpose output
         value: 16
-      value10:
+      output_push_pull___alternate_output_function_1:
         description: Output Push-Pull - Alternate output function 1
         value: 17
-      value11:
+      output_push_pull___alternate_output_function_2:
         description: Output Push-Pull - Alternate output function 2
         value: 18
-      value12:
+      output_push_pull___alternate_output_function_3:
         description: Output Push-Pull - Alternate output function 3
         value: 19
-      value13:
+      output_push_pull___alternate_output_function_4:
         description: Output Push-Pull - Alternate output function 4
         value: 20
-      value14:
+      output_open_drain___general_purpose_output:
         description: Output Open Drain - General-purpose output
         value: 24
-      value15:
+      output_open_drain___alternate_output_function_1:
         description: Output Open Drain - Alternate output function 1
         value: 25
-      value16:
+      output_open_drain___alternate_output_function_2:
         description: Output Open Drain - Alternate output function 2
         value: 26
-      value17:
+      output_open_drain___alternate_output_function_3:
         description: Output Open Drain - Alternate output function 3
         value: 27
-      value18:
+      output_open_drain___alternate_output_function_4:
         description: Output Open Drain - Alternate output function 4
         value: 28
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IOCR0_PC2:
-    enum:
-      value1:
-        description: Input - No internal pull device active
-        value: 0
-      value2:
-        description: Input - Internal pull-down device active
-        value: 1
-      value3:
-        description: Input - Internal pull-up device active
-        value: 2
-      value4:
-        description: Input - No internal pull device, Pn_OUTx = input value
-        value: 3
-      value5:
-        description: Input inverted - No internal pull device active
-        value: 4
-      value6:
-        description: Input inverted - Internal pull-down device active
-        value: 5
-      value7:
-        description: Input inverted - Internal pull-up device active
-        value: 6
-      value8:
-        description: Input inverted - No internal pull device, Pn_OUTx = input value
-        value: 7
-      value9:
-        description: Output Push-Pull - General-purpose output
-        value: 16
-      value10:
-        description: Output Push-Pull - Alternate output function 1
-        value: 17
-      value11:
-        description: Output Push-Pull - Alternate output function 2
-        value: 18
-      value12:
-        description: Output Push-Pull - Alternate output function 3
-        value: 19
-      value13:
-        description: Output Push-Pull - Alternate output function 4
-        value: 20
-      value14:
-        description: Output Open Drain - General-purpose output
-        value: 24
-      value15:
-        description: Output Open Drain - Alternate output function 1
-        value: 25
-      value16:
-        description: Output Open Drain - Alternate output function 2
-        value: 26
-      value17:
-        description: Output Open Drain - Alternate output function 3
-        value: 27
-      value18:
-        description: Output Open Drain - Alternate output function 4
-        value: 28
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IOCR0_PC1:
-    enum:
-      value1:
-        description: Input - No internal pull device active
-        value: 0
-      value2:
-        description: Input - Internal pull-down device active
-        value: 1
-      value3:
-        description: Input - Internal pull-up device active
-        value: 2
-      value4:
-        description: Input - No internal pull device, Pn_OUTx = input value
-        value: 3
-      value5:
-        description: Input inverted - No internal pull device active
-        value: 4
-      value6:
-        description: Input inverted - Internal pull-down device active
-        value: 5
-      value7:
-        description: Input inverted - Internal pull-up device active
-        value: 6
-      value8:
-        description: Input inverted - No internal pull device, Pn_OUTx = input value
-        value: 7
-      value9:
-        description: Output Push-Pull - General-purpose output
-        value: 16
-      value10:
-        description: Output Push-Pull - Alternate output function 1
-        value: 17
-      value11:
-        description: Output Push-Pull - Alternate output function 2
-        value: 18
-      value12:
-        description: Output Push-Pull - Alternate output function 3
-        value: 19
-      value13:
-        description: Output Push-Pull - Alternate output function 4
-        value: 20
-      value14:
-        description: Output Open Drain - General-purpose output
-        value: 24
-      value15:
-        description: Output Open Drain - Alternate output function 1
-        value: 25
-      value16:
-        description: Output Open Drain - Alternate output function 2
-        value: 26
-      value17:
-        description: Output Open Drain - Alternate output function 3
-        value: 27
-      value18:
-        description: Output Open Drain - Alternate output function 4
-        value: 28
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IOCR0_PC0:
-    enum:
-      value1:
-        description: Input - No internal pull device active
-        value: 0
-      value2:
-        description: Input - Internal pull-down device active
-        value: 1
-      value3:
-        description: Input - Internal pull-up device active
-        value: 2
-      value4:
-        description: Input - No internal pull device, Pn_OUTx = input value
-        value: 3
-      value5:
-        description: Input inverted - No internal pull device active
-        value: 4
-      value6:
-        description: Input inverted - Internal pull-down device active
-        value: 5
-      value7:
-        description: Input inverted - Internal pull-up device active
-        value: 6
-      value8:
-        description: Input inverted - No internal pull device, Pn_OUTx = input value
-        value: 7
-      value9:
-        description: Output Push-Pull - General-purpose output
-        value: 16
-      value10:
-        description: Output Push-Pull - Alternate output function 1
-        value: 17
-      value11:
-        description: Output Push-Pull - Alternate output function 2
-        value: 18
-      value12:
-        description: Output Push-Pull - Alternate output function 3
-        value: 19
-      value13:
-        description: Output Push-Pull - Alternate output function 4
-        value: 20
-      value14:
-        description: Output Open Drain - General-purpose output
-        value: 24
-      value15:
-        description: Output Open Drain - Alternate output function 1
-        value: 25
-      value16:
-        description: Output Open Drain - Alternate output function 2
-        value: 26
-      value17:
-        description: Output Open Drain - Alternate output function 3
-        value: 27
-      value18:
-        description: Output Open Drain - Alternate output function 4
-        value: 28
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IOCR4_PC7:
-    enum:
-      value1:
-        description: Input - No internal pull device active
-        value: 0
-      value2:
-        description: Input - Internal pull-down device active
-        value: 1
-      value3:
-        description: Input - Internal pull-up device active
-        value: 2
-      value4:
-        description: Input - No internal pull device, Pn_OUTx = input value
-        value: 3
-      value5:
-        description: Input inverted - No internal pull device active
-        value: 4
-      value6:
-        description: Input inverted - Internal pull-down device active
-        value: 5
-      value7:
-        description: Input inverted - Internal pull-up device active
-        value: 6
-      value8:
-        description: Input inverted - No internal pull device, Pn_OUTx = input value
-        value: 7
-      value9:
-        description: Output Push-Pull - General-purpose output
-        value: 16
-      value10:
-        description: Output Push-Pull - Alternate output function 1
-        value: 17
-      value11:
-        description: Output Push-Pull - Alternate output function 2
-        value: 18
-      value12:
-        description: Output Push-Pull - Alternate output function 3
-        value: 19
-      value13:
-        description: Output Push-Pull - Alternate output function 4
-        value: 20
-      value14:
-        description: Output Open Drain - General-purpose output
-        value: 24
-      value15:
-        description: Output Open Drain - Alternate output function 1
-        value: 25
-      value16:
-        description: Output Open Drain - Alternate output function 2
-        value: 26
-      value17:
-        description: Output Open Drain - Alternate output function 3
-        value: 27
-      value18:
-        description: Output Open Drain - Alternate output function 4
-        value: 28
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IOCR4_PC6:
-    enum:
-      value1:
-        description: Input - No internal pull device active
-        value: 0
-      value2:
-        description: Input - Internal pull-down device active
-        value: 1
-      value3:
-        description: Input - Internal pull-up device active
-        value: 2
-      value4:
-        description: Input - No internal pull device, Pn_OUTx = input value
-        value: 3
-      value5:
-        description: Input inverted - No internal pull device active
-        value: 4
-      value6:
-        description: Input inverted - Internal pull-down device active
-        value: 5
-      value7:
-        description: Input inverted - Internal pull-up device active
-        value: 6
-      value8:
-        description: Input inverted - No internal pull device, Pn_OUTx = input value
-        value: 7
-      value9:
-        description: Output Push-Pull - General-purpose output
-        value: 16
-      value10:
-        description: Output Push-Pull - Alternate output function 1
-        value: 17
-      value11:
-        description: Output Push-Pull - Alternate output function 2
-        value: 18
-      value12:
-        description: Output Push-Pull - Alternate output function 3
-        value: 19
-      value13:
-        description: Output Push-Pull - Alternate output function 4
-        value: 20
-      value14:
-        description: Output Open Drain - General-purpose output
-        value: 24
-      value15:
-        description: Output Open Drain - Alternate output function 1
-        value: 25
-      value16:
-        description: Output Open Drain - Alternate output function 2
-        value: 26
-      value17:
-        description: Output Open Drain - Alternate output function 3
-        value: 27
-      value18:
-        description: Output Open Drain - Alternate output function 4
-        value: 28
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IOCR4_PC5:
-    enum:
-      value1:
-        description: Input - No internal pull device active
-        value: 0
-      value2:
-        description: Input - Internal pull-down device active
-        value: 1
-      value3:
-        description: Input - Internal pull-up device active
-        value: 2
-      value4:
-        description: Input - No internal pull device, Pn_OUTx = input value
-        value: 3
-      value5:
-        description: Input inverted - No internal pull device active
-        value: 4
-      value6:
-        description: Input inverted - Internal pull-down device active
-        value: 5
-      value7:
-        description: Input inverted - Internal pull-up device active
-        value: 6
-      value8:
-        description: Input inverted - No internal pull device, Pn_OUTx = input value
-        value: 7
-      value9:
-        description: Output Push-Pull - General-purpose output
-        value: 16
-      value10:
-        description: Output Push-Pull - Alternate output function 1
-        value: 17
-      value11:
-        description: Output Push-Pull - Alternate output function 2
-        value: 18
-      value12:
-        description: Output Push-Pull - Alternate output function 3
-        value: 19
-      value13:
-        description: Output Push-Pull - Alternate output function 4
-        value: 20
-      value14:
-        description: Output Open Drain - General-purpose output
-        value: 24
-      value15:
-        description: Output Open Drain - Alternate output function 1
-        value: 25
-      value16:
-        description: Output Open Drain - Alternate output function 2
-        value: 26
-      value17:
-        description: Output Open Drain - Alternate output function 3
-        value: 27
-      value18:
-        description: Output Open Drain - Alternate output function 4
-        value: 28
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IOCR4_PC4:
-    enum:
-      value1:
-        description: Input - No internal pull device active
-        value: 0
-      value2:
-        description: Input - Internal pull-down device active
-        value: 1
-      value3:
-        description: Input - Internal pull-up device active
-        value: 2
-      value4:
-        description: Input - No internal pull device, Pn_OUTx = input value
-        value: 3
-      value5:
-        description: Input inverted - No internal pull device active
-        value: 4
-      value6:
-        description: Input inverted - Internal pull-down device active
-        value: 5
-      value7:
-        description: Input inverted - Internal pull-up device active
-        value: 6
-      value8:
-        description: Input inverted - No internal pull device, Pn_OUTx = input value
-        value: 7
-      value9:
-        description: Output Push-Pull - General-purpose output
-        value: 16
-      value10:
-        description: Output Push-Pull - Alternate output function 1
-        value: 17
-      value11:
-        description: Output Push-Pull - Alternate output function 2
-        value: 18
-      value12:
-        description: Output Push-Pull - Alternate output function 3
-        value: 19
-      value13:
-        description: Output Push-Pull - Alternate output function 4
-        value: 20
-      value14:
-        description: Output Open Drain - General-purpose output
-        value: 24
-      value15:
-        description: Output Open Drain - Alternate output function 1
-        value: 25
-      value16:
-        description: Output Open Drain - Alternate output function 2
-        value: 26
-      value17:
-        description: Output Open Drain - Alternate output function 3
-        value: 27
-      value18:
-        description: Output Open Drain - Alternate output function 4
-        value: 28
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IOCR8_PC11:
-    enum:
-      value1:
-        description: Input - No internal pull device active
-        value: 0
-      value2:
-        description: Input - Internal pull-down device active
-        value: 1
-      value3:
-        description: Input - Internal pull-up device active
-        value: 2
-      value4:
-        description: Input - No internal pull device, Pn_OUTx = input value
-        value: 3
-      value5:
-        description: Input inverted - No internal pull device active
-        value: 4
-      value6:
-        description: Input inverted - Internal pull-down device active
-        value: 5
-      value7:
-        description: Input inverted - Internal pull-up device active
-        value: 6
-      value8:
-        description: Input inverted - No internal pull device, Pn_OUTx = input value
-        value: 7
-      value9:
-        description: Output Push-Pull - General-purpose output
-        value: 16
-      value10:
-        description: Output Push-Pull - Alternate output function 1
-        value: 17
-      value11:
-        description: Output Push-Pull - Alternate output function 2
-        value: 18
-      value12:
-        description: Output Push-Pull - Alternate output function 3
-        value: 19
-      value13:
-        description: Output Push-Pull - Alternate output function 4
-        value: 20
-      value14:
-        description: Output Open Drain - General-purpose output
-        value: 24
-      value15:
-        description: Output Open Drain - Alternate output function 1
-        value: 25
-      value16:
-        description: Output Open Drain - Alternate output function 2
-        value: 26
-      value17:
-        description: Output Open Drain - Alternate output function 3
-        value: 27
-      value18:
-        description: Output Open Drain - Alternate output function 4
-        value: 28
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IOCR8_PC10:
-    enum:
-      value1:
-        description: Input - No internal pull device active
-        value: 0
-      value2:
-        description: Input - Internal pull-down device active
-        value: 1
-      value3:
-        description: Input - Internal pull-up device active
-        value: 2
-      value4:
-        description: Input - No internal pull device, Pn_OUTx = input value
-        value: 3
-      value5:
-        description: Input inverted - No internal pull device active
-        value: 4
-      value6:
-        description: Input inverted - Internal pull-down device active
-        value: 5
-      value7:
-        description: Input inverted - Internal pull-up device active
-        value: 6
-      value8:
-        description: Input inverted - No internal pull device, Pn_OUTx = input value
-        value: 7
-      value9:
-        description: Output Push-Pull - General-purpose output
-        value: 16
-      value10:
-        description: Output Push-Pull - Alternate output function 1
-        value: 17
-      value11:
-        description: Output Push-Pull - Alternate output function 2
-        value: 18
-      value12:
-        description: Output Push-Pull - Alternate output function 3
-        value: 19
-      value13:
-        description: Output Push-Pull - Alternate output function 4
-        value: 20
-      value14:
-        description: Output Open Drain - General-purpose output
-        value: 24
-      value15:
-        description: Output Open Drain - Alternate output function 1
-        value: 25
-      value16:
-        description: Output Open Drain - Alternate output function 2
-        value: 26
-      value17:
-        description: Output Open Drain - Alternate output function 3
-        value: 27
-      value18:
-        description: Output Open Drain - Alternate output function 4
-        value: 28
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IOCR8_PC9:
-    enum:
-      value1:
-        description: Input - No internal pull device active
-        value: 0
-      value2:
-        description: Input - Internal pull-down device active
-        value: 1
-      value3:
-        description: Input - Internal pull-up device active
-        value: 2
-      value4:
-        description: Input - No internal pull device, Pn_OUTx = input value
-        value: 3
-      value5:
-        description: Input inverted - No internal pull device active
-        value: 4
-      value6:
-        description: Input inverted - Internal pull-down device active
-        value: 5
-      value7:
-        description: Input inverted - Internal pull-up device active
-        value: 6
-      value8:
-        description: Input inverted - No internal pull device, Pn_OUTx = input value
-        value: 7
-      value9:
-        description: Output Push-Pull - General-purpose output
-        value: 16
-      value10:
-        description: Output Push-Pull - Alternate output function 1
-        value: 17
-      value11:
-        description: Output Push-Pull - Alternate output function 2
-        value: 18
-      value12:
-        description: Output Push-Pull - Alternate output function 3
-        value: 19
-      value13:
-        description: Output Push-Pull - Alternate output function 4
-        value: 20
-      value14:
-        description: Output Open Drain - General-purpose output
-        value: 24
-      value15:
-        description: Output Open Drain - Alternate output function 1
-        value: 25
-      value16:
-        description: Output Open Drain - Alternate output function 2
-        value: 26
-      value17:
-        description: Output Open Drain - Alternate output function 3
-        value: 27
-      value18:
-        description: Output Open Drain - Alternate output function 4
-        value: 28
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IOCR8_PC8:
-    enum:
-      value1:
-        description: Input - No internal pull device active
-        value: 0
-      value2:
-        description: Input - Internal pull-down device active
-        value: 1
-      value3:
-        description: Input - Internal pull-up device active
-        value: 2
-      value4:
-        description: Input - No internal pull device, Pn_OUTx = input value
-        value: 3
-      value5:
-        description: Input inverted - No internal pull device active
-        value: 4
-      value6:
-        description: Input inverted - Internal pull-down device active
-        value: 5
-      value7:
-        description: Input inverted - Internal pull-up device active
-        value: 6
-      value8:
-        description: Input inverted - No internal pull device, Pn_OUTx = input value
-        value: 7
-      value9:
-        description: Output Push-Pull - General-purpose output
-        value: 16
-      value10:
-        description: Output Push-Pull - Alternate output function 1
-        value: 17
-      value11:
-        description: Output Push-Pull - Alternate output function 2
-        value: 18
-      value12:
-        description: Output Push-Pull - Alternate output function 3
-        value: 19
-      value13:
-        description: Output Push-Pull - Alternate output function 4
-        value: 20
-      value14:
-        description: Output Open Drain - General-purpose output
-        value: 24
-      value15:
-        description: Output Open Drain - Alternate output function 1
-        value: 25
-      value16:
-        description: Output Open Drain - Alternate output function 2
-        value: 26
-      value17:
-        description: Output Open Drain - Alternate output function 3
-        value: 27
-      value18:
-        description: Output Open Drain - Alternate output function 4
-        value: 28
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IN_P15:
-    enum:
-      value1:
-        description: The input level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The input level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IN_P14:
-    enum:
-      value1:
-        description: The input level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The input level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IN_P13:
-    enum:
-      value1:
-        description: The input level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The input level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IN_P12:
-    enum:
-      value1:
-        description: The input level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The input level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IN_P11:
-    enum:
-      value1:
-        description: The input level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The input level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IN_P10:
-    enum:
-      value1:
-        description: The input level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The input level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IN_P9:
-    enum:
-      value1:
-        description: The input level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The input level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IN_P8:
-    enum:
-      value1:
-        description: The input level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The input level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IN_P7:
-    enum:
-      value1:
-        description: The input level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The input level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IN_P6:
-    enum:
-      value1:
-        description: The input level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The input level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IN_P5:
-    enum:
-      value1:
-        description: The input level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The input level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IN_P4:
-    enum:
-      value1:
-        description: The input level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The input level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IN_P3:
-    enum:
-      value1:
-        description: The input level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The input level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IN_P2:
-    enum:
-      value1:
-        description: The input level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The input level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IN_P1:
-    enum:
-      value1:
-        description: The input level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The input level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_IN_P0:
-    enum:
-      value1:
-        description: The input level of Pn.x is 0.
-        value: 0
-      value2:
-        description: The input level of Pn.x is 1.
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -2183,531 +1157,12 @@ enums:
     json: false
     use_map: false
     identifier: false
-  PORT5_PDR0_PD5:
-    enum:
-      sd_she:
-        description: A2 strong driver, sharp edge
-        value: 0
-      sd_mee:
-        description: A2 strong driver, medium edge
-        value: 1
-      sd_soe:
-        description: A2 strong driver, soft edge
-        value: 2
-      md:
-        description: A2 medium driver
-        value: 4
-      wd:
-        description: A2 weak driver
-        value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDR0_PD4:
-    enum:
-      sd_she:
-        description: A2 strong driver, sharp edge
-        value: 0
-      sd_mee:
-        description: A2 strong driver, medium edge
-        value: 1
-      sd_soe:
-        description: A2 strong driver, soft edge
-        value: 2
-      md:
-        description: A2 medium driver
-        value: 4
-      wd:
-        description: A2 weak driver
-        value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDR0_PD3:
-    enum:
-      sd_she:
-        description: A2 strong driver, sharp edge
-        value: 0
-      sd_mee:
-        description: A2 strong driver, medium edge
-        value: 1
-      sd_soe:
-        description: A2 strong driver, soft edge
-        value: 2
-      md:
-        description: A2 medium driver
-        value: 4
-      wd:
-        description: A2 weak driver
-        value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDR0_PD2:
-    enum:
-      sd_soe:
-        description: A1+ strong driver, soft edge
-        value: 2
-      sd_sle:
-        description: A1+ strong driver, slow edge
-        value: 3
-      md:
-        description: A1+ medium driver
-        value: 4
-      wd:
-        description: A1+ weak driver
-        value: 7
-      sd_soe_alt:
-        description: A1+ strong driver, soft edge (alternate value)
-        value: 0
-      sd_sle_alt:
-        description: A1+ strong driver, slow edge (alternate value)
-        value: 1
-      md_alt:
-        description: A1+ medium driver (alternate value)
-        value: 6
-      wd_alt:
-        description: A1+ weak driver (alternate value)
-        value: 5
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDR0_PD1:
-    enum:
-      sd_soe:
-        description: A1+ strong driver, soft edge
-        value: 2
-      sd_sle:
-        description: A1+ strong driver, slow edge
-        value: 3
-      md:
-        description: A1+ medium driver
-        value: 4
-      wd:
-        description: A1+ weak driver
-        value: 7
-      sd_soe_alt:
-        description: A1+ strong driver, soft edge (alternate value)
-        value: 0
-      sd_sle_alt:
-        description: A1+ strong driver, slow edge (alternate value)
-        value: 1
-      md_alt:
-        description: A1+ medium driver (alternate value)
-        value: 6
-      wd_alt:
-        description: A1+ weak driver (alternate value)
-        value: 5
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDR0_PD0:
-    enum:
-      sd_soe:
-        description: A1+ strong driver, soft edge
-        value: 2
-      sd_sle:
-        description: A1+ strong driver, slow edge
-        value: 3
-      md:
-        description: A1+ medium driver
-        value: 4
-      wd:
-        description: A1+ weak driver
-        value: 7
-      sd_soe_alt:
-        description: A1+ strong driver, soft edge (alternate value)
-        value: 0
-      sd_sle_alt:
-        description: A1+ strong driver, slow edge (alternate value)
-        value: 1
-      md_alt:
-        description: A1+ medium driver (alternate value)
-        value: 6
-      wd_alt:
-        description: A1+ weak driver (alternate value)
-        value: 5
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDR1_PD15:
-    enum:
-      sd_she:
-        description: A2 strong driver, sharp edge
-        value: 0
-      sd_mee:
-        description: A2 strong driver, medium edge
-        value: 1
-      sd_soe:
-        description: A2 strong driver, soft edge
-        value: 2
-      md:
-        description: A2 medium driver
-        value: 4
-      wd:
-        description: A2 weak driver
-        value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDR1_PD14:
-    enum:
-      sd_she:
-        description: A2 strong driver, sharp edge
-        value: 0
-      sd_mee:
-        description: A2 strong driver, medium edge
-        value: 1
-      sd_soe:
-        description: A2 strong driver, soft edge
-        value: 2
-      md:
-        description: A2 medium driver
-        value: 4
-      wd:
-        description: A2 weak driver
-        value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDR1_PD13:
-    enum:
-      sd_she:
-        description: A2 strong driver, sharp edge
-        value: 0
-      sd_mee:
-        description: A2 strong driver, medium edge
-        value: 1
-      sd_soe:
-        description: A2 strong driver, soft edge
-        value: 2
-      md:
-        description: A2 medium driver
-        value: 4
-      wd:
-        description: A2 weak driver
-        value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDR1_PD12:
-    enum:
-      sd_she:
-        description: A2 strong driver, sharp edge
-        value: 0
-      sd_mee:
-        description: A2 strong driver, medium edge
-        value: 1
-      sd_soe:
-        description: A2 strong driver, soft edge
-        value: 2
-      md:
-        description: A2 medium driver
-        value: 4
-      wd:
-        description: A2 weak driver
-        value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDR1_PD11:
-    enum:
-      sd_soe:
-        description: A1+ strong driver, soft edge
-        value: 2
-      sd_sle:
-        description: A1+ strong driver, slow edge
-        value: 3
-      md:
-        description: A1+ medium driver
-        value: 4
-      wd:
-        description: A1+ weak driver
-        value: 7
-      sd_soe_alt:
-        description: A1+ strong driver, soft edge (alternate value)
-        value: 0
-      sd_sle_alt:
-        description: A1+ strong driver, slow edge (alternate value)
-        value: 1
-      md_alt:
-        description: A1+ medium driver (alternate value)
-        value: 6
-      wd_alt:
-        description: A1+ weak driver (alternate value)
-        value: 5
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDR1_PD10:
-    enum:
-      sd_soe:
-        description: A1+ strong driver, soft edge
-        value: 2
-      sd_sle:
-        description: A1+ strong driver, slow edge
-        value: 3
-      md:
-        description: A1+ medium driver
-        value: 4
-      wd:
-        description: A1+ weak driver
-        value: 7
-      sd_soe_alt:
-        description: A1+ strong driver, soft edge (alternate value)
-        value: 0
-      sd_sle_alt:
-        description: A1+ strong driver, slow edge (alternate value)
-        value: 1
-      md_alt:
-        description: A1+ medium driver (alternate value)
-        value: 6
-      wd_alt:
-        description: A1+ weak driver (alternate value)
-        value: 5
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDR1_PD9:
-    enum:
-      sd_she:
-        description: A2 strong driver, sharp edge
-        value: 0
-      sd_mee:
-        description: A2 strong driver, medium edge
-        value: 1
-      sd_soe:
-        description: A2 strong driver, soft edge
-        value: 2
-      md:
-        description: A2 medium driver
-        value: 4
-      wd:
-        description: A2 weak driver
-        value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDR1_PD8:
-    enum:
-      sd_she:
-        description: A2 strong driver, sharp edge
-        value: 0
-      sd_mee:
-        description: A2 strong driver, medium edge
-        value: 1
-      sd_soe:
-        description: A2 strong driver, soft edge
-        value: 2
-      md:
-        description: A2 medium driver
-        value: 4
-      wd:
-        description: A2 weak driver
-        value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   PORT5_PDISC_PDIS15:
     enum:
-      value1:
+      enabled:
         description: Pad Pn.x is enabled.
         value: 0
-      value2:
-        description: Pad Pn.x is disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDISC_PDIS14:
-    enum:
-      value1:
-        description: Pad Pn.x is enabled.
-        value: 0
-      value2:
-        description: Pad Pn.x is disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDISC_PDIS13:
-    enum:
-      value1:
-        description: Pad Pn.x is enabled.
-        value: 0
-      value2:
-        description: Pad Pn.x is disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDISC_PDIS12:
-    enum:
-      value1:
-        description: Pad Pn.x is enabled.
-        value: 0
-      value2:
-        description: Pad Pn.x is disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDISC_PDIS11:
-    enum:
-      value1:
-        description: Pad Pn.x is enabled.
-        value: 0
-      value2:
-        description: Pad Pn.x is disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDISC_PDIS10:
-    enum:
-      value1:
-        description: Pad Pn.x is enabled.
-        value: 0
-      value2:
-        description: Pad Pn.x is disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDISC_PDIS9:
-    enum:
-      value1:
-        description: Pad Pn.x is enabled.
-        value: 0
-      value2:
-        description: Pad Pn.x is disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDISC_PDIS8:
-    enum:
-      value1:
-        description: Pad Pn.x is enabled.
-        value: 0
-      value2:
-        description: Pad Pn.x is disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDISC_PDIS7:
-    enum:
-      value1:
-        description: Pad Pn.x is enabled.
-        value: 0
-      value2:
-        description: Pad Pn.x is disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDISC_PDIS6:
-    enum:
-      value1:
-        description: Pad Pn.x is enabled.
-        value: 0
-      value2:
-        description: Pad Pn.x is disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDISC_PDIS5:
-    enum:
-      value1:
-        description: Pad Pn.x is enabled.
-        value: 0
-      value2:
-        description: Pad Pn.x is disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDISC_PDIS4:
-    enum:
-      value1:
-        description: Pad Pn.x is enabled.
-        value: 0
-      value2:
-        description: Pad Pn.x is disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDISC_PDIS3:
-    enum:
-      value1:
-        description: Pad Pn.x is enabled.
-        value: 0
-      value2:
-        description: Pad Pn.x is disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDISC_PDIS2:
-    enum:
-      value1:
-        description: Pad Pn.x is enabled.
-        value: 0
-      value2:
-        description: Pad Pn.x is disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDISC_PDIS1:
-    enum:
-      value1:
-        description: Pad Pn.x is enabled.
-        value: 0
-      value2:
-        description: Pad Pn.x is disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PDISC_PDIS0:
-    enum:
-      value1:
-        description: Pad Pn.x is enabled.
-        value: 0
-      value2:
+      disabled:
         description: Pad Pn.x is disabled.
         value: 1
     unit_test: false
@@ -2716,190 +1171,10 @@ enums:
     identifier: false
   PORT5_PPS_PPS15:
     enum:
-      value1:
+      disabled:
         description: Pin Power Save of Pn.x is disabled.
         value: 0
-      value2:
-        description: Pin Power Save of Pn.x is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PPS_PPS14:
-    enum:
-      value1:
-        description: Pin Power Save of Pn.x is disabled.
-        value: 0
-      value2:
-        description: Pin Power Save of Pn.x is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PPS_PPS13:
-    enum:
-      value1:
-        description: Pin Power Save of Pn.x is disabled.
-        value: 0
-      value2:
-        description: Pin Power Save of Pn.x is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PPS_PPS12:
-    enum:
-      value1:
-        description: Pin Power Save of Pn.x is disabled.
-        value: 0
-      value2:
-        description: Pin Power Save of Pn.x is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PPS_PPS11:
-    enum:
-      value1:
-        description: Pin Power Save of Pn.x is disabled.
-        value: 0
-      value2:
-        description: Pin Power Save of Pn.x is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PPS_PPS10:
-    enum:
-      value1:
-        description: Pin Power Save of Pn.x is disabled.
-        value: 0
-      value2:
-        description: Pin Power Save of Pn.x is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PPS_PPS9:
-    enum:
-      value1:
-        description: Pin Power Save of Pn.x is disabled.
-        value: 0
-      value2:
-        description: Pin Power Save of Pn.x is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PPS_PPS8:
-    enum:
-      value1:
-        description: Pin Power Save of Pn.x is disabled.
-        value: 0
-      value2:
-        description: Pin Power Save of Pn.x is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PPS_PPS7:
-    enum:
-      value1:
-        description: Pin Power Save of Pn.x is disabled.
-        value: 0
-      value2:
-        description: Pin Power Save of Pn.x is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PPS_PPS6:
-    enum:
-      value1:
-        description: Pin Power Save of Pn.x is disabled.
-        value: 0
-      value2:
-        description: Pin Power Save of Pn.x is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PPS_PPS5:
-    enum:
-      value1:
-        description: Pin Power Save of Pn.x is disabled.
-        value: 0
-      value2:
-        description: Pin Power Save of Pn.x is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PPS_PPS4:
-    enum:
-      value1:
-        description: Pin Power Save of Pn.x is disabled.
-        value: 0
-      value2:
-        description: Pin Power Save of Pn.x is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PPS_PPS3:
-    enum:
-      value1:
-        description: Pin Power Save of Pn.x is disabled.
-        value: 0
-      value2:
-        description: Pin Power Save of Pn.x is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PPS_PPS2:
-    enum:
-      value1:
-        description: Pin Power Save of Pn.x is disabled.
-        value: 0
-      value2:
-        description: Pin Power Save of Pn.x is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PPS_PPS1:
-    enum:
-      value1:
-        description: Pin Power Save of Pn.x is disabled.
-        value: 0
-      value2:
-        description: Pin Power Save of Pn.x is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_PPS_PPS0:
-    enum:
-      value1:
-        description: Pin Power Save of Pn.x is disabled.
-        value: 0
-      value2:
+      enabled:
         description: Pin Power Save of Pn.x is enabled.
         value: 1
     unit_test: false
@@ -2908,238 +1183,13 @@ enums:
     identifier: false
   PORT5_HWSEL_HW15:
     enum:
-      value1:
+      software_control_only:
         description: Software control only.
         value: 0
-      value2:
+      hw0_control_path_can_override_software_config_cont:
         description: HW0 control path can override the software configuration.
         value: 1
-      value3:
-        description: HW1 control path can override the software configuration.
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_HWSEL_HW14:
-    enum:
-      value1:
-        description: Software control only.
-        value: 0
-      value2:
-        description: HW0 control path can override the software configuration.
-        value: 1
-      value3:
-        description: HW1 control path can override the software configuration.
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_HWSEL_HW13:
-    enum:
-      value1:
-        description: Software control only.
-        value: 0
-      value2:
-        description: HW0 control path can override the software configuration.
-        value: 1
-      value3:
-        description: HW1 control path can override the software configuration.
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_HWSEL_HW12:
-    enum:
-      value1:
-        description: Software control only.
-        value: 0
-      value2:
-        description: HW0 control path can override the software configuration.
-        value: 1
-      value3:
-        description: HW1 control path can override the software configuration.
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_HWSEL_HW11:
-    enum:
-      value1:
-        description: Software control only.
-        value: 0
-      value2:
-        description: HW0 control path can override the software configuration.
-        value: 1
-      value3:
-        description: HW1 control path can override the software configuration.
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_HWSEL_HW10:
-    enum:
-      value1:
-        description: Software control only.
-        value: 0
-      value2:
-        description: HW0 control path can override the software configuration.
-        value: 1
-      value3:
-        description: HW1 control path can override the software configuration.
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_HWSEL_HW9:
-    enum:
-      value1:
-        description: Software control only.
-        value: 0
-      value2:
-        description: HW0 control path can override the software configuration.
-        value: 1
-      value3:
-        description: HW1 control path can override the software configuration.
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_HWSEL_HW8:
-    enum:
-      value1:
-        description: Software control only.
-        value: 0
-      value2:
-        description: HW0 control path can override the software configuration.
-        value: 1
-      value3:
-        description: HW1 control path can override the software configuration.
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_HWSEL_HW7:
-    enum:
-      value1:
-        description: Software control only.
-        value: 0
-      value2:
-        description: HW0 control path can override the software configuration.
-        value: 1
-      value3:
-        description: HW1 control path can override the software configuration.
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_HWSEL_HW6:
-    enum:
-      value1:
-        description: Software control only.
-        value: 0
-      value2:
-        description: HW0 control path can override the software configuration.
-        value: 1
-      value3:
-        description: HW1 control path can override the software configuration.
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_HWSEL_HW5:
-    enum:
-      value1:
-        description: Software control only.
-        value: 0
-      value2:
-        description: HW0 control path can override the software configuration.
-        value: 1
-      value3:
-        description: HW1 control path can override the software configuration.
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_HWSEL_HW4:
-    enum:
-      value1:
-        description: Software control only.
-        value: 0
-      value2:
-        description: HW0 control path can override the software configuration.
-        value: 1
-      value3:
-        description: HW1 control path can override the software configuration.
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_HWSEL_HW3:
-    enum:
-      value1:
-        description: Software control only.
-        value: 0
-      value2:
-        description: HW0 control path can override the software configuration.
-        value: 1
-      value3:
-        description: HW1 control path can override the software configuration.
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_HWSEL_HW2:
-    enum:
-      value1:
-        description: Software control only.
-        value: 0
-      value2:
-        description: HW0 control path can override the software configuration.
-        value: 1
-      value3:
-        description: HW1 control path can override the software configuration.
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_HWSEL_HW1:
-    enum:
-      value1:
-        description: Software control only.
-        value: 0
-      value2:
-        description: HW0 control path can override the software configuration.
-        value: 1
-      value3:
-        description: HW1 control path can override the software configuration.
-        value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT5_HWSEL_HW0:
-    enum:
-      value1:
-        description: Software control only.
-        value: 0
-      value2:
-        description: HW0 control path can override the software configuration.
-        value: 1
-      value3:
+      hw1_control_path_can_override_software_config_cont:
         description: HW1 control path can override the software configuration.
         value: 2
     unit_test: false

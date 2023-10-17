@@ -33,7 +33,7 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_POWER_PWRSTAT_USBPHYPDQ
+            type: SCU_POWER_PWRSTAT_USBOTGEN
           - name: HIBEN
             description: Hibernate Domain Enable Status
             index: 0
@@ -67,7 +67,7 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_POWER_PWRSET_USBPHYPDQ
+            type: SCU_POWER_PWRSET_USBOTGEN
           - name: HIB
             description: Set Hibernate Domain Enable
             index: 0
@@ -101,7 +101,7 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_POWER_PWRCLR_USBPHYPDQ
+            type: SCU_POWER_PWRCLR_USBOTGEN
           - name: HIB
             description: Clear Disable Hibernate Domain
             index: 0
@@ -174,10 +174,10 @@ structs:
 enums:
   SCU_POWER_PWRSTAT_USBPUWQ:
     enum:
-      value1:
+      active:
         description: Pull-up active
         value: 0
-      value2:
+      not_active:
         description: Pull-up not active
         value: 1
     unit_test: false
@@ -186,22 +186,10 @@ enums:
     identifier: false
   SCU_POWER_PWRSTAT_USBOTGEN:
     enum:
-      value1:
+      power_down:
         description: Power-down
         value: 0
-      value2:
-        description: Active
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_POWER_PWRSTAT_USBPHYPDQ:
-    enum:
-      value1:
-        description: Power-down
-        value: 0
-      value2:
+      active:
         description: Active
         value: 1
     unit_test: false
@@ -210,10 +198,10 @@ enums:
     identifier: false
   SCU_POWER_PWRSTAT_HIBEN:
     enum:
-      value1:
+      inactive:
         description: Inactive
         value: 0
-      value2:
+      active:
         description: Active
         value: 1
     unit_test: false
@@ -222,10 +210,10 @@ enums:
     identifier: false
   SCU_POWER_PWRSET_USBPUWQ:
     enum:
-      value1:
+      no_effect:
         description: No effect
         value: 0
-      value2:
+      pull_up_not_active:
         description: Pull-up not active
         value: 1
     unit_test: false
@@ -234,22 +222,10 @@ enums:
     identifier: false
   SCU_POWER_PWRSET_USBOTGEN:
     enum:
-      value1:
+      no_effect:
         description: No effect
         value: 0
-      value2:
-        description: Active
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_POWER_PWRSET_USBPHYPDQ:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
+      active:
         description: Active
         value: 1
     unit_test: false
@@ -258,10 +234,10 @@ enums:
     identifier: false
   SCU_POWER_PWRSET_HIB:
     enum:
-      value1:
+      no_effect:
         description: No effect
         value: 0
-      value2:
+      enable_hibernate_domain:
         description: Enable Hibernate domain
         value: 1
     unit_test: false
@@ -270,10 +246,10 @@ enums:
     identifier: false
   SCU_POWER_PWRCLR_USBPUWQ:
     enum:
-      value1:
+      no_effect:
         description: No effect
         value: 0
-      value2:
+      pull_up_active:
         description: Pull-up active
         value: 1
     unit_test: false
@@ -282,22 +258,10 @@ enums:
     identifier: false
   SCU_POWER_PWRCLR_USBOTGEN:
     enum:
-      value1:
+      no_effect:
         description: No effect
         value: 0
-      value2:
-        description: Power-down
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_POWER_PWRCLR_USBPHYPDQ:
-    enum:
-      value1:
-        description: No effect
-        value: 0
-      value2:
+      power_down:
         description: Power-down
         value: 1
     unit_test: false
@@ -306,10 +270,10 @@ enums:
     identifier: false
   SCU_POWER_PWRCLR_HIB:
     enum:
-      value1:
+      no_effect:
         description: No effect
         value: 0
-      value2:
+      disable_hibernate_domain:
         description: Disable Hibernate domain
         value: 1
     unit_test: false
@@ -318,10 +282,10 @@ enums:
     identifier: false
   SCU_POWER_EVRSTAT_OV13:
     enum:
-      value1:
+      no_overvoltage_condition:
         description: No overvoltage condition
         value: 0
-      value2:
+      regulator_overvoltage:
         description: Regulator is in overvoltage
         value: 1
     unit_test: false
