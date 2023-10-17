@@ -800,10 +800,10 @@ enums:
     identifier: false
   VADC_OCS_TGB:
     enum:
-      '0':
+      _0:
         description: Trigger Set is output on OTGB0
         value: 0
-      '1':
+      _1:
         description: Trigger Set is output on OTGB1
         value: 1
     unit_test: false
@@ -878,10 +878,10 @@ enums:
     identifier: false
   VADC_GLOBCFG_DCMSB:
     enum:
-      1_clock_cycles_msb_standard:
+      _1_clock_cycles_msb_standard:
         description: 1 clock cycles for the MSB (standard)
         value: 0
-      2_clock_cycles_msb_fadci_20_mhz:
+      _2_clock_cycles_msb_fadci_20_mhz:
         description: 2 clock cycles for the MSB (fADCI > 20 MHz)
         value: 1
     unit_test: false
@@ -890,16 +890,16 @@ enums:
     identifier: false
   VADC_GLOBCFG_DIVA:
     enum:
-      '2':
+      _2:
         description: fADCI = fADC / 2
         value: 0
-      '2_':
+      _2_x:
         description: fADCI = fADC / 2
         value: 1
-      '3':
+      _3:
         description: fADCI = fADC / 3
         value: 2
-      '32':
+      _32:
         description: fADCI = fADC / 32
         value: 31
     unit_test: false
@@ -908,16 +908,16 @@ enums:
     identifier: false
   VADC_GLOBICLASS_CME:
     enum:
-      12_bit_conversion:
+      _12_bit_conversion:
         description: 12-bit conversion
         value: 0
-      10_bit_conversion:
+      _10_bit_conversion:
         description: 10-bit conversion
         value: 1
-      8_bit_conversion:
+      _8_bit_conversion:
         description: 8-bit conversion
         value: 2
-      10_bit_fast_compare_mode:
+      _10_bit_fast_compare_mode:
         description: 10-bit fast compare mode
         value: 5
     unit_test: false
@@ -974,19 +974,19 @@ enums:
     identifier: false
   VADC_GLOBEVNP_REV0NP:
     enum:
-      0_common_s_cont:
+      _0_common_service_request_group_0:
         description: Select shared service request line 0 of common service request
           group 0
         value: 0
-      3_common_s_cont:
+      _3_common_service_request_group_0:
         description: Select shared service request line 3 of common service request
           group 0
         value: 3
-      0_common_s_cont_:
+      _0_common_service_request_group_1:
         description: Select shared service request line 0 of common service request
           group 1
         value: 4
-      3_common_s_cont_:
+      _3_common_service_request_group_1:
         description: Select shared service request line 3 of common service request
           group 1
         value: 7
@@ -1038,10 +1038,10 @@ enums:
       vagnd:
         description: Connected to VAGND
         value: 1
-      13rd_varef:
+      _13rd_varef:
         description: Connected to 1/3rd VAREF
         value: 2
-      23rd_varef:
+      _23rd_varef:
         description: Connected to 2/3rd VAREF
         value: 3
     unit_test: false
@@ -1251,11 +1251,11 @@ enums:
         description: Conversion requests are issued if at least one pending bit is
           set
         value: 1
-      conversion_requests_issued_if_at_least_one_pe_cont_:
+      conversion_requests_issued_if_at_least_one_pe_cont_x:
         description: Conversion requests are issued if at least one pending bit is
           set and REQGTx = 1.
         value: 2
-      conversion_requests_issued_if_at_least_one_pe_cont__:
+      conversion_requests_issued_if_at_least_one_pe_cont_x_x:
         description: Conversion requests are issued if at least one pending bit is
           set and REQGTx = 0.
         value: 3
@@ -1298,10 +1298,10 @@ enums:
     identifier: false
   VADC_GLOBRES_VF:
     enum:
-      no_new_valid_data_available_write_cont:
+      no_new_valid_data_available_write_access_no_effect:
         description: 'Read access: No new valid data available Write access: No effect'
         value: 0
-      bitfield_result_contains_valid_da_cont:
+      bitfield_result_contains_valid_data_has_not_b_cont:
         description: 'Read access: Bitfield RESULT contains valid data and has not
           yet been read, or bit FCR has been updated Write access: Clear this valid
           flag and the data reduction counter (overrides a hardware set action)'

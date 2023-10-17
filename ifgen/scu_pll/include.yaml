@@ -331,7 +331,7 @@ structs:
 enums:
   SCU_PLL_PLLSTAT_PLLSP:
     enum:
-      not_usable_spikes_detected_dist_cont:
+      not_usable_spikes_detected_disturb_locked_ope_cont:
         description: The OSC frequency is not usable. Spikes are detected that disturb
           a locked operation
         value: 0
@@ -371,7 +371,7 @@ enums:
       not_entered:
         description: Bypass Mode is not entered
         value: 0
-      entered_input_fosc_selected_outpu_cont:
+      entered_input_fosc_selected_output_fpll:
         description: Bypass Mode is entered. Input fOSC is selected as output fPLL.
         value: 1
     unit_test: false
@@ -502,11 +502,11 @@ enums:
     identifier: false
   SCU_PLL_PLLCON0_VCOTR:
     enum:
-      normal_range_vco_outp_cont:
+      normal_range_vco_output_frequency_between_260_cont:
         description: VCO bandwidth is operation in the normal range. VCO output frequency
           is between 260 and 520 MHz for a input frequency between 8 and 16 MHz.
         value: 0
-      test_range_vco_output_cont:
+      test_range_vco_output_frequency_between_260_5_cont:
         description: VCO bandwidth is operation in the test range. VCO output frequency
           is between 260 and 520 MHz for a input frequency between 8 and 16 MHz.
         value: 1
@@ -553,11 +553,11 @@ enums:
     identifier: false
   SCU_PLL_USBPLLSTAT_VCOLOCK:
     enum:
-      greater_than_a_cont:
+      greater_than_allowed_vco_part_pll_can_not_loc_cont:
         description: The frequency difference of fREF and fDIV is greater than allowed.
           The VCO part of the PLL can not lock on a target frequency.
         value: 0
-      small_enough_e_cont:
+      small_enough_enable_stable_vco_operation:
         description: The frequency difference of fREF and fDIV is small enough to
           enable a stable VCO operation
         value: 1

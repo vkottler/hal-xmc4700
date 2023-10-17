@@ -257,7 +257,7 @@ enums:
     identifier: false
   CAN_PANCTR_BUSY:
     enum:
-      has_finished_command_ready_accept_new_c_cont:
+      has_finished_command_ready_accept_new_command:
         description: Panel has finished command and is ready to accept a new command.
         value: 0
       operation_progress:
@@ -281,7 +281,7 @@ enums:
       hard_wired_0:
         description: hard wired to 0
         value: 4
-      hard_wired_0_:
+      hard_wired_0_x:
         description: hard wired to 0
         value: 8
     unit_test: false

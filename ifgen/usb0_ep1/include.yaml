@@ -672,7 +672,7 @@ enums:
     identifier: false
   USB0_EP1_DIEPCTL_ISOCONT_NAKSts:
     enum:
-      on_nak_handshakes_based_fi_cont:
+      on_nak_handshakes_based_fifo_status:
         description: The core is transmitting non-NAK handshakes based on the FIFO
           status.
         value: 0
@@ -697,10 +697,10 @@ enums:
     identifier: false
   USB0_EP1_DIEPCTL_INTBULK_DPID:
     enum:
-      '0':
+      _0:
         description: DATA0
         value: 0
-      '1':
+      _1:
         description: DATA1
         value: 1
     unit_test: false
@@ -712,10 +712,10 @@ enums:
       endpoint_txfifo_full:
         description: Endpoint TxFIFO is full
         value: 0
-      1_word_available:
+      _1_word_available:
         description: 1 word available
         value: 1
-      2_words_available:
+      _2_words_available:
         description: 2 words available
         value: 2
     unit_test: false

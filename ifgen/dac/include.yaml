@@ -592,7 +592,7 @@ enums:
       na:
         description: na
         value: 6
-      na_:
+      na_x:
         description: na
         value: 7
     unit_test: false
@@ -613,7 +613,7 @@ enums:
     identifier: false
   DAC_DAC0CFG1_TRIGMOD:
     enum:
-      internal_trigger_integer_divided_clock___see__cont:
+      internal_trigger_integer_divided_clock_see_fr_cont:
         description: internal Trigger (integer divided clock - see FREQ parameter)
         value: 0
       external_trigger_preselected_trigger_by_trigs_cont:
@@ -628,11 +628,11 @@ enums:
     identifier: false
   DAC_DAC0CFG1_DATMOD:
     enum:
-      independent_data_handling___process_data_data_cont:
+      independent_data_handling_process_data_data0__cont:
         description: independent data handling - process data from DATA0 register
           (bits 11:0) to DAC0 and data from DATA1 register (bits 11:0) to DAC1
         value: 0
-      simultaneous_data_handling___process_data_dac_cont:
+      simultaneous_data_handling_process_data_dac01_cont:
         description: simultaneous data handling - process data from DAC01 register
           to both DACs (bits 11:0 to DAC0 and bits 23:12 to DAC1).
         value: 1

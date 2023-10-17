@@ -99,19 +99,19 @@ enums:
     identifier: false
   SCU_OSC_OSCHPCTRL_GAINSEL:
     enum:
-      8_mhz:
+      _8_mhz:
         description: The gain control is configured for frequencies from 4 MHz to
           8 MHz
         value: 0
-      16_mhz:
+      _16_mhz:
         description: The gain control is configured for frequencies from 4 MHz to
           16 MHz
         value: 1
-      20_mhz:
+      _20_mhz:
         description: The gain control is configured for frequencies from 4 MHz to
           20 MHz
         value: 2
-      25_mhz:
+      _25_mhz:
         description: The gain control is configured for frequencies from 4 MHz to
           25 MHz
         value: 3

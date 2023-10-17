@@ -2391,10 +2391,10 @@ enums:
     identifier: false
   PPB_SYST_CSR_TICKINT:
     enum:
-      does_not_assert_systick_ex_cont:
+      does_not_assert_systick_exception_request:
         description: counting down to zero does not assert the SysTick exception request
         value: 0
-      asserts_systick_exception__cont:
+      asserts_systick_exception_request:
         description: counting down to zero to asserts the SysTick exception request.
         value: 1
     unit_test: false
@@ -2550,7 +2550,7 @@ enums:
       preempted_active_exceptions_execute:
         description: there are preempted active exceptions to execute
         value: 0
-      no_active_exceptions_or_currently_execu_cont:
+      no_active_exceptions_or_currently_executing_e_cont:
         description: there are no active exceptions, or the currently-executing exception
           is the only active exception.
         value: 1
@@ -2632,10 +2632,10 @@ enums:
     identifier: false
   PPB_CCR_STKALIGN:
     enum:
-      4_byte_aligned:
+      _4_byte_aligned:
         description: 4-byte aligned
         value: 0
-      8_byte_aligned:
+      _8_byte_aligned:
         description: 8-byte aligned.
         value: 1
     unit_test: false
@@ -2694,10 +2694,10 @@ enums:
     identifier: false
   PPB_CCR_NONBASETHRDENA:
     enum:
-      only_when_no__cont:
+      only_when_no_exception_active:
         description: processor can enter Thread mode only when no exception is active.
         value: 0
-      any_level_und_cont:
+      any_level_under_control_an_exc_return_value_s_cont:
         description: processor can enter Thread mode from any level under the control
           of an EXC_RETURN value, see Exception returnException return occurs when
           the processor is in Handler mode and executes one of the following instructions
@@ -2994,12 +2994,12 @@ enums:
     identifier: false
   PPB_MPU_CTRL_PRIVDEFENA:
     enum:
-      disables_use_default_memory_ma_cont:
+      disables_use_default_memory_map_any_memory_ac_cont:
         description: If the MPU is enabled, disables use of the default memory map.
           Any memory access to a location not covered by any enabled region causes
           a fault.
         value: 0
-      enables_use_default_memory_map_cont:
+      enables_use_default_memory_map_background_reg_cont:
         description: If the MPU is enabled, enables use of the default memory map
           as a background region for privileged software accesses.
         value: 1
@@ -3009,11 +3009,11 @@ enums:
     identifier: false
   PPB_MPU_CTRL_HFNMIENA:
     enum:
-      disabled_during_hard_fault_nmi_faultmask__cont:
+      disabled_during_hard_fault_nmi_faultmask_hand_cont:
         description: MPU is disabled during hard fault, NMI, and FAULTMASK handlers,
           regardless of the value of the ENABLE bit
         value: 0
-      enabled_during_hard_fault_nmi_faultmask_h_cont:
+      enabled_during_hard_fault_nmi_faultmask_handlers:
         description: the MPU is enabled during hard fault, NMI, and FAULTMASK handlers.
         value: 1
     unit_test: false
@@ -3022,12 +3022,12 @@ enums:
     identifier: false
   PPB_MPU_RBAR_VALID:
     enum:
-      mpu_rnr_not_changed_processor___updates_base__cont:
+      mpu_rnr_not_changed_processor_updates_base_ad_cont:
         description: 'MPU_RNR not changed, and the processor: - updates the base address
           for the region specified in the MPU_RNR - ignores the value of the REGION
           field'
         value: 0
-      processor___updates_value_mpu_rnr_value_regio_cont:
+      processor_updates_value_mpu_rnr_value_region__cont:
         description: 'the processor: - updates the value of the MPU_RNR to the value
           of the REGION field - updates the base address for the region specified
           in the REGION field.'
@@ -3075,11 +3075,11 @@ enums:
     identifier: false
   PPB_FPCCR_MONRDY:
     enum:
-      disabled_or_priority_did_not_pe_cont:
+      disabled_or_priority_did_not_permit_setting_m_cont:
         description: Debug Monitor is disabled or priority did not permit setting
           MON_PEND when the floating-point stack frame was allocated.
         value: 0
-      enabled_priority_permits_settin_cont:
+      enabled_priority_permits_setting_mon_pend_whe_cont:
         description: Debug Monitor is enabled and priority permits setting MON_PEND
           when the floating-point stack frame was allocated.
         value: 1
@@ -3089,11 +3089,11 @@ enums:
     identifier: false
   PPB_FPCCR_BFRDY:
     enum:
-      disabled_or_priority_did_not_permit__cont:
+      disabled_or_priority_did_not_permit_setting_b_cont:
         description: BusFault is disabled or priority did not permit setting the BusFault
           handler to the pending state when the floating-point stack frame was allocated.
         value: 0
-      enabled_priority_permitted_setting_b_cont:
+      enabled_priority_permitted_setting_busfault_h_cont:
         description: BusFault is enabled and priority permitted setting the BusFault
           handler to the pending state when the floating-point stack frame was allocated.
         value: 1
@@ -3103,12 +3103,12 @@ enums:
     identifier: false
   PPB_FPCCR_MMRDY:
     enum:
-      disabled_or_priority_did_not_permit_cont:
+      disabled_or_priority_did_not_permit_setting_m_cont:
         description: MemManage is disabled or priority did not permit setting the
           MemManage handler to the pending state when the floating-point stack frame
           was allocated.
         value: 0
-      enabled_priority_permitted_setting__cont:
+      enabled_priority_permitted_setting_memmanage__cont:
         description: MemManage is enabled and priority permitted setting the MemManage
           handler to the pending state when the floating-point stack frame was allocated.
         value: 1
@@ -3118,11 +3118,11 @@ enums:
     identifier: false
   PPB_FPCCR_HFRDY:
     enum:
-      did_not_permit_setting_hardfault_han_cont:
+      did_not_permit_setting_hardfault_handler_pend_cont:
         description: Priority did not permit setting the HardFault handler to the
           pending state when the floating-point stack frame was allocated.
         value: 0
-      permitted_setting_hardfault_handler__cont:
+      permitted_setting_hardfault_handler_pending_s_cont:
         description: Priority permitted setting the HardFault handler to the pending
           state when the floating-point stack frame was allocated.
         value: 1
@@ -3132,11 +3132,11 @@ enums:
     identifier: false
   PPB_FPCCR_THREAD:
     enum:
-      not_thread_mode_when_floating_point__cont:
+      not_thread_mode_when_floating_point_stack_fra_cont:
         description: Mode was not Thread Mode when the floating-point stack frame
           was allocated.
         value: 0
-      thread_mode_when_floating_point_stac_cont:
+      thread_mode_when_floating_point_stack_frame_w_cont:
         description: Mode was Thread Mode when the floating-point stack frame was
           allocated.
         value: 1
@@ -3146,11 +3146,11 @@ enums:
     identifier: false
   PPB_FPCCR_USER:
     enum:
-      not_user_when_floating_po_cont:
+      not_user_when_floating_point_stack_frame_was__cont:
         description: Privilege level was not user when the floating-point stack frame
           was allocated.
         value: 0
-      user_when_floating_point__cont:
+      user_when_floating_point_stack_frame_was_allocated:
         description: Privilege level was user when the floating-point stack frame
           was allocated.
         value: 1
@@ -3163,7 +3163,7 @@ enums:
       not_active:
         description: Lazy state preservation is not active.
         value: 0
-      active_floating_point_cont:
+      active_floating_point_stack_frame_has_been_al_cont:
         description: Lazy state preservation is active. floating-point stack frame
           has been allocated but saving state to it has been deferred.
         value: 1

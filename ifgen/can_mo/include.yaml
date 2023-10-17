@@ -554,12 +554,12 @@ structs:
 enums:
   CAN_MO_MOFCR_RMM:
     enum:
-      disabled_identifier_ide_bit_cont:
+      disabled_identifier_ide_bit_dlc_message_objec_cont:
         description: 'Remote monitoring is disabled: Identifier, IDE bit, and DLC
           of message object n remain unchanged upon the reception of a matching Remote
           Frame.'
         value: 0
-      enabled_identifier_ide_bit__cont:
+      enabled_identifier_ide_bit_dlc_matching_remot_cont:
         description: 'Remote monitoring is enabled: Identifier, IDE bit, and DLC of
           a matching Remote Frame are copied to transmit object n in order to monitor
           incoming Remote Frames.'
@@ -570,11 +570,11 @@ enums:
     identifier: false
   CAN_MO_MOFCR_FRREN:
     enum:
-      n_set_reception_matching__cont:
+      n_set_reception_matching_remote_frame:
         description: TXRQ of message object n is set on reception of a matching Remote
           Frame.
         value: 0
-      referenced_by_pointer_cur_cont:
+      referenced_by_pointer_cur_set_reception_match_cont:
         description: TXRQ of the message object referenced by the pointer CUR is set
           on reception of a matching Remote Frame.
         value: 1
@@ -599,7 +599,7 @@ enums:
       not_copied:
         description: Data fields are not copied.
         value: 0
-      registers_modataln_modatahn_gatew_cont:
+      registers_modataln_modatahn_gateway_source_ob_cont:
         description: Data fields in registers MODATALn and MODATAHn of the gateway
           source object (after storing the received frame in the source) are copied
           to the gateway destination.
@@ -613,7 +613,7 @@ enums:
       not_copied:
         description: Data length code is not copied.
         value: 0
-      gateway_source_object_after__cont:
+      gateway_source_object_after_storing_received__cont:
         description: Data length code of the gateway source object (after storing
           the received frame in the source) is copied to the gateway destination object.
         value: 1
@@ -626,7 +626,7 @@ enums:
       not_copied:
         description: The identifier of the gateway source object is not copied.
         value: 0
-      after_storin_cont:
+      after_storing_received_frame_source_copied_ga_cont:
         description: The identifier of the gateway source object (after storing the
           received frame in the source) is copied to the gateway destination object.
         value: 1
@@ -639,7 +639,7 @@ enums:
       unchanged_destination_object:
         description: TXRQ is unchanged in the destination object.
         value: 0
-      set_gateway_destination_object_after_int_cont:
+      set_gateway_destination_object_after_internal_cont:
         description: TXRQ is set in the gateway destination object after the internal
           transfer from the gateway source to the gateway destination object.
         value: 1
@@ -682,16 +682,16 @@ enums:
     identifier: false
   CAN_MO_MOIPR_TXINP:
     enum:
-      0_selected:
+      _0_selected:
         description: Interrupt output line INT_O0 is selected.
         value: 0
-      1_selected:
+      _1_selected:
         description: Interrupt output line INT_O1 is selected.
         value: 1
-      14_selected:
+      _14_selected:
         description: Interrupt output line INT_O14 is selected.
         value: 14
-      15_selected:
+      _15_selected:
         description: Interrupt output line INT_O15 is selected.
         value: 15
     unit_test: false
@@ -700,11 +700,11 @@ enums:
     identifier: false
   CAN_MO_MOAMR_MIDE:
     enum:
-      accepts_reception_both_stand_cont:
+      accepts_reception_both_standard_extended_frames:
         description: Message object n accepts the reception of both, standard and
           extended frames.
         value: 0
-      receives_frames_only_with_ma_cont:
+      receives_frames_only_with_matching_ide_bit:
         description: Message object n receives frames only with matching IDE bit.
         value: 1
     unit_test: false
@@ -713,19 +713,19 @@ enums:
     identifier: false
   CAN_MO_MOAR_PRI:
     enum:
-      list_orde_cont:
+      list_order_this_means_message_object_n_consid_cont:
         description: Transmit acceptance filtering is based on the list order. This
           means that message object n is considered for transmission only if there
           is no other message object with valid transmit request (MSGVAL & TXEN0 &
           TXEN1 = 1) somewhere before this object in the list.
         value: 1
-      can_ident_cont:
+      can_identifier_this_means_message_object_n_co_cont:
         description: Transmit acceptance filtering is based on the CAN identifier.
           This means, message object n is considered for transmission only if there
           is no other message object with higher priority identifier + IDE + DIR (with
           respect to CAN arbitration rules) somewhere in the list (see ).
         value: 2
-      list_orde_cont_:
+      list_order_pri_01b:
         description: Transmit acceptance filtering is based on the list order (as
           PRI = 01B).
         value: 3
@@ -735,10 +735,10 @@ enums:
     identifier: false
   CAN_MO_MOAR_IDE:
     enum:
-      standard_frames_with_cont:
+      standard_frames_with_11_bit_identifier:
         description: Message object n handles standard frames with 11-bit identifier.
         value: 0
-      extended_frames_with_cont:
+      extended_frames_with_29_bit_identifier:
         description: Message object n handles extended frames with 29-bit identifier.
         value: 1
     unit_test: false
@@ -800,10 +800,10 @@ enums:
     identifier: false
   CAN_MO_MOSTAT_RTSEL:
     enum:
-      not_selected_receive_or_tran_cont:
+      not_selected_receive_or_transmit_operation:
         description: Message object n is not selected for receive or transmit operation.
         value: 0
-      selected_receive_or_transmit_cont:
+      selected_receive_or_transmit_operation:
         description: Message object n is selected for receive or transmit operation.
         value: 1
     unit_test: false

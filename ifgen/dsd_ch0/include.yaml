@@ -413,16 +413,16 @@ enums:
     identifier: false
   DSD_CH0_MODCFG_DIVM:
     enum:
-      '2':
+      _2:
         description: fMOD = fCLK / 2
         value: 0
-      '4':
+      _4:
         description: fMOD = fCLK / 4
         value: 1
-      '6':
+      _6:
         description: fMOD = fCLK / 6
         value: 2
-      '32':
+      _32:
         description: fMOD = fCLK / 32
         value: 15
     unit_test: false
@@ -450,7 +450,7 @@ enums:
         description: Direct clock, a sample trigger is generated at each rising clock
           edge
         value: 1
-      direct_clock_sample_trigger_generated_at_each_cont_:
+      direct_clock_sample_trigger_generated_at_each_cont_x:
         description: Direct clock, a sample trigger is generated at each falling clock
           edge
         value: 2
@@ -462,7 +462,7 @@ enums:
         description: Double clock, a sample trigger is generated at every 2nd rising
           clock edge
         value: 5
-      double_clock_sample_trigger_generated_at_ever_cont_:
+      double_clock_sample_trigger_generated_at_ever_cont_x:
         description: Double clock, a sample trigger is generated at every 2nd falling
           clock edge
         value: 6
@@ -600,13 +600,13 @@ enums:
     identifier: false
   DSD_CH0_FCFGC_CFMC:
     enum:
-      '1':
+      _1:
         description: CIC1
         value: 0
-      '2':
+      _2:
         description: CIC2
         value: 1
-      '3':
+      _3:
         description: CIC3
         value: 2
       f:
@@ -679,12 +679,12 @@ enums:
     identifier: false
   DSD_CH0_IWCTR_INTEN:
     enum:
-      stopped_inten_cleared_at_end_inte_cont:
+      stopped_inten_cleared_at_end_integration_wind_cont:
         description: Integration stopped. INTEN is cleared at the end of the integration
           window, i.e. upon the inverse trigger event transition of the external trigger
           signal.
         value: 0
-      enabled_inten_set_upon_defined_tr_cont:
+      enabled_inten_set_upon_defined_trigger_event:
         description: Integration enabled. INTEN is set upon the defined trigger event.
         value: 1
     unit_test: false

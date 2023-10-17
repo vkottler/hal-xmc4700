@@ -310,11 +310,11 @@ structs:
 enums:
   CAN_NODE0_NCR_CCE:
     enum:
-      bit_timing_register_port_control_register_err_cont:
+      only_be_read_all_attempts_modify_them_ignored:
         description: The Bit Timing Register, the Port Control Register, Error Counter
           Register may only be read. All attempts to modify them are ignored.
         value: 0
-      _:
+      be_read_written:
         description: The Bit Timing Register, the Port Control Register, Error Counter
           Register may be read and written.
         value: 1
@@ -438,16 +438,16 @@ enums:
     identifier: false
   CAN_NODE0_NIPR_CFCINP:
     enum:
-      0_selected:
+      _0_selected:
         description: Interrupt output line INT_O0 is selected.
         value: 0
-      1_selected:
+      _1_selected:
         description: Interrupt output line INT_O1 is selected.
         value: 1
-      14_selected:
+      _14_selected:
         description: Interrupt output line INT_O14 is selected.
         value: 14
-      15_selected:
+      _15_selected:
         description: Interrupt output line INT_O15 is selected.
         value: 15
     unit_test: false
@@ -459,7 +459,7 @@ enums:
       disabled:
         description: Loop-Back Mode is disabled.
         value: 0
-      enabled_this_node_connected_an_cont:
+      enabled_this_node_connected_an_internal_virtu_cont:
         description: Loop-Back Mode is enabled. This node is connected to an internal
           (virtual) loop-back CAN bus. All CAN nodes which are in Loop-Back Mode are
           connected to this virtual CAN bus so that they can communicate with each
@@ -475,7 +475,7 @@ enums:
       brp1_clock_cycles:
         description: A time quantum lasts (BRP+1) clock cycles.
         value: 0
-      8_brp1_clock_cycles:
+      _8_brp1_clock_cycles:
         description: A time quantum lasts 8 (BRP+1) clock cycles.
         value: 1
     unit_test: false
@@ -484,10 +484,10 @@ enums:
     identifier: false
   CAN_NODE0_NECNT_LEINC:
     enum:
-      '1':
+      _1:
         description: The last error led to an error counter increment of 1.
         value: 0
-      '8':
+      _8:
         description: The last error led to an error counter increment of 8.
         value: 1
     unit_test: false
@@ -496,11 +496,11 @@ enums:
     identifier: false
   CAN_NODE0_NECNT_LETD:
     enum:
-      rece_cont:
+      receiver_rec_has_been_incremented:
         description: The last error occurred while the CAN node x was receiver (REC
           has been incremented).
         value: 0
-      tran_cont:
+      transmitter_tec_has_been_incremented:
         description: The last error occurred while the CAN node x was transmitter
           (TEC has been incremented).
         value: 1

@@ -389,7 +389,7 @@ structs:
 enums:
   USB0_EP0_DIEPCTL0_NAKSts:
     enum:
-      on_nak_handshakes_based_fi_cont:
+      on_nak_handshakes_based_fifo_status:
         description: The core is transmitting non-NAK handshakes based on the FIFO
           status
         value: 0
@@ -402,16 +402,16 @@ enums:
     identifier: false
   USB0_EP0_DIEPCTL0_MPS:
     enum:
-      64_bytes:
+      _64_bytes:
         description: 64 bytes
         value: 0
-      32_bytes:
+      _32_bytes:
         description: 32 bytes
         value: 1
-      16_bytes:
+      _16_bytes:
         description: 16 bytes
         value: 2
-      8_bytes:
+      _8_bytes:
         description: 8 bytes
         value: 3
     unit_test: false
@@ -423,10 +423,10 @@ enums:
       endpoint_txfifo_full:
         description: Endpoint TxFIFO is full
         value: 0
-      1_word_available:
+      _1_word_available:
         description: 1 word available
         value: 1
-      2_words_available:
+      _2_words_available:
         description: 2 words available
         value: 2
     unit_test: false
@@ -436,13 +436,13 @@ enums:
     underlying: uint16_t
   USB0_EP0_DOEPTSIZ0_SUPCnt:
     enum:
-      1_packet:
+      _1_packet:
         description: 1 packet
         value: 1
-      2_packets:
+      _2_packets:
         description: 2 packets
         value: 2
-      3_packets:
+      _3_packets:
         description: 3 packets
         value: 3
     unit_test: false

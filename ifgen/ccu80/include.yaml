@@ -723,7 +723,7 @@ enums:
       only_be_requested_by_sw:
         description: Shadow transfer can only be requested by SW
         value: 0
-      be_requested_via_sw_via_c_cont:
+      be_requested_via_sw_via_ccu8xmcss_input:
         description: Shadow transfer can be requested via SW and via the CCU8x.MCSS
           input.
         value: 1
@@ -779,17 +779,17 @@ enums:
           timer slice (idle mode or running)..PRB and prescaler registers are cleared
           when the Run Bit of CC80 is cleared.
         value: 1
-      gstatthe_register_contains_status_prescaler_e_cont_:
+      gstatthe_register_contains_status_prescaler_e_cont_x:
         description: GSTATThe register contains the status of the prescaler and each
           timer slice (idle mode or running)..PRB and prescaler registers are cleared
           when the Run Bit of CC81 is cleared.
         value: 2
-      gstatthe_register_contains_status_prescaler_e_cont__:
+      gstatthe_register_contains_status_prescaler_e_cont_x_x:
         description: GSTATThe register contains the status of the prescaler and each
           timer slice (idle mode or running)..PRB and prescaler registers are cleared
           when the Run Bit of CC82 is cleared.
         value: 3
-      gstatthe_register_contains_status_prescaler_e_cont___:
+      gstatthe_register_contains_status_prescaler_e_cont_x_x_x:
         description: GSTATThe register contains the status of the prescaler and each
           timer slice (idle mode or running)..PRB and prescaler registers are cleared
           when the Run Bit of CC83 is cleared.
@@ -866,16 +866,16 @@ enums:
     identifier: false
   CCU80_GPCHK_PISEL:
     enum:
-      01___driver_output_connected_event_1_slice_0:
+      _01_driver_output_connected_event_1_slice_0:
         description: CC8x.GP01 - driver output is connected to event 1 of slice 0
         value: 0
-      11___drive_output_connected_event_1_slice_1:
+      _11_drive_output_connected_event_1_slice_1:
         description: CC8x.GP11 - drive output is connected to event 1 of slice 1
         value: 1
-      21___driver_output_connected_event_1_slice_2:
+      _21_driver_output_connected_event_1_slice_2:
         description: CC8x.GP21 - driver output is connected to event 1 of slice 2
         value: 2
-      31___driver_output_connected_event_1_slice_3:
+      _31_driver_output_connected_event_1_slice_3:
         description: CC8x.GP31 - driver output is connected to event 1 of slice 3
         value: 3
     unit_test: false
@@ -884,16 +884,16 @@ enums:
     identifier: false
   CCU80_GPCHK_PACS:
     enum:
-      '0':
+      _0:
         description: CC80
         value: 0
-      '1':
+      _1:
         description: CC81
         value: 1
-      '2':
+      _2:
         description: CC82
         value: 2
-      '3':
+      _3:
         description: CC83
         value: 3
     unit_test: false

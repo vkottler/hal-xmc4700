@@ -2188,12 +2188,12 @@ enums:
     identifier: false
   VADC_G0_ARBCFG_ARBM:
     enum:
-      runs_permanently_this_setting_require_cont:
+      runs_permanently_this_setting_required_synchr_cont:
         description: The arbiter runs permanently. This setting is required for a
           synchronization slave (see ) and for equidistant sampling using the signal
           ARBCNT (see ).
         value: 0
-      only_runs_if_at_least_one_conversion__cont:
+      only_runs_if_at_least_one_conversion_request__cont:
         description: The arbiter only runs if at least one conversion request of an
           enabled request source is pending. This setting ensures a reproducible latency
           from an incoming request to the conversion start, if the converter is idle.
@@ -2205,16 +2205,16 @@ enums:
     identifier: false
   VADC_G0_ARBCFG_ARBRND:
     enum:
-      4_arbitration_slots_per_round_tarb_4_fadcd:
+      _4_arbitration_slots_per_round_tarb_4_fadcd:
         description: 4 arbitration slots per round (tARB = 4 / fADCD)
         value: 0
-      8_arbitration_slots_per_round_tarb_8_fadcd:
+      _8_arbitration_slots_per_round_tarb_8_fadcd:
         description: 8 arbitration slots per round (tARB = 8 / fADCD)
         value: 1
-      16_arbitration_slots_per_round_tarb_16_fadcd:
+      _16_arbitration_slots_per_round_tarb_16_fadcd:
         description: 16 arbitration slots per round (tARB = 16 / fADCD)
         value: 2
-      20_arbitration_slots_per_round_tarb_20_fadcd:
+      _20_arbitration_slots_per_round_tarb_20_fadcd:
         description: 20 arbitration slots per round (tARB = 20 / fADCD)
         value: 3
     unit_test: false
@@ -2223,12 +2223,12 @@ enums:
     identifier: false
   VADC_G0_ARBPR_ASEN2:
     enum:
-      disabled_consi_cont:
+      disabled_considered_empty_pending_conversion__cont:
         description: The corresponding arbitration slot is disabled and considered
           as empty. Pending conversion requests from the associated request source
           are disregarded.
         value: 0
-      enabled_pendin_cont:
+      enabled_pending_conversion_requests_associate_cont:
         description: The corresponding arbitration slot is enabled. Pending conversion
           requests from the associated request source are arbitrated.
         value: 1
@@ -2263,7 +2263,7 @@ enums:
     identifier: false
   VADC_G0_CHASS_ASSCH7:
     enum:
-      can_be_background_channel_converted_cont:
+      can_be_background_channel_converted_with_lowe_cont:
         description: Channel y can be a background channel converted with lowest priority
         value: 0
       priority_channel_within_group_x:
@@ -2275,16 +2275,16 @@ enums:
     identifier: false
   VADC_G0_ICLASS_CME:
     enum:
-      12_bit_conversion:
+      _12_bit_conversion:
         description: 12-bit conversion
         value: 0
-      10_bit_conversion:
+      _10_bit_conversion:
         description: 10-bit conversion
         value: 1
-      8_bit_conversion:
+      _8_bit_conversion:
         description: 8-bit conversion
         value: 2
-      10_bit_fast_compare_mode:
+      _10_bit_fast_compare_mode:
         description: 10-bit fast compare mode
         value: 5
     unit_test: false
@@ -2306,18 +2306,18 @@ enums:
     identifier: false
   VADC_G0_SYNCTR_STSEL:
     enum:
-      master_use_own_bitfiel_cont:
+      master_use_own_bitfield_gxarbcfganonc:
         description: 'Kernel is synchronization master: Use own bitfield GxARBCFG.ANONC'
         value: 0
-      slave_control_informat_cont:
+      slave_control_information_input_ci1:
         description: 'Kernel is synchronization slave: Control information from input
           CI1'
         value: 1
-      slave_control_informat_cont_:
+      slave_control_information_input_ci2:
         description: 'Kernel is synchronization slave: Control information from input
           CI2'
         value: 2
-      slave_control_informat_cont__:
+      slave_control_information_input_ci3:
         description: 'Kernel is synchronization slave: Control information from input
           CI3'
         value: 3
@@ -2339,11 +2339,11 @@ enums:
     identifier: false
   VADC_G0_BFL_BFA3:
     enum:
-      above_define_cont:
+      above_defined_band_or_compare_value_clear_if_below:
         description: Set boundary flag BFLy if result is above the defined band or
           compare value, clear if below
         value: 0
-      below_define_cont:
+      below_defined_band_or_compare_value_clear_if_above:
         description: Set boundary flag BFLy if result is below the defined band or
           compare value, clear if above
         value: 1
@@ -2598,12 +2598,12 @@ enums:
         description: Conversion requests are issued if a valid conversion request
           is pending in the queue 0 register or in the backup register
         value: 1
-      conversion_requests_issued_if_valid_conversio_cont_:
+      conversion_requests_issued_if_valid_conversio_cont_x:
         description: Conversion requests are issued if a valid conversion request
           is pending in the queue 0 register or in the backup register and REQGTx
           = 1
         value: 2
-      conversion_requests_issued_if_valid_conversio_cont__:
+      conversion_requests_issued_if_valid_conversio_cont_x_x:
         description: Conversion requests are issued if a valid conversion request
           is pending in the queue 0 register or in the backup register and REQGTx
           = 0
@@ -2650,17 +2650,17 @@ enums:
     identifier: false
   VADC_G0_QSR0_FILL:
     enum:
-      1_if_empty_0_or_no_if_empty_1_valid_ent_cont:
+      _1_if_empty_0_or_no_if_empty_1_valid_entry_queue:
         description: There is 1 ( if EMPTY = 0) or no (if EMPTY = 1) valid entry in
           the queue
         value: 0
-      2_valid_entries_queue:
+      _2_valid_entries_queue:
         description: There are 2 valid entries in the queue
         value: 1
-      3_valid_entries_queue:
+      _3_valid_entries_queue:
         description: There are 3 valid entries in the queue
         value: 2
-      8_valid_entries_queue:
+      _8_valid_entries_queue:
         description: There are 8 valid entries in the queue
         value: 7
     unit_test: false
@@ -2709,7 +2709,7 @@ enums:
       discarded_after_conversion_start:
         description: The request is discarded after the conversion start.
         value: 0
-      automatically_refilled_into_queue_aft_cont:
+      automatically_refilled_into_queue_after_conve_cont:
         description: The request is automatically refilled into the queue after the
           conversion start.
         value: 1
@@ -2719,10 +2719,10 @@ enums:
     identifier: false
   VADC_G0_QINR0_EXTR:
     enum:
-      immediately_leads_conversio_cont:
+      immediately_leads_conversion_request:
         description: A valid queue entry immediately leads to a conversion request.
         value: 0
-      waits_trigger_event_occur_b_cont:
+      waits_trigger_event_occur_before_issuing_conv_cont:
         description: A valid queue entry waits for a trigger event to occur before
           issuing a conversion request.
         value: 1
@@ -2748,7 +2748,7 @@ enums:
       not_valid:
         description: Backup register not valid
         value: 0
-      contains_valid_entry_this_be__cont:
+      contains_valid_entry_this_be_requested_before_cont:
         description: Backup register contains a valid entry. This will be requested
           before a valid entry in queue register 0 (stage 0) will be requested.
         value: 1
@@ -2829,11 +2829,11 @@ enums:
         description: Conversion requests are issued if at least one pending bit is
           set
         value: 1
-      conversion_requests_issued_if_at_least_one_pe_cont_:
+      conversion_requests_issued_if_at_least_one_pe_cont_x:
         description: Conversion requests are issued if at least one pending bit is
           set and REQGTx = 1.
         value: 2
-      conversion_requests_issued_if_at_least_one_pe_cont__:
+      conversion_requests_issued_if_at_least_one_pe_cont_x_x:
         description: Conversion requests are issued if at least one pending bit is
           set and REQGTx = 0.
         value: 3
@@ -2981,10 +2981,10 @@ enums:
     identifier: false
   VADC_G0_EMUXCTR_EMXCSS:
     enum:
-      number_bitfield_emuxch_selects_an_arb_cont:
+      number_bitfield_emuxch_selects_an_arbitrary_c_cont:
         description: 'Channel number: Bitfield EMUXCH selects an arbitrary channel'
         value: 0
-      enable_each_bit_bitfield_emuxch_selec_cont:
+      enable_each_bit_bitfield_emuxch_selects_assoc_cont:
         description: 'Channel enable: Each bit of bitfield EMUXCH selects the associated
           channel for EMUX control'
         value: 1
@@ -3036,10 +3036,10 @@ enums:
     identifier: false
   VADC_G0_VFR_VF15:
     enum:
-      no_new_valid_data_available_write_cont:
+      no_new_valid_data_available_write_access_no_effect:
         description: 'Read access: No new valid data available Write access: No effect'
         value: 0
-      result_register_x_contains_valid__cont:
+      result_register_x_contains_valid_data_has_not_cont:
         description: 'Read access: Result register x contains valid data and has not
           yet been read, or bit FCR has been updated Write access: Clear this valid
           flag and bitfield DRC in register GxRESy (overrides a hardware set action)'
@@ -3098,10 +3098,10 @@ enums:
     identifier: false
   VADC_G0_CHCTR_RESREG:
     enum:
-      '0':
+      _0:
         description: Store result in group result register GxRES0
         value: 0
-      '15':
+      _15:
         description: Store result in group result register GxRES15
         value: 15
     unit_test: false
@@ -3268,13 +3268,13 @@ enums:
     identifier: false
   VADC_G0_RES_CRS:
     enum:
-      '0':
+      _0:
         description: Request source 0
         value: 0
-      '1':
+      _1:
         description: Request source 1
         value: 1
-      '2':
+      _2:
         description: Request source 2
         value: 2
     unit_test: false

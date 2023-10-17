@@ -566,7 +566,7 @@ enums:
       only_be_requested_by_sw:
         description: Shadow transfer can only be requested by SW
         value: 0
-      be_requested_via_sw_via_c_cont:
+      be_requested_via_sw_via_ccu4xmcss_input:
         description: Shadow transfer can be requested via SW and via the CCU4x.MCSS
           input.
         value: 1
@@ -622,17 +622,17 @@ enums:
           timer slice (idle mode or running)..PRB and prescaler registers are cleared
           when the Run Bit of CC40 is cleared.
         value: 1
-      gstatthe_register_contains_status_prescaler_e_cont_:
+      gstatthe_register_contains_status_prescaler_e_cont_x:
         description: GSTATThe register contains the status of the prescaler and each
           timer slice (idle mode or running)..PRB and prescaler registers are cleared
           when the Run Bit of CC41 is cleared.
         value: 2
-      gstatthe_register_contains_status_prescaler_e_cont__:
+      gstatthe_register_contains_status_prescaler_e_cont_x_x:
         description: GSTATThe register contains the status of the prescaler and each
           timer slice (idle mode or running)..PRB and prescaler registers are cleared
           when the Run Bit of CC42 is cleared.
         value: 3
-      gstatthe_register_contains_status_prescaler_e_cont___:
+      gstatthe_register_contains_status_prescaler_e_cont_x_x_x:
         description: GSTATThe register contains the status of the prescaler and each
           timer slice (idle mode or running)..PRB and prescaler registers are cleared
           when the Run Bit of CC43 is cleared.

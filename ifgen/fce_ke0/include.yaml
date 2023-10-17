@@ -204,7 +204,7 @@ structs:
 enums:
   FCE_KE0_CFG_XSEL:
     enum:
-      '00000000':
+      _00000000:
         description: '0x00000000'
         value: 0
       ffffffff:

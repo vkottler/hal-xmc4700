@@ -334,11 +334,11 @@ enums:
     identifier: false
   GPDMA1_CH0_CFGH_FCMODE:
     enum:
-      serviced_when_the_cont:
+      serviced_when_they_occur_data_pre_fetching_enabled:
         description: Source transaction requests are serviced when they occur. Data
           pre-fetching is enabled.
         value: 0
-      not_serviced_unti_cont:
+      not_serviced_until_destination_transaction_re_cont:
         description: Source transaction requests are not serviced until a destination
           transaction request occurs. In this mode, the amount of data transferred
           from the source is limited so that it is guaranteed to be transferred to

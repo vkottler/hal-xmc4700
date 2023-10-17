@@ -199,7 +199,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: USB0_GAHBCFG_NPTxFEmpLvl
+            type: USB0_GAHBCFG_PTxFEmpLvl
           - name: DMAEn
             description: DMA Enable
             index: 5
@@ -1756,11 +1756,11 @@ structs:
 enums:
   USB0_GOTGCTL_OTGVer:
     enum:
-      13_this_version_core_supports_dat_cont:
+      _13_this_version_core_supports_data_line_pulsi_cont:
         description: OTG Version 1.3. In this version the core supports Data line
           pulsing and VBus pulsing for SRP.
         value: 0
-      20_this_version_core_supports_onl_cont:
+      _20_this_version_core_supports_only_data_line__cont:
         description: OTG Version 2.0. In this version the core supports only Data
           line pulsing for SRP.
         value: 1
@@ -1855,10 +1855,10 @@ enums:
     identifier: false
   USB0_GOTGCTL_BvalidOvVal:
     enum:
-      0_when_gotgctlbvalidoven_1:
+      _0_when_gotgctlbvalidoven_1:
         description: Bvalid value is 0# when GOTGCTL.BvalidOvEn = 1
         value: 0
-      1_when_gotgctlbvalidoven_1:
+      _1_when_gotgctlbvalidoven_1:
         description: Bvalid value is 1# when GOTGCTL.BvalidOvEn = 1
         value: 1
     unit_test: false
@@ -1880,10 +1880,10 @@ enums:
     identifier: false
   USB0_GOTGCTL_AvalidOvVal:
     enum:
-      0_when_gotgctlavalidoven_1:
+      _0_when_gotgctlavalidoven_1:
         description: Avalid value is 0# when GOTGCTL.AvalidOvEn = 1
         value: 0
-      1_when_gotgctlavalidoven_1:
+      _1_when_gotgctlavalidoven_1:
         description: Avalid value is 1# when GOTGCTL.AvalidOvEn = 1
         value: 1
     unit_test: false
@@ -1905,10 +1905,10 @@ enums:
     identifier: false
   USB0_GOTGCTL_VbvalidOvVal:
     enum:
-      0_when_gotgctlvbvalidoven_1:
+      _0_when_gotgctlvbvalidoven_1:
         description: vbusvalid value is 0# when GOTGCTL.VbvalidOvEn = 1
         value: 0
-      1_when_gotgctlvbvalidoven_1:
+      _1_when_gotgctlvbvalidoven_1:
         description: vbusvalid value is 1# when GOTGCTL.VbvalidOvEn = 1
         value: 1
     unit_test: false
@@ -1943,11 +1943,11 @@ enums:
     identifier: false
   USB0_GAHBCFG_AHBSingle:
     enum:
-      incr_burst_cont:
+      incr_burst_size_this_default_mode:
         description: The remaining data in a transfer is sent using INCR burst size.
           This is the default mode.
         value: 0
-      single_bur_cont:
+      single_burst_size:
         description: The remaining data in a transfer is sent using single burst size.
         value: 1
     unit_test: false
@@ -1956,26 +1956,12 @@ enums:
     identifier: false
   USB0_GAHBCFG_PTxFEmpLvl:
     enum:
-      gintstsptxfemp_interrupt_indicates_periodic_t_cont:
+      half_empty:
         description: GINTSTS.PTxFEmp interrupt indicates that the Periodic TxFIFO
           is half empty
         value: 0
-      _:
+      completely_empty:
         description: GINTSTS.PTxFEmp interrupt indicates that the Periodic TxFIFO
-          is completely empty
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USB0_GAHBCFG_NPTxFEmpLvl:
-    enum:
-      diepintxtxfemp_interrupt_indicates_endpoint_t_cont:
-        description: DIEPINTx.TxFEmp interrupt indicates that the IN Endpoint TxFIFO
-          is half empty
-        value: 0
-      _:
-        description: DIEPINTx.TxFEmp interrupt indicates that the IN Endpoint TxFIFO
           is completely empty
         value: 1
     unit_test: false
@@ -2193,10 +2179,10 @@ enums:
       non_periodic_transmit_request_queue_full:
         description: Non-periodic Transmit Request Queue is full
         value: 0
-      1_location_available:
+      _1_location_available:
         description: 1 location available
         value: 1
-      2_locations_available:
+      _2_locations_available:
         description: 2 locations available
         value: 2
     unit_test: false
@@ -2208,10 +2194,10 @@ enums:
       non_periodic_txfifo_full:
         description: Non-periodic TxFIFO is full
         value: 0
-      1_word_available:
+      _1_word_available:
         description: 1 word available
         value: 1
-      2_words_available:
+      _2_words_available:
         description: 2 words available
         value: 2
     unit_test: false
@@ -2221,16 +2207,16 @@ enums:
     underlying: uint16_t
   USB0_HCFG_FrListEn:
     enum:
-      8_entries:
+      _8_entries:
         description: 8 Entries
         value: 0
-      16_entries:
+      _16_entries:
         description: 16 Entries
         value: 1
-      32_entries:
+      _32_entries:
         description: 32 Entries
         value: 2
-      64_entries:
+      _64_entries:
         description: 64 Entries
         value: 3
     unit_test: false
@@ -2275,10 +2261,10 @@ enums:
       periodic_transmit_request_queue_full:
         description: Periodic Transmit Request Queue is full
         value: 0
-      1_location_available:
+      _1_location_available:
         description: 1 location available
         value: 1
-      2_locations_available:
+      _2_locations_available:
         description: 2 locations available
         value: 2
     unit_test: false
@@ -2290,10 +2276,10 @@ enums:
       periodic_txfifo_full:
         description: Periodic TxFIFO is full
         value: 0
-      1_word_available:
+      _1_word_available:
         description: 1 word available
         value: 1
-      2_words_available:
+      _2_words_available:
         description: 2 words available
         value: 2
     unit_test: false
@@ -2396,13 +2382,13 @@ enums:
     identifier: false
   USB0_DCFG_PerSchIntvl:
     enum:
-      25_frame:
+      _25_frame:
         description: 25% of frame.
         value: 0
-      50_frame:
+      _50_frame:
         description: 50% of frame.
         value: 1
-      75_frame:
+      _75_frame:
         description: 75% of frame.
         value: 2
     unit_test: false
@@ -2411,16 +2397,16 @@ enums:
     identifier: false
   USB0_DCFG_PerFrInt:
     enum:
-      80_frame_interval:
+      _80_frame_interval:
         description: 80% of the frame interval
         value: 0
-      '85':
+      _85:
         description: 85%
         value: 1
-      '90':
+      _90:
         description: 90%
         value: 2
-      '95':
+      _95:
         description: 95%
         value: 3
     unit_test: false
@@ -2429,11 +2415,11 @@ enums:
     identifier: false
   USB0_DCFG_NZStsOUTHShk:
     enum:
-      stall_handshake_nonzero_length_status_ou_cont:
+      stall_handshake_nonzero_length_status_out_tra_cont:
         description: Send a STALL handshake on a nonzero-length status OUT transaction
           and do not send the received OUT packet to the application.
         value: 1
-      received_out_packet_application_zero_len_cont:
+      received_out_packet_application_zero_length_o_cont:
         description: Send the received OUT packet to the application (zero-length
           or nonzero-length) and send a handshake based on the NAK and STALL bits
           for the endpoint in the Device Endpoint Control register.
@@ -2453,12 +2439,12 @@ enums:
     identifier: false
   USB0_DCTL_EnContOnBNA:
     enum:
-      after_receiving_bna_interrupt_core_disables_e_cont:
+      oepdma_descriptor:
         description: After receiving BNA interrupt, the core disables the endpoint.
           When the endpoint is re-enabled by the application, the core starts processing
           from the DOEPDMA descriptor.
         value: 0
-      _:
+      escriptor_received_bna_interrupt:
         description: After receiving BNA interrupt, the core disables the endpoint.
           When the endpoint is re-enabled by the application, the core starts processing
           from the descriptor that received the BNA interrupt.
@@ -2469,13 +2455,13 @@ enums:
     identifier: false
   USB0_DCTL_IgnrFrmNum:
     enum:
-      transmits_packets__cont:
+      transmits_packets_only_frame_number_which_the_cont:
         description: 'Scatter/Gather enabled: The core transmits the packets only
           in the frame number in which they are intended to be transmitted. Scatter/Gather
           disabled: Periodic transfer interrupt feature is disabled; the application
           must program transfers for periodic endpoints every frame'
         value: 0
-      ignores_frame_numb_cont:
+      ignores_frame_number_sending_packets_immediat_cont:
         description: 'Scatter/Gather enabled: The core ignores the frame number, sending
           packets immediately as the packets are ready. Scatter/Gather disabled: Periodic
           transfer interrupt feature is enabled; the application can program transfers
@@ -2490,13 +2476,13 @@ enums:
       invalid:
         description: Invalid.
         value: 0
-      1_packet:
+      _1_packet:
         description: 1 packet.
         value: 1
-      2_packets:
+      _2_packets:
         description: 2 packets.
         value: 2
-      3_packets:
+      _3_packets:
         description: 3 packets.
         value: 3
     unit_test: false

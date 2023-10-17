@@ -69,7 +69,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: POSIF0_PCONF_SPES
+            type: POSIF0_PCONF_MSES
           - name: DSEL
             description: Delay Pin selector
             index: 16
@@ -462,119 +462,119 @@ structs:
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_DIRSEL
+            type: POSIF0_PFLGE_PCLSEL
           - name: CNTSEL
             description: Quadrature Clock Event Service Request Selector
             index: 26
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_CNTSEL
+            type: POSIF0_PFLGE_PCLSEL
           - name: ERRSEL
             description: Quadrature Phase Error Event Service Request Selector
             index: 25
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_ERRSEL
+            type: POSIF0_PFLGE_PCLSEL
           - name: INDSEL
             description: Quadrature Index Event Service Request Selector
             index: 24
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_CNTSEL
+            type: POSIF0_PFLGE_PCLSEL
           - name: MSTSEL
             description: Multi-Channel pattern Update Event Service Request Selector
             index: 20
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_MSTSEL
+            type: POSIF0_PFLGE_PCLSEL
           - name: HIESEL
             description: Hall Inputs Update Event Service Request Selector
             index: 18
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_HIESEL
+            type: POSIF0_PFLGE_PCLSEL
           - name: WHESEL
             description: Wrong Hall Event Service Request Selector
             index: 17
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_CNTSEL
+            type: POSIF0_PFLGE_PCLSEL
           - name: CHESEL
             description: Correct Hall Event Service Request Selector
             index: 16
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_CNTSEL
+            type: POSIF0_PFLGE_PCLSEL
           - name: EPCLK
             description: Quadrature Period CLK interrupt Enable
             index: 12
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_EPCLK
+            type: POSIF0_PCONF_EWIE
           - name: EDIR
             description: Quadrature direction change interrupt Enable
             index: 11
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_EPCLK
+            type: POSIF0_PCONF_EWIE
           - name: ECNT
             description: Quadrature CLK interrupt Enable
             index: 10
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_EPCLK
+            type: POSIF0_PCONF_EWIE
           - name: EERR
             description: Quadrature Phase Error Enable
             index: 9
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_EPCLK
+            type: POSIF0_PCONF_EWIE
           - name: EINDX
             description: Quadrature Index Event Enable
             index: 8
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_EPCLK
+            type: POSIF0_PCONF_EWIE
           - name: EMST
             description: Multi-Channel pattern shadow transfer enable
             index: 4
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_EPCLK
+            type: POSIF0_PCONF_EWIE
           - name: EHIE
             description: Hall Input Update Enable
             index: 2
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_EPCLK
+            type: POSIF0_PCONF_EWIE
           - name: EWHE
             description: Wrong Hall Event Enable
             index: 1
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_EPCLK
+            type: POSIF0_PCONF_EWIE
           - name: ECHE
             description: Correct Hall Event Enable
             index: 0
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_EPCLK
+            type: POSIF0_PCONF_EWIE
       - name: SPFLG
         type: uint32_t
         expected_size: 4
@@ -755,25 +755,25 @@ enums:
       filter_disabled:
         description: Low pass filter disabled
         value: 0
-      1_clock_cycle:
+      _1_clock_cycle:
         description: Low pass of 1 clock cycle
         value: 1
-      2_clock_cycles:
+      _2_clock_cycles:
         description: Low pass of 2 clock cycles
         value: 2
-      4_clock_cycles:
+      _4_clock_cycles:
         description: Low pass of 4 clock cycles
         value: 3
-      8_clock_cycles:
+      _8_clock_cycles:
         description: Low pass of 8 clock cycles
         value: 4
-      16_clock_cycles:
+      _16_clock_cycles:
         description: Low pass of 16 clock cycles
         value: 5
-      32_clock_cycles:
+      _32_clock_cycles:
         description: Low pass of 32 clock cycles
         value: 6
-      64_clock_cycles:
+      _64_clock_cycles:
         description: Low pass of 64 clock cycles
         value: 7
     unit_test: false
@@ -794,11 +794,11 @@ enums:
     identifier: false
   POSIF0_PCONF_EWIE:
     enum:
-      external_wrong_hall_event_emulation_signal_po_cont:
+      disabled:
         description: External wrong hall event emulation signal, POSIFx.EWHE[D...A],
           is disabled
         value: 0
-      _:
+      enabled:
         description: External wrong hall event emulation signal, POSIFx.EWHE[D...A],
           is enabled.
         value: 1
@@ -826,11 +826,11 @@ enums:
     identifier: false
   POSIF0_PCONF_MSES:
     enum:
-      risi_cont:
+      rising_edge:
         description: The signal used to enable a pattern update is active on the rising
           edge
         value: 0
-      fall_cont:
+      falling_edge:
         description: The signal used to enable a pattern update is active on the falling
           edge
         value: 1
@@ -864,18 +864,6 @@ enums:
       h:
         description: POSIFx.MSETH
         value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  POSIF0_PCONF_SPES:
-    enum:
-      rising_edge:
-        description: Rising edge
-        value: 0
-      falling_edge:
-        description: Falling edge
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -1073,83 +1061,11 @@ enums:
     identifier: false
   POSIF0_PFLGE_PCLSEL:
     enum:
-      quadrature_period_clock_event_interrupt_forwa_cont:
+      _0:
         description: Quadrature Period clock Event interrupt forward to POSIFx.SR0
         value: 0
-      _:
+      _1:
         description: Quadrature Period clock Event interrupt forward to POSIFx.SR1
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  POSIF0_PFLGE_DIRSEL:
-    enum:
-      quadrature_direction_update_event_interrupt_f_cont:
-        description: Quadrature Direction Update Event interrupt forward to POSIFx.SR0
-        value: 0
-      _:
-        description: Quadrature Direction Update Event interrupt forward to POSIFx.SR1
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  POSIF0_PFLGE_CNTSEL:
-    enum:
-      '0':
-        description: Quadrature Clock Event interrupt forward to POSIFx.SR0
-        value: 0
-      '1':
-        description: Quadrature Clock Event interrupt forward to POSIFx.SR1
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  POSIF0_PFLGE_ERRSEL:
-    enum:
-      quadrature_phase_error_event_interrupt_forwar_cont:
-        description: Quadrature Phase error Event interrupt forward to POSIFx.SR0
-        value: 0
-      _:
-        description: Quadrature Phase error Event interrupt forward to POSIFx.SR1
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  POSIF0_PFLGE_MSTSEL:
-    enum:
-      multi_channel_pattern_update_event_interrupt__cont:
-        description: Multi-Channel pattern Update Event interrupt forward to POSIFx.SR0
-        value: 0
-      _:
-        description: Multi-Channel pattern Update Event interrupt forward to POSIFx.SR1
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  POSIF0_PFLGE_HIESEL:
-    enum:
-      hall_inputs_update_event_interrupt_forward_po_cont:
-        description: Hall Inputs Update Event interrupt forward to POSIFx.SR0
-        value: 0
-      _:
-        description: Hall Inputs Update Event interrupt forward to POSIFx.SR1
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  POSIF0_PFLGE_EPCLK:
-    enum:
-      disabled:
-        description: Quadrature Period CLK event interrupt disabled
-        value: 0
-      enabled:
-        description: Quadrature Period CLK event interrupt enabled
         value: 1
     unit_test: false
     json: false

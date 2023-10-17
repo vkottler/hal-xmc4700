@@ -399,10 +399,10 @@ enums:
     identifier: false
   SCU_HIBERNATE_HDCR_GPI0SEL:
     enum:
-      1_pin_selected:
+      _1_pin_selected:
         description: HIB_IO_1 pin selected
         value: 0
-      0_pin_selected:
+      _0_pin_selected:
         description: HIB_IO_0 pin selected
         value: 1
     unit_test: false

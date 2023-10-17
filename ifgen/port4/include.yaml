@@ -936,10 +936,10 @@ structs:
 enums:
   PORT4_OUT_P15:
     enum:
-      '0':
+      _0:
         description: The output level of Pn.x is 0.
         value: 0
-      '1':
+      _1:
         description: The output level of Pn.x is 1.
         value: 1
     unit_test: false
@@ -948,58 +948,58 @@ enums:
     identifier: false
   PORT4_IOCR0_PC3:
     enum:
-      input___no_internal_pull_device_active:
+      input_no_internal_pull_device_active:
         description: Input - No internal pull device active
         value: 0
-      input___internal_pull_down_device_active:
+      input_internal_pull_down_device_active:
         description: Input - Internal pull-down device active
         value: 1
-      input___internal_pull_up_device_active:
+      input_internal_pull_up_device_active:
         description: Input - Internal pull-up device active
         value: 2
-      input___no_internal_pull_device_pn_outx_input_cont:
+      input_no_internal_pull_device_pn_outx_input_value:
         description: Input - No internal pull device, Pn_OUTx = input value
         value: 3
-      input_inverted___no_internal_pull_device_active:
+      input_inverted_no_internal_pull_device_active:
         description: Input inverted - No internal pull device active
         value: 4
-      input_inverted___internal_pull_down_device_active:
+      input_inverted_internal_pull_down_device_active:
         description: Input inverted - Internal pull-down device active
         value: 5
-      input_inverted___internal_pull_up_device_active:
+      input_inverted_internal_pull_up_device_active:
         description: Input inverted - Internal pull-up device active
         value: 6
-      input_inverted___no_internal_pull_device_pn_o_cont:
+      input_inverted_no_internal_pull_device_pn_out_cont:
         description: Input inverted - No internal pull device, Pn_OUTx = input value
         value: 7
-      output_push_pull___general_purpose_output:
+      output_push_pull_general_purpose_output:
         description: Output Push-Pull - General-purpose output
         value: 16
-      output_push_pull___alternate_output_function_1:
+      output_push_pull_alternate_output_function_1:
         description: Output Push-Pull - Alternate output function 1
         value: 17
-      output_push_pull___alternate_output_function_2:
+      output_push_pull_alternate_output_function_2:
         description: Output Push-Pull - Alternate output function 2
         value: 18
-      output_push_pull___alternate_output_function_3:
+      output_push_pull_alternate_output_function_3:
         description: Output Push-Pull - Alternate output function 3
         value: 19
-      output_push_pull___alternate_output_function_4:
+      output_push_pull_alternate_output_function_4:
         description: Output Push-Pull - Alternate output function 4
         value: 20
-      output_open_drain___general_purpose_output:
+      output_open_drain_general_purpose_output:
         description: Output Open Drain - General-purpose output
         value: 24
-      output_open_drain___alternate_output_function_1:
+      output_open_drain_alternate_output_function_1:
         description: Output Open Drain - Alternate output function 1
         value: 25
-      output_open_drain___alternate_output_function_2:
+      output_open_drain_alternate_output_function_2:
         description: Output Open Drain - Alternate output function 2
         value: 26
-      output_open_drain___alternate_output_function_3:
+      output_open_drain_alternate_output_function_3:
         description: Output Open Drain - Alternate output function 3
         value: 27
-      output_open_drain___alternate_output_function_4:
+      output_open_drain_alternate_output_function_4:
         description: Output Open Drain - Alternate output function 4
         value: 28
     unit_test: false

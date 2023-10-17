@@ -486,10 +486,10 @@ enums:
       lsb_bit:
         description: Mask LSB bit
         value: 0
-      2_lsb_bits:
+      _2_lsb_bits:
         description: Mask 2 LSB bits
         value: 1
-      8_lsb_bits:
+      _8_lsb_bits:
         description: Mask 8 LSB bits
         value: 7
     unit_test: false
@@ -535,28 +535,28 @@ enums:
     identifier: false
   LEDTS0_FNCTL_NR_LEDCOL:
     enum:
-      1_led_column:
+      _1_led_column:
         description: 1 LED column
         value: 0
-      2_led_columns:
+      _2_led_columns:
         description: 2 LED columns
         value: 1
-      3_led_columns:
+      _3_led_columns:
         description: 3 LED columns
         value: 2
-      4_led_columns:
+      _4_led_columns:
         description: 4 LED columns
         value: 3
-      5_led_columns:
+      _5_led_columns:
         description: 5 LED columns
         value: 4
-      6_led_columns:
+      _6_led_columns:
         description: 6 LED columns
         value: 5
-      7_led_columns:
+      _7_led_columns:
         description: 7 LED columns
         value: 6
-      8_led_columns_max_led_columns_7_if_bit_ts_en_1:
+      _8_led_columns_max_led_columns_7_if_bit_ts_en_1:
         description: 8 LED columns (max. LED columns = 7 if bit TS_EN = 1)
         value: 7
     unit_test: false
@@ -577,10 +577,10 @@ enums:
     identifier: false
   LEDTS0_FNCTL_NR_TSIN:
     enum:
-      '1':
+      _1:
         description: '1'
         value: 0
-      '8':
+      _8:
         description: '8'
         value: 7
     unit_test: false
@@ -616,16 +616,16 @@ enums:
     identifier: false
   LEDTS0_FNCTL_TSOEXT:
     enum:
-      1_ledts_clk:
+      _1_ledts_clk:
         description: Extend by 1 ledts_clk
         value: 0
-      4_ledts_clk:
+      _4_ledts_clk:
         description: Extend by 4 ledts_clk
         value: 1
-      8_ledts_clk:
+      _8_ledts_clk:
         description: Extend by 8 ledts_clk
         value: 2
-      16_ledts_clk:
+      _16_ledts_clk:
         description: Extend by 16 ledts_clk
         value: 3
     unit_test: false
@@ -646,13 +646,13 @@ enums:
     identifier: false
   LEDTS0_FNCTL_ACCCNT:
     enum:
-      1_time:
+      _1_time:
         description: 1 time
         value: 0
-      2_times:
+      _2_times:
         description: 2 times
         value: 1
-      16_times:
+      _16_times:
         description: 16 times
         value: 15
     unit_test: false
@@ -690,10 +690,10 @@ enums:
     identifier: false
   LEDTS0_FNCTL_PADT:
     enum:
-      '0':
+      _0:
         description: TSIN0
         value: 0
-      '7':
+      _7:
         description: TSIN7
         value: 7
     unit_test: false

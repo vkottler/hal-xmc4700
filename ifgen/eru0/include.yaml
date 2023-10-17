@@ -211,16 +211,16 @@ structs:
 enums:
   ERU0_EXISEL_EXS3B:
     enum:
-      0_selected:
+      _0_selected:
         description: Input ERU_3B0 is selected
         value: 0
-      1_selected:
+      _1_selected:
         description: Input ERU_3B1 is selected
         value: 1
-      2_selected:
+      _2_selected:
         description: Input ERU_3B2 is selected
         value: 2
-      3_selected:
+      _3_selected:
         description: Input ERU_3B3 is selected
         value: 3
     unit_test: false
@@ -271,16 +271,16 @@ enums:
     identifier: false
   ERU0_EXICON_OCS:
     enum:
-      '0':
+      _0:
         description: Trigger pulses are sent to OGU0
         value: 0
-      '1':
+      _1:
         description: Trigger pulses are sent to OGU1
         value: 1
-      '2':
+      _2:
         description: Trigger pulses are sent to OGU2
         value: 2
-      '3':
+      _3:
         description: Trigger pulses are sent to OGU3
         value: 3
     unit_test: false
@@ -301,12 +301,12 @@ enums:
     identifier: false
   ERU0_EXICON_LD:
     enum:
-      not_cleared_by_hardware_used_s_cont:
+      not_cleared_by_hardware_used_sticky_bit_once__cont:
         description: The status flag FL is not cleared by hardware and is used as
           "sticky" bit. Once set, it is not influenced by any edge until it becomes
           cleared by software.
         value: 0
-      rebuilds_level_detection_desir_cont:
+      rebuilds_level_detection_desired_event_become_cont:
         description: The status flag FL rebuilds a level detection of the desired
           event. It becomes automatically set with a rising edge if RE = 1 or with
           a falling edge if FE = 1. It becomes automatically cleared with a rising
@@ -342,19 +342,19 @@ enums:
     identifier: false
   ERU0_EXOCON_GP:
     enum:
-      always_disabled_eru_iouty_can_not_b_cont:
+      always_disabled_eru_iouty_can_not_be_activated:
         description: ERU_GOUTy is always disabled and ERU_IOUTy can not be activated
         value: 0
-      always_enabled_eru_iouty_becomes_ac_cont:
+      always_enabled_eru_iouty_becomes_activated_wi_cont:
         description: ERU_GOUTy is always enabled and ERU_IOUTy becomes activated with
           each activation of ERU_TOUTy
         value: 1
-      equal_eru_pdouty_eru_iouty_becomes__cont:
+      equal_eru_pdouty_eru_iouty_becomes_activated__cont:
         description: ERU_GOUTy is equal to ERU_PDOUTy and ERU_IOUTy becomes activated
           with an activation of ERU_TOUTy while the desired pattern is detected (pattern
           match PDR = 1)
         value: 2
-      inverted_eru_pdouty_eru_iouty_becom_cont:
+      inverted_eru_pdouty_eru_iouty_becomes_activat_cont:
         description: ERU_GOUTy is inverted to ERU_PDOUTy and ERU_IOUTy becomes activated
           with an activation of ERU_TOUTy while the desired pattern is not detected
           (pattern miss PDR = 0)

@@ -1600,10 +1600,10 @@ enums:
     identifier: false
   SDMMC_HOST_CTRL_DATA_TX_WIDTH:
     enum:
-      1_bit_mode:
+      _1_bit_mode:
         description: 1 bit mode
         value: 0
-      4_bit_mode:
+      _4_bit_mode:
         description: 4-bit mode
         value: 1
     unit_test: false
@@ -1627,7 +1627,7 @@ enums:
       bus_width_selected_by_data_transfer_width:
         description: Bus Width is selected by Data Transfer Width
         value: 0
-      8_bit_bus_width:
+      _8_bit_bus_width:
         description: 8-bit Bus Width
         value: 1
     unit_test: false
@@ -1672,7 +1672,7 @@ enums:
     identifier: false
   SDMMC_POWER_CTRL_SD_BUS_VOLTAGE_SEL:
     enum:
-      33v_flattop:
+      _33v_flattop:
         description: 3.3V (Flattop.)
         value: 7
     unit_test: false
@@ -1741,7 +1741,7 @@ enums:
     identifier: false
   SDMMC_CLOCK_CTRL_SDCLK_FREQ_SEL:
     enum:
-      10mhz_63mhz:
+      _10mhz_63mhz:
         description: base clock(10MHz-63MHz)
         value: 0
       _divided_by_2:
@@ -1774,13 +1774,13 @@ enums:
     identifier: false
   SDMMC_TIMEOUT_CTRL_DAT_TIMEOUT_CNT_VAL:
     enum:
-      '13':
+      _13:
         description: TMCLK * 2^13
         value: 0
-      '14':
+      _14:
         description: TMCLK * 2^14
         value: 1
-      '27':
+      _27:
         description: TMCLK * 2^27
         value: 14
     unit_test: false
@@ -2020,7 +2020,7 @@ enums:
     identifier: false
   SDMMC_CAPABILITIES_VOLTAGE_SUPPORT_1_8V:
     enum:
-      18v_not_supported:
+      _18v_not_supported:
         description: 1.8V not supported
         value: 0
     unit_test: false
@@ -2029,7 +2029,7 @@ enums:
     identifier: false
   SDMMC_CAPABILITIES_VOLTAGE_SUPPORT_3V:
     enum:
-      30v_not_supported:
+      _30v_not_supported:
         description: 3.0V not supported
         value: 0
     unit_test: false
@@ -2038,7 +2038,7 @@ enums:
     identifier: false
   SDMMC_CAPABILITIES_VOLTAGE_SUPPORT_3_3V:
     enum:
-      33v_supported:
+      _33v_supported:
         description: 3.3V supported
         value: 1
     unit_test: false
@@ -2092,7 +2092,7 @@ enums:
     identifier: false
   SDMMC_CAPABILITIES_MAX_BLOCK_LENGTH:
     enum:
-      512_byte:
+      _512_byte:
         description: 512 byte
         value: 0
     unit_test: false
@@ -2101,7 +2101,7 @@ enums:
     identifier: false
   SDMMC_CAPABILITIES_BASE_SD_CLOCK_FREQ:
     enum:
-      48_mhz:
+      _48_mhz:
         description: 48 MHz
         value: 48
     unit_test: false

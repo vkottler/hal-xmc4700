@@ -478,16 +478,16 @@ enums:
     identifier: false
   DSD_CGCFG_DIVCG:
     enum:
-      '2':
+      _2:
         description: fCG = fCLK / 2
         value: 0
-      '4':
+      _4:
         description: fCG = fCLK / 4
         value: 1
-      '6':
+      _6:
         description: fCG = fCLK / 6
         value: 2
-      '32':
+      _32:
         description: fCG = fCLK / 32
         value: 15
     unit_test: false

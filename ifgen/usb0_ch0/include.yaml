@@ -371,11 +371,11 @@ structs:
 enums:
   USB0_CH0_HCCHAR_ChEna:
     enum:
-      scattergather_mode_enabled_indicates_descript_cont:
+      not_ready_scattergather_mode_disabled_channel_cont:
         description: 'Scatter/Gather mode enabled: Indicates that the descriptor structure
           is not yet ready. Scatter/Gather mode disabled: Channel disabled'
         value: 0
-      _:
+      data_buffer_with_data_setup_this_channel_can__cont:
         description: 'Scatter/Gather mode enabled: Indicates that the descriptor structure
           and data buffer with data is setup and this channel can access the descriptor.
           Scatter/Gather mode disabled: Channel enabled'
@@ -398,13 +398,13 @@ enums:
     identifier: false
   USB0_CH0_HCCHAR_MC_EC:
     enum:
-      1_transaction:
+      _1_transaction:
         description: 1 transaction
         value: 1
-      2_transactions_be_issued_this_endpoint_per_frame:
+      _2_transactions_be_issued_this_endpoint_per_frame:
         description: 2 transactions to be issued for this endpoint per frame
         value: 2
-      3_transactions_be_issued_this_endpoint_per_frame:
+      _3_transactions_be_issued_this_endpoint_per_frame:
         description: 3 transactions to be issued for this endpoint per frame
         value: 3
     unit_test: false
@@ -479,10 +479,10 @@ enums:
     identifier: false
   USB0_CH0_HCDMA_SCATGATHER_CTD:
     enum:
-      1_descriptor:
+      _1_descriptor:
         description: 1 descriptor
         value: 0
-      64_descriptors:
+      _64_descriptors:
         description: 64 descriptors
         value: 63
     unit_test: false

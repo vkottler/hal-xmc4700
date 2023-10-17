@@ -242,7 +242,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: FLASH0_FCON_DCF
+            type: FLASH0_FCON_DDF
           - name: RPA
             description: Read Protection Activated
             index: 16
@@ -648,11 +648,11 @@ enums:
     identifier: false
   FLASH0_FSR_WPRODIS1:
     enum:
-      protected_sectors_user_1_locked_if_write__cont:
+      protected_sectors_user_1_locked_if_write_prot_cont:
         description: All protected sectors of user 1 are locked if write protection
           is installed
         value: 0
-      write_protected_sectors_user_1_temporaril_cont:
+      write_protected_sectors_user_1_temporarily_un_cont:
         description: All write-protected sectors of user 1 are temporarily unlocked,
           if not coincidently locked by user 0 or user 2 or via read protection.
         value: 1
@@ -662,11 +662,11 @@ enums:
     identifier: false
   FLASH0_FSR_WPRODIS0:
     enum:
-      protected_sectors_user_0_locked_if_write__cont:
+      protected_sectors_user_0_locked_if_write_prot_cont:
         description: All protected sectors of user 0 are locked if write protection
           is installed
         value: 0
-      write_protected_sectors_user_0_temporaril_cont:
+      write_protected_sectors_user_0_temporarily_un_cont:
         description: All write-protected sectors of user 0 are temporarily unlocked,
           if not coincidently locked by user 2 or via read protection.
         value: 1
@@ -818,7 +818,7 @@ enums:
       not_page_mode:
         description: Program Flash not in page mode
         value: 0
-      page_mode_assembly_buffer_pflas_cont:
+      page_mode_assembly_buffer_pflash_256_byte_use_cont:
         description: Program Flash in page mode; assembly buffer of PFLASH (256 byte)
           is in use (being filled up)
         value: 1
@@ -882,7 +882,7 @@ enums:
       not_enabled:
         description: Double-Bit Error interrupt for PFLASH not enabled
         value: 0
-      enabled_esp_cont:
+      enabled_especially_intended_margin_check:
         description: Double-Bit Error interrupt for PFLASH enabled. Especially intended
           for margin check
         value: 1
@@ -944,21 +944,8 @@ enums:
       allowed:
         description: Data read access to the Flash memory area is allowed.
         value: 0
-      not_allowe_cont:
+      not_allowed_this_bit_not_taken_into_account_w_cont:
         description: Data read access to the Flash memory area is not allowed. This
-          bit is not taken into account while RPA='0'.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FLASH0_FCON_DCF:
-    enum:
-      allowed:
-        description: Code fetching from the Flash memory area is allowed.
-        value: 0
-      not_allowed_t_cont:
-        description: Code fetching from the Flash memory area is not allowed. This
           bit is not taken into account while RPA='0'.
         value: 1
     unit_test: false
@@ -967,11 +954,11 @@ enums:
     identifier: false
   FLASH0_FCON_RPA:
     enum:
-      not_activated__cont:
+      not_activated_bits_dcf_ddf_not_taken_into_acc_cont:
         description: The Flash-internal read protection is not activated. Bits DCF,
           DDF are not taken into account. Bits DCF, DDFx can be cleared
         value: 0
-      activated_bits_cont:
+      activated_bits_dcf_ddf_enabled_evaluated:
         description: The Flash-internal read protection is activated. Bits DCF, DDF
           are enabled and evaluated.
         value: 1
@@ -1035,7 +1022,7 @@ enums:
       one_clock_cycle:
         description: PFLASH access in one clock cycle
         value: 0
-      one_clock_cycle_:
+      one_clock_cycle_x:
         description: PFLASH access in one clock cycle
         value: 1
       two_clock_cycles:
@@ -1144,11 +1131,11 @@ enums:
     identifier: false
   FLASH0_PROCON1_PSR:
     enum:
-      disabled_erase_cont:
+      disabled_erase_physical_sector_command_sequen_cont:
         description: Physical Sector Repair command disabled; Erase Physical Sector
           command sequence available.
         value: 0
-      sequence_enabl_cont:
+      sequence_enabled_erase_physical_sector_comman_cont:
         description: Physical Sector Repair command sequence enabled; Erase Physical
           Sector command sequence disabled.
         value: 1

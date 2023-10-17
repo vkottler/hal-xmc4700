@@ -756,7 +756,7 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU40_CC40_INTE_CMDE
+            type: CCU40_CC40_CMC_TCE
           - name: CMUE
             description: Compare match while counting up enable
             index: 2
@@ -1032,13 +1032,13 @@ enums:
       lpf_disabled:
         description: LPF is disabled
         value: 0
-      3_clock_cycles_fccu4:
+      _3_clock_cycles_fccu4:
         description: 3 clock cycles of fCCU4
         value: 1
-      5_clock_cycles_fccu4:
+      _5_clock_cycles_fccu4:
         description: 5 clock cycles of fCCU4
         value: 2
-      7_clock_cycles_fccu4:
+      _7_clock_cycles_fccu4:
         description: 7 clock cycles of fCCU4
         value: 3
     unit_test: false
@@ -1210,7 +1210,7 @@ enums:
     identifier: false
   CCU40_CC40_TC_EMT:
     enum:
-      clearing_cc_cont:
+      clearing_cc4yst_bit:
         description: External Modulation functionality is clearing the CC4yST bit.
         value: 0
       gating_outputs:
@@ -1222,11 +1222,11 @@ enums:
     identifier: false
   CCU40_CC40_TC_EMS:
     enum:
-      not_synchro_cont:
+      not_synchronized_with_pwm_signal:
         description: External Modulation functionality is not synchronized with the
           PWM signal
         value: 0
-      synchronize_cont:
+      synchronized_with_pwm_signal:
         description: External Modulation functionality is synchronized with the PWM
           signal
         value: 1
@@ -1249,7 +1249,7 @@ enums:
     identifier: false
   CCU40_CC40_TC_TRPSE:
     enum:
-      isnt_synchronized_with_pwm_cont:
+      isnt_synchronized_with_pwm_signal:
         description: Exiting from TRAP state isn't synchronized with the PWM signal
         value: 0
       synchronized_with_pwm_signal:
@@ -1303,11 +1303,11 @@ enums:
     identifier: false
   CCU40_CC40_TC_CCS:
     enum:
-      specific_capture_register_done_w_cont:
+      specific_capture_register_done_with_rules_lin_cont:
         description: The capture into a specific capture register is done with the
           rules linked with the full flags, described at .
         value: 0
-      capture_registers_always_done_re_cont:
+      capture_registers_always_done_regardless_full_cont:
         description: The capture into the capture registers is always done regardless
           of the full flag status (even if the register has not been read back).
         value: 1
@@ -1317,7 +1317,7 @@ enums:
     identifier: false
   CCU40_CC40_TC_SCE:
     enum:
-      capture_into_cc4yc0vthis_register_contains_va_cont:
+      registers_control_by_ccycapt0_capture_into_cc_cont:
         description: Capture into CC4yC0VThis register contains the values associated
           with the Capture 0 field./CC4yC1VThis register contains the values associated
           with the Capture 1 field. registers control by CCycapt0 and capture into
@@ -1325,7 +1325,7 @@ enums:
           register contains the values associated with the Capture 2 field. control
           by CCycapt1
         value: 0
-      _:
+      cc4yc3vthis_register_contains_values_associat_cont:
         description: Capture into CC4yC0VThis register contains the values associated
           with the Capture 0 field./CC4yC1VThis register contains the values associated
           with the Capture 1 field. and CC4yC3VThis register contains the values associated
@@ -1368,11 +1368,11 @@ enums:
       never_cleared_capture_event:
         description: Timer is never cleared on a capture event
         value: 0
-      cleared_capture_event_into_capture_regi_cont:
+      cleared_capture_event_into_capture_registers__cont:
         description: Timer is cleared on a capture event into capture registers 2
           and 3. (When SCE = 1#, Timer is always cleared in a capture event)
         value: 1
-      cleared_capture_event_into_capture_regi_cont_:
+      cleared_capture_event_into_capture_registers__cont_x:
         description: Timer is cleared on a capture event into capture registers 0
           and 1. (When SCE = 1#, Timer is always cleared in a capture event)
         value: 2
@@ -1459,30 +1459,18 @@ enums:
     json: false
     use_map: false
     identifier: false
-  CCU40_CC40_INTE_CMDE:
-    enum:
-      d_cont:
-        description: Compare Match while counting down interrupt is disabled
-        value: 0
-      e_cont:
-        description: Compare Match while counting down interrupt is enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   CCU40_CC40_SRS_E2SR:
     enum:
-      '0':
+      _0:
         description: Forward to CC4ySR0
         value: 0
-      '1':
+      _1:
         description: Forward to CC4ySR1
         value: 1
-      '2':
+      _2:
         description: Forward to CC4ySR2
         value: 2
-      '3':
+      _3:
         description: Forward to CC4ySR3
         value: 3
     unit_test: false
