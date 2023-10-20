@@ -323,56 +323,48 @@ structs:
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_CH3
           - name: CH2
             description: Mask bit for channel 2
             index: 2
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_CH3
           - name: CH1
             description: Mask bit for channel 1
             index: 1
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_CH3
           - name: CH0
             description: Mask bit for channel 0
             index: 0
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_CH3
           - name: WE_CH3
             description: Write enable for mask bit of channel 3
             index: 11
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH2
             description: Write enable for mask bit of channel 2
             index: 10
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH1
             description: Write enable for mask bit of channel 1
             index: 9
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH0
             description: Write enable for mask bit of channel 0
             index: 8
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
       - name: MASKBLOCK
         type: uint32_t
         expected_size: 4
@@ -385,56 +377,48 @@ structs:
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_CH3
           - name: CH2
             description: Mask bit for channel 2
             index: 2
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_CH3
           - name: CH1
             description: Mask bit for channel 1
             index: 1
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_CH3
           - name: CH0
             description: Mask bit for channel 0
             index: 0
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_CH3
           - name: WE_CH3
             description: Write enable for mask bit of channel 3
             index: 11
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH2
             description: Write enable for mask bit of channel 2
             index: 10
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH1
             description: Write enable for mask bit of channel 1
             index: 9
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH0
             description: Write enable for mask bit of channel 0
             index: 8
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
       - name: MASKSRCTRAN
         type: uint32_t
         expected_size: 4
@@ -447,56 +431,48 @@ structs:
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_CH3
           - name: CH2
             description: Mask bit for channel 2
             index: 2
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_CH3
           - name: CH1
             description: Mask bit for channel 1
             index: 1
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_CH3
           - name: CH0
             description: Mask bit for channel 0
             index: 0
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_CH3
           - name: WE_CH3
             description: Write enable for mask bit of channel 3
             index: 11
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH2
             description: Write enable for mask bit of channel 2
             index: 10
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH1
             description: Write enable for mask bit of channel 1
             index: 9
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH0
             description: Write enable for mask bit of channel 0
             index: 8
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
       - name: MASKDSTTRAN
         type: uint32_t
         expected_size: 4
@@ -509,56 +485,48 @@ structs:
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_CH3
           - name: CH2
             description: Mask bit for channel 2
             index: 2
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_CH3
           - name: CH1
             description: Mask bit for channel 1
             index: 1
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_CH3
           - name: CH0
             description: Mask bit for channel 0
             index: 0
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_CH3
           - name: WE_CH3
             description: Write enable for mask bit of channel 3
             index: 11
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH2
             description: Write enable for mask bit of channel 2
             index: 10
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH1
             description: Write enable for mask bit of channel 1
             index: 9
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH0
             description: Write enable for mask bit of channel 0
             index: 8
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
       - name: MASKERR
         type: uint32_t
         expected_size: 4
@@ -571,56 +539,48 @@ structs:
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_CH3
           - name: CH2
             description: Mask bit for channel 2
             index: 2
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_CH3
           - name: CH1
             description: Mask bit for channel 1
             index: 1
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_CH3
           - name: CH0
             description: Mask bit for channel 0
             index: 0
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_CH3
           - name: WE_CH3
             description: Write enable for mask bit of channel 3
             index: 11
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH2
             description: Write enable for mask bit of channel 2
             index: 10
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH1
             description: Write enable for mask bit of channel 1
             index: 9
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH0
             description: Write enable for mask bit of channel 0
             index: 8
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
       - name: CLEARTFR
         type: uint32_t
         expected_size: 4
@@ -633,28 +593,24 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA1_CLEARTFR_CH3
           - name: CH2
             description: Clear Interrupt Status and Raw Status for channel 2
             index: 2
             width: 1
             read: false
             write: true
-            type: GPDMA1_CLEARTFR_CH3
           - name: CH1
             description: Clear Interrupt Status and Raw Status for channel 1
             index: 1
             width: 1
             read: false
             write: true
-            type: GPDMA1_CLEARTFR_CH3
           - name: CH0
             description: Clear Interrupt Status and Raw Status for channel 0
             index: 0
             width: 1
             read: false
             write: true
-            type: GPDMA1_CLEARTFR_CH3
       - name: CLEARBLOCK
         type: uint32_t
         expected_size: 4
@@ -667,28 +623,24 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA1_CLEARTFR_CH3
           - name: CH2
             description: Clear Interrupt Status and Raw Status for channel 2
             index: 2
             width: 1
             read: false
             write: true
-            type: GPDMA1_CLEARTFR_CH3
           - name: CH1
             description: Clear Interrupt Status and Raw Status for channel 1
             index: 1
             width: 1
             read: false
             write: true
-            type: GPDMA1_CLEARTFR_CH3
           - name: CH0
             description: Clear Interrupt Status and Raw Status for channel 0
             index: 0
             width: 1
             read: false
             write: true
-            type: GPDMA1_CLEARTFR_CH3
       - name: CLEARSRCTRAN
         type: uint32_t
         expected_size: 4
@@ -701,28 +653,24 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA1_CLEARTFR_CH3
           - name: CH2
             description: Clear Interrupt Status and Raw Status for channel 2
             index: 2
             width: 1
             read: false
             write: true
-            type: GPDMA1_CLEARTFR_CH3
           - name: CH1
             description: Clear Interrupt Status and Raw Status for channel 1
             index: 1
             width: 1
             read: false
             write: true
-            type: GPDMA1_CLEARTFR_CH3
           - name: CH0
             description: Clear Interrupt Status and Raw Status for channel 0
             index: 0
             width: 1
             read: false
             write: true
-            type: GPDMA1_CLEARTFR_CH3
       - name: CLEARDSTTRAN
         type: uint32_t
         expected_size: 4
@@ -735,28 +683,24 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA1_CLEARTFR_CH3
           - name: CH2
             description: Clear Interrupt Status and Raw Status for channel 2
             index: 2
             width: 1
             read: false
             write: true
-            type: GPDMA1_CLEARTFR_CH3
           - name: CH1
             description: Clear Interrupt Status and Raw Status for channel 1
             index: 1
             width: 1
             read: false
             write: true
-            type: GPDMA1_CLEARTFR_CH3
           - name: CH0
             description: Clear Interrupt Status and Raw Status for channel 0
             index: 0
             width: 1
             read: false
             write: true
-            type: GPDMA1_CLEARTFR_CH3
       - name: CLEARERR
         type: uint32_t
         expected_size: 4
@@ -769,28 +713,24 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA1_CLEARTFR_CH3
           - name: CH2
             description: Clear Interrupt Status and Raw Status for channel 2
             index: 2
             width: 1
             read: false
             write: true
-            type: GPDMA1_CLEARTFR_CH3
           - name: CH1
             description: Clear Interrupt Status and Raw Status for channel 1
             index: 1
             width: 1
             read: false
             write: true
-            type: GPDMA1_CLEARTFR_CH3
           - name: CH0
             description: Clear Interrupt Status and Raw Status for channel 0
             index: 0
             width: 1
             read: false
             write: true
-            type: GPDMA1_CLEARTFR_CH3
       - name: STATUSINT
         type: uint32_t
         expected_size: 4
@@ -864,28 +804,24 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH2
             description: Source request write enable for channel 2
             index: 10
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH1
             description: Source request write enable for channel 1
             index: 9
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH0
             description: Source request write enable for channel 0
             index: 8
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
       - name: REQDSTREG
         type: uint32_t
         expected_size: 4
@@ -922,28 +858,24 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH2
             description: Source request write enable for channel 2
             index: 10
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH1
             description: Source request write enable for channel 1
             index: 9
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH0
             description: Source request write enable for channel 0
             index: 8
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
       - name: SGLREQSRCREG
         type: uint32_t
         expected_size: 4
@@ -980,28 +912,24 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH2
             description: Source request write enable for channel 2
             index: 10
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH1
             description: Source request write enable for channel 1
             index: 9
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH0
             description: Source request write enable for channel 0
             index: 8
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
       - name: SGLREQDSTREG
         type: uint32_t
         expected_size: 4
@@ -1038,28 +966,24 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH2
             description: Source request write enable for channel 2
             index: 10
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH1
             description: Source request write enable for channel 1
             index: 9
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH0
             description: Source request write enable for channel 0
             index: 8
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
       - name: LSTSRCREG
         type: uint32_t
         expected_size: 4
@@ -1072,28 +996,24 @@ structs:
             width: 1
             read: true
             write: true
-            type: GPDMA1_LSTSRCREG_CH3
           - name: CH2
             description: Source last request for channel 2
             index: 2
             width: 1
             read: true
             write: true
-            type: GPDMA1_LSTSRCREG_CH3
           - name: CH1
             description: Source last request for channel 1
             index: 1
             width: 1
             read: true
             write: true
-            type: GPDMA1_LSTSRCREG_CH3
           - name: CH0
             description: Source last request for channel 0
             index: 0
             width: 1
             read: true
             write: true
-            type: GPDMA1_LSTSRCREG_CH3
           - name: WE_CH3
             description: Source last transaction request write enable for channel
               3
@@ -1101,7 +1021,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH2
             description: Source last transaction request write enable for channel
               2
@@ -1109,7 +1028,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH1
             description: Source last transaction request write enable for channel
               1
@@ -1117,7 +1035,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH0
             description: Source last transaction request write enable for channel
               0
@@ -1125,7 +1042,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
       - name: LSTDSTREG
         type: uint32_t
         expected_size: 4
@@ -1138,28 +1054,24 @@ structs:
             width: 1
             read: true
             write: true
-            type: GPDMA1_LSTSRCREG_CH3
           - name: CH2
             description: Destination last request for channel 2
             index: 2
             width: 1
             read: true
             write: true
-            type: GPDMA1_LSTSRCREG_CH3
           - name: CH1
             description: Destination last request for channel 1
             index: 1
             width: 1
             read: true
             write: true
-            type: GPDMA1_LSTSRCREG_CH3
           - name: CH0
             description: Destination last request for channel 0
             index: 0
             width: 1
             read: true
             write: true
-            type: GPDMA1_LSTSRCREG_CH3
           - name: WE_CH3
             description: Destination last transaction request write enable for channel
               3
@@ -1167,7 +1079,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH2
             description: Destination last transaction request write enable for channel
               2
@@ -1175,7 +1086,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH1
             description: Destination last transaction request write enable for channel
               1
@@ -1183,7 +1093,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
           - name: WE_CH0
             description: Destination last transaction request write enable for channel
               0
@@ -1191,7 +1100,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
       - name: DMACFGREG
         type: uint32_t
         expected_size: 4
@@ -1204,7 +1112,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: GPDMA1_MASKTFR_WE_CH3
       - name: CHENREG
         type: uint32_t
         expected_size: 4
@@ -1269,54 +1176,6 @@ structs:
     unit_test: false
     identifier: false
 enums:
-  GPDMA1_MASKTFR_CH3:
-    enum:
-      masked:
-        description: masked
-        value: 0
-      unmasked:
-        description: unmasked
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  GPDMA1_MASKTFR_WE_CH3:
-    enum:
-      disabled:
-        description: write disabled
-        value: 0
-      enabled:
-        description: write enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  GPDMA1_CLEARTFR_CH3:
-    enum:
-      no_effect:
-        description: no effect
-        value: 0
-      clear_status:
-        description: clear status
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  GPDMA1_LSTSRCREG_CH3:
-    enum:
-      not_last_transaction_current_block:
-        description: Not last transaction in current block
-        value: 0
-      last_transaction_current_block:
-        description: Last transaction in current block
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   GPDMA1_CHENREG_CH:
     enum:
       disable_channel:

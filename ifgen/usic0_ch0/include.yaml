@@ -29,42 +29,36 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_CCFG_TB
           - name: RB
             description: Receive FIFO Buffer Available
             index: 6
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_CCFG_TB
           - name: IIS
             description: IIS Protocol Available
             index: 3
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_CCFG_TB
           - name: IIC
             description: IIC Protocol Available
             index: 2
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_CCFG_TB
           - name: ASC
             description: ASC Protocol Available
             index: 1
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_CCFG_TB
           - name: SSC
             description: SSC Protocol Available
             index: 0
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_CCFG_TB
       - name: KSCFG
         type: uint32_t
         expected_size: 4
@@ -77,7 +71,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_KSCFG_BPSUM
           - name: SUMCFG
             description: Suspend Mode Configuration
             index: 8
@@ -90,7 +83,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_KSCFG_BPSUM
           - name: NOMCFG
             description: Normal Operation Mode Configuration
             index: 4
@@ -104,14 +96,12 @@ structs:
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_KSCFG_BPSUM
           - name: MODEN
             description: Module Enable
             index: 0
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_KSCFG_MODEN
       - name: FDR
         type: uint32_t
         expected_size: 4
@@ -156,14 +146,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_BRG_MCLKCFG
           - name: SCLKOSEL
             description: Shift Clock Output Select
             index: 28
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_BRG_SCLKOSEL
           - name: PDIV
             description: 'Divider Mode: Divider Factor to Generate fPDIV'
             index: 16
@@ -195,14 +183,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_BRG_PPPEN
           - name: TMEN
             description: Timing Measurement Enable
             index: 3
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_BRG_TMEN
           - name: CLKSEL
             description: Clock Selection
             index: 0
@@ -259,7 +245,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_BRG_MCLKCFG
           - name: CM
             description: Combination Mode
             index: 10
@@ -273,35 +258,30 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_SFSEL
           - name: DPOL
             description: Data Polarity for DXn
             index: 8
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_DPOL
           - name: DSEN
             description: Data Synchronization Enable
             index: 6
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_DSEN
           - name: DFEN
             description: Digital Filter Enable
             index: 5
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_DFEN
           - name: INSW
             description: Input Switch
             index: 4
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_INSW
           - name: DSEL
             description: Data Selection for Input Signal
             index: 0
@@ -321,7 +301,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_BRG_MCLKCFG
           - name: CM
             description: Combination Mode
             index: 10
@@ -335,42 +314,36 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_SFSEL
           - name: DPOL
             description: Data Polarity for DXn
             index: 8
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_DPOL
           - name: DSEN
             description: Data Synchronization Enable
             index: 6
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_DSEN
           - name: DFEN
             description: Digital Filter Enable
             index: 5
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_DFEN
           - name: INSW
             description: Input Switch
             index: 4
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_INSW
           - name: DCEN
             description: Delay Compensation Enable
             index: 3
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX1CR_DCEN
           - name: DSEL
             description: Data Selection for Input Signal
             index: 0
@@ -390,7 +363,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_BRG_MCLKCFG
           - name: CM
             description: Combination Mode
             index: 10
@@ -404,35 +376,30 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_SFSEL
           - name: DPOL
             description: Data Polarity for DXn
             index: 8
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_DPOL
           - name: DSEN
             description: Data Synchronization Enable
             index: 6
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_DSEN
           - name: DFEN
             description: Digital Filter Enable
             index: 5
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_DFEN
           - name: INSW
             description: Input Switch
             index: 4
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_INSW
           - name: DSEL
             description: Data Selection for Input Signal
             index: 0
@@ -452,7 +419,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_BRG_MCLKCFG
           - name: CM
             description: Combination Mode
             index: 10
@@ -466,35 +432,30 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_SFSEL
           - name: DPOL
             description: Data Polarity for DXn
             index: 8
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_DPOL
           - name: DSEN
             description: Data Synchronization Enable
             index: 6
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_DSEN
           - name: DFEN
             description: Digital Filter Enable
             index: 5
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_DFEN
           - name: INSW
             description: Input Switch
             index: 4
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_INSW
           - name: DSEL
             description: Data Selection for Input Signal
             index: 0
@@ -514,7 +475,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_BRG_MCLKCFG
           - name: CM
             description: Combination Mode
             index: 10
@@ -528,35 +488,30 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_SFSEL
           - name: DPOL
             description: Data Polarity for DXn
             index: 8
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_DPOL
           - name: DSEN
             description: Data Synchronization Enable
             index: 6
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_DSEN
           - name: DFEN
             description: Digital Filter Enable
             index: 5
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_DFEN
           - name: INSW
             description: Input Switch
             index: 4
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_INSW
           - name: DSEL
             description: Data Selection for Input Signal
             index: 0
@@ -576,7 +531,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_BRG_MCLKCFG
           - name: CM
             description: Combination Mode
             index: 10
@@ -590,35 +544,30 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_SFSEL
           - name: DPOL
             description: Data Polarity for DXn
             index: 8
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_DPOL
           - name: DSEN
             description: Data Synchronization Enable
             index: 6
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_DSEN
           - name: DFEN
             description: Digital Filter Enable
             index: 5
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_DFEN
           - name: INSW
             description: Input Switch
             index: 4
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_DX0CR_INSW
           - name: DSEL
             description: Data Selection for Input Signal
             index: 0
@@ -665,7 +614,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_SCTR_HPCDIR
           - name: DSM
             description: Data Shift Mode
             index: 2
@@ -679,14 +627,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_BRG_MCLKCFG
           - name: SDIR
             description: Shift Direction
             index: 0
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_SCTR_SDIR
       - name: TCSR
         type: uint32_t
         expected_size: 4
@@ -699,42 +645,36 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_TCSR_TE
           - name: TVC
             description: Transmission Valid Cumulated
             index: 27
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_TCSR_TVC
           - name: TV
             description: Transmission Valid
             index: 26
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_TCSR_TV
           - name: TSOF
             description: Transmitted Start Of Frame
             index: 24
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_TCSR_TSOF
           - name: WA
             description: Word Address
             index: 13
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TCSR_WA
           - name: TDVTR
             description: TBUF Data Valid Trigger
             index: 12
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TCSR_TDVTR
           - name: TDEN
             description: TBUF Data Enable
             index: 10
@@ -748,63 +688,54 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TCSR_TDSSM
           - name: TDV
             description: Transmit Data Valid
             index: 7
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_TCSR_TDV
           - name: EOF
             description: End Of Frame
             index: 6
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TCSR_EOF
           - name: SOF
             description: Start Of Frame
             index: 5
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TCSR_SOF
           - name: HPCMD
             description: Hardware Port Control Mode
             index: 4
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TCSR_HPCMD
           - name: WAMD
             description: WA Mode
             index: 3
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TCSR_HPCMD
           - name: FLEMD
             description: FLE Mode
             index: 2
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TCSR_HPCMD
           - name: SELMD
             description: Select Mode
             index: 1
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TCSR_SELMD
           - name: WLEMD
             description: WLE Mode
             index: 0
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TCSR_HPCMD
       - name: PCR
         type: uint32_t
         expected_size: 4
@@ -1013,21 +944,18 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_ASCMode_MCLK
               - name: TSTEN
                 description: Transmitter Status Enable
                 index: 17
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_ASCMode_TSTEN
               - name: RSTEN
                 description: Receiver Status Enable
                 index: 16
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_ASCMode_RSTEN
               - name: PL
                 description: Pulse Length
                 index: 13
@@ -1047,56 +975,48 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_TCSR_HPCMD
               - name: FEIEN
                 description: Format Error Interrupt Enable
                 index: 6
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_TCSR_HPCMD
               - name: RNIEN
                 description: Receiver Noise Detection Interrupt Enable
                 index: 5
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_TCSR_HPCMD
               - name: CDEN
                 description: Collision Detection Enable
                 index: 4
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_ASCMode_CDEN
               - name: SBIEN
                 description: Synchronization Break Interrupt Enable
                 index: 3
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_TCSR_HPCMD
               - name: IDM
                 description: Idle Detection Mode
                 index: 2
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_ASCMode_IDM
               - name: STPB
                 description: Stop Bits
                 index: 1
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_ASCMode_STPB
               - name: SMD
                 description: Sample Mode
                 index: 0
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_ASCMode_SMD
           - name: PCR_SSCMode
             description: (read-write) Protocol Control Register [SSC Mode]
             fields:
@@ -1106,21 +1026,18 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_SSCMode_MCLK
               - name: SLPHSEL
                 description: Slave Mode Clock Phase Select
                 index: 25
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_SSCMode_SLPHSEL
               - name: TIWEN
                 description: Enable Inter-Word Delay Tiw
                 index: 24
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_SSCMode_TIWEN
               - name: SELO
                 description: Select Output
                 index: 16
@@ -1134,21 +1051,18 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_SSCMode_DX2TIEN
               - name: MSLSIEN
                 description: MSLS Interrupt Enable
                 index: 14
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_SSCMode_MSLSIEN
               - name: PARIEN
                 description: Parity Error Interrupt Enable
                 index: 13
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_SSCMode_PARIEN
               - name: DCTQ1
                 description: Divider Factor DCTQ1 for Tiw and Tnf
                 index: 8
@@ -1174,28 +1088,24 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_SSCMode_FEM
               - name: SELINV
                 description: Select Inversion
                 index: 2
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_SSCMode_SELINV
               - name: SELCTR
                 description: Select Control
                 index: 1
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_SSCMode_SELCTR
               - name: MSLSEN
                 description: MSLS Enable
                 index: 0
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_SSCMode_MSLSEN
           - name: PCR_IICMode
             description: (read-write) Protocol Control Register [IIC Mode]
             fields:
@@ -1205,14 +1115,12 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IICMode_MCLK
               - name: ACKIEN
                 description: Acknowledge Interrupt Enable
                 index: 30
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_TCSR_HPCMD
               - name: HDEL
                 description: Hardware Delay
                 index: 26
@@ -1225,70 +1133,60 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IICMode_SACKDIS
               - name: ERRIEN
                 description: Error Interrupt Enable
                 index: 24
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_TCSR_HPCMD
               - name: SRRIEN
                 description: Slave Read Request Interrupt Enable
                 index: 23
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_TCSR_HPCMD
               - name: ARLIEN
                 description: Arbitration Lost Interrupt Enable
                 index: 22
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_TCSR_HPCMD
               - name: NACKIEN
                 description: Non-Acknowledge Interrupt Enable
                 index: 21
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_TCSR_HPCMD
               - name: PCRIEN
                 description: Stop Condition Received Interrupt Enable
                 index: 20
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_TCSR_HPCMD
               - name: RSCRIEN
                 description: Repeated Start Condition Received Interrupt Enable
                 index: 19
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_TCSR_HPCMD
               - name: SCRIEN
                 description: Start Condition Received Interrupt Enable
                 index: 18
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_TCSR_HPCMD
               - name: STIM
                 description: Symbol Timing
                 index: 17
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IICMode_STIM
               - name: ACK00
                 description: Acknowledge 00H
                 index: 16
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IICMode_ACK00
               - name: SLAD
                 description: Slave Address
                 index: 0
@@ -1304,7 +1202,6 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IICMode_MCLK
               - name: TDEL
                 description: Transfer Delay
                 index: 16
@@ -1317,49 +1214,42 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IISMode_DX2TIEN
               - name: ENDIEN
                 description: END Interrupt Enable
                 index: 6
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IISMode_ENDIEN
               - name: WAREIEN
                 description: WA Rising Edge Interrupt Enable
                 index: 5
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IISMode_WAREIEN
               - name: WAFEIEN
                 description: WA Falling Edge Interrupt Enable
                 index: 4
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IISMode_WAFEIEN
               - name: SELINV
                 description: Select Inversion
                 index: 2
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IISMode_SELINV
               - name: DTEN
                 description: Data Transfers Enable
                 index: 1
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IISMode_DTEN
               - name: WAGEN
                 description: WA Generation Enable
                 index: 0
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PCR_IISMode_WAGEN
       - name: CCR
         type: uint32_t
         expected_size: 4
@@ -1372,49 +1262,42 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_CCR_BRGIEN
           - name: AIEN
             description: Alternative Receive Interrupt Enable
             index: 15
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_CCR_AIEN
           - name: RIEN
             description: Receive Interrupt Enable
             index: 14
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_CCR_RIEN
           - name: TBIEN
             description: Transmit Buffer Interrupt Enable
             index: 13
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_CCR_TBIEN
           - name: TSIEN
             description: Transmit Shift Interrupt Enable
             index: 12
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_CCR_TSIEN
           - name: DLIEN
             description: Data Lost Interrupt Enable
             index: 11
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_CCR_DLIEN
           - name: RSIEN
             description: Receiver Start Interrupt Enable
             index: 10
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_CCR_RSIEN
           - name: PM
             description: Parity Mode
             index: 8
@@ -1460,49 +1343,42 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_PSR_BRGIF
           - name: AIF
             description: Alternative Receive Indication Flag
             index: 15
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_PSR_BRGIF
           - name: RIF
             description: Receive Indication Flag
             index: 14
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_PSR_BRGIF
           - name: TBIF
             description: Transmit Buffer Indication Flag
             index: 13
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_PSR_BRGIF
           - name: TSIF
             description: Transmit Shift Indication Flag
             index: 12
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_PSR_BRGIF
           - name: DLIF
             description: Data Lost Indication Flag
             index: 11
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_PSR_BRGIF
           - name: RSIF
             description: Receiver Start Indication Flag
             index: 10
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_PSR_BRGIF
           - name: ST9
             description: Protocol Status Flag 9
             index: 9
@@ -1573,119 +1449,102 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: AIF
                 description: Alternative Receive Indication Flag
                 index: 15
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: RIF
                 description: Receive Indication Flag
                 index: 14
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: TBIF
                 description: Transmit Buffer Indication Flag
                 index: 13
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: TSIF
                 description: Transmit Shift Indication Flag
                 index: 12
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: DLIF
                 description: Data Lost Indication Flag
                 index: 11
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: RSIF
                 description: Receiver Start Indication Flag
                 index: 10
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: BUSY
                 description: Transfer Status BUSY
                 index: 9
                 width: 1
                 read: true
                 write: false
-                type: USIC0_CH0_PSR_ASCMode_BUSY
               - name: TFF
                 description: Transmitter Frame Finished
                 index: 8
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_TFF
               - name: RFF
                 description: Receive Frame Finished
                 index: 7
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_TFF
               - name: FER1
                 description: Format Error in Stop Bit 1
                 index: 6
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_FER1
               - name: FER0
                 description: Format Error in Stop Bit 0
                 index: 5
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_FER1
               - name: RNS
                 description: Receiver Noise Detected
                 index: 4
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_FER1
               - name: COL
                 description: Collision Detected
                 index: 3
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_COL
               - name: SBD
                 description: Synchronization Break Detected
                 index: 2
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_FER1
               - name: RXIDLE
                 description: Reception Idle
                 index: 1
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_RXIDLE
               - name: TXIDLE
                 description: Transmission Idle
                 index: 0
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_TXIDLE
           - name: PSR_SSCMode
             description: (read-write) Protocol Status Register [SSC Mode]
             fields:
@@ -1695,84 +1554,72 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: AIF
                 description: Alternative Receive Indication Flag
                 index: 15
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: RIF
                 description: Receive Indication Flag
                 index: 14
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: TBIF
                 description: Transmit Buffer Indication Flag
                 index: 13
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: TSIF
                 description: Transmit Shift Indication Flag
                 index: 12
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: DLIF
                 description: Data Lost Indication Flag
                 index: 11
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: RSIF
                 description: Receiver Start Indication Flag
                 index: 10
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: PARERR
                 description: Parity Error Event Detected
                 index: 4
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_SSCMode_PARERR
               - name: DX2TEV
                 description: DX2T Event Detected
                 index: 3
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_SSCMode_PARERR
               - name: MSLSEV
                 description: MSLS Event Detected
                 index: 2
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_SSCMode_MSLSEV
               - name: DX2S
                 description: DX2S Status
                 index: 1
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_BRG_MCLKCFG
               - name: MSLS
                 description: MSLS Status
                 index: 0
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_SSCMode_MSLS
           - name: PSR_IICMode
             description: (read-write) Protocol Status Register [IIC Mode]
             fields:
@@ -1782,119 +1629,102 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: AIF
                 description: Alternative Receive Indication Flag
                 index: 15
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: RIF
                 description: Receive Indication Flag
                 index: 14
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: TBIF
                 description: Transmit Buffer Indication Flag
                 index: 13
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: TSIF
                 description: Transmit Shift Indication Flag
                 index: 12
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: DLIF
                 description: Data Lost Indication Flag
                 index: 11
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: RSIF
                 description: Receiver Start Indication Flag
                 index: 10
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: ACK
                 description: Acknowledge Received
                 index: 9
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IICMode_ACK
               - name: ERR
                 description: Error
                 index: 8
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_FER1
               - name: SRR
                 description: Slave Read Request
                 index: 7
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_FER1
               - name: ARL
                 description: Arbitration Lost
                 index: 6
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IICMode_ARL
               - name: NACK
                 description: Non-Acknowledge Received
                 index: 5
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IICMode_ACK
               - name: PCR
                 description: Stop Condition Received
                 index: 4
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_FER1
               - name: RSCR
                 description: Repeated Start Condition Received
                 index: 3
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_FER1
               - name: SCR
                 description: Start Condition Received
                 index: 2
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_ASCMode_FER1
               - name: WTDF
                 description: Wrong TDF Code Found
                 index: 1
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IICMode_WTDF
               - name: SLSEL
                 description: Slave Select
                 index: 0
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IICMode_SLSEL
           - name: PSR_IISMode
             description: (read-write) Protocol Status Register [IIS Mode]
             fields:
@@ -1904,91 +1734,78 @@ structs:
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: AIF
                 description: Alternative Receive Indication Flag
                 index: 15
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: RIF
                 description: Receive Indication Flag
                 index: 14
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: TBIF
                 description: Transmit Buffer Indication Flag
                 index: 13
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: TSIF
                 description: Transmit Shift Indication Flag
                 index: 12
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: DLIF
                 description: Data Lost Indication Flag
                 index: 11
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: RSIF
                 description: Receiver Start Indication Flag
                 index: 10
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_BRGIF
               - name: END
                 description: WA Generation End
                 index: 6
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IISMode_END
               - name: WARE
                 description: WA Rising Edge Event
                 index: 5
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IISMode_WARE
               - name: WAFE
                 description: WA Falling Edge Event
                 index: 4
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_IISMode_WARE
               - name: DX2TEV
                 description: DX2T Event Detected
                 index: 3
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_PSR_SSCMode_PARERR
               - name: DX2S
                 description: DX2S Status
                 index: 1
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_BRG_MCLKCFG
               - name: WA
                 description: Word Address
                 index: 0
                 width: 1
                 read: true
                 write: true
-                type: USIC0_CH0_BRG_MCLKCFG
       - name: PSCR
         type: uint32_t
         expected_size: 4
@@ -2001,119 +1818,102 @@ structs:
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CBRGIF
           - name: CAIF
             description: Clear Alternative Receive Indication Flag
             index: 15
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CAIF
           - name: CRIF
             description: Clear Receive Indication Flag
             index: 14
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CRIF
           - name: CTBIF
             description: Clear Transmit Buffer Indication Flag
             index: 13
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CTBIF
           - name: CTSIF
             description: Clear Transmit Shift Indication Flag
             index: 12
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CTSIF
           - name: CDLIF
             description: Clear Data Lost Indication Flag
             index: 11
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CDLIF
           - name: CRSIF
             description: Clear Receiver Start Indication Flag
             index: 10
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CRSIF
           - name: CST9
             description: Clear Status Flag 9 in PSR
             index: 9
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CST9
           - name: CST8
             description: Clear Status Flag 8 in PSR
             index: 8
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CST9
           - name: CST7
             description: Clear Status Flag 7 in PSR
             index: 7
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CST9
           - name: CST6
             description: Clear Status Flag 6 in PSR
             index: 6
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CST9
           - name: CST5
             description: Clear Status Flag 5 in PSR
             index: 5
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CST9
           - name: CST4
             description: Clear Status Flag 4 in PSR
             index: 4
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CST9
           - name: CST3
             description: Clear Status Flag 3 in PSR
             index: 3
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CST9
           - name: CST2
             description: Clear Status Flag 2 in PSR
             index: 2
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CST9
           - name: CST1
             description: Clear Status Flag 1 in PSR
             index: 1
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CST9
           - name: CST0
             description: Clear Status Flag 0 in PSR
             index: 0
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_PSCR_CST9
       - name: RBUFSR
         type: uint32_t
         expected_size: 4
@@ -2228,28 +2028,24 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_RBUF01SR_DS1
           - name: RDV11
             description: Receive Data Valid in RBUF1
             index: 30
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_RBUF01SR_RDV11
           - name: RDV10
             description: Receive Data Valid in RBUF0
             index: 29
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_RBUF01SR_RDV11
           - name: PERR1
             description: Protocol-related Error in RBUF1
             index: 25
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_RBUF01SR_PERR1
           - name: PAR1
             description: Protocol-Related Argument in RBUF1
             index: 24
@@ -2262,7 +2058,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_RBUF01SR_SOF1
           - name: WLEN1
             description: Received Data Word Length in RBUF1
             index: 16
@@ -2276,28 +2071,24 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_RBUF01SR_DS1
           - name: RDV01
             description: Receive Data Valid in RBUF1
             index: 14
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_RBUF01SR_RDV11
           - name: RDV00
             description: Receive Data Valid in RBUF0
             index: 13
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_RBUF01SR_RDV11
           - name: PERR0
             description: Protocol-related Error in RBUF0
             index: 9
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_RBUF01SR_PERR1
           - name: PAR0
             description: Protocol-Related Argument in RBUF0
             index: 8
@@ -2310,7 +2101,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_RBUF01SR_SOF1
           - name: WLEN0
             description: Received Data Word Length in RBUF0
             index: 0
@@ -2329,63 +2119,54 @@ structs:
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_FMR_SIO5
           - name: SIO4
             description: Set Interrupt Output SRx
             index: 20
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_FMR_SIO5
           - name: SIO3
             description: Set Interrupt Output SRx
             index: 19
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_FMR_SIO5
           - name: SIO2
             description: Set Interrupt Output SRx
             index: 18
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_FMR_SIO5
           - name: SIO1
             description: Set Interrupt Output SRx
             index: 17
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_FMR_SIO5
           - name: SIO0
             description: Set Interrupt Output SRx
             index: 16
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_FMR_SIO5
           - name: CRDV1
             description: Clear Bit RDV for RBUF1
             index: 15
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_FMR_CRDV1
           - name: CRDV0
             description: Clear Bits RDV for RBUF0
             index: 14
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_FMR_CRDV0
           - name: ATVC
             description: Activate Bit TVC
             index: 4
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_FMR_ATVC
           - name: MTDV
             description: Modify Transmit Data Valid
             index: 0
@@ -2442,21 +2223,18 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_BYPCR_BDV
           - name: BPRIO
             description: Bypass Priority
             index: 13
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_BYPCR_BPRIO
           - name: BDVTR
             description: Bypass Data Valid Trigger
             index: 12
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_BYPCR_BDVTR
           - name: BDEN
             description: Bypass Data Enable
             index: 10
@@ -2470,7 +2248,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_BYPCR_BDSSM
           - name: BWLE
             description: Bypass Word Length
             index: 0
@@ -2489,21 +2266,18 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TCSR_HPCMD
           - name: STBIEN
             description: Standard Transmit Buffer Interrupt Enable
             index: 30
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TCSR_HPCMD
           - name: LOF
             description: Buffer Event on Limit Overflow
             index: 28
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TBCTR_LOF
           - name: SIZE
             description: Buffer Size
             index: 24
@@ -2531,14 +2305,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TCSR_HPCMD
           - name: STBTM
             description: Standard Transmit Buffer Trigger Mode
             index: 14
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TBCTR_STBTM
           - name: LIMIT
             description: Limit For Interrupt Generation
             index: 8
@@ -2563,35 +2335,30 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TCSR_HPCMD
           - name: SRBIEN
             description: Standard Receive Buffer Interrupt Enable
             index: 30
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TCSR_HPCMD
           - name: ARBIEN
             description: Alternative Receive Buffer Interrupt Enable
             index: 29
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TCSR_HPCMD
           - name: LOF
             description: Buffer Event on Limit Overflow
             index: 28
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_RBCTR_LOF
           - name: RNM
             description: Receiver Notification Mode
             index: 27
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_RBCTR_RNM
           - name: SIZE
             description: Buffer Size
             index: 24
@@ -2626,14 +2393,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_TCSR_HPCMD
           - name: SRBTM
             description: Standard Receive Buffer Trigger Mode
             index: 14
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_RBCTR_SRBTM
           - name: LIMIT
             description: Limit For Interrupt Generation
             index: 8
@@ -2701,91 +2466,78 @@ structs:
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_TRBSR_STBT
           - name: TBUS
             description: Transmit Buffer Busy
             index: 13
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_TRBSR_TBUS
           - name: TFULL
             description: Transmit Buffer Full
             index: 12
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_TRBSR_TFULL
           - name: TEMPTY
             description: Transmit Buffer Empty
             index: 11
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_TRBSR_TEMPTY
           - name: TBERI
             description: Transmit Buffer Error Event
             index: 9
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_PSR_ASCMode_FER1
           - name: STBI
             description: Standard Transmit Buffer Event
             index: 8
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_PSR_ASCMode_FER1
           - name: SRBT
             description: Standard Receive Buffer Event Trigger
             index: 6
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_TRBSR_STBT
           - name: RBUS
             description: Receive Buffer Busy
             index: 5
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_TRBSR_RBUS
           - name: RFULL
             description: Receive Buffer Full
             index: 4
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_TRBSR_TFULL
           - name: REMPTY
             description: Receive Buffer Empty
             index: 3
             width: 1
             read: true
             write: false
-            type: USIC0_CH0_TRBSR_TEMPTY
           - name: ARBI
             description: Alternative Receive Buffer Event
             index: 2
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_PSR_ASCMode_FER1
           - name: RBERI
             description: Receive Buffer Error Event
             index: 1
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_PSR_ASCMode_FER1
           - name: SRBI
             description: Standard Receive Buffer Event
             index: 0
             width: 1
             read: true
             write: true
-            type: USIC0_CH0_PSR_ASCMode_FER1
       - name: TRBSCR
         type: uint32_t
         expected_size: 4
@@ -2798,56 +2550,48 @@ structs:
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_TRBSCR_FLUSHTB
           - name: FLUSHRB
             description: Flush Receive Buffer
             index: 14
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_TRBSCR_FLUSHRB
           - name: CBDV
             description: Clear Bypass Data Valid
             index: 10
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_TRBSCR_CBDV
           - name: CTBERI
             description: Clear Transmit Buffer Error Event
             index: 9
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_TRBSCR_CTBERI
           - name: CSTBI
             description: Clear Standard Transmit Buffer Event
             index: 8
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_TRBSCR_CSTBI
           - name: CARBI
             description: Clear Alternative Receive Buffer Event
             index: 2
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_TRBSCR_CARBI
           - name: CRBERI
             description: Clear Receive Buffer Error Event
             index: 1
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_TRBSCR_CRBERI
           - name: CSRBI
             description: Clear Standard Receive Buffer Event
             index: 0
             width: 1
             read: false
             write: true
-            type: USIC0_CH0_TRBSCR_CSRBI
       - name: OUTR
         type: uint32_t
         expected_size: 4
@@ -2905,30 +2649,6 @@ structs:
     unit_test: false
     identifier: false
 enums:
-  USIC0_CH0_CCFG_TB:
-    enum:
-      not_available:
-        description: A transmit FIFO buffer is not available.
-        value: 0
-      available:
-        description: A transmit FIFO buffer is available.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_KSCFG_BPSUM:
-    enum:
-      not_changed:
-        description: SUMCFG is not changed.
-        value: 0
-      updated_with_written_value:
-        description: SUMCFG is updated with the written value.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_KSCFG_NOMCFG:
     enum:
       run_mode_0_selected:
@@ -2943,23 +2663,6 @@ enums:
       stop_mode_1_selected:
         description: Stop mode 1 is selected.
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_KSCFG_MODEN:
-    enum:
-      off_immediately_without_respecting_stop_condi_cont:
-        description: The module is switched off immediately (without respecting a
-          stop condition). It does not react on mode control actions and the module
-          clock is switched off. The module does not react on read accesses and ignores
-          write accesses (except to KSCFG).
-        value: 0
-      can_operate_after_writing_1_moden_recommended_cont:
-        description: The module is switched on and can operate. After writing 1 to
-          MODEN, it is recommended to read register KSCFG to avoid pipeline effects
-          in the control block before accessing other Service Request Processing registers.
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -3000,32 +2703,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_BRG_MCLKCFG:
-    enum:
-      _0:
-        description: The passive level is 0.
-        value: 0
-      _1:
-        description: The passive level is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_BRG_SCLKOSEL:
-    enum:
-      sclk_baud_rate_generator_selected_sclkout_inp_cont:
-        description: SCLK from the baud rate generator is selected as the SCLKOUT
-          input source.
-        value: 0
-      transmit_shift_clock_dx1_input_stage_selected_cont:
-        description: The transmit shift clock from DX1 input stage is selected as
-          the SCLKOUT input source.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_BRG_CTQSEL:
     enum:
       pdiv:
@@ -3040,35 +2717,6 @@ enums:
       mclk:
         description: fCTQIN = fMCLK
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_BRG_PPPEN:
-    enum:
-      disabled_fppp_fpin:
-        description: The 2:1 divider for fPPP is disabled. fPPP = fPIN
-        value: 0
-      enabled_fppp_fmclk_fpin_2:
-        description: The 2:1 divider for fPPP is enabled. fPPP = fMCLK = fPIN / 2.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_BRG_TMEN:
-    enum:
-      disabled_trigger_signals_dx0t_dx1t_ignored:
-        description: 'Timing measurement is disabled: The trigger signals DX0T and
-          DX1T are ignored.'
-        value: 0
-      enabled_10_bit_counter_incremented_by_1_with__cont:
-        description: 'Timing measurement is enabled: The 10-bit counter is incremented
-          by 1 with fPPP and stops counting when reaching its maximum value. If one
-          of the trigger signals DX0T or DX1T become active, the counter value is
-          captured into bit field CTV, the counter is cleared and a transmit shift
-          event is generated.'
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -3132,71 +2780,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_DX0CR_SFSEL:
-    enum:
-      pb:
-        description: The sampling frequency is fPB.
-        value: 0
-      fd:
-        description: The sampling frequency is fFD.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX0CR_DPOL:
-    enum:
-      not_inverted:
-        description: The input signal is not inverted.
-        value: 0
-      inverted:
-        description: The input signal is inverted.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX0CR_DSEN:
-    enum:
-      un_synchronized_signal_can_be_taken_input_dat_cont:
-        description: The un-synchronized signal can be taken as input for the data
-          shift unit.
-        value: 0
-      synchronized_signal_can_be_taken_input_data_s_cont:
-        description: The synchronized signal can be taken as input for the data shift
-          unit.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX0CR_DFEN:
-    enum:
-      not_digitally_filtered:
-        description: The input signal is not digitally filtered.
-        value: 0
-      digitally_filtered:
-        description: The input signal is digitally filtered.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX0CR_INSW:
-    enum:
-      trolled_by_protocol_pre_processor:
-        description: The input of the data shift unit is controlled by the protocol
-          pre-processor.
-        value: 0
-      nected_selected_data_input_line_this_setting__cont:
-        description: The input of the data shift unit is connected to the selected
-          data input line. This setting is used if the signals are directly derived
-          from an input pin without treatment by the protocol pre-processor.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_DX0CR_DSEL:
     enum:
       dxna_selected:
@@ -3241,20 +2824,6 @@ enums:
       both_edges_activate_dx1t:
         description: Both edges activate DX1T.
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_DX1CR_DCEN:
-    enum:
-      dependent_insw_selection:
-        description: The receive shift clock is dependent on INSW selection.
-        value: 0
-      connected_selected_data_input_line_this_setti_cont:
-        description: The receive shift clock is connected to the selected data input
-          line. This setting is used if delay compensation is required in SSC and
-          IIS protocols, else DCEN should always be 0.
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -3345,20 +2914,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_SCTR_HPCDIR:
-    enum:
-      input_mode:
-        description: The pin(s) with hardware pin control enabled are selected to
-          be in input mode.
-        value: 0
-      output_mode:
-        description: The pin(s) with hardware pin control enabled are selected to
-          be in output mode.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_SCTR_DSM:
     enum:
       one_bit_at_time_through_dx0_dout0:
@@ -3373,104 +2928,6 @@ enums:
         description: Receive and transmit data is shifted in and out four bits at
           a time through four input stages (DX0, DX[5:3]) and DOUT[3:0] respectively.
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_SCTR_SDIR:
-    enum:
-      lsb_first_first_data_bit_data_word_located_at_cont:
-        description: Shift LSB first. The first data bit of a data word is located
-          at bit position 0.
-        value: 0
-      msb_first_first_data_bit_data_word_located_at_cont:
-        description: Shift MSB first. The first data bit of a data word is located
-          at the bit position given by bit field SCTR.WLE.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TCSR_TE:
-    enum:
-      not_been_detected_transmission_data_word_tbuf_cont:
-        description: The trigger event has not yet been detected. A transmission of
-          the data word in TBUF can not be started.
-        value: 0
-      been_detected_or_trigger_mechanism_switched_o_cont:
-        description: The trigger event has been detected (or the trigger mechanism
-          is switched off) and a transmission of the data word in TBUF can not be
-          started.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TCSR_TVC:
-    enum:
-      at_least_one_data_buffer_underflow_condition__cont:
-        description: Since TVC has been set, at least one data buffer underflow condition
-          has occurred.
-        value: 0
-      no_data_buffer_underflow_condition_has_occurred:
-        description: Since TVC has been set, no data buffer underflow condition has
-          occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TCSR_TV:
-    enum:
-      hile_no_valid_data_was_available_result_trans_cont:
-        description: The latest start of a data word transmission has taken place
-          while no valid data was available. As a result, the transmission of a data
-          words with passive level (SCTR.PDL) has been started.
-        value: 0
-      ith_valid_data_tbuf:
-        description: The latest start of a data word transmission has taken place
-          with valid data from TBUF.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TCSR_TSOF:
-    enum:
-      not_been_started_first_word_data_frame:
-        description: The latest data word transmission has not been started for the
-          first word of a data frame.
-        value: 0
-      been_started_first_word_data_frame:
-        description: The latest data word transmission has been started for the first
-          word of a data frame.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TCSR_WA:
-    enum:
-      falling_edge_wa_has_been_detected_referring_psrwa:
-        description: The data word in TBUF will be transmitted after a falling edge
-          of WA has been detected (referring to PSR.WA).
-        value: 0
-      rising_edge_wa_has_been_detected_referring_psrwa:
-        description: The data word in TBUF will be transmitted after a rising edge
-          of WA has been detected (referring to PSR.WA).
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TCSR_TDVTR:
-    enum:
-      permanently_set:
-        description: Bit TCSR.TE is permanently set.
-        value: 0
-      set_if_dx2t_becomes_active_while_tdv_1:
-        description: Bit TCSR.TE is set if DX2T becomes active while TDV = 1.
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -3497,124 +2954,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_TCSR_TDSSM:
-    enum:
-      not_considered_invalid_after_has_been_loaded__cont:
-        description: The data word in TBUF is not considered as invalid after it has
-          been loaded into the transmit shift register. The loading of the TBUF data
-          into the shift register does not clear TDV.
-        value: 0
-      considered_invalid_after_has_been_loaded_into_cont:
-        description: The data word in TBUF is considered as invalid after it has been
-          loaded into the shift register. In ASC and IIC mode, TDV is cleared with
-          the TBI event, whereas in SSC and IIS mode, it is cleared with the RSI event.
-          TDSSM = 1 has to be programmed if an optional data buffer is used.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TCSR_TDV:
-    enum:
-      not_valid_transmission:
-        description: The data word in TBUF is not valid for transmission.
-        value: 0
-      valid_transmission_transmission_start_possibl_cont:
-        description: The data word in TBUF is valid for transmission and a transmission
-          start is possible. New data should not be written to a TBUFx input location
-          while TDV = 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TCSR_EOF:
-    enum:
-      not_considered_last_word_an_ssc_frame:
-        description: The data word in TBUF is not considered as last word of an SSC
-          frame.
-        value: 0
-      considered_last_word_an_ssc_frame:
-        description: The data word in TBUF is considered as last word of an SSC frame.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TCSR_SOF:
-    enum:
-      not_considered_first_word_frame:
-        description: The data word in TBUF is not considered as first word of a frame.
-        value: 0
-      considered_first_word_frame_currently_running_cont:
-        description: The data word in TBUF is considered as first word of a frame.
-          A currently running frame is finished and MSLS becomes deactivated (respecting
-          the programmed delays).
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TCSR_HPCMD:
-    enum:
-      disabled:
-        description: The automatic update of bits SCTR.DSM and SCTR.HPCDIR is disabled.
-        value: 0
-      enabled:
-        description: The automatic update of bits SCTR.DSM and SCTR.HPCDIR is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TCSR_SELMD:
-    enum:
-      automatic_update_pcrctr2316_disabled:
-        description: The automatic update of PCR.CTR[23:16] is disabled.
-        value: 0
-      _x:
-        description: The automatic update of PCR.CTR[23:16] is disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_ASCMode_MCLK:
-    enum:
-      disabled_mclk_signal_0:
-        description: The MCLK generation is disabled and the MCLK signal is 0.
-        value: 0
-      enabled:
-        description: The MCLK generation is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_ASCMode_TSTEN:
-    enum:
-      not_modified_depending_transmitter_status:
-        description: Flag PSR[9] is not modified depending on the transmitter status.
-        value: 0
-      set_during_complete_transmission_frame:
-        description: Flag PSR[9] is set during the complete transmission of a frame.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_ASCMode_RSTEN:
-    enum:
-      not_modified_depending_receiver_status:
-        description: Flag PSR[9] is not modified depending on the receiver status.
-        value: 0
-      set_during_complete_reception_frame:
-        description: Flag PSR[9] is set during the complete reception of a frame.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_PCR_ASCMode_PL:
     enum:
       equal_bit_length_no_shortened_0:
@@ -3633,103 +2972,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_PCR_ASCMode_CDEN:
-    enum:
-      collision_detection_disabled:
-        description: The collision detection is disabled.
-        value: 0
-      if_collision_detected_transmitter_stops_data__cont:
-        description: If a collision is detected, the transmitter stops its data transmission,
-          outputs a 1, sets bit PSR.COL and generates a protocol interrupt. In order
-          to allow data transmission again, PSR.COL has to be cleared by software.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_ASCMode_IDM:
-    enum:
-      idle_detection_switched_off_bits_psrtxidle_ps_cont:
-        description: The bus idle detection is switched off and bits PSR.TXIDLE and
-          PSR.RXIDLE are set automatically to enable data transfers without checking
-          the inputs before.
-        value: 0
-      considered_idle_after_number_consecutive_pass_cont:
-        description: The bus is considered as idle after a number of consecutive passive
-          bit times defined by SCTR.FLE plus 2 (in the case without parity bit) or
-          plus 3 (in the case with parity bit).
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_ASCMode_STPB:
-    enum:
-      _1:
-        description: The number of stop bits is 1.
-        value: 0
-      _2:
-        description: The number of stop bits is 2.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_ASCMode_SMD:
-    enum:
-      only_one_sample_taken_per_bit_time_current_in_cont:
-        description: Only one sample is taken per bit time. The current input value
-          is sampled.
-        value: 0
-      three_samples_taken_per_bit_time_majority_dec_cont:
-        description: Three samples are taken per bit time and a majority decision
-          is made.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_SSCMode_MCLK:
-    enum:
-      disabled_output_mclk_0:
-        description: The MCLK generation is disabled and output MCLK = 0.
-        value: 0
-      enabled:
-        description: The MCLK generation is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_SSCMode_SLPHSEL:
-    enum:
-      data_bits_shifted_out_with_leading_edge_shift_cont:
-        description: Data bits are shifted out with the leading edge of the shift
-          clock signal and latched in with the trailing edge.
-        value: 0
-      first_data_bit_shifted_out_when_data_shift_un_cont:
-        description: The first data bit is shifted out when the data shift unit receives
-          a low to high transition from the DX2 stage. Subsequent bits are shifted
-          out with the trailing edge of the shift clock signal. Data bits are always
-          latched in with the leading edge.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_SSCMode_TIWEN:
-    enum:
-      no_delay_between_data_words_same_frame:
-        description: No delay between data words of the same frame.
-        value: 0
-      inter_word_delay_tiw_enabled_introduced_betwe_cont:
-        description: The inter-word delay Tiw is enabled and introduced between data
-          words of the same frame.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_PCR_SSCMode_SELO:
     enum:
       not_be_activated:
@@ -3738,343 +2980,6 @@ enums:
       _be_activated_according_mode_selected_by_selctr:
         description: The corresponding SELOx line can be activated (according to the
           mode selected by SELCTR).
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_SSCMode_DX2TIEN:
-    enum:
-      not_generated_if_dx2t_activated:
-        description: A protocol interrupt is not generated if DX2T is activated.
-        value: 0
-      generated_if_dx2t_activated:
-        description: A protocol interrupt is generated if DX2T is activated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_SSCMode_MSLSIEN:
-    enum:
-      not_generated_if_change_signal_msls_detected:
-        description: A protocol interrupt is not generated if a change of signal MSLS
-          is detected.
-        value: 0
-      generated_if_change_signal_msls_detected:
-        description: A protocol interrupt is generated if a change of signal MSLS
-          is detected.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_SSCMode_PARIEN:
-    enum:
-      not_generated_with_detection_parity_error:
-        description: A protocol interrupt is not generated with the detection of a
-          parity error.
-        value: 0
-      generated_with_detection_parity_error:
-        description: A protocol interrupt is generated with the detection of a parity
-          error.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_SSCMode_FEM:
-    enum:
-      current_data_frame_considered_finished_when_l_cont:
-        description: The current data frame is considered as finished when the last
-          bit of a data word has been sent out and the transmit buffer TBUF does not
-          contain new data (TDV = 0).
-        value: 0
-      msls_signal_kept_active_also_while_no_new_dat_cont:
-        description: The MSLS signal is kept active also while no new data is available
-          and no other end of frame condition is reached. In this case, the software
-          can accept delays in delivering the data without automatic deactivation
-          of MSLS in multi-word data frames.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_SSCMode_SELINV:
-    enum:
-      same_polarity_msls_signal_active_high:
-        description: The SELO outputs have the same polarity as the MSLS signal (active
-          high).
-        value: 0
-      inverted_polarity_msls_signal_active_low:
-        description: The SELO outputs have the inverted polarity to the MSLS signal
-          (active low).
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_SSCMode_SELCTR:
-    enum:
-      coded_select_mode_enabled:
-        description: The coded select mode is enabled.
-        value: 0
-      direct_select_mode_enabled:
-        description: The direct select mode is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_SSCMode_MSLSEN:
-    enum:
-      disabled_msls_0_this_setting_ssc_slave_mode:
-        description: The MSLS generation is disabled (MSLS = 0). This is the setting
-          for SSC slave mode.
-        value: 0
-      enabled_this_setting_ssc_master_mode:
-        description: The MSLS generation is enabled. This is the setting for SSC master
-          mode.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_IICMode_MCLK:
-    enum:
-      disabled_mclk_0:
-        description: The MCLK generation is disabled and MCLK is 0.
-        value: 0
-      enabled:
-        description: The MCLK generation is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_IICMode_SACKDIS:
-    enum:
-      enabled_slave_acknowledge_with_0_level_more_b_cont:
-        description: The generation of an active slave acknowledge is enabled (slave
-          acknowledge with 0 level = more bytes can be received).
-        value: 0
-      disabled_slave_acknowledge_with_1_level_recep_cont:
-        description: The generation of an active slave acknowledge is disabled (slave
-          acknowledge with 1 level = reception stopped).
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_IICMode_STIM:
-    enum:
-      _10_time_quanta_timing_adapted_standard_mode_1_cont:
-        description: A symbol contains 10 time quanta. The timing is adapted for standard
-          mode (100 kBaud).
-        value: 0
-      _25_time_quanta_timing_adapted_fast_mode_400_kbaud:
-        description: A symbol contains 25 time quanta. The timing is adapted for fast
-          mode (400 kBaud).
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_IICMode_ACK00:
-    enum:
-      not_sensitive_this_address:
-        description: The slave device is not sensitive to this address.
-        value: 0
-      sensitive_this_address:
-        description: The slave device is sensitive to this address.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_IISMode_DX2TIEN:
-    enum:
-      not_generated_if_dx2t_active:
-        description: A protocol interrupt is not generated if DX2T is active.
-        value: 0
-      generated_if_dx2t_active:
-        description: A protocol interrupt is generated if DX2T is active.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_IISMode_ENDIEN:
-    enum:
-      not_activated:
-        description: A protocol interrupt is not activated.
-        value: 0
-      activated:
-        description: A protocol interrupt is activated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_IISMode_WAREIEN:
-    enum:
-      not_activated_if_rising_edge_wa_generated:
-        description: A protocol interrupt is not activated if a rising edge of WA
-          is generated.
-        value: 0
-      activated_if_rising_edge_wa_generated:
-        description: A protocol interrupt is activated if a rising edge of WA is generated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_IISMode_WAFEIEN:
-    enum:
-      not_activated_if_falling_edge_wa_generated:
-        description: A protocol interrupt is not activated if a falling edge of WA
-          is generated.
-        value: 0
-      activated_if_falling_edge_wa_generated:
-        description: A protocol interrupt is activated if a falling edge of WA is
-          generated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_IISMode_SELINV:
-    enum:
-      same_polarity_wa_signal:
-        description: The SELOx outputs have the same polarity as the WA signal.
-        value: 0
-      inverted_polarity_wa_signal:
-        description: The SELOx outputs have the inverted polarity to the WA signal.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_IISMode_DTEN:
-    enum:
-      changes_wa_input_signal_ignored_no_transfers__cont:
-        description: The changes of the WA input signal are ignored and no transfers
-          take place.
-        value: 0
-      transfers_enabled:
-        description: Transfers are enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PCR_IISMode_WAGEN:
-    enum:
-      slave_generation_word_address_signal_disabled_cont:
-        description: The IIS can be used as slave. The generation of the word address
-          signal is disabled. The output signal WA is 0. The MCLKO signal generation
-          depends on PCR.MCLK.
-        value: 0
-      master_generation_word_address_signal_enabled_cont:
-        description: The IIS can be used as master. The generation of the word address
-          signal is enabled. The signal starts with a 0 after being enabled. The generation
-          of MCLK is enabled, independent of PCR.MCLK. After clearing WAGEN, the USIC
-          module stops the generation of the WA signal within the next 4 WA periods.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_CCR_BRGIEN:
-    enum:
-      disabled:
-        description: The baud rate generator interrupt is disabled.
-        value: 0
-      enabled_case_baud_rate_generator_event_servic_cont:
-        description: The baud rate generator interrupt is enabled. In case of a baud
-          rate generator event, the service request output SRx indicated by INPR.PINP
-          is activated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_CCR_AIEN:
-    enum:
-      disabled:
-        description: The alternative receive interrupt is disabled.
-        value: 0
-      enabled_case_an_alternative_receive_event_ser_cont:
-        description: The alternative receive interrupt is enabled. In case of an alternative
-          receive event, the service request output SRx indicated by INPR.AINP is
-          activated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_CCR_RIEN:
-    enum:
-      disabled:
-        description: The receive interrupt is disabled.
-        value: 0
-      enabled_case_receive_event_service_request_ou_cont:
-        description: The receive interrupt is enabled. In case of a receive event,
-          the service request output SRx indicated by INPR.RINP is activated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_CCR_TBIEN:
-    enum:
-      disabled:
-        description: The transmit buffer interrupt is disabled.
-        value: 0
-      enabled_case_transmit_buffer_event_service_re_cont:
-        description: The transmit buffer interrupt is enabled. In case of a transmit
-          buffer event, the service request output SRx indicated by INPR.TBINP is
-          activated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_CCR_TSIEN:
-    enum:
-      disabled:
-        description: The transmit shift interrupt is disabled.
-        value: 0
-      enabled_case_transmit_shift_interrupt_event_s_cont:
-        description: The transmit shift interrupt is enabled. In case of a transmit
-          shift interrupt event, the service request output SRx indicated by INPR.TSINP
-          is activated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_CCR_DLIEN:
-    enum:
-      disabled:
-        description: The data lost interrupt is disabled.
-        value: 0
-      enabled_case_data_lost_event_service_request__cont:
-        description: The data lost interrupt is enabled. In case of a data lost event,
-          the service request output SRx indicated by INPR.PINP is activated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_CCR_RSIEN:
-    enum:
-      disabled:
-        description: The receiver start interrupt is disabled.
-        value: 0
-      enabled_case_receiver_start_event_service_req_cont:
-        description: The receiver start interrupt is enabled. In case of a receiver
-          start event, the service request output SRx indicated by INPR.TBINP is activated.
         value: 1
     unit_test: false
     json: false
@@ -4137,353 +3042,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_PSR_BRGIF:
-    enum:
-      not_occurred:
-        description: A baud rate generator event has not occurred.
-        value: 0
-      occurred:
-        description: A baud rate generator event has occurred.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_ASCMode_BUSY:
-    enum:
-      does_not_take_place:
-        description: A data transfer does not take place.
-        value: 0
-      currently_takes_place:
-        description: A data transfer currently takes place.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_ASCMode_TFF:
-    enum:
-      not_finished:
-        description: The transmitter frame is not yet finished.
-        value: 0
-      finished:
-        description: The transmitter frame is finished.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_ASCMode_FER1:
-    enum:
-      not_been_detected:
-        description: A format error 1 has not been detected.
-        value: 0
-      been_detected:
-        description: A format error 1 has been detected.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_ASCMode_COL:
-    enum:
-      not_been_detected_frame_transmission_possible:
-        description: A collision has not yet been detected and frame transmission
-          is possible.
-        value: 0
-      been_detected_frame_transmission_not_possible:
-        description: A collision has been detected and frame transmission is not possible.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_ASCMode_RXIDLE:
-    enum:
-      not_been_idle:
-        description: The receiver line has not yet been idle.
-        value: 0
-      been_idle_frame_reception_possible:
-        description: The receiver line has been idle and frame reception is possible.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_ASCMode_TXIDLE:
-    enum:
-      not_been_idle:
-        description: The transmitter line has not yet been idle.
-        value: 0
-      been_idle_frame_transmission_possible:
-        description: The transmitter line has been idle and frame transmission is
-          possible.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_SSCMode_PARERR:
-    enum:
-      not_been_activated:
-        description: A parity error event has not been activated.
-        value: 0
-      been_activated:
-        description: A parity error event has been activated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_SSCMode_MSLSEV:
-    enum:
-      not_changed_state:
-        description: The MSLS signal has not changed its state.
-        value: 0
-      changed_state:
-        description: The MSLS signal has changed its state.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_SSCMode_MSLS:
-    enum:
-      inactive_0:
-        description: The internal signal MSLS is inactive (0).
-        value: 0
-      active_1:
-        description: The internal signal MSLS is active (1).
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IICMode_ACK:
-    enum:
-      not_been_received:
-        description: An acknowledge has not been received.
-        value: 0
-      been_received:
-        description: An acknowledge has been received.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IICMode_ARL:
-    enum:
-      not_been_lost:
-        description: An arbitration has not been lost.
-        value: 0
-      been_lost:
-        description: An arbitration has been lost.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IICMode_WTDF:
-    enum:
-      not_been_found:
-        description: A wrong TDF code has not been found.
-        value: 0
-      been_found:
-        description: A wrong TDF code has been found.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IICMode_SLSEL:
-    enum:
-      not_selected_slave:
-        description: The device is not selected as slave.
-        value: 0
-      selected_slave:
-        description: The device is selected as slave.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IISMode_END:
-    enum:
-      not_ended_if_running_wagen_has_been_cleared:
-        description: The WA generation has not yet ended (if it is running and WAGEN
-          has been cleared).
-        value: 0
-      ended_if_has_been_running:
-        description: The WA generation has ended (if it has been running).
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSR_IISMode_WARE:
-    enum:
-      not_been_generated:
-        description: A WA rising edge has not been generated.
-        value: 0
-      been_generated:
-        description: A WA rising edge has been generated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSCR_CBRGIF:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      flag_psrbrgif_cleared:
-        description: Flag PSR.BRGIF is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSCR_CAIF:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      flag_psraif_cleared:
-        description: Flag PSR.AIF is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSCR_CRIF:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      flag_psrrif_cleared:
-        description: Flag PSR.RIF is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSCR_CTBIF:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      flag_psrtbif_cleared:
-        description: Flag PSR.TBIF is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSCR_CTSIF:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      flag_psrtsif_cleared:
-        description: Flag PSR.TSIF is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSCR_CDLIF:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      flag_psrdlif_cleared:
-        description: Flag PSR.DLIF is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSCR_CRSIF:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      flag_psrrsif_cleared:
-        description: Flag PSR.RSIF is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_PSCR_CST9:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      flag_psrstx_cleared:
-        description: Flag PSR.STx is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_RBUF01SR_DS1:
-    enum:
-      _0_same_associated_status_information:
-        description: The register RBUF contains the data of RBUF0 (same for associated
-          status information).
-        value: 0
-      _1_same_associated_status_information:
-        description: The register RBUF contains the data of RBUF1 (same for associated
-          status information).
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_RBUF01SR_RDV11:
-    enum:
-      does_not_contain_data_has_not_been_read_out:
-        description: Register RBUF1 does not contain data that has not yet been read
-          out.
-        value: 0
-      contains_data_has_not_been_read_out:
-        description: Register RBUF1 contains data that has not yet been read out.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_RBUF01SR_PERR1:
-    enum:
-      matches_expected_value_reception_data_word_se_cont:
-        description: The received protocol-related argument PAR matches the expected
-          value. The reception of the data word sets bit PSR.RIF and can generate
-          a receive interrupt.
-        value: 0
-      does_not_match_expected_value_reception_data__cont:
-        description: The received protocol-related argument PAR does not match the
-          expected value. The reception of the data word sets bit PSR.AIF and can
-          generate an alternative receive interrupt.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_RBUF01SR_SOF1:
-    enum:
-      not_been_first_data_word_data_frame:
-        description: The data in RBUF1 has not been the first data word of a data
-          frame.
-        value: 0
-      been_first_data_word_data_frame:
-        description: The data in RBUF1 has been the first data word of a data frame.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_RBUF01SR_WLEN1:
     enum:
       one_bit_has_been_received:
@@ -4492,54 +3050,6 @@ enums:
       sixteen_bits_have_been_received:
         description: Sixteen bits have been received.
         value: 15
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_FMR_SIO5:
-    enum:
-      no_action:
-        description: No action.
-        value: 0
-      service_request_output_srx_activated:
-        description: The service request output SRx is activated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_FMR_CRDV1:
-    enum:
-      no_action:
-        description: No action.
-        value: 0
-      bits_rbuf01srrdv01_rbuf01srrdv11_cleared:
-        description: Bits RBUF01SR.RDV01 and RBUF01SR.RDV11 are cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_FMR_CRDV0:
-    enum:
-      no_action:
-        description: No action.
-        value: 0
-      bits_rbuf01srrdv00_rbuf01srrdv10_cleared:
-        description: Bits RBUF01SR.RDV00 and RBUF01SR.RDV10 are cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_FMR_ATVC:
-    enum:
-      no_action:
-        description: No action.
-        value: 0
-      bit_tcsrtvc_set:
-        description: Bit TCSR.TVC is set.
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -4555,44 +3065,6 @@ enums:
       bits_tdv_te_cleared:
         description: Bits TDV and TE are cleared.
         value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_BYPCR_BDV:
-    enum:
-      not_valid:
-        description: The bypass data is not valid.
-        value: 0
-      valid:
-        description: The bypass data is valid.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_BYPCR_BPRIO:
-    enum:
-      transmit_fifo_data_has_higher_priority_than_b_cont:
-        description: The transmit FIFO data has a higher priority than the bypass
-          data.
-        value: 0
-      bypass_data_has_higher_priority_than_transmit_cont:
-        description: The bypass data has a higher priority than the transmit FIFO
-          data.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_BYPCR_BDVTR:
-    enum:
-      not_influenced_by_dx2t:
-        description: Bit BDV is not influenced by DX2T.
-        value: 0
-      set_if_dx2t_active:
-        description: Bit BDV is set if DX2T is active.
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -4614,35 +3086,6 @@ enums:
         description: Gated bypass data transfer is enabled. Bypass data will be transferred
           to TBUF according to its priority if BDV = 1 and while DX2S = 1.
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_BYPCR_BDSSM:
-    enum:
-      still_considered_valid_after_has_been_loaded__cont:
-        description: The bypass data is still considered as valid after it has been
-          loaded into TBUF. The loading of the data into TBUF does not clear BDV.
-        value: 0
-      considered_invalid_after_has_been_loaded_into_cont:
-        description: The bypass data is considered as invalid after it has been loaded
-          into TBUF. The loading of the data into TBUF clears BDV.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TBCTR_LOF:
-    enum:
-      event_occurs_when_filling_level_equals_limit__cont:
-        description: A standard transmit buffer event occurs when the filling level
-          equals the limit value and gets lower due to transmission of a data word.
-        value: 0
-      interrupt_event_occurs_when_filling_level_equ_cont:
-        description: A standard transmit buffer interrupt event occurs when the filling
-          level equals the limit value and gets bigger due to a write access to a
-          data input location INx.
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -4675,54 +3118,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  USIC0_CH0_TBCTR_STBTM:
-    enum:
-      _0_while_trbsrstbt1_standard_buffer_event_be_g_cont:
-        description: 'Trigger mode 0: While TRBSR.STBT=1, a standard buffer event
-          will be generated whenever there is a data transfer to TBUF or data write
-          to INx (depending on TBCTR.LOF setting). STBT is cleared when TRBSR.TBFLVL=TBCTR.LIMIT.'
-        value: 0
-      _1_while_trbsrstbt1_standard_buffer_event_be_g_cont:
-        description: 'Trigger mode 1: While TRBSR.STBT=1, a standard buffer event
-          will be generated whenever there is a data transfer to TBUF or data write
-          to INx (depending on TBCTR.LOF setting). STBT is cleared when TRBSR.TBFLVL=TBCTR.SIZE.'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_RBCTR_LOF:
-    enum:
-      lower_due_read_access_outr:
-        description: A standard receive buffer event occurs when the filling level
-          equals the limit value and gets lower due to a read access from OUTR.
-        value: 0
-      bigger_due_reception_new_data_word:
-        description: A standard receive buffer event occurs when the filling level
-          equals the limit value and gets bigger due to the reception of a new data
-          word.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_RBCTR_RNM:
-    enum:
-      filling_level_mode_standard_receive_buffer_ev_cont:
-        description: 'Filling level mode: A standard receive buffer event occurs when
-          the filling level equals the limit value and changes, either due to a read
-          access from OUTR (LOF = 0) or due to a new received data word (LOF = 1).'
-        value: 0
-      rci_mode_standard_receive_buffer_event_occurs_cont:
-        description: 'RCI mode: A standard receive buffer event occurs when register
-          OUTR is updated with a new value if the corresponding value in OUTR.RCI[4]
-          = 0. If OUTR.RCI[4] = 1, an alternative receive buffer event occurs instead
-          of the standard receive buffer event.'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USIC0_CH0_RBCTR_RCIM:
     enum:
       perr_rci30_wlen:
@@ -4737,186 +3132,6 @@ enums:
       perr_rci3_par_rci21_00b_rci0_sof:
         description: RCI[4] = PERR, RCI[3] = PAR, RCI[2:1] = 00B, RCI[0] = SOF
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_RBCTR_SRBTM:
-    enum:
-      _0_while_trbsrsrbt1_standard_receive_buffer_ev_cont:
-        description: 'Trigger mode 0: While TRBSR.SRBT=1, a standard receive buffer
-          event will be generated whenever there is a new data received or data read
-          out (depending on RBCTR.LOF setting). SRBT is cleared when TRBSR.RBFLVL=RBCTR.LIMIT.'
-        value: 0
-      _1_while_trbsrsrbt1_standard_receive_buffer_ev_cont:
-        description: 'Trigger mode 1: While TRBSR.SRBT=1, a standard receive buffer
-          event will be generated whenever there is a new data received or data read
-          out (depending on RBCTR.LOF setting). SRBT is cleared when TRBSR.RBFLVL=0.'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TRBSR_STBT:
-    enum:
-      not_triggered_using_this_bit:
-        description: A standard transmit buffer event is not triggered using this
-          bit.
-        value: 0
-      triggered_using_this_bit:
-        description: A standard transmit buffer event is triggered using this bit.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TRBSR_TBUS:
-    enum:
-      transmit_buffer_information_has_been_complete_cont:
-        description: The transmit buffer information has been completely updated.
-        value: 0
-      fifo_memory_update_after_write_inx_ongoing_wr_cont:
-        description: The FIFO memory update after write to INx is ongoing. A write
-          to INx will be delayed. FIFO pointers from the previous INx write are not
-          yet updated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TRBSR_TFULL:
-    enum:
-      not_full:
-        description: The transmit buffer is not full.
-        value: 0
-      full:
-        description: The transmit buffer is full.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TRBSR_TEMPTY:
-    enum:
-      not_empty:
-        description: The transmit buffer is not empty.
-        value: 0
-      empty:
-        description: The transmit buffer is empty.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TRBSR_RBUS:
-    enum:
-      receive_buffer_information_has_been_completel_cont:
-        description: The receive buffer information has been completely updated.
-        value: 0
-      outr_update_fifo_memory_ongoing_read_outr_be__cont:
-        description: The OUTR update from the FIFO memory is ongoing. A read from
-          OUTR will be delayed. FIFO pointers from the previous read are not yet updated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TRBSCR_FLUSHTB:
-    enum:
-      no_effect:
-        description: No effect.
-        value: 0
-      transmit_fifo_buffer_cleared_filling_level_cl_cont:
-        description: The transmit FIFO buffer is cleared (filling level is cleared
-          and output pointer is set to input pointer value). Should only be used while
-          the FIFO buffer is not taking part in data traffic.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TRBSCR_FLUSHRB:
-    enum:
-      no_effect:
-        description: No effect.
-        value: 0
-      receive_fifo_buffer_cleared_filling_level_cle_cont:
-        description: The receive FIFO buffer is cleared (filling level is cleared
-          and output pointer is set to input pointer value). Should only be used while
-          the FIFO buffer is not taking part in data traffic.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TRBSCR_CBDV:
-    enum:
-      no_effect:
-        description: No effect.
-        value: 0
-      clear_bypcrbdv:
-        description: Clear BYPCR.BDV.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TRBSCR_CTBERI:
-    enum:
-      no_effect:
-        description: No effect.
-        value: 0
-      clear_trbsrtberi:
-        description: Clear TRBSR.TBERI.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TRBSCR_CSTBI:
-    enum:
-      no_effect:
-        description: No effect.
-        value: 0
-      clear_trbsrstbi:
-        description: Clear TRBSR.STBI.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TRBSCR_CARBI:
-    enum:
-      no_effect:
-        description: No effect.
-        value: 0
-      clear_trbsrarbi:
-        description: Clear TRBSR.ARBI.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TRBSCR_CRBERI:
-    enum:
-      no_effect:
-        description: No effect.
-        value: 0
-      clear_trbsrrberi:
-        description: Clear TRBSR.RBERI.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  USIC0_CH0_TRBSCR_CSRBI:
-    enum:
-      no_effect:
-        description: No effect.
-        value: 0
-      clear_trbsrsrbi:
-        description: Clear TRBSR.SRBI.
-        value: 1
     unit_test: false
     json: false
     use_map: false

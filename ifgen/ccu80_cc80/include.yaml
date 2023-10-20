@@ -53,21 +53,18 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_INS_EV2LM
           - name: EV1LM
             description: Event 1 Level Selection
             index: 23
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_INS_EV2LM
           - name: EV0LM
             description: Event 0 Level Selection
             index: 22
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_INS_EV2LM
           - name: EV2EM
             description: Event 2 Edge Selection
             index: 20
@@ -122,7 +119,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
           - name: MOS
             description: External Modulation Functionality Selector
             index: 18
@@ -135,14 +131,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TS
           - name: OFS
             description: Override Function Selector
             index: 16
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_OFS
           - name: CNTS
             description: External Count Selector
             index: 14
@@ -211,28 +205,24 @@ structs:
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_TCST_DTR2
           - name: DTR1
             description: Dead Time Counter 1 Run bit
             index: 3
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_TCST_DTR2
           - name: CDIR
             description: Timer Counting Direction
             index: 1
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_TCST_CDIR
           - name: TRB
             description: Timer Run Bit
             index: 0
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_TCST_TRB
       - name: TCSET
         type: uint32_t
         expected_size: 4
@@ -307,42 +297,36 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
           - name: MCME1
             description: Multi Channel Mode Enable for Channel 1
             index: 25
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
           - name: EMT
             description: External Modulation Type
             index: 24
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_TC_EMT
           - name: EMS
             description: External Modulation Synchronization
             index: 23
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_TC_EMS
           - name: TRPSW
             description: TRAP State Clear Control
             index: 22
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_TC_TRPSW
           - name: TRPSE
             description: TRAP Synchronization Enable
             index: 21
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_TC_TRPSE
           - name: TRAPE3
             description: TRAP enable for CCU8x.OUTy3
             index: 20
@@ -367,21 +351,18 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_TC_TRAPE0
           - name: FPE
             description: Floating Prescaler enable
             index: 16
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
           - name: DIM
             description: Dither input selector
             index: 15
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_TC_DIM
           - name: DITHE
             description: Dither Enable
             index: 13
@@ -395,21 +376,18 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_TC_CCS
           - name: SCE
             description: Equal Capture Event enable
             index: 11
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_TC_SCE
           - name: STRM
             description: Extended Start Function Control
             index: 10
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_TC_STRM
           - name: ENDM
             description: Extended Stop Function Control
             index: 8
@@ -423,7 +401,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_TC_TLS
           - name: CAPC
             description: Clear on Capture Control
             index: 5
@@ -437,14 +414,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_TC_ECM
           - name: CMOD
             description: Capture Compare Mode
             index: 3
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_TC_CMOD
           - name: CLST
             description: Shadow Transfer on Clear
             index: 2
@@ -457,14 +432,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
           - name: TCM
             description: Timer Counting Mode
             index: 0
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_TC_TCM
       - name: PSL
         type: uint32_t
         expected_size: 4
@@ -477,28 +450,24 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_PSL_PSL22
           - name: PSL21
             description: Output Passive Level for CCU8x.OUTy2
             index: 2
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_PSL_PSL22
           - name: PSL12
             description: Output Passive Level for CCU8x.OUTy1
             index: 1
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_PSL_PSL22
           - name: PSL11
             description: Output Passive Level for CCU8x.OUTy0
             index: 0
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_PSL_PSL22
       - name: DIT
         type: uint32_t
         expected_size: 4
@@ -659,35 +628,30 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CHC_OCS4
           - name: OCS3
             description: Output selector for CCU8x.OUTy2
             index: 3
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CHC_OCS3
           - name: OCS2
             description: Output selector for CCU8x.OUTy1
             index: 2
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CHC_OCS2
           - name: OCS1
             description: Output selector for CCU8x.OUTy0
             index: 1
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CHC_OCS1
           - name: ASE
             description: Asymmetric PWM mode Enable
             index: 0
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
       - name: DTC
         type: uint32_t
         expected_size: 4
@@ -707,42 +671,36 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
           - name: DCEN3
             description: Dead Time Enable for CC8yST2
             index: 4
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
           - name: DCEN2
             description: Dead Time Enable for inverted CC8yST1
             index: 3
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
           - name: DCEN1
             description: Dead Time Enable for CC8yST1
             index: 2
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
           - name: DTE2
             description: Dead Time Enable for Channel 2
             index: 1
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
           - name: DTE1
             description: Dead Time Enable for Channel 1
             index: 0
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
       - name: DC1R
         type: uint32_t
         expected_size: 4
@@ -804,7 +762,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_C0V_FFL
           - name: FPCV
             description: Prescaler Value
             index: 16
@@ -830,7 +787,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_C0V_FFL
           - name: FPCV
             description: Prescaler Value
             index: 16
@@ -856,7 +812,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_C0V_FFL
           - name: FPCV
             description: Prescaler Value
             index: 16
@@ -882,7 +837,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_C0V_FFL
           - name: FPCV
             description: Prescaler Value
             index: 16
@@ -914,63 +868,54 @@ structs:
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_INTS_E2AS
           - name: E1AS
             description: Event 1 Detection Status
             index: 9
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_INTS_E2AS
           - name: E0AS
             description: Event 0 Detection Status
             index: 8
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_INTS_E2AS
           - name: CMD2S
             description: Channel 2 Compare Match while Counting Down
             index: 5
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_INTS_E2AS
           - name: CMU2S
             description: Channel 2 Compare Match while Counting Up
             index: 4
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_INTS_E2AS
           - name: CMD1S
             description: Channel 1 Compare Match while Counting Down
             index: 3
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_INTS_E2AS
           - name: CMU1S
             description: Channel 1 Compare Match while Counting Up
             index: 2
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_INTS_E2AS
           - name: OMDS
             description: One Match while Counting Down
             index: 1
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_INTS_E2AS
           - name: PMUS
             description: Period Match while Counting Up
             index: 0
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_INTS_E2AS
       - name: INTE
         type: uint32_t
         expected_size: 4
@@ -983,63 +928,54 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
           - name: E1AE
             description: Event 1 interrupt enable
             index: 9
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
           - name: E0AE
             description: Event 0 interrupt enable
             index: 8
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
           - name: CMD2E
             description: Channel 2 Compare match while counting down enable
             index: 5
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
           - name: CMU2E
             description: Channel 2 Compare match while counting up enable
             index: 4
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
           - name: CMD1E
             description: Channel 1 Compare match while counting down enable
             index: 3
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
           - name: CMU1E
             description: Channel 1 Compare match while counting up enable
             index: 2
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
           - name: OME
             description: One match while counting down enable
             index: 1
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
           - name: PME
             description: Period match while counting up enable
             index: 0
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
       - name: SRS
         type: uint32_t
         expected_size: 4
@@ -1239,7 +1175,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU80_CC80_CMC_TCE
       - name: ECRD0
         type: uint32_t
         expected_size: 4
@@ -1253,14 +1188,12 @@ structs:
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_ECRD0_LCV
           - name: FFL
             description: Full Flag
             index: 24
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_ECRD0_FFL
           - name: VPTR
             description: Capture register pointer
             index: 22
@@ -1300,14 +1233,12 @@ structs:
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_ECRD0_LCV
           - name: FFL
             description: Full Flag
             index: 24
             width: 1
             read: true
             write: false
-            type: CCU80_CC80_ECRD0_FFL
           - name: VPTR
             description: Capture register pointer
             index: 22
@@ -1354,18 +1285,6 @@ enums:
       _7_clock_cycles_fccu8:
         description: 7 clock cycles of fCCU8
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_INS_EV2LM:
-    enum:
-      high_level:
-        description: Active on HIGH level
-        value: 0
-      low_level:
-        description: Active on LOW level
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -1442,43 +1361,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  CCU80_CC80_CMC_TCE:
-    enum:
-      disabled:
-        description: Timer concatenation is disabled
-        value: 0
-      enabled:
-        description: Timer concatenation is enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_CMC_TS:
-    enum:
-      disabled:
-        description: Trap function disabled
-        value: 0
-      connected_event_2:
-        description: TRAP function connected to Event 2
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_CMC_OFS:
-    enum:
-      override_functionality_disabled:
-        description: Override functionality disabled
-        value: 0
-      status_bit_trigger_override_connected_event_1_cont:
-        description: Status bit trigger override connected to Event 1; Status bit
-          value override connected to Event 2
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   CCU80_CC80_CMC_CNTS:
     enum:
       deactivated:
@@ -1493,42 +1375,6 @@ enums:
       triggered_by_event_2:
         description: External Count Function triggered by Event 2
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_TCST_DTR2:
-    enum:
-      idle:
-        description: Dead Time counter is idle
-        value: 0
-      running:
-        description: Dead Time counter is running
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_TCST_CDIR:
-    enum:
-      up:
-        description: Timer is counting up
-        value: 0
-      down:
-        description: Timer is counting down
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_TCST_TRB:
-    enum:
-      stopped:
-        description: Timer is stopped
-        value: 0
-      running:
-        description: Timer is running
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -1569,81 +1415,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  CCU80_CC80_TC_EMT:
-    enum:
-      clearing_cc8ystx_bits:
-        description: External Modulation functionality is clearing the CC8ySTx bits.
-        value: 0
-      gating_outputs:
-        description: External Modulation functionality is gating the outputs.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_TC_EMS:
-    enum:
-      not_synchronized_with_pwm_signal:
-        description: External Modulation functionality is not synchronized with the
-          PWM signal
-        value: 0
-      synchronized_with_pwm_signal:
-        description: External Modulation functionality is synchronized with the PWM
-          signal
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_TC_TRPSW:
-    enum:
-      slice_exits_trap_state_automatically_when_tra_cont:
-        description: The slice exits the TRAP state automatically when the TRAP condition
-          is not present (Trap state cleared by HW and SW)
-        value: 0
-      trap_state_can_only_be_exited_by_sw_request:
-        description: The TRAP state can only be exited by a SW request.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_TC_TRPSE:
-    enum:
-      isnt_synchronized_with_pwm_signal:
-        description: Exiting from TRAP state isn't synchronized with the PWM signal
-        value: 0
-      synchronized_with_pwm_signal:
-        description: Exiting from TRAP state is synchronized with the PWM signal
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_TC_TRAPE0:
-    enum:
-      has_no_effect_ccu8xouty0_output:
-        description: TRAP functionality has no effect on the CCU8x.OUTy0 output
-        value: 0
-      affects_ccu8xouty0_output:
-        description: TRAP functionality affects the CCU8x.OUTy0 output
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_TC_DIM:
-    enum:
-      using_own_dither_unit:
-        description: Slice is using it own dither unit
-        value: 0
-      connected_dither_unit_slice_0:
-        description: Slice is connected to the dither unit of slice 0.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   CCU80_CC80_TC_DITHE:
     enum:
       disabled:
@@ -1662,53 +1433,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  CCU80_CC80_TC_CCS:
-    enum:
-      specific_capture_register_done_with_rules_lin_cont:
-        description: The capture into a specific capture register is done with the
-          rules linked with the full flags, described at .
-        value: 0
-      capture_registers_always_done_regardless_full_cont:
-        description: The capture into the capture registers is always done regardless
-          of the full flag status (even if the register has not been read back).
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_TC_SCE:
-    enum:
-      registers_control_by_ccycapt0_capture_into_cc_cont:
-        description: Capture into CC8yC0VThis register contains the values associated
-          with the Capture 0 field./CC8yC1VThis register contains the values associated
-          with the Capture 1 field. registers control by CCycapt0 and capture into
-          CC8yC3VThis register contains the values associated with the Capture 3 field./CC8yC2VThis
-          register contains the values associated with the Capture 2 field. control
-          by CCycapt1
-        value: 0
-      cc8yc3vthis_register_contains_values_associat_cont:
-        description: Capture into CC8yC0VThis register contains the values associated
-          with the Capture 0 field./CC8yC1VThis register contains the values associated
-          with the Capture 1 field. and CC8yC3VThis register contains the values associated
-          with the Capture 3 field./CC8yC2VThis register contains the values associated
-          with the Capture 2 field. control by CCycapt1
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_TC_STRM:
-    enum:
-      sets_run_bit_only_default_start:
-        description: Sets run bit only (default start)
-        value: 0
-      clears_timer_sets_run_bit_if_not_set_flushstart:
-        description: Clears the timer and sets run bit, if not set (flush/start)
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   CCU80_CC80_TC_ENDM:
     enum:
       run_bit_only_default_stop:
@@ -1720,18 +1444,6 @@ enums:
       run_bit_flushstop:
         description: Clears the timer and run bit (flush/stop)
         value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_TC_TLS:
-    enum:
-      _1:
-        description: Timer is loaded with the value of CR1
-        value: 0
-      _2:
-        description: Timer is loaded with the value of CR2
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -1756,106 +1468,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  CCU80_CC80_TC_ECM:
-    enum:
-      normal_capture_mode_clear_full_flag_each_capt_cont:
-        description: Normal Capture Mode. Clear of the Full Flag of each capture register
-          is done by accessing the registers individually only.
-        value: 0
-      extended_capture_mode_clear_full_flag_each_ca_cont:
-        description: Extended Capture Mode. Clear of the Full Flag of each capture
-          register is done not only by accessing the individual registers but also
-          by accessing the ECRD register. When reading the ECRD register, only the
-          capture register register full flag pointed by the VPTR is cleared
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_TC_CMOD:
-    enum:
-      compare_mode:
-        description: Compare Mode
-        value: 0
-      capture_mode:
-        description: Capture Mode
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_TC_TCM:
-    enum:
-      edge_aligned_mode:
-        description: Edge aligned mode
-        value: 0
-      center_aligned_mode:
-        description: Center aligned mode
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_PSL_PSL22:
-    enum:
-      low:
-        description: Passive Level is LOW
-        value: 0
-      high:
-        description: Passive Level is HIGH
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_CHC_OCS4:
-    enum:
-      inverted_cc8yst2_signal_path_connected_ccu8xouty3:
-        description: Inverted CC8yST2 signal path is connected to the CCU8x.OUTy3
-        value: 0
-      cc8yst2_signal_path_connected_ccu8xouty3:
-        description: CC8yST2 signal path is connected to the CCU8x.OUTy3
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_CHC_OCS3:
-    enum:
-      cc8yst2_signal_path_connected_ccu8xouty2:
-        description: CC8yST2 signal path is connected to the CCU8x.OUTy2
-        value: 0
-      inverted_ccst2_signal_path_connected_ccu8xouty2:
-        description: Inverted CCST2 signal path is connected to the CCU8x.OUTy2
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_CHC_OCS2:
-    enum:
-      inverted_cc8yst1_signal_path_connected_ccu8xouty1:
-        description: Inverted CC8yST1 signal path is connected to the CCU8x.OUTy1
-        value: 0
-      cc8yst1_signal_path_connected_ccu8xouty1:
-        description: CC8yST1 signal path is connected to the CCU8x.OUTy1
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_CHC_OCS1:
-    enum:
-      cc8yst1_signal_path_connected_ccu8xouty0:
-        description: CC8yST1 signal path is connected to the CCU8x.OUTy0
-        value: 0
-      inverted_cc8yst1_signal_path_connected_ccu8xouty0:
-        description: Inverted CC8yST1 signal path is connected to the CCU8x.OUTy0
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   CCU80_CC80_DTC_DTCC:
     enum:
       ftclk:
@@ -1870,30 +1482,6 @@ enums:
       _8:
         description: ftclk/8
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_C0V_FFL:
-    enum:
-      no_new_value_was_captured_into_specific_captu_cont:
-        description: No new value was captured into the specific capture register
-        value: 0
-      new_value_was_captured_into_specific_register:
-        description: A new value was captured into the specific register
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_INTS_E2AS:
-    enum:
-      not_detected:
-        description: Event 2 not detected
-        value: 0
-      detected:
-        description: Event 2 detected
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -1963,30 +1551,6 @@ enums:
       only_one_match:
         description: Shadow transfer is done only in One Match.
         value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_ECRD0_LCV:
-    enum:
-      no_capture_was_lost:
-        description: No capture was lost
-        value: 0
-      capture_was_lost:
-        description: A capture was lost
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU80_CC80_ECRD0_FFL:
-    enum:
-      no_new_value_was_captured_into_this_register:
-        description: No new value was captured into this register
-        value: 0
-      new_value_has_been_captured_into_this_register:
-        description: A new value has been captured into this register
-        value: 1
     unit_test: false
     json: false
     use_map: false

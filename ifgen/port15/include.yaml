@@ -18,112 +18,96 @@ structs:
             width: 1
             read: true
             write: true
-            type: PORT15_OUT_P15
           - name: P14
             description: Port n Output Bit 14
             index: 14
             width: 1
             read: true
             write: true
-            type: PORT15_OUT_P15
           - name: P13
             description: Port n Output Bit 13
             index: 13
             width: 1
             read: true
             write: true
-            type: PORT15_OUT_P15
           - name: P12
             description: Port n Output Bit 12
             index: 12
             width: 1
             read: true
             write: true
-            type: PORT15_OUT_P15
           - name: P11
             description: Port n Output Bit 11
             index: 11
             width: 1
             read: true
             write: true
-            type: PORT15_OUT_P15
           - name: P10
             description: Port n Output Bit 10
             index: 10
             width: 1
             read: true
             write: true
-            type: PORT15_OUT_P15
           - name: P9
             description: Port n Output Bit 9
             index: 9
             width: 1
             read: true
             write: true
-            type: PORT15_OUT_P15
           - name: P8
             description: Port n Output Bit 8
             index: 8
             width: 1
             read: true
             write: true
-            type: PORT15_OUT_P15
           - name: P7
             description: Port n Output Bit 7
             index: 7
             width: 1
             read: true
             write: true
-            type: PORT15_OUT_P15
           - name: P6
             description: Port n Output Bit 6
             index: 6
             width: 1
             read: true
             write: true
-            type: PORT15_OUT_P15
           - name: P5
             description: Port n Output Bit 5
             index: 5
             width: 1
             read: true
             write: true
-            type: PORT15_OUT_P15
           - name: P4
             description: Port n Output Bit 4
             index: 4
             width: 1
             read: true
             write: true
-            type: PORT15_OUT_P15
           - name: P3
             description: Port n Output Bit 3
             index: 3
             width: 1
             read: true
             write: true
-            type: PORT15_OUT_P15
           - name: P2
             description: Port n Output Bit 2
             index: 2
             width: 1
             read: true
             write: true
-            type: PORT15_OUT_P15
           - name: P1
             description: Port n Output Bit 1
             index: 1
             width: 1
             read: true
             write: true
-            type: PORT15_OUT_P15
           - name: P0
             description: Port n Output Bit 0
             index: 0
             width: 1
             read: true
             write: true
-            type: PORT15_OUT_P15
       - name: OMR
         type: uint32_t
         expected_size: 4
@@ -471,112 +455,96 @@ structs:
             width: 1
             read: true
             write: false
-            type: PORT15_OUT_P15
           - name: P14
             description: Port n Input Bit 14
             index: 14
             width: 1
             read: true
             write: false
-            type: PORT15_OUT_P15
           - name: P13
             description: Port n Input Bit 13
             index: 13
             width: 1
             read: true
             write: false
-            type: PORT15_OUT_P15
           - name: P12
             description: Port n Input Bit 12
             index: 12
             width: 1
             read: true
             write: false
-            type: PORT15_OUT_P15
           - name: P11
             description: Port n Input Bit 11
             index: 11
             width: 1
             read: true
             write: false
-            type: PORT15_OUT_P15
           - name: P10
             description: Port n Input Bit 10
             index: 10
             width: 1
             read: true
             write: false
-            type: PORT15_OUT_P15
           - name: P9
             description: Port n Input Bit 9
             index: 9
             width: 1
             read: true
             write: false
-            type: PORT15_OUT_P15
           - name: P8
             description: Port n Input Bit 8
             index: 8
             width: 1
             read: true
             write: false
-            type: PORT15_OUT_P15
           - name: P7
             description: Port n Input Bit 7
             index: 7
             width: 1
             read: true
             write: false
-            type: PORT15_OUT_P15
           - name: P6
             description: Port n Input Bit 6
             index: 6
             width: 1
             read: true
             write: false
-            type: PORT15_OUT_P15
           - name: P5
             description: Port n Input Bit 5
             index: 5
             width: 1
             read: true
             write: false
-            type: PORT15_OUT_P15
           - name: P4
             description: Port n Input Bit 4
             index: 4
             width: 1
             read: true
             write: false
-            type: PORT15_OUT_P15
           - name: P3
             description: Port n Input Bit 3
             index: 3
             width: 1
             read: true
             write: false
-            type: PORT15_OUT_P15
           - name: P2
             description: Port n Input Bit 2
             index: 2
             width: 1
             read: true
             write: false
-            type: PORT15_OUT_P15
           - name: P1
             description: Port n Input Bit 1
             index: 1
             width: 1
             read: true
             write: false
-            type: PORT15_OUT_P15
           - name: P0
             description: Port n Input Bit 0
             index: 0
             width: 1
             read: true
             write: false
-            type: PORT15_OUT_P15
       - name: PDISC
         type: uint32_t
         expected_size: 4
@@ -589,84 +557,72 @@ structs:
             width: 1
             read: true
             write: true
-            type: PORT15_PDISC_PDIS15
           - name: PDIS14
             description: Pad Disable for Port 15 Pin 14
             index: 14
             width: 1
             read: true
             write: true
-            type: PORT15_PDISC_PDIS14
           - name: PDIS13
             description: Pad Disable for Port 15 Pin 13
             index: 13
             width: 1
             read: true
             write: true
-            type: PORT15_PDISC_PDIS13
           - name: PDIS12
             description: Pad Disable for Port 15 Pin 12
             index: 12
             width: 1
             read: true
             write: true
-            type: PORT15_PDISC_PDIS12
           - name: PDIS9
             description: Pad Disable for Port 15 Pin 9
             index: 9
             width: 1
             read: true
             write: true
-            type: PORT15_PDISC_PDIS9
           - name: PDIS8
             description: Pad Disable for Port 15 Pin 8
             index: 8
             width: 1
             read: true
             write: true
-            type: PORT15_PDISC_PDIS8
           - name: PDIS7
             description: Pad Disable for Port 15 Pin 7
             index: 7
             width: 1
             read: true
             write: true
-            type: PORT15_PDISC_PDIS7
           - name: PDIS6
             description: Pad Disable for Port 15 Pin 6
             index: 6
             width: 1
             read: true
             write: true
-            type: PORT15_PDISC_PDIS6
           - name: PDIS5
             description: Pad Disable for Port 15 Pin 5
             index: 5
             width: 1
             read: true
             write: true
-            type: PORT15_PDISC_PDIS5
           - name: PDIS4
             description: Pad Disable for Port 15 Pin 4
             index: 4
             width: 1
             read: true
             write: true
-            type: PORT15_PDISC_PDIS4
           - name: PDIS3
             description: Pad Disable for Port 15 Pin 3
             index: 3
             width: 1
             read: true
             write: true
-            type: PORT15_PDISC_PDIS3
           - name: PDIS2
             description: Pad Disable for Port 15 Pin 2
             index: 2
             width: 1
             read: true
             write: true
-            type: PORT15_PDISC_PDIS2
       - name: PPS
         type: uint32_t
         expected_size: 4
@@ -679,112 +635,96 @@ structs:
             width: 1
             read: true
             write: true
-            type: PORT15_PPS_PPS15
           - name: PPS14
             description: Port n Pin Power Save Bit 14
             index: 14
             width: 1
             read: true
             write: true
-            type: PORT15_PPS_PPS15
           - name: PPS13
             description: Port n Pin Power Save Bit 13
             index: 13
             width: 1
             read: true
             write: true
-            type: PORT15_PPS_PPS15
           - name: PPS12
             description: Port n Pin Power Save Bit 12
             index: 12
             width: 1
             read: true
             write: true
-            type: PORT15_PPS_PPS15
           - name: PPS11
             description: Port n Pin Power Save Bit 11
             index: 11
             width: 1
             read: true
             write: true
-            type: PORT15_PPS_PPS15
           - name: PPS10
             description: Port n Pin Power Save Bit 10
             index: 10
             width: 1
             read: true
             write: true
-            type: PORT15_PPS_PPS15
           - name: PPS9
             description: Port n Pin Power Save Bit 9
             index: 9
             width: 1
             read: true
             write: true
-            type: PORT15_PPS_PPS15
           - name: PPS8
             description: Port n Pin Power Save Bit 8
             index: 8
             width: 1
             read: true
             write: true
-            type: PORT15_PPS_PPS15
           - name: PPS7
             description: Port n Pin Power Save Bit 7
             index: 7
             width: 1
             read: true
             write: true
-            type: PORT15_PPS_PPS15
           - name: PPS6
             description: Port n Pin Power Save Bit 6
             index: 6
             width: 1
             read: true
             write: true
-            type: PORT15_PPS_PPS15
           - name: PPS5
             description: Port n Pin Power Save Bit 5
             index: 5
             width: 1
             read: true
             write: true
-            type: PORT15_PPS_PPS15
           - name: PPS4
             description: Port n Pin Power Save Bit 4
             index: 4
             width: 1
             read: true
             write: true
-            type: PORT15_PPS_PPS15
           - name: PPS3
             description: Port n Pin Power Save Bit 3
             index: 3
             width: 1
             read: true
             write: true
-            type: PORT15_PPS_PPS15
           - name: PPS2
             description: Port n Pin Power Save Bit 2
             index: 2
             width: 1
             read: true
             write: true
-            type: PORT15_PPS_PPS15
           - name: PPS1
             description: Port n Pin Power Save Bit 1
             index: 1
             width: 1
             read: true
             write: true
-            type: PORT15_PPS_PPS15
           - name: PPS0
             description: Port n Pin Power Save Bit 0
             index: 0
             width: 1
             read: true
             write: true
-            type: PORT15_PPS_PPS15
       - name: HWSEL
         type: uint32_t
         expected_size: 4
@@ -909,18 +849,6 @@ structs:
     unit_test: false
     identifier: false
 enums:
-  PORT15_OUT_P15:
-    enum:
-      _0:
-        description: The output level of Pn.x is 0.
-        value: 0
-      _1:
-        description: The output level of Pn.x is 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   PORT15_IOCR0_PC3:
     enum:
       input_no_internal_pull_device_active:
@@ -977,162 +905,6 @@ enums:
       output_open_drain_alternate_output_function_4:
         description: Output Open Drain - Alternate output function 4
         value: 28
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT15_PDISC_PDIS15:
-    enum:
-      enabled_digital_input_selected:
-        description: Pad is enabled, digital input selected.
-        value: 0
-      disabled_adc_3_analog_input_7:
-        description: Pad is disabled, ADC 3 analog input 7.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT15_PDISC_PDIS14:
-    enum:
-      enabled_digital_input_selected:
-        description: Pad is enabled, digital input selected.
-        value: 0
-      disabled_adc_3_analog_input_6:
-        description: Pad is disabled, ADC 3 analog input 6.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT15_PDISC_PDIS13:
-    enum:
-      enabled_digital_input_selected:
-        description: Pad is enabled, digital input selected.
-        value: 0
-      disabled_adc_3_analog_input_5:
-        description: Pad is disabled, ADC 3 analog input 5.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT15_PDISC_PDIS12:
-    enum:
-      enabled_digital_input_selected:
-        description: Pad is enabled, digital input selected.
-        value: 0
-      disabled_adc_3_analog_input_4:
-        description: Pad is disabled, ADC 3 analog input 4.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT15_PDISC_PDIS9:
-    enum:
-      enabled_digital_input_selected:
-        description: Pad is enabled, digital input selected.
-        value: 0
-      disabled_adc_3_analog_input_1:
-        description: Pad is disabled, ADC 3 analog input 1.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT15_PDISC_PDIS8:
-    enum:
-      enabled_digital_input_selected:
-        description: Pad is enabled, digital input selected.
-        value: 0
-      disabled_adc_3_analog_input_0:
-        description: Pad is disabled, ADC 3 analog input 0.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT15_PDISC_PDIS7:
-    enum:
-      enabled_digital_input_selected:
-        description: Pad is enabled, digital input selected.
-        value: 0
-      disabled_adc_2_analog_input_7:
-        description: Pad is disabled, ADC 2 analog input 7.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT15_PDISC_PDIS6:
-    enum:
-      enabled_digital_input_selected:
-        description: Pad is enabled, digital input selected.
-        value: 0
-      disabled_adc_2_analog_input_6:
-        description: Pad is disabled, ADC 2 analog input 6.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT15_PDISC_PDIS5:
-    enum:
-      enabled_digital_input_selected:
-        description: Pad is enabled, digital input selected.
-        value: 0
-      disabled_adc_2_analog_input_5:
-        description: Pad is disabled, ADC 2 analog input 5.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT15_PDISC_PDIS4:
-    enum:
-      enabled_digital_input_selected:
-        description: Pad is enabled, digital input selected.
-        value: 0
-      disabled_adc_2_analog_input_4:
-        description: Pad is disabled, ADC 2 analog input 4.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT15_PDISC_PDIS3:
-    enum:
-      enabled_digital_input_selected:
-        description: Pad is enabled, digital input selected.
-        value: 0
-      disabled_adc_2_analog_input_3:
-        description: Pad is disabled, ADC 2 analog input 3.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT15_PDISC_PDIS2:
-    enum:
-      enabled_digital_input_selected:
-        description: Pad is enabled, digital input selected.
-        value: 0
-      disabled_adc_2_analog_input_2:
-        description: Pad is disabled, ADC 2 analog input 2.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PORT15_PPS_PPS15:
-    enum:
-      disabled:
-        description: Pin Power Save of Pn.x is disabled.
-        value: 0
-      enabled:
-        description: Pin Power Save of Pn.x is enabled.
-        value: 1
     unit_test: false
     json: false
     use_map: false

@@ -259,99 +259,75 @@ structs:
             width: 1
             read: true
             write: true
-            type: DLR_LNEN_LN11
           - name: LN10
             description: Line 10 Enable
             index: 10
             width: 1
             read: true
             write: true
-            type: DLR_LNEN_LN11
           - name: LN9
             description: Line 9 Enable
             index: 9
             width: 1
             read: true
             write: true
-            type: DLR_LNEN_LN11
           - name: LN8
             description: Line 8 Enable
             index: 8
             width: 1
             read: true
             write: true
-            type: DLR_LNEN_LN11
           - name: LN7
             description: Line 7 Enable
             index: 7
             width: 1
             read: true
             write: true
-            type: DLR_LNEN_LN11
           - name: LN6
             description: Line 6 Enable
             index: 6
             width: 1
             read: true
             write: true
-            type: DLR_LNEN_LN11
           - name: LN5
             description: Line 5 Enable
             index: 5
             width: 1
             read: true
             write: true
-            type: DLR_LNEN_LN11
           - name: LN4
             description: Line 4 Enable
             index: 4
             width: 1
             read: true
             write: true
-            type: DLR_LNEN_LN11
           - name: LN3
             description: Line 3 Enable
             index: 3
             width: 1
             read: true
             write: true
-            type: DLR_LNEN_LN11
           - name: LN2
             description: Line 2 Enable
             index: 2
             width: 1
             read: true
             write: true
-            type: DLR_LNEN_LN11
           - name: LN1
             description: Line 1 Enable
             index: 1
             width: 1
             read: true
             write: true
-            type: DLR_LNEN_LN11
           - name: LN0
             description: Line 0 Enable
             index: 0
             width: 1
             read: true
             write: true
-            type: DLR_LNEN_LN11
     stream: false
     codec: false
     methods: false
     unit_test: false
     identifier: false
-enums:
-  DLR_LNEN_LN11:
-    enum:
-      disables_line:
-        description: Disables the line
-        value: 0
-      enables_line_resets_pending_request:
-        description: Enables the line and resets a pending request
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
+enums: {}

@@ -18,91 +18,78 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PEENSD0
             description: Parity Error Enable for SDMMC Memory 0
             index: 19
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PEENETH0RX
             description: Parity Error Enable for ETH RX Memory
             index: 18
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PEENETH0TX
             description: Parity Error Enable for ETH TX Memory
             index: 17
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PEENUSB
             description: Parity Error Enable for USB Memory
             index: 16
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PEENPPRF
             description: Parity Error Enable for PMU Prefetch Memory
             index: 13
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PEENMC
             description: Parity Error Enable for MultiCAN Memory
             index: 12
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PEENU2
             description: Parity Error Enable for USIC2 Memory
             index: 10
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PEENU1
             description: Parity Error Enable for USIC1 Memory
             index: 9
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PEENU0
             description: Parity Error Enable for USIC0 Memory
             index: 8
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PEENDS2
             description: Parity Error Enable for DSRAM2
             index: 2
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PEENDS1
             description: Parity Error Enable for DSRAM1
             index: 1
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PEENPS
             description: Parity Error Enable for PSRAM
             index: 0
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
       - name: MCHKCON
         type: uint32_t
         expected_size: 4
@@ -115,91 +102,78 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_MCHKCON_SELSD1
           - name: SELSD0
             description: Select Memory Check for SDMMC SRAM 0
             index: 19
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_MCHKCON_SELSD1
           - name: SELETH0RX
             description: Select Memory Check for ETH0 RX SRAM
             index: 18
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_MCHKCON_SELSD1
           - name: SELETH0TX
             description: Select Memory Check for ETH0 TX SRAM
             index: 17
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_MCHKCON_SELSD1
           - name: SELUSB
             description: Select Memory Check for USB SRAM
             index: 16
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_MCHKCON_SELSD1
           - name: PPRFDRA
             description: Select Memory Check for PMU
             index: 13
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_MCHKCON_SELSD1
           - name: MCANDRA
             description: Select Memory Check for MultiCAN
             index: 12
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_MCHKCON_SELSD1
           - name: USIC2DRA
             description: Select Memory Check for USIC2
             index: 10
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_MCHKCON_SELSD1
           - name: USIC1DRA
             description: Select Memory Check for USIC1
             index: 9
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_MCHKCON_SELSD1
           - name: USIC0DRA
             description: Select Memory Check for USIC0
             index: 8
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_MCHKCON_SELSD1
           - name: SELDS2
             description: Select Memory Check for DSRAM2
             index: 2
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_MCHKCON_SELSD1
           - name: SELDS1
             description: Select Memory Check for DSRAM1
             index: 1
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_MCHKCON_SELSD1
           - name: SELPS
             description: Select Memory Check for PSRAM
             index: 0
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_MCHKCON_SELSD1
       - name: PETE
         type: uint32_t
         expected_size: 4
@@ -212,91 +186,78 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PETESD0
             description: Parity Error Trap Enable for SDMMC SRAM 0 Memory
             index: 19
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PETEETH0RX
             description: Parity Error Trap Enable for ETH0 RX Memory
             index: 18
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PETEETH0TX
             description: Parity Error Trap Enable for ETH 0TX Memory
             index: 17
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PETEUSB
             description: Parity Error Trap Enable for USB Memory
             index: 16
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PETEPPRF
             description: Parity Error Trap Enable for PMU Prefetch Memory
             index: 13
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PETEMC
             description: Parity Error Trap Enable for MultiCAN Memory
             index: 12
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PETEU2
             description: Parity Error Trap Enable for USIC2 Memory
             index: 10
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PETEU1
             description: Parity Error Trap Enable for USIC1 Memory
             index: 9
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PETEU0
             description: Parity Error Trap Enable for USIC0 Memory
             index: 8
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PETEDS2
             description: Parity Error Trap Enable for DSRAM2
             index: 2
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PETEDS1
             description: Parity Error Trap Enable for DSRAM1
             index: 1
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
           - name: PETEPS
             description: Parity Error Trap Enable for PSRAM
             index: 0
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
       - name: PERSTEN
         type: uint32_t
         expected_size: 4
@@ -309,7 +270,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEEN_PEENSD1
       - name: PEFLAG
         type: uint32_t
         expected_size: 4
@@ -322,91 +282,78 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEFLAG_PESD1
           - name: PESD0
             description: Parity Error Flag for SDMMC Memory 0
             index: 19
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEFLAG_PESD1
           - name: PEETH0RX
             description: Parity Error Flag for ETH RX Memory
             index: 18
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEFLAG_PESD1
           - name: PEETH0TX
             description: Parity Error Flag for ETH TX Memory
             index: 17
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEFLAG_PESD1
           - name: PEUSB
             description: Parity Error Flag for USB Memory
             index: 16
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEFLAG_PESD1
           - name: PEFPPRF
             description: Parity Error Flag for PMU Prefetch Memory
             index: 13
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEFLAG_PESD1
           - name: PEFMC
             description: Parity Error Flag for MultiCAN Memory
             index: 12
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEFLAG_PESD1
           - name: PEFU2
             description: Parity Error Flag for USIC2 Memory
             index: 10
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEFLAG_PESD1
           - name: PEFU1
             description: Parity Error Flag for USIC1 Memory
             index: 9
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEFLAG_PESD1
           - name: PEFU0
             description: Parity Error Flag for USIC0 Memory
             index: 8
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEFLAG_PESD1
           - name: PEFDS2
             description: Parity Error Flag for DSRAM2
             index: 2
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEFLAG_PESD1
           - name: PEFDS1
             description: Parity Error Flag for DSRAM1
             index: 1
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEFLAG_PESD1
           - name: PEFPS
             description: Parity Error Flag for PSRAM
             index: 0
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PEFLAG_PESD1
       - name: PMTPR
         type: uint32_t
         expected_size: 4
@@ -437,142 +384,81 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PMTSR_MTSD1
           - name: MTSD0
             description: Test Enable Control for SDMMC Memory 0
             index: 19
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PMTSR_MTSD1
           - name: MTETH0RX
             description: Test Enable Control for ETH RX Memory
             index: 18
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PMTSR_MTSD1
           - name: MTETH0TX
             description: Test Enable Control for ETH TX Memory
             index: 17
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PMTSR_MTSD1
           - name: MTUSB
             description: Test Enable Control for USB Memory
             index: 16
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PMTSR_MTSD1
           - name: MTEPPRF
             description: Test Enable Control for PMU Prefetch Memory
             index: 13
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PMTSR_MTSD1
           - name: MTEMC
             description: Test Enable Control for MultiCAN Memory
             index: 12
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PMTSR_MTSD1
           - name: MTEU2
             description: Test Enable Control for USIC2 Memory
             index: 10
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PMTSR_MTSD1
           - name: MTEU1
             description: Test Enable Control for USIC1 Memory
             index: 9
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PMTSR_MTSD1
           - name: MTEU0
             description: Test Enable Control for USIC0 Memory
             index: 8
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PMTSR_MTSD1
           - name: MTENDS2
             description: Test Enable Control for DSRAM2
             index: 2
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PMTSR_MTSD1
           - name: MTENDS1
             description: Test Enable Control for DSRAM1
             index: 1
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PMTSR_MTSD1
           - name: MTENPS
             description: Test Enable Control for PSRAM
             index: 0
             width: 1
             read: true
             write: true
-            type: SCU_PARITY_PMTSR_MTSD1
     stream: false
     codec: false
     methods: false
     unit_test: false
     identifier: false
-enums:
-  SCU_PARITY_PEEN_PEENSD1:
-    enum:
-      disabled:
-        description: Disabled
-        value: 0
-      enabled:
-        description: Enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PARITY_MCHKCON_SELSD1:
-    enum:
-      not_selected:
-        description: Not selected
-        value: 0
-      selected:
-        description: Selected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PARITY_PEFLAG_PESD1:
-    enum:
-      no_parity_error_detected:
-        description: No parity error detected
-        value: 0
-      parity_error_detected:
-        description: Parity error detected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PARITY_PMTSR_MTSD1:
-    enum:
-      standard_operation:
-        description: Standard operation
-        value: 0
-      parity_bits_under_test:
-        description: Parity bits under test
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
+enums: {}

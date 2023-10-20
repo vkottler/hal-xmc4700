@@ -20,7 +20,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: PBA0_STS_WERR
       - name: WADDR
         type: uint32_t
         expected_size: 4
@@ -39,16 +38,4 @@ structs:
     methods: false
     unit_test: false
     identifier: false
-enums:
-  PBA0_STS_WERR:
-    enum:
-      no_write_error_occurred:
-        description: no write error occurred.
-        value: 0
-      write_error_occurred_interrupt_request_pending:
-        description: write error occurred, interrupt request is pending.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
+enums: {}

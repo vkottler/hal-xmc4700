@@ -18,48 +18,21 @@ structs:
             width: 1
             read: true
             write: true
-            type: PREF_PCON_DBYP
           - name: IINV
             description: Instruction Prefetch Buffer Invalidate
             index: 1
             width: 1
             read: false
             write: true
-            type: PREF_PCON_IINV
           - name: IBYP
             description: Instruction Prefetch Buffer Bypass
             index: 0
             width: 1
             read: true
             write: true
-            type: PREF_PCON_DBYP
     stream: false
     codec: false
     methods: false
     unit_test: false
     identifier: false
-enums:
-  PREF_PCON_DBYP:
-    enum:
-      not_bypassed:
-        description: Prefetch Data buffer not bypassed.
-        value: 0
-      bypassed:
-        description: Prefetch Data buffer bypassed.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  PREF_PCON_IINV:
-    enum:
-      no_effect:
-        description: No effect.
-        value: 0
-      initiate_invalidation_entire_instruction_cache:
-        description: Initiate invalidation of entire instruction cache.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
+enums: {}

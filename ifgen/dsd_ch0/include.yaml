@@ -24,7 +24,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: DSD_CH0_MODCFG_DWC
           - name: DIVM
             description: Divider Factor for Modulator Clock
             index: 16
@@ -44,7 +43,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: DSD_CH0_DICFG_SCWC
           - name: STROBE
             description: Data Strobe Generatoion Mode
             index: 20
@@ -65,7 +63,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: DSD_CH0_DICFG_TRWC
           - name: TRSEL
             description: Trigger Select
             index: 12
@@ -92,7 +89,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: DSD_CH0_DICFG_DSWC
           - name: DSRC
             description: Input Data Source Select
             index: 0
@@ -131,7 +127,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: DSD_CH0_FCFGC_CFEN
           - name: CFMC
             description: CIC Filter (Main Chain) Configuration
             index: 8
@@ -163,7 +158,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: DSD_CH0_FCFGA_EGT
           - name: ESEL
             description: Event Select
             index: 12
@@ -209,7 +203,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: DSD_CH0_IWCTR_IWS
           - name: NVALDIS
             description: Number of Values Discarded
             index: 16
@@ -234,7 +227,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: DSD_CH0_IWCTR_INTEN
           - name: NVALCNT
             description: Number of Values Counted
             index: 0
@@ -364,21 +356,18 @@ structs:
             width: 1
             read: true
             write: false
-            type: DSD_CH0_RECTCFG_SGND
           - name: SGNCS
             description: Selected Carrier Sign Signal
             index: 30
             width: 1
             read: true
             write: false
-            type: DSD_CH0_RECTCFG_SGND
           - name: SDVAL
             description: Valid Flag
             index: 15
             width: 1
             read: true
             write: false
-            type: DSD_CH0_RECTCFG_SDVAL
           - name: SSRC
             description: Sign Source
             index: 4
@@ -392,25 +381,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: DSD_CH0_RECTCFG_RFEN
     stream: false
     codec: false
     methods: false
     unit_test: false
     identifier: false
 enums:
-  DSD_CH0_MODCFG_DWC:
-    enum:
-      no_write_access_divider_factor:
-        description: No write access to divider factor
-        value: 0
-      bitfield_divm_can_be_written:
-        description: Bitfield DIVM can be written
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   DSD_CH0_MODCFG_DIVM:
     enum:
       _2:
@@ -425,18 +401,6 @@ enums:
       _32:
         description: fMOD = fCLK / 32
         value: 15
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_CH0_DICFG_SCWC:
-    enum:
-      no_write_access_strobeclock_parameters:
-        description: No write access to strobe/clock parameters
-        value: 0
-      bitfields_strobe_csrc_can_be_written:
-        description: Bitfields STROBE, CSRC can be written
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -491,18 +455,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  DSD_CH0_DICFG_TRWC:
-    enum:
-      no_write_access_trigger_parameters:
-        description: No write access to trigger parameters
-        value: 0
-      bitfields_trsel_tstrmode_itrmode_can_be_written:
-        description: Bitfields TRSEL, TSTRMODE, ITRMODE can be written
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   DSD_CH0_DICFG_TSTRMODE:
     enum:
       no_timestamp_trigger:
@@ -541,18 +493,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  DSD_CH0_DICFG_DSWC:
-    enum:
-      no_write_access_data_parameters:
-        description: No write access to data parameters
-        value: 0
-      bitfield_dsrc_can_be_written:
-        description: Bitfield DSRC can be written
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   DSD_CH0_DICFG_DSRC:
     enum:
       disconnected:
@@ -586,18 +526,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  DSD_CH0_FCFGC_CFEN:
-    enum:
-      cic_filter_disabled_bypassed:
-        description: CIC filter disabled and bypassed
-        value: 0
-      enable_cic_filter:
-        description: Enable CIC filter
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   DSD_CH0_FCFGC_CFMC:
     enum:
       _1:
@@ -612,22 +540,6 @@ enums:
       f:
         description: CICF
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_CH0_FCFGA_EGT:
-    enum:
-      separate_generate_events_according_esel:
-        description: 'Separate: generate events according to ESEL'
-        value: 0
-      coupled_generate_events_only_when_integrator__cont:
-        description: 'Coupled: generate events only when the integrator is enabled
-          and after the discard phase defined by bitfield NVALDISWhile the integrator
-          is bypassed, event gating is disabled, i.e. service requests are generated
-          according to bitfield ESEL. The event gating suppresses service requests,
-          result values are still stored in register RESAx.'
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -664,58 +576,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  DSD_CH0_IWCTR_IWS:
-    enum:
-      internal_control_stop_integrator_after_repval_cont:
-        description: 'Internal control: stop integrator after REPVAL+1 integration
-          cycles'
-        value: 0
-      external_control_stop_integrator_when_bit_int_cont:
-        description: 'External control: stop integrator when bit INTEN becomes 0'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_CH0_IWCTR_INTEN:
-    enum:
-      stopped_inten_cleared_at_end_integration_wind_cont:
-        description: Integration stopped. INTEN is cleared at the end of the integration
-          window, i.e. upon the inverse trigger event transition of the external trigger
-          signal.
-        value: 0
-      enabled_inten_set_upon_defined_trigger_event:
-        description: Integration enabled. INTEN is set upon the defined trigger event.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_CH0_RECTCFG_SGND:
-    enum:
-      positive_values:
-        description: Positive values
-        value: 0
-      negative_values:
-        description: Negative values
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_CH0_RECTCFG_SDVAL:
-    enum:
-      no_new_result_available:
-        description: No new result available
-        value: 0
-      bitfield_sdcap_has_been_updated_with_new_capt_cont:
-        description: Bitfield SDCAP has been updated with a new captured value and
-          has not yet been read
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   DSD_CH0_RECTCFG_SSRC:
     enum:
       on_chip_carrier_generator:
@@ -730,18 +590,6 @@ enums:
       external_sign_signal_b:
         description: External sign signal B
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_CH0_RECTCFG_RFEN:
-    enum:
-      no_rectification_data_not_altered:
-        description: No rectification, data not altered
-        value: 0
-      data_rectified_according_sgnd:
-        description: Data are rectified according to SGND
-        value: 1
     unit_test: false
     json: false
     use_map: false

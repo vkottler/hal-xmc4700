@@ -18,79 +18,27 @@ structs:
             width: 1
             read: true
             write: true
-            type: SDMMC_CON_SDMMC_CON_CDSVAL
           - name: CDSEL
             description: SDMMC Card Detection Control
             index: 16
             width: 1
             read: true
             write: true
-            type: SDMMC_CON_SDMMC_CON_CDSEL
           - name: WPSVAL
             description: SDMMC Write Protect Software Control
             index: 4
             width: 1
             read: true
             write: true
-            type: SDMMC_CON_SDMMC_CON_WPSVAL
           - name: WPSEL
             description: SDMMC Write Protection Input Multiplexer Control
             index: 0
             width: 1
             read: true
             write: true
-            type: SDMMC_CON_SDMMC_CON_WPSEL
     stream: false
     codec: false
     methods: false
     unit_test: false
     identifier: false
-enums:
-  SDMMC_CON_SDMMC_CON_CDSVAL:
-    enum:
-      no_card_detected:
-        description: No card detected
-        value: 0
-      card_detected:
-        description: Card detected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CON_SDMMC_CON_CDSEL:
-    enum:
-      p110_input_pin_selected:
-        description: P1.10 input pin selected
-        value: 0
-      software_bit_cdsval_selected:
-        description: Software bit CDSVAL is selected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CON_SDMMC_CON_WPSVAL:
-    enum:
-      no_write_protection:
-        description: No write protection
-        value: 0
-      write_protection_active:
-        description: Write protection active
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CON_SDMMC_CON_WPSEL:
-    enum:
-      p11_input_pin_selected:
-        description: P1.1 input pin selected
-        value: 0
-      software_bit_wpval_selected:
-        description: Software bit WPVAL is selected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
+enums: {}

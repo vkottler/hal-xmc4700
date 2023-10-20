@@ -19,42 +19,36 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CLKSTAT_WDTCST
           - name: CCUCST
             description: CCU Clock Status
             index: 4
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CLKSTAT_WDTCST
           - name: EBUCST
             description: EBU Clock Status
             index: 3
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CLKSTAT_WDTCST
           - name: ETH0CST
             description: Ethernet Clock Status
             index: 2
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CLKSTAT_WDTCST
           - name: MMCCST
             description: MMC Clock Status
             index: 1
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CLKSTAT_WDTCST
           - name: USBCST
             description: USB Clock Status
             index: 0
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CLKSTAT_WDTCST
       - name: CLKSET
         type: uint32_t
         expected_size: 4
@@ -67,42 +61,36 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKSET_WDTCEN
           - name: CCUCEN
             description: CCU Clock Enable
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKSET_WDTCEN
           - name: EBUCEN
             description: EBU Clock Enable
             index: 3
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKSET_WDTCEN
           - name: ETH0CEN
             description: Ethernet Clock Enable
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKSET_WDTCEN
           - name: MMCCEN
             description: MMC Clock Enable
             index: 1
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKSET_WDTCEN
           - name: USBCEN
             description: USB Clock Enable
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKSET_WDTCEN
       - name: CLKCLR
         type: uint32_t
         expected_size: 4
@@ -115,42 +103,36 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKCLR_WDTCDI
           - name: CCUCDI
             description: CCU Clock Disable
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKCLR_WDTCDI
           - name: EBUCDI
             description: EBU Clock Disable
             index: 3
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKCLR_WDTCDI
           - name: ETH0CDI
             description: Ethernet Clock Disable
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKCLR_WDTCDI
           - name: MMCCDI
             description: MMC Clock Disable
             index: 1
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKCLR_WDTCDI
           - name: USBCDI
             description: USB Clock Disable
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CLKCLR_WDTCDI
       - name: SYSCLKCR
         type: uint32_t
         expected_size: 4
@@ -163,7 +145,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SYSCLKCR_SYSSEL
           - name: SYSDIV
             description: System Clock Division Value
             index: 0
@@ -182,7 +163,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_CLK_CPUCLKCR_CPUDIV
       - name: PBCLKCR
         type: uint32_t
         expected_size: 4
@@ -195,7 +175,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_CLK_PBCLKCR_PBDIV
       - name: USBCLKCR
         type: uint32_t
         expected_size: 4
@@ -208,7 +187,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_CLK_USBCLKCR_USBSEL
           - name: USBDIV
             description: USB Clock Divider Value
             index: 0
@@ -239,7 +217,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_CLK_CCUCLKCR_CCUDIV
       - name: WDTCLKCR
         type: uint32_t
         expected_size: 4
@@ -309,28 +286,24 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_CLK_MLINKCLKCR_CCUDIV
           - name: PBDIV
             description: PB Clock Divider Enable
             index: 12
             width: 1
             read: true
             write: true
-            type: SCU_CLK_MLINKCLKCR_PBDIV
           - name: CPUDIV
             description: CPU Clock Divider Enable
             index: 10
             width: 1
             read: true
             write: true
-            type: SCU_CLK_MLINKCLKCR_CPUDIV
           - name: SYSSEL
             description: System Clock Selection Value
             index: 8
             width: 1
             read: true
             write: true
-            type: SCU_CLK_MLINKCLKCR_SYSSEL
           - name: SYSDIV
             description: System Clock Division Value
             index: 0
@@ -349,49 +322,42 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SLEEPCR_WDTCR
           - name: CCUCR
             description: CCU Clock Control
             index: 20
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SLEEPCR_WDTCR
           - name: EBUCR
             description: EBU Clock Control
             index: 19
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SLEEPCR_WDTCR
           - name: ETH0CR
             description: Ethernet Clock Control
             index: 18
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SLEEPCR_WDTCR
           - name: MMCCR
             description: MMC Clock Control
             index: 17
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SLEEPCR_WDTCR
           - name: USBCR
             description: USB Clock Control
             index: 16
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SLEEPCR_WDTCR
           - name: SYSSEL
             description: System Clock Selection Value
             index: 0
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SYSCLKCR_SYSSEL
       - name: DSLEEPCR
         type: uint32_t
         expected_size: 4
@@ -404,70 +370,60 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SLEEPCR_WDTCR
           - name: CCUCR
             description: CCU Clock Control
             index: 20
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SLEEPCR_WDTCR
           - name: EBUCR
             description: EBU Clock Control
             index: 19
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SLEEPCR_WDTCR
           - name: ETH0CR
             description: Ethernet Clock Control
             index: 18
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SLEEPCR_WDTCR
           - name: MMCCR
             description: MMC Clock Control
             index: 17
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SLEEPCR_WDTCR
           - name: USBCR
             description: USB Clock Control
             index: 16
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SLEEPCR_WDTCR
           - name: VCOPDN
             description: VCO Power Down
             index: 13
             width: 1
             read: true
             write: true
-            type: SCU_CLK_DSLEEPCR_VCOPDN
           - name: PLLPDN
             description: PLL Power Down
             index: 12
             width: 1
             read: true
             write: true
-            type: SCU_CLK_DSLEEPCR_PLLPDN
           - name: FPDN
             description: Flash Power Down
             index: 11
             width: 1
             read: true
             write: true
-            type: SCU_CLK_DSLEEPCR_FPDN
           - name: SYSSEL
             description: System Clock Selection Value
             index: 0
             width: 1
             read: true
             write: true
-            type: SCU_CLK_SYSCLKCR_SYSSEL
       - name: CGATSTAT0
         type: uint32_t
         expected_size: 4
@@ -481,77 +437,66 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: USIC0
             description: USIC0 Gating Status
             index: 11
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: POSIF1
             description: POSIF1 Gating Status
             index: 10
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: POSIF0
             description: POSIF0 Gating Status
             index: 9
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: CCU81
             description: CCU81 Gating Status
             index: 8
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: CCU80
             description: CCU80 Gating Status
             index: 7
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: CCU42
             description: CCU42 Gating Status
             index: 4
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: CCU41
             description: CCU41 Gating Status
             index: 3
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: CCU40
             description: CCU40 Gating Status
             index: 2
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: DSD
             description: DSD Gating Status
             index: 1
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: VADC
             description: VADC Gating Status
             index: 0
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
       - name: CGATSET0
         type: uint32_t
         expected_size: 4
@@ -564,77 +509,66 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: USIC0
             description: USIC0 Gating Set
             index: 11
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: POSIF1
             description: POSIF1 Gating Set
             index: 10
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: POSIF0
             description: POSIF0 Gating Set
             index: 9
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: CCU81
             description: CCU81 Gating Set
             index: 8
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: CCU80
             description: CCU80 Gating Set
             index: 7
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: CCU42
             description: CCU42 Gating Set
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: CCU41
             description: CCU41 Gating Set
             index: 3
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: CCU40
             description: CCU40 Gating Set
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: DSD
             description: DSD Gating Set
             index: 1
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: VADC
             description: VADC Gating Set
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
       - name: CGATCLR0
         type: uint32_t
         expected_size: 4
@@ -647,77 +581,66 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: USIC0
             description: USIC0 Gating Clear
             index: 11
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: POSIF1
             description: POSIF1 Gating Clear
             index: 10
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: POSIF0
             description: POSIF0 Gating Clear
             index: 9
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: CCU81
             description: CCU81 Gating Clear
             index: 8
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: CCU80
             description: CCU80 Gating Clear
             index: 7
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: CCU42
             description: CCU42 Gating Clear
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: CCU41
             description: CCU41 Gating Clear
             index: 3
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: CCU40
             description: CCU40 Gating Clear
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: DSD
             description: DSD Gating Clear
             index: 1
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: VADC
             description: VADC Gating Clear
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
       - name: CGATSTAT1
         type: uint32_t
         expected_size: 4
@@ -731,56 +654,48 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: USIC2
             description: USIC2 Gating Status
             index: 8
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: USIC1
             description: USIC1 Gating Status
             index: 7
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: MMCI
             description: MMC Interface Gating Status
             index: 6
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: DAC
             description: DAC Gating Status
             index: 5
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: MCAN0
             description: MultiCAN Gating Status
             index: 4
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: LEDTSCU0
             description: LEDTS Gating Status
             index: 3
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: CCU43
             description: CCU43 Gating Status
             index: 0
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
       - name: CGATSET1
         type: uint32_t
         expected_size: 4
@@ -793,56 +708,48 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: USIC2
             description: USIC2 Gating Set
             index: 8
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: USIC1
             description: USIC1 Gating Set
             index: 7
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: MMCI
             description: MMC Interface Gating Set
             index: 6
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: DAC
             description: DAC Gating Set
             index: 5
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: MCAN0
             description: MultiCAN Gating Set
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: LEDTSCU0
             description: LEDTS Gating Set
             index: 3
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: CCU43
             description: CCU43 Gating Set
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
       - name: CGATCLR1
         type: uint32_t
         expected_size: 4
@@ -855,56 +762,48 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: USIC2
             description: USIC2 Gating Clear
             index: 8
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: USIC1
             description: USIC1 Gating Clear
             index: 7
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: MMCI
             description: MMC Interface Gating Clear
             index: 6
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: DAC
             description: DAC Gating Clear
             index: 5
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: MCAN0
             description: MultiCAN Gating Clear
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: LEDTSCU0
             description: LEDTS Gating Clear
             index: 3
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: CCU43
             description: CCU43 Gating Clear
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
       - name: CGATSTAT2
         type: uint32_t
         expected_size: 4
@@ -918,42 +817,36 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: FCE
             description: FCE Gating Status
             index: 6
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: DMA1
             description: DMA1 Gating Status
             index: 5
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: DMA0
             description: DMA0 Gating Status
             index: 4
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: ETH0
             description: ETH0 Gating Status
             index: 2
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
           - name: WDT
             description: WDT Gating Status
             index: 1
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
       - name: CGATSET2
         type: uint32_t
         expected_size: 4
@@ -966,42 +859,36 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: FCE
             description: FCE Gating Set
             index: 6
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: DMA1
             description: DMA1 Gating Set
             index: 5
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: DMA0
             description: DMA0 Gating Set
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: ETH0
             description: ETH0 Gating Set
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
           - name: WDT
             description: WDT Gating Set
             index: 1
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
       - name: CGATCLR2
         type: uint32_t
         expected_size: 4
@@ -1014,42 +901,36 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: FCE
             description: FCE Gating Clear
             index: 6
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: DMA1
             description: DMA1 Gating Clear
             index: 5
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: DMA0
             description: DMA0 Gating Clear
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: ETH0
             description: ETH0 Gating Clear
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
           - name: WDT
             description: WDT Gating Clear
             index: 1
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
       - name: CGATSTAT3
         type: uint32_t
         expected_size: 4
@@ -1063,7 +944,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_CLK_CGATSTAT0_ERU1
       - name: CGATSET3
         type: uint32_t
         expected_size: 4
@@ -1076,7 +956,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATSET0_ERU1
       - name: CGATCLR3
         type: uint32_t
         expected_size: 4
@@ -1089,109 +968,12 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_CLK_CGATCLR0_ERU1
     stream: false
     codec: false
     methods: false
     unit_test: false
     identifier: false
 enums:
-  SCU_CLK_CLKSTAT_WDTCST:
-    enum:
-      disabled:
-        description: Clock disabled
-        value: 0
-      enabled:
-        description: Clock enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CLKSET_WDTCEN:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      enable:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CLKCLR_WDTCDI:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      disable_clock:
-        description: Disable clock
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_SYSCLKCR_SYSSEL:
-    enum:
-      fofi_clock:
-        description: fOFI clock
-        value: 0
-      fpll_clock:
-        description: fPLL clock
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CPUCLKCR_CPUDIV:
-    enum:
-      fcpu_fsys:
-        description: fCPU = fSYS
-        value: 0
-      _2:
-        description: fCPU = fSYS / 2
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_PBCLKCR_PBDIV:
-    enum:
-      fperiph_fcpu:
-        description: fPERIPH = fCPU
-        value: 0
-      _2:
-        description: fPERIPH = fCPU / 2
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_USBCLKCR_USBSEL:
-    enum:
-      usb_pll_clock:
-        description: USB PLL Clock
-        value: 0
-      pll_clock:
-        description: PLL Clock
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CCUCLKCR_CCUDIV:
-    enum:
-      fccu_fsys:
-        description: fCCU = fSYS
-        value: 0
-      _2:
-        description: fCCU = fSYS / 2
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   SCU_CLK_WDTCLKCR_WDTSEL:
     enum:
       fofi_clock:
@@ -1233,138 +1015,6 @@ enums:
       fpllclock:
         description: fPLLclock
         value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_MLINKCLKCR_CCUDIV:
-    enum:
-      fccufsys:
-        description: fCCU=fSYS
-        value: 0
-      _2:
-        description: fCCU=fSYS/ 2
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_MLINKCLKCR_PBDIV:
-    enum:
-      fperiphfcpu:
-        description: fPERIPH=fCPU
-        value: 0
-      _2:
-        description: fPERIPH=fCPU/ 2
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_MLINKCLKCR_CPUDIV:
-    enum:
-      fcpufsys:
-        description: fCPU=fSYS
-        value: 0
-      _2:
-        description: fCPU=fSYS/ 2
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_MLINKCLKCR_SYSSEL:
-    enum:
-      foficlock:
-        description: fOFIclock
-        value: 0
-      fpllclock:
-        description: fPLLclock
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_SLEEPCR_WDTCR:
-    enum:
-      disable:
-        description: Disable
-        value: 0
-      enable:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_DSLEEPCR_VCOPDN:
-    enum:
-      switch_off_vco_main_pll:
-        description: Switch off VCO of main PLL
-        value: 1
-      no_effect:
-        description: No effect
-        value: 0
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_DSLEEPCR_PLLPDN:
-    enum:
-      switch_off_main_pll:
-        description: Switch off main PLL
-        value: 1
-      no_effect:
-        description: No effect
-        value: 0
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_DSLEEPCR_FPDN:
-    enum:
-      flash_power_down_module:
-        description: Flash power down module
-        value: 1
-      no_effect:
-        description: No effect
-        value: 0
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSTAT0_ERU1:
-    enum:
-      de_asserted:
-        description: Gating de-asserted
-        value: 0
-      asserted:
-        description: Gating asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATSET0_ERU1:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      enable_gating:
-        description: Enable gating
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_CLK_CGATCLR0_ERU1:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      disable_gating:
-        description: Disable gating
-        value: 1
     unit_test: false
     json: false
     use_map: false

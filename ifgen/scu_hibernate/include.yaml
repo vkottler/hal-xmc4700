@@ -19,35 +19,30 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_HIBERNATE_HDSTAT_HIBNOUT
           - name: ULPWDG
             description: ULP WDG Alarm Status
             index: 3
             width: 1
             read: true
             write: false
-            type: SCU_HIBERNATE_HDSTAT_ULPWDG
           - name: RTCEV
             description: RTC Event
             index: 2
             width: 1
             read: true
             write: false
-            type: SCU_HIBERNATE_HDSTAT_RTCEV
           - name: ENEV
             description: Wake-up Pin Event Negative Edge
             index: 1
             width: 1
             read: true
             write: false
-            type: SCU_HIBERNATE_HDSTAT_RTCEV
           - name: EPEV
             description: Wake-up Pin Event Positive Edge
             index: 0
             width: 1
             read: true
             write: false
-            type: SCU_HIBERNATE_HDSTAT_RTCEV
       - name: HDCLR
         type: uint32_t
         expected_size: 4
@@ -60,28 +55,24 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_HIBERNATE_HDCLR_ULPWDG
           - name: RTCEV
             description: RTC Event Clear
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_HIBERNATE_HDCLR_RTCEV
           - name: ENEV
             description: Wake-up Pin Event Negative Edge Clear
             index: 1
             width: 1
             read: false
             write: true
-            type: SCU_HIBERNATE_HDCLR_RTCEV
           - name: EPEV
             description: Wake-up Pin Event Positive Edge Clear
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_HIBERNATE_HDCLR_RTCEV
       - name: HDSET
         type: uint32_t
         expected_size: 4
@@ -94,28 +85,24 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_HIBERNATE_HDSET_ULPWDG
           - name: RTCEV
             description: RTC Event Set
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_HIBERNATE_HDSET_RTCEV
           - name: ENEV
             description: Wake-up Pin Event Negative Edge Set
             index: 1
             width: 1
             read: false
             write: true
-            type: SCU_HIBERNATE_HDSET_RTCEV
           - name: EPEV
             description: Wake-up Pin Event Positive Edge Set
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_HIBERNATE_HDSET_RTCEV
       - name: HDCR
         type: uint32_t
         expected_size: 4
@@ -142,77 +129,66 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_HIBERNATE_HDCR_HIBIO1POL
           - name: HIBIO0POL
             description: HIBIO0 Polarity Set
             index: 12
             width: 1
             read: true
             write: true
-            type: SCU_HIBERNATE_HDCR_HIBIO1POL
           - name: GPI0SEL
             description: General Purpose Input 0 Selection
             index: 10
             width: 1
             read: true
             write: true
-            type: SCU_HIBERNATE_HDCR_GPI0SEL
           - name: WKUPSEL
             description: Wake-Up from Hibernate Trigger Input Selection
             index: 8
             width: 1
             read: true
             write: true
-            type: SCU_HIBERNATE_HDCR_GPI0SEL
           - name: STDBYSEL
             description: fSTDBY Clock Selection
             index: 7
             width: 1
             read: true
             write: true
-            type: SCU_HIBERNATE_HDCR_STDBYSEL
           - name: RCS
             description: fRTC Clock Selection
             index: 6
             width: 1
             read: true
             write: true
-            type: SCU_HIBERNATE_HDCR_STDBYSEL
           - name: HIB
             description: Hibernate Request Value Set
             index: 4
             width: 1
             read: true
             write: true
-            type: SCU_HIBERNATE_HDSTAT_RTCEV
           - name: ULPWDGEN
             description: ULP WDG Alarm Enable
             index: 3
             width: 1
             read: true
             write: true
-            type: SCU_HIBERNATE_HDCR_ULPWDGEN
           - name: RTCE
             description: Wake-up on RTC Event Enable
             index: 2
             width: 1
             read: true
             write: true
-            type: SCU_HIBERNATE_HDCR_ULPWDGEN
           - name: WKPEN
             description: Wake-up on Pin Event Negative Edge Enable
             index: 1
             width: 1
             read: true
             write: true
-            type: SCU_HIBERNATE_HDCR_ULPWDGEN
           - name: WKPEP
             description: Wake-Up on Pin Event Positive Edge Enable
             index: 0
             width: 1
             read: true
             write: true
-            type: SCU_HIBERNATE_HDCR_ULPWDGEN
       - name: OSCSICTRL
         type: uint32_t
         expected_size: 4
@@ -225,7 +201,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_HIBERNATE_OSCSICTRL_PWD
       - name: OSCULSTAT
         type: uint32_t
         expected_size: 4
@@ -258,97 +233,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_HIBERNATE_OSCULCTRL_X1DEN
     stream: false
     codec: false
     methods: false
     unit_test: false
     identifier: false
 enums:
-  SCU_HIBERNATE_HDSTAT_HIBNOUT:
-    enum:
-      not_driven_active_pads:
-        description: Hibernate not driven active to pads
-        value: 0
-      driven_active_pads:
-        description: Hibernate driven active to pads
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDSTAT_ULPWDG:
-    enum:
-      did_not_occur:
-        description: Watchdog alarm did not occur
-        value: 0
-      occurred:
-        description: Watchdog alarm occurred
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDSTAT_RTCEV:
-    enum:
-      inactive:
-        description: Wake-up on RTC event inactive
-        value: 0
-      active:
-        description: Wake-up on RTC event active
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDCLR_ULPWDG:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      clear_watchdog_alarm:
-        description: Clear watchdog alarm
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDCLR_RTCEV:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      clear_wake_up_event:
-        description: Clear wake-up event
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDSET_ULPWDG:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      set_watchdog_alarm:
-        description: Set watchdog alarm
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDSET_RTCEV:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      set_wake_up_event:
-        description: Set wake-up event
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   SCU_HIBERNATE_HDCR_HIBIO1SEL:
     enum:
       direct_input_no_input_pull_device_connected:
@@ -385,66 +275,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  SCU_HIBERNATE_HDCR_HIBIO1POL:
-    enum:
-      direct_value:
-        description: Direct value
-        value: 0
-      inverted_value:
-        description: Inverted value
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDCR_GPI0SEL:
-    enum:
-      _1_pin_selected:
-        description: HIB_IO_1 pin selected
-        value: 0
-      _0_pin_selected:
-        description: HIB_IO_0 pin selected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDCR_STDBYSEL:
-    enum:
-      fosi_selected:
-        description: fOSI selected
-        value: 0
-      fulp_selected:
-        description: fULP selected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_HDCR_ULPWDGEN:
-    enum:
-      disabled:
-        description: Wake-up event disabled
-        value: 0
-      enabled:
-        description: Wake-up event enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_OSCSICTRL_PWD:
-    enum:
-      enabled:
-        description: Enabled
-        value: 0
-      disabled:
-        description: Disabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   SCU_HIBERNATE_OSCULCTRL_MODE:
     enum:
       enabled_operation:
@@ -459,18 +289,6 @@ enums:
       power_down_can_be_used_gpi:
         description: Oscillator in power down, can be used as GPI
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_HIBERNATE_OSCULCTRL_X1DEN:
-    enum:
-      inactivated_power_down:
-        description: Data input inactivated, power down
-        value: 0
-      active:
-        description: Data input active
-        value: 1
     unit_test: false
     json: false
     use_map: false

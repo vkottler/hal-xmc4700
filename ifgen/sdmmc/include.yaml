@@ -60,7 +60,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: SDMMC_TRANSFER_MODE_BLOCK_COUNT_EN
           - name: ACMD_EN
             description: Auto CMD Enable
             index: 2
@@ -74,21 +73,18 @@ structs:
             width: 1
             read: true
             write: true
-            type: SDMMC_TRANSFER_MODE_TX_DIR_SELECT
           - name: MULTI_BLOCK_SELECT
             description: Multi / Single Block Select
             index: 5
             width: 1
             read: true
             write: true
-            type: SDMMC_TRANSFER_MODE_MULTI_BLOCK_SELECT
           - name: CMD_COMP_ATA
             description: Command Completion Signal Enable for CE-ATA Device
             index: 6
             width: 1
             read: true
             write: true
-            type: SDMMC_TRANSFER_MODE_CMD_COMP_ATA
       - name: COMMAND
         type: uint16_t
         expected_size: 2
@@ -108,21 +104,18 @@ structs:
             width: 1
             read: true
             write: true
-            type: SDMMC_TRANSFER_MODE_BLOCK_COUNT_EN
           - name: CMD_IND_CHECK_EN
             description: Command Index Check Enable
             index: 4
             width: 1
             read: true
             write: true
-            type: SDMMC_TRANSFER_MODE_BLOCK_COUNT_EN
           - name: DATA_PRESENT_SELECT
             description: Data Present Select
             index: 5
             width: 1
             read: true
             write: true
-            type: SDMMC_COMMAND_DATA_PRESENT_SELECT
           - name: CMD_TYPE
             description: Command Type
             index: 6
@@ -243,70 +236,60 @@ structs:
             width: 1
             read: true
             write: false
-            type: SDMMC_PRESENT_STATE_COMMAND_INHIBIT_DAT
           - name: DAT_LINE_ACTIVE
             description: DAT Line Active
             index: 2
             width: 1
             read: true
             write: false
-            type: SDMMC_PRESENT_STATE_DAT_LINE_ACTIVE
           - name: WRITE_TRANSFER_ACTIVE
             description: Write Transfer Active
             index: 8
             width: 1
             read: true
             write: false
-            type: SDMMC_PRESENT_STATE_WRITE_TRANSFER_ACTIVE
           - name: READ_TRANSFER_ACTIVE
             description: Read Transfer Active
             index: 9
             width: 1
             read: true
             write: false
-            type: SDMMC_PRESENT_STATE_WRITE_TRANSFER_ACTIVE
           - name: BUFFER_WRITE_ENABLE
             description: Buffer Write Enable
             index: 10
             width: 1
             read: true
             write: false
-            type: SDMMC_TRANSFER_MODE_BLOCK_COUNT_EN
           - name: BUFFER_READ_ENABLE
             description: Buffer Read Enable
             index: 11
             width: 1
             read: true
             write: false
-            type: SDMMC_TRANSFER_MODE_BLOCK_COUNT_EN
           - name: CARD_INSERTED
             description: Card Inserted
             index: 16
             width: 1
             read: true
             write: false
-            type: SDMMC_PRESENT_STATE_CARD_INSERTED
           - name: CARD_STATE_STABLE
             description: Card State Stable
             index: 17
             width: 1
             read: true
             write: false
-            type: SDMMC_PRESENT_STATE_CARD_STATE_STABLE
           - name: CARD_DETECT_PIN_LEVEL
             description: Card Detect Pin Level
             index: 18
             width: 1
             read: true
             write: false
-            type: SDMMC_PRESENT_STATE_CARD_DETECT_PIN_LEVEL
           - name: WRITE_PROTECT_PIN_LEVEL
             description: Write Protect Switch Pin Level
             index: 19
             width: 1
             read: true
             write: false
-            type: SDMMC_PRESENT_STATE_WRITE_PROTECT_PIN_LEVEL
           - name: DAT_3_0_PIN_LEVEL
             description: Line Signal Level
             index: 20
@@ -337,42 +320,36 @@ structs:
             width: 1
             read: true
             write: true
-            type: SDMMC_HOST_CTRL_LED_CTRL
           - name: DATA_TX_WIDTH
             description: Data Transfer Width (SD1 or SD4)
             index: 1
             width: 1
             read: true
             write: true
-            type: SDMMC_HOST_CTRL_DATA_TX_WIDTH
           - name: HIGH_SPEED_EN
             description: High Speed Enable
             index: 2
             width: 1
             read: true
             write: true
-            type: SDMMC_HOST_CTRL_HIGH_SPEED_EN
           - name: SD_8BIT_MODE
             description: Extended Data Transfer Width
             index: 5
             width: 1
             read: true
             write: true
-            type: SDMMC_HOST_CTRL_SD_8BIT_MODE
           - name: CARD_DETECT_TEST_LEVEL
             description: Card Detect Test Level
             index: 6
             width: 1
             read: true
             write: true
-            type: SDMMC_HOST_CTRL_CARD_DETECT_TEST_LEVEL
           - name: CARD_DET_SIGNAL_DETECT
             description: Card detect signal detetction
             index: 7
             width: 1
             read: true
             write: true
-            type: SDMMC_HOST_CTRL_CARD_DET_SIGNAL_DETECT
       - name: POWER_CTRL
         type: uint8_t
         expected_size: 1
@@ -385,7 +362,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: SDMMC_POWER_CTRL_SD_BUS_POWER
           - name: SD_BUS_VOLTAGE_SEL
             description: SD Bus Voltage Select
             index: 1
@@ -411,21 +387,18 @@ structs:
             width: 1
             read: true
             write: true
-            type: SDMMC_BLOCK_GAP_CTRL_STOP_AT_BLOCK_GAP
           - name: CONTINUE_REQ
             description: Continue Request
             index: 1
             width: 1
             read: true
             write: true
-            type: SDMMC_BLOCK_GAP_CTRL_CONTINUE_REQ
           - name: READ_WAIT_CTRL
             description: Read Wait Control
             index: 2
             width: 1
             read: true
             write: true
-            type: SDMMC_BLOCK_GAP_CTRL_READ_WAIT_CTRL
           - name: INT_AT_BLOCK_GAP
             description: Interrupt At Block Gap
             index: 3
@@ -444,21 +417,18 @@ structs:
             width: 1
             read: true
             write: true
-            type: SDMMC_TRANSFER_MODE_BLOCK_COUNT_EN
           - name: WAKEUP_EVENT_EN_INS
             description: Wakeup Event Enable On SD Card Insertion
             index: 1
             width: 1
             read: true
             write: true
-            type: SDMMC_TRANSFER_MODE_BLOCK_COUNT_EN
           - name: WAKEUP_EVENT_EN_REM
             description: Wakeup Event Enable On SD Card Removal
             index: 2
             width: 1
             read: true
             write: true
-            type: SDMMC_TRANSFER_MODE_BLOCK_COUNT_EN
       - name: CLOCK_CTRL
         type: uint16_t
         expected_size: 2
@@ -471,21 +441,18 @@ structs:
             width: 1
             read: true
             write: true
-            type: SDMMC_CLOCK_CTRL_INTERNAL_CLOCK_EN
           - name: INTERNAL_CLOCK_STABLE
             description: Internal Clock Stable
             index: 1
             width: 1
             read: true
             write: false
-            type: SDMMC_CLOCK_CTRL_INTERNAL_CLOCK_STABLE
           - name: SDCLOCK_EN
             description: SD Clock Enable
             index: 2
             width: 1
             read: true
             write: true
-            type: SDMMC_TRANSFER_MODE_BLOCK_COUNT_EN
           - name: SDCLK_FREQ_SEL
             description: SDCLK Frequency Select
             index: 8
@@ -524,14 +491,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: SDMMC_SW_RESET_SW_RST_CMD_LINE
           - name: SW_RST_DAT_LINE
             description: Software Reset for DAT Line
             index: 2
             width: 1
             read: true
             write: true
-            type: SDMMC_SW_RESET_SW_RST_CMD_LINE
       - name: INT_STATUS_NORM
         type: uint16_t
         expected_size: 2
@@ -544,63 +509,54 @@ structs:
             width: 1
             read: true
             write: true
-            type: SDMMC_INT_STATUS_NORM_CMD_COMPLETE
           - name: TX_COMPLETE
             description: Transfer Complete
             index: 1
             width: 1
             read: true
             write: true
-            type: SDMMC_INT_STATUS_NORM_TX_COMPLETE
           - name: BLOCK_GAP_EVENT
             description: Block Gap Event
             index: 2
             width: 1
             read: true
             write: true
-            type: SDMMC_INT_STATUS_NORM_BLOCK_GAP_EVENT
           - name: BUFF_WRITE_READY
             description: Buffer Write Ready
             index: 4
             width: 1
             read: true
             write: true
-            type: SDMMC_INT_STATUS_NORM_BUFF_WRITE_READY
           - name: BUFF_READ_READY
             description: Buffer Read Ready
             index: 5
             width: 1
             read: true
             write: true
-            type: SDMMC_INT_STATUS_NORM_BUFF_READ_READY
           - name: CARD_INS
             description: Card Insertion
             index: 6
             width: 1
             read: true
             write: true
-            type: SDMMC_INT_STATUS_NORM_CARD_INS
           - name: CARD_REMOVAL
             description: Card Removal
             index: 7
             width: 1
             read: true
             write: true
-            type: SDMMC_INT_STATUS_NORM_CARD_REMOVAL
           - name: CARD_INT
             description: Card Interrupt
             index: 8
             width: 1
             read: true
             write: false
-            type: SDMMC_INT_STATUS_NORM_CARD_INT
           - name: ERR_INT
             description: Error Interrupt
             index: 15
             width: 1
             read: true
             write: false
-            type: SDMMC_INT_STATUS_NORM_ERR_INT
       - name: INT_STATUS_ERR
         type: uint16_t
         expected_size: 2
@@ -613,70 +569,60 @@ structs:
             width: 1
             read: true
             write: true
-            type: SDMMC_INT_STATUS_ERR_CMD_TIMEOUT_ERR
           - name: CMD_CRC_ERR
             description: Command CRC Error
             index: 1
             width: 1
             read: true
             write: true
-            type: SDMMC_INT_STATUS_ERR_CMD_CRC_ERR
           - name: CMD_END_BIT_ERR
             description: Command End Bit Error
             index: 2
             width: 1
             read: true
             write: true
-            type: SDMMC_INT_STATUS_ERR_CMD_END_BIT_ERR
           - name: CMD_IND_ERR
             description: Command Index Error
             index: 3
             width: 1
             read: true
             write: true
-            type: SDMMC_INT_STATUS_NORM_ERR_INT
           - name: DATA_TIMEOUT_ERR
             description: Data Timeout Error
             index: 4
             width: 1
             read: true
             write: true
-            type: SDMMC_INT_STATUS_ERR_CMD_TIMEOUT_ERR
           - name: DATA_CRC_ERR
             description: Data CRC Error
             index: 5
             width: 1
             read: true
             write: true
-            type: SDMMC_INT_STATUS_NORM_ERR_INT
           - name: DATA_END_BIT_ERR
             description: Data End Bit Error
             index: 6
             width: 1
             read: true
             write: true
-            type: SDMMC_INT_STATUS_NORM_ERR_INT
           - name: CURRENT_LIMIT_ERR
             description: Current Limit Error
             index: 7
             width: 1
             read: true
             write: true
-            type: SDMMC_INT_STATUS_ERR_CURRENT_LIMIT_ERR
           - name: ACMD_ERR
             description: Auto CMD Error
             index: 8
             width: 1
             read: true
             write: true
-            type: SDMMC_INT_STATUS_NORM_ERR_INT
           - name: CEATA_ERR
             description: Ceata Error Status
             index: 13
             width: 1
             read: true
             write: true
-            type: SDMMC_INT_STATUS_NORM_ERR_INT
       - name: EN_INT_STATUS_NORM
         type: uint16_t
         expected_size: 2
@@ -689,56 +635,48 @@ structs:
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: TX_COMPLETE_EN
             description: Transfer Complete Status Enable
             index: 1
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: BLOCK_GAP_EVENT_EN
             description: Block Gap Event Status Enable
             index: 2
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: BUFF_WRITE_READY_EN
             description: Buffer Write Ready Status Enable
             index: 4
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: BUFF_READ_READY_EN
             description: Buffer Read Ready Status Enable
             index: 5
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: CARD_INS_EN
             description: Card Insertion Status Enable
             index: 6
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: CARD_REMOVAL_EN
             description: Card Removal Status Enable
             index: 7
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: CARD_INT_EN
             description: Card Interrupt Status Enable
             index: 8
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: FIXED_TO_0
             description: Fixed to 0
             index: 15
@@ -757,77 +695,66 @@ structs:
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: CMD_CRC_ERR_EN
             description: Command CRC Error Status Enable
             index: 1
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: CMD_END_BIT_ERR_EN
             description: Command End Bit Error Status Enable
             index: 2
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: CMD_IND_ERR_EN
             description: Command Index Error Status Enable
             index: 3
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: DATA_TIMEOUT_ERR_EN
             description: Data Timeout Error Status Enable
             index: 4
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: DATA_CRC_ERR_EN
             description: Data CRC Error Status Enable
             index: 5
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: DATA_END_BIT_ERR_EN
             description: Data End Bit Error Status Enable
             index: 6
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: CURRENT_LIMIT_ERR_EN
             description: Current Limit Error Status Enable
             index: 7
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: ACMD_ERR_EN
             description: Auto CMD12 Error Status Enable
             index: 8
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: TARGET_RESP_ERR_EN
             description: Target Response Error Status Enable
             index: 12
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: CEATA_ERR_EN
             description: Ceata Error Status Enable
             index: 13
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
       - name: EN_INT_SIGNAL_NORM
         type: uint16_t
         expected_size: 2
@@ -840,56 +767,48 @@ structs:
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: TX_COMPLETE_EN
             description: Transfer Complete Signal Enable
             index: 1
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: BLOCK_GAP_EVENT_EN
             description: Block Gap Event Signal Enable
             index: 2
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: BUFF_WRITE_READY_EN
             description: Buffer Write Ready Signal Enable
             index: 4
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: BUFF_READ_READY_EN
             description: Buffer Read Ready Signal Enable
             index: 5
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: CARD_INS_EN
             description: Card Insertion Signal Enable
             index: 6
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: CARD_REMOVAL_EN
             description: Card Removal Signal Enable
             index: 7
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: CARD_INT_EN
             description: Card Interrupt Signal Enable
             index: 8
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: FIXED_TO_0
             description: Fixed to 0
             index: 15
@@ -908,77 +827,66 @@ structs:
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: CMD_CRC_ERR_EN
             description: Command CRC Error Signal Enable
             index: 1
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: CMD_END_BIT_ERR_EN
             description: Command End Bit Error Signal Enable
             index: 2
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: CMD_IND_ERR_EN
             description: Command Index Error Signal Enable
             index: 3
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: DATA_TIMEOUT_ERR_EN
             description: Data Timeout Error Signal Enable
             index: 4
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: DATA_CRC_ERR_EN
             description: Data CRC Error Signal Enable
             index: 5
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: DATA_END_BIT_ERR_EN
             description: Data End Bit Error Signal Enable
             index: 6
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: CURRENT_LIMIT_ERR_EN
             description: Current Limit Error Signal Enable
             index: 7
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: ACMD_ERR_EN
             description: Auto CMD12 Error Signal Enable
             index: 8
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: TARGET_RESP_ERR_EN
             description: Target Response Error Signal Enable
             index: 12
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
           - name: CEATA_ERR_EN
             description: Ceata Error Signal Enable
             index: 13
             width: 1
             read: true
             write: true
-            type: SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN
       - name: ACMD_ERR_STATUS
         type: uint16_t
         expected_size: 2
@@ -992,42 +900,36 @@ structs:
             width: 1
             read: true
             write: false
-            type: SDMMC_ACMD_ERR_STATUS_ACMD12_NOT_EXEC_ERR
           - name: ACMD_TIMEOUT_ERR
             description: Auto CMD Timeout Error
             index: 1
             width: 1
             read: true
             write: false
-            type: SDMMC_INT_STATUS_ERR_CMD_TIMEOUT_ERR
           - name: ACMD_CRC_ERR
             description: Auto CMD CRC Error
             index: 2
             width: 1
             read: true
             write: false
-            type: SDMMC_INT_STATUS_ERR_CMD_CRC_ERR
           - name: ACMD_END_BIT_ERR
             description: Auto CMD End Bit Error
             index: 3
             width: 1
             read: true
             write: false
-            type: SDMMC_INT_STATUS_ERR_CMD_END_BIT_ERR
           - name: ACMD_IND_ERR
             description: Auto CMD Index Error
             index: 4
             width: 1
             read: true
             write: false
-            type: SDMMC_INT_STATUS_NORM_ERR_INT
           - name: CMD_NOT_ISSUED_BY_ACMD12_ERR
             description: Command Not Issued By Auto CMD12 Error
             index: 7
             width: 1
             read: true
             write: false
-            type: SDMMC_ACMD_ERR_STATUS_CMD_NOT_ISSUED_BY_ACMD12_ERR
       - name: CAPABILITIES
         type: uint32_t
         expected_size: 4
@@ -1048,70 +950,60 @@ structs:
             width: 1
             read: true
             write: false
-            type: SDMMC_CAPABILITIES_ASYNC_INT_SUPPORT
           - name: SYSBUS_64_SUPPORT
             description: 64-bit System Bus Support
             index: 28
             width: 1
             read: true
             write: false
-            type: SDMMC_CAPABILITIES_SYSBUS_64_SUPPORT
           - name: VOLTAGE_SUPPORT_1_8V
             description: Voltage Support 1.8V
             index: 26
             width: 1
             read: true
             write: false
-            type: SDMMC_CAPABILITIES_VOLTAGE_SUPPORT_1_8V
           - name: VOLTAGE_SUPPORT_3V
             description: Voltage Support 3.0V
             index: 25
             width: 1
             read: true
             write: false
-            type: SDMMC_CAPABILITIES_VOLTAGE_SUPPORT_3V
           - name: VOLTAGE_SUPPORT_3_3V
             description: Voltage Support 3.3V
             index: 24
             width: 1
             read: true
             write: false
-            type: SDMMC_CAPABILITIES_VOLTAGE_SUPPORT_3_3V
           - name: SUSPEND_RESUME_SUPPORT
             description: Suspend / Resume Support
             index: 23
             width: 1
             read: true
             write: false
-            type: SDMMC_CAPABILITIES_SUSPEND_RESUME_SUPPORT
           - name: SDMA_SUPPORT
             description: SDMA Support
             index: 22
             width: 1
             read: true
             write: false
-            type: SDMMC_CAPABILITIES_SDMA_SUPPORT
           - name: HIGH_SPEED_SUPPORT
             description: High Speed Support
             index: 21
             width: 1
             read: true
             write: false
-            type: SDMMC_CAPABILITIES_HIGH_SPEED_SUPPORT
           - name: ADMA2_SUPPORT
             description: ADMA2 Support
             index: 19
             width: 1
             read: true
             write: false
-            type: SDMMC_CAPABILITIES_ADMA2_SUPPORT
           - name: EXT_MEDIA_BUS_SUPPORT
             description: Extended Media Bus Support
             index: 18
             width: 1
             read: true
             write: false
-            type: SDMMC_CAPABILITIES_EXT_MEDIA_BUS_SUPPORT
           - name: MAX_BLOCK_LENGTH
             description: Max Block Length
             index: 16
@@ -1132,7 +1024,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: SDMMC_CAPABILITIES_TIMEOUT_CLOCK_UNIT
           - name: TIMEOUT_CLOCK_FREQ
             description: Timeout Clock Frequency
             index: 0
@@ -1167,7 +1058,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: SDMMC_CAPABILITIES_HI_USE_TUNING_SDR50
           - name: TIM_CNT_RETUNE
             description: Timer count for Re-Tuning
             index: 8
@@ -1181,42 +1071,36 @@ structs:
             width: 1
             read: true
             write: false
-            type: SDMMC_CAPABILITIES_HI_DRV_D_SUPPORT
           - name: DRV_C_SUPPORT
             description: Driver Type C Support
             index: 5
             width: 1
             read: true
             write: false
-            type: SDMMC_CAPABILITIES_HI_DRV_C_SUPPORT
           - name: DRV_A_SUPPORT
             description: Driver Type A Support
             index: 4
             width: 1
             read: true
             write: false
-            type: SDMMC_CAPABILITIES_HI_DRV_A_SUPPORT
           - name: DDR50_SUPPORT
             description: DDR50 Support
             index: 2
             width: 1
             read: true
             write: false
-            type: SDMMC_CAPABILITIES_HI_DDR50_SUPPORT
           - name: SDR104_SUPPORT
             description: SDR104 Support
             index: 1
             width: 1
             read: true
             write: false
-            type: SDMMC_CAPABILITIES_HI_SDR104_SUPPORT
           - name: SDR50_SUPPORT
             description: SDR50 Support
             index: 0
             width: 1
             read: true
             write: false
-            type: SDMMC_CAPABILITIES_HI_SDR50_SUPPORT
       - name: MAX_CURRENT_CAP
         type: uint32_t
         expected_size: 4
@@ -1242,42 +1126,36 @@ structs:
             width: 1
             read: false
             write: true
-            type: SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_NOT_EXEC
           - name: FE_ACMD_TIMEOUT_ERR
             description: Force Event for Auto CMD timeout Error
             index: 1
             width: 1
             read: false
             write: true
-            type: SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_NOT_EXEC
           - name: FE_ACMD_CRC_ERR
             description: Force Event for Auto CMD CRC Error
             index: 2
             width: 1
             read: false
             write: true
-            type: SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_NOT_EXEC
           - name: FE_ACMD_END_BIT_ERR
             description: Force Event for Auto CMD End bit Error
             index: 3
             width: 1
             read: false
             write: true
-            type: SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_NOT_EXEC
           - name: FE_ACMD_IND_ERR
             description: Force Event for Auto CMD Index Error
             index: 4
             width: 1
             read: false
             write: true
-            type: SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_NOT_EXEC
           - name: FE_CMD_NOT_ISSUED_ACMD12_ERR
             description: Force Event for CMD not issued by Auto CMD12 Error
             index: 7
             width: 1
             read: false
             write: true
-            type: SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_NOT_EXEC
       - name: FORCE_EVENT_ERR_STATUS
         type: uint16_t
         expected_size: 2
@@ -1290,77 +1168,66 @@ structs:
             width: 1
             read: false
             write: true
-            type: SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_NOT_EXEC
           - name: FE_CMD_CRC_ERR
             description: Force Event for Command CRC Error
             index: 1
             width: 1
             read: false
             write: true
-            type: SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_NOT_EXEC
           - name: FE_CMD_END_BIT_ERR
             description: Force Event for Command End Bit Error
             index: 2
             width: 1
             read: false
             write: true
-            type: SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_NOT_EXEC
           - name: FE_CMD_IND_ERR
             description: Force Event for Command Index Error
             index: 3
             width: 1
             read: false
             write: true
-            type: SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_NOT_EXEC
           - name: FE_DATA_TIMEOUT_ERR
             description: Force Event for Data Timeout Error
             index: 4
             width: 1
             read: false
             write: true
-            type: SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_NOT_EXEC
           - name: FE_DATA_CRC_ERR
             description: Force Event for Data CRC Error
             index: 5
             width: 1
             read: false
             write: true
-            type: SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_NOT_EXEC
           - name: FE_DATA_END_BIT_ERR
             description: Force Event for Data End Bit Error
             index: 6
             width: 1
             read: false
             write: true
-            type: SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_NOT_EXEC
           - name: FE_CURRENT_LIMIT_ERR
             description: Force Event for Current Limit Error
             index: 7
             width: 1
             read: false
             write: true
-            type: SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_NOT_EXEC
           - name: FE_ACMD12_ERR
             description: Force Event for Auto CMD Error
             index: 8
             width: 1
             read: false
             write: true
-            type: SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_NOT_EXEC
           - name: FE_TARGET_RESPONSE_ERR
             description: Force event for Target Response Error
             index: 12
             width: 1
             read: false
             write: true
-            type: SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_NOT_EXEC
           - name: FE_CEATA_ERR
             description: Force Event for Ceata Error
             index: 13
             width: 1
             read: false
             write: true
-            type: SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_NOT_EXEC
       - name: DEBUG_SEL
         type: uint32_t
         expected_size: 4
@@ -1373,7 +1240,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: SDMMC_DEBUG_SEL_DEBUG_SEL
       - name: SLOT_INT_STATUS
         type: uint16_t
         expected_size: 2
@@ -1394,18 +1260,6 @@ structs:
     unit_test: false
     identifier: false
 enums:
-  SDMMC_TRANSFER_MODE_BLOCK_COUNT_EN:
-    enum:
-      disable:
-        description: Disable
-        value: 0
-      enable:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   SDMMC_TRANSFER_MODE_ACMD_EN:
     enum:
       ommand_disabled:
@@ -1414,42 +1268,6 @@ enums:
       md12_enable:
         description: Auto CMD12 Enable
         value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_TRANSFER_MODE_TX_DIR_SELECT:
-    enum:
-      write_host_card:
-        description: Write (Host to Card)
-        value: 0
-      read_card_host:
-        description: Read (Card to Host)
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_TRANSFER_MODE_MULTI_BLOCK_SELECT:
-    enum:
-      single_block:
-        description: Single Block
-        value: 0
-      multiple_block:
-        description: Multiple Block
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_TRANSFER_MODE_CMD_COMP_ATA:
-    enum:
-      send_command_completion_signal:
-        description: Device will send command completion Signal
-        value: 1
-      not_send_command_completion_signal:
-        description: Device will not send command completion Signal
-        value: 0
     unit_test: false
     json: false
     use_map: false
@@ -1472,18 +1290,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  SDMMC_COMMAND_DATA_PRESENT_SELECT:
-    enum:
-      no_data_present:
-        description: No Data Present
-        value: 0
-      data_present:
-        description: Data Present
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   SDMMC_COMMAND_CMD_TYPE:
     enum:
       normal:
@@ -1502,239 +1308,11 @@ enums:
     json: false
     use_map: false
     identifier: false
-  SDMMC_PRESENT_STATE_COMMAND_INHIBIT_DAT:
-    enum:
-      _issue_command_which_uses_dat_line:
-        description: Can issue command which uses the DAT line
-        value: 0
-      not_issue_command_which_uses_dat_line:
-        description: Cannot issue command which uses the DAT line
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_PRESENT_STATE_DAT_LINE_ACTIVE:
-    enum:
-      inactive:
-        description: DAT line inactive
-        value: 0
-      active:
-        description: DAT line active
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_PRESENT_STATE_WRITE_TRANSFER_ACTIVE:
-    enum:
-      no_valid_data:
-        description: No valid data
-        value: 0
-      transferring_data:
-        description: Transferring data
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_PRESENT_STATE_CARD_INSERTED:
-    enum:
-      reset_or_debouncing_or_no_card:
-        description: Reset or Debouncing or No Card
-        value: 0
-      card_inserted:
-        description: Card Inserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_PRESENT_STATE_CARD_STATE_STABLE:
-    enum:
-      reset_debouncing:
-        description: Reset of Debouncing
-        value: 0
-      no_card_or_inserted:
-        description: No Card or Inserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_PRESENT_STATE_CARD_DETECT_PIN_LEVEL:
-    enum:
-      no_card_present_sdcd_1:
-        description: No Card present (SDCD = 1)
-        value: 0
-      card_present_sdcd_0:
-        description: Card present (SDCD = 0)
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_PRESENT_STATE_WRITE_PROTECT_PIN_LEVEL:
-    enum:
-      protected_sdwp_1:
-        description: Write protected (SDWP = 1)
-        value: 0
-      enabled_sdwp_0:
-        description: Write enabled (SDWP = 0)
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_HOST_CTRL_LED_CTRL:
-    enum:
-      _off:
-        description: LED off
-        value: 0
-      led:
-        description: LED on
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_HOST_CTRL_DATA_TX_WIDTH:
-    enum:
-      _1_bit_mode:
-        description: 1 bit mode
-        value: 0
-      _4_bit_mode:
-        description: 4-bit mode
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_HOST_CTRL_HIGH_SPEED_EN:
-    enum:
-      normal_speed_mode:
-        description: Normal Speed Mode
-        value: 0
-      high_speed_mode:
-        description: High Speed Mode
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_HOST_CTRL_SD_8BIT_MODE:
-    enum:
-      bus_width_selected_by_data_transfer_width:
-        description: Bus Width is selected by Data Transfer Width
-        value: 0
-      _8_bit_bus_width:
-        description: 8-bit Bus Width
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_HOST_CTRL_CARD_DETECT_TEST_LEVEL:
-    enum:
-      no_card:
-        description: No Card
-        value: 0
-      card_inserted:
-        description: Card Inserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_HOST_CTRL_CARD_DET_SIGNAL_DETECT:
-    enum:
-      sdcd_selected_normal_use:
-        description: SDCD is selected (for normal use)
-        value: 0
-      card_detect_test_level_selected:
-        description: The card detect test level is selected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_POWER_CTRL_SD_BUS_POWER:
-    enum:
-      _off:
-        description: Power off
-        value: 0
-      power:
-        description: Power on
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   SDMMC_POWER_CTRL_SD_BUS_VOLTAGE_SEL:
     enum:
       _33v_flattop:
         description: 3.3V (Flattop.)
         value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_BLOCK_GAP_CTRL_STOP_AT_BLOCK_GAP:
-    enum:
-      transfer:
-        description: Transfer
-        value: 0
-      stop:
-        description: Stop
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_BLOCK_GAP_CTRL_CONTINUE_REQ:
-    enum:
-      ignored:
-        description: Ignored
-        value: 0
-      restart:
-        description: Restart
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_BLOCK_GAP_CTRL_READ_WAIT_CTRL:
-    enum:
-      disable_read_wait_control:
-        description: Disable Read Wait Control
-        value: 0
-      enable_read_wait_control:
-        description: Enable Read Wait Control
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CLOCK_CTRL_INTERNAL_CLOCK_EN:
-    enum:
-      stop:
-        description: Stop
-        value: 0
-      oscillate:
-        description: Oscillate
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CLOCK_CTRL_INTERNAL_CLOCK_STABLE:
-    enum:
-      not_ready:
-        description: Not Ready
-        value: 0
-      ready:
-        description: Ready
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -1787,304 +1365,10 @@ enums:
     json: false
     use_map: false
     identifier: false
-  SDMMC_SW_RESET_SW_RST_CMD_LINE:
-    enum:
-      work:
-        description: Work
-        value: 0
-      reset:
-        description: Reset
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_INT_STATUS_NORM_CMD_COMPLETE:
-    enum:
-      no_command_complete:
-        description: No Command Complete
-        value: 0
-      command_complete:
-        description: Command Complete
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_INT_STATUS_NORM_TX_COMPLETE:
-    enum:
-      no_data_transfer_complete:
-        description: No Data Transfer Complete
-        value: 0
-      data_transfer_complete:
-        description: Data Transfer Complete
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_INT_STATUS_NORM_BLOCK_GAP_EVENT:
-    enum:
-      no_block_gap_event:
-        description: No Block Gap Event
-        value: 0
-      transaction_stopped_at_block_gap:
-        description: Transaction stopped at Block Gap
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_INT_STATUS_NORM_BUFF_WRITE_READY:
-    enum:
-      not_ready_write_buffer:
-        description: Not Ready to Write Buffer.
-        value: 0
-      ready_write_buffer:
-        description: Ready to Write Buffer.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_INT_STATUS_NORM_BUFF_READ_READY:
-    enum:
-      not_ready_read_buffer:
-        description: Not Ready to read Buffer.
-        value: 0
-      ready_read_buffer:
-        description: Ready to read Buffer.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_INT_STATUS_NORM_CARD_INS:
-    enum:
-      state_stable_or_debouncing:
-        description: Card State Stable or Debouncing
-        value: 0
-      inserted:
-        description: Card Inserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_INT_STATUS_NORM_CARD_REMOVAL:
-    enum:
-      state_stable_or_debouncing:
-        description: Card State Stable or Debouncing
-        value: 0
-      removed:
-        description: Card Removed
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_INT_STATUS_NORM_CARD_INT:
-    enum:
-      no_card_interrupt:
-        description: No Card Interrupt
-        value: 0
-      generate_card_interrupt:
-        description: Generate Card Interrupt
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_INT_STATUS_NORM_ERR_INT:
-    enum:
-      no_error:
-        description: No Error.
-        value: 0
-      error:
-        description: Error.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_INT_STATUS_ERR_CMD_TIMEOUT_ERR:
-    enum:
-      no_error:
-        description: No Error
-        value: 0
-      timeout:
-        description: Timeout
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_INT_STATUS_ERR_CMD_CRC_ERR:
-    enum:
-      no_error:
-        description: No Error
-        value: 0
-      crc_error_generated:
-        description: CRC Error Generated
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_INT_STATUS_ERR_CMD_END_BIT_ERR:
-    enum:
-      no_error:
-        description: No Error
-        value: 0
-      end_bit_error_generated:
-        description: End Bit Error Generated
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_INT_STATUS_ERR_CURRENT_LIMIT_ERR:
-    enum:
-      no_error:
-        description: No Error
-        value: 0
-      power_fail:
-        description: Power Fail
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_EN_INT_STATUS_NORM_CMD_COMPLETE_EN:
-    enum:
-      masked:
-        description: Masked
-        value: 0
-      enabled:
-        description: Enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_ACMD_ERR_STATUS_ACMD12_NOT_EXEC_ERR:
-    enum:
-      executed:
-        description: Executed
-        value: 0
-      not_executed:
-        description: Not Executed
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_ACMD_ERR_STATUS_CMD_NOT_ISSUED_BY_ACMD12_ERR:
-    enum:
-      _error:
-        description: No Error
-        value: 0
-      t_issued:
-        description: Not Issued
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   SDMMC_CAPABILITIES_SLOT_TYPE:
     enum:
       removable_card_slot:
         description: Removable Card Slot
-        value: 0
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CAPABILITIES_ASYNC_INT_SUPPORT:
-    enum:
-      asynchronous_interrupt_not_supported:
-        description: Asynchronous Interrupt not supported
-        value: 0
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CAPABILITIES_SYSBUS_64_SUPPORT:
-    enum:
-      does_not_support_64_bit_system_address:
-        description: Does not support 64-bit system address
-        value: 0
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CAPABILITIES_VOLTAGE_SUPPORT_1_8V:
-    enum:
-      _18v_not_supported:
-        description: 1.8V not supported
-        value: 0
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CAPABILITIES_VOLTAGE_SUPPORT_3V:
-    enum:
-      _30v_not_supported:
-        description: 3.0V not supported
-        value: 0
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CAPABILITIES_VOLTAGE_SUPPORT_3_3V:
-    enum:
-      _33v_supported:
-        description: 3.3V supported
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CAPABILITIES_SUSPEND_RESUME_SUPPORT:
-    enum:
-      supported:
-        description: Supported
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CAPABILITIES_SDMA_SUPPORT:
-    enum:
-      sdma_not_supported:
-        description: SDMA not supported
-        value: 0
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CAPABILITIES_HIGH_SPEED_SUPPORT:
-    enum:
-      high_speed_supported:
-        description: High Speed supported
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CAPABILITIES_ADMA2_SUPPORT:
-    enum:
-      adma_not_supported:
-        description: ADMA not supported
-        value: 0
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CAPABILITIES_EXT_MEDIA_BUS_SUPPORT:
-    enum:
-      extended_media_bus_not_supported:
-        description: Extended Media Bus not supported
         value: 0
     unit_test: false
     json: false
@@ -2108,15 +1392,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  SDMMC_CAPABILITIES_TIMEOUT_CLOCK_UNIT:
-    enum:
-      mhz:
-        description: MHz
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   SDMMC_CAPABILITIES_HI_CLK_MULT:
     enum:
       clock_multiplier_not_supported:
@@ -2135,99 +1410,11 @@ enums:
     json: false
     use_map: false
     identifier: false
-  SDMMC_CAPABILITIES_HI_USE_TUNING_SDR50:
-    enum:
-      sdr50_does_not_require_tuning:
-        description: SDR50 does not require tuning
-        value: 0
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   SDMMC_CAPABILITIES_HI_TIM_CNT_RETUNE:
     enum:
       get_information_via_other_source:
         description: Get information via other source
         value: 0
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CAPABILITIES_HI_DRV_D_SUPPORT:
-    enum:
-      driver_type_d_not_supported:
-        description: Driver Type D is not supported
-        value: 0
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CAPABILITIES_HI_DRV_C_SUPPORT:
-    enum:
-      driver_type_c_not_supported:
-        description: Driver Type C is not supported
-        value: 0
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CAPABILITIES_HI_DRV_A_SUPPORT:
-    enum:
-      driver_type_not_supported:
-        description: Driver Type A is not supported
-        value: 0
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CAPABILITIES_HI_DDR50_SUPPORT:
-    enum:
-      ddr50_not_supported:
-        description: DDR50 is not supported
-        value: 0
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CAPABILITIES_HI_SDR104_SUPPORT:
-    enum:
-      sdr104_not_supported:
-        description: SDR104 is not supported
-        value: 0
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_CAPABILITIES_HI_SDR50_SUPPORT:
-    enum:
-      sdr50_not_supported:
-        description: SDR50 is not supported
-        value: 0
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_FORCE_EVENT_ACMD_ERR_STATUS_FE_ACMD_NOT_EXEC:
-    enum:
-      no_interrupt:
-        description: No interrupt
-        value: 0
-      interrupt_generated:
-        description: Interrupt is generated
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SDMMC_DEBUG_SEL_DEBUG_SEL:
-    enum:
-      receiver_module_fifo_ctrl_module_signals_prob_cont:
-        description: receiver module and fifo_ctrl module signals are probed out
-        value: 0
-      cmd_register_interrupt_status_transmitter_mod_cont:
-        description: cmd register, Interrupt status, transmitter module and clk sdcard
-          signals are probed out.
-        value: 1
     unit_test: false
     json: false
     use_map: false

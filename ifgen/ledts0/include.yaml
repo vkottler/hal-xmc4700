@@ -49,28 +49,24 @@ structs:
             width: 1
             read: true
             write: true
-            type: LEDTS0_GLOBCTL_ITP_EN
           - name: ITF_EN
             description: Enable (Extended) Time Frame Interrupt
             index: 14
             width: 1
             read: true
             write: true
-            type: LEDTS0_GLOBCTL_ITF_EN
           - name: ITS_EN
             description: Enable Time Slice Interrupt
             index: 13
             width: 1
             read: true
             write: true
-            type: LEDTS0_GLOBCTL_ITF_EN
           - name: FENVAL
             description: Enable (Extended) Time Frame Validation
             index: 12
             width: 1
             read: true
             write: true
-            type: LEDTS0_GLOBCTL_ITF_EN
           - name: MASKVAL
             description: Mask Number of LSB Bits for Event Validation
             index: 9
@@ -84,21 +80,18 @@ structs:
             width: 1
             read: true
             write: true
-            type: LEDTS0_GLOBCTL_SUSCFG
           - name: ENSYNC
             description: Enable Autoscan Time Period Synchronization
             index: 3
             width: 1
             read: true
             write: true
-            type: LEDTS0_GLOBCTL_ENSYNC
           - name: CMTR
             description: Clock Master Disable
             index: 2
             width: 1
             read: true
             write: true
-            type: LEDTS0_GLOBCTL_CMTR
           - name: LD_EN
             description: LED Function Enable
             index: 1
@@ -130,7 +123,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: LEDTS0_FNCTL_COLLEV
           - name: NR_TSIN
             description: Number of Touch-Sense Input
             index: 25
@@ -144,14 +136,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: LEDTS0_FNCTL_TSCTRSAT
           - name: TSCTRR
             description: TS-Counter Auto Reset
             index: 23
             width: 1
             read: true
             write: true
-            type: LEDTS0_FNCTL_TSCTRR
           - name: TSOEXT
             description: Extension for Touch-Sense Output for Pin-Low-Level
             index: 21
@@ -165,7 +155,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: LEDTS0_FNCTL_TSCCMP
           - name: ACCCNT
             description: Accumulate Count on Touch-Sense Input
             index: 16
@@ -185,14 +174,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: LEDTS0_FNCTL_EPULL
           - name: PADTSW
             description: Software Control for Touch-Sense Pad Turn
             index: 3
             width: 1
             read: true
             write: true
-            type: LEDTS0_FNCTL_PADTSW
           - name: PADT
             description: Touch-Sense TSIN Pad Turn
             index: 0
@@ -212,28 +199,24 @@ structs:
             width: 1
             read: false
             write: true
-            type: LEDTS0_EVFR_CTPF
           - name: CTFF
             description: Clear (Extended) Time Frame Interrupt Flag
             index: 17
             width: 1
             read: false
             write: true
-            type: LEDTS0_EVFR_CTFF
           - name: CTSF
             description: Clear Time Slice Interrupt Flag
             index: 16
             width: 1
             read: false
             write: true
-            type: LEDTS0_EVFR_CTSF
           - name: TSCTROVF
             description: TS-Counter Overflow Indication
             index: 3
             width: 1
             read: true
             write: false
-            type: LEDTS0_EVFR_TSCTROVF
           - name: TPF
             description: Autoscan Time Period Interrupt Flag
             index: 2
@@ -457,30 +440,6 @@ structs:
     unit_test: false
     identifier: false
 enums:
-  LEDTS0_GLOBCTL_ITP_EN:
-    enum:
-      disable:
-        description: Disable
-        value: 0
-      enable_valid_only_case_hardware_enabled_pad_t_cont:
-        description: Enable (valid only for case of hardware-enabled pad turn control)
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  LEDTS0_GLOBCTL_ITF_EN:
-    enum:
-      disable:
-        description: Disable
-        value: 0
-      enable:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   LEDTS0_GLOBCTL_MASKVAL:
     enum:
       lsb_bit:
@@ -492,43 +451,6 @@ enums:
       _8_lsb_bits:
         description: Mask 8 LSB bits
         value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  LEDTS0_GLOBCTL_SUSCFG:
-    enum:
-      ignore_suspend_request:
-        description: Ignore suspend request
-        value: 0
-      enable_suspend_according_request:
-        description: Enable suspend according to request
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  LEDTS0_GLOBCTL_ENSYNC:
-    enum:
-      no_synchronization:
-        description: No synchronization
-        value: 0
-      synchronization_enabled_kernel0_autoscan_time_cont:
-        description: Synchronization enabled on Kernel0 autoscan time period
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  LEDTS0_GLOBCTL_CMTR:
-    enum:
-      kernel_generates_own_clock_ledts_counter_base_cont:
-        description: Kernel generates its own clock for LEDTS-counter based on SFR
-          setting
-        value: 0
-      ledts_counter_takes_clock_another_master_kernel:
-        description: LEDTS-counter takes its clock from another master kernel
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -563,18 +485,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  LEDTS0_FNCTL_COLLEV:
-    enum:
-      low:
-        description: Active low
-        value: 0
-      high:
-        description: Active high
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   LEDTS0_FNCTL_NR_TSIN:
     enum:
       _1:
@@ -583,33 +493,6 @@ enums:
       _8:
         description: '8'
         value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  LEDTS0_FNCTL_TSCTRSAT:
-    enum:
-      disable:
-        description: Disable
-        value: 0
-      enable_ts_counter_stops_counting_touch_sense__cont:
-        description: Enable. TS-counter stops counting in the touch-sense time slice(s)
-          of the same (extended) frame when it reaches FFH. Counter starts to count
-          again on the first pad turn of a new TSIN[x], triggered on compare match.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  LEDTS0_FNCTL_TSCTRR:
-    enum:
-      disable_ts_counter_automatic_reset:
-        description: Disable TS-counter automatic reset
-        value: 0
-      enable_ts_counter_automatic_reset_00h_first_p_cont:
-        description: Enable TS-counter automatic reset to 00H on the first pad turn
-          of a new TSIN[x]. Triggered on compare match in time slice.
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -632,18 +515,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  LEDTS0_FNCTL_TSCCMP:
-    enum:
-      disable_common_compare_touch_sense:
-        description: Disable common compare for touch-sense
-        value: 0
-      enable_common_compare_touch_sense:
-        description: Enable common compare for touch-sense
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   LEDTS0_FNCTL_ACCCNT:
     enum:
       _1_time:
@@ -659,35 +530,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  LEDTS0_FNCTL_EPULL:
-    enum:
-      hw_over_rule_enable_internal_pull_up_active_t_cont:
-        description: HW over-rule to enable internal pull-up is active on TSIN[x]
-          for set duration in touch-sense time slice. With this setting, it is not
-          specified to assign the COLA to any pin.
-        value: 0
-      enable_external_pull_up_output_1_pin_cola_who_cont:
-        description: 'Enable external pull-up: Output 1 on pin COLA for whole duration
-          of touch-sense time slice.'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  LEDTS0_FNCTL_PADTSW:
-    enum:
-      hardware_automatically_enables_touch_sense_in_cont:
-        description: The hardware automatically enables the touch-sense inputs in
-          sequence round-robin, starting from TSIN0.
-        value: 0
-      disable_hardware_control_software_control_onl_cont:
-        description: Disable hardware control for software control only. The touch-sense
-          input is configured in bit PADT.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   LEDTS0_FNCTL_PADT:
     enum:
       _0:
@@ -696,54 +538,6 @@ enums:
       _7:
         description: TSIN7
         value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  LEDTS0_EVFR_CTPF:
-    enum:
-      no_action:
-        description: No action.
-        value: 0
-      bit_tpf_cleared:
-        description: Bit TPF is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  LEDTS0_EVFR_CTFF:
-    enum:
-      no_action:
-        description: No action.
-        value: 0
-      bit_tff_cleared:
-        description: Bit TFF is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  LEDTS0_EVFR_CTSF:
-    enum:
-      no_action:
-        description: No action.
-        value: 0
-      bit_tsf_cleared:
-        description: Bit TSF is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  LEDTS0_EVFR_TSCTROVF:
-    enum:
-      no_overflow_has_occurred:
-        description: No overflow has occurred.
-        value: 0
-      ts_counter_has_overflowed_at_least_once:
-        description: The TS-counter has overflowed at least once.
-        value: 1
     unit_test: false
     json: false
     use_map: false

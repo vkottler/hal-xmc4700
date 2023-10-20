@@ -18,7 +18,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: ETH0_CON_ETH0_CON_INFSEL
           - name: MDIO
             description: MDIO Input Select
             index: 22
@@ -102,18 +101,6 @@ structs:
     unit_test: false
     identifier: false
 enums:
-  ETH0_CON_ETH0_CON_INFSEL:
-    enum:
-      mii:
-        description: MII
-        value: 0
-      rmii:
-        description: RMII
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   ETH0_CON_ETH0_CON_MDIO:
     enum:
       a_selected:

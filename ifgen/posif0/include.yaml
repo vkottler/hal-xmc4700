@@ -27,14 +27,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: POSIF0_PCONF_EWIL
           - name: EWIE
             description: External Wrong Hall Event enable
             index: 26
             width: 1
             read: true
             write: true
-            type: POSIF0_PCONF_EWIE
           - name: EWIS
             description: Wrong Hall Event selection
             index: 24
@@ -55,7 +53,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: POSIF0_PCONF_MSES
           - name: MSETS
             description: Pattern update signal select
             index: 18
@@ -69,14 +66,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: POSIF0_PCONF_MSES
           - name: DSEL
             description: Delay Pin selector
             index: 16
             width: 1
             read: true
             write: true
-            type: POSIF0_PCONF_DSEL
           - name: INSEL2
             description: Index/Hall input 3 selector
             index: 12
@@ -104,7 +99,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: POSIF0_PCONF_MCUE
           - name: HIDG
             description: Idle generation enable
             index: 4
@@ -117,7 +111,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: POSIF0_PCONF_QDCM
           - name: FSEL
             description: Function Selector
             index: 0
@@ -188,7 +181,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: POSIF0_PRUN_RB
       - name: MIDR
         type: uint32_t
         expected_size: 4
@@ -331,7 +323,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: POSIF0_MCMF_MSS
       - name: QDC
         type: uint32_t
         expected_size: 4
@@ -344,7 +335,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: POSIF0_QDC_DVAL
           - name: ICM
             description: Index Marker generations control
             index: 4
@@ -358,21 +348,18 @@ structs:
             width: 1
             read: true
             write: true
-            type: POSIF0_QDC_PHS
           - name: PBLS
             description: Phase B Level selector
             index: 1
             width: 1
             read: true
             write: true
-            type: POSIF0_PCONF_EWIL
           - name: PALS
             description: Phase A Level selector
             index: 0
             width: 1
             read: true
             write: true
-            type: POSIF0_PCONF_EWIL
       - name: PFLG
         type: uint32_t
         expected_size: 4
@@ -386,63 +373,54 @@ structs:
             width: 1
             read: true
             write: false
-            type: POSIF0_PFLG_PCLKS
           - name: DIRS
             description: Quadrature Direction Change
             index: 11
             width: 1
             read: true
             write: false
-            type: POSIF0_PFLG_DIRS
           - name: CNTS
             description: Quadrature CLK Status
             index: 10
             width: 1
             read: true
             write: false
-            type: POSIF0_PFLG_PCLKS
           - name: ERRS
             description: Quadrature Phase Error Status
             index: 9
             width: 1
             read: true
             write: false
-            type: POSIF0_PFLG_DIRS
           - name: INDXS
             description: Quadrature Index Status
             index: 8
             width: 1
             read: true
             write: false
-            type: POSIF0_PFLG_DIRS
           - name: MSTS
             description: Multi-Channel pattern shadow transfer status
             index: 4
             width: 1
             read: true
             write: false
-            type: POSIF0_PFLG_MSTS
           - name: HIES
             description: Hall Inputs Update Status
             index: 2
             width: 1
             read: true
             write: false
-            type: POSIF0_PFLG_DIRS
           - name: WHES
             description: Wrong Hall Event Status
             index: 1
             width: 1
             read: true
             write: false
-            type: POSIF0_PFLG_DIRS
           - name: CHES
             description: Correct Hall Event Status
             index: 0
             width: 1
             read: true
             write: false
-            type: POSIF0_PFLG_DIRS
       - name: PFLGE
         type: uint32_t
         expected_size: 4
@@ -455,126 +433,108 @@ structs:
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_PCLSEL
           - name: DIRSEL
             description: Quadrature Direction Update Event Service Request Selector
             index: 27
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_PCLSEL
           - name: CNTSEL
             description: Quadrature Clock Event Service Request Selector
             index: 26
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_PCLSEL
           - name: ERRSEL
             description: Quadrature Phase Error Event Service Request Selector
             index: 25
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_PCLSEL
           - name: INDSEL
             description: Quadrature Index Event Service Request Selector
             index: 24
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_PCLSEL
           - name: MSTSEL
             description: Multi-Channel pattern Update Event Service Request Selector
             index: 20
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_PCLSEL
           - name: HIESEL
             description: Hall Inputs Update Event Service Request Selector
             index: 18
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_PCLSEL
           - name: WHESEL
             description: Wrong Hall Event Service Request Selector
             index: 17
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_PCLSEL
           - name: CHESEL
             description: Correct Hall Event Service Request Selector
             index: 16
             width: 1
             read: true
             write: true
-            type: POSIF0_PFLGE_PCLSEL
           - name: EPCLK
             description: Quadrature Period CLK interrupt Enable
             index: 12
             width: 1
             read: true
             write: true
-            type: POSIF0_PCONF_EWIE
           - name: EDIR
             description: Quadrature direction change interrupt Enable
             index: 11
             width: 1
             read: true
             write: true
-            type: POSIF0_PCONF_EWIE
           - name: ECNT
             description: Quadrature CLK interrupt Enable
             index: 10
             width: 1
             read: true
             write: true
-            type: POSIF0_PCONF_EWIE
           - name: EERR
             description: Quadrature Phase Error Enable
             index: 9
             width: 1
             read: true
             write: true
-            type: POSIF0_PCONF_EWIE
           - name: EINDX
             description: Quadrature Index Event Enable
             index: 8
             width: 1
             read: true
             write: true
-            type: POSIF0_PCONF_EWIE
           - name: EMST
             description: Multi-Channel pattern shadow transfer enable
             index: 4
             width: 1
             read: true
             write: true
-            type: POSIF0_PCONF_EWIE
           - name: EHIE
             description: Hall Input Update Enable
             index: 2
             width: 1
             read: true
             write: true
-            type: POSIF0_PCONF_EWIE
           - name: EWHE
             description: Wrong Hall Event Enable
             index: 1
             width: 1
             read: true
             write: true
-            type: POSIF0_PCONF_EWIE
           - name: ECHE
             description: Correct Hall Event Enable
             index: 0
             width: 1
             read: true
             write: true
-            type: POSIF0_PCONF_EWIE
       - name: SPFLG
         type: uint32_t
         expected_size: 4
@@ -780,32 +740,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  POSIF0_PCONF_EWIL:
-    enum:
-      high:
-        description: POSIFx.EWHE[D...A] signal is active HIGH
-        value: 0
-      low:
-        description: POSIFx.EWHE[D...A] signal is active LOW
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  POSIF0_PCONF_EWIE:
-    enum:
-      disabled:
-        description: External wrong hall event emulation signal, POSIFx.EWHE[D...A],
-          is disabled
-        value: 0
-      enabled:
-        description: External wrong hall event emulation signal, POSIFx.EWHE[D...A],
-          is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   POSIF0_PCONF_EWIS:
     enum:
       a:
@@ -820,20 +754,6 @@ enums:
       d:
         description: POSIFx.EWHED
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  POSIF0_PCONF_MSES:
-    enum:
-      rising_edge:
-        description: The signal used to enable a pattern update is active on the rising
-          edge
-        value: 0
-      falling_edge:
-        description: The signal used to enable a pattern update is active on the falling
-          edge
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -864,42 +784,6 @@ enums:
       h:
         description: POSIFx.MSETH
         value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  POSIF0_PCONF_DSEL:
-    enum:
-      a:
-        description: POSIFx.HSDA
-        value: 0
-      b:
-        description: POSIFx.HSDB
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  POSIF0_PCONF_MCUE:
-    enum:
-      hw:
-        description: Multi-Channel pattern update is controlled via HW
-        value: 0
-      sw:
-        description: Multi-Channel pattern update is controlled via SW
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  POSIF0_PCONF_QDCM:
-    enum:
-      quadrature_mode:
-        description: Position encoder is in Quadrature Mode
-        value: 0
-      direction_count_mode:
-        description: Position encoder is in Direction Count Mode.
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -960,42 +844,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  POSIF0_PRUN_RB:
-    enum:
-      idle:
-        description: IDLE
-        value: 0
-      running:
-        description: Running
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  POSIF0_MCMF_MSS:
-    enum:
-      set:
-        description: Update of the Multi-Channel pattern is set
-        value: 0
-      not_set:
-        description: Update of the Multi-Channel pattern is not set
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  POSIF0_QDC_DVAL:
-    enum:
-      counterclockwise_rotation:
-        description: Counterclockwise rotation
-        value: 0
-      clockwise_rotation:
-        description: Clockwise rotation
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   POSIF0_QDC_ICM:
     enum:
       no_index_marker_generation_posifxout3:
@@ -1007,66 +855,6 @@ enums:
       all_index_occurrences_generated_posifxout3:
         description: All index occurrences generated on POSIFx.OUT3
         value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  POSIF0_QDC_PHS:
-    enum:
-      leading_signal_clockwise_rotation:
-        description: Phase A is the leading signal for clockwise rotation
-        value: 0
-      b_leading_signal_clockwise_rotation:
-        description: Phase B is the leading signal for clockwise rotation
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  POSIF0_PFLG_PCLKS:
-    enum:
-      not_generated:
-        description: Period clock not generated
-        value: 0
-      generated:
-        description: Period clock generated
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  POSIF0_PFLG_DIRS:
-    enum:
-      not_detected:
-        description: Change on direction not detected
-        value: 0
-      detected:
-        description: Change on direction detected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  POSIF0_PFLG_MSTS:
-    enum:
-      not_done:
-        description: Shadow transfer not done
-        value: 0
-      done:
-        description: Shadow transfer done
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  POSIF0_PFLGE_PCLSEL:
-    enum:
-      _0:
-        description: Quadrature Period clock Event interrupt forward to POSIFx.SR0
-        value: 0
-      _1:
-        description: Quadrature Period clock Event interrupt forward to POSIFx.SR1
-        value: 1
     unit_test: false
     json: false
     use_map: false

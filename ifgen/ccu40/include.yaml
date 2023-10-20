@@ -31,28 +31,24 @@ structs:
             width: 1
             read: true
             write: true
-            type: CCU40_GCTRL_MSE3
           - name: MSE2
             description: Slice 2 Multi Channel shadow transfer enable
             index: 12
             width: 1
             read: true
             write: true
-            type: CCU40_GCTRL_MSE3
           - name: MSE1
             description: Slice 1 Multi Channel shadow transfer enable
             index: 11
             width: 1
             read: true
             write: true
-            type: CCU40_GCTRL_MSE3
           - name: MSE0
             description: Slice 0 Multi Channel shadow transfer enable
             index: 10
             width: 1
             read: true
             write: true
-            type: CCU40_GCTRL_MSE3
           - name: SUSCFG
             description: Suspend Mode Configuration
             index: 8
@@ -87,35 +83,30 @@ structs:
             width: 1
             read: true
             write: false
-            type: CCU40_GSTAT_PRB
           - name: S3I
             description: CC43 IDLE status
             index: 3
             width: 1
             read: true
             write: false
-            type: CCU40_GSTAT_S3I
           - name: S2I
             description: CC42 IDLE status
             index: 2
             width: 1
             read: true
             write: false
-            type: CCU40_GSTAT_S3I
           - name: S1I
             description: CC41 IDLE status
             index: 1
             width: 1
             read: true
             write: false
-            type: CCU40_GSTAT_S3I
           - name: S0I
             description: CC40 IDLE status
             index: 0
             width: 1
             read: true
             write: false
-            type: CCU40_GSTAT_S3I
       - name: GIDLS
         type: uint32_t
         expected_size: 4
@@ -435,84 +426,72 @@ structs:
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S3PSS
           - name: S3DSS
             description: Slice 3 Dither shadow transfer status
             index: 13
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S3PSS
           - name: S3SS
             description: Slice 3 shadow transfer status
             index: 12
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S3PSS
           - name: S2PSS
             description: Slice 2 Prescaler shadow transfer status
             index: 10
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S3PSS
           - name: S2DSS
             description: Slice 2 Dither shadow transfer status
             index: 9
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S3PSS
           - name: S2SS
             description: Slice 2 shadow transfer status
             index: 8
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S3PSS
           - name: S1PSS
             description: Slice 1 Prescaler shadow transfer status
             index: 6
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S3PSS
           - name: S1DSS
             description: Slice 1 Dither shadow transfer status
             index: 5
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S3PSS
           - name: S1SS
             description: Slice 1 shadow transfer status
             index: 4
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S3PSS
           - name: S0PSS
             description: Slice 0 Prescaler shadow transfer status
             index: 2
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S3PSS
           - name: S0DSS
             description: Slice 0 Dither shadow transfer status
             index: 1
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S3PSS
           - name: S0SS
             description: Slice 0 shadow transfer status
             index: 0
             width: 1
             read: true
             write: false
-            type: CCU40_GCST_S3PSS
       - name: MIDR
         type: uint32_t
         expected_size: 4
@@ -557,19 +536,6 @@ enums:
         description: Shadow transfer for the compare, period, prescaler and dither
           compare values is requested
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GCTRL_MSE3:
-    enum:
-      only_be_requested_by_sw:
-        description: Shadow transfer can only be requested by SW
-        value: 0
-      be_requested_via_sw_via_ccu4xmcss_input:
-        description: Shadow transfer can be requested via SW and via the CCU4x.MCSS
-          input.
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -637,42 +603,6 @@ enums:
           timer slice (idle mode or running)..PRB and prescaler registers are cleared
           when the Run Bit of CC43 is cleared.
         value: 4
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GSTAT_PRB:
-    enum:
-      stopped:
-        description: Prescaler is stopped
-        value: 0
-      running:
-        description: Prescaler is running
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GSTAT_S3I:
-    enum:
-      running:
-        description: Running
-        value: 0
-      idle:
-        description: Idle
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CCU40_GCST_S3PSS:
-    enum:
-      not_been_requested:
-        description: Prescaler shadow transfer has not been requested
-        value: 0
-      been_requested:
-        description: Prescaler shadow transfer has been requested
-        value: 1
     unit_test: false
     json: false
     use_map: false

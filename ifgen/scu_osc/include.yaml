@@ -51,14 +51,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_OSC_OSCHPCTRL_SHBY
           - name: X1DEN
             description: XTAL1 Data Enable
             index: 0
             width: 1
             read: true
             write: true
-            type: SCU_OSC_OSCHPCTRL_X1DEN
       - name: CLKCALCONST
         type: uint32_t
         expected_size: 4
@@ -115,30 +113,6 @@ enums:
         description: The gain control is configured for frequencies from 4 MHz to
           25 MHz
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_OSC_OSCHPCTRL_SHBY:
-    enum:
-      not_bypassed:
-        description: The shaper is not bypassed
-        value: 0
-      bypassed:
-        description: The shaper is bypassed
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_OSC_OSCHPCTRL_X1DEN:
-    enum:
-      not_updated:
-        description: Bit X1D is not updated
-        value: 0
-      can_be_updated:
-        description: Bit X1D can be updated
-        value: 1
     unit_test: false
     json: false
     use_map: false

@@ -100,14 +100,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: GPDMA0_CH0_CTLL_SRC_GATHER_EN
           - name: DST_SCATTER_EN
             description: Destination scatter enable
             index: 18
             width: 1
             read: true
             write: true
-            type: GPDMA0_CH0_CTLL_SRC_GATHER_EN
           - name: TT_FC
             description: Transfer Type and Flow Control
             index: 20
@@ -210,28 +208,24 @@ structs:
             width: 1
             read: true
             write: true
-            type: GPDMA0_CH0_CFGL_CH_SUSP
           - name: FIFO_EMPTY
             description: Indicates if there is data left in the channel FIFO
             index: 9
             width: 1
             read: true
             write: false
-            type: GPDMA0_CH0_CFGL_FIFO_EMPTY
           - name: HS_SEL_DST
             description: Destination Software or Hardware Handshaking Select
             index: 10
             width: 1
             read: true
             write: true
-            type: GPDMA0_CH0_CFGL_HS_SEL_DST
           - name: HS_SEL_SRC
             description: Source Software or Hardware Handshaking Select
             index: 11
             width: 1
             read: true
             write: true
-            type: GPDMA0_CH0_CFGL_HS_SEL_SRC
           - name: LOCK_CH_L
             description: Channel Lock Level
             index: 12
@@ -264,14 +258,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: GPDMA0_CH0_CFGL_DST_HS_POL
           - name: SRC_HS_POL
             description: Source Handshaking Interface Polarity
             index: 19
             width: 1
             read: true
             write: true
-            type: GPDMA0_CH0_CFGL_DST_HS_POL
           - name: MAX_ABRST
             description: Maximum AMBA Burst Length
             index: 20
@@ -302,14 +294,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: GPDMA0_CH0_CFGH_FCMODE
           - name: FIFO_MODE
             description: FIFO Mode Select
             index: 1
             width: 1
             read: true
             write: true
-            type: GPDMA0_CH0_CFGH_FIFO_MODE
           - name: PROTCTL
             description: Protection Control
             index: 2
@@ -397,70 +387,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  GPDMA0_CH0_CTLL_SRC_GATHER_EN:
-    enum:
-      disabled:
-        description: Gather disabled
-        value: 0
-      enabled:
-        description: Gather enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  GPDMA0_CH0_CFGL_CH_SUSP:
-    enum:
-      not_suspended:
-        description: Not suspended.
-        value: 0
-      suspend_dma_transfer_source:
-        description: Suspend DMA transfer from the source.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  GPDMA0_CH0_CFGL_FIFO_EMPTY:
-    enum:
-      empty:
-        description: Channel FIFO empty
-        value: 1
-      not_empty:
-        description: Channel FIFO not empty
-        value: 0
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  GPDMA0_CH0_CFGL_HS_SEL_DST:
-    enum:
-      hardware_handshaking_interface_software_initi_cont:
-        description: Hardware handshaking interface. Software-initiated transaction
-          requests are ignored.
-        value: 0
-      software_handshaking_interface_hardware__init_cont:
-        description: Software handshaking interface. Hardware- initiated transaction
-          requests are ignored.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  GPDMA0_CH0_CFGL_HS_SEL_SRC:
-    enum:
-      hardware_handshaking_interface_software_initi_cont:
-        description: Hardware handshaking interface. Software-initiated transaction
-          requests are ignored.
-        value: 0
-      software_handshaking_interface_hardware_initi_cont:
-        description: Software handshaking interface. Hardware-initiated transaction
-          requests are ignored.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   GPDMA0_CH0_CFGL_LOCK_CH_L:
     enum:
       transfer:
@@ -472,51 +398,6 @@ enums:
       transaction:
         description: Over complete DMA transaction
         value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  GPDMA0_CH0_CFGL_DST_HS_POL:
-    enum:
-      high:
-        description: Active high
-        value: 0
-      low:
-        description: Active low
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  GPDMA0_CH0_CFGH_FCMODE:
-    enum:
-      serviced_when_they_occur_data_pre_fetching_enabled:
-        description: Source transaction requests are serviced when they occur. Data
-          pre-fetching is enabled.
-        value: 0
-      not_serviced_until_destination_transaction_re_cont:
-        description: Source transaction requests are not serviced until a destination
-          transaction request occurs. In this mode, the amount of data transferred
-          from the source is limited so that it is guaranteed to be transferred to
-          the destination prior to block termination by the destination. Data pre-fetching
-          is disabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  GPDMA0_CH0_CFGH_FIFO_MODE:
-    enum:
-      spacedata_available_single_ahb_transfer_speci_cont:
-        description: Space/data available for single AHB transfer of the specified
-          transfer width.
-        value: 0
-      data_available_greater_than_or_equal_half_fif_cont:
-        description: Data available is greater than or equal to half the FIFO depth
-          for destination transfers and space available is greater than half the fifo
-          depth for source transfers. The exceptions are at the end of a burst transaction
-          request or at the end of a block transfer.
-        value: 1
     unit_test: false
     json: false
     use_map: false

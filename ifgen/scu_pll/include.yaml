@@ -19,63 +19,54 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_PLL_PLLSTAT_PLLSP
           - name: PLLHV
             description: Oscillator for PLL Valid High Status Bit
             index: 8
             width: 1
             read: true
             write: false
-            type: SCU_PLL_PLLSTAT_PLLHV
           - name: PLLLV
             description: Oscillator for PLL Valid Low Status Bit
             index: 7
             width: 1
             read: true
             write: false
-            type: SCU_PLL_PLLSTAT_PLLLV
           - name: BY
             description: Bypass Mode Status
             index: 6
             width: 1
             read: true
             write: false
-            type: SCU_PLL_PLLSTAT_BY
           - name: K2RDY
             description: K2 Divider Ready Status
             index: 5
             width: 1
             read: true
             write: false
-            type: SCU_PLL_PLLSTAT_K2RDY
           - name: K1RDY
             description: K1 Divider Ready Status
             index: 4
             width: 1
             read: true
             write: false
-            type: SCU_PLL_PLLSTAT_K2RDY
           - name: VCOLOCK
             description: PLL LOCK Status
             index: 2
             width: 1
             read: true
             write: false
-            type: SCU_PLL_PLLSTAT_VCOLOCK
           - name: PWDSTAT
             description: PLL Power-saving Mode Status
             index: 1
             width: 1
             read: true
             write: false
-            type: SCU_PLL_PLLSTAT_PWDSTAT
           - name: VCOBYST
             description: VCO Bypass Status
             index: 0
             width: 1
             read: true
             write: false
-            type: SCU_PLL_PLLSTAT_VCOBYST
       - name: PLLCON0
         type: uint32_t
         expected_size: 4
@@ -88,14 +79,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_PLL_PLLCON0_FOTR
           - name: AOTREN
             description: Automatic Oscillator Calibration Enable
             index: 19
             width: 1
             read: true
             write: true
-            type: SCU_PLL_PLLCON0_AOTREN
           - name: RESLD
             description: Restart VCO Lock Detection
             index: 18
@@ -108,49 +97,42 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_PLL_PLLCON0_OSCRES
           - name: PLLPWD
             description: PLL Power Saving Mode
             index: 16
             width: 1
             read: true
             write: true
-            type: SCU_PLL_PLLCON0_PLLPWD
           - name: OSCDISCDIS
             description: Oscillator Disconnect Disable
             index: 6
             width: 1
             read: true
             write: true
-            type: SCU_PLL_PLLCON0_OSCDISCDIS
           - name: FINDIS
             description: Disconnect Oscillator from VCO
             index: 4
             width: 1
             read: true
             write: true
-            type: SCU_PLL_PLLCON0_FINDIS
           - name: VCOTR
             description: VCO Trim Control
             index: 2
             width: 1
             read: true
             write: true
-            type: SCU_PLL_PLLCON0_VCOTR
           - name: VCOPWD
             description: VCO Power Saving Mode
             index: 1
             width: 1
             read: true
             write: true
-            type: SCU_PLL_PLLCON0_VCOPWD
           - name: VCOBYP
             description: VCO Bypass
             index: 0
             width: 1
             read: true
             write: true
-            type: SCU_PLL_PLLCON0_VCOBYP
       - name: PLLCON1
         type: uint32_t
         expected_size: 4
@@ -193,14 +175,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_PLL_PLLCON2_K1INSEL
           - name: PINSEL
             description: P-Divider Input Selection
             index: 0
             width: 1
             read: true
             write: true
-            type: SCU_PLL_PLLCON2_K1INSEL
       - name: USBPLLSTAT
         type: uint32_t
         expected_size: 4
@@ -214,35 +194,30 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_PLL_PLLSTAT_VCOLOCK
           - name: BY
             description: Bypass Mode Status
             index: 6
             width: 1
             read: true
             write: false
-            type: SCU_PLL_PLLSTAT_BY
           - name: VCOLOCK
             description: PLL VCO Lock Status
             index: 2
             width: 1
             read: true
             write: false
-            type: SCU_PLL_USBPLLSTAT_VCOLOCK
           - name: PWDSTAT
             description: PLL Power-saving Mode Status
             index: 1
             width: 1
             read: true
             write: false
-            type: SCU_PLL_PLLSTAT_PWDSTAT
           - name: VCOBYST
             description: VCO Bypass Status
             index: 0
             width: 1
             read: true
             write: false
-            type: SCU_PLL_USBPLLSTAT_VCOBYST
       - name: USBPLLCON
         type: uint32_t
         expected_size: 4
@@ -267,7 +242,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_PLL_PLLCON0_PLLPWD
           - name: NDIV
             description: N-Divider Value
             index: 8
@@ -280,35 +254,30 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_PLL_PLLCON0_OSCDISCDIS
           - name: FINDIS
             description: Disconnect Oscillator from VCO
             index: 4
             width: 1
             read: true
             write: true
-            type: SCU_PLL_PLLCON0_FINDIS
           - name: VCOTR
             description: VCO Trim Control
             index: 2
             width: 1
             read: true
             write: true
-            type: SCU_PLL_PLLCON0_VCOTR
           - name: VCOPWD
             description: VCO Power Saving Mode
             index: 1
             width: 1
             read: true
             write: true
-            type: SCU_PLL_USBPLLCON_VCOPWD
           - name: VCOBYP
             description: VCO Bypass
             index: 0
             width: 1
             read: true
             write: true
-            type: SCU_PLL_PLLCON0_VCOBYP
       - name: CLKMXSTAT
         type: uint32_t
         expected_size: 4
@@ -329,266 +298,6 @@ structs:
     unit_test: false
     identifier: false
 enums:
-  SCU_PLL_PLLSTAT_PLLSP:
-    enum:
-      not_usable_spikes_detected_disturb_locked_ope_cont:
-        description: The OSC frequency is not usable. Spikes are detected that disturb
-          a locked operation
-        value: 0
-      usable:
-        description: The OSC frequency is usable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PLL_PLLSTAT_PLLHV:
-    enum:
-      not_usable_frequency_fosc_too_high:
-        description: The OSC frequency is not usable. Frequency fOSC is too high.
-        value: 0
-      usable:
-        description: The OSC frequency is usable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PLL_PLLSTAT_PLLLV:
-    enum:
-      not_usable_frequency_fref_too_low:
-        description: The OSC frequency is not usable. Frequency fREF is too low.
-        value: 0
-      usable:
-        description: The OSC frequency is usable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PLL_PLLSTAT_BY:
-    enum:
-      not_entered:
-        description: Bypass Mode is not entered
-        value: 0
-      entered_input_fosc_selected_output_fpll:
-        description: Bypass Mode is entered. Input fOSC is selected as output fPLL.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PLL_PLLSTAT_K2RDY:
-    enum:
-      does_not_operate_with_new_value:
-        description: K2-Divider does not operate with the new value
-        value: 0
-      operate_with_new_value:
-        description: K2-Divider operate with the new value
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PLL_PLLSTAT_VCOLOCK:
-    enum:
-      not_locked:
-        description: PLL not locked
-        value: 0
-      locked:
-        description: PLL locked
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PLL_PLLSTAT_PWDSTAT:
-    enum:
-      not_entered:
-        description: PLL Power-saving Mode was not entered
-        value: 0
-      entered:
-        description: PLL Power-saving Mode was entered
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PLL_PLLSTAT_VCOBYST:
-    enum:
-      free_running_normal_mode_entered:
-        description: Free-running / Normal Mode is entered
-        value: 0
-      prescaler_mode_entered:
-        description: Prescaler Mode is entered
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PLL_PLLCON0_FOTR:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      force_fixed_value_trimming:
-        description: Force fixed-value trimming
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PLL_PLLCON0_AOTREN:
-    enum:
-      disable:
-        description: Disable
-        value: 0
-      enable:
-        description: Enable
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PLL_PLLCON0_OSCRES:
-    enum:
-      not_cleared_remains_active:
-        description: The Oscillator Watchdog of the PLL is not cleared and remains
-          active
-        value: 0
-      cleared_restarted:
-        description: The Oscillator Watchdog of the PLL is cleared and restarted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PLL_PLLCON0_PLLPWD:
-    enum:
-      normal_behavior:
-        description: Normal behavior
-        value: 0
-      complete_pll_block_put_into_power_saving_mode_cont:
-        description: The complete PLL block is put into a Power Saving Mode and can
-          no longer be used. Only the Bypass Mode is active if previously selected.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PLL_PLLCON0_OSCDISCDIS:
-    enum:
-      set:
-        description: In case of a PLL loss-of-lock bit FINDIS is set
-        value: 0
-      cleared:
-        description: In case of a PLL loss-of-lock bit FINDIS is cleared
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PLL_PLLCON0_FINDIS:
-    enum:
-      connect_oscillator_vco_part:
-        description: connect oscillator to the VCO part
-        value: 0
-      disconnect_oscillator_vco_part:
-        description: disconnect oscillator from the VCO part.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PLL_PLLCON0_VCOTR:
-    enum:
-      normal_range_vco_output_frequency_between_260_cont:
-        description: VCO bandwidth is operation in the normal range. VCO output frequency
-          is between 260 and 520 MHz for a input frequency between 8 and 16 MHz.
-        value: 0
-      test_range_vco_output_frequency_between_260_5_cont:
-        description: VCO bandwidth is operation in the test range. VCO output frequency
-          is between 260 and 520 MHz for a input frequency between 8 and 16 MHz.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PLL_PLLCON0_VCOPWD:
-    enum:
-      normal_behavior:
-        description: Normal behavior
-        value: 0
-      vco_put_into_power_saving_mode_can_no_longer__cont:
-        description: The VCO is put into a Power Saving Mode and can no longer be
-          used. Only the Bypass and Prescaler Mode are active if previously selected.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PLL_PLLCON0_VCOBYP:
-    enum:
-      normal_operation_vco_not_bypassed:
-        description: Normal operation, VCO is not bypassed
-        value: 0
-      prescaler_mode_vco_bypassed:
-        description: Prescaler Mode, VCO is bypassed
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PLL_PLLCON2_K1INSEL:
-    enum:
-      pll_external_oscillator_selected:
-        description: PLL external oscillator selected
-        value: 0
-      backup_clock_fofi_selected:
-        description: Backup clock fofi selected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PLL_USBPLLSTAT_VCOLOCK:
-    enum:
-      greater_than_allowed_vco_part_pll_can_not_loc_cont:
-        description: The frequency difference of fREF and fDIV is greater than allowed.
-          The VCO part of the PLL can not lock on a target frequency.
-        value: 0
-      small_enough_enable_stable_vco_operation:
-        description: The frequency difference of fREF and fDIV is small enough to
-          enable a stable VCO operation
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PLL_USBPLLSTAT_VCOBYST:
-    enum:
-      normal_mode_entered:
-        description: Normal Mode is entered
-        value: 0
-      prescaler_mode_entered:
-        description: Prescaler Mode is entered
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_PLL_USBPLLCON_VCOPWD:
-    enum:
-      normal_behavior:
-        description: Normal behavior
-        value: 0
-      vco_put_into_power_saving_mode:
-        description: The VCO is put into a Power Saving Mode
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   SCU_PLL_CLKMXSTAT_SYSCLKMUX:
     enum:
       fofi_clock_active:

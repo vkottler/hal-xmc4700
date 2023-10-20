@@ -19,28 +19,24 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_POWER_PWRSTAT_USBPUWQ
           - name: USBOTGEN
             description: USB On-The-Go Comparators State
             index: 17
             width: 1
             read: true
             write: false
-            type: SCU_POWER_PWRSTAT_USBOTGEN
           - name: USBPHYPDQ
             description: USB PHY Transceiver State
             index: 16
             width: 1
             read: true
             write: false
-            type: SCU_POWER_PWRSTAT_USBOTGEN
           - name: HIBEN
             description: Hibernate Domain Enable Status
             index: 0
             width: 1
             read: true
             write: false
-            type: SCU_POWER_PWRSTAT_HIBEN
       - name: PWRSET
         type: uint32_t
         expected_size: 4
@@ -53,28 +49,24 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_POWER_PWRSET_USBPUWQ
           - name: USBOTGEN
             description: Set USB On-The-Go Comparators Enable
             index: 17
             width: 1
             read: false
             write: true
-            type: SCU_POWER_PWRSET_USBOTGEN
           - name: USBPHYPDQ
             description: Set USB PHY Transceiver Disable
             index: 16
             width: 1
             read: false
             write: true
-            type: SCU_POWER_PWRSET_USBOTGEN
           - name: HIB
             description: Set Hibernate Domain Enable
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_POWER_PWRSET_HIB
       - name: PWRCLR
         type: uint32_t
         expected_size: 4
@@ -87,28 +79,24 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_POWER_PWRCLR_USBPUWQ
           - name: USBOTGEN
             description: Clear USB On-The-Go Comparators Enable
             index: 17
             width: 1
             read: false
             write: true
-            type: SCU_POWER_PWRCLR_USBOTGEN
           - name: USBPHYPDQ
             description: Clear USB PHY Transceiver Disable
             index: 16
             width: 1
             read: false
             write: true
-            type: SCU_POWER_PWRCLR_USBOTGEN
           - name: HIB
             description: Clear Disable Hibernate Domain
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_POWER_PWRCLR_HIB
       - name: EVRSTAT
         type: uint32_t
         expected_size: 4
@@ -122,7 +110,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_POWER_EVRSTAT_OV13
       - name: EVRVADCSTAT
         type: uint32_t
         expected_size: 4
@@ -171,124 +158,4 @@ structs:
     methods: false
     unit_test: false
     identifier: false
-enums:
-  SCU_POWER_PWRSTAT_USBPUWQ:
-    enum:
-      active:
-        description: Pull-up active
-        value: 0
-      not_active:
-        description: Pull-up not active
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_POWER_PWRSTAT_USBOTGEN:
-    enum:
-      power_down:
-        description: Power-down
-        value: 0
-      active:
-        description: Active
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_POWER_PWRSTAT_HIBEN:
-    enum:
-      inactive:
-        description: Inactive
-        value: 0
-      active:
-        description: Active
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_POWER_PWRSET_USBPUWQ:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      pull_up_not_active:
-        description: Pull-up not active
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_POWER_PWRSET_USBOTGEN:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      active:
-        description: Active
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_POWER_PWRSET_HIB:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      enable_hibernate_domain:
-        description: Enable Hibernate domain
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_POWER_PWRCLR_USBPUWQ:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      pull_up_active:
-        description: Pull-up active
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_POWER_PWRCLR_USBOTGEN:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      power_down:
-        description: Power-down
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_POWER_PWRCLR_HIB:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      disable_hibernate_domain:
-        description: Disable Hibernate domain
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_POWER_EVRSTAT_OV13:
-    enum:
-      no_overvoltage_condition:
-        description: No overvoltage condition
-        value: 0
-      regulator_overvoltage:
-        description: Regulator is in overvoltage
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
+enums: {}

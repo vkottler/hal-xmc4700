@@ -19,77 +19,66 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: RTC_TIM1
             description: RTC TIM1 Mirror Register Update Status
             index: 28
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: RTC_TIM0
             description: RTC TIM0 Mirror Register Update Status
             index: 27
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: RTC_ATIM1
             description: RTC ATIM1 Mirror Register Update Status
             index: 26
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: RTC_ATIM0
             description: RTC ATIM0 Mirror Register Update Status
             index: 25
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: RTC_CTR
             description: RTC CTR Mirror Register Update Status
             index: 24
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: OSCULCTRL
             description: OSCULCTRL Mirror Register Update Status
             index: 23
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: OSCSICTRL
             description: OSCSICTRL Mirror Register Update Status
             index: 21
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: HDCR
             description: HDCR Mirror Register Update Status
             index: 19
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: HDSET
             description: HDSET Mirror Register Update Status
             index: 18
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: HDCLR
             description: HDCLR Mirror Register Update Status
             index: 17
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: DLROVR
             description: DLR Request Overrun Interrupt Status
             index: 3
@@ -114,7 +103,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_PRWARN
       - name: SRRAW
         type: uint32_t
         expected_size: 4
@@ -128,77 +116,66 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: RTC_TIM1
             description: RTC TIM1 Mirror Register Update Status Before Masking
             index: 28
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: RTC_TIM0
             description: RTC TIM0 Mirror Register Update Before Masking Status
             index: 27
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: RTC_ATIM1
             description: RTC ATIM1 Mirror Register Update Status Before Masking
             index: 26
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: RTC_ATIM0
             description: RTC ATIM0 Mirror Register Update Status Before Masking
             index: 25
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: RTC_CTR
             description: RTC CTR Mirror Register Update Status Before Masking
             index: 24
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: OSCULCTRL
             description: OSCULCTRL Mirror Register Update Status Before Masking
             index: 23
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: OSCSICTRL
             description: OSCSICTRL Mirror Register Update Status Before Masking
             index: 21
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: HDCR
             description: HDCR Mirror Register Update Status Before Masking
             index: 19
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: HDSET
             description: HDSET Mirror Register Update Status Before Masking
             index: 18
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: HDCLR
             description: HDCLR Mirror Register Update Status Before Masking
             index: 17
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_RMX
           - name: DLROVR
             description: DLR Request Overrun Interrupt Status Before Masking
             index: 3
@@ -223,7 +200,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_INTERRUPT_SRSTAT_PRWARN
       - name: SRMSK
         type: uint32_t
         expected_size: 4
@@ -236,105 +212,90 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
           - name: RTC_TIM1
             description: RTC TIM1 Mirror Register Update Mask
             index: 28
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
           - name: RTC_TIM0
             description: RTC TIM0 Mirror Register Update Mask
             index: 27
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
           - name: RTC_ATIM1
             description: RTC ATIM1 Mirror Register Update Mask
             index: 26
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
           - name: RTC_ATIM0
             description: RTC ATIM0 Mirror Register Update Mask
             index: 25
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
           - name: RTC_CTR
             description: RTC CTR Mirror Register Update Mask
             index: 24
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
           - name: OSCULCTRL
             description: OSCULCTRL Mirror Register Update Mask
             index: 23
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
           - name: OSCSICTRL
             description: OSCSICTRL Mirror Register Update Mask
             index: 21
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
           - name: HDCR
             description: HDCR Mirror Register Update Mask
             index: 19
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
           - name: HDSET
             description: HDSET Mirror Register Update Mask
             index: 18
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
           - name: HDCLR
             description: HDCLR Mirror Register Update Mask
             index: 17
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
           - name: DLROVR
             description: DLR Request Overrun Interrupt Mask
             index: 3
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
           - name: AI
             description: RTC Alarm Interrupt Mask
             index: 2
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
           - name: PI
             description: RTC Periodic Interrupt Mask
             index: 1
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
           - name: PRWARN
             description: WDT pre-warning Interrupt Mask
             index: 0
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
       - name: SRCLR
         type: uint32_t
         expected_size: 4
@@ -347,105 +308,90 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRCLR_RMX
           - name: RTC_TIM1
             description: RTC TIM1 Mirror Register Update Clear
             index: 28
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRCLR_RMX
           - name: RTC_TIM0
             description: RTC TIM0 Mirror Register Update Clear
             index: 27
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRCLR_RMX
           - name: RTC_ATIM1
             description: RTC ATIM1 Mirror Register Update Clear
             index: 26
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRCLR_RMX
           - name: RTC_ATIM0
             description: RTC ATIM0 Mirror Register Update Clear
             index: 25
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRCLR_RMX
           - name: RTC_CTR
             description: RTC CTR Mirror Register Update Clear
             index: 24
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRCLR_RMX
           - name: OSCULCTRL
             description: OSCULCTRL Mirror Register Update Clear
             index: 23
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRCLR_RMX
           - name: OSCSICTRL
             description: OSCSICTRL Mirror Register Update Clear
             index: 21
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRCLR_RMX
           - name: HDCR
             description: HDCR Mirror Register Update Clear
             index: 19
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRCLR_RMX
           - name: HDSET
             description: HDSET Mirror Register Update Clear
             index: 18
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRCLR_RMX
           - name: HDCLR
             description: HDCLR Mirror Register Update Clear
             index: 17
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRCLR_RMX
           - name: DLROVR
             description: DLR Request Overrun Interrupt clear
             index: 3
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRCLR_RMX
           - name: AI
             description: RTC Alarm Interrupt Clear
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRCLR_RMX
           - name: PI
             description: RTC Periodic Interrupt Clear
             index: 1
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRCLR_RMX
           - name: PRWARN
             description: WDT pre-warning Interrupt Clear
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRCLR_RMX
       - name: SRSET
         type: uint32_t
         expected_size: 4
@@ -458,105 +404,90 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRSET_RMX
           - name: RTC_TIM1
             description: RTC TIM1 Mirror Register Update Set
             index: 28
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRSET_RMX
           - name: RTC_TIM0
             description: RTC TIM0 Mirror Register Update Set
             index: 27
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRSET_RMX
           - name: RTC_ATIM1
             description: RTC ATIM1 Mirror Register Update Set
             index: 26
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRSET_RMX
           - name: RTC_ATIM0
             description: RTC ATIM0 Mirror Register Update Set
             index: 25
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRSET_RMX
           - name: RTC_CTR
             description: RTC CTR Mirror Register Update Set
             index: 24
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRSET_RMX
           - name: OSCULCTRL
             description: OSCULCTRL Mirror Register Update Set
             index: 23
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRSET_RMX
           - name: OSCSICTRL
             description: OSCSICTRL Mirror Register Update Set
             index: 21
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRSET_RMX
           - name: HDCR
             description: HDCR Mirror Register Update Set
             index: 19
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRSET_RMX
           - name: HDCRSET
             description: HDCRSET Mirror Register Update Set
             index: 18
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRSET_RMX
           - name: HDCRCLR
             description: HDCRCLR Mirror Register Update Set
             index: 17
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRSET_RMX
           - name: DLROVR
             description: DLR Request Overrun Interrupt Set
             index: 3
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRSET_RMX
           - name: AI
             description: RTC Alarm Interrupt Set
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRSET_RMX
           - name: PI
             description: RTC Periodic Interrupt Set
             index: 1
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRSET_RMX
           - name: PRWARN
             description: WDT pre-warning Interrupt Set
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_INTERRUPT_SRSET_RMX
       - name: NMIREQEN
         type: uint32_t
         expected_size: 4
@@ -569,112 +500,45 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
           - name: ERU02
             description: Promote Channel 2 Interrupt of ERU0 Request to NMI Request
             index: 18
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
           - name: ERU01
             description: Promote Channel 1 Interrupt of ERU0 Request to NMI Request
             index: 17
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
           - name: ERU00
             description: Promote Channel 0 Interrupt of ERU0 Request to NMI Request
             index: 16
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
           - name: AI
             description: Promote RTC Alarm Interrupt Request to NMI Request
             index: 2
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
           - name: PI
             description: Promote RTC Periodic Interrupt request to NMI Request
             index: 1
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
           - name: PRWARN
             description: Promote Pre-Warning Interrupt Request to NMI Request
             index: 0
             width: 1
             read: true
             write: true
-            type: SCU_INTERRUPT_SRMSK_RMX
     stream: false
     codec: false
     methods: false
     unit_test: false
     identifier: false
-enums:
-  SCU_INTERRUPT_SRSTAT_RMX:
-    enum:
-      not_updated:
-        description: Not updated
-        value: 0
-      update_completed:
-        description: Update completed
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_INTERRUPT_SRSTAT_PRWARN:
-    enum:
-      inactive:
-        description: Inactive
-        value: 0
-      active:
-        description: Active
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_INTERRUPT_SRMSK_RMX:
-    enum:
-      disabled:
-        description: Disabled
-        value: 0
-      enabled:
-        description: Enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_INTERRUPT_SRCLR_RMX:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      clear_status_bit:
-        description: Clear the status bit
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_INTERRUPT_SRSET_RMX:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      set_status_bit:
-        description: set the status bit
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
+enums: {}

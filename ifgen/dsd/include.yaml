@@ -18,21 +18,18 @@ structs:
             width: 1
             read: true
             write: true
-            type: DSD_CLC_EDIS
           - name: DISS
             description: Module Disable Status Bit
             index: 1
             width: 1
             read: true
             write: false
-            type: DSD_CLC_DISS
           - name: DISR
             description: Module Disable Request Bit
             index: 0
             width: 1
             read: true
             write: true
-            type: DSD_CLC_DISR
       - name: ID
         type: uint32_t
         expected_size: 4
@@ -70,7 +67,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: DSD_OCS_SUSSTA
           - name: SUS_P
             description: SUS Write Protection
             index: 28
@@ -109,28 +105,24 @@ structs:
             width: 1
             read: true
             write: true
-            type: DSD_GLOBRC_CH3RUN
           - name: CH2RUN
             description: Channel 2 Run Control
             index: 2
             width: 1
             read: true
             write: true
-            type: DSD_GLOBRC_CH3RUN
           - name: CH1RUN
             description: Channel 1 Run Control
             index: 1
             width: 1
             read: true
             write: true
-            type: DSD_GLOBRC_CH3RUN
           - name: CH0RUN
             description: Channel 0 Run Control
             index: 0
             width: 1
             read: true
             write: true
-            type: DSD_GLOBRC_CH3RUN
       - name: CGCFG
         type: uint32_t
         expected_size: 4
@@ -143,21 +135,18 @@ structs:
             width: 1
             read: true
             write: false
-            type: DSD_CGCFG_SGNCG
           - name: STEPD
             description: Step Counter Direction
             index: 29
             width: 1
             read: true
             write: false
-            type: DSD_CGCFG_STEPD
           - name: STEPS
             description: Step Counter Sign
             index: 28
             width: 1
             read: true
             write: false
-            type: DSD_CGCFG_STEPS
           - name: STEPCOUNT
             description: Step Counter
             index: 24
@@ -176,7 +165,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: DSD_CGCFG_RUN
           - name: DIVCG
             description: Divider Factor for the PWM Pattern Signal Generator
             index: 4
@@ -190,14 +178,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: DSD_CGCFG_SIGPOL
           - name: BREV
             description: Bit-Reverse PWM Generation
             index: 2
             width: 1
             read: true
             write: true
-            type: DSD_CGCFG_BREV
           - name: CGMOD
             description: Carrier Generator Operating Mode
             index: 0
@@ -217,56 +203,48 @@ structs:
             width: 1
             read: true
             write: true
-            type: DSD_EVFLAG_ALEV3
           - name: ALEV2
             description: Alarm Event
             index: 18
             width: 1
             read: true
             write: true
-            type: DSD_EVFLAG_ALEV3
           - name: ALEV1
             description: Alarm Event
             index: 17
             width: 1
             read: true
             write: true
-            type: DSD_EVFLAG_ALEV3
           - name: ALEV0
             description: Alarm Event
             index: 16
             width: 1
             read: true
             write: true
-            type: DSD_EVFLAG_ALEV3
           - name: RESEV3
             description: Result Event
             index: 3
             width: 1
             read: true
             write: true
-            type: DSD_EVFLAG_RESEV3
           - name: RESEV2
             description: Result Event
             index: 2
             width: 1
             read: true
             write: true
-            type: DSD_EVFLAG_RESEV3
           - name: RESEV1
             description: Result Event
             index: 1
             width: 1
             read: true
             write: true
-            type: DSD_EVFLAG_RESEV3
           - name: RESEV0
             description: Result Event
             index: 0
             width: 1
             read: true
             write: true
-            type: DSD_EVFLAG_RESEV3
       - name: EVFLAGCLR
         type: uint32_t
         expected_size: 4
@@ -279,110 +257,54 @@ structs:
             width: 1
             read: false
             write: true
-            type: DSD_EVFLAGCLR_ALEC3
           - name: ALEC2
             description: Alarm Event Clear
             index: 18
             width: 1
             read: false
             write: true
-            type: DSD_EVFLAGCLR_ALEC3
           - name: ALEC1
             description: Alarm Event Clear
             index: 17
             width: 1
             read: false
             write: true
-            type: DSD_EVFLAGCLR_ALEC3
           - name: ALEC0
             description: Alarm Event Clear
             index: 16
             width: 1
             read: false
             write: true
-            type: DSD_EVFLAGCLR_ALEC3
           - name: RESEC3
             description: Result Event Clear
             index: 3
             width: 1
             read: false
             write: true
-            type: DSD_EVFLAGCLR_RESEC3
           - name: RESEC2
             description: Result Event Clear
             index: 2
             width: 1
             read: false
             write: true
-            type: DSD_EVFLAGCLR_RESEC3
           - name: RESEC1
             description: Result Event Clear
             index: 1
             width: 1
             read: false
             write: true
-            type: DSD_EVFLAGCLR_RESEC3
           - name: RESEC0
             description: Result Event Clear
             index: 0
             width: 1
             read: false
             write: true
-            type: DSD_EVFLAGCLR_RESEC3
     stream: false
     codec: false
     methods: false
     unit_test: false
     identifier: false
 enums:
-  DSD_CLC_EDIS:
-    enum:
-      sleep_mode_request_enabled_functional:
-        description: Sleep mode request is enabled and functional
-        value: 0
-      module_disregards_sleep_mode_control_signal:
-        description: Module disregards the sleep mode control signal
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_CLC_DISS:
-    enum:
-      module_clock_enabled:
-        description: Module clock is enabled
-        value: 0
-      off_module_not_clocked:
-        description: 'Off: module is not clocked'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_CLC_DISR:
-    enum:
-      request_enable_module_clock:
-        description: 'On request: enable the module clock'
-        value: 0
-      off_request_stop_module_clock:
-        description: 'Off request: stop the module clock'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_OCS_SUSSTA:
-    enum:
-      not_suspended:
-        description: Module is not (yet) suspended
-        value: 0
-      suspended:
-        description: Module is suspended
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   DSD_OCS_SUS:
     enum:
       not_suspend:
@@ -416,66 +338,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  DSD_GLOBRC_CH3RUN:
-    enum:
-      stop_channel_x:
-        description: Stop channel x
-        value: 0
-      demodulator_channel_x_enabled_runs:
-        description: Demodulator channel x is enabled and runs
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_CGCFG_SGNCG:
-    enum:
-      positive_values:
-        description: Positive values
-        value: 0
-      negative_values:
-        description: Negative values
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_CGCFG_STEPD:
-    enum:
-      up:
-        description: Step counter is counting up
-        value: 0
-      down:
-        description: Step counter is counting down
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_CGCFG_STEPS:
-    enum:
-      positive:
-        description: Step counter value is positive
-        value: 0
-      negative:
-        description: Step counter value is negative
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_CGCFG_RUN:
-    enum:
-      stopped_cleared_at_end_period:
-        description: Stopped (cleared at the end of a period)
-        value: 0
-      running:
-        description: Running
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   DSD_CGCFG_DIVCG:
     enum:
       _2:
@@ -494,30 +356,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  DSD_CGCFG_SIGPOL:
-    enum:
-      normal_carrier_signal_begins_with_1:
-        description: 'Normal: carrier signal begins with +1'
-        value: 0
-      inverted_carrier_signal_begins_with__1:
-        description: 'Inverted: carrier signal begins with -1'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_CGCFG_BREV:
-    enum:
-      normal_mode:
-        description: Normal mode
-        value: 0
-      bit_reverse_mode:
-        description: Bit-reverse mode
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   DSD_CGCFG_CGMOD:
     enum:
       stopped:
@@ -532,54 +370,6 @@ enums:
       sine_wave:
         description: Sine wave
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_EVFLAG_ALEV3:
-    enum:
-      no_alarm_event:
-        description: No alarm event
-        value: 0
-      an_alarm_event_has_occurred:
-        description: An alarm event has occurred
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_EVFLAG_RESEV3:
-    enum:
-      no_result_event:
-        description: No result event
-        value: 0
-      new_result_has_been_stored_register_resmx:
-        description: A new result has been stored in register RESMx
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_EVFLAGCLR_ALEC3:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      clear_bit_alevx:
-        description: Clear bit ALEVx
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  DSD_EVFLAGCLR_RESEC3:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      clear_bit_resevx:
-        description: Clear bit RESEVx
-        value: 1
     unit_test: false
     json: false
     use_map: false

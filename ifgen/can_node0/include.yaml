@@ -34,7 +34,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: CAN_NODE0_NCR_CCE
           - name: TXDIS
             description: Transmit Disable
             index: 5
@@ -53,28 +52,24 @@ structs:
             width: 1
             read: true
             write: true
-            type: CAN_NODE0_NCR_ALIE
           - name: LECIE
             description: LEC Indicated Error Interrupt Enable
             index: 2
             width: 1
             read: true
             write: true
-            type: CAN_NODE0_NCR_ALIE
           - name: TRIE
             description: Transfer Interrupt Enable
             index: 1
             width: 1
             read: true
             write: true
-            type: CAN_NODE0_NCR_ALIE
           - name: INIT
             description: Node Initialization
             index: 0
             width: 1
             read: true
             write: true
-            type: CAN_NODE0_NCR_INIT
       - name: NSR
         type: uint32_t
         expected_size: 4
@@ -87,28 +82,24 @@ structs:
             width: 1
             read: true
             write: true
-            type: CAN_NODE0_NSR_LOE
           - name: LLE
             description: List Length Error
             index: 8
             width: 1
             read: true
             write: true
-            type: CAN_NODE0_NSR_LLE
           - name: BOFF
             description: Bus-off Status
             index: 7
             width: 1
             read: true
             write: false
-            type: CAN_NODE0_NSR_BOFF
           - name: EWRN
             description: Error Warning Status
             index: 6
             width: 1
             read: true
             write: false
-            type: CAN_NODE0_NSR_EWRN
           - name: ALERT
             description: Alert Warning
             index: 5
@@ -121,14 +112,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: CAN_NODE0_NSR_RXOK
           - name: TXOK
             description: Message Transmitted Successfully
             index: 3
             width: 1
             read: true
             write: true
-            type: CAN_NODE0_NSR_TXOK
           - name: LEC
             description: Last Error Code
             index: 0
@@ -181,7 +170,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: CAN_NODE0_NPCR_LBM
           - name: RXSEL
             description: Receive Select
             index: 0
@@ -200,7 +188,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: CAN_NODE0_NBTR_DIV8
           - name: TSEG2
             description: Time Segment After Sample Point
             index: 12
@@ -237,14 +224,12 @@ structs:
             width: 1
             read: true
             write: false
-            type: CAN_NODE0_NECNT_LEINC
           - name: LETD
             description: Last Error Transfer Direction
             index: 24
             width: 1
             read: true
             write: false
-            type: CAN_NODE0_NECNT_LETD
           - name: EWRNLVL
             description: Error Warning Level
             index: 16
@@ -275,14 +260,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: CAN_NODE0_NFCR_CFCOV
           - name: CFCIE
             description: CAN Frame Count Interrupt Enable
             index: 22
             width: 1
             read: true
             write: true
-            type: CAN_NODE0_NCR_ALIE
           - name: CFMOD
             description: CAN Frame Counter Mode
             index: 19
@@ -308,134 +291,6 @@ structs:
     unit_test: false
     identifier: false
 enums:
-  CAN_NODE0_NCR_CCE:
-    enum:
-      only_be_read_all_attempts_modify_them_ignored:
-        description: The Bit Timing Register, the Port Control Register, Error Counter
-          Register may only be read. All attempts to modify them are ignored.
-        value: 0
-      be_read_written:
-        description: The Bit Timing Register, the Port Control Register, Error Counter
-          Register may be read and written.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_NODE0_NCR_ALIE:
-    enum:
-      disabled:
-        description: Alert interrupt is disabled.
-        value: 0
-      enabled:
-        description: Alert interrupt is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_NODE0_NCR_INIT:
-    enum:
-      resetting_bit_init_enables_participation_node_cont:
-        description: Resetting bit INIT enables the participation of the node in the
-          CAN traffic. If the CAN node is in the bus-off state, the ongoing bus-off
-          recovery (which does not depend on the INIT bit) is continued. With the
-          end of the bus-off recovery sequence the CAN node is allowed to take part
-          in the CAN traffic. If the CAN node is not in the bus-off state, a sequence
-          of 11 consecutive recessive bits must be detected before the node is allowed
-          to take part in the CAN traffic.
-        value: 0
-      setting_this_bit_terminates_participation_thi_cont:
-        description: Setting this bit terminates the participation of this node in
-          the CAN traffic. Any ongoing frame transfer is cancelled and the transmit
-          line goes recessive. If the CAN node is in the bus-off state, then the running
-          bus-off recovery sequence is continued. If the INIT bit is still set after
-          the successful completion of the bus-off recovery sequence, i.e. after detecting
-          128 sequences of 11 consecutive recessive bits (11 1), then the CAN node
-          leaves the bus-off state but remains inactive as long as INIT remains set.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_NODE0_NSR_LOE:
-    enum:
-      no_list_object_error_since_last_most_recent_f_cont:
-        description: No List Object Error since last (most recent) flag reset.
-        value: 0
-      list_object_error_has_been_detected_during_me_cont:
-        description: A List Object Error has been detected during message acceptance
-          filtering. A message object with wrong LIST index entry in the Message Object
-          Status Register has been detected.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_NODE0_NSR_LLE:
-    enum:
-      no_list_length_error_since_last_most_recent_f_cont:
-        description: No List Length Error since last (most recent) flag reset.
-        value: 0
-      list_length_error_has_been_detected_during_me_cont:
-        description: A List Length Error has been detected during message acceptance
-          filtering. The number of elements in the list that belongs to this CAN node
-          differs from the list SIZE given in the list termination pointer.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_NODE0_NSR_BOFF:
-    enum:
-      not_bus_off_state:
-        description: CAN controller is not in the bus-off state.
-        value: 0
-      bus_off_state:
-        description: CAN controller is in the bus-off state.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_NODE0_NSR_EWRN:
-    enum:
-      no_warning_limit_exceeded:
-        description: No warning limit exceeded.
-        value: 0
-      one_error_counters_rec_or_tec_reached_warning_cont:
-        description: One of the error counters REC or TEC reached the warning limit
-          EWRNLVL.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_NODE0_NSR_RXOK:
-    enum:
-      no_successful_reception_since_last_most_recen_cont:
-        description: No successful reception since last (most recent) flag reset.
-        value: 0
-      message_has_been_received_successfully:
-        description: A message has been received successfully.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_NODE0_NSR_TXOK:
-    enum:
-      no_successful_transmission_since_last_most_re_cont:
-        description: No successful transmission since last (most recent) flag reset.
-        value: 0
-      message_has_been_transmitted_successfully_err_cont:
-        description: A message has been transmitted successfully (error-free and acknowledged
-          by at least another node).
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   CAN_NODE0_NIPR_CFCINP:
     enum:
       _0_selected:
@@ -450,72 +305,6 @@ enums:
       _15_selected:
         description: Interrupt output line INT_O15 is selected.
         value: 15
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_NODE0_NPCR_LBM:
-    enum:
-      disabled:
-        description: Loop-Back Mode is disabled.
-        value: 0
-      enabled_this_node_connected_an_internal_virtu_cont:
-        description: Loop-Back Mode is enabled. This node is connected to an internal
-          (virtual) loop-back CAN bus. All CAN nodes which are in Loop-Back Mode are
-          connected to this virtual CAN bus so that they can communicate with each
-          other internally. The external transmit line is forced recessive in Loop-Back
-          Mode.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_NODE0_NBTR_DIV8:
-    enum:
-      brp1_clock_cycles:
-        description: A time quantum lasts (BRP+1) clock cycles.
-        value: 0
-      _8_brp1_clock_cycles:
-        description: A time quantum lasts 8 (BRP+1) clock cycles.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_NODE0_NECNT_LEINC:
-    enum:
-      _1:
-        description: The last error led to an error counter increment of 1.
-        value: 0
-      _8:
-        description: The last error led to an error counter increment of 8.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_NODE0_NECNT_LETD:
-    enum:
-      receiver_rec_has_been_incremented:
-        description: The last error occurred while the CAN node x was receiver (REC
-          has been incremented).
-        value: 0
-      transmitter_tec_has_been_incremented:
-        description: The last error occurred while the CAN node x was transmitter
-          (TEC has been incremented).
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_NODE0_NFCR_CFCOV:
-    enum:
-      no_overflow_has_occurred_since_last_flag_reset:
-        description: No overflow has occurred since last flag reset.
-        value: 0
-      an_overflow_has_occurred_since_last_flag_reset:
-        description: An overflow has occurred since last flag reset.
-        value: 1
     unit_test: false
     json: false
     use_map: false

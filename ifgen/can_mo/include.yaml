@@ -33,70 +33,60 @@ structs:
             width: 1
             read: true
             write: true
-            type: CAN_MO_MOFCR_RMM
           - name: FRREN
             description: Foreign Remote Request Enable
             index: 20
             width: 1
             read: true
             write: true
-            type: CAN_MO_MOFCR_FRREN
           - name: OVIE
             description: Overflow Interrupt Enable
             index: 18
             width: 1
             read: true
             write: true
-            type: CAN_MO_MOFCR_OVIE
           - name: TXIE
             description: Transmit Interrupt Enable
             index: 17
             width: 1
             read: true
             write: true
-            type: CAN_MO_MOFCR_OVIE
           - name: RXIE
             description: Receive Interrupt Enable
             index: 16
             width: 1
             read: true
             write: true
-            type: CAN_MO_MOFCR_OVIE
           - name: DATC
             description: Data Copy
             index: 11
             width: 1
             read: true
             write: true
-            type: CAN_MO_MOFCR_DATC
           - name: DLCC
             description: Data Length Code Copy
             index: 10
             width: 1
             read: true
             write: true
-            type: CAN_MO_MOFCR_DLCC
           - name: IDC
             description: Identifier Copy
             index: 9
             width: 1
             read: true
             write: true
-            type: CAN_MO_MOFCR_IDC
           - name: GDFS
             description: Gateway Data Frame Send
             index: 8
             width: 1
             read: true
             write: true
-            type: CAN_MO_MOFCR_GDFS
           - name: RXTOE
             description: Receive Time-Out Enable
             index: 4
             width: 1
             read: true
             write: true
-            type: CAN_MO_MOFCR_RXTOE
           - name: MMC
             description: Message Mode Control
             index: 0
@@ -178,7 +168,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: CAN_MO_MOAMR_MIDE
           - name: AM
             description: Acceptance Mask for Message Identifier
             index: 0
@@ -264,7 +253,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: CAN_MO_MOAR_IDE
           - name: ID
             description: CAN Identifier of Message Object n
             index: 0
@@ -450,84 +438,72 @@ structs:
                 width: 1
                 read: true
                 write: false
-                type: CAN_MO_MOSTAT_DIR
               - name: TXEN1
                 description: Transmit Enable 1
                 index: 10
                 width: 1
                 read: true
                 write: false
-                type: CAN_MO_MOSTAT_TXEN1
               - name: TXEN0
                 description: Transmit Enable 0
                 index: 9
                 width: 1
                 read: true
                 write: false
-                type: CAN_MO_MOSTAT_TXEN1
               - name: TXRQ
                 description: Transmit Request
                 index: 8
                 width: 1
                 read: true
                 write: false
-                type: CAN_MO_MOSTAT_TXRQ
               - name: RXEN
                 description: Receive Enable
                 index: 7
                 width: 1
                 read: true
                 write: false
-                type: CAN_MO_MOSTAT_RXEN
               - name: RTSEL
                 description: Receive/Transmit Selected
                 index: 6
                 width: 1
                 read: true
                 write: false
-                type: CAN_MO_MOSTAT_RTSEL
               - name: MSGVAL
                 description: Message Valid
                 index: 5
                 width: 1
                 read: true
                 write: false
-                type: CAN_MO_MOSTAT_MSGVAL
               - name: MSGLST
                 description: Message Lost
                 index: 4
                 width: 1
                 read: true
                 write: false
-                type: CAN_MO_MOSTAT_MSGLST
               - name: NEWDAT
                 description: New Data
                 index: 3
                 width: 1
                 read: true
                 write: false
-                type: CAN_MO_MOSTAT_NEWDAT
               - name: RXUPD
                 description: Receive Updating
                 index: 2
                 width: 1
                 read: true
                 write: false
-                type: CAN_MO_MOSTAT_RXUPD
               - name: TXPND
                 description: Transmit Pending
                 index: 1
                 width: 1
                 read: true
                 write: false
-                type: CAN_MO_MOSTAT_TXPND
               - name: RXPND
                 description: Receive Pending
                 index: 0
                 width: 1
                 read: true
                 write: false
-                type: CAN_MO_MOSTAT_RXPND
     expected_size: 32
     stream: false
     codec: false
@@ -552,113 +528,6 @@ structs:
     unit_test: false
     identifier: false
 enums:
-  CAN_MO_MOFCR_RMM:
-    enum:
-      disabled_identifier_ide_bit_dlc_message_objec_cont:
-        description: 'Remote monitoring is disabled: Identifier, IDE bit, and DLC
-          of message object n remain unchanged upon the reception of a matching Remote
-          Frame.'
-        value: 0
-      enabled_identifier_ide_bit_dlc_matching_remot_cont:
-        description: 'Remote monitoring is enabled: Identifier, IDE bit, and DLC of
-          a matching Remote Frame are copied to transmit object n in order to monitor
-          incoming Remote Frames.'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOFCR_FRREN:
-    enum:
-      n_set_reception_matching_remote_frame:
-        description: TXRQ of message object n is set on reception of a matching Remote
-          Frame.
-        value: 0
-      referenced_by_pointer_cur_set_reception_match_cont:
-        description: TXRQ of the message object referenced by the pointer CUR is set
-          on reception of a matching Remote Frame.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOFCR_OVIE:
-    enum:
-      disabled:
-        description: FIFO full interrupt is disabled.
-        value: 0
-      enabled:
-        description: FIFO full interrupt is enabled.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOFCR_DATC:
-    enum:
-      not_copied:
-        description: Data fields are not copied.
-        value: 0
-      registers_modataln_modatahn_gateway_source_ob_cont:
-        description: Data fields in registers MODATALn and MODATAHn of the gateway
-          source object (after storing the received frame in the source) are copied
-          to the gateway destination.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOFCR_DLCC:
-    enum:
-      not_copied:
-        description: Data length code is not copied.
-        value: 0
-      gateway_source_object_after_storing_received__cont:
-        description: Data length code of the gateway source object (after storing
-          the received frame in the source) is copied to the gateway destination object.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOFCR_IDC:
-    enum:
-      not_copied:
-        description: The identifier of the gateway source object is not copied.
-        value: 0
-      after_storing_received_frame_source_copied_ga_cont:
-        description: The identifier of the gateway source object (after storing the
-          received frame in the source) is copied to the gateway destination object.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOFCR_GDFS:
-    enum:
-      unchanged_destination_object:
-        description: TXRQ is unchanged in the destination object.
-        value: 0
-      set_gateway_destination_object_after_internal_cont:
-        description: TXRQ is set in the gateway destination object after the internal
-          transfer from the gateway source to the gateway destination object.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOFCR_RXTOE:
-    enum:
-      does_not_take_part_receive_time_out_check:
-        description: Message does not take part in receive time-out check
-        value: 0
-      takes_part_receive_time_out_check:
-        description: Message takes part in receive time-out check
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   CAN_MO_MOFCR_MMC:
     enum:
       standard_message_object:
@@ -698,19 +567,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  CAN_MO_MOAMR_MIDE:
-    enum:
-      accepts_reception_both_standard_extended_frames:
-        description: Message object n accepts the reception of both, standard and
-          extended frames.
-        value: 0
-      receives_frames_only_with_matching_ide_bit:
-        description: Message object n receives frames only with matching IDE bit.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   CAN_MO_MOAR_PRI:
     enum:
       list_order_this_means_message_object_n_consid_cont:
@@ -729,159 +585,6 @@ enums:
         description: Transmit acceptance filtering is based on the list order (as
           PRI = 01B).
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOAR_IDE:
-    enum:
-      standard_frames_with_11_bit_identifier:
-        description: Message object n handles standard frames with 11-bit identifier.
-        value: 0
-      extended_frames_with_29_bit_identifier:
-        description: Message object n handles extended frames with 29-bit identifier.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOSTAT_DIR:
-    enum:
-      receive_object_selected_with_txrq_1_remote_fr_cont:
-        description: 'Receive Object selected: With TXRQ = 1, a Remote Frame with
-          the identifier of message object n is scheduled for transmission. On reception
-          of a Data Frame with matching identifier, the message is stored in message
-          object n.'
-        value: 0
-      transmit_object_selected_if_txrq_1_message_ob_cont:
-        description: 'Transmit Object selected: If TXRQ = 1, message object n is scheduled
-          for transmission of a Data Frame. On reception of a Remote Frame with matching
-          identifier, bit TXRQ is set.'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOSTAT_TXEN1:
-    enum:
-      not_enabled_frame_transmission:
-        description: Message object n is not enabled for frame transmission.
-        value: 0
-      enabled_frame_transmission:
-        description: Message object n is enabled for frame transmission.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOSTAT_TXRQ:
-    enum:
-      no_transmission_message_object_n_requested:
-        description: No transmission of message object n is requested.
-        value: 0
-      transmission_message_object_n_can_bus_requested:
-        description: Transmission of message object n on the CAN bus is requested.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOSTAT_RXEN:
-    enum:
-      not_enabled_frame_reception:
-        description: Message object n is not enabled for frame reception.
-        value: 0
-      enabled_frame_reception:
-        description: Message object n is enabled for frame reception.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOSTAT_RTSEL:
-    enum:
-      not_selected_receive_or_transmit_operation:
-        description: Message object n is not selected for receive or transmit operation.
-        value: 0
-      selected_receive_or_transmit_operation:
-        description: Message object n is selected for receive or transmit operation.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOSTAT_MSGVAL:
-    enum:
-      not_valid:
-        description: Message object n is not valid.
-        value: 0
-      valid:
-        description: Message object n is valid.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOSTAT_MSGLST:
-    enum:
-      no_can_message_lost:
-        description: No CAN message is lost.
-        value: 0
-      can_message_lost_because_newdat_has_become_se_cont:
-        description: A CAN message is lost because NEWDAT has become set again when
-          it has already been set.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOSTAT_NEWDAT:
-    enum:
-      no_update_message_object_n_since_last_flag_reset:
-        description: No update of the message object n since last flag reset.
-        value: 0
-      message_object_n_has_been_updated:
-        description: Message object n has been updated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOSTAT_RXUPD:
-    enum:
-      no_receive_update_ongoing:
-        description: No receive update ongoing.
-        value: 0
-      message_identifier_dlc_data_message_object_cu_cont:
-        description: Message identifier, DLC, and data of the message object are currently
-          updated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOSTAT_TXPND:
-    enum:
-      no_can_message_has_been_transmitted:
-        description: No CAN message has been transmitted.
-        value: 0
-      can_message_message_object_n_has_been_transmi_cont:
-        description: A CAN message from message object n has been transmitted successfully
-          over the CAN bus.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_MO_MOSTAT_RXPND:
-    enum:
-      no_can_message_has_been_received:
-        description: No CAN message has been received.
-        value: 0
-      can_message_has_been_received_by_message_obje_cont:
-        description: A CAN message has been received by the message object n, either
-          directly or via gateway copy action.
-        value: 1
     unit_test: false
     json: false
     use_map: false

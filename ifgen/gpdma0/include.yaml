@@ -563,112 +563,96 @@ structs:
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH6
             description: Mask bit for channel 6
             index: 6
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH5
             description: Mask bit for channel 5
             index: 5
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH4
             description: Mask bit for channel 4
             index: 4
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH3
             description: Mask bit for channel 3
             index: 3
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH2
             description: Mask bit for channel 2
             index: 2
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH1
             description: Mask bit for channel 1
             index: 1
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH0
             description: Mask bit for channel 0
             index: 0
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: WE_CH7
             description: Write enable for mask bit of channel 7
             index: 15
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH6
             description: Write enable for mask bit of channel 6
             index: 14
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH5
             description: Write enable for mask bit of channel 5
             index: 13
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH4
             description: Write enable for mask bit of channel 4
             index: 12
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH3
             description: Write enable for mask bit of channel 3
             index: 11
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH2
             description: Write enable for mask bit of channel 2
             index: 10
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH1
             description: Write enable for mask bit of channel 1
             index: 9
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH0
             description: Write enable for mask bit of channel 0
             index: 8
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
       - name: MASKBLOCK
         type: uint32_t
         expected_size: 4
@@ -681,112 +665,96 @@ structs:
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH6
             description: Mask bit for channel 6
             index: 6
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH5
             description: Mask bit for channel 5
             index: 5
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH4
             description: Mask bit for channel 4
             index: 4
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH3
             description: Mask bit for channel 3
             index: 3
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH2
             description: Mask bit for channel 2
             index: 2
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH1
             description: Mask bit for channel 1
             index: 1
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH0
             description: Mask bit for channel 0
             index: 0
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: WE_CH7
             description: Write enable for mask bit of channel 7
             index: 15
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH6
             description: Write enable for mask bit of channel 6
             index: 14
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH5
             description: Write enable for mask bit of channel 5
             index: 13
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH4
             description: Write enable for mask bit of channel 4
             index: 12
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH3
             description: Write enable for mask bit of channel 3
             index: 11
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH2
             description: Write enable for mask bit of channel 2
             index: 10
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH1
             description: Write enable for mask bit of channel 1
             index: 9
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH0
             description: Write enable for mask bit of channel 0
             index: 8
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
       - name: MASKSRCTRAN
         type: uint32_t
         expected_size: 4
@@ -799,112 +767,96 @@ structs:
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH6
             description: Mask bit for channel 6
             index: 6
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH5
             description: Mask bit for channel 5
             index: 5
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH4
             description: Mask bit for channel 4
             index: 4
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH3
             description: Mask bit for channel 3
             index: 3
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH2
             description: Mask bit for channel 2
             index: 2
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH1
             description: Mask bit for channel 1
             index: 1
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH0
             description: Mask bit for channel 0
             index: 0
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: WE_CH7
             description: Write enable for mask bit of channel 7
             index: 15
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH6
             description: Write enable for mask bit of channel 6
             index: 14
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH5
             description: Write enable for mask bit of channel 5
             index: 13
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH4
             description: Write enable for mask bit of channel 4
             index: 12
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH3
             description: Write enable for mask bit of channel 3
             index: 11
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH2
             description: Write enable for mask bit of channel 2
             index: 10
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH1
             description: Write enable for mask bit of channel 1
             index: 9
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH0
             description: Write enable for mask bit of channel 0
             index: 8
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
       - name: MASKDSTTRAN
         type: uint32_t
         expected_size: 4
@@ -917,112 +869,96 @@ structs:
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH6
             description: Mask bit for channel 6
             index: 6
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH5
             description: Mask bit for channel 5
             index: 5
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH4
             description: Mask bit for channel 4
             index: 4
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH3
             description: Mask bit for channel 3
             index: 3
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH2
             description: Mask bit for channel 2
             index: 2
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH1
             description: Mask bit for channel 1
             index: 1
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH0
             description: Mask bit for channel 0
             index: 0
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: WE_CH7
             description: Write enable for mask bit of channel 7
             index: 15
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH6
             description: Write enable for mask bit of channel 6
             index: 14
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH5
             description: Write enable for mask bit of channel 5
             index: 13
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH4
             description: Write enable for mask bit of channel 4
             index: 12
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH3
             description: Write enable for mask bit of channel 3
             index: 11
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH2
             description: Write enable for mask bit of channel 2
             index: 10
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH1
             description: Write enable for mask bit of channel 1
             index: 9
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH0
             description: Write enable for mask bit of channel 0
             index: 8
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
       - name: MASKERR
         type: uint32_t
         expected_size: 4
@@ -1035,112 +971,96 @@ structs:
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH6
             description: Mask bit for channel 6
             index: 6
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH5
             description: Mask bit for channel 5
             index: 5
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH4
             description: Mask bit for channel 4
             index: 4
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH3
             description: Mask bit for channel 3
             index: 3
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH2
             description: Mask bit for channel 2
             index: 2
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH1
             description: Mask bit for channel 1
             index: 1
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: CH0
             description: Mask bit for channel 0
             index: 0
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_CH7
           - name: WE_CH7
             description: Write enable for mask bit of channel 7
             index: 15
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH6
             description: Write enable for mask bit of channel 6
             index: 14
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH5
             description: Write enable for mask bit of channel 5
             index: 13
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH4
             description: Write enable for mask bit of channel 4
             index: 12
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH3
             description: Write enable for mask bit of channel 3
             index: 11
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH2
             description: Write enable for mask bit of channel 2
             index: 10
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH1
             description: Write enable for mask bit of channel 1
             index: 9
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH0
             description: Write enable for mask bit of channel 0
             index: 8
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
       - name: CLEARTFR
         type: uint32_t
         expected_size: 4
@@ -1153,56 +1073,48 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH6
             description: Clear Interrupt Status and Raw Status for channel 6
             index: 6
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH5
             description: Clear Interrupt Status and Raw Status for channel 5
             index: 5
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH4
             description: Clear Interrupt Status and Raw Status for channel 4
             index: 4
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH3
             description: Clear Interrupt Status and Raw Status for channel 3
             index: 3
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH2
             description: Clear Interrupt Status and Raw Status for channel 2
             index: 2
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH1
             description: Clear Interrupt Status and Raw Status for channel 1
             index: 1
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH0
             description: Clear Interrupt Status and Raw Status for channel 0
             index: 0
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
       - name: CLEARBLOCK
         type: uint32_t
         expected_size: 4
@@ -1215,56 +1127,48 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH6
             description: Clear Interrupt Status and Raw Status for channel 6
             index: 6
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH5
             description: Clear Interrupt Status and Raw Status for channel 5
             index: 5
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH4
             description: Clear Interrupt Status and Raw Status for channel 4
             index: 4
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH3
             description: Clear Interrupt Status and Raw Status for channel 3
             index: 3
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH2
             description: Clear Interrupt Status and Raw Status for channel 2
             index: 2
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH1
             description: Clear Interrupt Status and Raw Status for channel 1
             index: 1
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH0
             description: Clear Interrupt Status and Raw Status for channel 0
             index: 0
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
       - name: CLEARSRCTRAN
         type: uint32_t
         expected_size: 4
@@ -1277,56 +1181,48 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH6
             description: Clear Interrupt Status and Raw Status for channel 6
             index: 6
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH5
             description: Clear Interrupt Status and Raw Status for channel 5
             index: 5
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH4
             description: Clear Interrupt Status and Raw Status for channel 4
             index: 4
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH3
             description: Clear Interrupt Status and Raw Status for channel 3
             index: 3
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH2
             description: Clear Interrupt Status and Raw Status for channel 2
             index: 2
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH1
             description: Clear Interrupt Status and Raw Status for channel 1
             index: 1
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH0
             description: Clear Interrupt Status and Raw Status for channel 0
             index: 0
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
       - name: CLEARDSTTRAN
         type: uint32_t
         expected_size: 4
@@ -1339,56 +1235,48 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH6
             description: Clear Interrupt Status and Raw Status for channel 6
             index: 6
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH5
             description: Clear Interrupt Status and Raw Status for channel 5
             index: 5
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH4
             description: Clear Interrupt Status and Raw Status for channel 4
             index: 4
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH3
             description: Clear Interrupt Status and Raw Status for channel 3
             index: 3
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH2
             description: Clear Interrupt Status and Raw Status for channel 2
             index: 2
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH1
             description: Clear Interrupt Status and Raw Status for channel 1
             index: 1
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH0
             description: Clear Interrupt Status and Raw Status for channel 0
             index: 0
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
       - name: CLEARERR
         type: uint32_t
         expected_size: 4
@@ -1401,56 +1289,48 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH6
             description: Clear Interrupt Status and Raw Status for channel 6
             index: 6
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH5
             description: Clear Interrupt Status and Raw Status for channel 5
             index: 5
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH4
             description: Clear Interrupt Status and Raw Status for channel 4
             index: 4
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH3
             description: Clear Interrupt Status and Raw Status for channel 3
             index: 3
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH2
             description: Clear Interrupt Status and Raw Status for channel 2
             index: 2
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH1
             description: Clear Interrupt Status and Raw Status for channel 1
             index: 1
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
           - name: CH0
             description: Clear Interrupt Status and Raw Status for channel 0
             index: 0
             width: 1
             read: false
             write: true
-            type: GPDMA0_CLEARTFR_CH7
       - name: STATUSINT
         type: uint32_t
         expected_size: 4
@@ -1548,56 +1428,48 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH6
             description: Source request write enable for channel 6
             index: 14
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH5
             description: Source request write enable for channel 5
             index: 13
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH4
             description: Source request write enable for channel 4
             index: 12
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH3
             description: Source request write enable for channel 3
             index: 11
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH2
             description: Source request write enable for channel 2
             index: 10
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH1
             description: Source request write enable for channel 1
             index: 9
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH0
             description: Source request write enable for channel 0
             index: 8
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
       - name: REQDSTREG
         type: uint32_t
         expected_size: 4
@@ -1658,56 +1530,48 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH6
             description: Source request write enable for channel 6
             index: 14
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH5
             description: Source request write enable for channel 5
             index: 13
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH4
             description: Source request write enable for channel 4
             index: 12
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH3
             description: Source request write enable for channel 3
             index: 11
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH2
             description: Source request write enable for channel 2
             index: 10
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH1
             description: Source request write enable for channel 1
             index: 9
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH0
             description: Source request write enable for channel 0
             index: 8
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
       - name: SGLREQSRCREG
         type: uint32_t
         expected_size: 4
@@ -1768,56 +1632,48 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH6
             description: Source request write enable for channel 6
             index: 14
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH5
             description: Source request write enable for channel 5
             index: 13
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH4
             description: Source request write enable for channel 4
             index: 12
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH3
             description: Source request write enable for channel 3
             index: 11
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH2
             description: Source request write enable for channel 2
             index: 10
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH1
             description: Source request write enable for channel 1
             index: 9
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH0
             description: Source request write enable for channel 0
             index: 8
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
       - name: SGLREQDSTREG
         type: uint32_t
         expected_size: 4
@@ -1878,56 +1734,48 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH6
             description: Source request write enable for channel 6
             index: 14
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH5
             description: Source request write enable for channel 5
             index: 13
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH4
             description: Source request write enable for channel 4
             index: 12
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH3
             description: Source request write enable for channel 3
             index: 11
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH2
             description: Source request write enable for channel 2
             index: 10
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH1
             description: Source request write enable for channel 1
             index: 9
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH0
             description: Source request write enable for channel 0
             index: 8
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
       - name: LSTSRCREG
         type: uint32_t
         expected_size: 4
@@ -1940,56 +1788,48 @@ structs:
             width: 1
             read: true
             write: true
-            type: GPDMA0_LSTSRCREG_CH7
           - name: CH6
             description: Source last request for channel 6
             index: 6
             width: 1
             read: true
             write: true
-            type: GPDMA0_LSTSRCREG_CH7
           - name: CH5
             description: Source last request for channel 5
             index: 5
             width: 1
             read: true
             write: true
-            type: GPDMA0_LSTSRCREG_CH7
           - name: CH4
             description: Source last request for channel 4
             index: 4
             width: 1
             read: true
             write: true
-            type: GPDMA0_LSTSRCREG_CH7
           - name: CH3
             description: Source last request for channel 3
             index: 3
             width: 1
             read: true
             write: true
-            type: GPDMA0_LSTSRCREG_CH7
           - name: CH2
             description: Source last request for channel 2
             index: 2
             width: 1
             read: true
             write: true
-            type: GPDMA0_LSTSRCREG_CH7
           - name: CH1
             description: Source last request for channel 1
             index: 1
             width: 1
             read: true
             write: true
-            type: GPDMA0_LSTSRCREG_CH7
           - name: CH0
             description: Source last request for channel 0
             index: 0
             width: 1
             read: true
             write: true
-            type: GPDMA0_LSTSRCREG_CH7
           - name: WE_CH7
             description: Source last transaction request write enable for channel
               7
@@ -1997,7 +1837,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH6
             description: Source last transaction request write enable for channel
               6
@@ -2005,7 +1844,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH5
             description: Source last transaction request write enable for channel
               5
@@ -2013,7 +1851,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH4
             description: Source last transaction request write enable for channel
               4
@@ -2021,7 +1858,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH3
             description: Source last transaction request write enable for channel
               3
@@ -2029,7 +1865,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH2
             description: Source last transaction request write enable for channel
               2
@@ -2037,7 +1872,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH1
             description: Source last transaction request write enable for channel
               1
@@ -2045,7 +1879,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH0
             description: Source last transaction request write enable for channel
               0
@@ -2053,7 +1886,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
       - name: LSTDSTREG
         type: uint32_t
         expected_size: 4
@@ -2066,56 +1898,48 @@ structs:
             width: 1
             read: true
             write: true
-            type: GPDMA0_LSTSRCREG_CH7
           - name: CH6
             description: Destination last request for channel 6
             index: 6
             width: 1
             read: true
             write: true
-            type: GPDMA0_LSTSRCREG_CH7
           - name: CH5
             description: Destination last request for channel 5
             index: 5
             width: 1
             read: true
             write: true
-            type: GPDMA0_LSTSRCREG_CH7
           - name: CH4
             description: Destination last request for channel 4
             index: 4
             width: 1
             read: true
             write: true
-            type: GPDMA0_LSTSRCREG_CH7
           - name: CH3
             description: Destination last request for channel 3
             index: 3
             width: 1
             read: true
             write: true
-            type: GPDMA0_LSTSRCREG_CH7
           - name: CH2
             description: Destination last request for channel 2
             index: 2
             width: 1
             read: true
             write: true
-            type: GPDMA0_LSTSRCREG_CH7
           - name: CH1
             description: Destination last request for channel 1
             index: 1
             width: 1
             read: true
             write: true
-            type: GPDMA0_LSTSRCREG_CH7
           - name: CH0
             description: Destination last request for channel 0
             index: 0
             width: 1
             read: true
             write: true
-            type: GPDMA0_LSTSRCREG_CH7
           - name: WE_CH7
             description: Destination last transaction request write enable for channel
               7
@@ -2123,7 +1947,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH6
             description: Destination last transaction request write enable for channel
               6
@@ -2131,7 +1954,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH5
             description: Destination last transaction request write enable for channel
               5
@@ -2139,7 +1961,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH4
             description: Destination last transaction request write enable for channel
               4
@@ -2147,7 +1968,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH3
             description: Destination last transaction request write enable for channel
               3
@@ -2155,7 +1975,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH2
             description: Destination last transaction request write enable for channel
               2
@@ -2163,7 +1982,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH1
             description: Destination last transaction request write enable for channel
               1
@@ -2171,7 +1989,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
           - name: WE_CH0
             description: Destination last transaction request write enable for channel
               0
@@ -2179,7 +1996,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
       - name: DMACFGREG
         type: uint32_t
         expected_size: 4
@@ -2192,7 +2008,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: GPDMA0_MASKTFR_WE_CH7
       - name: CHENREG
         type: uint32_t
         expected_size: 4
@@ -2257,54 +2072,6 @@ structs:
     unit_test: false
     identifier: false
 enums:
-  GPDMA0_MASKTFR_CH7:
-    enum:
-      masked:
-        description: masked
-        value: 0
-      unmasked:
-        description: unmasked
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  GPDMA0_MASKTFR_WE_CH7:
-    enum:
-      disabled:
-        description: write disabled
-        value: 0
-      enabled:
-        description: write enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  GPDMA0_CLEARTFR_CH7:
-    enum:
-      no_effect:
-        description: no effect
-        value: 0
-      clear_status:
-        description: clear status
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  GPDMA0_LSTSRCREG_CH7:
-    enum:
-      not_last_transaction_current_block:
-        description: Not last transaction in current block
-        value: 0
-      last_transaction_current_block:
-        description: Last transaction in current block
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   GPDMA0_CHENREG_CH:
     enum:
       disable_channel:

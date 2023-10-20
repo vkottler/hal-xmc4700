@@ -88,7 +88,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: CAN_LIST_EMPTY
           - name: SIZE
             description: List Size
             index: 16
@@ -170,14 +169,12 @@ structs:
             width: 1
             read: true
             write: false
-            type: CAN_PANCTR_RBUSY
           - name: BUSY
             description: Panel Busy Flag
             index: 8
             width: 1
             read: true
             write: false
-            type: CAN_PANCTR_BUSY
           - name: PANCMD
             description: Panel Command
             index: 0
@@ -226,43 +223,6 @@ enums:
       define_module_32_bit_module:
         description: Define the module as a 32-bit module.
         value: 192
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_LIST_EMPTY:
-    enum:
-      at_least_one_message_object_allocated_list_i:
-        description: At least one message object is allocated to list i.
-        value: 0
-      no_message_object_allocated_list_i_list_i_empty:
-        description: No message object is allocated to the list i. List i is empty.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_PANCTR_RBUSY:
-    enum:
-      no_update_panar1_panar2_scheduled_by_list_con_cont:
-        description: No update of PANAR1 and PANAR2 is scheduled by the list controller.
-        value: 0
-      list_command_running_busy_1_write_results_pan_cont:
-        description: A list command is running (BUSY = 1) that will write results
-          to PANAR1 and PANAR2, but the results are not yet available.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  CAN_PANCTR_BUSY:
-    enum:
-      has_finished_command_ready_accept_new_command:
-        description: Panel has finished command and is ready to accept a new command.
-        value: 0
-      operation_progress:
-        description: Panel operation is in progress.
-        value: 1
     unit_test: false
     json: false
     use_map: false

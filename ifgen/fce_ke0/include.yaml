@@ -49,63 +49,54 @@ structs:
             width: 1
             read: true
             write: true
-            type: FCE_KE0_CFG_XSEL
           - name: REFOUT
             description: CRC 32-Bit Wise Reflection
             index: 9
             width: 1
             read: true
             write: true
-            type: FCE_KE0_CFG_REFOUT
           - name: REFIN
             description: IR Byte Wise Reflection
             index: 8
             width: 1
             read: true
             write: true
-            type: FCE_KE0_CFG_REFOUT
           - name: ALR
             description: Automatic Length Reload
             index: 5
             width: 1
             read: true
             write: true
-            type: FCE_KE0_CFG_ALR
           - name: CCE
             description: CRC Check Comparison
             index: 4
             width: 1
             read: true
             write: true
-            type: FCE_KE0_CFG_REFOUT
           - name: BEI
             description: Bus Error Interrupt
             index: 3
             width: 1
             read: true
             write: true
-            type: FCE_KE0_CFG_REFOUT
           - name: LEI
             description: Length Error Interrupt
             index: 2
             width: 1
             read: true
             write: true
-            type: FCE_KE0_CFG_REFOUT
           - name: CEI
             description: Configuration Error Interrupt
             index: 1
             width: 1
             read: true
             write: true
-            type: FCE_KE0_CFG_REFOUT
           - name: CMI
             description: CRC Mismatch Interrupt
             index: 0
             width: 1
             read: true
             write: true
-            type: FCE_KE0_CFG_REFOUT
       - name: STS
         type: uint32_t
         expected_size: 4
@@ -201,41 +192,4 @@ structs:
     methods: false
     unit_test: false
     identifier: false
-enums:
-  FCE_KE0_CFG_XSEL:
-    enum:
-      _00000000:
-        description: '0x00000000'
-        value: 0
-      ffffffff:
-        description: '0xFFFFFFFF'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FCE_KE0_CFG_REFOUT:
-    enum:
-      disabled:
-        description: CRC 32-bit wise is disabled
-        value: 0
-      enabled:
-        description: CRC 32-bit wise is enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  FCE_KE0_CFG_ALR:
-    enum:
-      disables_automatic_reload_length_field:
-        description: Disables automatic reload of the LENGTH field.
-        value: 0
-      enables_automatic_reload_length_field_at_end__cont:
-        description: Enables automatic reload of the LENGTH field at the end of a
-          message.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
+enums: {}

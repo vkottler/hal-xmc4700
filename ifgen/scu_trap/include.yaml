@@ -19,56 +19,48 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_TRAP_TRAPSTAT_BWERR1T
           - name: BWERR0T
             description: Peripheral Bridge 0 Trap Status
             index: 7
             width: 1
             read: true
             write: false
-            type: SCU_TRAP_TRAPSTAT_BWERR1T
           - name: ULPWDGT
             description: OSC_ULP Oscillator Watchdog Trap Status
             index: 6
             width: 1
             read: true
             write: false
-            type: SCU_TRAP_TRAPSTAT_BWERR1T
           - name: BRWNT
             description: Brown Out Trap Status
             index: 5
             width: 1
             read: true
             write: false
-            type: SCU_TRAP_TRAPSTAT_BWERR1T
           - name: PET
             description: Parity Error Trap Status
             index: 4
             width: 1
             read: true
             write: false
-            type: SCU_TRAP_TRAPSTAT_BWERR1T
           - name: UVCOLCKT
             description: USB VCO Lock Trap Status
             index: 3
             width: 1
             read: true
             write: false
-            type: SCU_TRAP_TRAPSTAT_BWERR1T
           - name: SVCOLCKT
             description: System VCO Lock Trap Status
             index: 2
             width: 1
             read: true
             write: false
-            type: SCU_TRAP_TRAPSTAT_BWERR1T
           - name: SOSCWDGT
             description: OSC_HP Oscillator Watchdog Trap Status
             index: 0
             width: 1
             read: true
             write: false
-            type: SCU_TRAP_TRAPSTAT_BWERR1T
       - name: TRAPRAW
         type: uint32_t
         expected_size: 4
@@ -82,56 +74,48 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_TRAP_TRAPSTAT_BWERR1T
           - name: BWERR0T
             description: Peripheral Bridge 0 Trap Raw Status
             index: 7
             width: 1
             read: true
             write: false
-            type: SCU_TRAP_TRAPSTAT_BWERR1T
           - name: ULPWDGT
             description: OSC_ULP Oscillator Watchdog Trap Raw Status
             index: 6
             width: 1
             read: true
             write: false
-            type: SCU_TRAP_TRAPSTAT_BWERR1T
           - name: BRWNT
             description: Brown Out Trap Raw Status
             index: 5
             width: 1
             read: true
             write: false
-            type: SCU_TRAP_TRAPSTAT_BWERR1T
           - name: PET
             description: Parity Error Trap Raw Status
             index: 4
             width: 1
             read: true
             write: false
-            type: SCU_TRAP_TRAPSTAT_BWERR1T
           - name: UVCOLCKT
             description: USB VCO Lock Trap Raw Status
             index: 3
             width: 1
             read: true
             write: false
-            type: SCU_TRAP_TRAPSTAT_BWERR1T
           - name: SVCOLCKT
             description: System VCO Lock Trap Raw Status
             index: 2
             width: 1
             read: true
             write: false
-            type: SCU_TRAP_TRAPSTAT_BWERR1T
           - name: SOSCWDGT
             description: OSC_HP Oscillator Watchdog Trap Raw Status
             index: 0
             width: 1
             read: true
             write: false
-            type: SCU_TRAP_TRAPSTAT_BWERR1T
       - name: TRAPDIS
         type: uint32_t
         expected_size: 4
@@ -144,56 +128,48 @@ structs:
             width: 1
             read: true
             write: true
-            type: SCU_TRAP_TRAPDIS_BWERR1T
           - name: BWERR0T
             description: Peripheral Bridge 0 Trap Disable
             index: 7
             width: 1
             read: true
             write: true
-            type: SCU_TRAP_TRAPDIS_BWERR1T
           - name: ULPWDGT
             description: OSC_ULP Oscillator Watchdog Trap Disable
             index: 6
             width: 1
             read: true
             write: true
-            type: SCU_TRAP_TRAPDIS_BWERR1T
           - name: BRWNT
             description: Brown Out Trap Disable
             index: 5
             width: 1
             read: true
             write: true
-            type: SCU_TRAP_TRAPDIS_BWERR1T
           - name: PET
             description: Parity Error Trap Disable
             index: 4
             width: 1
             read: true
             write: true
-            type: SCU_TRAP_TRAPDIS_BWERR1T
           - name: UVCOLCKT
             description: USB VCO Lock Trap Disable
             index: 3
             width: 1
             read: true
             write: true
-            type: SCU_TRAP_TRAPDIS_BWERR1T
           - name: SVCOLCKT
             description: System VCO Lock Trap Disable
             index: 2
             width: 1
             read: true
             write: true
-            type: SCU_TRAP_TRAPDIS_BWERR1T
           - name: SOSCWDGT
             description: OSC_HP Oscillator Watchdog Trap Disable
             index: 0
             width: 1
             read: true
             write: true
-            type: SCU_TRAP_TRAPDIS_BWERR1T
       - name: TRAPCLR
         type: uint32_t
         expected_size: 4
@@ -206,56 +182,48 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_TRAP_TRAPCLR_BWERR1T
           - name: BWERR0T
             description: Peripheral Bridge 0 Trap Clear
             index: 7
             width: 1
             read: false
             write: true
-            type: SCU_TRAP_TRAPCLR_BWERR1T
           - name: ULPWDGT
             description: OSC_ULP Oscillator Watchdog Trap Clear
             index: 6
             width: 1
             read: false
             write: true
-            type: SCU_TRAP_TRAPCLR_BWERR1T
           - name: BRWNT
             description: Brown Out Trap Clear
             index: 5
             width: 1
             read: false
             write: true
-            type: SCU_TRAP_TRAPCLR_BWERR1T
           - name: PET
             description: Parity Error Trap Clear
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_TRAP_TRAPCLR_BWERR1T
           - name: UVCOLCKT
             description: USB VCO Lock Trap Clear
             index: 3
             width: 1
             read: false
             write: true
-            type: SCU_TRAP_TRAPCLR_BWERR1T
           - name: SVCOLCKT
             description: System VCO Lock Trap Clear
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_TRAP_TRAPCLR_BWERR1T
           - name: SOSCWDGT
             description: OSC_HP Oscillator Watchdog Trap Clear
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_TRAP_TRAPCLR_BWERR1T
       - name: TRAPSET
         type: uint32_t
         expected_size: 4
@@ -268,107 +236,51 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_TRAP_TRAPSET_BWERR1T
           - name: BWERR0T
             description: Peripheral Bridge 0 Trap Set
             index: 7
             width: 1
             read: false
             write: true
-            type: SCU_TRAP_TRAPSET_BWERR1T
           - name: ULPWDT
             description: OSC_ULP Oscillator Watchdog Trap Set
             index: 6
             width: 1
             read: false
             write: true
-            type: SCU_TRAP_TRAPSET_BWERR1T
           - name: BRWNT
             description: Brown Out Trap Set
             index: 5
             width: 1
             read: false
             write: true
-            type: SCU_TRAP_TRAPSET_BWERR1T
           - name: PET
             description: Parity Error Trap Set
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_TRAP_TRAPSET_BWERR1T
           - name: UVCOLCKT
             description: USB VCO Lock Trap Set
             index: 3
             width: 1
             read: false
             write: true
-            type: SCU_TRAP_TRAPSET_BWERR1T
           - name: SVCOLCKT
             description: System VCO Lock Trap Set
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_TRAP_TRAPSET_BWERR1T
           - name: SOSCWDGT
             description: OSC_HP Oscillator Watchdog Trap Set
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_TRAP_TRAPSET_BWERR1T
     stream: false
     codec: false
     methods: false
     unit_test: false
     identifier: false
-enums:
-  SCU_TRAP_TRAPSTAT_BWERR1T:
-    enum:
-      no_pending_trap_request:
-        description: No pending trap request
-        value: 0
-      pending_trap_request:
-        description: Pending trap request
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_TRAP_TRAPDIS_BWERR1T:
-    enum:
-      enabled:
-        description: Trap request enabled
-        value: 0
-      disabled:
-        description: Trap request disabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_TRAP_TRAPCLR_BWERR1T:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      clear_trap_request:
-        description: Clear trap request
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_TRAP_TRAPSET_BWERR1T:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      set_trap_request:
-        description: Set trap request
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
+enums: {}

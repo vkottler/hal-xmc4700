@@ -83,14 +83,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: ERU0_EXICON_NB
           - name: NA
             description: Input A Negation Select for ERSx
             index: 10
             width: 1
             read: true
             write: true
-            type: ERU0_EXICON_NB
           - name: SS
             description: Input Source Select for ERSx
             index: 8
@@ -104,7 +102,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: ERU0_EXICON_FL
           - name: OCS
             description: Output Channel Select for ETLx Output Trigger Pulse
             index: 4
@@ -118,28 +115,24 @@ structs:
             width: 1
             read: true
             write: true
-            type: ERU0_EXICON_FE
           - name: RE
             description: Rising Edge Detection Enable ETLx
             index: 2
             width: 1
             read: true
             write: true
-            type: ERU0_EXICON_FE
           - name: LD
             description: Rebuild Level Detection for Status Flag for ETLx
             index: 1
             width: 1
             read: true
             write: true
-            type: ERU0_EXICON_LD
           - name: PE
             description: Output Trigger Pulse Enable for ETLx
             index: 0
             width: 1
             read: true
             write: true
-            type: ERU0_EXICON_PE
       - name: EXOCON
         type: uint32_t
         expected_size: 16
@@ -153,28 +146,24 @@ structs:
             width: 1
             read: true
             write: true
-            type: ERU0_EXOCON_IPEN3
           - name: IPEN2
             description: Pattern Detection Enable for ETL2
             index: 14
             width: 1
             read: true
             write: true
-            type: ERU0_EXOCON_IPEN3
           - name: IPEN1
             description: Pattern Detection Enable for ETL1
             index: 13
             width: 1
             read: true
             write: true
-            type: ERU0_EXOCON_IPEN3
           - name: IPEN0
             description: Pattern Detection Enable for ETL0
             index: 12
             width: 1
             read: true
             write: true
-            type: ERU0_EXOCON_IPEN3
           - name: GP
             description: Gating Selection for Pattern Detection Result
             index: 4
@@ -188,14 +177,12 @@ structs:
             width: 1
             read: true
             write: false
-            type: ERU0_EXOCON_PDR
           - name: GEEN
             description: Gating Event Enable
             index: 2
             width: 1
             read: true
             write: true
-            type: ERU0_EXICON_PE
           - name: ISS
             description: Internal Trigger Source Selection
             index: 0
@@ -227,18 +214,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  ERU0_EXICON_NB:
-    enum:
-      used_directly:
-        description: Input B is used directly
-        value: 0
-      inverted:
-        description: Input B is inverted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   ERU0_EXICON_SS:
     enum:
       without_additional_combination:
@@ -257,18 +232,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  ERU0_EXICON_FL:
-    enum:
-      not_been_detected:
-        description: The enabled edge event has not been detected
-        value: 0
-      been_detected:
-        description: The enabled edge event has been detected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   ERU0_EXICON_OCS:
     enum:
       _0:
@@ -283,59 +246,6 @@ enums:
       _3:
         description: Trigger pulses are sent to OGU3
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  ERU0_EXICON_FE:
-    enum:
-      not_considered_edge_event:
-        description: A falling edge is not considered as edge event
-        value: 0
-      considered_edge_event:
-        description: A falling edge is considered as edge event
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  ERU0_EXICON_LD:
-    enum:
-      not_cleared_by_hardware_used_sticky_bit_once__cont:
-        description: The status flag FL is not cleared by hardware and is used as
-          "sticky" bit. Once set, it is not influenced by any edge until it becomes
-          cleared by software.
-        value: 0
-      rebuilds_level_detection_desired_event_become_cont:
-        description: The status flag FL rebuilds a level detection of the desired
-          event. It becomes automatically set with a rising edge if RE = 1 or with
-          a falling edge if FE = 1. It becomes automatically cleared with a rising
-          edge if RE = 0 or with a falling edge if FE = 0.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  ERU0_EXICON_PE:
-    enum:
-      disabled:
-        description: The trigger pulse generation is disabled
-        value: 0
-      enabled:
-        description: The trigger pulse generation is enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  ERU0_EXOCON_IPEN3:
-    enum:
-      excluded_pattern_detection:
-        description: Flag EXICONx.FL is excluded from the pattern detection
-        value: 0
-      included_pattern_detection:
-        description: Flag EXICONx.FL is included in the pattern detection
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -359,18 +269,6 @@ enums:
           with an activation of ERU_TOUTy while the desired pattern is not detected
           (pattern miss PDR = 0)
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  ERU0_EXOCON_PDR:
-    enum:
-      iss_detected:
-        description: A pattern miss is detected
-        value: 0
-      atch_detected:
-        description: A pattern match is detected
-        value: 1
     unit_test: false
     json: false
     use_map: false

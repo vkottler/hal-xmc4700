@@ -60,7 +60,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: USB0_EP0_DIEPCTL0_NAKSts
           - name: USBActEP
             description: USB Active Endpoint
             index: 15
@@ -239,7 +238,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: USB0_EP0_DIEPCTL0_NAKSts
           - name: USBActEP
             description: USB Active Endpoint
             index: 15
@@ -387,19 +385,6 @@ structs:
     unit_test: false
     identifier: false
 enums:
-  USB0_EP0_DIEPCTL0_NAKSts:
-    enum:
-      on_nak_handshakes_based_fifo_status:
-        description: The core is transmitting non-NAK handshakes based on the FIFO
-          status
-        value: 0
-      ak_handshakes_this_endpoint:
-        description: The core is transmitting NAK handshakes on this endpoint.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   USB0_EP0_DIEPCTL0_MPS:
     enum:
       _64_bytes:

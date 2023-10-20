@@ -19,21 +19,18 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_LCKEN
           - name: HIBRS
             description: Hibernate Reset Status
             index: 9
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: HIBWK
             description: Hibernate Wake-up Status
             index: 8
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBWK
           - name: RSTSTAT
             description: Reset Status Information
             index: 0
@@ -53,21 +50,18 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_LCKEN
           - name: HIBRS
             description: Set Hibernate Reset
             index: 9
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: HIBWK
             description: Set Hibernate Wake-up Reset Status
             index: 8
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBWK
       - name: RSTCLR
         type: uint32_t
         expected_size: 4
@@ -80,28 +74,24 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_LCKEN
           - name: HIBRS
             description: Clear Hibernate Reset
             index: 9
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: HIBWK
             description: Clear Hibernate Wake-up Reset Status
             index: 8
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBWK
           - name: RSCLR
             description: Clear Reset Status
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_RSCLR
       - name: PRSTAT0
         type: uint32_t
         expected_size: 4
@@ -115,77 +105,66 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: USIC0RS
             description: USIC0 Reset Status
             index: 11
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: POSIF1RS
             description: POSIF1 Reset Status
             index: 10
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: POSIF0RS
             description: POSIF0 Reset Status
             index: 9
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: CCU81RS
             description: CCU81 Reset Status
             index: 8
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: CCU80RS
             description: CCU80 Reset Status
             index: 7
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: CCU42RS
             description: CCU42 Reset Status
             index: 4
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: CCU41RS
             description: CCU41 Reset Status
             index: 3
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: CCU40RS
             description: CCU40 Reset Status
             index: 2
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: DSDRS
             description: DSD Reset Status
             index: 1
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: VADCRS
             description: VADC Reset Status
             index: 0
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
       - name: PRSET0
         type: uint32_t
         expected_size: 4
@@ -198,77 +177,66 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: USIC0RS
             description: USIC0 Reset Assert
             index: 11
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: POSIF1RS
             description: POSIF1 Reset Assert
             index: 10
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: POSIF0RS
             description: POSIF0 Reset Assert
             index: 9
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: CCU81RS
             description: CCU81 Reset Assert
             index: 8
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: CCU80RS
             description: CCU80 Reset Assert
             index: 7
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: CCU42RS
             description: CCU42 Reset Assert
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: CCU41RS
             description: CCU41 Reset Assert
             index: 3
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: CCU40RS
             description: CCU40 Reset Assert
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: DSDRS
             description: DSD Reset Assert
             index: 1
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: VADCRS
             description: VADC Reset Assert
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
       - name: PRCLR0
         type: uint32_t
         expected_size: 4
@@ -281,77 +249,66 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: USIC0RS
             description: USIC0 Reset Clear
             index: 11
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: POSIF1RS
             description: POSIF1 Reset Clear
             index: 10
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: POSIF0RS
             description: POSIF0 Reset Clear
             index: 9
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: CCU81RS
             description: CCU81 Reset Clear
             index: 8
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: CCU80RS
             description: CCU80 Reset Clear
             index: 7
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: CCU42RS
             description: CCU42 Reset Clear
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: CCU41RS
             description: CCU41 Reset Clear
             index: 3
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: CCU40RS
             description: CCU40 Reset Clear
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: DSDRS
             description: DSD Reset Clear
             index: 1
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: VADCRS
             description: VADC Reset Clear
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
       - name: PRSTAT1
         type: uint32_t
         expected_size: 4
@@ -365,56 +322,48 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: USIC2RS
             description: USIC2 Reset Status
             index: 8
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: USIC1RS
             description: USIC1 Reset Status
             index: 7
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: MMCIRS
             description: MMC Interface Reset Status
             index: 6
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: DACRS
             description: DAC Reset Status
             index: 5
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: MCAN0RS
             description: MultiCAN Reset Status
             index: 4
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: LEDTSCU0RS
             description: LEDTS Reset Status
             index: 3
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: CCU43RS
             description: CCU43 Reset Status
             index: 0
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
       - name: PRSET1
         type: uint32_t
         expected_size: 4
@@ -427,56 +376,48 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: USIC2RS
             description: USIC2 Reset Assert
             index: 8
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: USIC1RS
             description: USIC1 Reset Assert
             index: 7
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: MMCIRS
             description: MMC Interface Reset Assert
             index: 6
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: DACRS
             description: DAC Reset Assert
             index: 5
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: MCAN0RS
             description: MultiCAN Reset Assert
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: LEDTSCU0RS
             description: LEDTS Reset Assert
             index: 3
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: CCU43RS
             description: CCU43 Reset Assert
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
       - name: PRCLR1
         type: uint32_t
         expected_size: 4
@@ -489,56 +430,48 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: USIC2RS
             description: USIC2 Reset Clear
             index: 8
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: USIC1RS
             description: USIC1 Reset Clear
             index: 7
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: MMCIRS
             description: MMC Interface Reset Clear
             index: 6
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: DACRS
             description: DAC Reset Clear
             index: 5
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: MCAN0RS
             description: MultiCAN Reset Clear
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: LEDTSCU0RS
             description: LEDTS Reset Clear
             index: 3
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: CCU43RS
             description: CCU43 Reset Clear
             index: 0
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
       - name: PRSTAT2
         type: uint32_t
         expected_size: 4
@@ -552,42 +485,36 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: FCERS
             description: FCE Reset Status
             index: 6
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: DMA1RS
             description: DMA1 Reset Status
             index: 5
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: DMA0RS
             description: DMA0 Reset Status
             index: 4
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: ETH0RS
             description: ETH0 Reset Status
             index: 2
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
           - name: WDTRS
             description: WDT Reset Status
             index: 1
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
       - name: PRSET2
         type: uint32_t
         expected_size: 4
@@ -600,42 +527,36 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: FCERS
             description: FCE Reset Assert
             index: 6
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: DMA1RS
             description: DMA1 Reset Assert
             index: 5
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: DMA0RS
             description: DMA0 Reset Assert
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: ETH0RS
             description: ETH0 Reset Assert
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
           - name: WDTRS
             description: WDT Reset Assert
             index: 1
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
       - name: PRCLR2
         type: uint32_t
         expected_size: 4
@@ -648,42 +569,36 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: FCERS
             description: FCE Reset Clear
             index: 6
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: DMA1RS
             description: DMA1 Reset Clear
             index: 5
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: DMA0RS
             description: DMA0 Reset Clear
             index: 4
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: ETH0RS
             description: ETH0 Reset Clear
             index: 2
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
           - name: WDTRS
             description: WDT Reset Clear
             index: 1
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
       - name: PRSTAT3
         type: uint32_t
         expected_size: 4
@@ -697,7 +612,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: SCU_RESET_RSTSTAT_HIBRS
       - name: PRSET3
         type: uint32_t
         expected_size: 4
@@ -710,7 +624,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTSET_HIBRS
       - name: PRCLR3
         type: uint32_t
         expected_size: 4
@@ -723,49 +636,12 @@ structs:
             width: 1
             read: false
             write: true
-            type: SCU_RESET_RSTCLR_HIBRS
     stream: false
     codec: false
     methods: false
     unit_test: false
     identifier: false
 enums:
-  SCU_RESET_RSTSTAT_LCKEN:
-    enum:
-      disabled:
-        description: Reset by Lockup disabled
-        value: 0
-      enabled:
-        description: Reset by Lockup enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_RESET_RSTSTAT_HIBRS:
-    enum:
-      de_asserted:
-        description: Reset de-asserted
-        value: 0
-      asserted:
-        description: Reset asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_RESET_RSTSTAT_HIBWK:
-    enum:
-      no_wake_up:
-        description: No Wake-up
-        value: 0
-      wake_up_event:
-        description: Wake-up event
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   SCU_RESET_RSTSTAT_RSTSTAT:
     enum:
       porst_reset:
@@ -789,90 +665,6 @@ enums:
       parity_error_reset:
         description: Parity Error reset
         value: 128
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_RESET_RSTSET_LCKEN:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      enable_reset_when_lockup_gets_asserted:
-        description: Enable reset when Lockup gets asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_RESET_RSTSET_HIBRS:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      assert_reset:
-        description: Assert reset
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_RESET_RSTSET_HIBWK:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      assert_reset_status_bit:
-        description: Assert reset status bit
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_RESET_RSTCLR_LCKEN:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      disable_reset_when_lockup_gets_asserted:
-        description: Disable reset when Lockup gets asserted
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_RESET_RSTCLR_HIBRS:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      de_assert_reset:
-        description: De-assert reset
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_RESET_RSTCLR_HIBWK:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      de_assert_reset_status_bit:
-        description: De-assert reset status bit
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  SCU_RESET_RSTCLR_RSCLR:
-    enum:
-      no_effect:
-        description: No effect
-        value: 0
-      clears_field_rststatrststat:
-        description: Clears field RSTSTAT.RSTSTAT
-        value: 1
     unit_test: false
     json: false
     use_map: false

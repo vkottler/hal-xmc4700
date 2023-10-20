@@ -24,21 +24,18 @@ structs:
             width: 1
             read: true
             write: false
-            type: VADC_G0_ARBCFG_SAMPLE
           - name: BUSY
             description: Converter Busy Flag
             index: 30
             width: 1
             read: true
             write: false
-            type: VADC_G0_ARBCFG_BUSY
           - name: CAL
             description: Start-Up Calibration Active Indication
             index: 28
             width: 1
             read: true
             write: false
-            type: VADC_G0_ARBCFG_CAL
           - name: ANONS
             description: Analog Converter Control Status
             index: 16
@@ -52,7 +49,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_G0_ARBCFG_ARBM
           - name: ARBRND
             description: Arbitration Round Length
             index: 4
@@ -78,42 +74,36 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_G0_ARBPR_ASEN2
           - name: ASEN1
             description: Arbitration Slot 1 Enable
             index: 25
             width: 1
             read: true
             write: true
-            type: VADC_G0_ARBPR_ASEN2
           - name: ASEN0
             description: Arbitration Slot 0 Enable
             index: 24
             width: 1
             read: true
             write: true
-            type: VADC_G0_ARBPR_ASEN2
           - name: CSM2
             description: Conversion Start Mode of Request Source x
             index: 11
             width: 1
             read: true
             write: true
-            type: VADC_G0_ARBPR_CSM2
           - name: CSM1
             description: Conversion Start Mode of Request Source x
             index: 7
             width: 1
             read: true
             write: true
-            type: VADC_G0_ARBPR_CSM2
           - name: CSM0
             description: Conversion Start Mode of Request Source x
             index: 3
             width: 1
             read: true
             write: true
-            type: VADC_G0_ARBPR_CSM2
           - name: PRIO2
             description: Priority of Request Source x
             index: 8
@@ -147,56 +137,48 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_G0_CHASS_ASSCH7
           - name: ASSCH6
             description: Assignment for Channel 6
             index: 6
             width: 1
             read: true
             write: true
-            type: VADC_G0_CHASS_ASSCH7
           - name: ASSCH5
             description: Assignment for Channel 5
             index: 5
             width: 1
             read: true
             write: true
-            type: VADC_G0_CHASS_ASSCH7
           - name: ASSCH4
             description: Assignment for Channel 4
             index: 4
             width: 1
             read: true
             write: true
-            type: VADC_G0_CHASS_ASSCH7
           - name: ASSCH3
             description: Assignment for Channel 3
             index: 3
             width: 1
             read: true
             write: true
-            type: VADC_G0_CHASS_ASSCH7
           - name: ASSCH2
             description: Assignment for Channel 2
             index: 2
             width: 1
             read: true
             write: true
-            type: VADC_G0_CHASS_ASSCH7
           - name: ASSCH1
             description: Assignment for Channel 1
             index: 1
             width: 1
             read: true
             write: true
-            type: VADC_G0_CHASS_ASSCH7
           - name: ASSCH0
             description: Assignment for Channel 0
             index: 0
             width: 1
             read: true
             write: true
-            type: VADC_G0_CHASS_ASSCH7
       - name: ICLASS
         type: uint32_t
         expected_size: 8
@@ -278,21 +260,18 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_G0_SYNCTR_EVALR3
           - name: EVALR2
             description: Evaluate Ready Input Rx
             index: 5
             width: 1
             read: true
             write: true
-            type: VADC_G0_SYNCTR_EVALR3
           - name: EVALR1
             description: Evaluate Ready Input Rx
             index: 4
             width: 1
             read: true
             write: true
-            type: VADC_G0_SYNCTR_EVALR3
           - name: STSEL
             description: Start Selection
             index: 0
@@ -312,84 +291,72 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_G0_BFL_BFI3
           - name: BFI2
             description: Boundary Flag 2 Inversion Control
             index: 18
             width: 1
             read: true
             write: true
-            type: VADC_G0_BFL_BFI3
           - name: BFI1
             description: Boundary Flag 1 Inversion Control
             index: 17
             width: 1
             read: true
             write: true
-            type: VADC_G0_BFL_BFI3
           - name: BFI0
             description: Boundary Flag 0 Inversion Control
             index: 16
             width: 1
             read: true
             write: true
-            type: VADC_G0_BFL_BFI3
           - name: BFA3
             description: Boundary Flag 3 Activation Select
             index: 11
             width: 1
             read: true
             write: true
-            type: VADC_G0_BFL_BFA3
           - name: BFA2
             description: Boundary Flag 2 Activation Select
             index: 10
             width: 1
             read: true
             write: true
-            type: VADC_G0_BFL_BFA3
           - name: BFA1
             description: Boundary Flag 1 Activation Select
             index: 9
             width: 1
             read: true
             write: true
-            type: VADC_G0_BFL_BFA3
           - name: BFA0
             description: Boundary Flag 0 Activation Select
             index: 8
             width: 1
             read: true
             write: true
-            type: VADC_G0_BFL_BFA3
           - name: BFL3
             description: Boundary Flag 3
             index: 3
             width: 1
             read: true
             write: false
-            type: VADC_G0_BFL_BFL3
           - name: BFL2
             description: Boundary Flag 2
             index: 2
             width: 1
             read: true
             write: false
-            type: VADC_G0_BFL_BFL3
           - name: BFL1
             description: Boundary Flag 1
             index: 1
             width: 1
             read: true
             write: false
-            type: VADC_G0_BFL_BFL3
           - name: BFL0
             description: Boundary Flag 0
             index: 0
             width: 1
             read: true
             write: false
-            type: VADC_G0_BFL_BFL3
       - name: BFLS
         type: uint32_t
         expected_size: 4
@@ -402,56 +369,48 @@ structs:
             width: 1
             read: false
             write: true
-            type: VADC_G0_BFLS_BFS3
           - name: BFS2
             description: Boundary Flag 2 Set
             index: 18
             width: 1
             read: false
             write: true
-            type: VADC_G0_BFLS_BFS3
           - name: BFS1
             description: Boundary Flag 1 Set
             index: 17
             width: 1
             read: false
             write: true
-            type: VADC_G0_BFLS_BFS3
           - name: BFS0
             description: Boundary Flag 0 Set
             index: 16
             width: 1
             read: false
             write: true
-            type: VADC_G0_BFLS_BFS3
           - name: BFC3
             description: Boundary Flag 3 Clear
             index: 3
             width: 1
             read: false
             write: true
-            type: VADC_G0_BFLS_BFC3
           - name: BFC2
             description: Boundary Flag 2 Clear
             index: 2
             width: 1
             read: false
             write: true
-            type: VADC_G0_BFLS_BFC3
           - name: BFC1
             description: Boundary Flag 1 Clear
             index: 1
             width: 1
             read: false
             write: true
-            type: VADC_G0_BFLS_BFC3
           - name: BFC0
             description: Boundary Flag 0 Clear
             index: 0
             width: 1
             read: false
             write: true
-            type: VADC_G0_BFLS_BFC3
       - name: BFLC
         type: uint32_t
         expected_size: 4
@@ -532,21 +491,18 @@ structs:
             width: 1
             read: false
             write: true
-            type: VADC_G0_QCTRL0_TMWC
           - name: TMEN
             description: Timer Mode Enable
             index: 28
             width: 1
             read: true
             write: true
-            type: VADC_G0_QCTRL0_TMEN
           - name: GTWC
             description: Write Control for Gate Configuration
             index: 23
             width: 1
             read: false
             write: true
-            type: VADC_G0_QCTRL0_GTWC
           - name: GTLVL
             description: Gate Input Level
             index: 20
@@ -565,7 +521,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: VADC_G0_QCTRL0_XTWC
           - name: XTMODE
             description: Trigger Operating Mode
             index: 13
@@ -604,42 +559,36 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_G0_QMR0_RPTDIS
           - name: CEV
             description: Clear Event Flag
             index: 11
             width: 1
             read: false
             write: true
-            type: VADC_G0_QMR0_CEV
           - name: FLUSH
             description: Flush Queue
             index: 10
             width: 1
             read: false
             write: true
-            type: VADC_G0_QMR0_FLUSH
           - name: TREV
             description: Trigger Event
             index: 9
             width: 1
             read: false
             write: true
-            type: VADC_G0_QMR0_TREV
           - name: CLRV
             description: Clear Valid Bit
             index: 8
             width: 1
             read: false
             write: true
-            type: VADC_G0_QMR0_CLRV
           - name: ENTR
             description: Enable External Trigger
             index: 2
             width: 1
             read: true
             write: true
-            type: VADC_G0_QMR0_ENTR
           - name: ENGT
             description: Enable Gate
             index: 0
@@ -660,21 +609,18 @@ structs:
             width: 1
             read: true
             write: false
-            type: VADC_G0_QSR0_EV
           - name: REQGT
             description: Request Gate Level
             index: 7
             width: 1
             read: true
             write: false
-            type: VADC_G0_QSR0_REQGT
           - name: EMPTY
             description: Queue Empty
             index: 5
             width: 1
             read: true
             write: false
-            type: VADC_G0_QSR0_EMPTY
           - name: FILL
             description: Filling Level for Queue 2
             index: 0
@@ -695,28 +641,24 @@ structs:
             width: 1
             read: true
             write: false
-            type: VADC_G0_Q0R0_V
           - name: EXTR
             description: External Trigger
             index: 7
             width: 1
             read: true
             write: false
-            type: VADC_G0_Q0R0_EXTR
           - name: ENSI
             description: Enable Source Interrupt
             index: 6
             width: 1
             read: true
             write: false
-            type: VADC_G0_Q0R0_ENSI
           - name: RF
             description: Refill
             index: 5
             width: 1
             read: true
             write: false
-            type: VADC_G0_Q0R0_RF
           - name: REQCHNR
             description: Request Channel Number
             index: 0
@@ -735,21 +677,18 @@ structs:
             width: 1
             read: false
             write: true
-            type: VADC_G0_QINR0_EXTR
           - name: ENSI
             description: Enable Source Interrupt
             index: 6
             width: 1
             read: false
             write: true
-            type: VADC_G0_Q0R0_ENSI
           - name: RF
             description: Refill
             index: 5
             width: 1
             read: false
             write: true
-            type: VADC_G0_QINR0_RF
           - name: REQCHNR
             description: Request Channel Number
             index: 0
@@ -767,7 +706,6 @@ structs:
                 width: 1
                 read: true
                 write: false
-                type: VADC_G0_QBUR0_V
               - name: EXTR
                 description: External Trigger
                 index: 7
@@ -804,21 +742,18 @@ structs:
             width: 1
             read: false
             write: true
-            type: VADC_G0_QCTRL0_TMWC
           - name: TMEN
             description: Timer Mode Enable
             index: 28
             width: 1
             read: true
             write: true
-            type: VADC_G0_QCTRL0_TMEN
           - name: GTWC
             description: Write Control for Gate Configuration
             index: 23
             width: 1
             read: false
             write: true
-            type: VADC_G0_QCTRL0_GTWC
           - name: GTLVL
             description: Gate Input Level
             index: 20
@@ -837,7 +772,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: VADC_G0_QCTRL0_XTWC
           - name: XTMODE
             description: Trigger Operating Mode
             index: 13
@@ -876,56 +810,48 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_G0_QMR0_RPTDIS
           - name: LDEV
             description: Generate Load Event
             index: 9
             width: 1
             read: false
             write: true
-            type: VADC_G0_ASMR_LDEV
           - name: CLRPND
             description: Clear Pending Bits
             index: 8
             width: 1
             read: false
             write: true
-            type: VADC_G0_ASMR_CLRPND
           - name: REQGT
             description: Request Gate Level
             index: 7
             width: 1
             read: true
             write: false
-            type: VADC_G0_QSR0_REQGT
           - name: LDM
             description: Autoscan Source Load Event Mode
             index: 5
             width: 1
             read: true
             write: true
-            type: VADC_G0_ASMR_LDM
           - name: SCAN
             description: Autoscan Enable
             index: 4
             width: 1
             read: true
             write: true
-            type: VADC_G0_ASMR_SCAN
           - name: ENSI
             description: Enable Source Interrupt
             index: 3
             width: 1
             read: true
             write: true
-            type: VADC_G0_ASMR_ENSI
           - name: ENTR
             description: Enable External Trigger
             index: 2
             width: 1
             read: true
             write: true
-            type: VADC_G0_QMR0_ENTR
           - name: ENGT
             description: Enable Gate
             index: 0
@@ -945,56 +871,48 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_G0_ASSEL_CHSEL7
           - name: CHSEL6
             description: Channel Selection
             index: 6
             width: 1
             read: true
             write: true
-            type: VADC_G0_ASSEL_CHSEL7
           - name: CHSEL5
             description: Channel Selection
             index: 5
             width: 1
             read: true
             write: true
-            type: VADC_G0_ASSEL_CHSEL7
           - name: CHSEL4
             description: Channel Selection
             index: 4
             width: 1
             read: true
             write: true
-            type: VADC_G0_ASSEL_CHSEL7
           - name: CHSEL3
             description: Channel Selection
             index: 3
             width: 1
             read: true
             write: true
-            type: VADC_G0_ASSEL_CHSEL7
           - name: CHSEL2
             description: Channel Selection
             index: 2
             width: 1
             read: true
             write: true
-            type: VADC_G0_ASSEL_CHSEL7
           - name: CHSEL1
             description: Channel Selection
             index: 1
             width: 1
             read: true
             write: true
-            type: VADC_G0_ASSEL_CHSEL7
           - name: CHSEL0
             description: Channel Selection
             index: 0
             width: 1
             read: true
             write: true
-            type: VADC_G0_ASSEL_CHSEL7
       - name: ASPND
         type: uint32_t
         expected_size: 4
@@ -1007,56 +925,48 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_G0_ASPND_CHPND7
           - name: CHPND6
             description: Channels Pending
             index: 6
             width: 1
             read: true
             write: true
-            type: VADC_G0_ASPND_CHPND7
           - name: CHPND5
             description: Channels Pending
             index: 5
             width: 1
             read: true
             write: true
-            type: VADC_G0_ASPND_CHPND7
           - name: CHPND4
             description: Channels Pending
             index: 4
             width: 1
             read: true
             write: true
-            type: VADC_G0_ASPND_CHPND7
           - name: CHPND3
             description: Channels Pending
             index: 3
             width: 1
             read: true
             write: true
-            type: VADC_G0_ASPND_CHPND7
           - name: CHPND2
             description: Channels Pending
             index: 2
             width: 1
             read: true
             write: true
-            type: VADC_G0_ASPND_CHPND7
           - name: CHPND1
             description: Channels Pending
             index: 1
             width: 1
             read: true
             write: true
-            type: VADC_G0_ASPND_CHPND7
           - name: CHPND0
             description: Channels Pending
             index: 0
             width: 1
             read: true
             write: true
-            type: VADC_G0_ASPND_CHPND7
       - name: CEFLAG
         type: uint32_t
         expected_size: 4
@@ -1069,56 +979,48 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_G0_CEFLAG_CEV7
           - name: CEV6
             description: Channel Event for Channel 6
             index: 6
             width: 1
             read: true
             write: true
-            type: VADC_G0_CEFLAG_CEV7
           - name: CEV5
             description: Channel Event for Channel 5
             index: 5
             width: 1
             read: true
             write: true
-            type: VADC_G0_CEFLAG_CEV7
           - name: CEV4
             description: Channel Event for Channel 4
             index: 4
             width: 1
             read: true
             write: true
-            type: VADC_G0_CEFLAG_CEV7
           - name: CEV3
             description: Channel Event for Channel 3
             index: 3
             width: 1
             read: true
             write: true
-            type: VADC_G0_CEFLAG_CEV7
           - name: CEV2
             description: Channel Event for Channel 2
             index: 2
             width: 1
             read: true
             write: true
-            type: VADC_G0_CEFLAG_CEV7
           - name: CEV1
             description: Channel Event for Channel 1
             index: 1
             width: 1
             read: true
             write: true
-            type: VADC_G0_CEFLAG_CEV7
           - name: CEV0
             description: Channel Event for Channel 0
             index: 0
             width: 1
             read: true
             write: true
-            type: VADC_G0_CEFLAG_CEV7
       - name: REFLAG
         type: uint32_t
         expected_size: 4
@@ -1131,112 +1033,96 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_G0_REFLAG_REV15
           - name: REV14
             description: Result Event for Result Register 14
             index: 14
             width: 1
             read: true
             write: true
-            type: VADC_G0_REFLAG_REV15
           - name: REV13
             description: Result Event for Result Register 13
             index: 13
             width: 1
             read: true
             write: true
-            type: VADC_G0_REFLAG_REV15
           - name: REV12
             description: Result Event for Result Register 12
             index: 12
             width: 1
             read: true
             write: true
-            type: VADC_G0_REFLAG_REV15
           - name: REV11
             description: Result Event for Result Register 11
             index: 11
             width: 1
             read: true
             write: true
-            type: VADC_G0_REFLAG_REV15
           - name: REV10
             description: Result Event for Result Register 10
             index: 10
             width: 1
             read: true
             write: true
-            type: VADC_G0_REFLAG_REV15
           - name: REV9
             description: Result Event for Result Register 9
             index: 9
             width: 1
             read: true
             write: true
-            type: VADC_G0_REFLAG_REV15
           - name: REV8
             description: Result Event for Result Register 8
             index: 8
             width: 1
             read: true
             write: true
-            type: VADC_G0_REFLAG_REV15
           - name: REV7
             description: Result Event for Result Register 7
             index: 7
             width: 1
             read: true
             write: true
-            type: VADC_G0_REFLAG_REV15
           - name: REV6
             description: Result Event for Result Register 6
             index: 6
             width: 1
             read: true
             write: true
-            type: VADC_G0_REFLAG_REV15
           - name: REV5
             description: Result Event for Result Register 5
             index: 5
             width: 1
             read: true
             write: true
-            type: VADC_G0_REFLAG_REV15
           - name: REV4
             description: Result Event for Result Register 4
             index: 4
             width: 1
             read: true
             write: true
-            type: VADC_G0_REFLAG_REV15
           - name: REV3
             description: Result Event for Result Register 3
             index: 3
             width: 1
             read: true
             write: true
-            type: VADC_G0_REFLAG_REV15
           - name: REV2
             description: Result Event for Result Register 2
             index: 2
             width: 1
             read: true
             write: true
-            type: VADC_G0_REFLAG_REV15
           - name: REV1
             description: Result Event for Result Register 1
             index: 1
             width: 1
             read: true
             write: true
-            type: VADC_G0_REFLAG_REV15
           - name: REV0
             description: Result Event for Result Register 0
             index: 0
             width: 1
             read: true
             write: true
-            type: VADC_G0_REFLAG_REV15
       - name: SEFLAG
         type: uint32_t
         expected_size: 4
@@ -1249,14 +1135,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_G0_SEFLAG_SEV1
           - name: SEV0
             description: Source Event 0/1
             index: 0
             width: 1
             read: true
             write: true
-            type: VADC_G0_SEFLAG_SEV1
       - name: CEFCLR
         type: uint32_t
         expected_size: 4
@@ -1269,56 +1153,48 @@ structs:
             width: 1
             read: false
             write: true
-            type: VADC_G0_CEFCLR_CEV7
           - name: CEV6
             description: Clear Channel Event for Channel 6
             index: 6
             width: 1
             read: false
             write: true
-            type: VADC_G0_CEFCLR_CEV7
           - name: CEV5
             description: Clear Channel Event for Channel 5
             index: 5
             width: 1
             read: false
             write: true
-            type: VADC_G0_CEFCLR_CEV7
           - name: CEV4
             description: Clear Channel Event for Channel 4
             index: 4
             width: 1
             read: false
             write: true
-            type: VADC_G0_CEFCLR_CEV7
           - name: CEV3
             description: Clear Channel Event for Channel 3
             index: 3
             width: 1
             read: false
             write: true
-            type: VADC_G0_CEFCLR_CEV7
           - name: CEV2
             description: Clear Channel Event for Channel 2
             index: 2
             width: 1
             read: false
             write: true
-            type: VADC_G0_CEFCLR_CEV7
           - name: CEV1
             description: Clear Channel Event for Channel 1
             index: 1
             width: 1
             read: false
             write: true
-            type: VADC_G0_CEFCLR_CEV7
           - name: CEV0
             description: Clear Channel Event for Channel 0
             index: 0
             width: 1
             read: false
             write: true
-            type: VADC_G0_CEFCLR_CEV7
       - name: REFCLR
         type: uint32_t
         expected_size: 4
@@ -1331,112 +1207,96 @@ structs:
             width: 1
             read: false
             write: true
-            type: VADC_G0_REFCLR_REV15
           - name: REV14
             description: Clear Result Event for Result Register 14
             index: 14
             width: 1
             read: false
             write: true
-            type: VADC_G0_REFCLR_REV15
           - name: REV13
             description: Clear Result Event for Result Register 13
             index: 13
             width: 1
             read: false
             write: true
-            type: VADC_G0_REFCLR_REV15
           - name: REV12
             description: Clear Result Event for Result Register 12
             index: 12
             width: 1
             read: false
             write: true
-            type: VADC_G0_REFCLR_REV15
           - name: REV11
             description: Clear Result Event for Result Register 11
             index: 11
             width: 1
             read: false
             write: true
-            type: VADC_G0_REFCLR_REV15
           - name: REV10
             description: Clear Result Event for Result Register 10
             index: 10
             width: 1
             read: false
             write: true
-            type: VADC_G0_REFCLR_REV15
           - name: REV9
             description: Clear Result Event for Result Register 9
             index: 9
             width: 1
             read: false
             write: true
-            type: VADC_G0_REFCLR_REV15
           - name: REV8
             description: Clear Result Event for Result Register 8
             index: 8
             width: 1
             read: false
             write: true
-            type: VADC_G0_REFCLR_REV15
           - name: REV7
             description: Clear Result Event for Result Register 7
             index: 7
             width: 1
             read: false
             write: true
-            type: VADC_G0_REFCLR_REV15
           - name: REV6
             description: Clear Result Event for Result Register 6
             index: 6
             width: 1
             read: false
             write: true
-            type: VADC_G0_REFCLR_REV15
           - name: REV5
             description: Clear Result Event for Result Register 5
             index: 5
             width: 1
             read: false
             write: true
-            type: VADC_G0_REFCLR_REV15
           - name: REV4
             description: Clear Result Event for Result Register 4
             index: 4
             width: 1
             read: false
             write: true
-            type: VADC_G0_REFCLR_REV15
           - name: REV3
             description: Clear Result Event for Result Register 3
             index: 3
             width: 1
             read: false
             write: true
-            type: VADC_G0_REFCLR_REV15
           - name: REV2
             description: Clear Result Event for Result Register 2
             index: 2
             width: 1
             read: false
             write: true
-            type: VADC_G0_REFCLR_REV15
           - name: REV1
             description: Clear Result Event for Result Register 1
             index: 1
             width: 1
             read: false
             write: true
-            type: VADC_G0_REFCLR_REV15
           - name: REV0
             description: Clear Result Event for Result Register 0
             index: 0
             width: 1
             read: false
             write: true
-            type: VADC_G0_REFCLR_REV15
       - name: SEFCLR
         type: uint32_t
         expected_size: 4
@@ -1449,14 +1309,12 @@ structs:
             width: 1
             read: false
             write: true
-            type: VADC_G0_SEFCLR_SEV1
           - name: SEV0
             description: Clear Source Event 0/1
             index: 0
             width: 1
             read: false
             write: true
-            type: VADC_G0_SEFCLR_SEV1
       - name: CEVNP0
         type: uint32_t
         expected_size: 4
@@ -1675,56 +1533,48 @@ structs:
             width: 1
             read: false
             write: true
-            type: VADC_G0_SRACT_ASSR3
           - name: ASSR2
             description: Activate Shared Service Request Node 2
             index: 10
             width: 1
             read: false
             write: true
-            type: VADC_G0_SRACT_ASSR3
           - name: ASSR1
             description: Activate Shared Service Request Node 1
             index: 9
             width: 1
             read: false
             write: true
-            type: VADC_G0_SRACT_ASSR3
           - name: ASSR0
             description: Activate Shared Service Request Node 0
             index: 8
             width: 1
             read: false
             write: true
-            type: VADC_G0_SRACT_ASSR3
           - name: AGSR3
             description: Activate Group Service Request Node 3
             index: 3
             width: 1
             read: false
             write: true
-            type: VADC_G0_SRACT_ASSR3
           - name: AGSR2
             description: Activate Group Service Request Node 2
             index: 2
             width: 1
             read: false
             write: true
-            type: VADC_G0_SRACT_ASSR3
           - name: AGSR1
             description: Activate Group Service Request Node 1
             index: 1
             width: 1
             read: false
             write: true
-            type: VADC_G0_SRACT_ASSR3
           - name: AGSR0
             description: Activate Group Service Request Node 0
             index: 0
             width: 1
             read: false
             write: true
-            type: VADC_G0_SRACT_ASSR3
       - name: EMUXCTR
         type: uint32_t
         expected_size: 4
@@ -1737,28 +1587,24 @@ structs:
             width: 1
             read: false
             write: true
-            type: VADC_G0_EMUXCTR_EMXWC
           - name: EMXCSS
             description: External Multiplexer Channel Selection Style
             index: 30
             width: 1
             read: true
             write: false
-            type: VADC_G0_EMUXCTR_EMXCSS
           - name: EMXST
             description: External Multiplexer Sample Time Control
             index: 29
             width: 1
             read: true
             write: true
-            type: VADC_G0_EMUXCTR_EMXST
           - name: EMXCOD
             description: External Multiplexer Coding Scheme
             index: 28
             width: 1
             read: true
             write: true
-            type: VADC_G0_EMUXCTR_EMXCOD
           - name: EMUXMODE
             description: External Multiplexer Mode
             index: 26
@@ -1796,112 +1642,96 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_G0_VFR_VF15
           - name: VF14
             description: Valid Flag of Result Register x
             index: 14
             width: 1
             read: true
             write: true
-            type: VADC_G0_VFR_VF15
           - name: VF13
             description: Valid Flag of Result Register x
             index: 13
             width: 1
             read: true
             write: true
-            type: VADC_G0_VFR_VF15
           - name: VF12
             description: Valid Flag of Result Register x
             index: 12
             width: 1
             read: true
             write: true
-            type: VADC_G0_VFR_VF15
           - name: VF11
             description: Valid Flag of Result Register x
             index: 11
             width: 1
             read: true
             write: true
-            type: VADC_G0_VFR_VF15
           - name: VF10
             description: Valid Flag of Result Register x
             index: 10
             width: 1
             read: true
             write: true
-            type: VADC_G0_VFR_VF15
           - name: VF9
             description: Valid Flag of Result Register x
             index: 9
             width: 1
             read: true
             write: true
-            type: VADC_G0_VFR_VF15
           - name: VF8
             description: Valid Flag of Result Register x
             index: 8
             width: 1
             read: true
             write: true
-            type: VADC_G0_VFR_VF15
           - name: VF7
             description: Valid Flag of Result Register x
             index: 7
             width: 1
             read: true
             write: true
-            type: VADC_G0_VFR_VF15
           - name: VF6
             description: Valid Flag of Result Register x
             index: 6
             width: 1
             read: true
             write: true
-            type: VADC_G0_VFR_VF15
           - name: VF5
             description: Valid Flag of Result Register x
             index: 5
             width: 1
             read: true
             write: true
-            type: VADC_G0_VFR_VF15
           - name: VF4
             description: Valid Flag of Result Register x
             index: 4
             width: 1
             read: true
             write: true
-            type: VADC_G0_VFR_VF15
           - name: VF3
             description: Valid Flag of Result Register x
             index: 3
             width: 1
             read: true
             write: true
-            type: VADC_G0_VFR_VF15
           - name: VF2
             description: Valid Flag of Result Register x
             index: 2
             width: 1
             read: true
             write: true
-            type: VADC_G0_VFR_VF15
           - name: VF1
             description: Valid Flag of Result Register x
             index: 1
             width: 1
             read: true
             write: true
-            type: VADC_G0_VFR_VF15
           - name: VF0
             description: Valid Flag of Result Register x
             index: 0
             width: 1
             read: true
             write: true
-            type: VADC_G0_VFR_VF15
       - name: CHCTR
         type: uint32_t
         expected_size: 32
@@ -1915,7 +1745,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_G0_CHCTR_BWDEN
           - name: BWDCH
             description: Broken Wire Detection Channel
             index: 28
@@ -1929,14 +1758,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_G0_CHCTR_RESPOS
           - name: RESTBS
             description: Result Target for Background Source
             index: 20
             width: 1
             read: true
             write: true
-            type: VADC_G0_CHCTR_RESTBS
           - name: RESREG
             description: Result Register
             index: 16
@@ -1950,14 +1777,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_G0_CHCTR_REFSEL
           - name: SYNC
             description: Synchronization Request
             index: 10
             width: 1
             read: true
             write: true
-            type: VADC_G0_CHCTR_SYNC
           - name: CHEVMODE
             description: Channel Event Mode
             index: 8
@@ -1999,7 +1824,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_G0_RCR_SRGEN
           - name: FEN
             description: FIFO Mode Enable
             index: 25
@@ -2013,7 +1837,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_G0_RCR_WFR
           - name: DMM
             description: Data Modification Mode
             index: 20
@@ -2040,14 +1863,12 @@ structs:
             width: 1
             read: true
             write: false
-            type: VADC_G0_RES_VF
           - name: FCR
             description: Fast Compare Result
             index: 30
             width: 1
             read: true
             write: false
-            type: VADC_G0_RES_FCR
           - name: CRS
             description: Converted Request Source
             index: 28
@@ -2093,14 +1914,12 @@ structs:
             width: 1
             read: true
             write: false
-            type: VADC_G0_RES_VF
           - name: FCR
             description: Fast Compare Result
             index: 30
             width: 1
             read: true
             write: false
-            type: VADC_G0_RES_FCR
           - name: CRS
             description: Converted Request Source
             index: 28
@@ -2138,42 +1957,6 @@ structs:
     unit_test: false
     identifier: false
 enums:
-  VADC_G0_ARBCFG_SAMPLE:
-    enum:
-      converting_or_idle:
-        description: Converting or idle
-        value: 0
-      input_signal_currently_sampled:
-        description: Input signal is currently sampled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_ARBCFG_BUSY:
-    enum:
-      not_busy:
-        description: Not busy
-        value: 0
-      converter_busy_with_conversion:
-        description: Converter is busy with a conversion
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_ARBCFG_CAL:
-    enum:
-      completed_or_not_started:
-        description: Completed or not yet started
-        value: 0
-      start_up_calibration_phase_active:
-        description: Start-up calibration phase is active
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   VADC_G0_ARBCFG_ANONS:
     enum:
       analog_converter_off:
@@ -2182,23 +1965,6 @@ enums:
       normal_operation_permanently:
         description: Normal operation (permanently on)
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_ARBCFG_ARBM:
-    enum:
-      runs_permanently_this_setting_required_synchr_cont:
-        description: The arbiter runs permanently. This setting is required for a
-          synchronization slave (see ) and for equidistant sampling using the signal
-          ARBCNT (see ).
-        value: 0
-      only_runs_if_at_least_one_conversion_request__cont:
-        description: The arbiter only runs if at least one conversion request of an
-          enabled request source is pending. This setting ensures a reproducible latency
-          from an incoming request to the conversion start, if the converter is idle.
-          Synchronized conversions are not supported.
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -2221,34 +1987,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  VADC_G0_ARBPR_ASEN2:
-    enum:
-      disabled_considered_empty_pending_conversion__cont:
-        description: The corresponding arbitration slot is disabled and considered
-          as empty. Pending conversion requests from the associated request source
-          are disregarded.
-        value: 0
-      enabled_pending_conversion_requests_associate_cont:
-        description: The corresponding arbitration slot is enabled. Pending conversion
-          requests from the associated request source are arbitrated.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_ARBPR_CSM2:
-    enum:
-      wait_for_start_mode:
-        description: Wait-for-start mode
-        value: 0
-      cancel_inject_repeat_mode_ie_this_source_can__cont:
-        description: Cancel-inject-repeat mode, i.e. this source can cancel conversion
-          of other sources.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   VADC_G0_ARBPR_PRIO2:
     enum:
       lowest_priority_selected:
@@ -2257,18 +1995,6 @@ enums:
       highest_priority_selected:
         description: Highest priority is selected.
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_CHASS_ASSCH7:
-    enum:
-      can_be_background_channel_converted_with_lowe_cont:
-        description: Channel y can be a background channel converted with lowest priority
-        value: 0
-      priority_channel_within_group_x:
-        description: Channel y is a priority channel within group x
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -2291,19 +2017,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  VADC_G0_SYNCTR_EVALR3:
-    enum:
-      no_ready_input_control:
-        description: No ready input control
-        value: 0
-      ready_input_rx_considered_start_parallel_conv_cont:
-        description: Ready input Rx is considered for the start of a parallel conversion
-          of this conversion group
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   VADC_G0_SYNCTR_STSEL:
     enum:
       master_use_own_bitfield_gxarbcfganonc:
@@ -2321,70 +2034,6 @@ enums:
         description: 'Kernel is synchronization slave: Control information from input
           CI3'
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_BFL_BFI3:
-    enum:
-      use_bfly_directly:
-        description: Use BFLy directly
-        value: 0
-      invert_value_use_bfly:
-        description: Invert value and use BFLy
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_BFL_BFA3:
-    enum:
-      above_defined_band_or_compare_value_clear_if_below:
-        description: Set boundary flag BFLy if result is above the defined band or
-          compare value, clear if below
-        value: 0
-      below_defined_band_or_compare_value_clear_if_above:
-        description: Set boundary flag BFLy if result is below the defined band or
-          compare value, clear if above
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_BFL_BFL3:
-    enum:
-      passive_state_result_has_not_crossed_activati_cont:
-        description: 'Passive state: result has not yet crossed the activation boundary
-          (see bitfield BFAy), or selected gate signal is inactive, or this boundary
-          flag is disabled'
-        value: 0
-      active_state_result_has_crossed_activation_bo_cont:
-        description: 'Active state: result has crossed the activation boundary'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_BFLS_BFS3:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      set_bit_bfly:
-        description: Set bit BFLy
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_BFLS_BFC3:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      clear_bit_bfly:
-        description: Clear bit BFLy
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -2430,55 +2079,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  VADC_G0_QCTRL0_TMWC:
-    enum:
-      no_write_access_timer_mode:
-        description: No write access to timer mode
-        value: 0
-      bitfield_tmen_can_be_written:
-        description: Bitfield TMEN can be written
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_QCTRL0_TMEN:
-    enum:
-      no_timer_mode_standard_gating_mechanism_can_b_cont:
-        description: 'No timer mode: standard gating mechanism can be used'
-        value: 0
-      timer_mode_equidistant_sampling_enabled_stand_cont:
-        description: 'Timer mode for equidistant sampling enabled: standard gating
-          mechanism must be disabled'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_QCTRL0_GTWC:
-    enum:
-      no_write_access_gate_configuration:
-        description: No write access to gate configuration
-        value: 0
-      bitfield_gtsel_can_be_written:
-        description: Bitfield GTSEL can be written
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_QCTRL0_XTWC:
-    enum:
-      no_write_access_trigger_configuration:
-        description: No write access to trigger configuration
-        value: 0
-      bitfields_xtmode_xtsel_can_be_written:
-        description: Bitfields XTMODE and XTSEL can be written
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   VADC_G0_QCTRL0_XTMODE:
     enum:
       no_external_trigger:
@@ -2512,83 +2112,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  VADC_G0_QMR0_RPTDIS:
-    enum:
-      repeated:
-        description: A cancelled conversion is repeated
-        value: 0
-      discarded:
-        description: A cancelled conversion is discarded
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_QMR0_CEV:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      clear_bit_ev:
-        description: Clear bit EV
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_QMR0_FLUSH:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      clear_all_queue_entries_including_backup_stag_cont:
-        description: Clear all queue entries (including backup stage) and the event
-          flag EV. The queue contains no more valid entry.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_QMR0_TREV:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      generate_trigger_event_by_software:
-        description: Generate a trigger event by software
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_QMR0_CLRV:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      next_pending_valid_queue_entry_sequence_event_cont:
-        description: The next pending valid queue entry in the sequence and the event
-          flag EV are cleared. If there is a valid entry in the queue backup register
-          (QBUR.V = 1), this entry is cleared, otherwise the entry in queue register
-          0 is cleared.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_QMR0_ENTR:
-    enum:
-      external_trigger_disabled:
-        description: External trigger disabled
-        value: 0
-      selected_edge_at_selected_trigger_input_signa_cont:
-        description: The selected edge at the selected trigger input signal REQTR
-          generates the trigger event
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   VADC_G0_QMR0_ENGT:
     enum:
       no_conversion_requests_issued:
@@ -2612,42 +2135,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  VADC_G0_QSR0_EV:
-    enum:
-      no_trigger_event:
-        description: No trigger event
-        value: 0
-      trigger_event_has_been_detected:
-        description: A trigger event has been detected
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_QSR0_REQGT:
-    enum:
-      low:
-        description: The gate input is low
-        value: 0
-      high:
-        description: The gate input is high
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_QSR0_EMPTY:
-    enum:
-      there_valid_entries_queue_see_fill:
-        description: There are valid entries in the queue (see FILL)
-        value: 0
-      no_valid_entries_queue_empty:
-        description: No valid entries (queue is empty)
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   VADC_G0_QSR0_FILL:
     enum:
       _1_if_empty_0_or_no_if_empty_1_valid_entry_queue:
@@ -2663,159 +2150,6 @@ enums:
       _8_valid_entries_queue:
         description: There are 8 valid entries in the queue
         value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_Q0R0_V:
-    enum:
-      no_valid_queue_entry:
-        description: No valid queue entry
-        value: 0
-      queue_entry_valid_leads_conversion_request:
-        description: The queue entry is valid and leads to a conversion request
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_Q0R0_EXTR:
-    enum:
-      valid_queue_entry_immediately_leads_conversio_cont:
-        description: A valid queue entry immediately leads to a conversion request
-        value: 0
-      request_handler_waits_trigger_event:
-        description: The request handler waits for a trigger event
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_Q0R0_ENSI:
-    enum:
-      no_request_source_interrupt:
-        description: No request source interrupt
-        value: 0
-      request_source_event_interrupt_generated_upon_cont:
-        description: A request source event interrupt is generated upon a request
-          source event (related conversion is finished)
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_Q0R0_RF:
-    enum:
-      discarded_after_conversion_start:
-        description: The request is discarded after the conversion start.
-        value: 0
-      automatically_refilled_into_queue_after_conve_cont:
-        description: The request is automatically refilled into the queue after the
-          conversion start.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_QINR0_EXTR:
-    enum:
-      immediately_leads_conversion_request:
-        description: A valid queue entry immediately leads to a conversion request.
-        value: 0
-      waits_trigger_event_occur_before_issuing_conv_cont:
-        description: A valid queue entry waits for a trigger event to occur before
-          issuing a conversion request.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_QINR0_RF:
-    enum:
-      no_refill_this_queue_entry_converted_once_the_cont:
-        description: 'No refill: this queue entry is converted once and then invalidated'
-        value: 0
-      automatic_refill_this_queue_entry_automatical_cont:
-        description: 'Automatic refill: this queue entry is automatically reloaded
-          into QINRx when the related conversion is started'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_QBUR0_V:
-    enum:
-      not_valid:
-        description: Backup register not valid
-        value: 0
-      contains_valid_entry_this_be_requested_before_cont:
-        description: Backup register contains a valid entry. This will be requested
-          before a valid entry in queue register 0 (stage 0) will be requested.
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_ASMR_LDEV:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      load_event_generated:
-        description: A load event is generated
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_ASMR_CLRPND:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      bits_register_gxaspndx_cleared:
-        description: The bits in register GxASPNDx are cleared
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_ASMR_LDM:
-    enum:
-      overwrite_mode_copy_all_bits_select_registers_cont:
-        description: 'Overwrite mode: Copy all bits from the select registers to the
-          pending registers upon a load event'
-        value: 0
-      combine_mode_set_all_pending_bits_set_select__cont:
-        description: 'Combine mode: Set all pending bits that are set in the select
-          registers upon a load event (logic OR)'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_ASMR_SCAN:
-    enum:
-      no_autoscan:
-        description: No autoscan
-        value: 0
-      autoscan_functionality_enabled_request_source_cont:
-        description: 'Autoscan functionality enabled: a request source event automatically
-          generates a load event'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_ASMR_ENSI:
-    enum:
-      no_request_source_interrupt:
-        description: No request source interrupt
-        value: 0
-      request_source_interrupt_generated_upon_reque_cont:
-        description: A request source interrupt is generated upon a request source
-          event (last pending conversion is finished)
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -2841,102 +2175,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  VADC_G0_ASSEL_CHSEL7:
-    enum:
-      ignore_this_channel:
-        description: Ignore this channel
-        value: 0
-      this_channel_part_scan_sequence:
-        description: This channel is part of the scan sequence
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_ASPND_CHPND7:
-    enum:
-      ignore_this_channel:
-        description: Ignore this channel
-        value: 0
-      request_conversion_this_channel:
-        description: Request conversion of this channel
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_CEFLAG_CEV7:
-    enum:
-      no_channel_event:
-        description: No channel event
-        value: 0
-      channel_event_has_occurred:
-        description: A channel event has occurred
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_REFLAG_REV15:
-    enum:
-      no_result_event:
-        description: No result event
-        value: 0
-      new_result_was_stored_register_gxresy:
-        description: New result was stored in register GxRESy
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_SEFLAG_SEV1:
-    enum:
-      no_source_event:
-        description: No source event
-        value: 0
-      source_event_has_occurred:
-        description: A source event has occurred
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_CEFCLR_CEV7:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      clear_channel_event_flag_gxceflag:
-        description: Clear the channel event flag in GxCEFLAG
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_REFCLR_REV15:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      clear_result_event_flag_gxreflag:
-        description: Clear the result event flag in GxREFLAG
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_SEFCLR_SEV1:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      clear_source_event_flag_gxseflag:
-        description: Clear the source event flag in GxSEFLAG
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   VADC_G0_CEVNP0_CEV7NP:
     enum:
       ervice_request_line_0_group_x:
@@ -2951,67 +2189,6 @@ enums:
       hared_service_request_line_3:
         description: Select shared service request line 3
         value: 7
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_SRACT_ASSR3:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      activate_associated_service_request_line:
-        description: Activate the associated service request line
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_EMUXCTR_EMXWC:
-    enum:
-      no_write_access_emux_cfg:
-        description: No write access to EMUX cfg.
-        value: 0
-      bitfields_emxmode_emxcod_emxst_emxcss_can_be__cont:
-        description: Bitfields EMXMODE, EMXCOD, EMXST, EMXCSS can be written
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_EMUXCTR_EMXCSS:
-    enum:
-      number_bitfield_emuxch_selects_an_arbitrary_c_cont:
-        description: 'Channel number: Bitfield EMUXCH selects an arbitrary channel'
-        value: 0
-      enable_each_bit_bitfield_emuxch_selects_assoc_cont:
-        description: 'Channel enable: Each bit of bitfield EMUXCH selects the associated
-          channel for EMUX control'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_EMUXCTR_EMXST:
-    enum:
-      whenever_setting_changes:
-        description: Use STCE whenever the setting changes
-        value: 0
-      each_conversion_an_external_channel:
-        description: Use STCE for each conversion of an external channel
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_EMUXCTR_EMXCOD:
-    enum:
-      binary_code:
-        description: Output the channel number in binary code
-        value: 0
-      gray_code:
-        description: Output the channel number in Gray code
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -3034,32 +2211,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  VADC_G0_VFR_VF15:
-    enum:
-      no_new_valid_data_available_write_access_no_effect:
-        description: 'Read access: No new valid data available Write access: No effect'
-        value: 0
-      result_register_x_contains_valid_data_has_not_cont:
-        description: 'Read access: Result register x contains valid data and has not
-          yet been read, or bit FCR has been updated Write access: Clear this valid
-          flag and bitfield DRC in register GxRESy (overrides a hardware set action)'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_CHCTR_BWDEN:
-    enum:
-      normal_operation:
-        description: Normal operation
-        value: 0
-      additional_preparation_phase_enabled:
-        description: Additional preparation phase is enabled
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   VADC_G0_CHCTR_BWDCH:
     enum:
       gnd:
@@ -3067,30 +2218,6 @@ enums:
         value: 0
       ref:
         description: Select VAREF
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_CHCTR_RESPOS:
-    enum:
-      left_aligned:
-        description: Store results left-aligned
-        value: 0
-      right_aligned:
-        description: Store results right-aligned
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_CHCTR_RESTBS:
-    enum:
-      selected_group_result_register:
-        description: Store results in the selected group result register
-        value: 0
-      global_result_register:
-        description: Store results in the global result register
         value: 1
     unit_test: false
     json: false
@@ -3104,31 +2231,6 @@ enums:
       _15:
         description: Store result in group result register GxRES15
         value: 15
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_CHCTR_REFSEL:
-    enum:
-      standard_reference_input_varef:
-        description: Standard reference input VAREF
-        value: 0
-      alternate_reference_input_ch0:
-        description: Alternate reference input from CH0
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_CHCTR_SYNC:
-    enum:
-      no_synchroniz_request_standalone_operation:
-        description: No synchroniz. request, standalone operation
-        value: 0
-      request_synchronized_conversion_this_channel__cont:
-        description: Request a synchronized conversion of this channel (only taken
-          into account for a master)
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -3190,18 +2292,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  VADC_G0_RCR_SRGEN:
-    enum:
-      no_service_request:
-        description: No service request
-        value: 0
-      service_request_after_result_event:
-        description: Service request after a result event
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   VADC_G0_RCR_FEN:
     enum:
       separate_result_register:
@@ -3209,18 +2299,6 @@ enums:
         value: 0
       part_fifo_structure_copy_each_new_valid_result:
         description: 'Part of a FIFO structure: copy each new valid result'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_RCR_WFR:
-    enum:
-      overwrite_mode:
-        description: Overwrite mode
-        value: 0
-      wait_for_read_mode_enabled_this_register:
-        description: Wait-for-read mode enabled for this register
         value: 1
     unit_test: false
     json: false
@@ -3237,31 +2315,6 @@ enums:
       difference_mode:
         description: Difference mode
         value: 2
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_RES_VF:
-    enum:
-      no_new_result_available:
-        description: No new result available
-        value: 0
-      bitfield_result_has_been_updated_with_new_res_cont:
-        description: Bitfield RESULT has been updated with new result value and has
-          not yet been read, or bit FCR has been updated
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_G0_RES_FCR:
-    enum:
-      below_compare_value:
-        description: Signal level was below compare value
-        value: 0
-      above_compare_value:
-        description: Signal level was above compare value
-        value: 1
     unit_test: false
     json: false
     use_map: false

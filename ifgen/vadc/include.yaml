@@ -18,21 +18,18 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_CLC_EDIS
           - name: DISS
             description: Module Disable Status Bit
             index: 1
             width: 1
             read: true
             write: false
-            type: VADC_CLC_DISS
           - name: DISR
             description: Module Disable Request Bit
             index: 0
             width: 1
             read: true
             write: true
-            type: VADC_CLC_DISR
       - name: ID
         type: uint32_t
         expected_size: 4
@@ -70,7 +67,6 @@ structs:
             width: 1
             read: true
             write: false
-            type: VADC_OCS_SUSSTA
           - name: SUS_P
             description: SUS Write Protection
             index: 28
@@ -96,7 +92,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_OCS_TGB
           - name: TGS
             description: Trigger Set for OTGB0/1
             index: 0
@@ -116,42 +111,36 @@ structs:
             width: 1
             read: false
             write: true
-            type: VADC_GLOBCFG_SUCAL
           - name: DPCAL3
             description: Disable Post-Calibration
             index: 19
             width: 1
             read: true
             write: true
-            type: VADC_GLOBCFG_DPCAL3
           - name: DPCAL2
             description: Disable Post-Calibration
             index: 18
             width: 1
             read: true
             write: true
-            type: VADC_GLOBCFG_DPCAL3
           - name: DPCAL1
             description: Disable Post-Calibration
             index: 17
             width: 1
             read: true
             write: true
-            type: VADC_GLOBCFG_DPCAL3
           - name: DPCAL0
             description: Disable Post-Calibration
             index: 16
             width: 1
             read: true
             write: true
-            type: VADC_GLOBCFG_DPCAL3
           - name: DIVWC
             description: Write Control for Divider Parameters
             index: 15
             width: 1
             read: false
             write: true
-            type: VADC_GLOBCFG_DIVWC
           - name: DIVD
             description: Divider Factor for the Arbiter Clock
             index: 8
@@ -165,7 +154,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_GLOBCFG_DCMSB
           - name: DIVA
             description: Divider Factor for the Analog Internal Clock
             index: 0
@@ -236,28 +224,24 @@ structs:
             width: 1
             read: false
             write: true
-            type: VADC_GLOBEFLAG_REVGLBCLR
           - name: SEVGLBCLR
             description: Clear Source Event (Background)
             index: 16
             width: 1
             read: false
             write: true
-            type: VADC_GLOBEFLAG_SEVGLBCLR
           - name: REVGLB
             description: Global Result Event
             index: 8
             width: 1
             read: true
             write: true
-            type: VADC_GLOBEFLAG_REVGLB
           - name: SEVGLB
             description: Source Event (Background)
             index: 0
             width: 1
             read: true
             write: true
-            type: VADC_GLOBEFLAG_SEVGLB
       - name: GLOBEVNP
         type: uint32_t
         expected_size: 4
@@ -290,21 +274,18 @@ structs:
             width: 1
             read: false
             write: true
-            type: VADC_GLOBTF_MDWC
           - name: PDD
             description: Pull-Down Diagnostics Enable
             index: 16
             width: 1
             read: true
             write: true
-            type: VADC_GLOBTF_PDD
           - name: CDWC
             description: Write Control for Conversion Diagnostics
             index: 15
             width: 1
             read: false
             write: true
-            type: VADC_GLOBTF_CDWC
           - name: CDSEL
             description: Converter Diagnostics Pull-Devices Select
             index: 9
@@ -318,7 +299,6 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_GLOBTF_CDEN
           - name: CDGR
             description: Converter Diagnostics Group
             index: 4
@@ -338,56 +318,48 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_BRSSEL_CHSELG7
           - name: CHSELG6
             description: Channel Selection Group x
             index: 6
             width: 1
             read: true
             write: true
-            type: VADC_BRSSEL_CHSELG7
           - name: CHSELG5
             description: Channel Selection Group x
             index: 5
             width: 1
             read: true
             write: true
-            type: VADC_BRSSEL_CHSELG7
           - name: CHSELG4
             description: Channel Selection Group x
             index: 4
             width: 1
             read: true
             write: true
-            type: VADC_BRSSEL_CHSELG7
           - name: CHSELG3
             description: Channel Selection Group x
             index: 3
             width: 1
             read: true
             write: true
-            type: VADC_BRSSEL_CHSELG7
           - name: CHSELG2
             description: Channel Selection Group x
             index: 2
             width: 1
             read: true
             write: true
-            type: VADC_BRSSEL_CHSELG7
           - name: CHSELG1
             description: Channel Selection Group x
             index: 1
             width: 1
             read: true
             write: true
-            type: VADC_BRSSEL_CHSELG7
           - name: CHSELG0
             description: Channel Selection Group x
             index: 0
             width: 1
             read: true
             write: true
-            type: VADC_BRSSEL_CHSELG7
       - name: BRSPND
         type: uint32_t
         expected_size: 16
@@ -401,56 +373,48 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_BRSPND_CHPNDG7
           - name: CHPNDG6
             description: Channels Pending Group x
             index: 6
             width: 1
             read: true
             write: true
-            type: VADC_BRSPND_CHPNDG7
           - name: CHPNDG5
             description: Channels Pending Group x
             index: 5
             width: 1
             read: true
             write: true
-            type: VADC_BRSPND_CHPNDG7
           - name: CHPNDG4
             description: Channels Pending Group x
             index: 4
             width: 1
             read: true
             write: true
-            type: VADC_BRSPND_CHPNDG7
           - name: CHPNDG3
             description: Channels Pending Group x
             index: 3
             width: 1
             read: true
             write: true
-            type: VADC_BRSPND_CHPNDG7
           - name: CHPNDG2
             description: Channels Pending Group x
             index: 2
             width: 1
             read: true
             write: true
-            type: VADC_BRSPND_CHPNDG7
           - name: CHPNDG1
             description: Channels Pending Group x
             index: 1
             width: 1
             read: true
             write: true
-            type: VADC_BRSPND_CHPNDG7
           - name: CHPNDG0
             description: Channels Pending Group x
             index: 0
             width: 1
             read: true
             write: true
-            type: VADC_BRSPND_CHPNDG7
       - name: BRSCTRL
         type: uint32_t
         expected_size: 4
@@ -463,7 +427,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: VADC_BRSCTRL_GTWC
           - name: GTLVL
             description: Gate Input Level
             index: 20
@@ -482,7 +445,6 @@ structs:
             width: 1
             read: false
             write: true
-            type: VADC_BRSCTRL_XTWC
           - name: XTMODE
             description: Trigger Operating Mode
             index: 13
@@ -521,56 +483,48 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_BRSMR_RPTDIS
           - name: LDEV
             description: Generate Load Event
             index: 9
             width: 1
             read: false
             write: true
-            type: VADC_BRSMR_LDEV
           - name: CLRPND
             description: Clear Pending Bits
             index: 8
             width: 1
             read: false
             write: true
-            type: VADC_BRSMR_CLRPND
           - name: REQGT
             description: Request Gate Level
             index: 7
             width: 1
             read: true
             write: false
-            type: VADC_BRSMR_REQGT
           - name: LDM
             description: Autoscan Source Load Event Mode
             index: 5
             width: 1
             read: true
             write: true
-            type: VADC_BRSMR_LDM
           - name: SCAN
             description: Autoscan Enable
             index: 4
             width: 1
             read: true
             write: true
-            type: VADC_BRSMR_SCAN
           - name: ENSI
             description: Enable Source Interrupt
             index: 3
             width: 1
             read: true
             write: true
-            type: VADC_BRSMR_ENSI
           - name: ENTR
             description: Enable External Trigger
             index: 2
             width: 1
             read: true
             write: true
-            type: VADC_BRSMR_ENTR
           - name: ENGT
             description: Enable Gate
             index: 0
@@ -590,14 +544,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_GLOBRCR_SRGEN
           - name: WFR
             description: Wait-for-Read Mode Enable
             index: 24
             width: 1
             read: true
             write: true
-            type: VADC_GLOBRCR_WFR
           - name: DRCTR
             description: Data Reduction Control
             index: 16
@@ -617,14 +569,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_GLOBRES_VF
           - name: FCR
             description: Fast Compare Result
             index: 30
             width: 1
             read: true
             write: false
-            type: VADC_GLOBRES_FCR
           - name: CRS
             description: Converted Request Source
             index: 28
@@ -667,14 +617,12 @@ structs:
             width: 1
             read: true
             write: true
-            type: VADC_GLOBRES_VF
           - name: FCR
             description: Fast Compare Result
             index: 30
             width: 1
             read: true
             write: false
-            type: VADC_GLOBRES_FCR
           - name: CRS
             description: Converted Request Source
             index: 28
@@ -729,54 +677,6 @@ structs:
     unit_test: false
     identifier: false
 enums:
-  VADC_CLC_EDIS:
-    enum:
-      sleep_mode_request_enabled_functional:
-        description: Sleep mode request is enabled and functional
-        value: 0
-      module_disregards_sleep_mode_control_signal:
-        description: Module disregards the sleep mode control signal
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_CLC_DISS:
-    enum:
-      module_clock_enabled:
-        description: Module clock is enabled
-        value: 0
-      off_module_not_clocked:
-        description: 'Off: module is not clocked'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_CLC_DISR:
-    enum:
-      request_enable_module_clock:
-        description: 'On request: enable the module clock'
-        value: 0
-      off_request_stop_module_clock:
-        description: 'Off request: stop the module clock'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_OCS_SUSSTA:
-    enum:
-      not_suspended:
-        description: Module is not (yet) suspended
-        value: 0
-      suspended:
-        description: Module is suspended
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   VADC_OCS_SUS:
     enum:
       not_suspend:
@@ -798,18 +698,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  VADC_OCS_TGB:
-    enum:
-      _0:
-        description: Trigger Set is output on OTGB0
-        value: 0
-      _1:
-        description: Trigger Set is output on OTGB1
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   VADC_OCS_TGS:
     enum:
       no_trigger_set_output:
@@ -817,42 +705,6 @@ enums:
         value: 0
       trigger_set_1_ts16_ssig_input_sample_signals:
         description: 'Trigger Set 1: TS16_SSIG, input sample signals'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_GLOBCFG_SUCAL:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      initiate_start_up_calibration_phase_indicatio_cont:
-        description: Initiate the start-up calibration phase (indication in bit GxARBCFG.CAL)
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_GLOBCFG_DPCAL3:
-    enum:
-      automatic_post_calibration_after_each_convers_cont:
-        description: Automatic post-calibration after each conversion of group x
-        value: 0
-      no_post_calibration:
-        description: No post-calibration
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_GLOBCFG_DIVWC:
-    enum:
-      no_write_access_divider_parameters:
-        description: No write access to divider parameters
-        value: 0
-      bitfields_diva_dcmsb_divd_can_be_written:
-        description: Bitfields DIVA, DCMSB, DIVD can be written
         value: 1
     unit_test: false
     json: false
@@ -872,18 +724,6 @@ enums:
       _4:
         description: fADCD = fADC / 4
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_GLOBCFG_DCMSB:
-    enum:
-      _1_clock_cycles_msb_standard:
-        description: 1 clock cycles for the MSB (standard)
-        value: 0
-      _2_clock_cycles_msb_fadci_20_mhz:
-        description: 2 clock cycles for the MSB (fADCI > 20 MHz)
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -924,54 +764,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  VADC_GLOBEFLAG_REVGLBCLR:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      clear_result_event_flag_revglb:
-        description: Clear the result event flag REVGLB
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_GLOBEFLAG_SEVGLBCLR:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      clear_source_event_flag_sevglb:
-        description: Clear the source event flag SEVGLB
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_GLOBEFLAG_REVGLB:
-    enum:
-      no_result_event:
-        description: No result event
-        value: 0
-      new_result_was_stored_register_globres:
-        description: New result was stored in register GLOBRES
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_GLOBEFLAG_SEVGLB:
-    enum:
-      no_source_event:
-        description: No source event
-        value: 0
-      source_event_has_occurred:
-        description: A source event has occurred
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   VADC_GLOBEVNP_REV0NP:
     enum:
       _0_common_service_request_group_0:
@@ -994,42 +786,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  VADC_GLOBTF_MDWC:
-    enum:
-      no_write_access_parameters:
-        description: No write access to parameters
-        value: 0
-      bitfield_pdd_can_be_written:
-        description: Bitfield PDD can be written
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_GLOBTF_PDD:
-    enum:
-      disconnected:
-        description: Disconnected
-        value: 0
-      pull_down_diagnostics_device_active:
-        description: The pull-down diagnostics device is active
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_GLOBTF_CDWC:
-    enum:
-      no_write_access_parameters:
-        description: No write access to parameters
-        value: 0
-      bitfields_cdsel_cden_cdgr_can_be_written:
-        description: Bitfields CDSEL, CDEN, CDGR can be written
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   VADC_GLOBTF_CDSEL:
     enum:
       varef:
@@ -1044,66 +800,6 @@ enums:
       _23rd_varef:
         description: Connected to 2/3rd VAREF
         value: 3
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_GLOBTF_CDEN:
-    enum:
-      all_diagnostic_pull_devices_disconnected:
-        description: All diagnostic pull devices are disconnected
-        value: 0
-      diagnostic_pull_devices_connected_selected_by_cont:
-        description: Diagnostic pull devices connected as selected by bitfield CDSEL
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_BRSSEL_CHSELG7:
-    enum:
-      ignore_this_channel:
-        description: Ignore this channel
-        value: 0
-      this_channel_part_scan_sequence:
-        description: This channel is part of the scan sequence
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_BRSPND_CHPNDG7:
-    enum:
-      ignore_this_channel:
-        description: Ignore this channel
-        value: 0
-      request_conversion_this_channel:
-        description: Request conversion of this channel
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_BRSCTRL_GTWC:
-    enum:
-      no_write_access_gate_configuration:
-        description: No write access to gate configuration
-        value: 0
-      bitfield_gtsel_can_be_written:
-        description: Bitfield GTSEL can be written
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_BRSCTRL_XTWC:
-    enum:
-      no_write_access_trigger_configuration:
-        description: No write access to trigger configuration
-        value: 0
-      bitfields_xtmode_xtsel_can_be_written:
-        description: Bitfields XTMODE and XTSEL can be written
-        value: 1
     unit_test: false
     json: false
     use_map: false
@@ -1141,107 +837,6 @@ enums:
     json: false
     use_map: false
     identifier: false
-  VADC_BRSMR_RPTDIS:
-    enum:
-      repeated:
-        description: A cancelled conversion is repeated
-        value: 0
-      discarded:
-        description: A cancelled conversion is discarded
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_BRSMR_LDEV:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      load_event_generated:
-        description: A load event is generated
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_BRSMR_CLRPND:
-    enum:
-      no_action:
-        description: No action
-        value: 0
-      bits_registers_brspndx_cleared:
-        description: The bits in registers BRSPNDx are cleared
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_BRSMR_REQGT:
-    enum:
-      low:
-        description: The gate input is low
-        value: 0
-      high:
-        description: The gate input is high
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_BRSMR_LDM:
-    enum:
-      overwrite_mode_copy_all_bits_select_registers_cont:
-        description: 'Overwrite mode: Copy all bits from the select registers to the
-          pending registers upon a load event'
-        value: 0
-      combine_mode_set_all_pending_bits_set_select__cont:
-        description: 'Combine mode: Set all pending bits that are set in the select
-          registers upon a load event (logic OR)'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_BRSMR_SCAN:
-    enum:
-      no_autoscan:
-        description: No autoscan
-        value: 0
-      autoscan_functionality_enabled_request_source_cont:
-        description: 'Autoscan functionality enabled: a request source event automatically
-          generates a load event'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_BRSMR_ENSI:
-    enum:
-      no_request_source_interrupt:
-        description: No request source interrupt
-        value: 0
-      request_source_interrupt_generated_upon_reque_cont:
-        description: A request source interrupt is generated upon a request source
-          event (last pending conversion is finished)
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_BRSMR_ENTR:
-    enum:
-      external_trigger_disabled:
-        description: External trigger disabled
-        value: 0
-      selected_edge_at_selected_trigger_input_signa_cont:
-        description: The selected edge at the selected trigger input signal REQTR
-          generates the load event
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   VADC_BRSMR_ENGT:
     enum:
       no_conversion_requests_issued:
@@ -1263,61 +858,11 @@ enums:
     json: false
     use_map: false
     identifier: false
-  VADC_GLOBRCR_SRGEN:
-    enum:
-      no_service_request:
-        description: No service request
-        value: 0
-      service_request_after_result_event:
-        description: Service request after a result event
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_GLOBRCR_WFR:
-    enum:
-      overwrite_mode:
-        description: Overwrite mode
-        value: 0
-      wait_for_read_mode_enabled_this_register:
-        description: Wait-for-read mode enabled for this register
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
   VADC_GLOBRCR_DRCTR:
     enum:
       data_reduction_disabled:
         description: Data reduction disabled
         value: 0
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_GLOBRES_VF:
-    enum:
-      no_new_valid_data_available_write_access_no_effect:
-        description: 'Read access: No new valid data available Write access: No effect'
-        value: 0
-      bitfield_result_contains_valid_data_has_not_b_cont:
-        description: 'Read access: Bitfield RESULT contains valid data and has not
-          yet been read, or bit FCR has been updated Write access: Clear this valid
-          flag and the data reduction counter (overrides a hardware set action)'
-        value: 1
-    unit_test: false
-    json: false
-    use_map: false
-    identifier: false
-  VADC_GLOBRES_FCR:
-    enum:
-      below_compare_value:
-        description: Signal level was below compare value
-        value: 0
-      above_compare_value:
-        description: Signal level was above compare value
-        value: 1
     unit_test: false
     json: false
     use_map: false

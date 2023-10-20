@@ -55,3 +55,12 @@ includes:
   - vadc_g0/include.yaml
 namespace:
   - XMC4700
+struct:
+  stream: false
+  codec: false
+  methods: false
+  unit_test: false
+  identifier: false
+enum:
+  use_map: false
+  identifier: false
